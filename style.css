@@ -1,0 +1,75 @@
+/* Colors */
+:root {
+    /* Colors */
+    --deep-crimson: #AD0003;
+    --bright-scarlet: #C60002;
+    --vivid-red: #E00000; 
+    --soft-coral: #ED8C8C;
+    --blush-pink: #F6B4B4;
+    --pastel-rose: #FFDADA;
+  
+    --deep-teal: #007586;
+    --bright-cyan-blue: #009EB0;
+    --sky-blue: #8AC4D0;
+    --pale-ice-blue: #B0D8E1;
+  
+    --soft-ivory: #FAF9F6; 
+    --charcoal-black: #1A1A1A; 
+
+    /* Fonts */
+    --font-body: 'Nunito', sans-serif;
+    --font-heading: 'Zilla Slab', serif;
+  }
+
+  /* styles */
+
+html {
+    font-size: 16px; 
+}
+
+body {
+    font-size: 1rem; 
+    font-family: var(--font-body);
+    margin: 0 auto;
+    padding: 0;
+    background-color: var(--soft-ivory);
+    color: var(--charcoal-black);
+    width: 1280px;
+}
+
+h1 {
+    font-size: 3.5rem;
+}
+
+/* header */
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 2.5rem;
+}
+
+img.rr-logo {
+    width: 10rem;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.menu nav ul, .menu div ul {
+    display: flex;
+    list-style-type: none;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+  }
+
+  .menu nav ul li a, .menu div ul li a {
+    text-decoration: none;
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--charcoal-black);
+  }
