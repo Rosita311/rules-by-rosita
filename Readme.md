@@ -31,7 +31,7 @@ Ik ga een custom WordPress thema bouwen. Ik maak hierbij geen gebruik van een ba
  * screenshot.png
 
  ### Design
- Ik ben meer van het coderen en bouwen. Design is niet mijn sterkste kant, ik heb dan ook geen design gemaakt, maar ik heb wel een aantal voorbeelden die ik als inspiratie wil gebruiken. Dat is onder andere de blog van [Marijke](https://marijkeluttekes.dev/). Ik vind het design echt prachtig. De kleuren, de eenvoud, de fonts en de darkmode zijn een inspiratie voor dit thema. Ook heb ik gekeken naar het thema Grandblog. Dat is het thema dat ik voor Generatepress had, maar op mijn website om de haverklap voor conflicten zorgde. Toch vond ik het thema erg mooi. En uiteraard komen er ook aspecten terug van mijn huidige blog. De kleuren die ik wil gebruiken komen overeen en de font die ik daar gebruik voor de koppen, komt terug in de body. 
+ Ik ben meer van het coderen en bouwen. Design is niet mijn sterkste kant (Op mijn werk heb ik een collega die daar heel goed in is), ik heb dan ook geen design gemaakt, maar ik heb wel een aantal voorbeelden die ik als inspiratie wil gebruiken. Dat is onder andere de blog van [Marijke](https://marijkeluttekes.dev/). Ik vind het design echt prachtig. De kleuren, de eenvoud, de fonts en de darkmode zijn een inspiratie voor dit thema. Ook heb ik gekeken naar het thema Grandblog. Dat is het thema dat ik voor Generatepress had, maar op mijn website om de haverklap voor conflicten zorgde. Toch vond ik het thema erg mooi. En uiteraard komen er ook aspecten terug van mijn huidige blog. De kleuren die ik wil gebruiken komen overeen en de font die ik daar gebruik voor de koppen, komt terug in de body. 
 
 #### Kleuren 
 
