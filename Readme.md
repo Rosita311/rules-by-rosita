@@ -81,3 +81,6 @@ h1, h2, h3, h4, h5, h6 {
  * een card voor alle blogcards. 
  * een stylesheet
 
+## Dinsdag 11 Maart: Header
+
+Ik heb vandaag maar heel weinig energie om iets te doen, dus ik wil vandaag een skiplink maken. Hiervoor gebruik ik [de blog van Josee](https://www.fronteers.nl/nl/blog/2025/01/easy-a11y), die zij tijdens de 12 days of Christmas schreef voor Fronteers. En mocht ik eraan toekomen om de header responsief te maken, dan wil ik dat ook doen. Ik heb dat nog nooit eerder gedaan, dus weer iets leuks om te leren! 
