@@ -30,6 +30,12 @@ Version: 1.0
 
   /* styles */
 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 html {
     font-size: 16px; 
 }
@@ -77,24 +83,92 @@ img.rr-logo {
     width: 10rem;
 }
 
-.menu {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
+/* https://www.youtube.com/watch?v=m7YDWNz65iI&list=FLe2K5zwKcl3MgKOR7yvlwCQ&index=1 */
+
+nav {
+   background-color: var(--soft-ivory);
+   border-bottom: 1px solid var(--blush-pink);
 }
 
-.menu nav ul, .menu div ul {
+nav ul {
+    list-style: none;
     display: flex;
-    list-style-type: none;
-    gap: 1.5rem;
-    margin: 0;
-    padding: 0;
-  }
+} 
 
-  .menu nav ul li a, .menu div ul li a {
+nav li {
+    display: flex;
+}
+
+nav a {
+    display: flex;
     text-decoration: none;
-    font-family: var(--font-heading);
-    font-size: 1.25rem;
-    font-weight: 600;
     color: var(--charcoal-black);
-  }
+    padding: 1em 2em; 
+    transition: background-color 150ms ease;
+}
+
+nav a:hover {
+    background-color: var(--blush-pink);
+}
+
+nav a.active-link {
+    border-bottom: 2px solid var(--vivid-red);
+}
+
+nav a.accent-link {
+    background-color: var(--sky-blue);
+}
+
+.open-side-bar-button {
+    display: block;
+    background: none;
+    border: none;
+    padding: 1em;
+    margin-left: auto;
+    cursor: pointer;
+}
+
+.close-side-bar-button {
+    background: none;
+    border: none;
+    padding: 1em;
+    cursor: pointer;
+}
+
+svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    stroke: var(--charcoal-black);
+}
+
+@media screen and (max-width: 900px) {
+    nav {
+        position: fixed;
+        top:0;
+        right: -100%;
+        height: 100vh;
+        width: min(15em, 100%);
+        z-index: 10;
+        border-left: 1px solid var(--blush-pink);
+        transition: right 300ms ease-out;
+    }
+
+    nav.show {
+        right: 0;
+    }
+
+    nav ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    nav a {
+        width: 100%;
+        padding-left: 2.5em;
+    }
+
+    nav a.active-link {
+        border-bottom: none;
+    }
+
+}

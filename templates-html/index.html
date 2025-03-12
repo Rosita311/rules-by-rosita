@@ -15,28 +15,33 @@
     <a href="#main" class="skip-link">Ga naar de inhoud</a>
     <header>
         <div>
-            <a href="#">
+            <a href="index.html">
                 <img class="rr-logo" src="./assets/Logo_rulesbyrosita.png" alt="Logo Rules by Rosita, ga naar homepage.">
             </a>
         </div>
-        <div class="menu">
-            <nav>
-                <ul>
-                    <li><a href="#">Persoonlijk</a></li>
-                    <li><a href="#">Life</a></li>
-                    <li><a href="#">Tips and Tricks</a></li>
-                    <li><a href="#">Over mij</a></li>
-                </ul>
-            </nav>
-            <div>
-                <ul>
-                    <li><a href="#">Zoeken</a></li>
-                    <li><a href="#">Darkmode button</a></li>
-                </ul>
-            </div>
-        </div>
+        <button class="open-sidebar-button" onclick="openSidebar()">
+            <svg data-slot="icon" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
+              </svg>
+        </button>
+        <button class="close-sidebar-button" onclick="closeSidebar()">
+            <svg data-slot="icon" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"></path>
+              </svg>
+        </button>
+        <nav>
+            <ul>
+                <li><a href="#" class="active-link">Persoonlijk</a></li>
+                <li><a href="#">Life</a></li>
+                <li><a href="#">Tips and Tricks</a></li>
+                <li><a href="#">Over mij</a></li>
+                <li><a href="#" class="accent-link">Zoeken</a></li>
+                <li><a href="#" class="accent-link">Darkmode button</a></li>
+            </ul>
+        </nav>    
     </header>
     <main id="main"></main>
     <footer></footer>
 </body>
+<script></script>
 </html>
