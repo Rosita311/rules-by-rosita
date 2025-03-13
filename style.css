@@ -115,7 +115,6 @@ img.rr-logo {
 
 nav {
    background-color: var(--color-background);
-   border-bottom: 1px solid var(--color-accent);
 }
 
 nav ul {
@@ -145,6 +144,10 @@ nav a.active-link {
 
 nav a.accent-link {
     background-color: var(--color-primary-3);
+
+    &:hover {
+        background-color: var(--color-secondary-1);
+    }
 }
 
 #open-sidebar-button {
