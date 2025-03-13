@@ -5,32 +5,58 @@ Description: Een modern, schaalbaar thema met darkmode en toegankelijkheid.
 Version: 1.0
 */
 
-/* Colors */
+/* Colors and Fonts*/
 :root {
+    /* Fonts */
+    --font-body: 'Nunito', sans-serif;
+    --font-heading: 'Zilla Slab', serif;
+
     /* Colors */
+    --color-background: #FAF9F6;
+    --color-text: #1A1A1A; 
+    --color-primary-1: #E00000; 
+    --color-primary-2: #AD0003;
+    --color-primary-3: #ED8C8C;;
+    --color-secondary-1: #009EB0;
+    --color-secondary-2: #007586;
+    --color-accent: #FFDADA;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        /* Colors */
+        --color-background: #1A1A1A; ;
+        --color-text: #FAF9F6; 
+        --color-primary-1: #F6B4B4; 
+        --color-primary-2: #ED8C8C;
+        --color-primary-3: #FFDADA;
+        --color-secondary-1: #B0D8E1;
+        --color-secondary-2: #8AC4D0;
+        --color-accent: #333333;
+    } 
+}
+
+/* 
+:root {
     --deep-crimson: #AD0003;
-    --bright-scarlet: #C60002;
-    --vivid-red: #E00000; 
+    --vivid-red: #E00000;
     --soft-coral: #ED8C8C;
     --blush-pink: #F6B4B4;
     --pastel-rose: #FFDADA;
-  
     --deep-teal: #007586;
     --bright-cyan-blue: #009EB0;
     --sky-blue: #8AC4D0;
     --pale-ice-blue: #B0D8E1;
-  
-    --soft-ivory: #FAF9F6; 
-    --charcoal-black: #1A1A1A; 
+    --soft-ivory: #FAF9F6;
+    --charcoal-black: #1A1A1A;
+    --charcoal-gray: #333333;
+}
 
-    /* Fonts */
-    --font-body: 'Nunito', sans-serif;
-    --font-heading: 'Zilla Slab', serif;
-  }
+*/
 
   /* styles */
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -44,10 +70,11 @@ body {
     font-size: 1rem; 
     font-family: var(--font-body);
     margin: 0 auto;
-    padding: 0;
-    background-color: var(--soft-ivory);
-    color: var(--charcoal-black);
-    width: 1280px;
+    padding: 0 1rem;
+    background-color: var(--color-background);
+    color: var(--color-text);
+    max-width: 1280px;
+    width: 90%
 }
 
 h1 {
@@ -58,8 +85,8 @@ h1 {
 .skip-link {
     position: absolute;
     top: -50px;
-    background-color: var(--soft-ivory);
-    color: var(--charcoal-black);
+    background-color: var(--color-background);
+    color: var(--color-text);
     padding:1rem;
     margin: 0;
     font-family: var(--font-body);
@@ -80,14 +107,15 @@ header {
 }
 
 img.rr-logo {
-    width: 10rem;
+    max-width: 10rem;
+    margin-right: 2rem;
 }
 
 /* https://www.youtube.com/watch?v=m7YDWNz65iI&list=FLe2K5zwKcl3MgKOR7yvlwCQ&index=1 */
 
 nav {
-   background-color: var(--soft-ivory);
-   border-bottom: 1px solid var(--blush-pink);
+   background-color: var(--color-background);
+   border-bottom: 1px solid var(--color-accent);
 }
 
 nav ul {
@@ -102,25 +130,25 @@ nav li {
 nav a {
     display: flex;
     text-decoration: none;
-    color: var(--charcoal-black);
+    color: var(--color-text);
     padding: 1em 2em; 
     transition: background-color 150ms ease;
 }
 
 nav a:hover {
-    background-color: var(--blush-pink);
+    border-bottom: 2px solid var(--color-secondary-1);
 }
 
 nav a.active-link {
-    border-bottom: 2px solid var(--vivid-red);
+    border-bottom: 2px solid var(--color-primary-1);
 }
 
 nav a.accent-link {
-    background-color: var(--sky-blue);
+    background-color: var(--color-primary-3);
 }
 
-.open-side-bar-button {
-    display: block;
+#open-sidebar-button {
+    display: none;
     background: none;
     border: none;
     padding: 1em;
@@ -128,7 +156,8 @@ nav a.accent-link {
     cursor: pointer;
 }
 
-.close-side-bar-button {
+#close-sidebar-button {
+    display: none;
     background: none;
     border: none;
     padding: 1em;
@@ -136,12 +165,24 @@ nav a.accent-link {
 }
 
 svg {
-    width: 1.5rem;
-    height: 1.5rem;
-    stroke: var(--charcoal-black);
+    width: 2rem;
+    height: 2rem;
+    stroke: var(--color-text);
+}
+
+#overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    inset: 0;
+    z-index: 9;
+    display: none;
 }
 
 @media screen and (max-width: 900px) {
+    img.rr-logo {
+        max-width: 7rem;
+    }
+
     nav {
         position: fixed;
         top:0;
@@ -149,12 +190,17 @@ svg {
         height: 100vh;
         width: min(15em, 100%);
         z-index: 10;
-        border-left: 1px solid var(--blush-pink);
+        border-bottom: 0;
+        border-left: 1px solid var( --color-accent);
         transition: right 300ms ease-out;
     }
 
     nav.show {
         right: 0;
+    }
+
+    nav.show ~ #overlay {
+        display: block; 
     }
 
     nav ul {
@@ -167,8 +213,26 @@ svg {
         padding-left: 2.5em;
     }
 
-    nav a.active-link {
+    nav a:hover {
         border-bottom: none;
+        background-color: var(--color-secondary-1);
+        color: var(--color-text);
     }
 
+    nav a.active-link {
+        border-bottom: none;
+        background-color: var(--color-primary-1);
+        color: var(--color-background);
+    }
+
+    #open-sidebar-button {
+        display: block;
+    }
+
+    #close-sidebar-button {
+        display: block;
+        padding: 2.5em;
+    }
 }
+
+
