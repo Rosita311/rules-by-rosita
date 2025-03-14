@@ -167,8 +167,8 @@ nav a.accent-link {
 }
 
 svg {
-    width: 2.25rem;
-    height: 2.25rem;
+    width: 2rem;
+    height: 2rem;
     stroke: var(--color-text);
 }
 
@@ -182,10 +182,11 @@ svg {
 }
 
 @media screen and (min-width: 901px) {
-    .mobile-accent-links {
-        display: none;
+    li.mobile-accent-links {
+        display: none !important;
     }
 }
+
 
 @media screen and (max-width: 900px) {
     img.rr-logo {
@@ -245,8 +246,8 @@ svg {
         padding: 2.5em;
     }
 
-    .mobile-accent-links {
-        display: block;
+    .mobile-accent-links ul {
+        display: flex;
     }
 
     .desktop-accent-links {
