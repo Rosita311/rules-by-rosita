@@ -181,6 +181,12 @@ svg {
     display: none;
 }
 
+@media screen and (min-width: 901px) {
+    .mobile-accent-links {
+        display: none;
+    }
+}
+
 @media screen and (max-width: 900px) {
     img.rr-logo {
         max-width: 7rem;
@@ -226,6 +232,8 @@ svg {
         border-bottom: none;
         background-color: var(--color-primary-1);
         color: var(--color-background);
+
+        
     }
 
     #open-sidebar-button {
@@ -235,6 +243,14 @@ svg {
     #close-sidebar-button {
         display: block;
         padding: 2.5em;
+    }
+
+    .mobile-accent-links {
+        display: block;
+    }
+
+    .desktop-accent-links {
+        display: none;
     }
 }
 
