@@ -66,3 +66,4 @@ themeSwitch.addEventListener('click', () => {
         disableDarkmode();
     }
 });
+// https://www.youtube.com/watch?v=_gKEUYarehE
