@@ -157,6 +157,7 @@ nav a.active-link {
 
     &:hover {
         background-color: var(--color-secondary-1);
+        border: none;
         color: var(--color-background); /* Change text color on hover */
     }
 }
