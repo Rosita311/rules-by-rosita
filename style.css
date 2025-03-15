@@ -77,6 +77,13 @@ body {
     width: 90%
 }
 
+button {
+    border: none; /* Verwijdert de standaard knoprand */
+    background: none;
+}
+
+
+
 h1 {
     font-size: 3.5rem;
 }
@@ -140,14 +147,22 @@ nav a.active-link {
     border-bottom: 2px solid var(--color-primary-1);
 }
 
-nav a.accent-link {
+ nav button .menu-button {
     background-color: var(--color-primary-3);
     color: var(--color-text);
+    border: none;
+    padding: 0.5em 1em;;
+    border-radius: 8px;
+    transition: background-color 150ms ease, border-color 150ms ease; /* Add transition for border-color */
 
     &:hover {
         background-color: var(--color-secondary-1);
+        border-color: var(--color-secondary-1); /* Change border color on hover */
+        color: var(--color-background); /* Change text color on hover */
     }
 }
+
+
 
 #open-sidebar-button {
     display: none;
@@ -181,7 +196,7 @@ svg {
 }
 
 @media screen and (min-width: 901px) {
-    .mobile-accent-links {
+    .mobile-menu-buttons {
         display: none;
     }
 }
@@ -243,12 +258,15 @@ svg {
         display: block;
         padding: 2.5em;
     }
-
-    .mobile-accent-links ul {
+    
+    #mobile-search-button {
+        margin-left: 2.5em; 
+    }
+    .mobile-menu-buttons ul {
         display: flex;
     }
 
-    .desktop-accent-links {
+    .desktop-menu-buttons{
         display: none;
     }
 }
