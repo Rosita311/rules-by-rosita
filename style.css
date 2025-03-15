@@ -103,7 +103,7 @@ h1 {
 header {
     display: flex;
     justify-content: space-between;
-    padding: 0.5rem 2.5rem;
+    padding-top: 0.5rem;
 }
 
 img.rr-logo {
@@ -153,7 +153,6 @@ nav a.accent-link {
     display: none;
     background: none;
     border: none;
-    padding: 1em;
     margin-left: auto;
     cursor: pointer;
 }
@@ -182,11 +181,10 @@ svg {
 }
 
 @media screen and (min-width: 901px) {
-    li.mobile-accent-links {
-        display: none !important;
+    .mobile-accent-links {
+        display: none;
     }
 }
-
 
 @media screen and (max-width: 900px) {
     img.rr-logo {
