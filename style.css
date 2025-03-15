@@ -22,6 +22,18 @@ Version: 1.0
     --color-accent: #FFDADA;
 }
 
+.darkmode {
+    /* Colors */
+    --color-background: #1A1A1A; ;
+    --color-text: #FAF9F6; 
+    --color-primary-1: #F6B4B4; 
+    --color-primary-2: #ED8C8C;
+    --color-primary-3: #FFDADA;
+    --color-secondary-1: #B0D8E1;
+    --color-secondary-2: #8AC4D0;
+    --color-accent: #333333;
+} 
+
 @media (prefers-color-scheme: dark) {
     :root {
         /* Colors */
@@ -63,14 +75,11 @@ html {
 }
 
 body {
-    font-size: 1rem; 
-    font-family: var(--font-body);
-    line-height: 1.5;
-    margin: 0 auto;
     padding: 0 1rem;
     background-color: var(--color-background);
     color: var(--color-text);
     max-width: 1280px;
+    margin: 0 auto;
 }
 
 button {
@@ -78,11 +87,58 @@ button {
    cursor: pointer;
 }
 
+p {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5em;
+}
 
+a {
+    text-decoration: none;
+    color: var(--color-primary-1);
+}
 
 h1 {
     font-family: var(--font-heading);
     font-size: 3.5rem;
+    font-weight: 400;
+    line-height: 1.1em;
+}
+
+h2 {
+    font-family: var(--font-heading);
+    font-size: 3rem;
+    font-weight: 400;
+    line-height: 1.1em;
+}
+
+h3 {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    font-weight: 400;
+    line-height: 1.2em;
+}
+
+h4 {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 1.3em;
+}
+
+h5 {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 1.4em;
+}
+
+h6 {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 1.5em;
 }
 
 /* A11y */
@@ -130,6 +186,9 @@ nav li {
 
 nav a {
     display: flex;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: 500;
     text-decoration: none;
     color: var(--color-text);
     padding: 1em 2em; 
@@ -145,14 +204,14 @@ nav a.active-link {
 }
 
  nav button .menu-button {
-    background-color: var(--color-primary-3);
+    background-color: transparent;
     color: var(--color-text);
     padding: 0.5em 1em;;
     border-radius: 8px;
     transition: background-color 150ms ease, border-color 150ms ease; /* Add transition for border-color */
 
     &:hover {
-        background-color: var(--color-secondary-1);
+        background-color: transparent;
         border: none;
         color: var(--color-background); /* Change text color on hover */
     }
@@ -168,6 +227,36 @@ nav a.active-link {
     display: none;
     background: none;
     padding: 1em;
+}
+
+#theme-switch {
+    padding: 0;
+    border-radius: 50%;
+    background-color: var(--color-accent);
+    display: flex;
+    justify-content: center;   
+    align-items: center;
+}
+
+#theme-switch svg {
+    stroke: var(--color-text);
+}
+
+#theme-switch svg:first-child {
+    display: block;
+} 
+
+#theme-switch svg:last-child {
+    display: none;
+}
+
+
+.darkmode #theme-switch svg:first-child {
+    display: none;
+}
+
+.darkmode #theme-switch svg:last-child {
+    display: block;
 }
 
 svg {
