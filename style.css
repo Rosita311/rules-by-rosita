@@ -54,7 +54,7 @@ Version: 1.0
 
 */
 
-  /* styles */
+  /* basic styles */
 
 * {
     margin: 0;
@@ -69,17 +69,18 @@ html {
 body {
     font-size: 1rem; 
     font-family: var(--font-body);
+    line-height: 1.5;
     margin: 0 auto;
     padding: 0 1rem;
     background-color: var(--color-background);
     color: var(--color-text);
     max-width: 1280px;
-    width: 90%
+    height: 100%;
 }
 
 button {
-    border: none; /* Verwijdert de standaard knoprand */
-    background: none;
+   all: unset;
+   cursor: pointer;
 }
 
 
@@ -150,39 +151,31 @@ nav a.active-link {
  nav button .menu-button {
     background-color: var(--color-primary-3);
     color: var(--color-text);
-    border: none;
     padding: 0.5em 1em;;
     border-radius: 8px;
     transition: background-color 150ms ease, border-color 150ms ease; /* Add transition for border-color */
 
     &:hover {
         background-color: var(--color-secondary-1);
-        border-color: var(--color-secondary-1); /* Change border color on hover */
         color: var(--color-background); /* Change text color on hover */
     }
 }
 
-
-
 #open-sidebar-button {
     display: none;
     background: none;
-    border: none;
     margin-left: auto;
-    cursor: pointer;
 }
 
 #close-sidebar-button {
     display: none;
     background: none;
-    border: none;
     padding: 1em;
-    cursor: pointer;
 }
 
 svg {
-    width: 2rem;
-    height: 2rem;
+    width: 1.5rem;
+    height: 1.5rem;
     stroke: var(--color-text);
 }
 
