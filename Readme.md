@@ -87,4 +87,12 @@ Ik heb vandaag maar heel weinig energie om iets te doen, dus ik wil vandaag een 
 
 Ik vond het bij nader inzien toch beter om de HTML bestanden direct in het thema te hebben staan, dus ik heb alle bestanden en Git verplaatst, daarna heb ik een Git Rebase gedaan en de dubbele bestanden verwijderd. Nu loopt de lokale repo gelijk met de remote repository.
 
-[A Modern CSS Reset](https://www.joshwcomeau.com/css/custom-css-reset/)
+## Zondag 16 maart: Header, menu en Darkmode
+
+De afgelopen dagen ben ik tussen alles door gewoon verder gegaan met het thema. Het gaat wel langzamer dan dat ik had verwacht, maar dat is niet erg. Ik ben gewoon niet zo snel en ik kom toch een aantal dingen tegen, die dan weer net anders mooeten: Zo heb de afgelopen dagen geleerd, dat het belangrijk is om een soort reset.css te maken, die alle browserstijlen reset. Ik heb hierbij ook geleerd, dat het aan mij is, wat ik daar wel en niet in zet. Ik vond [A Modern CSS Reset](https://www.joshwcomeau.com/css/custom-css-reset/), waarbij Josh de reset.css van Eric Meyer als basis heeft gebruikt en heeft geupdatet. Ik gebruik nu die van Josh en ik pas deze aan, wanneer ik dat nodig vind.
+
+Ook heb ik geleerd over `setAttribute` en `removeAttribute` in Javascript, waarmee je atributen aan de html kan toevoegen en verwijderen. 
+
+En ik heb geleerd dat het goed is om niet op de main branch te werken, maar steeds op een andere branch en deze dan te mergen met de main branch, zodat de main branch goed blijft werken en je makkelijker fouten kunt herstellen. 
+
+De header en het menu zijn voor een groot deel af, nu ben ik bezig met de darkmode en vervolgens wil ik de footer en de cards voor de blog maken. Als dat af is, kopieer ik alle HTML naar de andere template onderdelen en pas ik die weer aan. Daarna kan ik alle HTML toevoegen in de PHP bestanden. 
