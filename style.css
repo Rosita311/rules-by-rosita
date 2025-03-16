@@ -67,9 +67,7 @@ Version: 1.0
 */
 
   /* basic styles */
-
-
-
+  
 html {
     font-size: 16px; 
 }
@@ -229,7 +227,7 @@ nav a.active-link {
     padding: 1em;
 }
 
-#theme-switch {
+.theme-switch {
     padding: 0;
     border-radius: 50%;
     background-color: var(--color-accent);
@@ -238,24 +236,23 @@ nav a.active-link {
     align-items: center;
 }
 
-#theme-switch svg {
+.theme-switch svg {
     stroke: var(--color-text);
 }
 
-#theme-switch svg:first-child {
+.theme-switch svg:first-child {
     display: block;
 } 
 
-#theme-switch svg:last-child {
+.theme-switch svg:last-child {
     display: none;
 }
 
-
-.darkmode #theme-switch svg:first-child {
+.darkmode .theme-switch svg:first-child {
     display: none;
 }
 
-.darkmode #theme-switch svg:last-child {
+.darkmode .theme-switch svg:last-child {
     display: block;
 }
 
@@ -274,11 +271,9 @@ svg {
     display: none;
 }
 
-
-    .mobile-menu-buttons {
+.mobile-menu-buttons {
         display: none;
     }
-
 
 @media screen and (max-width: 900px) {
     img.rr-logo {
