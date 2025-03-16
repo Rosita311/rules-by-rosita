@@ -6,7 +6,7 @@ const media = window.matchMedia("(width < 900px)");
 
 const updateNavbar = (e) => {
     const isMobile = e.matches;
-    // console.log('isMobile:', isMobile);
+    console.log('isMobile:', isMobile);
     if (isMobile) {
         navbar.setAttribute('inert', '');
     } else {
