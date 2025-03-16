@@ -88,3 +88,9 @@ Ik heb vandaag maar heel weinig energie om iets te doen, dus ik wil vandaag een 
 Ik vond het bij nader inzien toch beter om de HTML bestanden direct in het thema te hebben staan, dus ik heb alle bestanden en Git verplaatst, daarna heb ik een Git Rebase gedaan en de dubbele bestanden verwijderd. Nu loopt de lokale repo gelijk met de remote repository.
 
 [A Modern CSS Reset](https://www.joshwcomeau.com/css/custom-css-reset/)
+
+## Nog op te lossen
+Styling header en menu
+Darkmode en zoekknop staan niet meer naast elkaar in het mobiele menu
+tab door het menu werkt niet
+je kunt maar 1x klikken op de darkmode knop. 

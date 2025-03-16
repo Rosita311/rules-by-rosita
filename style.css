@@ -34,9 +34,9 @@ Version: 1.0
     --color-accent: #333333;
 } 
 
+
 @media (prefers-color-scheme: dark) {
     :root {
-        /* Colors */
         --color-background: #1A1A1A; ;
         --color-text: #FAF9F6; 
         --color-primary-1: #F6B4B4; 

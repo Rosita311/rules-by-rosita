@@ -6,7 +6,7 @@ const media = window.matchMedia("(width < 900px)");
 
 const updateNavbar = (e) => {
     const isMobile = e.matches;
-    console.log(isMobile);
+    // console.log('isMobile:', isMobile);
     if (isMobile) {
         navbar.setAttribute('inert', '');
     } else {
@@ -73,6 +73,7 @@ themeSwitchButtons.forEach(button => {
     button.addEventListener('click', () => {
         console.log("Darkmode knop is ingedrukt!");
         darkmode = localStorage.getItem('darkmode');
+        console.log('Current darkmode state:', darkmode);
         if (darkmode !== 'active') {
             enableDarkmode();
         } else {
