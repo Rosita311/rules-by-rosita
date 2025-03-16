@@ -96,3 +96,6 @@ Ook heb ik geleerd over `setAttribute` en `removeAttribute` in Javascript, waarm
 En ik heb geleerd dat het goed is om niet op de main branch te werken, maar steeds op een andere branch en deze dan te mergen met de main branch, zodat de main branch goed blijft werken en je makkelijker fouten kunt herstellen. 
 
 De header en het menu zijn voor een groot deel af, nu ben ik bezig met de darkmode en vervolgens wil ik de footer en de cards voor de blog maken. Als dat af is, kopieer ik alle HTML naar de andere template onderdelen en pas ik die weer aan. Daarna kan ik alle HTML toevoegen in de PHP bestanden. 
+
+Ik heb nu ook GitHub CoPilot toegevoegd aan VSCode en dat werkt wel een stuk sneller, dat scheelt een hoop. 
+Maar ik sta ervan te kijken hoeveel ik nu al heb geleerd van zelf mijn thema bouwen. Ik word hier echt een beter developer van. :raised_hands:
