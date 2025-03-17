@@ -228,7 +228,7 @@ nav a.active-link {
 }
 
 .theme-switch {
-    padding: 0;
+    padding: 1em;
     border-radius: 50%;
     background-color: var(--color-accent);
     display: flex;
