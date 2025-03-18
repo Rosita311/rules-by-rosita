@@ -22,19 +22,7 @@ Version: 1.0
     --color-accent: #FFDADA;
 }
 
-@media (prefers-color-scheme: dark) {
-    :root {
-        --color-background: #1A1A1A; ;
-        --color-text: #FAF9F6; 
-        --color-primary-1: #F6B4B4; 
-        --color-primary-2: #ED8C8C;
-        --color-primary-3: #FFDADA;
-        --color-secondary-1: #B0D8E1;
-        --color-secondary-2: #8AC4D0;
-        --color-accent: #333333;
-    } 
-}
-
+/* Darkmode */
 .darkmode {
     /* Colors */
     --color-background: #1A1A1A !important;
@@ -46,27 +34,6 @@ Version: 1.0
     --color-secondary-2: #8AC4D0 !important;
     --color-accent: #333333 !important;
 } 
-
-
-
-
-/* 
-:root {
-    --deep-crimson: #AD0003;
-    --vivid-red: #E00000;
-    --soft-coral: #ED8C8C;
-    --blush-pink: #F6B4B4;
-    --pastel-rose: #FFDADA;
-    --deep-teal: #007586;
-    --bright-cyan-blue: #009EB0;
-    --sky-blue: #8AC4D0;
-    --pale-ice-blue: #B0D8E1;
-    --soft-ivory: #FAF9F6;
-    --charcoal-black: #1A1A1A;
-    --charcoal-gray: #333333;
-}
-
-*/
 
   /* basic styles */
   
@@ -164,11 +131,19 @@ header {
     display: flex;
     justify-content: space-between;
     padding-top: 0.5rem;
+    align-items: center;
 }
 
 img.rr-logo {
     max-width: 10rem;
     margin-right: 2rem;
+}
+
+.menu-items {
+    display: flex; /* Zet de navigatie en knoppen naast elkaar */
+    justify-content: flex-end;
+    align-items: center; /* Zorgt dat alles netjes gecentreerd staat */
+    width: 100%; 
 }
 
 nav {
@@ -182,6 +157,7 @@ nav ul {
 
 nav li {
     display: flex;
+    padding: 0 2rem;
 }
 
 nav a {
@@ -191,7 +167,7 @@ nav a {
     font-weight: 500;
     text-decoration: none;
     color: var(--color-text);
-    padding: 1em 2em; 
+    padding: 1em 0; 
     transition: background-color 150ms ease;
 
     &:hover {
@@ -203,58 +179,71 @@ nav a.active-link {
     border-bottom: 2px solid var(--color-primary-1);
 }
 
- nav button .menu-button {
-    background-color: transparent;
-    color: var(--color-text);
-    padding: 0.5em 1em;;
-    border-radius: 8px;
-    transition: background-color 150ms ease, border-color 150ms ease; /* Add transition for border-color */
+.menu-buttons {
+    display: flex; 
+    gap: 0.75rem; 
+    align-items: center; 
+}
+
+ .menu-button {
+    padding: 0.5em;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;   
+    align-items: center;
 
     &:hover {
-        background-color: transparent;
-        border: none;
-        color: var(--color-background); /* Change text color on hover */
+        background-color: var(--color-accent);
     }
-}
+
+    &:focus {
+        outline: 2px solid var(--color-primary-1);
+    }
+ }
+
 
 #open-sidebar-button {
     display: none;
     background: none;
     margin-left: auto;
+    padding: 0.5em;
+    margin-right: 0.75rem;
+
+    &:focus {
+        border-radius: 50%;
+        outline: 2px solid var(--color-primary-1);
+    }
 }
 
 #close-sidebar-button {
     display: none;
     background: none;
-    padding: 1em;
+    padding: 0.5em;
+
+    &:focus {
+        border-radius: 50%;
+        outline: 2px solid var(--color-primary-1);
+    }
 }
 
-.theme-switch {
-    padding: 1em;
-    border-radius: 50%;
-    background-color: var(--color-accent);
-    display: flex;
-    justify-content: center;   
-    align-items: center;
-}
 
-.theme-switch svg {
+#theme-switch svg {
     stroke: var(--color-text);
 }
 
-.theme-switch svg:first-child {
+#theme-switch svg:first-child {
     display: block;
 } 
 
-.theme-switch svg:last-child {
+#theme-switch svg:last-child {
     display: none;
 }
 
-.darkmode .theme-switch svg:first-child {
+.darkmode #theme-switch svg:first-child {
     display: none;
 }
 
-.darkmode .theme-switch svg:last-child {
+.darkmode #theme-switch svg:last-child {
     display: block;
 }
 
@@ -273,11 +262,7 @@ svg {
     display: none;
 }
 
-.mobile-menu-buttons {
-        display: none;
-    }
-
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1024px) {
     img.rr-logo {
         max-width: 7rem;
     }
@@ -307,14 +292,19 @@ svg {
         flex-direction: column;
     }
 
+    nav li {
+        padding: 0;
+    }
+
     nav a {
+        padding: 1em 2.5em; 
         width: 100%;
-        padding-left: 2.5em;
+        transition: background-color 150ms ease;
 
         &:hover {
             border-bottom: none;
             background-color: var(--color-secondary-1);
-            color: var(--color-text);
+            color: var(--color-background);
         }
     }
 
@@ -332,21 +322,8 @@ svg {
 
     #close-sidebar-button {
         display: block;
-        padding: 2.5em;
-    }
-    
-    #mobile-search-button {
-        padding-left: 2.5em; 
-    }
-    .mobile-menu-buttons {
-        display: block;
-    }
-    .mobile-menu-buttons ul {
-        display: flex;
-    }
-
-    .desktop-menu-buttons{
-        display: none;
+        padding: 0.5em;
+        margin: 2em;
     }
 }
 
