@@ -21,7 +21,7 @@ Version: 1.0
     --color-secondary-2: #007586;
     --color-accent: #FFDADA;
 }
-/*
+
 @media (prefers-color-scheme: dark) {
     :root {
         --color-background: #1A1A1A; ;
@@ -33,7 +33,7 @@ Version: 1.0
         --color-secondary-2: #8AC4D0;
         --color-accent: #333333;
     } 
-}*/
+}
 
 .darkmode {
     /* Colors */

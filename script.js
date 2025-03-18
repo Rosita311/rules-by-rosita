@@ -45,20 +45,25 @@ updateNavbar(media);
 document.addEventListener('DOMContentLoaded', () => {
     const themeSwitchButtons = document.querySelectorAll('.theme-switch');
     let darkmode = localStorage.getItem('darkmode');
+    const root = document.documentElement; 
 
     const enableDarkmode = () => {
-        document.body.classList.add('darkmode');
+        root.classList.add('darkmode');
+        root.style.colorScheme = 'dark';
         localStorage.setItem('darkmode', 'active');
         themeSwitchButtons.forEach(button => {
             button.setAttribute('aria-label', 'Schakel over naar licht thema');
+            button.setAttribute('aria-pressed', 'true');
         });
     }
 
     const disableDarkmode = () => {
-        document.body.classList.remove('darkmode');
+        root.classList.remove('darkmode');
+        root.style.colorScheme = 'light';
         localStorage.setItem('darkmode', 'inactive' );
         themeSwitchButtons.forEach(button => {
             button.setAttribute('aria-label', 'Schakel over naar donker thema');
+            button.setAttribute('aria-pressed', 'false');
         });
     }
 
