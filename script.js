@@ -1,12 +1,11 @@
 // Menu
 const openButton = document.getElementById('open-sidebar-button');
 const navbar = document.getElementById("navbar");
-
-const media = window.matchMedia("(width < 900px)");
+const overlay = document.getElementById("overlay");
+const media = window.matchMedia("(width < 1024px)");
 
 const updateNavbar = (e) => {
     const isMobile = e.matches;
-    console.log('isMobile:', isMobile);
     if (isMobile) {
         navbar.setAttribute('inert', '');
     } else {
@@ -24,12 +23,14 @@ const openSidebar = () => {
     navbar.classList.add("show");
     openButton.setAttribute('aria-expanded', 'true');
     navbar.removeAttribute('inert');
+    overlay.style.display = "block";
 };
 
 const closeSidebar = () => {
     navbar.classList.remove("show");
     openButton.setAttribute('aria-expanded', 'false');
     navbar.setAttribute('inert', '');
+    overlay.style.display = "none";
 };
 
 
