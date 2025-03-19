@@ -99,3 +99,7 @@ De header en het menu zijn voor een groot deel af, nu ben ik bezig met de darkmo
 
 Ik heb nu ook GitHub CoPilot toegevoegd aan VSCode en dat werkt wel een stuk sneller, dat scheelt een hoop. 
 Maar ik sta ervan te kijken hoeveel ik nu al heb geleerd van zelf mijn thema bouwen. Ik word hier echt een beter developer van. :raised_hands:
+
+## Woensdag 19 maart Header is af!
+
+Ik vind mijn header met werkende darkmode af, voor nu. Het is toegankelijk voor schermlezers. Ik vond het wel moeilijk om alles goed werkend en toegankelijk te krijgen. En ook wat er allemaal bij komt kijken en waar je aan kunt denken. De code was gisteren zo vaak gebroken, dat ik dacht, waar ben ik aan begonnen, maar uiteindelijk is het wel gelukt. De header is klaar. Op naar de footer! 
