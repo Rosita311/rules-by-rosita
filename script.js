@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
         root.classList.add('darkmode');
         root.style.colorScheme = 'dark';
         localStorage.setItem('darkmode', 'active');
-        themeSwitch.setAttribute('aria-label', 'Schakel over naar licht thema');
+        themeSwitch.setAttribute('aria-label', 'Donker thema uitschakelen');
         themeSwitch.setAttribute('aria-pressed', 'true');
         };
 
@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
         root.classList.remove('darkmode');
         root.style.colorScheme = 'light';
         localStorage.setItem('darkmode', 'inactive' );
-        themeSwitch.setAttribute('aria-label', 'Schakel over naar donker thema');
+        themeSwitch.setAttribute('aria-label', 'Donker thema inschakelen');
         themeSwitch.setAttribute('aria-pressed', 'false');
         };
 
