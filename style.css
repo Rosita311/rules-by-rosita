@@ -44,7 +44,7 @@ html {
 body {
     background-color: var(--color-background);
     color: var(--color-text);
-    max-width: 1280px;
+    max-width: 100%;
     margin: 0 auto;
 }
 
@@ -107,6 +107,12 @@ h6 {
     line-height: 1.5em;
 }
 
+.container-main, .header-container, .footer-container {
+    max-width: 80rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
 /* A11y */
 .skip-link {
     position: absolute;
@@ -124,6 +130,8 @@ h6 {
     top: 12px;
     left: 12px;
 }
+
+
 
 /* header */
 header {
