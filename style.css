@@ -5,13 +5,13 @@ Description: Een modern, schaalbaar thema met darkmode en toegankelijkheid.
 Version: 1.0
 */
 
-/* Colors and Fonts*/
-:root {
-    /* Fonts */
+/* Colors and Fonts */
+:root{
+  
     --font-body: 'Nunito', sans-serif;
     --font-heading: 'Zilla Slab', serif;
 
-    /* Colors */
+   
     --color-background: #FAF9F6;
     --color-text: #1A1A1A; 
     --color-primary-1: #E00000; 
@@ -22,55 +22,31 @@ Version: 1.0
     --color-accent: #FFDADA;
 }
 
-@media (prefers-color-scheme: dark) {
-    :root {
-        /* Colors */
-        --color-background: #1A1A1A; ;
-        --color-text: #FAF9F6; 
-        --color-primary-1: #F6B4B4; 
-        --color-primary-2: #ED8C8C;
-        --color-primary-3: #FFDADA;
-        --color-secondary-1: #B0D8E1;
-        --color-secondary-2: #8AC4D0;
-        --color-accent: #333333;
-    } 
-}
-
-/* 
-:root {
-    --deep-crimson: #AD0003;
-    --vivid-red: #E00000;
-    --soft-coral: #ED8C8C;
-    --blush-pink: #F6B4B4;
-    --pastel-rose: #FFDADA;
-    --deep-teal: #007586;
-    --bright-cyan-blue: #009EB0;
-    --sky-blue: #8AC4D0;
-    --pale-ice-blue: #B0D8E1;
-    --soft-ivory: #FAF9F6;
-    --charcoal-black: #1A1A1A;
-    --charcoal-gray: #333333;
-}
-
-*/
+/* Darkmode */
+.darkmode {
+    /* Colors */
+    --color-background: #1A1A1A !important;
+    --color-text: #FAF9F6 !important; 
+    --color-primary-1: #F6B4B4 !important; 
+    --color-primary-2: #ED8C8C !important;
+    --color-primary-3: #FFDADA !important;
+    --color-secondary-1: #B0D8E1 !important;
+    --color-secondary-2: #8AC4D0 !important;
+    --color-accent: #333333 !important;
+} 
 
   /* basic styles */
-
-
-
+  
 html {
     font-size: 16px; 
 }
 
 body {
-    font-size: 1rem; 
-    font-family: var(--font-body);
-    line-height: 1.5;
-    margin: 0 auto;
     padding: 0 1rem;
     background-color: var(--color-background);
     color: var(--color-text);
     max-width: 1280px;
+    margin: 0 auto;
 }
 
 button {
@@ -78,11 +54,58 @@ button {
    cursor: pointer;
 }
 
+p {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5em;
+}
 
+a {
+    text-decoration: none;
+    color: var(--color-primary-1);
+}
 
 h1 {
     font-family: var(--font-heading);
     font-size: 3.5rem;
+    font-weight: 400;
+    line-height: 1.1em;
+}
+
+h2 {
+    font-family: var(--font-heading);
+    font-size: 3rem;
+    font-weight: 400;
+    line-height: 1.1em;
+}
+
+h3 {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    font-weight: 400;
+    line-height: 1.2em;
+}
+
+h4 {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 1.3em;
+}
+
+h5 {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 1.4em;
+}
+
+h6 {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 1.5em;
 }
 
 /* A11y */
@@ -108,11 +131,19 @@ header {
     display: flex;
     justify-content: space-between;
     padding-top: 0.5rem;
+    align-items: center;
 }
 
 img.rr-logo {
     max-width: 10rem;
     margin-right: 2rem;
+}
+
+.menu-items {
+    display: flex; /* Zet de navigatie en knoppen naast elkaar */
+    justify-content: flex-end;
+    align-items: center; /* Zorgt dat alles netjes gecentreerd staat */
+    width: 100%; 
 }
 
 nav {
@@ -126,13 +157,17 @@ nav ul {
 
 nav li {
     display: flex;
+    padding: 0 2rem;
 }
 
 nav a {
     display: flex;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: 500;
     text-decoration: none;
     color: var(--color-text);
-    padding: 1em 2em; 
+    padding: 1em 0; 
     transition: background-color 150ms ease;
 
     &:hover {
@@ -144,30 +179,72 @@ nav a.active-link {
     border-bottom: 2px solid var(--color-primary-1);
 }
 
- nav button .menu-button {
-    background-color: var(--color-primary-3);
-    color: var(--color-text);
-    padding: 0.5em 1em;;
-    border-radius: 8px;
-    transition: background-color 150ms ease, border-color 150ms ease; /* Add transition for border-color */
+.menu-buttons {
+    display: flex; 
+    gap: 0.75rem; 
+    align-items: center; 
+}
+
+ .menu-button {
+    padding: 0.5em;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;   
+    align-items: center;
 
     &:hover {
-        background-color: var(--color-secondary-1);
-        border: none;
-        color: var(--color-background); /* Change text color on hover */
+        background-color: var(--color-accent);
     }
-}
+
+    &:focus {
+        outline: 2px solid var(--color-primary-1);
+    }
+ }
+
 
 #open-sidebar-button {
     display: none;
     background: none;
     margin-left: auto;
+    padding: 0.5em;
+    margin-right: 0.75rem;
+
+    &:focus {
+        border-radius: 50%;
+        outline: 2px solid var(--color-primary-1);
+    }
 }
 
 #close-sidebar-button {
     display: none;
     background: none;
-    padding: 1em;
+    padding: 0.5em;
+
+    &:focus {
+        border-radius: 50%;
+        outline: 2px solid var(--color-primary-1);
+    }
+}
+
+
+#theme-switch svg {
+    stroke: var(--color-text);
+}
+
+#theme-switch svg:first-child {
+    display: block;
+} 
+
+#theme-switch svg:last-child {
+    display: none;
+}
+
+.darkmode #theme-switch svg:first-child {
+    display: none;
+}
+
+.darkmode #theme-switch svg:last-child {
+    display: block;
 }
 
 svg {
@@ -177,21 +254,17 @@ svg {
 }
 
 #overlay {
-    background-color: rgba(0, 0, 0, 0.5);
+    background: rgba(0,0,0,0.5);
     position: fixed;
+    width: 100%;
+    height: 100%;
     inset: 0;
     transition: rgba(0,0,0,0.5) 0.3s ease-in-out;
     z-index: 9;
     display: none;
 }
 
-
-    .mobile-menu-buttons {
-        display: none;
-    }
-
-
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1024px) {
     img.rr-logo {
         max-width: 7rem;
     }
@@ -212,23 +285,24 @@ svg {
         right: 0;
     }
 
-    nav.show ~ #overlay {
-        display: block;
-    }
-
     nav ul {
         width: 100%;
         flex-direction: column;
     }
 
+    nav li {
+        padding: 0;
+    }
+
     nav a {
+        padding: 1em 2.5em; 
         width: 100%;
-        padding-left: 2.5em;
+        transition: background-color 150ms ease;
 
         &:hover {
             border-bottom: none;
             background-color: var(--color-secondary-1);
-            color: var(--color-text);
+            color: var(--color-background);
         }
     }
 
@@ -246,21 +320,8 @@ svg {
 
     #close-sidebar-button {
         display: block;
-        padding: 2.5em;
-    }
-    
-    #mobile-search-button {
-        padding-left: 2.5em; 
-    }
-    .mobile-menu-buttons {
-        display: block;
-    }
-    .mobile-menu-buttons ul {
-        display: flex;
-    }
-
-    .desktop-menu-buttons{
-        display: none;
+        padding: 0.5em;
+        margin: 2em;
     }
 }
 

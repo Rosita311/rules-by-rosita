@@ -38,7 +38,8 @@
     text-wrap: balance;
   }
   
-  /* 8. Create a root stacking context */
+  /* 8. Create a root stacking context
   #root, #__next {
     isolation: isolate;
   }
+    */
