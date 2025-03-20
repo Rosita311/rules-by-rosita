@@ -111,6 +111,7 @@ h6 {
     max-width: 80rem;
     padding-left: 2rem;
     padding-right: 2rem;
+    margin: 0 auto;
   }
 
 /* A11y */
@@ -338,7 +339,7 @@ footer {
     color: var(--color-text);
 }
 
-.footer-content{
+.footer-container {
     display: flex;
     justify-content: space-between;
     align-items: start;
