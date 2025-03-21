@@ -103,3 +103,6 @@ Maar ik sta ervan te kijken hoeveel ik nu al heb geleerd van zelf mijn thema bou
 ## Woensdag 19 maart Header is af!
 
 Ik vind mijn header met werkende darkmode af, voor nu. Het is toegankelijk voor schermlezers. Ik vond het wel moeilijk om alles goed werkend en toegankelijk te krijgen. En ook wat er allemaal bij komt kijken en waar je aan kunt denken. De code was gisteren zo vaak gebroken, dat ik dacht, waar ben ik aan begonnen, maar uiteindelijk is het wel gelukt. De header is klaar. Op naar de footer! 
+
+## Vrijdag 21 maart 
+Ik heb vandaag met hulp een rebase op de footer gedaan en dus geleerd hoe je een rebase op een branch kan doen. Ook ben ik bezig om de breedte van de body aan te passen
