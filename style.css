@@ -108,11 +108,18 @@ h6 {
 }
 
 /* Layout */
- .header-container, .container-main, .footer-container {
+.header-container, .container-main, .footer-container {
     max-width: 80rem;
     padding-left: 2rem;
     padding-right: 2rem;
     margin: 0 auto;
+  }
+
+ .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid var(--color-primary-1);
   }
 
 /* A11y */
@@ -136,12 +143,14 @@ h6 {
 
 
 /* header */
-header {
+/* header { 
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between;;
     padding-top: 0.5rem;
     align-items: center;
 }
+
+*/
 
 img.rr-logo {
     max-width: 10rem;
@@ -152,7 +161,7 @@ img.rr-logo {
     display: flex; /* Zet de navigatie en knoppen naast elkaar */
     justify-content: flex-end;
     align-items: center; /* Zorgt dat alles netjes gecentreerd staat */
-    width: 100%; 
+
 }
 
 nav {
