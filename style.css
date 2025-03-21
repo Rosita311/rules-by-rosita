@@ -107,7 +107,8 @@ h6 {
     line-height: 1.5em;
 }
 
-.container-main, .header-container, .footer-container {
+/* Layout */
+ .header-container, .container-main, .footer-container {
     max-width: 80rem;
     padding-left: 2rem;
     padding-right: 2rem;
@@ -318,8 +319,6 @@ svg {
         border-bottom: none;
         background-color: var(--color-primary-1);
         color: var(--color-background);
-
-        
     }
 
     #open-sidebar-button {
@@ -333,31 +332,35 @@ svg {
     }
 }
 
+/* Main content */
+.container-main {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
 /* Footer styles */
 footer {
-    background-color: var(--color-background);
+    background-color: var(--color-accent);
     color: var(--color-text);
 }
 
-.footer-container {
+.footer-content {
     display: flex;
     justify-content: space-between;
-    align-items: start;
-    padding: 5rem 2.5rem;
+    padding: 5rem 0;
+    gap: 4rem;
 }
 
-.footer-menu {
+.footer-menu nav {
     display: flex;
     justify-content: flex-start;
-    width: 50%;
-    border: 1px solid #E00000;
+    background-color: var(--color-accent);
 }
 
 .footer-menu nav ul{
     display: flex;
     justify-content: space-between;
     width: 100%;
-    background-color: transparent;
     gap: 1rem;
 }
 
@@ -365,7 +368,6 @@ footer {
     display: flex;
     justify-content: flex-start;
     width: 100%;
-    background-color: transparent;
     padding: 0;
 
     &:hover {
@@ -406,5 +408,5 @@ footer {
 }
 
 .footer-info {
-    padding: 1rem 2.5rem;
+    padding: 1rem 0;
 }
