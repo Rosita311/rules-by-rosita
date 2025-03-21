@@ -115,12 +115,6 @@ h6 {
     margin: 0 auto;
   }
 
- .header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border: 1px solid var(--color-primary-1);
-  }
 
 /* A11y */
 .skip-link {
@@ -143,14 +137,16 @@ h6 {
 
 
 /* header */
-/* header { 
-    display: flex;
-    justify-content: space-between;;
-    padding-top: 0.5rem;
-    align-items: center;
-}
 
-*/
+
+ .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 0.5rem;
+  }
+
+
 
 img.rr-logo {
     max-width: 10rem;
