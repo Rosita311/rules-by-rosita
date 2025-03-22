@@ -3,68 +3,168 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Font & Kleur Vergelijking</title>
-    <link href="<link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Zilla+Slab:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <title>Moodboard - Rosita's Theme</title>
     <style>
-        :root {
-            --deep-crimson: #AD0003;
-            --bright-scarlet: #C60002;
-            --vivid-red: #E00000;
-            --soft-coral: #ED8C8C;
-            --blush-pink: #F6B4B4;
-            --pastel-rose: #FFDADA;
-            --deep-teal: #007586;
-            --bright-cyan-blue: #009EB0;
-            --sky-blue: #8AC4D0;
-            --pale-ice-blue: #B0D8E1;
-            --soft-ivory: #FAF9F6;
-            --charcoal-black: #1A1A1A;
-        }
+        @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600&family=Zilla+Slab:wght@400;600&display=swap');
 
         body {
             font-family: 'Nunito', sans-serif;
-            background-color: var(--soft-ivory);
-            color: var(--charcoal-black);
+            background-color: #FAF9F6;
+            color: #2C4A52;
+            max-width: 900px;
+            margin: 0 auto;
             padding: 20px;
-            font-size: 1rem;
         }
 
-        .heading {
-            margin-bottom: 10px;
-            font-size: 3.5rem;
-        }
-
-        .nunito {
-            font-family: 'Nunito', sans-serif;
-        }
-
-        .zilla-slab {
+        h1, h2 {
             font-family: 'Zilla Slab', serif;
-            font-weight: 500;
         }
 
-        .text-block {
-            background: var(--soft-ivory);
-            padding: 15px;
-            margin-bottom: 20px;
+        h1 {
+            font-size: 2.5rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-top: 2rem;
+        }
+
+        /* Kleurvoorbeelden */
+        .colors {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .color-box {
+            padding: 20px;
+            text-align: center;
             border-radius: 8px;
+            color: white;
+            font-weight: bold;
+        }
+
+        .light-bg { background-color: #FAF9F6; color: #2C4A52; }
+        .dark-bg { background-color: #1A1A1A; }
+        .text-light { background-color: #2C4A52; }
+        .text-dark { background-color: #B0D8E1; color: #1A1A1A; }
+        .primary { background-color: #E00000; }
+        .cyan { background-color: #009EB0; }
+        .pastel { background-color: #FFDADA; color: #1A1A1A; }
+        .coral { background-color: #ED8C8C; color: #1A1A1A; }
+        .greyblue { background-color: #5E7D86; }
+        .charcoal { background-color: #333333; }
+
+        /* Typografie */
+        .typography {
+            margin-top: 40px;
+        }
+
+        .body-text {
+            font-size: 1rem;
+            font-weight: 400;
+        }
+
+        /* Buttons */
+        .buttons {
+            margin-top: 40px;
+        }
+
+        .btn {
+            border: none;
+            padding: 10px 20px;
+            font-size: 1rem;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-right: 10px;
+            transition: background 0.3s ease-in-out;
+        }
+
+        .primary-btn {
+            background-color: #E00000;
+            color: white;
+        }
+
+        .primary-btn:hover {
+            background-color: #AD0003;
+        }
+
+        .secondary-btn {
+            background-color: #009EB0;
+            color: white;
+        }
+
+        .secondary-btn:hover {
+            background-color: #007586;
+        }
+
+        .ghost-btn {
+            background: none;
+            color: #2C4A52;
+            border: 2px solid #2C4A52;
+        }
+
+        .ghost-btn:hover {
+            background-color: #2C4A52;
+            color: white;
         }
     </style>
 </head>
 <body>
-    <h2>Font & Kleur Vergelijking</h2>
 
-    
-    <div class="text-block">
-        <h1 class="heading zilla-slab">Zilla Slab - Toegankelijke serif Laat leren, Toegankelijke code</h1>
-        <p>Dit is een voorbeeldtekst in Nunito (bodytekst) met de Merriweather-kop.</p>
-    </div>
+    <header>
+        <h1>Moodboard - Rosita's Theme</h1>
+    </header>
 
-    <div class="text-block">
-        <h1 class="heading nunito">Nunito - Toegankelijke sans serif Laat leren, Toegankelijke code</h1>
-        <p>Dit is een voorbeeldtekst in Nunito (bodytekst) met de Nunito-kop.</p>
-    </div>
+    <section class="colors">
+        <h2>Kleurenschema</h2>
+
+        <div class="color-box light-bg">
+            <p>🔆 Light Mode Achtergrond <br> <strong>#FAF9F6</strong></p>
+        </div>
+        <div class="color-box dark-bg">
+            <p>🌙 Dark Mode Achtergrond <br> <strong>#1A1A1A</strong></p>
+        </div>
+        <div class="color-box text-light">
+            <p>📝 Tekst (light mode) <br> <strong>#2C4A52</strong></p>
+        </div>
+        <div class="color-box text-dark">
+            <p>📝 Tekst (dark mode) <br> <strong>#B0D8E1</strong></p>
+        </div>
+        <div class="color-box primary">
+            <p>🔴 Primair Rood <br> <strong>#E00000</strong></p>
+        </div>
+        <div class="color-box cyan">
+            <p>🔵 Secundair Cyaan <br> <strong>#009EB0</strong></p>
+        </div>
+        <div class="color-box pastel">
+            <p>🌸 Pastel Roze <br> <strong>#FFDADA</strong></p>
+        </div>
+        <div class="color-box coral">
+            <p>🍑 Zacht Koraal <br> <strong>#ED8C8C</strong></p>
+        </div>
+        <div class="color-box greyblue">
+            <p>🔹 Grijsblauw <br> <strong>#5E7D86</strong></p>
+        </div>
+        <div class="color-box charcoal">
+            <p>⚫ Donkergrijs <br> <strong>#333333</strong></p>
+        </div>
+    </section>
+
+    <section class="typography">
+        <h2>Typografie</h2>
+        <h1>Zilla Slab (Koptekst H1)</h1>
+        <h2>Zilla Slab (H2 Kop)</h2>
+        <p class="body-text">Nunito (Bodytekst) - Dit is een voorbeeld van gewone tekst met een modern, toegankelijk lettertype.</p>
+    </section>
+
+    <section class="buttons">
+        <h2>Buttons & Stijl</h2>
+        <button class="btn primary-btn">Primair</button>
+        <button class="btn secondary-btn">Secundair</button>
+        <button class="btn ghost-btn">Ghost Button</button>
+    </section>
+
 </body>
 </html>
