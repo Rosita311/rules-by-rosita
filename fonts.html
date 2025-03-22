@@ -7,17 +7,47 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600&family=Zilla+Slab:wght@400;600&display=swap');
 
+        /* Colors and Fonts */
+        :root {
+            --font-body: 'Nunito', sans-serif;
+            --font-heading: 'Zilla Slab', serif;
+
+            --color-background: #FAF9F6;
+            --color-text: #1A1A1A; 
+            --color-primary-1: #E00000; 
+            --color-primary-2: #AD0003;
+            --color-primary-3: #ED8C8C;
+            --color-secondary-1: #009EB0;
+            --color-secondary-2: #007586;
+            --color-secondary-3: #B0D8E1; /* Lichtblauw toegevoegd */
+            --color-accent: #FFDADA;
+            --color-darkblue: #2C4A52; /* Vervanger voor #333333 */
+        }
+
+        /* Darkmode */
+        .darkmode {
+            --color-background: #1A1A1A !important;
+            --color-text: #FAF9F6 !important; 
+            --color-primary-1: #F6B4B4 !important; 
+            --color-primary-2: #ED8C8C !important;
+            --color-primary-3: #FFDADA !important;
+            --color-secondary-1: #B0D8E1 !important;
+            --color-secondary-2: #8AC4D0 !important;
+            --color-secondary-3: #B0D8E1 !important; /* Lichtblauw in darkmode */
+            --color-accent: #2C4A52 !important; /* Donkerblauw ipv #333333 */
+        }
+
         body {
-            font-family: 'Nunito', sans-serif;
-            background-color: #FAF9F6;
-            color: #2C4A52;
+            font-family: var(--font-body);
+            background-color: var(--color-background);
+            color: var(--color-text);
             max-width: 900px;
             margin: 0 auto;
             padding: 20px;
         }
 
         h1, h2 {
-            font-family: 'Zilla Slab', serif;
+            font-family: var(--font-heading);
         }
 
         h1 {
@@ -45,16 +75,16 @@
             font-weight: bold;
         }
 
-        .light-bg { background-color: #FAF9F6; color: #2C4A52; }
-        .dark-bg { background-color: #1A1A1A; }
-        .text-light { background-color: #2C4A52; }
-        .text-dark { background-color: #B0D8E1; color: #1A1A1A; }
-        .primary { background-color: #E00000; }
-        .cyan { background-color: #009EB0; }
-        .pastel { background-color: #FFDADA; color: #1A1A1A; }
-        .coral { background-color: #ED8C8C; color: #1A1A1A; }
-        .greyblue { background-color: #5E7D86; }
-        .charcoal { background-color: #333333; }
+        .bg-light { background-color: var(--color-background); color: var(--color-text); }
+        .bg-dark { background-color: var(--color-text); color: var(--color-background); }
+        .primary-1 { background-color: var(--color-primary-1); }
+        .primary-2 { background-color: var(--color-primary-2); }
+        .primary-3 { background-color: var(--color-primary-3); color: var(--color-text); }
+        .secondary-1 { background-color: var(--color-secondary-1); }
+        .secondary-2 { background-color: var(--color-secondary-2); }
+        .secondary-3 { background-color: var(--color-secondary-3); color: var(--color-text); }
+        .accent { background-color: var(--color-accent); color: var(--color-text); }
+        .darkblue { background-color: var(--color-darkblue); }
 
         /* Typografie */
         .typography {
@@ -82,31 +112,31 @@
         }
 
         .primary-btn {
-            background-color: #E00000;
+            background-color: var(--color-primary-1);
             color: white;
         }
 
         .primary-btn:hover {
-            background-color: #AD0003;
+            background-color: var(--color-primary-2);
         }
 
         .secondary-btn {
-            background-color: #009EB0;
+            background-color: var(--color-secondary-1);
             color: white;
         }
 
         .secondary-btn:hover {
-            background-color: #007586;
+            background-color: var(--color-secondary-2);
         }
 
         .ghost-btn {
             background: none;
-            color: #2C4A52;
-            border: 2px solid #2C4A52;
+            color: var(--color-darkblue);
+            border: 2px solid var(--color-darkblue);
         }
 
         .ghost-btn:hover {
-            background-color: #2C4A52;
+            background-color: var(--color-darkblue);
             color: white;
         }
     </style>
@@ -120,35 +150,35 @@
     <section class="colors">
         <h2>Kleurenschema</h2>
 
-        <div class="color-box light-bg">
+        <div class="color-box bg-light">
             <p>🔆 Light Mode Achtergrond <br> <strong>#FAF9F6</strong></p>
         </div>
-        <div class="color-box dark-bg">
+        <div class="color-box bg-dark">
             <p>🌙 Dark Mode Achtergrond <br> <strong>#1A1A1A</strong></p>
         </div>
-        <div class="color-box text-light">
-            <p>📝 Tekst (light mode) <br> <strong>#2C4A52</strong></p>
-        </div>
-        <div class="color-box text-dark">
-            <p>📝 Tekst (dark mode) <br> <strong>#B0D8E1</strong></p>
-        </div>
-        <div class="color-box primary">
+        <div class="color-box primary-1">
             <p>🔴 Primair Rood <br> <strong>#E00000</strong></p>
         </div>
-        <div class="color-box cyan">
-            <p>🔵 Secundair Cyaan <br> <strong>#009EB0</strong></p>
+        <div class="color-box primary-2">
+            <p>🍒 Diep Rood <br> <strong>#AD0003</strong></p>
         </div>
-        <div class="color-box pastel">
-            <p>🌸 Pastel Roze <br> <strong>#FFDADA</strong></p>
-        </div>
-        <div class="color-box coral">
+        <div class="color-box primary-3">
             <p>🍑 Zacht Koraal <br> <strong>#ED8C8C</strong></p>
         </div>
-        <div class="color-box greyblue">
-            <p>🔹 Grijsblauw <br> <strong>#5E7D86</strong></p>
+        <div class="color-box secondary-1">
+            <p>🔵 Cyaan <br> <strong>#009EB0</strong></p>
         </div>
-        <div class="color-box charcoal">
-            <p>⚫ Donkergrijs <br> <strong>#333333</strong></p>
+        <div class="color-box secondary-2">
+            <p>🌊 Diep Teal <br> <strong>#007586</strong></p>
+        </div>
+        <div class="color-box secondary-3">
+            <p>🌤 Lichtblauw <br> <strong>#B0D8E1</strong></p>
+        </div>
+        <div class="color-box accent">
+            <p>🌸 Pastel Roze <br> <strong>#FFDADA</strong></p>
+        </div>
+        <div class="color-box darkblue">
+            <p>🔹 Donkerblauw (Nieuw) <br> <strong>#2C4A52</strong></p>
         </div>
     </section>
 
