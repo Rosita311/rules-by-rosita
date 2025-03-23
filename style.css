@@ -278,7 +278,100 @@ svg {
     display: none;
 }
 
+
+/* Main content */
+.container-main {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+/* Footer styles */
+footer {
+    background-color: var(--color-accent);
+    color: var(--color-text);
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 5rem 0;
+    gap: 4rem;
+}
+
+.footer-menu {
+    display: flex;
+    justify-content: flex-start;
+    background-color: var(--color-accent);
+}
+
+.footer-menu nav ul{
+    display: flex;
+    justify-content: flex-start;
+    list-style-type: none;
+    width: 100%;
+    gap: 1rem;
+}
+
+.footer-menu nav a {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    padding: 0;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--color-text);
+    text-decoration: underline;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.footer-social-media {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    width: 50%;
+    gap: 1rem;
+}
+
+.footer-social-media ul {
+    display: flex;
+    width: 100%;
+    background-color: transparent;
+    flex-wrap: wrap;
+}
+
+.footer-social-media li {
+    display: flex;
+    justify-content: flex-start;
+    background-color: transparent;
+    list-style: none;
+    padding: 1rem;
+
+    &:hover {
+        background-color: none;
+        color: var(--color-primary-1);
+        border: none;
+
+        &:focus {
+            border-radius: 0.5rem;
+            outline: 2px solid var(--color-primary-1);
+        }
+}
+
+.footer-info {
+    padding: 1rem 0;
+}
+
 @media screen and (max-width: 1024px) {
+    .header-container, .container-main, .footer-container {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+      }
+
     img.rr-logo {
         max-width: 7rem;
     }
@@ -335,83 +428,84 @@ svg {
         padding: 0.5em;
         margin: 2em;
     }
-}
 
-/* Main content */
-.container-main {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-}
-
-/* Footer styles */
-footer {
-    background-color: var(--color-accent);
-    color: var(--color-text);
-}
-
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    padding: 5rem 0;
-    gap: 4rem;
-}
-
-.footer-menu {
-    display: flex;
-    justify-content: flex-start;
-    background-color: var(--color-accent);
-}
-
-.footer-menu nav ul{
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    gap: 1rem;
-}
-
-.footer-menu nav a {
-    display: flex;
-    justify-content: flex-start;
-    width: 100%;
-    padding: 0;
-
-    &:hover {
-        background-color: none;
-        color: var(--color-primary-1);
-        border: none;
+    .footer-content {
+        padding: 3rem 0;
+        gap: 3rem;
+    }
+    
+    .footer-menu {
+        display: flex;
+        justify-content: flex-start;
+        background-color: var(--color-accent);
+    }
+    
+    .footer-menu nav ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        list-style-type: none;
+        width: 100%;
+        gap: 1rem;
+    }
+    
+    .footer-menu nav a {
+        display: flex;
+        justify-content: flex-start;
+        width: 100%;
+        padding: 0;
+        font-family: var(--font-body);
+        font-size: 1rem;
+        font-weight: 500;
+        color: var(--color-text);
+        text-decoration: underline;
+    
+        &:hover {
+            text-decoration: none;
+        }
     }
 }
 
-.footer-social-media {
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: start;
-    width: 50%;
-    gap: 1rem;
-}
+@media screen and (max-width: 768px) {
+    .header-container, .container-main, .footer-container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
 
-.footer-social-media ul {
-    display: flex;
-    width: 100%;
-    background-color: transparent;
-}
-
-.footer-social-media li {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    background-color: transparent;
-    list-style: none;
-
-    &:hover {
-        background-color: none;
-        color: var(--color-primary-1);
-        border: none;
+    img.rr-logo {
+        max-width: 5rem;
     }
 
-}
+    .footer-content {
+        display: flex;
+        flex-direction: column;
+        padding: 2rem 0;
+        gap: 2rem;
+    }
+    
 
-.footer-info {
-    padding: 1rem 0;
+    .footer-menu nav a {
+        display: flex;
+        justify-content: flex-start;
+        width: 100%;
+        padding: 0;
+        font-family: var(--font-body);
+        font-size: 1rem;
+        font-weight: 500;
+        color: var(--color-text);
+        text-decoration: underline;
+    
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
+    .footer-social-media {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        width: 100%;
+        gap: 1rem;
+    }
 }
