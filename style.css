@@ -360,6 +360,7 @@ footer {
             border-radius: 0.5rem;
             outline: 2px solid var(--color-primary-1);
         }
+    }
 }
 
 .footer-info {
