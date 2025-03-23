@@ -1,6 +1,6 @@
 // Menu
 const openButton = document.getElementById('open-sidebar-button');
-const navbar = document.getElementById("navbar");
+const navbar = document.getElementById("header-nav");
 const overlay = document.getElementById("overlay");
 const media = window.matchMedia("(width < 1024px)");
 
@@ -34,7 +34,7 @@ const closeSidebar = () => {
 };
 
 
-const navLinks = document.querySelectorAll('nav a');
+const navLinks = document.querySelectorAll('#header-nav a');
 navLinks.forEach(link => {
     link.addEventListener('click', closeSidebar);
 });

@@ -160,21 +160,21 @@ img.rr-logo {
 
 }
 
-nav {
+#header-nav {
    background-color: var(--color-background);
 }
 
-nav ul {
+#header-nav ul {
     list-style: none;
     display: flex;
 } 
 
-nav li {
+#header-nav li {
     display: flex;
     padding: 0 2rem;
 }
 
-nav a {
+#header-nav a {
     display: flex;
     font-family: var(--font-body);
     font-size: 1rem;
@@ -189,7 +189,7 @@ nav a {
     }
 }
 
-nav a.active-link {
+#header-nav a.active-link {
     border-bottom: 2px solid var(--color-primary-1);
 }
 
@@ -283,7 +283,7 @@ svg {
         max-width: 7rem;
     }
 
-    nav {
+    #header-nav {
         position: fixed;
         top:0;
         right: -100%;
@@ -295,20 +295,20 @@ svg {
         transition: right 300ms ease-out;
     }
 
-    nav.show {
+    #header-nav.show {
         right: 0;
     }
 
-    nav ul {
+    #header-nav ul {
         width: 100%;
         flex-direction: column;
     }
 
-    nav li {
+    #header-nav li {
         padding: 0;
     }
 
-    nav a {
+    #header-nav a {
         padding: 1em 2.5em; 
         width: 100%;
         transition: background-color 150ms ease;
@@ -320,7 +320,7 @@ svg {
         }
     }
 
-    nav a.active-link {
+    #header-nav a.active-link {
         border-bottom: none;
         background-color: var(--color-primary-1);
         color: var(--color-background);
@@ -356,7 +356,7 @@ footer {
     gap: 4rem;
 }
 
-.footer-menu nav {
+.footer-menu {
     display: flex;
     justify-content: flex-start;
     background-color: var(--color-accent);
