@@ -316,6 +316,10 @@ svg {
     flex-grow: 1;
     padding: 1rem;
     background-color: var(--color-accent);
+
+    &:hover {
+        background-color: var(--color-primary-3);
+    }
 }
 
 .blogpost-card-content {
