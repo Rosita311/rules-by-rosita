@@ -16,11 +16,11 @@ Version: 1.0
     --color-primary-1: #E00000; 
     --color-primary-2: #AD0003;
     --color-primary-3: #ED8C8C;  
-    --color-secondary-1: #55D1D9; 
-    --color-secondary-2: #5BB7C8; 
+    --color-secondary: #55D1D9; 
     --color-accent: #FFDADA; 
     --color-footer-bg: #D9ECF2;
     --color-text-light-bg: #1A1A1A;
+    --color-card-date: #79c5d2;
 }
 
 /* Darkmode */
@@ -30,12 +30,12 @@ Version: 1.0
     --color-text: #F6F6F6;
     --color-primary-1: #FF6161;
     --color-primary-2: #ED8C8C;
-    --color-primary-3: #FFDADA;
-    --color-secondary-1: #00BFCF;
-    --color-secondary-2: #0097A7;
+    --color-primary-3: #0097A7;
+    --color-secondary: #00BFCF;
     --color-accent: #1F3557; 
     --color-footer-bg: #1F3557;
     --color-text-light-bg: #1A1A1A;
+    --color-card-date: #ED8C8C;
 
 }
 
@@ -189,7 +189,7 @@ img.rr-logo {
     transition: background-color 150ms ease;
 
     &:hover {
-        border-bottom: 2px solid var(--color-secondary-1);
+        border-bottom: 2px solid var(--color-secondary);
     }
 }
 
@@ -337,7 +337,7 @@ svg {
 }
 
 .blogpost-date {
-    background-color: var(--color-primary-3);
+    background-color: var(--color-card-date);
     padding: 0.25rem;
     border-radius: 0.25rem;
     width: fit-content;
@@ -473,7 +473,7 @@ footer {
 
         &:hover {
             border-bottom: none;
-            background-color: var(--color-secondary-1);
+            background-color: var(--color-secondary);
             color: var(--color-background);
         }
     }
