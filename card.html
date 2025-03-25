@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contrast Test for New Colors</title>
+  <style>
+    /* Lightmode */
+    .lightmode {
+      --color-background: #FAF9F6; /* Witte achtergrond */
+      --color-text: #1A1A1A; /* Zwarte tekst */
+      --color-primary-1: #FF6161; /* Primaire roze tint */
+      --color-primary-2: #ED8C8C; /* Lichtere roze tint */
+      --color-secondary-1: #5A85C2; /* Blauw tint 1 */
+      --color-secondary-2: #6AAFE6; /* Blauw tint 2 */
+      --color-secondary-3: #55D1D9; /* Blauwgroen tint */
+      --color-secondary-4: #5BB7C8; /* Zachte blauwe tint */
+    }
+
+    /* Darkmode */
+    .darkmode {
+      --color-background: #121212; /* Donkere achtergrond */
+      --color-text: #F6F6F6; /* Lichte tekst */
+      --color-primary-1: #FF6161; /* Primaire roze tint */
+      --color-primary-2: #ED8C8C; /* Lichtere roze tint */
+      --color-secondary-1: #5A85C2; /* Blauw tint 1 */
+      --color-secondary-2: #6AAFE6; /* Blauw tint 2 */
+      --color-secondary-3: #55D1D9; /* Blauwgroen tint */
+      --color-secondary-4: #5BB7C8; /* Zachte blauwe tint */
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: var(--color-background);
+      color: var(--color-text);
+    }
+
+    h1, p {
+      text-align: center;
+      padding: 20px;
+    }
+
+    .color-box {
+      display: inline-block;
+      width: 150px;
+      height: 100px;
+      margin: 10px;
+      text-align: center;
+      line-height: 100px;
+      font-weight: bold;
+    }
+
+    .lightmode .color-box {
+      color: #1A1A1A; /* Donkere tekstkleur voor lightmode */
+    }
+
+    .darkmode .color-box {
+      color: #F6F6F6; /* Lichte tekstkleur voor darkmode */
+    }
+
+    .primary-box {
+      background-color: var(--color-primary-1);
+    }
+
+    .secondary-box-1 {
+      background-color: var(--color-secondary-1);
+    }
+
+    .secondary-box-2 {
+      background-color: var(--color-secondary-2);
+    }
+
+    .secondary-box-3 {
+      background-color: var(--color-secondary-3);
+    }
+
+    .secondary-box-4 {
+      background-color: var(--color-secondary-4);
+    }
+  </style>
+</head>
+<body class="lightmode">
+
+  <h1>Lightmode Colors</h1>
+  <p>These color boxes demonstrate the contrast of different colors against light and dark backgrounds.</p>
+
+  <div class="color-box primary-box">Primary - #FF6161</div>
+  <div class="color-box secondary-box-1">Secondary - #5A85C2</div>
+  <div class="color-box secondary-box-2">Secondary - #6AAFE6</div>
+  <div class="color-box secondary-box-3">Secondary - #55D1D9</div>
+  <div class="color-box secondary-box-4">Secondary - #5BB7C8</div>
+
+  <br><br>
+
+  <h2>Darkmode Colors</h2>
+  <body class="darkmode">
+    <div class="color-box primary-box">Primary - #FF6161</div>
+    <div class="color-box secondary-box-1">Secondary - #5A85C2</div>
+    <div class="color-box secondary-box-2">Secondary - #6AAFE6</div>
+    <div class="color-box secondary-box-3">Secondary - #55D1D9</div>
+    <div class="color-box secondary-box-4">Secondary - #5BB7C8</div>
+  </body>
+
+</html>

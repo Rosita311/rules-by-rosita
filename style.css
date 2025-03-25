@@ -10,32 +10,34 @@ Version: 1.0
   
     --font-body: 'Nunito', sans-serif;
     --font-heading: 'Zilla Slab', serif;
-
-   
+ 
     --color-background: #FAF9F6;
     --color-text: #1A1A1A; 
     --color-primary-1: #E00000; 
     --color-primary-2: #AD0003;
-    --color-primary-3: #ED8C8C;;
-    --color-secondary-1: #009EB0;
-    --color-secondary-2: #007586;
-    --color-accent: #FFDADA;
+    --color-primary-3: #ED8C8C;  
+    --color-secondary-1: #55D1D9; 
+    --color-secondary-2: #5BB7C8; 
+    --color-accent: #FFDADA; 
+    --color-footer-bg: #D9ECF2;
     --color-text-light-bg: #1A1A1A;
 }
 
 /* Darkmode */
+
 .darkmode {
-    /* Colors */
-    --color-background: #1A1A1A !important;
-    --color-text: #FAF9F6 !important; 
-    --color-primary-1: #F6B4B4 !important; 
-    --color-primary-2: #ED8C8C !important;
-    --color-primary-3: #FFDADA !important;
-    --color-secondary-1: #B0D8E1 !important;
-    --color-secondary-2: #8AC4D0 !important;
-    --color-accent: #2C4A52 !important;
+    --color-background: #1A1A1A; 
+    --color-text: #F6F6F6;
+    --color-primary-1: #FF6161;
+    --color-primary-2: #ED8C8C;
+    --color-primary-3: #FFDADA;
+    --color-secondary-1: #00BFCF;
+    --color-secondary-2: #0097A7;
+    --color-accent: #1F3557; 
+    --color-footer-bg: #1F3557;
     --color-text-light-bg: #1A1A1A;
-} 
+
+}
 
   /* basic styles */
   
@@ -346,7 +348,7 @@ svg {
 
 /* Footer styles */
 footer {
-    background-color: var(--color-accent);
+    background-color: var( --color-footer-bg);
     color: var(--color-text);
 }
 
@@ -360,7 +362,6 @@ footer {
 .footer-menu {
     display: flex;
     justify-content: flex-start;
-    background-color: var(--color-accent);
 }
 
 .footer-menu nav ul{
@@ -394,6 +395,10 @@ footer {
     align-items: start;
     width: 50%;
     gap: 1rem;
+}
+
+.footer-social-media h2 {
+    font-size: 1.5rem;
 }
 
 .footer-social-media ul {
