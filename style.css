@@ -10,32 +10,28 @@ Version: 1.0
   
     --font-body: 'Nunito', sans-serif;
     --font-heading: 'Zilla Slab', serif;
- 
-    --color-background: #FAF9F6;
-    --color-text: #1A1A1A; 
-    --color-primary-1: #E00000; 
-    --color-primary-2: #AD0003;
-    --color-primary-3: #ED8C8C;  
-    --color-secondary: #55D1D9; 
-    --color-accent: #FFDADA; 
-    --color-footer-bg: #D9ECF2;
-    --color-text-light-bg: #1A1A1A;
-    --color-card-date: #79c5d2;
+
+    --color-text: #121212;
+    --color-text-dark: rgba(255, 255, 255, 0.87);
+    --color-primary: #E00000;
+    --color-accent: #FAD6E1;
+    --color-footer: #C7EDEE; 
+    --color-contrast: #45A0A7;
+    --color-background: #F6F6F6;
+    --color-bg-dark: #121212;
 }
 
 /* Darkmode */
 
 .darkmode {
-    --color-background: #1A1A1A; 
-    --color-text: #F6F6F6;
-    --color-primary-1: #FF6161;
-    --color-primary-2: #ED8C8C;
-    --color-primary-3: #0097A7;
-    --color-secondary: #00BFCF;
-    --color-accent: #1F3557; 
-    --color-footer-bg: #1F3557;
-    --color-text-light-bg: #1A1A1A;
-    --color-card-date: #ED8C8C;
+    --color-text-light: #121212;
+    --color-text: rgba(255, 255, 255, 0.87);
+    --color-primary: #E00000;
+    --color-accent: #FAD6E1; 
+    --color-footer: #003A3C; 
+    --color-contrast: #45A0A7; 
+    --color-bg-light: #F6F6F6;
+    --color-background: #121212;
 
 }
 
@@ -66,7 +62,7 @@ p {
 
 a {
     text-decoration: none;
-    color: var(--color-primary-1);
+    color: var(--color-primary);
 }
 
 h1 {
@@ -189,12 +185,12 @@ img.rr-logo {
     transition: background-color 150ms ease;
 
     &:hover {
-        border-bottom: 2px solid var(--color-secondary);
+        border-bottom: 2px solid var(--color-contrast);
     }
 }
 
 #header-nav a.active-link {
-    border-bottom: 2px solid var(--color-primary-1);
+    border-bottom: 2px solid var(--color-primary);
 }
 
 .menu-buttons {
@@ -211,11 +207,11 @@ img.rr-logo {
     align-items: center;
 
     &:hover {
-        background-color: var(--color-accent);
+        background-color: var(--color-footer);
     }
 
     &:focus {
-        outline: 2px solid var(--color-primary-1);
+        outline: 2px solid var(--color-primary);
     }
  }
 
@@ -229,7 +225,7 @@ img.rr-logo {
 
     &:focus {
         border-radius: 50%;
-        outline: 2px solid var(--color-primary-1);
+        outline: 2px solid var(--color-primary);
     }
 }
 
@@ -240,7 +236,7 @@ img.rr-logo {
 
     &:focus {
         border-radius: 50%;
-        outline: 2px solid var(--color-primary-1);
+        outline: 2px solid var(--color-primary);
     }
 }
 
@@ -320,7 +316,7 @@ svg {
     background-color: var(--color-accent);
 
     &:hover {
-        background-color: var(--color-primary-3);
+        background-color: var(--color-accent);
     }
 }
 
@@ -337,7 +333,7 @@ svg {
 }
 
 .blogpost-date {
-    background-color: var(--color-card-date);
+    background-color: var(--color-contrast);
     padding: 0.25rem;
     border-radius: 0.25rem;
     width: fit-content;
@@ -348,7 +344,7 @@ svg {
 
 /* Footer styles */
 footer {
-    background-color: var( --color-footer-bg);
+    background-color: var( --color-footer);
     color: var(--color-text);
 }
 
@@ -417,12 +413,12 @@ footer {
 
     &:hover {
         background-color: none;
-        color: var(--color-primary-1);
+        color: var(--color-primary);
         border: none;
 
         &:focus {
             border-radius: 0.5rem;
-            outline: 2px solid var(--color-primary-1);
+            outline: 2px solid var(--color-primary);
         }
     }
 }
@@ -473,14 +469,14 @@ footer {
 
         &:hover {
             border-bottom: none;
-            background-color: var(--color-secondary);
+            background-color: var(--color-contrast);
             color: var(--color-background);
         }
     }
 
     #header-nav a.active-link {
         border-bottom: none;
-        background-color: var(--color-primary-1);
+        background-color: var(--color-primary);
         color: var(--color-background);
     }
 
@@ -502,7 +498,7 @@ footer {
     .footer-menu {
         display: flex;
         justify-content: flex-start;
-        background-color: var(--color-accent);
+        background-color: var(--color-footer);
     }
     
     .footer-menu nav ul{

@@ -1,106 +1,174 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contrast Test for New Colors</title>
-  <style>
-    /* Lightmode */
-    .lightmode {
-      --color-background: #FAF9F6; /* Witte achtergrond */
-      --color-text: #1A1A1A; /* Zwarte tekst */
-      --color-primary-1: #FF6161; /* Primaire roze tint */
-      --color-primary-2: #ED8C8C; /* Lichtere roze tint */
-      --color-secondary-1: #5A85C2; /* Blauw tint 1 */
-      --color-secondary-2: #6AAFE6; /* Blauw tint 2 */
-      --color-secondary-3: #55D1D9; /* Blauwgroen tint */
-      --color-secondary-4: #5BB7C8; /* Zachte blauwe tint */
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vrouwelijk & Nerdy Kleurenpalet</title>
+    <style>
+        :root {
+            --color-text-light: #121212;
+            --color-text-dark: rgba(255, 255, 255, 0.87);
+            --color-primary: #E00000;
+            --color-accent: #E87EA1;
+            --color-footer: #BFE6F5; /* Lichtere variant */
+            --color-contrast: #00838F; /* Teal */
+            --color-bg-light: #F6F6F6;;
+            --color-bg-dark: #121212;
+        }
 
-    /* Darkmode */
-    .darkmode {
-      --color-background: #121212; /* Donkere achtergrond */
-      --color-text: #F6F6F6; /* Lichte tekst */
-      --color-primary-1: #FF6161; /* Primaire roze tint */
-      --color-primary-2: #ED8C8C; /* Lichtere roze tint */
-      --color-secondary-1: #5A85C2; /* Blauw tint 1 */
-      --color-secondary-2: #6AAFE6; /* Blauw tint 2 */
-      --color-secondary-3: #55D1D9; /* Blauwgroen tint */
-      --color-secondary-4: #5BB7C8; /* Zachte blauwe tint */
-    }
+        body {
+            background-color: var(--color-bg-light);
+            color: var(--color-text-light);
+            font-family: 'Nunito', sans-serif;
+            padding: 20px;
+            transition: background-color 0.3s, color 0.3s;
+        }
 
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: var(--color-background);
-      color: var(--color-text);
-    }
+        h1 {
+            color: var(--color-primary);
+            border-bottom: 3px solid var(--color-contrast); /* Teal accent */
+            display: inline-block;
+            padding-bottom: 5px;
+        }
 
-    h1, p {
-      text-align: center;
-      padding: 20px;
-    }
+        p {
+            color: var(--color-text-light);
+        }
 
-    .color-box {
-      display: inline-block;
-      width: 150px;
-      height: 100px;
-      margin: 10px;
-      text-align: center;
-      line-height: 100px;
-      font-weight: bold;
-    }
+        .footer {
+            background-color: var(--color-footer);
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 20px;
+            text-align: center;
+            color: var(--color-text-light);
+            border-top: 3px solid var(--color-contrast); /* Teal accent */
+        }
 
-    .lightmode .color-box {
-      color: #1A1A1A; /* Donkere tekstkleur voor lightmode */
-    }
+        .button {
+            background-color: var(--color-primary);
+            color: var(--color-bg-light);
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            font-weight: bold;
+        }
 
-    .darkmode .color-box {
-      color: #F6F6F6; /* Lichte tekstkleur voor darkmode */
-    }
+        .button:hover {
+            background-color: var(--color-contrast);
+        }
 
-    .primary-box {
-      background-color: var(--color-primary-1);
-    }
+        .accent-text {
+            color: var(--color-accent);
+            font-weight: bold;
+        }
 
-    .secondary-box-1 {
-      background-color: var(--color-secondary-1);
-    }
+        /* Dark mode */
+        .darkmode {
+            background-color: var(--color-bg-dark);
+            color: var(--color-text-dark);
+        }
 
-    .secondary-box-2 {
-      background-color: var(--color-secondary-2);
-    }
+        .darkmode h1 {
+            color: var(--color-primary);
+        }
 
-    .secondary-box-3 {
-      background-color: var(--color-secondary-3);
-    }
+        .darkmode p {
+            color: var(--color-text-dark);
+        }
 
-    .secondary-box-4 {
-      background-color: var(--color-secondary-4);
-    }
-  </style>
+        .darkmode .footer {
+            background-color: var(--color-footer);
+            color: var(--color-text-light);
+        }
+
+        .darkmode .button {
+            background-color: var(--color-contrast); /* Teal button in dark mode */
+            color: var(--color-bg-dark);
+        }
+
+        .darkmode .button:hover {
+            background-color: var(--color-primary); /* Rood hover in dark mode */
+        }
+
+        /* Dark mode switch */
+        .switch-container {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            margin-bottom: 15px;
+        }
+
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 40px;
+            height: 20px;
+        }
+
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: 0.4s;
+            border-radius: 20px;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 14px;
+            width: 14px;
+            left: 3px;
+            bottom: 3px;
+            background-color: white;
+            transition: 0.4s;
+            border-radius: 50%;
+        }
+
+        input:checked + .slider {
+            background-color: var(--color-primary);
+        }
+
+        input:checked + .slider:before {
+            transform: translateX(20px);
+        }
+    </style>
 </head>
-<body class="lightmode">
+<body>
+    <div class="switch-container">
+        <label class="switch">
+            <input type="checkbox" id="darkModeToggle">
+            <span class="slider"></span>
+        </label>
+    </div>
 
-  <h1>Lightmode Colors</h1>
-  <p>These color boxes demonstrate the contrast of different colors against light and dark backgrounds.</p>
+    <h1>Vrouwelijk & Nerdy Kleurenpalet</h1>
+    <p>Dit is een voorbeeld van hoe je een kleurenpalet kunt gebruiken dat zowel <span class="accent-text">vrouwelijk als nerdy</span> aanvoelt.</p>
 
-  <div class="color-box primary-box">Primary - #FF6161</div>
-  <div class="color-box secondary-box-1">Secondary - #5A85C2</div>
-  <div class="color-box secondary-box-2">Secondary - #6AAFE6</div>
-  <div class="color-box secondary-box-3">Secondary - #55D1D9</div>
-  <div class="color-box secondary-box-4">Secondary - #5BB7C8</div>
+    <button class="button">Belangrijke Actie</button>
 
-  <br><br>
+    <div class="footer">
+        <p>Dit is de footer met een lichtere achtergrond en een teal-accent.</p>
+    </div>
 
-  <h2>Darkmode Colors</h2>
-  <body class="darkmode">
-    <div class="color-box primary-box">Primary - #FF6161</div>
-    <div class="color-box secondary-box-1">Secondary - #5A85C2</div>
-    <div class="color-box secondary-box-2">Secondary - #6AAFE6</div>
-    <div class="color-box secondary-box-3">Secondary - #55D1D9</div>
-    <div class="color-box secondary-box-4">Secondary - #5BB7C8</div>
-  </body>
-
+    <script>
+        const toggle = document.getElementById('darkModeToggle');
+        toggle.addEventListener('change', function() {
+            document.body.classList.toggle('darkmode');
+        });
+    </script>
+</body>
 </html>
