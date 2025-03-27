@@ -35,20 +35,27 @@ Ik ga een custom WordPress thema bouwen. Ik maak hierbij geen gebruik van een ba
 
 #### Kleuren 
 
-| Naam               | Hex-code  | Voorbeeld |
-|--------------------|----------|-----------|
-| **Deep Crimson**   | `#AD0003` | <span style="display:inline-block;width:20px;height:20px;background-color:#AD0003;"></span> |
-| **Bright Scarlet** | `#C60002` | <span style="display:inline-block;width:20px;height:20px;background-color:#C60002;"></span> |
-| **Vivid Red**      | `#E00000` | <span style="display:inline-block;width:20px;height:20px;background-color:#E00000;"></span> |
-| **Soft Coral**     | `#ED8C8C` | <span style="display:inline-block;width:20px;height:20px;background-color:#ED8C8C;"></span> |
-| **Blush Pink**     | `#F6B4B4` | <span style="display:inline-block;width:20px;height:20px;background-color:#F6B4B4;"></span> |
-| **Pastel Rose**    | `#FFDADA` | <span style="display:inline-block;width:20px;height:20px;background-color:#FFDADA;"></span> |
-| **Deep Teal**      | `#007586` | <span style="display:inline-block;width:20px;height:20px;background-color:#007586;"></span> |
-| **Bright Cyan Blue** | `#009EB0` | <span style="display:inline-block;width:20px;height:20px;background-color:#009EB0;"></span> |
-| **Sky Blue**       | `#8AC4D0` | <span style="display:inline-block;width:20px;height:20px;background-color:#8AC4D0;"></span> |
-| **Pale Ice Blue**  | `#B0D8E1` | <span style="display:inline-block;width:20px;height:20px;background-color:#B0D8E1;"></span> |
-| **Soft Ivory** (Lichte achtergrond en tekst in darkmode) | `#FAF9F6` | <span style="display:inline-block;width:20px;height:20px;background-color:#FAF9F6;border:1px solid #ddd;"></span> |
-| **Charcoal Black** (Donkere achtergrond en tekst in lightmode) | `#1A1A1A` | <span style="display:inline-block;width:20px;height:20px;background-color:#1A1A1A;"></span> |
+# Rules by Rosita Theme - Color Palette
+
+# Color Palette
+
+## Light Mode
+- **Text Color** (`--color-text`): `#121212` – *Charcoal Black*
+- **Primary Color** (`--color-primary`): `#E00000` – *Bright Red*
+- **Accent Color** (`--color-accent`): `#FAD6E1` – *Soft Pink*
+- **Secondary Accent** (`--color-accent-2`): `#EBEBEB` – *Light Gray*
+- **Footer Background** (`--color-footer`): `#C7EDEE` – *Pastel Teal*
+- **Contrast Color** (`--color-contrast`): `#4AAEB5` – *Teal Blue*
+- **Background Color** (`--color-background`): `#F6F6F6` – *Off White*
+
+## Dark Mode
+- **Text Color** (`--color-text`): `rgba(255, 255, 255, 0.87)` – *Soft White*
+- **Primary Color** (`--color-primary`): `#FF5C5C` – *Warm Red*
+- **Accent Color** (`--color-accent`): `#E38CA6` – *Muted Pink*
+- **Secondary Accent** (`--color-accent-2`): `#2A2A2A` – *Dark Gray*
+- **Footer Background** (`--color-footer`): `#003A3C` – *Deep Teal*
+- **Contrast Color** (`--color-contrast`): `#4AAEB5` – *Teal Blue*
+- **Background Color** (`--color-background`): `#121212` – *Pure Black*
 
 ---
 
@@ -105,4 +112,7 @@ Maar ik sta ervan te kijken hoeveel ik nu al heb geleerd van zelf mijn thema bou
 Ik vind mijn header met werkende darkmode af, voor nu. Het is toegankelijk voor schermlezers. Ik vond het wel moeilijk om alles goed werkend en toegankelijk te krijgen. En ook wat er allemaal bij komt kijken en waar je aan kunt denken. De code was gisteren zo vaak gebroken, dat ik dacht, waar ben ik aan begonnen, maar uiteindelijk is het wel gelukt. De header is klaar. Op naar de footer! 
 
 ## Vrijdag 21 maart 
-Ik heb vandaag met hulp een rebase op de footer gedaan en dus geleerd hoe je een rebase op een branch kan doen. Ook ben ik bezig om de breedte van de body aan te passen
+Ik heb vandaag met hulp een rebase op de footer gedaan en dus geleerd hoe je een rebase op een branch kan doen. Ook ben ik bezig om de breedte van de body aan te passen.
+
+## Donderdag 27 maart
+Ik ben bezig met het maken van de cards, de basis staat er, nu moet er nog een link in komen die het hele kaartje klikbaar maakt. Ik gebruik daarvoor de uitleg van Tina Reis die ze gaf op WordPress Accessibility day en dit artikel over [Inclusive components door Heydon Pickering](https://inclusive-components.design/cards/). Daarnaast ben ik ook flink bezig geweest met het ontwerp en de kleuren van de cards en ik heb nu eindelijk een ontwerp waar ik tevreden over ben en kleuren voor de website gevonden, waar ik echt tevreden over ben. Goede kleuren uitkiezen is nog best een klus. Hopelijk vinden anderen het ook mooi. Ook heb ik de footer grotendeels af en de structuur van de homepage staat er al.  
