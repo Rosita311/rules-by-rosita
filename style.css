@@ -15,24 +15,26 @@ Version: 1.0
     --color-text-dark: rgba(255, 255, 255, 0.87);
     --color-primary: #E00000;
     --color-accent: #FAD6E1;
+    --color-accent-2: #EBEBEB;
     --color-footer: #C7EDEE; 
     --color-contrast: #45A0A7;
     --color-background: #F6F6F6;
     --color-bg-dark: #121212;
+    --color-menu-button-hover: #FAD6E1;
 }
 
 /* Darkmode */
 
 .darkmode {
-    --color-text-light: #121212;
-    --color-text: rgba(255, 255, 255, 0.87);
-    --color-primary: #E00000;
-    --color-accent: #FAD6E1; 
+     --color-text: rgba(255, 255, 255, 0.87);
+    --color-primary: #FF5C5C;
+    --color-accent: #E38CA6;
+    --color-accent-2: #2A2A2A;
     --color-footer: #003A3C; 
-    --color-contrast: #45A0A7; 
-    --color-bg-light: #F6F6F6;
+    --color-contrast: #45A0A7;
     --color-background: #121212;
-
+    --color-bg-light: #121212;
+    --color-menu-button-hover: #003A3C;
 }
 
   /* basic styles */
@@ -207,7 +209,7 @@ img.rr-logo {
     align-items: center;
 
     &:hover {
-        background-color: var(--color-footer);
+        background-color: var(--color-menu-button-hover);
     }
 
     &:focus {
@@ -297,7 +299,6 @@ svg {
 }
 
 .blogpost-card {
-    background-color: var(--color-accent);
     display: flex;
     flex-direction: column;
 }
@@ -313,11 +314,7 @@ svg {
     display: flex;
     flex-grow: 1;
     padding: 1rem;
-    background-color: var(--color-accent);
-
-    &:hover {
-        background-color: var(--color-accent);
-    }
+    background-color: var(--color-accent-2);
 }
 
 .blogpost-card-content {
