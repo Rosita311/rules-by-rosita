@@ -317,9 +317,14 @@ svg {
 
 .blogpost-card a {
     color: var(--color-text);
+    outline: 0;
 }
 
-.blogpost-card a::after {
+.blogpost-card a:focus::after {
+    outline: 3px dotted var(--color-primary);
+}
+
+    .blogpost-card a::after {
     content: "";
     position: absolute;
     top: 0;
@@ -525,6 +530,12 @@ footer {
         margin: 2em;
     }
 
+    /* Card styles */
+    .blog-listing-grid {
+        gap: 3rem;
+    }
+
+    /* Footer styles */
     .footer-content {
         padding: 3rem 0;
         gap: 3rem;
@@ -570,6 +581,11 @@ footer {
 
     img.rr-logo {
         max-width: 5rem;
+    }
+
+    /* Card styles */
+    .blog-listing-grid {
+        gap: 4rem;
     }
 
     .footer-content {
