@@ -324,7 +324,7 @@ svg {
     outline: 3px dotted var(--color-primary);
 }
 
-    .blogpost-card a::after {
+.blogpost-card a::after {
     content: "";
     position: absolute;
     top: 0;
