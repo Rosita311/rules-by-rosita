@@ -313,7 +313,14 @@ svg {
     display: flex;
     flex-direction: column;
     position: relative;
+    transition: box-shadow 0.3s ease-in-out;
+
+    &:hover {
+        box-shadow: 10px 10px 0px 0px var(--color-accent);
+    }
 }
+
+
 
 .blogpost-card a {
     color: var(--color-text);
@@ -323,6 +330,12 @@ svg {
 .blogpost-card a:focus::after {
     outline: 3px dotted var(--color-primary);
 }
+
+.blogpost-card:hover .read-more {
+    background-color: var(--color-contrast);
+    color: var(--color-bg-light);
+}
+
 
 .blogpost-card a::after {
     content: "";
