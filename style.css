@@ -11,34 +11,35 @@ Version: 1.0
     --font-body: 'Nunito', sans-serif;
     --font-heading: 'Zilla Slab', serif;
 
-    --color-text: #121212;
+    --color-text: #192324;
     --color-text-dark: rgba(255, 255, 255, 0.87);
-    --color-primary: #E00000;
-    --color-accent: #FAD6E1;
+    --color-primary: #D7233E;
+    --color-accent: #f8c9d7;
     --color-accent-2: #EBEBEB;
-    --color-footer: #C7EDEE; 
-    --color-contrast: #4AAEB5;
+    --color-footer: #CBEEF3; 
+    --color-contrast: #49b3c1;
     --color-background: #F6F6F6;
     --color-bg-dark: #F6F6F6;
-    --color-card-bg: #FAD6E1;
-    --color-menu-button-hover: #FAD6E1;
+    --color-menu-button-hover: #f8c9d7;
+    --color-button-hover: #E38CA6;
     --color-button-text: #F6F6F6;
 }
 
 /* Darkmode */
 
 .darkmode {
-     --color-text: rgba(255, 255, 255, 0.87);
-    --color-primary: #FF5C5C;
+    --color-text: rgba(255, 255, 255, 0.87);
+    --color-primary: #d34a61;
     --color-accent: #E38CA6;
-    --color-accent-2: #2A2A2A;
-    --color-footer: #003A3C; 
-    --color-contrast: #4AAEB5;
-    --color-background: #121212;
-    --color-bg-light: #121212;
-    --color-card-bg: #2A2A2A;
-    --color-menu-button-hover: #003A3C;
-    --color-button-text: #121212;
+    --color-accent-2: #293a3d;
+    --color-footer: #103C42; 
+    --color-contrast: #45a4b0;
+    --color-background: #192324;
+    --color-bg-light: #192324;
+    --color-card-bg: #293a3d;
+    --color-menu-button-hover: #293a3d;
+    --color-button-hover: #E38CA6;
+    --color-button-text: #192324;
 }
 
   /* basic styles */
@@ -334,6 +335,7 @@ svg {
  .blogpost-card:hover .read-more {
     background-color: var(--color-accent);
     color: var(--color-bg-light);
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
 } 
 
 
@@ -372,13 +374,14 @@ svg {
     margin-top: -3rem;
     background-color: var(--color-background);
     z-index: 1;
-    gap: 1rem;
 }
 
 .blogpost-date {
     font-size: 0.875rem;
     font-family: var(--font-body);
     color: var(--color-text);
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
 }
 
 span.read-more {
@@ -390,6 +393,7 @@ span.read-more {
     font-size: 1.125rem;
     font-weight: 700;
     color: var(--color-button-text);
+    margin-top: 1rem;
 }
 
 /* Footer styles */
@@ -519,7 +523,7 @@ footer {
         &:hover {
             border-bottom: none;
             background-color: var(--color-contrast);
-            color: var(--color-background);
+            color: var(--color-text);
         }
     }
 
