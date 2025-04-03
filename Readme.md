@@ -37,32 +37,30 @@ Ik ga een custom WordPress thema bouwen. Ik maak hierbij geen gebruik van een ba
 
 # Rules by Rosita Theme - Color Palette
 
-# Color Palette
+## Kleurenoverzicht
 
-## Light Mode
-- **Text Color** (`--color-text`): `#121212` – *Charcoal Black*
-- **Primary Color** (`--color-primary`): `#E00000` – *Bright Red*
-- **Accent Color** (`--color-accent`): `#FAD6E1` – *Soft Pink*
-- **Secondary Accent** (`--color-accent-2`): `#EBEBEB` – *Light Gray*
-- **Footer Background** (`--color-footer`): `#C7EDEE` – *Pastel Teal*
-- **Contrast Color** (`--color-contrast`): `#4AAEB5` – *Teal Blue*
-- **Background Color** (`--color-background`): `#F6F6F6` – *Off White*
+### Licht thema
+| Naam             | Variabele             | Hexcode  |
+|-----------------|----------------------|---------|
+| Tekst           | --color-text         | `#192324` |
+| Tekst (donker)  | --color-text-dark    | `rgba(255, 255, 255, 0.87)` |
+| Primair         | --color-primary      | `#D7233E` |
+| Accent 1        | --color-accent       | `#F8C9D7` |
+| Accent 2        | --color-accent-2     | `#EBEBEB` |
+| Footer          | --color-footer       | `#CBEEF3` |
+| Contrastkleur   | --color-contrast     | `#49B3C1` |
 
-## Dark Mode
-- **Text Color** (`--color-text`): `rgba(255, 255, 255, 0.87)` – *Soft White*
-- **Primary Color** (`--color-primary`): `#FF5C5C` – *Warm Red*
-- **Accent Color** (`--color-accent`): `#E38CA6` – *Muted Pink*
-- **Secondary Accent** (`--color-accent-2`): `#2A2A2A` – *Dark Gray*
-- **Footer Background** (`--color-footer`): `#003A3C` – *Deep Teal*
-- **Contrast Color** (`--color-contrast`): `#4AAEB5` – *Teal Blue*
-- **Background Color** (`--color-background`): `#121212` – *Pure Black*
+### Donker thema
+| Naam             | Variabele             | Hexcode  |
+|-----------------|----------------------|---------|
+| Tekst           | --color-text         | `rgba(255, 255, 255, 0.87)` |
+| Primair         | --color-primary      | `#D34A61` |
+| Accent 1        | --color-accent       | `#E38CA6` |
+| Accent 2        | --color-accent-2     | `#293A3D` |
+| Footer          | --color-footer       | `#103C42` |
+| Contrastkleur   | --color-contrast     | `#45A4B0` |
+| Achtergrond     | --color-background   | `#192324` |
 
----
-
-####  Fonts
-
-- **Bodytekst:** [Nunito](https://fonts.google.com/specimen/Nunito) (Sans-serif)  
-- **Headings:** [Zilla Slab](https://fonts.google.com/specimen/Zilla+Slab) (Slab-serif)  
 
 #### CSS Implementatie
 ```css
