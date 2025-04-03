@@ -144,13 +144,12 @@ h6 {
 
 
 /* header */
-
-
  .header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
   }
 
 
@@ -485,7 +484,7 @@ footer {
 }
 
 .footer-info {
-    padding: 1rem 0;
+    padding: 0 0 1rem 0;
 }
 
 @media screen and (max-width: 1024px) {
