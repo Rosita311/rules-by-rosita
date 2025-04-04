@@ -119,6 +119,7 @@ Ik ben bezig met het maken van de cards, de basis staat er, nu moet er nog een l
 De kaartjes zijn af. Er zijn nog een paar kleine dingen die ik moet checken, daarvoor heb ik hieronder een lijstje gemaakt. Ik vond het heel moeilijk om de stijl een beetje goed te krijgen, maar dat is gelukt. Met de read-more "knop"( het is geen knop), ben ik nog niet helemaal tevreden en ook de volgorde van de schermlezer begrijp ik niet helemaal, dat moet ik nog uitzoeken, maar voor nu zijn de kaartjes af! 
 
 ## Nog op te lossen
-* inert in het menu werkt nog niet helemaal goed.
+* inert in het menu werkt nog niet helemaal goed. ✅
 * hover op de knop in licht thema kan worden verbeterd.
 * schermlezer volgorde van de excerpt checken. 
+* logo voor donker scherm

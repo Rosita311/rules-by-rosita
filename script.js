@@ -2,22 +2,22 @@
 const openButton = document.getElementById('open-sidebar-button');
 const navbar = document.getElementById("header-nav");
 const overlay = document.getElementById("overlay");
-const media = window.matchMedia("(width < 1024px)");
+const media = window.matchMedia("(width < 1023px)");
 
 const updateNavbar = (e) => {
     const isMobile = e.matches;
+    console.log("Screen changed. Mobile view:", isMobile)
     if (isMobile) {
-        navbar.setAttribute('inert', '');
-    } else {
+            navbar.setAttribute('inert', '');
+        } else {
         navbar.removeAttribute('inert');
+        navbar.classList.remove("show");
+        overlay.style.display = "none";
+        openButton.setAttribute('aria-expanded', 'false');
     }
 };
 
-if (media.addEventListener) {
-    media.addEventListener('change', updateNavbar);
-} else {
-    media.addListener(updateNavbar); 
-}
+media.addEventListener('change', updateNavbar);
 
 const openSidebar = () => {
     navbar.classList.add("show");
@@ -29,10 +29,11 @@ const openSidebar = () => {
 const closeSidebar = () => {
     navbar.classList.remove("show");
     openButton.setAttribute('aria-expanded', 'false');
-    navbar.setAttribute('inert', '');
+    if (media.matches) {
+        navbar.setAttribute('inert', '');
+    }
     overlay.style.display = "none";
 };
-
 
 const navLinks = document.querySelectorAll('#header-nav a');
 navLinks.forEach(link => {

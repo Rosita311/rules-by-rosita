@@ -18,11 +18,11 @@ Version: 1.0
     --color-accent-2: #EBEBEB;
     --color-footer: #CBEEF3; 
     --color-contrast: #49b3c1;
-    --color-background: #F6F6F6;
-    --color-bg-dark: #F6F6F6;
+    --color-background: #F8F4F5;
+    --color-bg-dark: #F8F4F5;
     --color-menu-button-hover: #f8c9d7;
     --color-button-hover: #E38CA6;
-    --color-button-text: #F6F6F6;
+    --color-button-text: #F8F4F5;
 }
 
 /* Darkmode */
