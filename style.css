@@ -305,6 +305,16 @@ svg {
     height: 100%;
 }
 
+/* Introduction */
+
+.introduction {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+    background-color: var(--color-accent-2);
+}
+
 /* Card styles */
 
 .introduction, .blogpost-section {
