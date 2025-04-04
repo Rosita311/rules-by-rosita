@@ -54,7 +54,7 @@ Ik ga een custom WordPress thema bouwen. Ik maak hierbij geen gebruik van een ba
 | Naam             | Variabele             | Hexcode  |
 |-----------------|----------------------|---------|
 | Tekst           | --color-text         | `rgba(255, 255, 255, 0.87)` |
-| Primair         | --color-primary      | `#D34A61` |
+| Primair         | --color-primary      | `#D96377` |
 | Accent 1        | --color-accent       | `#E38CA6` |
 | Accent 2        | --color-accent-2     | `#293A3D` |
 | Footer          | --color-footer       | `#103C42` |

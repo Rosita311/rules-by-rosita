@@ -29,7 +29,7 @@ Version: 1.0
 
 .darkmode {
     --color-text: rgba(255, 255, 255, 0.87);
-    --color-primary: #d34a61;
+    --color-primary: #D96377;
     --color-accent: #E38CA6;
     --color-accent-2: #293a3d;
     --color-footer: #103C42; 
@@ -530,7 +530,7 @@ footer {
         &:hover {
             border-bottom: none;
             background-color: var(--color-contrast);
-            color: var(--color-text);
+            color: var(--color-bg-light);
         }
     }
 
