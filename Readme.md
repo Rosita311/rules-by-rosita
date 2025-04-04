@@ -115,6 +115,9 @@ Ik heb vandaag met hulp een rebase op de footer gedaan en dus geleerd hoe je een
 ## Donderdag 27 maart
 Ik ben bezig met het maken van de cards, de basis staat er, nu moet er nog een link in komen die het hele kaartje klikbaar maakt. Ik gebruik daarvoor de uitleg van Tina Reis die ze gaf op WordPress Accessibility day en dit artikel over [Inclusive components door Heydon Pickering](https://inclusive-components.design/cards/). Ik had de kaartjes maandag al klikbaar geprobeerd te maken, maar dat mislukte en het lukte me ook niet om terug te gaan naar de laatste commit. Na meerdere merge conflicts heb ik de hele branch verwijderd en ben ik opnieuw begonnen. Nu lijkt het beter te gaan. Daarnaast ben ik ook flink bezig geweest met het ontwerp en de kleuren van de cards en ik heb nu eindelijk een ontwerp waar ik tevreden over ben en kleuren voor de website gevonden, waar ik echt tevreden over ben. Goede kleuren uitkiezen is nog best een klus. Hopelijk vinden anderen het ook mooi. Ook heb ik de footer grotendeels af en de structuur van de homepage staat er al.  
 
+## Vrijdag 4 april
+De kaartjes zijn af. Er zijn nog een paar kleine dingen die ik moet checken, daarvoor heb ik hieronder een lijstje gemaakt. Ik vond het heel moeilijk om de stijl een beetje goed te krijgen, maar dat is gelukt. Met de read-more "knop"( het is geen knop), ben ik nog niet helemaal tevreden en ook de volgorde van de schermlezer begrijp ik niet helemaal, dat moet ik nog uitzoeken, maar voor nu zijn de kaartjes af! 
+
 ## Nog op te lossen
 * inert in het menu werkt nog niet helemaal goed.
 * hover op de knop in licht thema kan worden verbeterd.
