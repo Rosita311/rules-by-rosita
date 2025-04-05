@@ -125,3 +125,4 @@ Ook heb ik de fout in het menu op kunnen lossen.
 * hover op de knop in licht thema kan worden verbeterd.
 * schermlezer volgorde van de excerpt checken. 
 * logo voor donker scherm
+* open menu knop op mobiel checken
