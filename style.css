@@ -294,7 +294,6 @@ svg {
 
 .hero-section {
     width: 100%;
-    height: 600px;
 }
 
 .hero-listing {
@@ -303,12 +302,10 @@ svg {
 
 .hero-blogpost-card {
     display: flex;
-    flex-direction: row;
-    align-items: center;
+    flex-direction: column;
     transition: box-shadow 0.3s ease-in-out;
-    border: 1px solid red;
-
-    /* &:hover { 
+/*
+    &:hover {
         box-shadow: 8px 8px 0px 0px var(--color-accent);
     }
         */
@@ -323,7 +320,7 @@ svg {
     outline: 3px solid var(--color-text);
     box-shadow: 8px 8px 0px 0px var(--color-text);
 }
-
+/*
  .hero-blogpost-card:hover .read-more {
     background-color: var(--color-accent);
     color: var(--color-bg-light);
@@ -333,9 +330,9 @@ svg {
 .hero-blogpost-card:hover .hero-blogpost-image img {
     box-shadow: 8px 8px 0px 0px var(--color-accent);
     transition: box-shadow 0.3s ease-in-out;
-}
+} 
 
-    
+*/
 
 .hero-blogpost-card a::after {
     content: "";
@@ -349,13 +346,6 @@ svg {
     z-index: 2;
 }
 
-.hero-blogpost-image {
-    width: 50%;
-    height: 480px;
-    object-fit: cover;
-    z-index: 0;
-}
-
 .hero-blogpost-image img {
     aspect-ratio: 16 / 9;
     width: 100%;
@@ -363,19 +353,14 @@ svg {
     min-height: 30rem;
     object-fit: cover;
     z-index: 0;
-    box-shadow: 8px 8px 0px 0px var(--color-footer);
+    /* box-shadow: 8px 8px 0px 0px var(--color-footer); */
 }
 
 .hero-blogpost-card-content-wrapper {
     display: flex;
-    position: relative;
-    width: 50%;
+    width: 100%;
     flex-grow: 1;
     padding: 2rem;
-    margin-right: -5rem;
-    z-index: 1;
-    background-color: var(--color-background);
-    border: 1px solid green;
 }
 
 .hero-blogpost-card-content {
@@ -384,6 +369,10 @@ svg {
     justify-content: start;
     width: 100%;
     padding: 1rem;
+    margin-top: -8rem;
+    background-color: var(--color-background);
+    z-index: 1;
+    position: relative;
 }
 
 /* Introduction */
