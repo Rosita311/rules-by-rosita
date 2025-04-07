@@ -288,7 +288,7 @@ svg {
 .container-main {
     display: flex;
     flex-direction: column;
-    padding-bottom: 2rem;
+    padding: 5rem 2rem;
     gap: 4rem;
 }
 
@@ -563,6 +563,13 @@ footer {
     padding: 0 0 1rem 0;
 }
 
+@media screen and (min-width: 1280px) {
+    .hero-section {
+        width: 1280px;
+        margin: 0 auto;
+    }
+} 
+    
 @media screen and (max-width: 1024px) {
     .header-container, .container-main, .footer-container {
         padding-left: 1.5rem;
