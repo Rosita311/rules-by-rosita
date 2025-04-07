@@ -359,7 +359,7 @@ svg {
     display: flex;
     flex-direction: column;
     justify-content: start;
-    padding: 1rem;
+    padding: 2rem;
     background-color: var(--color-background);
     z-index: 1;
     position: absolute;
