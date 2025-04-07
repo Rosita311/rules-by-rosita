@@ -366,6 +366,8 @@ svg {
     bottom: 2rem;
     left: 2rem;
     right: 2rem;
+    width: 70ch;
+    max-width: 100%;
 }
 
 /* Introduction */
