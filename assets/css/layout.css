@@ -5,23 +5,6 @@
     margin: 0 auto;
   }
 
-
-/* .container-main { 
-  display: grid;
-  grid-template-columns: 1fr 3fr;
-  gap: 2rem;
-}
-
-
-
-@media (max-width: 768px) {
-  .container-main {
-    grid-template-columns: 1fr;
-  }
-}
-
-*/
-
 /* header */
 .header-container {
     display: flex;
@@ -39,69 +22,71 @@
     gap: 4rem;
 }
 
+/* Media queries */
+
 @media screen and (max-width: 1024px) {
     .header-container, .container-main, .footer-container {
         padding-left: 1.5rem;
         padding-right: 1.5rem;
       }
-
-    img.rr-logo {
-        max-width: 7rem;
-    }
-
-    #header-nav {
-        position: fixed;
-        top:0;
-        right: -100%;
-        height: 100vh;
-        width: min(15em, 100%);
-        z-index: 10;
-        border-bottom: 0;
-        border-left: 1px solid var( --color-accent);
-        transition: right 300ms ease-out;
-    }
-
-    #header-nav.show {
-        right: 0;
-    }
-
-    #header-nav ul {
-        width: 100%;
-        flex-direction: column;
-    }
-
-    #header-nav li {
-        padding: 0;
-    }
-
-    #header-nav a {
-        padding: 1em 2.5em; 
-        width: 100%;
-        transition: background-color 150ms ease;
-
-        &:hover {
-            border-bottom: none;
-            background-color: var(--color-contrast);
-            color: var(--color-bg-light);
+    
+        img.rr-logo {
+            max-width: 7rem;
         }
-    }
-
-    #header-nav a.active-link {
-        border-bottom: none;
-        background-color: var(--color-primary);
-        color: var(--color-background);
-    }
-
-    #open-sidebar-button {
-        display: block;
-    }
-
-    #close-sidebar-button {
-        display: block;
-        padding: 0.5em;
-        margin: 2em;
-    }
-
+    
+        #header-nav {
+            position: fixed;
+            top:0;
+            right: -100%;
+            height: 100vh;
+            width: min(15em, 100%);
+            z-index: 10;
+            border-bottom: 0;
+            border-left: 1px solid var( --color-accent);
+            transition: right 300ms ease-out;
+        }
+    
+        #header-nav.show {
+            right: 0;
+        }
+    
+        #header-nav ul {
+            width: 100%;
+            flex-direction: column;
+        }
+    
+        #header-nav li {
+            padding: 0;
+        }
+    
+        #header-nav a {
+            padding: 1em 2.5em; 
+            width: 100%;
+            transition: background-color 150ms ease;
+    
+            &:hover {
+                border-bottom: none;
+                background-color: var(--color-contrast);
+                color: var(--color-bg-light);
+            }
+        }
+    
+        #header-nav a.active-link {
+            border-bottom: none;
+            background-color: var(--color-primary);
+            color: var(--color-background);
+        }
+    
+        #open-sidebar-button {
+            display: block;
+        }
+    
+        #close-sidebar-button {
+            display: block;
+            padding: 0.5em;
+            margin: 2em;
+        }
+    
     /* Hero and introduction */
     .hero-card {
         flex-direction: column;
@@ -177,7 +162,6 @@
         gap: 2rem;
     }
     
-
     .footer-menu nav a {
         display: flex;
         justify-content: flex-start;
