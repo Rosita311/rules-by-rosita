@@ -25,9 +25,11 @@
    --line-height-lg: 1.4;
    --line-height-normal: 1.5;
   
+   /* Fonts */
    --font-body: 'Nunito', sans-serif;
    --font-heading: 'Zilla Slab', serif;
 
+   /* Lightmode */
     --color-text: #192324;
     --color-text-dark: rgba(255, 255, 255, 0.87);
     --color-primary: #D7233E;

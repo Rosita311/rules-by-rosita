@@ -157,7 +157,7 @@ svg {
 .hero-section, .introduction {
     display: flex;
     gap: 4rem;
-    padding: 5rem 2rem;
+    padding: 5rem 0;
     max-width: 80rem;
     margin: 0 auto;
 }
@@ -308,7 +308,7 @@ svg {
     box-shadow: 8px 8px 0px 0px var(--color-text);
 }
 
- .hero-blogpost-card-content:hover .hero-read-more, .blogpost-card:hover .read-more {
+ .hero-blogpost-card-content:hover .button, .blogpost-card:hover .button {
     background-color: var(--color-accent);
     color: var(--color-bg-light);
     transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
@@ -360,7 +360,7 @@ svg {
     margin-bottom: 1rem;
 }
 
-.hero-read-more, .read-more {
+.button {
     background-color: var(--color-primary);
     padding: 0.75rem 1.5rem;
     border-radius: 0.25rem;
