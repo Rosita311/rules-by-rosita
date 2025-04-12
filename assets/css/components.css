@@ -1,128 +1,3 @@
-/*
-Theme Name: Rosita's Theme
-Author: Rosita Rampertaap
-Description: Een modern, schaalbaar thema met darkmode en toegankelijkheid.
-Version: 1.0
-*/
-
-/* Colors and Fonts */
-:root{
-  
-    --font-body: 'Nunito', sans-serif;
-    --font-heading: 'Zilla Slab', serif;
-
-    --color-text: #192324;
-    --color-text-dark: rgba(255, 255, 255, 0.87);
-    --color-primary: #D7233E;
-    --color-accent: #f8c9d7;
-    --color-accent-2: #EBEBEB;
-    --color-footer: #CBEEF3; 
-    --color-contrast: #49b3c1;
-    --color-background: #F8F4F5;
-    --color-bg-dark: #F8F4F5;
-    --color-menu-button-hover: #f8c9d7;
-    --color-button-hover: #E38CA6;
-    --color-button-text: #F8F4F5;
-}
-
-/* Darkmode */
-
-.darkmode {
-    --color-text: rgba(255, 255, 255, 0.87);
-    --color-primary: #D96377;
-    --color-accent: #E38CA6;
-    --color-accent-2: #293a3d;
-    --color-footer: #103C42; 
-    --color-contrast: #45a4b0;
-    --color-background: #192324;
-    --color-bg-light: #192324;
-    --color-card-bg: #293a3d;
-    --color-menu-button-hover: #293a3d;
-    --color-button-hover: #E38CA6;
-    --color-button-text: #192324;
-}
-
-  /* basic styles */
-  
-html {
-    font-size: 16px; 
-}
-
-body {
-    background-color: var(--color-background);
-    color: var(--color-text);
-    max-width: 100%;
-    margin: 0 auto;
-}
-
-button {
-   all: unset;
-   cursor: pointer;
-}
-
-p {
-    font-family: var(--font-body);
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.5em;
-}
-
-a {
-    text-decoration: none;
-    color: var(--color-primary);
-}
-
-h1 {
-    font-family: var(--font-heading);
-    font-size: 3.5rem;
-    font-weight: 400;
-    line-height: 1.1em;
-}
-
-h2 {
-    font-family: var(--font-heading);
-    font-size: 3rem;
-    font-weight: 400;
-    line-height: 1.1em;
-}
-
-h3 {
-    font-family: var(--font-heading);
-    font-size: 2.5rem;
-    font-weight: 400;
-    line-height: 1.2em;
-}
-
-h4 {
-    font-family: var(--font-heading);
-    font-size: 2rem;
-    font-weight: 400;
-    line-height: 1.3em;
-}
-
-h5 {
-    font-family: var(--font-heading);
-    font-size: 1.5rem;
-    font-weight: 400;
-    line-height: 1.4em;
-}
-
-h6 {
-    font-family: var(--font-heading);
-    font-size: 1.25rem;
-    font-weight: 400;
-    line-height: 1.5em;
-}
-
-/* Layout */
-.header-container, .container-main, .footer-container {
-    max-width: 80rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    margin: 0 auto;
-  }
-
-
 /* A11y */
 .skip-link {
     position: absolute;
@@ -141,18 +16,7 @@ h6 {
     left: 12px;
 }
 
-
-
-/* header */
- .header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-  }
-
-
+/* Header */
 
 img.rr-logo {
     max-width: 10rem;
@@ -165,6 +29,8 @@ img.rr-logo {
     align-items: center; /* Zorgt dat alles netjes gecentreerd staat */
 
 }
+
+/* Header Navigation */
 
 #header-nav {
    background-color: var(--color-background);
@@ -221,6 +87,7 @@ img.rr-logo {
     }
  }
 
+/* Mobile Menu */
 
 #open-sidebar-button {
     display: none;
@@ -246,6 +113,18 @@ img.rr-logo {
     }
 }
 
+#overlay {
+    background: rgba(0,0,0,0.5);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    inset: 0;
+    transition: rgba(0,0,0,0.5) 0.3s ease-in-out;
+    z-index: 9;
+    display: none;
+}
+
+/* Theme switcher */
 
 #theme-switch svg {
     stroke: var(--color-text);
@@ -273,26 +152,7 @@ svg {
     stroke: var(--color-text);
 }
 
-#overlay {
-    background: rgba(0,0,0,0.5);
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    inset: 0;
-    transition: rgba(0,0,0,0.5) 0.3s ease-in-out;
-    z-index: 9;
-    display: none;
-}
-
-/* Main content */
-.container-main {
-    display: flex;
-    flex-direction: column;
-    padding: 0 2rem 5rem 2rem;
-    gap: 4rem;
-}
-
-/* Hero and Introduction */
+/* Hero & Introduction */
 
 .hero-section, .introduction {
     display: flex;
@@ -566,161 +426,3 @@ footer {
     padding: 0 0 1rem 0;
 }
 
-
-  
-
-    
-@media screen and (max-width: 1024px) {
-    .header-container, .container-main, .footer-container {
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
-      }
-
-    img.rr-logo {
-        max-width: 7rem;
-    }
-
-    #header-nav {
-        position: fixed;
-        top:0;
-        right: -100%;
-        height: 100vh;
-        width: min(15em, 100%);
-        z-index: 10;
-        border-bottom: 0;
-        border-left: 1px solid var( --color-accent);
-        transition: right 300ms ease-out;
-    }
-
-    #header-nav.show {
-        right: 0;
-    }
-
-    #header-nav ul {
-        width: 100%;
-        flex-direction: column;
-    }
-
-    #header-nav li {
-        padding: 0;
-    }
-
-    #header-nav a {
-        padding: 1em 2.5em; 
-        width: 100%;
-        transition: background-color 150ms ease;
-
-        &:hover {
-            border-bottom: none;
-            background-color: var(--color-contrast);
-            color: var(--color-bg-light);
-        }
-    }
-
-    #header-nav a.active-link {
-        border-bottom: none;
-        background-color: var(--color-primary);
-        color: var(--color-background);
-    }
-
-    #open-sidebar-button {
-        display: block;
-    }
-
-    #close-sidebar-button {
-        display: block;
-        padding: 0.5em;
-        margin: 2em;
-    }
-
-    /* Card styles */
-    .blog-listing-grid {
-        gap: 3rem;
-    }
-
-    /* Footer styles */
-    .footer-content {
-        padding: 3rem 0;
-        gap: 3rem;
-    }
-    
-    .footer-menu {
-        display: flex;
-        justify-content: flex-start;
-        background-color: var(--color-footer);
-    }
-    
-    .footer-menu nav ul{
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        list-style-type: none;
-        width: 100%;
-        gap: 1rem;
-    }
-    
-    .footer-menu nav a {
-        display: flex;
-        justify-content: flex-start;
-        width: 100%;
-        padding: 0;
-        font-family: var(--font-body);
-        font-size: 1rem;
-        font-weight: 500;
-        color: var(--color-text);
-        text-decoration: underline;
-    
-        &:hover {
-            text-decoration: none;
-        }
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .header-container, .container-main, .footer-container {
-        padding-left: 1rem;
-        padding-right: 1rem;
-      }
-
-    img.rr-logo {
-        max-width: 5rem;
-    }
-
-    /* Card styles */
-    .blog-listing-grid {
-        gap: 4rem;
-    }
-
-    .footer-content {
-        display: flex;
-        flex-direction: column;
-        padding: 2rem 0;
-        gap: 2rem;
-    }
-    
-
-    .footer-menu nav a {
-        display: flex;
-        justify-content: flex-start;
-        width: 100%;
-        padding: 0;
-        font-family: var(--font-body);
-        font-size: 1rem;
-        font-weight: 500;
-        color: var(--color-text);
-        text-decoration: underline;
-    
-        &:hover {
-            text-decoration: none;
-        }
-    }
-
-    .footer-social-media {
-        display: flex;
-        flex-direction: column;
-        justify-content: start;
-        align-items: start;
-        width: 100%;
-        gap: 1rem;
-    }
-}
