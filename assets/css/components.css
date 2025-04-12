@@ -218,15 +218,33 @@ svg {
     max-width: 100%;
 }
 
+.hero-blogpost-card-content-wrapper {
+    background-color: var(--color-accent);
+}
+
+.introduction-content-wrapper {
+    background-color: var(--color-accent);
+}
+
 .hero-blogpost-card-content, .introduction-content {
     display: flex;
     flex-direction: column;
     justify-content: start;
     padding: 2rem;
-    background-color: var(--color-background);
     position: relative; 
     width: 70ch;
     max-width: 100%;
+}
+
+.hero-blogpost-card-content h1 {
+    margin-bottom: 0;
+}
+
+.hero-blogpost-card-content h1 a{
+    font-family: var(--font-heading);
+    font-size: var(--font-size-xxxl);
+    line-height: var(--line-height-xs);
+    text-decoration: none;
 }
 
 .hero-blogpost-image, .introduction-image {
@@ -267,6 +285,18 @@ svg {
         box-shadow: 8px 8px 0px 0px var(--color-accent);
     }
 }
+
+.blogpost-card h3 {
+    margin-bottom: 0;
+}
+
+.blogpost-card h3 a {
+    font-family: var(--font-heading);
+    font-size: var(--font-size-xl);
+    line-height: var(--line-height-md);
+    text-decoration: none;
+}
+
 
 .blogpost-card a {
     color: var(--color-text);

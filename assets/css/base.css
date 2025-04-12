@@ -33,11 +33,11 @@ a {
     font-family: var(--font-body);
     font-size: var(--font-size-base);
     color: var(--color-primary);
-    text-decoration: none;
+    text-decoration: underline;
   }
   
   a:hover {
-    text-decoration: underline;
+    text-decoration: none;
   }
 
 h1 {
