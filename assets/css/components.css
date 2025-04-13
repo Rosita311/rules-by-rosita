@@ -260,8 +260,6 @@ svg {
     transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
 } 
 
-
-
 .card-image img {
     aspect-ratio: 16 / 9;
     width: 100%;
@@ -324,7 +322,6 @@ svg {
 
 .btn-secondary:hover {
     background-color: var(--color-footer);
-    color: var(--color-button-text);
 }
 
 
