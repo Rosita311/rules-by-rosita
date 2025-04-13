@@ -102,6 +102,15 @@
         margin: 2em;
     }
 
+    /* Hero and introduction */
+    .hero-card {
+        flex-direction: column;
+    }
+
+    .hero-section .card, .introduction {
+       flex-wrap: wrap;
+    }
+
     /* Card styles */
     .blog-listing-grid {
         gap: 3rem;
@@ -154,6 +163,7 @@
     img.rr-logo {
         max-width: 5rem;
     }
+ 
 
     /* Card styles */
     .blog-listing-grid {
