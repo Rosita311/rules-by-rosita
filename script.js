@@ -98,10 +98,10 @@ if(!darkmode) {
 
 // Keyboard navigation
 document.body.addEventListener('keydown', () => {
-    document.body.classList.add('user-is-tabbing');
-  });
+   document.body.classList.add('user-is-tabbing');
+ });
   
-  document.body.addEventListener('mousedown', () => {
-    document.body.classList.remove('user-is-tabbing');
-  });
+document.body.addEventListener('mousedown', () => {
+   document.body.classList.remove('user-is-tabbing');
+});
   
