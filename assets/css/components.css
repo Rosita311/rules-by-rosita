@@ -197,10 +197,10 @@ svg {
     flex-direction: column;
     position: relative;
     transition: box-shadow 0.3s ease-in-out;
+}
 
-    &:hover {
+.hover-shadow:hover {
         box-shadow: 8px 8px 0px 0px var(--color-accent);
-    }
 }
 
 .card--horizontal {
@@ -337,7 +337,6 @@ body:not(.user-is-tabbing) .card:focus-within {
 .btn-secondary:hover {
     background-color: var(--color-footer);
 }
-
 
 /* Footer styles */
 footer {
