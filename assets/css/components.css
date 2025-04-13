@@ -242,7 +242,7 @@ svg {
     box-shadow: 8px 8px 0px 0px var(--color-text);
 }
 
- .card-content:hover .button {
+ .card-content:hover .btn {
     background-color: var(--color-accent);
     color: var(--color-bg-light);
     transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
@@ -294,8 +294,7 @@ svg {
     margin-bottom: 1rem;
 }
 
-.button {
-    background-color: var(--color-primary);
+.btn {
     padding: 0.75rem 1.5rem;
     border-radius: 0.25rem;
     width: fit-content;
@@ -305,6 +304,27 @@ svg {
     color: var(--color-button-text);
     margin-top: 1rem;
 }
+
+.btn-primary {
+    background-color: var(--color-primary);
+    color: var(--color-button-text);
+    border: none;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.btn-secondary {
+    background-color: var(--color-contrast);
+    color: var(--color-text);
+    text-decoration: none;
+    border: none;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.btn-secondary:hover {
+    background-color: var(--color-footer);
+    color: var(--color-button-text);
+}
+
 
 /* Footer styles */
 footer {
