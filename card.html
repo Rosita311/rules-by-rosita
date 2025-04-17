@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Zilla+Slab:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+    <script src="script.js"  defer></script>
+    <title>Home</title>
+</head>
+<body >
+    <a href="#main-content" class="skip-link">Sla het menu over</a>
+    <header>
+        <div class="header-container"> 
+            <div>
+                <a href="index.html">
+                    <img class="rr-logo" src="./assets/Logo_rulesbyrosita.png" alt="Logo Rules by Rosita, ga naar homepage.">
+                </a>
+            </div>
+            <div class="menu-items">
+            <button id="open-sidebar-button" onclick="openSidebar()" aria-label="Open menu" aria-expanded="false" aria-controls="header-nav">
+                <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-menu-2"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 6l16 0" /><path d="M4 12l16 0" /><path d="M4 18l16 0" /></svg>  
+            </button>
+            <nav id="header-nav">
+                <ul>
+                    <li><button id="close-sidebar-button" onclick="closeSidebar()" aria-label="Sluit menu">
+                        <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-x"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M18 6l-12 12" /><path d="M6 6l12 12" /></svg>                      
+                    </button></li>
+                    <li><a href="fonts.html" class="active-link" aria-current="page">Persoonlijk</a></li>
+                    <li><a href="page.html">Life</a></li>
+                    <li><a href="single.html">Tips and Tricks</a></li>
+                    <li><a href="#">Over mij</a></li>
+                </ul>
+            </nav> 
+            <div class="menu-buttons">
+                <button aria-label="Zoeken" class="menu-button">
+                    <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-search"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" /><path d="M21 21l-6 -6" /></svg>
+                </button>
+                <button id="theme-switch"class="menu-button">
+                    <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-moon"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" /></svg>
+                    <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-sun"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" /><path d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7" /></svg>
+                </button>
+            </div>
+            </div>
+        </div>
+        <div id="overlay" onclick="closeSidebar()" aria-hidden="true"></div>  
+    </header>
+    <main id="main-content">
+        <div class="container-main">
+            
+            <section class="blogpost-section">
+                <h2>Recente blogposts</h2>
+                <ul class="blog-listing-grid">
+                    <li class="card hover-shadow">
+                        <div class="card-image">
+                            <img src="./assets/pexels-thisisengineering-3861958.jpg" alt="">
+                        </div>
+                        <div class="card-content-wrapper">
+                            <div class="card-content">
+                                <h3><a href="single.html" aria-describedby="excerpt-2 lees-meer-2">Blogpost Title</a></h3>
+                                <p class="post-date">25-03-2025</p>
+                                <p id="excerpt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam quaerat repudiandae unde eligendi sunt commodi eos aut cumque accusamus atque.</p>
+                                <span aria-hidden="true" id="lees-meer-2"class="btn btn-primary">Lees meer</span>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+        </div>    
+    </main>
+</body>
+</html>
