@@ -154,7 +154,7 @@ svg {
 
 /* Hero & Introduction */
 
-.hero-section, .card, .introduction {
+.hero-section, .introduction {
     display: flex;
     gap: 4rem;
     padding: 5rem 0;
@@ -211,7 +211,7 @@ svg {
         box-shadow: 8px 8px 0px 0px var(--color-accent);
 }
 
-.card--horizontal {
+.card --horizontal {
     flex-direction: row;
     gap: 4rem;
     align-items: stretch;
