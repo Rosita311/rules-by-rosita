@@ -154,7 +154,7 @@ svg {
 
 /* Hero & Introduction */
 
-.hero-section, .introduction {
+.hero-section, .card--horizontal, .introduction {
     display: flex;
     gap: 4rem;
     padding: 5rem 0;
