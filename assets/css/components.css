@@ -156,7 +156,7 @@ svg {
 
 .hero-content, .card--horizontal, .introduction {
     display: flex;
-    justify-content: center;
+    justify-content: start;
     gap: 4rem;
     padding: 5rem 0;
     max-width: 80rem;

@@ -94,6 +94,9 @@
     }
 
     /* Hero and introduction */
+    .hero-section {
+        width: 100%;
+    }
 
     .hero-content .card,
     .introduction {
@@ -142,6 +145,7 @@
         }
     }
 }
+
 
 @media screen and (max-width: 768px) {
 
