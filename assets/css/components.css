@@ -183,6 +183,13 @@ svg {
     margin: 0 auto;
     max-width: 80rem;
 }
+
+.hero-listing .card {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    transition: box-shadow 0.3s ease-in-out;
+}
   
 /* Card styles */
 
@@ -210,12 +217,6 @@ svg {
 .hover-shadow:hover {
         box-shadow: 8px 8px 0px 0px var(--color-accent);
 }
-
-.card --horizontal {
-    flex-direction: row;
-    gap: 4rem;
-    align-items: stretch;
-  }
 
 .card h1 {
     margin-bottom: 0;

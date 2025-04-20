@@ -94,9 +94,6 @@
     }
 
     /* Hero and introduction */
-    .hero-card {
-        flex-direction: column;
-    }
 
     .hero-content .card,
     .introduction {
