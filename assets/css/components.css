@@ -156,6 +156,7 @@ svg {
 
 .hero-content, .card--horizontal, .introduction {
     display: flex;
+    justify-content: center;
     gap: 4rem;
     padding: 5rem 0;
     max-width: 80rem;
@@ -189,6 +190,23 @@ svg {
     flex-direction: row;
     position: relative;
     transition: box-shadow 0.3s ease-in-out;
+}
+
+.hero-listing .card-content-wrapper {
+    background-color: var(--color-accent);
+}
+
+.introduction .card-content-wrapper {
+    background-color: var(--color-footer);
+}
+
+.hero-listing .card-content, .introduction .card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+    margin-top: 0;
+    background-color: var(--color-background);
 }
   
 /* Card styles */
