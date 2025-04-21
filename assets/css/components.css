@@ -171,7 +171,7 @@ svg {
 
 .page-hero {
     background-color: var(--color-page-hero-bg);
-    padding: 7rem 2rem;
+    padding: 7rem 0;
     margin: 0 auto;
     max-width: 80rem;
     width: 100%;
