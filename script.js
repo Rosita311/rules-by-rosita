@@ -3,6 +3,9 @@ const openButton = document.getElementById('open-sidebar-button');
 const navbar = document.getElementById("header-nav");
 const overlay = document.getElementById("overlay");
 const media = window.matchMedia("(width < 1023px)");
+const mainContent = document.getElementById("main-content");
+const menuButtons = document.querySelector(".menu-buttons");
+const footer = document.querySelector(".footer-container");
 
 const updateNavbar = (e) => {
     const isMobile = e.matches;
@@ -23,6 +26,9 @@ const openSidebar = () => {
     navbar.classList.add("show");
     openButton.setAttribute('aria-expanded', 'true');
     navbar.removeAttribute('inert');
+    mainContent.setAttribute('inert', '');
+    menuButtons.setAttribute('inert', '');
+    footer.setAttribute('inert', '');
     overlay.style.display = "block";
 };
 
@@ -31,6 +37,9 @@ const closeSidebar = () => {
     openButton.setAttribute('aria-expanded', 'false');
     if (media.matches) {
         navbar.setAttribute('inert', '');
+        mainContent.removeAttribute('inert');
+        menuButtons.removeAttribute('inert');
+        footer.removeAttribute('inert');
     }
     overlay.style.display = "none";
 };
