@@ -22,7 +22,30 @@ const updateNavbar = (e) => {
 
 media.addEventListener('change', updateNavbar);
 
-const openSidebar = () => {
+const trapFocus = (container) => {
+    const focusableSelectors = 'a[href], button:not([disabled]), textarea, input, select, [tabindex]:not([tabindex="-1"])';
+    const focusableEls = container.querySelectorAll(focusableSelectors);
+    const firstEl = focusableEls[0];
+    const lastEl = focusableEls[focusableEls.length - 1];
+  
+    container.addEventListener('keydown', (e) => {
+      if (e.key === 'Tab') {
+        if (e.shiftKey) {
+          if (document.activeElement === firstEl) {
+            e.preventDefault();
+            lastEl.focus();
+          }
+        } else {
+          if (document.activeElement === lastEl) {
+            e.preventDefault();
+            firstEl.focus();
+          }
+        }
+      }
+    });
+  }  
+
+function openSidebar() {
     navbar.classList.add("show");
     openButton.setAttribute('aria-expanded', 'true');
     navbar.removeAttribute('inert');
@@ -30,7 +53,8 @@ const openSidebar = () => {
     menuButtons.setAttribute('inert', '');
     footer.setAttribute('inert', '');
     overlay.style.display = "block";
-};
+    trapFocus(navbar);
+}
 
 const closeSidebar = () => {
     navbar.classList.remove("show");
@@ -42,12 +66,19 @@ const closeSidebar = () => {
         footer.removeAttribute('inert');
     }
     overlay.style.display = "none";
+    openButton.focus();
 };
 
 const navLinks = document.querySelectorAll('#header-nav a');
 navLinks.forEach(link => {
     link.addEventListener('click', closeSidebar);
+    link.removeAttribute('aria-current');
+
+    if (link.href === window.location.href) {
+        link.setAttribute('aria-current', 'page');
+    }
 });
+
 
 updateNavbar(media);
 

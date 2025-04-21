@@ -50,7 +50,7 @@ img.rr-logo {
     }
 }
 
-#header-nav a.active-link {
+#header-nav a[aria-current="page"] {
     border-bottom: 2px solid var(--color-primary);
 }
 
@@ -192,7 +192,7 @@ svg {
         }
     }
 
-    .header-container #header-nav a.active-link {
+    .header-container #header-nav a[aria-current="page"] {
         border-bottom: none;
         background-color: var(--color-primary);
         color: var(--color-background);
