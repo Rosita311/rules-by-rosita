@@ -158,7 +158,6 @@ svg {
     display: flex;
     justify-content: start;
     gap: 4rem;
-    padding: 5rem 0;
     max-width: 80rem;
     margin: 0 auto;
 }
@@ -171,11 +170,12 @@ svg {
 }
 
 .page-hero {
-    background-color: var(--color-accent);
-    padding: 5rem 2rem;
+    background-color: var(--color-page-hero-bg);
+    padding: 7rem 2rem;
     margin: 0 auto;
     max-width: 80rem;
     width: 100%;
+    border-radius: 0.5rem;
 }
 
 .hero-listing {
@@ -247,11 +247,11 @@ svg {
     text-decoration: none;
 }
 
-.card h3 {
+.card h3, .card h2 {
     margin-bottom: 0;
 }
 
-.card h3 a {
+.card h3 a, .card h2 a {
     font-family: var(--font-heading);
     font-size: var(--font-size-xl);
     line-height: var(--line-height-md);

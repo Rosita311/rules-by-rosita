@@ -26,6 +26,14 @@
 }
 
 /* Media queries */
+@media screen and (max-width: 1280px) {
+    .hero-section.page-hero {
+        margin: 0 auto;
+        padding: 5rem 2rem;
+        width: 100%;
+        border-radius: 0rem;
+    }
+}
 
 @media screen and (max-width: 1024px) {
 
