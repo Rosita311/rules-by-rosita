@@ -1,0 +1,194 @@
+
+/* Colors and Fonts */
+:root{
+    /* Font sizes */
+    --font-size-xxs: 0.75rem;   /* 12px */
+    --font-size-xs: 0.875rem;  /* 14px */
+    --font-size-base: 1rem;    /* 16px - body tekst */
+    --font-size-md: 1.25rem;  /* 20px */
+    --font-size-lg: 1.5rem;    /* 24px */
+    --font-size-xl: 2rem;      /* 32px */
+    --font-size-xxl: 2.5rem;    /* 40px */
+    --font-size-xxxl: 3rem;     /* 48px */
+    --font-size-xxxxl: 3.5rem;  /* 56px */
+
+    /* Font weights */
+    --font-weight-light: 300;
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-bold: 700;
+
+    /* Line heights */
+   --line-height-xs: 1.1;
+   --line-height-sm: 1.2;
+   --line-height-md: 1.3;
+   --line-height-lg: 1.4;
+   --line-height-normal: 1.5;
+  
+   /* Fonts */
+   --font-body: 'Nunito', sans-serif;
+   --font-heading: 'Zilla Slab', serif;
+
+   /* Lightmode */
+    --color-text: #192324;
+    --color-text-dark: rgba(255, 255, 255, 0.87);
+    --color-primary: #D7233E;
+    --color-accent: #f8c9d7;
+    --color-accent-2: #EBEBEB;
+    --color-footer: #CBEEF3; 
+    --color-contrast: #49b3c1;
+    --color-background: #F8F4F5;
+    --color-bg-dark: #F8F4F5;
+    --color-menu-button-hover: #f8c9d7;
+    --color-button-hover: #E38CA6;
+    --color-button-text: #F8F4F5;
+    --color-page-hero-bg: #f8c9d7;
+}
+
+/* Darkmode */
+
+.darkmode {
+    --color-text: rgba(255, 255, 255, 0.87);
+    --color-primary: #D96377;
+    --color-accent: #E38CA6;
+    --color-accent-2: #293a3d;
+    --color-footer: #103C42; 
+    --color-contrast: #45a4b0;
+    --color-background: #192324;
+    --color-bg-light: #192324;
+    --color-card-bg: #293a3d;
+    --color-menu-button-hover: #293a3d;
+    --color-button-hover: #E38CA6;
+    --color-button-text: #192324;
+    --color-page-hero-bg: #103C42;
+}
+
+/* Global styles */
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+  }
+  
+  body {
+    font-family: var(--font-body);
+    background-color: var(--color-background);
+    color: var(--color-text);
+    line-height: 1.6;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    font-weight: var(--font-weight-regular);
+    color: var(--color-text);
+    margin: 0 0 1rem;
+  }
+  
+
+  p {
+    font-family: var(--font-body);
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-regular);
+    color: var(--color-text);
+    line-height: var(--line-height-normal);
+    margin-bottom: 1rem;
+}
+  
+a {
+    font-family: var(--font-body);
+    font-size: var(--font-size-base);
+    color: var(--color-primary);
+    text-decoration: underline;
+    transition: color 0.3s ease;
+    cursor: pointer;
+  }
+  
+  a:hover {
+    text-decoration: none;
+  }
+
+h1 {
+    font-size: var(--font-size-xxxxl);
+    line-height: var(--line-height-xs);
+}
+
+h2 {
+    font-size: var(--font-size-xxxl);
+    line-height: var(--line-height-xs);
+}
+
+h3 {
+    font-size: var(--font-size-xxl);
+    line-height: var(--line-height-xs);
+}
+
+h4 {
+    font-size: var(--font-size-xl);
+    line-height: var(--line-height-md);
+}
+
+h5 {
+    font-size: var(--font-size-lg);
+    line-height: var(--line-height-lg);
+}
+
+h6 {
+    font-size: var(--font-size-md);
+    line-height: var(--line-height-lg);
+}
+
+
+/* Button styles */
+button {
+    all: unset;
+    cursor: pointer;
+  }
+ 
+.btn {
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.25rem;
+    width: fit-content;
+    font-family: var(--font-body);
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--color-button-text);
+    margin-top: 1rem;
+}
+
+.btn-primary {
+    background-color: var(--color-primary);
+    color: var(--color-button-text);
+    border: none;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.btn-secondary {
+    background-color: var(--color-contrast);
+    color: var(--color-text);
+    text-decoration: none;
+    border: none;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.btn-secondary:hover {
+    background-color: var(--color-footer);
+}
+
+ /* A11y */
+.skip-link {
+    position: absolute;
+    top: -50px;
+    background-color: var(--color-background);
+    color: var(--color-text);
+    padding:1rem;
+    margin: 0;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.skip-link:focus {
+    top: 12px;
+    left: 12px;
+} 

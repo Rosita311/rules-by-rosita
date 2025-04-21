@@ -1,0 +1,29 @@
+.header-container,
+.hero-content,
+.container-main,
+.footer-container {
+    max-width: 80rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin: 0 auto;
+}
+
+/* Main content */
+.container-main {
+    display: flex;
+    flex-direction: column;
+    padding: 5rem 2rem;
+    gap: 4rem;
+}
+
+/* Media queries */
+
+@media screen and (max-width: 768px) {
+
+    .header-container,
+    .container-main,
+    .footer-container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}

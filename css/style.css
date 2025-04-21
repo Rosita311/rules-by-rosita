@@ -8,6 +8,9 @@ Version: 1.0
 /* Imports */
 @import "reset.css";
 @import "theme.css";
-@import "base.css";
 @import "layout.css";
-@import "components.css";
+
+@import "components/header.css";
+@import "components/footer.css";
+@import "components/hero.css";
+@import "components/card.css";

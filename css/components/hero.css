@@ -1,0 +1,84 @@
+/* Hero component styles */
+
+/* Homepage hero & introduction styles */
+.hero-content, .card--horizontal, .introduction {
+    display: flex;
+    justify-content: start;
+    gap: 4rem;
+    max-width: 80rem;
+    margin: 0 auto;
+}
+
+.hero-content .card-image,
+.introduction .card-image,
+.hero-content .card-content-wrapper,
+.introduction .card-content-wrapper {
+  flex: 1 1 50%;
+}
+
+.hero-listing {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 80rem;
+}
+
+.hero-listing .card {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.hero-listing .card-content-wrapper {
+    background-color: var(--color-accent);
+}
+
+.introduction .card-content-wrapper {
+    background-color: var(--color-footer);
+}
+
+.hero-listing .card-content, .introduction .card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+    margin-top: 0;
+    background-color: var(--color-background);
+}
+
+/* Page hero styles */
+.page-hero {
+    background-color: var(--color-page-hero-bg);
+    padding: 7rem 0;
+    margin: 0 auto;
+    max-width: 80rem;
+    width: 100%;
+    border-radius: 0.5rem;
+}
+
+/* Single post hero styles */
+
+/* Media Queries */
+
+@media screen and (max-width: 1280px) {
+    .hero-section.page-hero {
+        margin: 0 auto;
+        padding: 5rem 0;
+        width: 100%;
+        border-radius: 0rem;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+
+    /* Hero and introduction */
+    .hero-section {
+        width: 100%;
+    }
+
+    .hero-content .card,
+    .introduction {
+        flex-wrap: wrap;
+    }
+}

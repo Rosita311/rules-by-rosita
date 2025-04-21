@@ -1,0 +1,216 @@
+/* Header component styles */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+img.rr-logo {
+    max-width: 10rem;
+    margin-right: 2rem;
+}
+
+.menu-items {
+    display: flex; /* Zet de navigatie en knoppen naast elkaar */
+    justify-content: flex-end;
+    align-items: center; /* Zorgt dat alles netjes gecentreerd staat */
+
+}
+
+/* Header Navigation */
+
+#header-nav {
+   background-color: var(--color-background);
+}
+
+#header-nav ul {
+    list-style: none;
+    display: flex;
+} 
+
+#header-nav li {
+    display: flex;
+    padding: 0 2rem;
+}
+
+#header-nav a {
+    display: flex;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration: none;
+    color: var(--color-text);
+    padding: 1em 0; 
+    transition: background-color 150ms ease;
+
+    &:hover {
+        border-bottom: 2px solid var(--color-contrast);
+    }
+}
+
+#header-nav a.active-link {
+    border-bottom: 2px solid var(--color-primary);
+}
+
+.menu-buttons {
+    display: flex; 
+    gap: 0.75rem; 
+    align-items: center; 
+}
+
+ .menu-button {
+    padding: 0.5em;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;   
+    align-items: center;
+
+    &:hover {
+        background-color: var(--color-menu-button-hover);
+    }
+
+    &:focus {
+        outline: 2px solid var(--color-primary);
+    }
+ }
+
+/* Mobile Menu */
+
+#open-sidebar-button {
+    display: none;
+    background: none;
+    margin-left: auto;
+    padding: 0.5em;
+    margin-right: 0.75rem;
+
+    &:focus {
+        border-radius: 50%;
+        outline: 2px solid var(--color-primary);
+    }
+}
+
+#close-sidebar-button {
+    display: none;
+    background: none;
+    padding: 0.5em;
+
+    &:focus {
+        border-radius: 50%;
+        outline: 2px solid var(--color-primary);
+    }
+}
+
+#overlay {
+    background: rgba(0,0,0,0.5);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    inset: 0;
+    transition: rgba(0,0,0,0.5) 0.3s ease-in-out;
+    z-index: 9;
+    display: none;
+}
+
+/* Theme switcher */
+
+#theme-switch svg {
+    stroke: var(--color-text);
+}
+
+#theme-switch svg:first-child {
+    display: block;
+} 
+
+#theme-switch svg:last-child {
+    display: none;
+}
+
+.darkmode #theme-switch svg:first-child {
+    display: none;
+}
+
+.darkmode #theme-switch svg:last-child {
+    display: block;
+}
+
+svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    stroke: var(--color-text);
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 1024px) {
+    .header-container,
+    .container-main,
+    .footer-container {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+
+    .header-container img.rr-logo {
+        max-width: 7rem;
+    }
+
+    .header-container #header-nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 100vh;
+        width: min(15em, 100%);
+        z-index: 10;
+        border-bottom: 0;
+        border-left: 1px solid var(--color-accent);
+        transition: right 300ms ease-out;
+    }
+
+    .header-container #header-nav.show {
+        right: 0;
+    }
+
+    .header-container #header-nav ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .header-container #header-nav li {
+        padding: 0;
+    }
+
+    .header-container #header-nav a {
+        padding: 1em 2.5em;
+        width: 100%;
+        transition: background-color 150ms ease;
+
+        &:hover {
+            border-bottom: none;
+            background-color: var(--color-contrast);
+            color: var(--color-bg-light);
+        }
+    }
+
+    .header-container #header-nav a.active-link {
+        border-bottom: none;
+        background-color: var(--color-primary);
+        color: var(--color-background);
+    }
+
+    .header-container #open-sidebar-button {
+        display: block;
+    }
+
+    .header-container #close-sidebar-button {
+        display: block;
+        padding: 0.5em;
+        margin: 2em;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .header-container img.rr-logo {
+        max-width: 5rem;
+    }
+}
