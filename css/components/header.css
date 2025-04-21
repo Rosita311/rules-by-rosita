@@ -43,6 +43,7 @@ img.rr-logo {
     text-decoration: none;
     color: var(--color-text);
     padding: 1em 0; 
+    border-bottom: 2px solid transparent;
     transition: background-color 150ms ease;
 
     &:hover {
