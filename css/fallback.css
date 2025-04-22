@@ -59,7 +59,8 @@ html.no-js {
         width: 100%;
         flex-direction: row;
         flex-wrap: wrap;
-        gap: 1rem
+        gap: 1rem;
+        margin-right: 1rem;
     }
 
     html.no-js #header-nav a {
@@ -113,9 +114,9 @@ html.no-js {
         margin-top: 1rem;
      }
 
-    /* html.no-js .menu-buttons {
-        display: none !important;
-    } */
+     html.no-js .menu-buttons {
+        padding-top: 0.5rem;
+    } 
 
     html.no-js .header-container #header-nav ul {
         gap: 0.5rem;
