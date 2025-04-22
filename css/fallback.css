@@ -103,13 +103,23 @@ html.no-js {
        align-items: flex-start;
     }
 
-    html.no-js .menu-buttons {
+    html.no-js .menu-items{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;;
+        align-items: flex-start;
+        justify-content: space-between;
+        border-top: 1px solid var(--color-accent);
+        margin-top: 1rem;
+     }
+
+    /* html.no-js .menu-buttons {
         display: none !important;
-    }
+    } */
 
     html.no-js .header-container #header-nav ul {
-        margin-top: 0.5rem;
-        gap: 0;
+        gap: 0.5rem;
+        flex-direction: column;
     }
 
     html.no-js #header-nav a {
