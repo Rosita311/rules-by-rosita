@@ -9,6 +9,7 @@ const footer = document.querySelector(".footer-container");
 const navLinks = document.querySelectorAll('#header-nav a');
 
 let currentTrapHandler = null;
+let escKeyHandler = null;
 
 const trapFocus = (container) => {
     const focusableSelectors = 'a[href], button:not([disabled]), textarea, input, select, [tabindex]:not([tabindex="-1"])';
@@ -45,6 +46,13 @@ const trapFocus = (container) => {
         footer.setAttribute('inert', '');
         overlay.style.display = "block";
     }
+
+    escKeyHandler = (e) => {
+        if (e.key === 'Escape') {
+            closeSidebar();
+        }
+    };
+    document.addEventListener('keydown', escKeyHandler);
 };
 
 const closeSidebar = () => {
@@ -64,6 +72,11 @@ const closeSidebar = () => {
         navbar.removeAttribute('data-trap-bound');
         currentTrapHandler = null;
     }
+
+    if (escKeyHandler) {
+        document.removeEventListener('keydown', escKeyHandler);
+        escKeyHandler = null;
+    }    
 };
 
 navLinks.forEach(link => {
