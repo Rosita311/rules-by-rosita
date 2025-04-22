@@ -1,3 +1,6 @@
+// Fallback for Javascript disabled
+document.documentElement.classList.replace('no-js','js');
+
 // Menu
 const openButton = document.getElementById('open-sidebar-button');
 const navbar = document.getElementById("header-nav");

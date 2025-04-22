@@ -7,9 +7,15 @@ Version: 1.0
 
 /* Imports */
 @import "reset.css";
+
+/* Fallback JS Disabled */
+@import "fallback.css";
+
+/* Theme styles */
 @import "theme.css";
 @import "layout.css";
 
+/* Components */
 @import "components/header.css";
 @import "components/footer.css";
 @import "components/hero.css";

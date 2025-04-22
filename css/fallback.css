@@ -1,0 +1,102 @@
+/* CSS Fallback when no JS is available */
+
+html.no-js {
+    /* lightmode fallback */
+    --color-text: #192324;
+    --color-text-dark: rgba(255, 255, 255, 0.87);
+    --color-primary: #D7233E;
+    --color-accent: #f8c9d7;
+    --color-accent-2: #EBEBEB;
+    --color-footer: #CBEEF3; 
+    --color-contrast: #49b3c1;
+    --color-background: #F8F4F5;
+    --color-bg-dark: #F8F4F5;
+    --color-menu-button-hover: #f8c9d7;
+    --color-button-hover: #E38CA6;
+    --color-button-text: #F8F4F5;
+    --color-page-hero-bg: #f8c9d7;
+  }
+  
+   @media (prefers-color-scheme: dark) {
+    html.no-js {
+      --color-text: rgba(255, 255, 255, 0.87);
+      --color-primary: #D96377;
+      --color-accent: #E38CA6;
+      --color-accent-2: #293a3d;
+      --color-footer: #103C42; 
+      --color-contrast: #45a4b0;
+      --color-background: #192324;
+      --color-bg-light: #192324;
+      --color-card-bg: #293a3d;
+      --color-menu-button-hover: #293a3d;
+      --color-button-hover: #E38CA6;
+      --color-button-text: #192324;
+      --color-page-hero-bg: #103C42;
+      color-scheme: dark;
+    }
+  }
+  
+  /* Mobile menu fallback */
+
+  /* Algemene fallback stijlen voor als geen JS beschikbaar is */
+  .no-js #open-sidebar-button,.no-js #close-sidebar-button, .no-js #theme-switch,
+  .no-js #overlay {
+    display: none; 
+  }
+
+@media screen and (max-width: 1024px) {
+    html.no-js #header-nav {
+        position: static;      /* geen fixed/slide‑in positionering */
+        display: block !important;
+        right: 0 !important;   /* niet naar rechts verschuiven */
+        height: auto !important; /* geen hoogte instellen */  
+        width: auto !important;  /* geen breedte instellen */
+        transition: none !important;
+        border: none;
+    }
+
+    html.no-js .header-container #header-nav ul {
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 1rem
+    }
+
+    html.no-js #header-nav a {
+        display: flex;
+        font-family: var(--font-body);
+        font-size: 1rem;
+        font-weight: 500;
+        text-decoration: none;
+        color: var(--color-text);
+        padding: 1em 0; 
+        background-color: var(--color-background);
+        border-bottom: 2px solid transparent;
+        transition: background-color 150ms ease;
+    
+        &:hover, &:focus {
+            border-bottom: 2px solid var(--color-contrast);
+        }
+    }
+    
+    html.no-js #header-nav a[aria-current="page"] {
+        border-bottom: 2px solid var(--color-primary);
+        background-color: var(--color-background);
+        color: var(--color-text)    ;
+    }
+
+    html.no-js .header-container #open-sidebar-button {
+        display: none !important;
+    }
+
+    html.no-js .header-container #close-sidebar-button {
+        display: none !important;
+    }
+    
+  }
+
+  @media screen and (max-width: 768px) {
+    html.no-js .menu-buttons {
+        display: none !important;
+    }
+}
