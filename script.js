@@ -6,55 +6,46 @@ const media = window.matchMedia("(width < 1023px)");
 const mainContent = document.getElementById("main-content");
 const menuButtons = document.querySelector(".menu-buttons");
 const footer = document.querySelector(".footer-container");
+const navLinks = document.querySelectorAll('#header-nav a');
 
-const updateNavbar = (e) => {
-    const isMobile = e.matches;
-    console.log("Screen changed. Mobile view:", isMobile)
-    if (isMobile) {
-            navbar.setAttribute('inert', '');
-        } else {
-        navbar.removeAttribute('inert');
-        navbar.classList.remove("show");
-        overlay.style.display = "none";
-        openButton.setAttribute('aria-expanded', 'false');
-    }
-};
-
-media.addEventListener('change', updateNavbar);
+let currentTrapHandler = null;
 
 const trapFocus = (container) => {
     const focusableSelectors = 'a[href], button:not([disabled]), textarea, input, select, [tabindex]:not([tabindex="-1"])';
     const focusableEls = container.querySelectorAll(focusableSelectors);
     const firstEl = focusableEls[0];
     const lastEl = focusableEls[focusableEls.length - 1];
-  
-    container.addEventListener('keydown', (e) => {
-      if (e.key === 'Tab') {
-        if (e.shiftKey) {
-          if (document.activeElement === firstEl) {
-            e.preventDefault();
-            lastEl.focus();
-          }
-        } else {
-          if (document.activeElement === lastEl) {
-            e.preventDefault();
-            firstEl.focus();
-          }
-        }
-      }
-    });
-  }  
 
-function openSidebar() {
+    const handleTrap = (e) => {
+        if (e.key === 'Tab') {
+            if(e.shiftKey && document.activeElement === firstEl) {
+                e.preventDefault();
+                lastEl.focus();
+            } else if (!e.shiftKey && document.activeElement === lastEl) {
+                e.preventDefault();
+                firstEl.focus();
+            }
+        }
+    }
+    container.addEventListener('keydown', handleTrap);
+    container.setAttribute('data-trap-bound', 'true');
+
+    return handleTrap;
+  };
+
+  const openSidebar = () => {
     navbar.classList.add("show");
     openButton.setAttribute('aria-expanded', 'true');
-    navbar.removeAttribute('inert');
-    mainContent.setAttribute('inert', '');
-    menuButtons.setAttribute('inert', '');
-    footer.setAttribute('inert', '');
-    overlay.style.display = "block";
-    trapFocus(navbar);
-}
+    
+    if (media.matches) {
+        currentTrapHandler = trapFocus(navbar);
+        navbar.removeAttribute('inert');
+        mainContent.setAttribute('inert', '');
+        menuButtons.setAttribute('inert', '');
+        footer.setAttribute('inert', '');
+        overlay.style.display = "block";
+    }
+};
 
 const closeSidebar = () => {
     navbar.classList.remove("show");
@@ -64,12 +55,17 @@ const closeSidebar = () => {
         mainContent.removeAttribute('inert');
         menuButtons.removeAttribute('inert');
         footer.removeAttribute('inert');
+        overlay.style.display = "none";
     }
-    overlay.style.display = "none";
     openButton.focus();
+    
+    if (currentTrapHandler) {
+        navbar.removeEventListener('keydown', currentTrapHandler);
+        navbar.removeAttribute('data-trap-bound');
+        currentTrapHandler = null;
+    }
 };
 
-const navLinks = document.querySelectorAll('#header-nav a');
 navLinks.forEach(link => {
     link.addEventListener('click', closeSidebar);
     link.removeAttribute('aria-current');
@@ -79,7 +75,26 @@ navLinks.forEach(link => {
     }
 });
 
+const updateNavbar = (e) => {
+    const isMobile = e.matches;
+    console.log("Screen changed. Mobile view:", isMobile)
+    if (isMobile) {
+            navbar.setAttribute('inert', '');
+        } else {
+            navbar.removeAttribute('inert');
+            navbar.classList.remove("show");
+            overlay.style.display = "none";
+            openButton.setAttribute('aria-expanded', 'false');
 
+            if (currentTrapHandler) {
+                navbar.removeEventListener('keydown', currentTrapHandler);
+                navbar.removeAttribute('data-trap-bound');
+                currentTrapHandler = null;
+            }
+    }
+};
+
+media.addEventListener('change', updateNavbar);
 updateNavbar(media);
 
 // Darkmode

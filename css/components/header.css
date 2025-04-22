@@ -46,7 +46,7 @@ img.rr-logo {
     border-bottom: 2px solid transparent;
     transition: background-color 150ms ease;
 
-    &:hover {
+    &:hover, &:focus {
         border-bottom: 2px solid var(--color-contrast);
     }
 }
@@ -186,7 +186,7 @@ svg {
         width: 100%;
         transition: background-color 150ms ease;
 
-        &:hover {
+        &:hover, &:focus {
             border-bottom: none;
             background-color: var(--color-contrast);
             color: var(--color-bg-light);
