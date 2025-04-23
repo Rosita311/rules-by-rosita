@@ -58,6 +58,13 @@
 }
 
 /* Single post hero styles */
+.single-post-hero {
+    background-color: var(--color-background);
+    padding:0;
+    margin: 0 auto;
+    max-width: 80rem;
+    width: 100%;
+}
 
 /* Media Queries */
 
