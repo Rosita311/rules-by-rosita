@@ -78,6 +78,7 @@ html.no-js {
         &:hover, &:focus {
             border-bottom: 2px solid var(--color-contrast);
             background-color: var(--color-background);
+            color: var(--color-text);
         }
     }
     
