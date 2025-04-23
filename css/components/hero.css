@@ -69,7 +69,7 @@
 .hero-image img {
     width: 100%;
     aspect-ratio: 16/9;
-    max-height: 40rem;
+    max-height: 35rem;
     object-fit: cover;
 }
 
