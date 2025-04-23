@@ -16,6 +16,8 @@
     gap: 4rem;
 }
 
+
+
 .single-post-content {
     display: grid;
     grid-template-columns: 3fr 1fr;
@@ -23,7 +25,7 @@
     grid-template-rows: auto;
     background-color: var(--color-background);
     gap: 4rem;
-    margin: -15rem auto 0 auto;
+    margin: -10rem auto 0 auto;
     padding: 2rem;
     width: 70rem;
     z-index: 1;
