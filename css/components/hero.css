@@ -95,6 +95,11 @@
     .introduction {
         flex-wrap: wrap;
     }
+
+    .hero-image img {
+        min-height: 20rem;
+    }
+    
 }
 
 @media screen and (max-width: 768px) {
@@ -105,8 +110,6 @@
     }
 
     .hero-image img {
-        aspect-ratio: 16 / 9;
-        width: 100%;
         height: auto;
         min-height: 15rem;
         object-fit: cover;

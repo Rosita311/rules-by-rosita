@@ -12,12 +12,12 @@
 .container-main {
     display: flex;
     flex-direction: column;
-    padding: 5rem 2rem;
+    padding: 0rem clamp(0.5rem, 5vw, 2rem);
     gap: 4rem;
 }
 
 /* Media queries */
-
+/*  
 @media screen and (max-width: 1024px) {
     .header-container,
     .container-main,
@@ -47,3 +47,11 @@
         gap: 2rem;
     }
 }
+
+.hero-image img {
+        height: auto;
+        min-height: 15rem;
+        object-fit: cover;
+        z-index: 0;
+    }
+*/
