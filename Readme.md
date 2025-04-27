@@ -120,9 +120,53 @@ De kaartjes zijn af. Er zijn nog een paar kleine dingen die ik moet checken, daa
 
 Ook heb ik de fout in het menu op kunnen lossen. 
 
+## Update over de laatste aanpassingen op 27 April 2025
+
+### Responsieve ontwerpverbeteringen
+
+- **Flexibele en responsieve lay-out**: 
+  - De layout van de single blogpostpagina (`.single-post-content`) is **verbeterd voor verschillende schermgroottes**. De containers hebben nu **dynamische marges** en **padding** via de `clamp()` functie, wat zorgt voor een **fluidere ervaring** op zowel grotere als kleinere schermen.
+  - Het gebruik van `grid` en `flexbox` zorgt ervoor dat de **sidebar en content** netjes uitgelijnd blijven, met een mooie overgang op kleinere schermen (bijvoorbeeld wanneer de **sidebar** onder de **content** schuift op mobiele schermen).
+
+- **Fonts**:
+  - Alle **koppen (h1, h2, h3, h4, h5, h6)** gebruiken nu de `clamp()` functie voor **fluid typography**. Dit zorgt ervoor dat de fonts dynamisch schalen afhankelijk van de schermgrootte, met een minimum, voorkeur en maximum grootte.
+  - De **paragrafen (`p`)** blijven **vaste 1rem** om leesbaarheid te behouden, maar koppen zullen flexibel schalen voor een betere gebruikerservaring op verschillende schermgroottes.
+
+- **Spacing en padding**:
+  - **Padding en margin** zijn dynamisch aangepast voor verschillende schermgroottes met behulp van `clamp()`, zodat er altijd voldoende ruimte is rondom de inhoud, zonder dat het te veel wordt op kleinere schermen.
+  - Specifieke aanpassingen zijn gemaakt voor schermen kleiner dan 768px om ervoor te zorgen dat de layout **niet te veel ruimte inneemt**.
+
+### Tabler Icons Integratie
+
+- **Tabler Icons toegevoegd**:
+  - **Tabler Icons** zijn toegevoegd via **directe SVG's in de HTML**. Dit maakt het eenvoudig om **vector iconen** te gebruiken voor de verschillende metadata (zoals datum, reacties, categorieën, tags).
+  - **Icons in de metadata**:
+    - **Datum**: Gebruik van een **calendar** icoon voor de datum.
+    - **Reacties**: Icoon voor **commentaar** om het aantal reacties aan te geven.
+    - **Leestijd**: Icoon voor **een klok** om de verwachte leestijd weer te geven.
+    - **Categorieën en Tags**: **Label** icoon voor categorieën en **tag** icoon voor tags, zodat de gebruiker snel kan zien bij welke onderwerpen de post hoort.
+
+### Verbeteringen aan het gebruik van **CSS** en **media queries**:
+
+- **Gebruik van `clamp()` voor dynamische spacing**: De **gap** tussen de content en de sidebar, evenals de padding, worden nu gecontroleerd met `clamp()` om te zorgen voor een responsieve ervaring op verschillende schermformaten.
+- **Media queries** zijn toegevoegd om de layout verder te optimaliseren voor schermen kleiner dan 1250px, 1024px en 768px, waarbij de content en sidebar flexibel reageren op de afmetingen van het scherm.
+
+### Afgeronde secties
+
+- **Header**: De **header** is volledig af en biedt een gestroomlijnde navigatie en visuele stijl voor zowel desktop- als mobiele weergaven.
+- **Cards**: De **cards** voor de blogoverzichten zijn volledig ontworpen en responsief, met de juiste spacing en styling voor verschillende schermgroottes.
+  - Deze onderdelen moeten echter nog verder worden aangepast voor **WordPress-integratie**.
+
+---
+
+### Wat nog te doen?
+
+- **Homepage en Single Pagina**: De homepage en de single pagina moeten nog verder worden afgemaakt. Er is werk nodig om de pagina's nog verder te optimaliseren en het ontwerp af te ronden.
+- **Footer**: De footer moet ook nog verder worden ontwikkeld en geïntegreerd in de lay-out.
+- Verdere verfijning van de mobiele weergave, met extra focus op content- en zijbalkafstanden bij verschillende apparaatformaten.
+- Verbeteren van de toegankelijkheid van de site, zoals het verbeteren van de contrasten en het toevoegen van meer **aria-labels** en **rolattributen** voor een betere gebruikservaring op schermlezers.
+
+---
+
 ## Nog op te lossen
-* inert in het menu werkt nog niet helemaal goed. ✅
-* hover op de knop in licht thema kan worden verbeterd.
-* schermlezer volgorde van de excerpt checken. 
 * logo voor donker scherm
-* open menu knop op mobiel checken
