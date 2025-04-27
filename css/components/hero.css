@@ -96,3 +96,21 @@
         flex-wrap: wrap;
     }
 }
+
+@media screen and (max-width: 768px) {
+    .single-post-hero {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+
+    .hero-image img {
+        aspect-ratio: 16 / 9;
+        width: 100%;
+        height: auto;
+        min-height: 15rem;
+        object-fit: cover;
+        z-index: 0;
+    }
+    
+}

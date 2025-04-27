@@ -1,0 +1,62 @@
+/* Single Post Styles */
+.single-post-content {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-areas: "content sidebar";
+    gap: clamp(2rem, 5vw, 4rem); /* Gap schaalt mee! */
+    background-color: var(--color-background);
+    margin: clamp(-10rem, -10vw, -6rem) auto 0 auto; /* Ook fluid margin-top */
+    padding: clamp(1rem, 5vw, 2rem);
+    width: min(90%, 70rem); /* Fluid max-width */
+    z-index: 1;
+}
+
+.post-content-wrapper {
+    grid-area: content;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    display: flex;
+    flex-direction: column;
+    padding: 0 2rem;
+    gap: clamp(2rem, 5vw, 5rem);
+    border-left: 2px solid var(--color-accent);
+}
+
+
+/* Media queries */
+
+@media screen and (max-width: 1250px) {
+    .single-post-content {
+        max-width: 90%;
+        gap: 3rem;
+        padding: 2rem;
+        margin-top: -8rem;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+
+    .single-post-content {
+        grid-template-columns: 2fr 1fr;
+        
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .single-post-content {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "content"
+            "sidebar";
+    }
+
+    .sidebar {
+        padding-top: 3rem;
+        padding-left: 0;
+        padding-right: 0;
+        border-top: 2px solid var(--color-accent);
+        border-left: none;
+    }
+}

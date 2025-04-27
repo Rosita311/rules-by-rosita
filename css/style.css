@@ -20,3 +20,6 @@ Version: 1.0
 @import "components/footer.css";
 @import "components/hero.css";
 @import "components/card.css";
+
+/* Pages */
+@import "pages/single-post.css";
