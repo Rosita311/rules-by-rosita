@@ -1,18 +1,41 @@
 /* Single Post Styles */
+.container-main.single-post  {
+    padding: 0 clamp(0.5rem, 5vw, 2rem) 5rem clamp(0.5rem, 5vw, 2rem); 
+}
+
 .single-post-content {
     display: grid;
     grid-template-columns: 3fr 1fr;
     grid-template-areas: "content sidebar";
-    gap: clamp(2rem, 5vw, 4rem); /* Gap schaalt mee! */
+    gap: clamp(2rem, 5vw, 4rem); 
     background-color: var(--color-background);
     margin: clamp(-5rem, -15vw, -3rem) auto 0 auto; 
     padding: clamp(0.5rem, 5vw, 2rem);
-    width: min(90%, 70rem); /* Fluid max-width */
+    width: min(90%, 70rem); 
     z-index: 1;
 }
 
 .post-content-wrapper {
     grid-area: content;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.post-meta {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    list-style-type: none;
+    margin: 1rem 0;
+    background-color: var(--color-background);
+    flex-wrap: wrap;
+}
+
+.post-meta li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
 .sidebar {
@@ -20,9 +43,29 @@
     display: flex;
     flex-direction: column;
     padding: 0 clamp(1rem, 5vw, 2rem);
-    gap: clamp(2rem, 5vw, 5rem);
+    gap: 2rem;
     border-left: 2px solid var(--color-accent);
 }
+
+.sidebar-widget {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.post-comments {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.comment-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 0;
+}
+
 
 
 /* Media queries */
@@ -35,14 +78,22 @@
 }
 
 @media screen and (max-width: 1024px) {
+    .container-main.single-post  {
+        padding-left: 0;
+        padding-right: 0;
+    }
 
     .single-post-content {
-        grid-template-columns: 2fr 1fr;
-        
+        grid-template-columns: minmax(0, 2.5fr) minmax(120px, 1fr);
+    }
+
+    .related-posts {
+        padding: 0 clamp(0.5rem, 5vw, 2rem);
     }
 }
 
 @media screen and (max-width: 768px) {
+   
     .single-post-content {
         grid-template-columns: 1fr;
         grid-template-areas: 

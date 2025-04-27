@@ -12,24 +12,13 @@
 .container-main {
     display: flex;
     flex-direction: column;
-    padding: 0rem clamp(0.5rem, 5vw, 2rem);
+    padding: 5rem clamp(0.5rem, 5vw, 2rem);
     gap: 4rem;
 }
 
 /* Media queries */
 
-@media screen and (max-width: 768px) {
-    .header-container,
-    .footer-container {
-        padding-left: 1rem;
-        padding-right: 1rem;
-    } 
 
-    .container-main {
-        padding: 0;
-        gap: 2rem;
-    }
-}
 /*
 @media screen and (max-width: 1024px) {
     .header-container,
