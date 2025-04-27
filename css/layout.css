@@ -4,7 +4,7 @@
 .container-main,
 .footer-container {
     max-width: 80rem;
-    padding: 0rem clamp(0.5rem, 5vw, 2rem);
+    padding: 0 clamp(0.5rem, 5vw, 2rem);
     margin: 0 auto;
 }
 

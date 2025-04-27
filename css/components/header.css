@@ -209,6 +209,8 @@ svg {
     }
 }
 
+/* Media Queries */
+
 @media screen and (max-width: 768px) {
     .header-container img.rr-logo {
         max-width: 5rem;
