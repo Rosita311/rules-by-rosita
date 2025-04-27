@@ -107,9 +107,7 @@
     }
 
     .sidebar {
-        padding-top: 2rem;
-        padding-left: 0;
-        padding-right: 0;
+        padding: 2rem 0;
         border-top: 2px solid var(--color-accent);
         border-bottom: 2px solid var(--color-accent);
         border-left: none;
