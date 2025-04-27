@@ -5,8 +5,8 @@
     grid-template-areas: "content sidebar";
     gap: clamp(2rem, 5vw, 4rem); /* Gap schaalt mee! */
     background-color: var(--color-background);
-    margin: clamp(-3rem, -25vw, -9rem) auto 0 auto; /* Ook fluid margin-top */
-    padding: clamp(1rem, 5vw, 2rem);
+    margin: clamp(-5rem, -10vw, -3rem) auto 0 auto; 
+    padding: clamp(0.5rem, 5vw, 2rem);
     width: min(90%, 70rem); /* Fluid max-width */
     z-index: 1;
 }
@@ -48,10 +48,15 @@
         grid-template-areas: 
             "content"
             "sidebar";
+
+            padding-left: 1rem;
+            padding-right: 1rem;
+            width: 100%;
+            margin-top: clamp(-3rem, -5vw, -2rem);
     }
 
     .sidebar {
-        padding-top: 3rem;
+        padding-top: 2rem;
         padding-left: 0;
         padding-right: 0;
         border-top: 2px solid var(--color-accent);
