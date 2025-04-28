@@ -35,7 +35,12 @@
 .post-meta li {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 0.5rem;
+}
+
+.post-meta li p {
+    margin: 0;
 }
 
 .sidebar {

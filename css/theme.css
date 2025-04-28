@@ -71,7 +71,7 @@ html {
     font-size: 1rem; /* Blijft altijd 1rem */
     font-weight: var(--font-weight-regular);
     color: var(--color-text);
-    line-height: var(--line-height-normal);
+    line-height: 1.5em;
     margin-bottom: 1rem;
 }
   

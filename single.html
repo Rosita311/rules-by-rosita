@@ -60,44 +60,45 @@
                 
                 <div class="post-content-wrapper">
                     <h1>Blogpost Title</h1>
-                    <ul class="post-meta">
-                        <li class="post-meta-item">
-                            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-calendar-due">
-                                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                                <path d="M4 5m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z" />
-                                <path d="M16 3v4" /><path d="M8 3v4" /><path d="M4 11h16" />
-                                <path d="M12 16m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /></svg>
-                            <span>25-03-2025</span>
-                        </li>
-                    
-                        <li class="post-meta-item">
-                            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-messages"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M21 14l-3 -3h-7a1 1 0 0 1 -1 -1v-6a1 1 0 0 1 1 -1h9a1 1 0 0 1 1 1v10" /><path d="M14 15v2a1 1 0 0 1 -1 1h-7l-3 3v-10a1 1 0 0 1 1 -1h2" /></svg>
-                            <span>Reacties: 5</span>
-                        </li>
-                    
-                        <li class="post-meta-item">
-                            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-clock-hour-4"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" /><path d="M12 12l3 2" /><path d="M12 7v5" /></svg>
-                            <span>Leestijd: 5 minuten</span>
-                        </li>
-                    
-                        <li class="post-meta-item">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-folder" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                                <path d="M5 19a2 2 0 0 1 -2 -2v-10a2 2 0 0 1 2 -2h5l2 2h7a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-14" />
-                            </svg>
-                            <span>Categorie: Tips and Tricks</span>
-                        </li>
-                    
-                        <li class="post-meta-item">
-                            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-tags">
-                                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                                <path d="M3 8v4.172a2 2 0 0 0 .586 1.414l5.71 5.71a2.41 2.41 0 0 0 3.408 0l3.592 -3.592a2.41 2.41 0 0 0 0 -3.408l-5.71 -5.71a2 2 0 0 0 -1.414 -.586h-4.172a2 2 0 0 0 -2 2z" />
-                                <path d="M18 19l1.592 -1.592a4.82 4.82 0 0 0 0 -6.816l-4.592 -4.592" />
-                                <path d="M7 10h-.01" /></svg>
-                            <span>Tags: <a href="#">HTML</a>, <a href="#">CSS</a>, <a href="#">JavaScript</a></span>
-                        </li>
-                    </ul>
-                    
+                    <nav aria-label="Post metadata">
+                        <ul class="post-meta">
+                            <li class="post-meta-item">
+                                <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-calendar-due">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                    <path d="M4 5m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z" />
+                                    <path d="M16 3v4" /><path d="M8 3v4" /><path d="M4 11h16" />
+                                    <path d="M12 16m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /></svg>
+                                    <time datetime="2025-03-25">25-03-2025</time>
+                            </li>
+                        
+                            <li class="post-meta-item" aria-label="Aantal reacties: 5">
+                                <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-messages"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M21 14l-3 -3h-7a1 1 0 0 1 -1 -1v-6a1 1 0 0 1 1 -1h9a1 1 0 0 1 1 1v10" /><path d="M14 15v2a1 1 0 0 1 -1 1h-7l-3 3v-10a1 1 0 0 1 1 -1h2" /></svg>
+                                <p aria-label="5 reacties">5</p>
+                            </li>
+                        
+                            <li class="post-meta-item" aria-label="Leestijd: 5 minuten">
+                                <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-clock-hour-4"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" /><path d="M12 12l3 2" /><path d="M12 7v5" /></svg>
+                                <p>5 minuten</p>
+                            </li>
+                        
+                            <li class="post-meta-item" aria-label="Categorie: Tips and Tricks">
+                                <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-folder" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                    <path d="M5 19a2 2 0 0 1 -2 -2v-10a2 2 0 0 1 2 -2h5l2 2h7a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-14" />
+                                </svg>
+                                <p>Tips and Tricks</p>
+                            </li>
+                        
+                            <li class="post-meta-item" aria-label="Tags: HTML, CSS, JavaScript">
+                                <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-tags">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                    <path d="M3 8v4.172a2 2 0 0 0 .586 1.414l5.71 5.71a2.41 2.41 0 0 0 3.408 0l3.592 -3.592a2.41 2.41 0 0 0 0 -3.408l-5.71 -5.71a2 2 0 0 0 -1.414 -.586h-4.172a2 2 0 0 0 -2 2z" />
+                                    <path d="M18 19l1.592 -1.592a4.82 4.82 0 0 0 0 -6.816l-4.592 -4.592" />
+                                    <path d="M7 10h-.01" /></svg>
+                                <p>Tags: <a href="#">HTML</a>, <a href="#">CSS</a>, <a href="#">JavaScript</a></p>
+                            </li>
+                        </ul>
+                    </nav>
                     <div class="post-content">
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae, autem sed. In atque ducimus laudantium sint magni necessitatibus molestiae, natus minima iste nobis voluptatem, dolore perspiciatis fugiat ullam nesciunt illum amet nostrum harum corrupti aperiam, deserunt culpa porro pariatur. Optio quas temporibus molestias dignissimos corrupti. Deleniti cumque repellendus, nam asperiores nisi quae, veritatis nobis aliquam reiciendis ipsa officia. Aliquid veniam excepturi necessitatibus quod aut maiores illo blanditiis error quos eligendi ipsa omnis id obcaecati nemo voluptates odit pariatur recusandae hic, eius sapiente at ad vitae sed. Saepe aut quidem consequuntur dicta esse vitae ipsam, repellendus tempora iure quaerat corporis cum corrupti animi sed, fugiat iste ab doloribus accusamus illo unde! Adipisci sapiente voluptates pariatur odit reiciendis, aut cupiditate minima nulla necessitatibus repellendus velit quibusdam cum ipsum provident! Nobis itaque accusantium labore harum sunt consectetur, dicta laboriosam fugiat eligendi tempora modi facere ipsum doloremque ducimus distinctio officia commodi nam nihil quas optio obcaecati ab! Facere ut explicabo placeat nisi rerum quae nulla saepe quis nam fugiat assumenda repudiandae omnis architecto, optio mollitia quos quo et debitis numquam delectus voluptate alias odit libero ex. Exercitationem necessitatibus accusamus fugiat iusto deleniti inventore cum consequuntur, distinctio optio in molestias earum reprehenderit libero quae. Totam.</p>   
                     </div>
