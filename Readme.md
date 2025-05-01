@@ -147,7 +147,7 @@ Toegankelijkheid staat centraal in dit project. Kenmerken:
 - **Tabler Icons** via CDN (inline SVG voor metadata)  
 - **Flexbox** & **CSS Grid** (layout)  
 - **clamp()** & **min()** (fluid spacing & font scaling)  
-- **Axe** & **Lighthouse** (accessibility audits)  
+- **WAVE** & **Lighthouse** (accessibility audits)  
 - **GitHub Pages** voor statische mock-up demo
 
 ---
