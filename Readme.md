@@ -83,50 +83,75 @@ Toegankelijkheid staat centraal in dit project. Kenmerken:
 
 ## Huidige status
 
-### Wat is al af?
+### Voltooide componenten
 
-- **Header**: Volledig functioneel, inclusief dark mode.
-- **Blogcards**: Klikbare cards en toegankelijk
-- **Footer**: Deels af, werkt goed op verschillende schermgroottes.
+- **Header**  
+  - Volledig functioneel  
+  - Dark mode toggle werkt en wordt onthouden  
+- **Blogcards**  
+  - Klikbare cards
+  - Basis toegankelijkheid getest  
+- **Footer**  
+  - Structuur staat en is responsive  
+  - Widget-area’s worden geladen
 
-### Wat moet nog gebeuren?
+### Te optimaliseren
 
-- **Homepage en single pagina**: Moeten verder worden geoptimaliseerd.
-- **Footer**: Verdere uitwerking.
-- **Mobiele optimalisatie**: Afstanden en layout aanpassen.
-- **Toegankelijkheid**: Meer aria-labels, rol-attributen en contrastoptimalisatie.
-- **Dark mode logo**: Toevoegen van een geschikt logo voor donkere achtergrond.
-- **Toekomstige verbeteringen aan de visuele stijl**: o.a. blogcards, focusstijl en navigatie.
-- **Responsief** Het thema moet goed te gebruiken zijn op desktop, tablet en mobiel.
+- **Homepage & single.php**  
+  - Layout finetunen  
+  - Dynamische inhoud via The Loop valideren  
+- **Footer**  
+  - Extra navigatie-elementen en widget-areas uitbreiden  
+- **Mobiele weergave**  
+  - Marges, padding en grid/gutters aanpassen  
+- **Toegankelijkheid**  
+  - Extra `aria-labels` en `role`-attributen toevoegen  
+  - Contrast van UI-elementen verder optimaliseren  
+- **Dark mode logo**  
+  - Vervang door contrast-optimale SVG voor donkere achtergrond  
+- **Visuele stijl**  
+  - Focus-staten voor knoppen en links uitbreiden  
+  - Navigatie-animaties en card hover-effects verfijnen  
+- **Cross-device**  
+  - Testen en aanpassen op desktop, tablet en mobiel
 
 ---
 
 ## Bekende problemen
 
-- **Logo geschikt maken voor licht en donker thema**: Er moet nog een versie van het logo worden toegevoegd die in beide modi goed zichtbaar is.
-- **Bericht-informatie en navigatie**: Deze werken nog niet optimaal met schermlezers.
+- **Logo licht/donker**  
+  - Huidige SVG mist voldoende contrast in `.darkmode`  
+- **Post-meta navigatie**  
+  - Niet alle schermlezers lezen de metadata correct uit  
+  - ARIA-attributen en semantische tags moeten worden verbeterd
 
 ---
 
 ## Ideeën voor de toekomst
 
-- **Omzetten in een blocktheme** met onderandere theme.json en React.
-- **Custom posttype** eventueel voor de boeken die heb gelezen of nog wil lezen
+- **Block theme**  
+  - Migratie naar `theme.json` en React-powered Gutenberg-blocks  
+- **Custom Post Type “Books”**  
+  - Met eigen archive- en single-template  
 
 ---
 
 ## Gebruikte tools & technologieën
 
-- **WordPress**
-- **HTML, CSS, JavaScript, PHP**
-- **Git & GitHub**
-- **VS Code + GitHub Copilot**
-- **LocalWP** voor lokale ontwikkeling
-- **Google Fonts** 
-- **Tabler Icons** voor iconen
-- **Flexbox & Grid** voor layout
+- **WordPress** (Themekoken vanaf scratch)  
+- **HTML5**, **CSS3**, **JavaScript (ES6+)**, **PHP 8+**  
+- **Git & GitHub** (feature branches, rebases, pull requests)  
+- **VS Code** + **GitHub Copilot** (snelle commit messages)  
+- **LocalWP** voor lokale development  
+- **Google Fonts** (`Nunito`, `Zilla Slab`)  
+- **Tabler Icons** via CDN (inline SVG voor metadata)  
+- **Flexbox** & **CSS Grid** (layout)  
+- **clamp()** & **min()** (fluid spacing & font scaling)  
+- **Axe** & **Lighthouse** (accessibility audits)  
+- **GitHub Pages** voor statische mock-up demo
 
 ---
+
 
 ## Licentie
 
