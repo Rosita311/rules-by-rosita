@@ -28,6 +28,7 @@
     gap: 1rem;
     list-style-type: none;
     margin: 1rem 0;
+    padding: 0;
     background-color: var(--color-background);
     flex-wrap: wrap;
 }

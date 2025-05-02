@@ -14,6 +14,8 @@
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     list-style-type: none;
     gap: 2rem;
+    margin: 0 auto;
+    padding: 0;
 }
 
 .card {
