@@ -140,11 +140,15 @@ Een minimalistische en heldere stijl, afgestemd op leesbaarheid en eenvoud.
 - **A11Y Project** – Richtlijnen en tips voor toegankelijkheid  
   [https://www.a11yproject.com](https://www.a11yproject.com)
 
+- **Accessible Card Patterns** – Uitleg over toegankelijke kaarten door Heydon Pickering  
+  [https://inclusive-components.design/cards/](https://inclusive-components.design/cards/)
+
 - **Tabler Icons** – Voor lichtgewicht SVG-iconen  
   [https://tabler.io/icons](https://tabler.io/icons)
 
 - **Google Fonts** – Voor typografie (`Nunito` & `Zilla Slab`)  
   [https://fonts.google.com](https://fonts.google.com)
+
 
 ---
 
