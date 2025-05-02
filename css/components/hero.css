@@ -48,14 +48,18 @@
 }
 
 /* Page hero styles */
-.page-hero {
+ .page-hero { 
     background-color: var(--color-page-hero-bg);
     padding: 7rem 0;
     margin: 0 auto;
     max-width: 80rem;
     width: 100%;
-    border-radius: 0.5rem;
-}
+} 
+.page-hero {
+    background-color: var(--color-background);
+    background-image: radial-gradient(var(--color-accent)2px, transparent 2px);
+    background-size: 20px 20px;
+  }
 
 /* Single post hero styles */
 .single-post-hero {

@@ -13,9 +13,9 @@ img.rr-logo {
 }
 
 .menu-items {
-    display: flex; /* Zet de navigatie en knoppen naast elkaar */
+    display: flex; 
     justify-content: flex-end;
-    align-items: center; /* Zorgt dat alles netjes gecentreerd staat */
+    align-items: center; 
 
 }
 
@@ -28,6 +28,7 @@ img.rr-logo {
 #header-nav ul {
     list-style: none;
     display: flex;
+    padding: 0;
 } 
 
 #header-nav li {
@@ -84,7 +85,7 @@ img.rr-logo {
     background: none;
     margin-left: auto;
     padding: 0.5em;
-    margin-right: 0.75rem;
+    margin-right: 0.25rem;
 
     &:focus {
         border-radius: 50%;
@@ -155,6 +156,11 @@ svg {
         max-width: 7rem;
     }
 
+    .menu-buttons {
+        display: flex; 
+        gap: 0.25rem;
+    }
+
     .header-container #header-nav {
         position: fixed;
         top: 0;
@@ -214,5 +220,13 @@ svg {
 @media screen and (max-width: 768px) {
     .header-container img.rr-logo {
         max-width: 5rem;
+    }
+
+    #open-sidebar-button {
+        margin-right: 0;
+    }
+
+    .menu-buttons {
+        gap: 0;
     }
 }

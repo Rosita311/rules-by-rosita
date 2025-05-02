@@ -1,0 +1,9 @@
+
+/* Experimenting with CSS variables and custom properties for a more dynamic design. */
+
+/* pattern on page hero's */
+.page-hero {
+    background-color: var(--color-background);
+    background-image: radial-gradient(var(--color-accent)2px, transparent 2px);
+    background-size: 20px 20px;
+  }

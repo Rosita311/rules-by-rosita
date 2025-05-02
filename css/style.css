@@ -23,3 +23,6 @@ Version: 1.0
 
 /* Pages */
 @import "pages/single-post.css";
+
+/* Experimental styles*/
+@import "experiment.css";
