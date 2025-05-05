@@ -1,5 +1,6 @@
 /* General Layout styles */
 .header-container,
+.hero-section,
 .container-main,
 .footer-container {
     max-width: 80rem;
