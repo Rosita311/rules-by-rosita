@@ -156,6 +156,10 @@ svg {
         max-width: 7rem;
     }
 
+    body.menu-open {
+        overflow: hidden;
+    }
+
     .menu-buttons {
         display: flex; 
         gap: 0.25rem;
@@ -217,8 +221,6 @@ svg {
         margin: 2em;
     }
 }
-
-/* Media Queries */
 
 @media screen and (max-width: 768px) {
     .header-container img.rr-logo {

@@ -39,6 +39,7 @@ const trapFocus = (container) => {
 
   const openSidebar = () => {
     navbar.classList.add("show");
+    document.body.classList.add('menu-open');
     openButton.setAttribute('aria-expanded', 'true');
     
     if (media.matches) {
@@ -60,6 +61,7 @@ const trapFocus = (container) => {
 
 const closeSidebar = () => {
     navbar.classList.remove("show");
+    document.body.classList.remove('menu-open');
     openButton.setAttribute('aria-expanded', 'false');
     if (media.matches) {
         navbar.setAttribute('inert', '');
