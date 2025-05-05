@@ -1,20 +1,20 @@
 /* Hero component styles */
 
 /* Homepage hero & introduction styles */
-.hero-content, .card--horizontal, .introduction {
-    display: flex;
-    justify-content: start;
-    gap: 4rem;
-    max-width: 80rem;
+.hero-section {
     margin: 0 auto;
+    width: 100%;
+    padding: 2rem 0;
 }
 
-.hero-content .card-image,
-.introduction .card-image,
-.hero-content .card-content-wrapper,
-.introduction .card-content-wrapper {
-  flex: 1 1 50%;
-}
+.hero-content {
+    position: relative;
+    max-width: 100%;
+    margin: 0 auto;
+    background-color: var(--color-background);
+    background-image: radial-gradient(var(--color-accent)2px, transparent 2px); 
+    background-size: 20px 20px;
+  }
 
 .hero-listing {
     list-style-type: none;
@@ -27,32 +27,64 @@
     display: flex;
     flex-direction: row;
     position: relative;
-    transition: box-shadow 0.3s ease-in-out;
+    
 }
 
-.hero-listing .card-content-wrapper {
-    background-color: var(--color-accent);
+.hero-content-wrapper {
+    position: relative;
+  }
+
+.hero-content-wrapper img {
+    max-height: 600px;
+    width: 100%;
+    object-fit: cover;
+    aspect-ratio: 16 / 9;
+    height: 40vh;
+    margin-top: -2rem;     
+    margin-bottom: -2rem;  
+    position: relative
 }
+      
 
 .introduction .card-content-wrapper {
     background-color: var(--color-footer);
 }
 
-.hero-listing .card-content, .introduction .card-content {
+.hero-card-content{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    padding: 1rem;
-    margin-top: 0;
+    position: absolute;
+    top: 10%;
+    right: -30rem;
+    padding: 1.5rem;
+    width: 60ch;
+    max-width: 100%;
     background-color: var(--color-background);
-}
+    border: 1px solid var(--color-accent);
+    transition: box-shadow 0.3s ease-in-out;
+  }
+  
+  
+  @media (max-width: 768px) {
+    .hero-card-content {
+      bottom: 1rem;
+      left: 1rem;
+      padding: 1rem;
+    }
+  
+    .hero-card-content h1 {
+      font-size: 1.5rem;
+    }
+
+  }
+  
 
 /* Page hero styles */
  .page-hero { 
     background-color: var(--color-page-hero-bg);
     padding: 7rem 0;
     margin: 0 auto;
-    max-width: 80rem;
+    max-width: 80rem; 
     width: 100%;
 } 
 
