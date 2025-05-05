@@ -171,6 +171,9 @@ svg {
         border-bottom: 0;
         border-left: 1px solid var(--color-accent);
         transition: right 300ms ease-out;
+        overflow-y: auto;
+        overscroll-behavior: contain;
+        -webkit-overflow-scrolling: touch;
     }
 
     .header-container #header-nav.show {
