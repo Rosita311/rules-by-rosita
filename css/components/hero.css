@@ -48,8 +48,8 @@
     justify-content: center;
     padding: 1.5rem;
     top: 15%;
-    left: clamp(40%, 50vw, 70%);
-    width: clamp(40%, 40vw, 100%); 
+    left: clamp(40%, 50vw, 80%);
+    width: clamp(40%, 40vw, 90%); 
     max-width: 100%; 
     background-color: var(--color-background);
     border: 1px solid var(--color-accent);
@@ -61,18 +61,16 @@
     .hero-card-content {
         display: flex;
         position: absolute;
-        top: 25%;
-        flex-direction: column;
-        justify-content: start;
-        padding: 1rem;
-        margin-top: -3rem;
-        background-color: var(--color-background);
+        top: 10%;
     }	
+
+    .hero-card-content h1 {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+    }
     
 }
-
-  
-  
+ 
   @media (max-width: 768px) {
     .hero-card-content {
       bottom: 1rem;
