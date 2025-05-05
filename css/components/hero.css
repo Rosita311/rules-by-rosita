@@ -9,25 +9,20 @@
 
 .hero-content {
     position: relative;
-    max-width: 100%;
-    margin: 0 auto;
+    width: 100%;
     background-color: var(--color-background);
-    background-image: radial-gradient(var(--color-accent)2px, transparent 2px); 
+    background-image: radial-gradient(var(--color-accent) 2px, transparent 2px); 
     background-size: 20px 20px;
-  }
-
-.hero-listing {
-    list-style-type: none;
-    padding: 0;
-    margin: 0 auto;
-    max-width: 80rem;
 }
 
-.hero-listing .card {
+.hero-listing {
     display: flex;
     flex-direction: row;
     position: relative;
-    
+    list-style-type: none;
+    margin: 0 auto;
+    max-width: 80rem;
+    padding: 0 2rem;
 }
 
 .hero-content-wrapper {
@@ -36,9 +31,9 @@
 
 .hero-content-wrapper img {
     max-height: 600px;
-    width: 100%;
+    width: clamp(50%, 60vw, 100%);
     object-fit: cover;
-    aspect-ratio: 16 / 9;
+    aspect-ratio: 3 / 2;
     height: 40vh;
     margin-top: -2rem;     
     margin-bottom: -2rem;  
@@ -46,23 +41,36 @@
 }
       
 
-.introduction .card-content-wrapper {
-    background-color: var(--color-footer);
-}
-
-.hero-card-content{
+.hero-card-content {
     display: flex;
-    flex-direction: column;
     position: absolute;
-    top: 10%;
-    right: -30rem;
+    flex-direction: column;
+    justify-content: center;
     padding: 1.5rem;
-    width: 60ch;
-    max-width: 100%;
+    top: 15%;
+    left: clamp(40%, 50vw, 70%);
+    width: clamp(40%, 40vw, 100%); 
+    max-width: 100%; 
     background-color: var(--color-background);
     border: 1px solid var(--color-accent);
     transition: box-shadow 0.3s ease-in-out;
-  }
+}
+
+@media screen and (max-width: 1024px) {
+
+    .hero-card-content {
+        display: flex;
+        position: absolute;
+        top: 25%;
+        flex-direction: column;
+        justify-content: start;
+        padding: 1rem;
+        margin-top: -3rem;
+        background-color: var(--color-background);
+    }	
+    
+}
+
   
   
   @media (max-width: 768px) {
