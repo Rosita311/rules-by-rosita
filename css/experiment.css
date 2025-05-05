@@ -7,3 +7,28 @@
     background-image: radial-gradient(var(--color-accent)2px, transparent 2px); 
     background-size: 20px 20px; 
   }
+
+  
+  .page-title {
+    opacity: 0;
+    transform: translateY(1rem);
+    animation: fadeInUp 0.6s ease-out forwards;
+    animation-delay: 0.2s;
+}
+
+/* De animatie zelf */
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Toegankelijkheidsvoorkeuren respecteren */
+@media (prefers-reduced-motion: reduce) {
+    .page-title {
+        animation: none;
+        opacity: 1;
+        transform: none;
+    }
+}

@@ -103,6 +103,19 @@ footer {
         list-style-type: none;
         width: 100%;
         gap: 1rem;
+        margin: 0;
+        padding: 0;
+    }
+
+      .footer-menu nav ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        list-style-type: none;
+        width: 100%;
+        gap: 1rem;
+        margin: 0;
+        padding: 0;
     }
 
     .footer-menu nav a {
