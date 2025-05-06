@@ -121,6 +121,7 @@ body:not(.user-is-tabbing) .card:focus-within {
     justify-content: start;
     padding: 1rem;
     margin-top: -3rem;
+    gap: 1rem;
     background-color: var(--color-background);
 }
 
@@ -129,7 +130,6 @@ body:not(.user-is-tabbing) .card:focus-within {
     font-family: var(--font-body);
     color: var(--color-text);
     margin-top: 0.5rem;
-    margin-bottom: 1rem;
 }
 
 /* Media Queries */
