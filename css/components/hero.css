@@ -161,6 +161,10 @@
     width: 100%;
 } 
 
+h1.page-title {
+    font-family: var(--font-extra);
+}
+
 /* Single post hero styles */
 .single-post-hero {
     background-color: var(--color-background);
