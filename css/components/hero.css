@@ -137,14 +137,6 @@
     border: 1px solid var(--color-contrast);
 }
 
-.introduction-card-content a {
-    font-family: var(--font-heading);
-    font-size: var(--font-size-xxxl);
-    line-height: var(--line-height-xs);
-    color: var(--color-text);
-    text-decoration: none;
-    outline: none;
-}
 
 /* Page hero styles */
 .page-hero { 

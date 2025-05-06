@@ -58,25 +58,29 @@ footer {
     width: 100%;
     background-color: transparent;
     flex-wrap: wrap;
+    justify-content: start;   
+    align-items: center;
+    gap: 1rem;  
+    list-style-type: none;
 }
 
 .footer-social-media li {
+    padding: 0.5em;
+    border-radius: 50%;
     display: flex;
-    justify-content: flex-start;
-    list-style: none;
-    padding: 1rem;
+    color: var(--color-text);
+    justify-content: center;   
+    align-items: center;
+    min-width: 2.5rem;
+    min-height: 2.5rem;
 
-    &:hover {
-        background-color: none;
-        color: var(--color-primary);
-        border: none;
-
-        &:focus {
-            border-radius: 0.5rem;
-            outline: 2px solid var(--color-primary);
-        }
+    &:focus {
+        border-radius: 50%;
+        outline: 2px solid var(--color-primary);
     }
 }
+
+
 
 .footer-info {
     padding: 0 0 1rem 0;
