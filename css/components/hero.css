@@ -317,7 +317,16 @@ h1.page-title {
         width: 100%;
     }
     
-    .hero-card-content, .introduction-card-content {
+    .hero-card-content {
+        justify-content: start;
+        padding: 1rem;
+        margin-top: -3rem;
+        margin-left: 0;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .introduction-card-content {
         justify-content: start;
         padding: 1rem;
         margin-top: 0;
