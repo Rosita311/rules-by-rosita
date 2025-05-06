@@ -4,7 +4,8 @@
 .hero-section {
     margin: 0 auto;
     width: 100%;
-    padding: 2rem 0;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
 }
 
 .hero-content {
@@ -85,17 +86,21 @@
     background-color: var(--color-background);
     background-image: radial-gradient(var(--color-accent) 2px, transparent 2px); 
     background-size: 20px 20px; 
-    padding: 7rem 2rem;
+    padding-top: 7rem;
+    padding-bottom: 7rem;
     margin: 0 auto;
-    max-width: 80rem; 
+    max-width: 100%; 
     width: 100%;
 } 
+
+
+
 
 
 /* Single post hero styles */
 .single-post-hero {
     background-color: var(--color-background);
-    padding:0;
+    padding: 0;
     margin: 0 auto;
     max-width: 80rem;
     width: 100%; 
@@ -113,7 +118,8 @@
 @media screen and (max-width: 1280px) {
     .hero-section.page-hero {
         margin: 0 auto;
-        padding: 5rem 0;
+        padding-top: 5rem;
+        padding-bottom: 5rem;
         width: 100%;
         border-radius: 0rem;
     }
@@ -121,9 +127,6 @@
 
 @media screen and (max-width: 1024px) {
 
-    .hero-section {
-        padding: 1.5rem 0;
-    }
 
     .hero-content {
         background-color: var(--color-background);
@@ -176,9 +179,7 @@
 
 @media screen and (max-width: 768px) {
     /* Hero and introduction */
-    .hero-section {
-        padding: 0;
-    }
+    
 
     .hero-content {
         background-size: 10px 10px;
