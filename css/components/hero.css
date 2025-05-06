@@ -74,11 +74,19 @@
     transition: box-shadow 0.3s ease-in-out;
 }
 
-.hero-card-content h1 a {
+.hero-card-content h1 {
+    margin-bottom: 0;
+}
+
+.hero-card-content a {
+    font-family: var(--font-heading);
+    font-size: var(--font-size-xxxl);
+    line-height: var(--line-height-xs);
     color: var(--color-text);
     text-decoration: none;
-    transition: color 0.3s ease-in-out;
+    outline: none;
 }
+
   
 
 /* Page hero styles */
