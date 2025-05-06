@@ -87,8 +87,6 @@
     outline: none;
 }
 
-  
-
 /* Page hero styles */
 .page-hero { 
     background-color: var(--color-background);
@@ -100,10 +98,6 @@
     max-width: 100%; 
     width: 100%;
 } 
-
-
-
-
 
 /* Single post hero styles */
 .single-post-hero {
