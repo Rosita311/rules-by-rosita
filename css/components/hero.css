@@ -40,14 +40,21 @@
 }
 
 .hero-image-wrapper img {
-    max-height: 600px;
-    width: 100%;
-    object-fit: cover;
+    
     aspect-ratio: 3 / 2;
-    height: 40vh;
+    width: 100%;
+    height: auto;
+    min-height: 15rem;
+    max-height: 35rem;
+    object-fit: cover;
     margin-top: -2rem;     
     margin-bottom: -2rem;  
-    position: relative;
+    z-index: 0;
+
+    width: 100%;
+    height: auto;
+    min-height: 15rem;
+    object-fit: cover;
     z-index: 0;
 }
       
@@ -111,11 +118,15 @@
 .hero-image img {
     width: 100%;
     aspect-ratio: 16/9;
+    height: auto;
+    min-height : 15rem;
     max-height: 35rem;
     object-fit: cover;
 }
 
 /* Media Queries */
+
+
 
 @media screen and (max-width: 1280px) {
     .hero-section.page-hero {
