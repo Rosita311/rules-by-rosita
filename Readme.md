@@ -51,7 +51,7 @@ Een minimalistische en heldere stijl, afgestemd op leesbaarheid en eenvoud.
 **Donker thema:**
 
 - Tekst: `rgba(255, 255, 255, 0.87)`
-- Primair: `#D96377`
+- Primair: `DD3F60`
 - Accent 1: `#E38CA6`
 - Accent 2: `#293A3D`
 - Footer: `#103C42`
