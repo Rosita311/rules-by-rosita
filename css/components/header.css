@@ -137,11 +137,7 @@ img.rr-logo {
     display: block;
 }
 
-svg {
-    width: 1.5rem;
-    height: 1.5rem;
-    stroke: var(--color-text);
-}
+
 
 /* Media Queries */
 

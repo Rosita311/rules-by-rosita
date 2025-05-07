@@ -117,6 +117,12 @@ h6 {
     line-height: 1.4em;
 }
 
+svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    stroke: var(--color-text);
+}
+
 /* Button styles */
 button {
     all: unset;

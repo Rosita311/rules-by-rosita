@@ -74,13 +74,39 @@ footer {
     min-width: 2.5rem;
     min-height: 2.5rem;
 
+    &:hover {
+        background-color: var(--color-contrast);
+        transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    }
+
     &:focus {
         border-radius: 50%;
         outline: 2px solid var(--color-primary);
     }
 }
 
+.footer-social-media li svg:hover {
+    stroke: var(--color-text);
+    transition: stroke 0.3s ease-in-out, color 0.3s ease-in-out;
+}
 
+.footer-social-media li {
+    display: inline-block;
+    padding: 0.5em;
+    cursor: pointer;
+  }
+  
+  .footer-social-media li:hover svg {
+    stroke: var(--color-bg-light); /* of een andere hoverkleur */
+    transition: stroke 0.3s ease-in-out;
+  }
+  
+  .footer-social-media li svg {
+    stroke: var(--color-text);
+    fill: transparent; /* zodat het hele svg-vlak reageert */
+    pointer-events: visiblePainted; /* extra: maakt hover betrouwbaarder */
+  }
+  
 
 .footer-info {
     padding: 0 0 1rem 0;

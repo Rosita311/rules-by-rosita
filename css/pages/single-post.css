@@ -23,7 +23,7 @@
 }
 .post-meta-wrapper {
     background-color: var(--color-background);
-    background-image: radial-gradient(var(--color-accent) 2px, transparent 2px); 
+    background-image: radial-gradient(var(--color-contrast) 2px, transparent 2px); 
     background-size: 18px 18px;
     padding: 2rem 0; 
     width: 100%;
