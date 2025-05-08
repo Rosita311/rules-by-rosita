@@ -155,9 +155,8 @@ Pull requests en suggesties zijn welkom, maar houd er rekening mee dat dit een p
 - Skiplink toegevoegd voor schermlezers en toetsenbordgebruikers
 - Toegankelijke focusstijl voor interactieve elementen in kaart gebracht
 - Secondary button in dark mode verbeterd (contrast)
-- Footer herwerkt, inclusief link naar privacyverklaring
-- Plumbob easter egg toegevoegd (toegankelijk, geanimeerd en getest met NVDA en Windows Verteller)
-- Tooltip alleen zichtbaar bij hover/focus, met `prefers-reduced-motion` ondersteuning
+- Footer berwerkt, inclusief link naar privacyverklaring
+- Een toegankelijke animatie is toegevoegd met ondersteuning voor `prefers-reduced-motion`.
 - GitHub Pages statische demo bijgewerkt
 
 ### Nog te doen
@@ -165,7 +164,7 @@ Pull requests en suggesties zijn welkom, maar houd er rekening mee dat dit een p
 - Submenu toevoegen aan hoofdmenu
 - WordPress PHP-integratie voltooien (o.a. loop, dynamic content)
 - Logo optimaliseren voor light en dark mode
-- Favicon ontwerpen (licht/donker)
+- Favicon aanpassen (licht/donker)
 - Consistente focusstijl afmaken (en testen op schaalbaarheid)
 - Instellingenmenu inbouwen
 - Footer verder uitwerken (bijv. copyright of extra links)
