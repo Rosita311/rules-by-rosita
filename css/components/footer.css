@@ -165,6 +165,16 @@ footer {
     }
 }
 
+.footer-info a {
+    font-family: var(--font-body);
+    color: var(--color-text);
+    text-decoration: underline;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
 @media screen and (max-width: 768px) {
     .footer-content {
         display: flex;

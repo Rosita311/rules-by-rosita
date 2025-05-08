@@ -148,7 +148,7 @@ button {
 
 .btn-secondary {
     background-color: var(--color-contrast);
-    color: var(--color-text);
+    color: var(--color-bg-light);
     text-decoration: none;
     border: none;
     transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
@@ -156,6 +156,7 @@ button {
 
 .btn-secondary:hover {
     background-color: var(--color-footer);
+    color: var(--color-text);
 }
 
  /* A11y */
