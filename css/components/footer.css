@@ -97,21 +97,29 @@ footer {
   }
   
   .footer-social-media li:hover svg {
-    stroke: var(--color-bg-light); /* of een andere hoverkleur */
+    stroke: var(--color-bg-light); 
     transition: stroke 0.3s ease-in-out;
   }
   
   .footer-social-media li svg {
     stroke: var(--color-text);
-    fill: transparent; /* zodat het hele svg-vlak reageert */
-    pointer-events: visiblePainted; /* extra: maakt hover betrouwbaarder */
+    fill: transparent; 
+    pointer-events: visiblePainted; 
   }
   
 
 .footer-info {
+    display: flex;
+    justify-content: start;
+    align-items: flex-end;
     padding: 0 0 1rem 0;
+    gap: 0.5rem;
+    flex-wrap: wrap;
 }
 
+/* Plumbob */
+
+  
 /* Media Queries */
 
 @media screen and (max-width: 1024px) {

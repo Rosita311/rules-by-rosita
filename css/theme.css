@@ -26,6 +26,8 @@
     --color-button-hover: #E38CA6;
     --color-button-text: #F8F4F5;
     --color-page-hero-bg: #f8c9d7;
+    --color-plumbob: #7ecf3a; /* originele Sims-groen */
+    --color-plumbob-hover: #aaff66;
 }
 
 /* Darkmode */
@@ -44,6 +46,8 @@
     --color-button-hover: #E38CA6;
     --color-button-text: #192324;
     --color-page-hero-bg: #103C42;
+    --color-plumbob: #7ecf3a;
+    --color-plumbob-hover: #b6ff7e;
 }
 
 /* Global styles */
