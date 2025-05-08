@@ -25,6 +25,7 @@ Het thema wordt ontwikkeld in **HTML**, **CSS**, **PHP** en **JavaScript**, met 
 - **Zoekfunctie**: Eenvoudige toegang tot content.
 - **Semantische HTML en ARIA**: Voor betere structuur en toegankelijkheid.
 - **Logische tabvolgorde**: Navigatie met toetsenbord in verwachte en consistente volgorde.
+-  De footer fluistert iets… maar alleen als je goed kijkt 👀.
 
 ---
 
@@ -165,14 +166,3 @@ Dit project valt onder de **MIT License**.
 Pull requests en suggesties zijn welkom, maar houd er rekening mee dat dit een persoonlijk project is. Bekijk gerust de code en gebruik wat je leert.
 
 ---
-
-## Changelog
-
-### 1.0.0 – 2025-05-01
-
-- Eerste versie van het thema
-- Basiselementen geïmplementeerd: header, blogcards, footer
-- Responsief ontwerp toegevoegd
-- Dark mode via `prefers-color-scheme`, toggle en `localStorage`
-- Eerste verbeteringen in toegankelijkheid
-- Zoekfunctie toegevoegd
