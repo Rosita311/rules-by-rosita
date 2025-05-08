@@ -25,45 +25,7 @@
     }
 } 
 
-/* Plumbob */
-.footer-plumbob {
-    display: inline-block;
-    margin-top: 1rem;
-    cursor: pointer;
-    position: relative;
-    width: 2rem;
-    height: auto;
-  }
-  
-  .plumbob-shape {
-    fill: var(--color-plumbob);
-    transition: fill 0.3s ease;
-  }
-  
-  .footer-plumbob:hover .plumbob-shape,
-  .footer-plumbob:focus .plumbob-shape {
-    fill: var(--color-plumbob-hover);
-  }
-  
-  .plumbob-easteregg {
-    position: absolute;
-    bottom: 110%;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: var(--color-background);
-    color: var(--color-text);
-    padding: 0.3rem 0.6rem;
-    margin-bottom: 0.3rem;;
-    font-size: 0.8rem;
-    border-radius: 0.3rem;
-    border: 1px solid var(--color-accent);
-    white-space: nowrap;
-    z-index: 10;
-  }
-  
-  .footer-plumbob:hover .plumbob-easteregg,
-  .footer-plumbob:focus .plumbob-easteregg {
-    display: block;
-  }
+/* Plumbob animation */
+
   
   
