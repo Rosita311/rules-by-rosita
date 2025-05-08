@@ -13,11 +13,15 @@ footer {
 
 .footer-menu {
     display: flex;
-    justify-content: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 50%;
 }
 
 .footer-menu nav ul{
     display: flex;
+    flex-direction: column;
+    align-items: start;
     justify-content: flex-start;
     list-style-type: none;
     width: 100%;
@@ -25,8 +29,6 @@ footer {
 }
 
 .footer-menu nav a {
-    display: flex;
-    justify-content: flex-start;
     width: 100%;
     padding: 0;
     font-family: var(--font-body);
@@ -40,17 +42,68 @@ footer {
     }
 }
 
+.footer-social {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0 1rem 0;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.footer-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+    max-width: 25rem;
+  }
+  
+  .footer-form label {
+    font-weight: bold;
+  }
+  
+  .footer-form-row {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+  
+.footer-form input[type="email"] {
+    padding: 0.75rem 0.5rem;
+    border-radius: 0.25rem;
+    border: 1px solid var(--color-text);
+    flex: 1 1 auto;
+    min-width: 200px;
+    background-color: var(--color-background);
+    font-family: var(--font-body);
+    font-size: 1rem;
+    color: var(--color-text);
+}
+
+.footer-btn {
+    border: 2px solid var(--color-contrast);
+    white-space: nowrap;
+
+    &:hover {
+        border: 2px solid var(--color-text);
+        transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    }
+}
+
 .footer-social-media {
     display: flex;
     flex-direction: column;
     justify-content: start;
     align-items: start;
-    width: 50%;
-    gap: 1rem;
+    width: 100%;
 }
 
-.footer-social-media h2 {
+.footer-menu h2, .footer-subscribe h2, .footer-social-media h2 {
     font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-family: var(--font-heading);
 }
 
 .footer-social-media ul {
