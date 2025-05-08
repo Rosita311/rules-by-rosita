@@ -129,12 +129,14 @@ footer {
   
   .plumbob-shape {
     fill: var(--color-plumbob);
-    transition: fill 0.3s ease;
+    transition: fill 0.3s ease, transform 0.3s ease;
   }
   
   .footer-plumbob:hover .plumbob-shape,
   .footer-plumbob:focus .plumbob-shape {
     fill: var(--color-plumbob-hover);
+    transform: rotate(2deg);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
   }
   
   .plumbob-easteregg {
@@ -156,6 +158,20 @@ footer {
   .footer-plumbob:hover .plumbob-easteregg,
   .footer-plumbob:focus .plumbob-easteregg {
     display: block;
+  }
+
+/* Plumbob animation */
+
+@media (prefers-reduced-motion: no-preference) {
+    .footer-plumbob:hover, .footer-plumbob:focus-visible {
+      animation: float 3s ease-in-out infinite;
+    }
+  
+    @keyframes float {
+        0%   { transform: translateY(0) scale(1); }
+        50%  { transform: translateY(-8px) scale(1.1); }
+        100% { transform: translateY(0) scale(1); }
+      }
   }
   
 /* Media Queries */
