@@ -25,7 +25,6 @@ Het thema wordt ontwikkeld in **HTML**, **CSS**, **PHP** en **JavaScript**, met 
 - **Zoekfunctie**: Eenvoudige toegang tot content.
 - **Semantische HTML en ARIA**: Voor betere structuur en toegankelijkheid.
 - **Logische tabvolgorde**: Navigatie met toetsenbord in verwachte en consistente volgorde.
--  De footer fluistert iets… maar alleen als je goed kijkt 👀.
 
 ---
 
@@ -80,30 +79,8 @@ Een minimalistische en heldere stijl, afgestemd op leesbaarheid en eenvoud.
 
 ---
 
-## Huidige status
-
-### Gereed
-
-- Header met dark mode toggle.
-- Blogcards met klikbare gebieden en toegankelijke markup.
-- Footer werkt goed op verschillende schermgroottes.
-
-### Nog te doen
-
-- Optimalisatie van homepage en single-pagina.
-- Verdere uitwerking van de footer.
-- Verbetering van mobiele spacing en layout.
-- Toegankelijkheidsverfijningen (contrast, ARIA, rollen).
-- Logo toevoegen dat geschikt is voor dark mode.
-- Visuele updates: hover- en focusstijlen, blogcards en navigatie.
-- Layout fine-tunen voor volledige responsiveness.
-
----
-
-## Bekende problemen
-
-- Logo is nog niet geoptimaliseerd voor dark mode.
-- Navigatie-informatie wordt niet optimaal voorgelezen door schermlezers.
+## Ontwikkelstatus
+- Zie de [Devlog](#devlog) voor een gedetailleerd overzicht van afgeronde onderdelen en geplande taken.
 
 ---
 
@@ -166,3 +143,38 @@ Dit project valt onder de **MIT License**.
 Pull requests en suggesties zijn welkom, maar houd er rekening mee dat dit een persoonlijk project is. Bekijk gerust de code en gebruik wat je leert.
 
 ---
+
+## Devlog
+
+### Afgerond
+- Hero met CSS-stippenpatroon afgerond (responsief en minimalistisch)
+- Dark mode automatisch op systeemvoorkeur ingesteld
+- Dark mode toggle met localStorage toegevoegd
+- Primair rood kleurenschema afgestemd tussen light en dark mode
+- `rem` en `em` gebruikt voor schaalbaarheid
+- Skiplink toegevoegd voor schermlezers en toetsenbordgebruikers
+- Toegankelijke focusstijl voor interactieve elementen in kaart gebracht
+- Secondary button in dark mode verbeterd (contrast)
+- Footer herwerkt, inclusief link naar privacyverklaring
+- Plumbob easter egg toegevoegd (toegankelijk, geanimeerd en getest met NVDA en Windows Verteller)
+- Tooltip alleen zichtbaar bij hover/focus, met `prefers-reduced-motion` ondersteuning
+- GitHub Pages statische demo bijgewerkt
+
+### Nog te doen
+- Zoekfunctie verder integreren in WordPress-thema
+- Submenu toevoegen aan hoofdmenu
+- WordPress PHP-integratie voltooien (o.a. loop, dynamic content)
+- Logo optimaliseren voor light en dark mode
+- Favicon ontwerpen (licht/donker)
+- Consistente focusstijl afmaken (en testen op schaalbaarheid)
+- Instellingenmenu inbouwen
+- Footer verder uitwerken (bijv. copyright of extra links)
+
+### Ideeën voor later
+- Thema omzetten naar block theme met `theme.json`
+- Custom post type maken voor gelezen boeken
+- Kleine speelse details (meer easter eggs of gamified elementen)
+
+>  De footer fluistert iets… maar alleen als je goed kijkt 👀
+
+## Changelog
