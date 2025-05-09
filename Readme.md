@@ -172,7 +172,7 @@ Pull requests en suggesties zijn welkom, maar houd er rekening mee dat dit een p
 ### Ideeën voor later
 - Thema omzetten naar block theme met `theme.json`
 - Custom post type maken voor gelezen boeken
-- Kleine speelse details (meer easter eggs of gamified elementen)
+- Kleine speelse details 
 
 >  De footer fluistert iets… maar alleen als je goed kijkt 👀
 
