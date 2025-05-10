@@ -95,6 +95,8 @@
     display: flex;
     justify-content: end; 
     position: relative;
+    width: 60%;
+    max-width: 100%;
     padding: 0;
     margin: 0;
 }
@@ -165,6 +167,7 @@
 
     .introduction-image-wrapper {
         justify-content: center;
+        width: 50%;
     }
     
     .hero-image-wrapper img {
@@ -194,10 +197,6 @@
         width: 50%;
         max-width: 100%; 
         padding: 1.5rem 0;
-    }
-
-    .introduction-card-content {
-        max-width: 40ch;
     }
 
     .page-hero { 
@@ -257,7 +256,7 @@
         max-width: 100%;
     }
 
-      .introduction {
+    .introduction {
         gap: 1rem;
         flex-direction: column;
     }
@@ -265,6 +264,12 @@
     .introduction-card-content {
         max-width: 100%;
         width: 100%;
+    }
+
+    .introduction-image-wrapper {
+        width: 100%;
+        padding: 0;
+        margin: 0;
     }
 
     .introduction-image-wrapper img {
