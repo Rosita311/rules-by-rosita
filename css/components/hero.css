@@ -11,9 +11,6 @@
 .hero-content {
     position: relative;
     width: 100%;
-    background-color: var(--color-background);
-    background-image: radial-gradient(var(--color-accent) 2px, transparent 2px); 
-    background-size: 20px 20px;
 }
 
 .hero-listing {
@@ -96,20 +93,10 @@
 
 .introduction-image-wrapper {
     display: flex;
-    justify-content: flex-end;
+    justify-content: end; 
     position: relative;
-    padding: 0 2rem 2rem 0;
-}
-
-.introduction-image-wrapper::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background-image: radial-gradient(var(--color-contrast) 2px, transparent 2px); 
-    background-size: 20px 20px;
-    z-index: 0;
-    transform: translate(2rem, 2rem);
-    pointer-events: none;
+    padding: 0;
+    margin: 0;
 }
 
 .introduction-image-wrapper img {
@@ -119,8 +106,7 @@
     min-height: 15rem;
     max-height: 35rem;
     object-fit: cover;
-    margin-top: -2rem;     
-    margin-left:-2rem;  
+    margin: -2rem 2rem 2rem -2rem;       
     z-index: 1;
     position: relative;
 }
@@ -141,9 +127,6 @@
 
 /* Page hero styles */
 .page-hero { 
-    background-color: var(--color-background);
-    background-image: radial-gradient(var(--color-accent) 2px, transparent 2px); 
-    background-size: 20px 20px; 
     padding-top: 7rem;
     padding-bottom: 7rem;
     margin: 0 auto;
@@ -172,10 +155,6 @@
 /* Media Queries */
 
 @media screen and (max-width: 1024px) {
-    .hero-content {
-        background-size: 15px 15px;
-    }
-
     .introduction {
         gap:2rem;
     }
@@ -186,12 +165,6 @@
 
     .introduction-image-wrapper {
         justify-content: center;
-        padding: 0 1rem 2rem 1rem;
-    }
-
-      .introduction-image-wrapper::before {
-        transform: translate(1rem, 1rem);
-        background-size: 15px 15px;
     }
     
     .hero-image-wrapper img {
@@ -210,9 +183,8 @@
 
    .introduction-image-wrapper img {
         max-height: 35rem;
-        margin-top: 0;     
-        margin-bottom: 0;  
         position: relative;
+        margin: -1.5rem 1.5rem 1.5rem -1.5rem;
         z-index: 0;
     }
            
@@ -268,8 +240,7 @@
         z-index: 0;
         }
           
-    
-    .hero-card-content-wrapper, .introduction-content-wrapper {
+    .hero-card-content-wrapper {
         display: flex;
         flex-grow: 1;
         justify-content: center;
@@ -292,12 +263,12 @@
     }
 
     .introduction-card-content {
-        max-width: 40ch;
+        max-width: 100%;
+        width: 100%;
     }
 
-      .introduction-image-wrapper::before {
-        transform: translate(0.5rem, 0.5rem);
-        background-size: 10px 10px;
+    .introduction-image-wrapper img {
+        margin: -1rem 1rem 1rem -1rem;
     }
 
     /* Single post */

@@ -22,9 +22,6 @@
     gap: 2rem;
 }
 .post-meta-wrapper {
-    background-color: var(--color-background);
-    background-image: radial-gradient(var(--color-contrast) 2px, transparent 2px); 
-    background-size: 18px 18px;
     padding: 2rem 0; 
     width: 100%;
 }
@@ -96,7 +93,6 @@
     }
 
     .post-meta-wrapper {
-        background-size: 15px 15px;
         padding: 1.5rem 0; 
     }
 
@@ -111,7 +107,6 @@
 
 @media screen and (max-width: 768px) {
     .post-meta-wrapper {
-        background-size: 10px 10px;
         padding: 1.25rem 0; 
     }
    

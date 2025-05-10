@@ -163,6 +163,20 @@ button {
     color: var(--color-text);
 }
 
+.hover-shadow:hover {
+        box-shadow: 8px 8px 0px 0px var(--color-accent);
+}
+
+.dotted-background-pink {
+    background-image: radial-gradient(var(--color-accent) 2px, transparent 2px); 
+    background-size: 20px 20px; 
+}
+
+.dotted-background-blue {
+    background-image: radial-gradient(var(--color-contrast) 2px, transparent 2px); 
+    background-size: 20px 20px;
+}
+
  /* A11y */
 .skip-link {
     position: absolute;
@@ -191,3 +205,28 @@ button {
     clip: rect(0 0 0 0);
     border: 0;
   }  
+
+  /* Media Queries */
+  @media  screen and (max-width: 1024px) {
+    .dotted-background-pink {
+        background-image: radial-gradient(var(--color-accent) 2px, transparent 2px); 
+        background-size: 15px 15px; 
+        }
+
+    .dotted-background-blue {
+    background-image: radial-gradient(var(--color-contrast) 2px, transparent 2px); 
+    background-size: 15px 15px;
+    }
+  }
+
+ @media  screen and (max-width: 768px) {
+    .dotted-background-pink {
+        background-image: radial-gradient(var(--color-accent) 2px, transparent 2px); 
+        background-size: 10px 10px; 
+        }
+
+    .dotted-background-blue {
+    background-image: radial-gradient(var(--color-contrast) 2px, transparent 2px); 
+    background-size: 10px 10px;
+    }
+  }
