@@ -101,7 +101,7 @@
     margin: 0;
 }
 
-.introduction-image-wrapper img {
+.introduction-image img {
     aspect-ratio: 1 / 1;
     width: 100%;
     height: auto;
@@ -157,12 +157,17 @@
 /* Media Queries */
 
 @media screen and (max-width: 1024px) {
+    .hero-section {
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
+
    .hero-image-wrapper {
         width: 50%;
     }
 
     .hero-image-wrapper img {
-        height: 400px;
+        height: 25rem;
         width: 100%;
         justify-content: center;
         object-fit: cover;
@@ -187,16 +192,12 @@
         justify-content: center;
         width: 50%;
     }
-   .introduction-image-wrapper img {
+   .introduction-image img {
         max-height: 35rem;
         position: relative;
         margin: -1.5rem 1.5rem 1.5rem -1.5rem;
         z-index: 0;
     }
-
-    
-           
-  
 
     .page-hero { 
         padding-top: 4rem;
@@ -207,8 +208,9 @@
 
 @media screen and (max-width: 768px) {
     /* Hero and introduction */
-    .hero-content {
-        background-size: 10px 10px;
+    .hero-section {
+        padding-top: 0;
+        padding-bottom: 0;
     }
 
     .hero-listing, .introduction {
@@ -266,15 +268,20 @@
     }
 
     .introduction-image-wrapper {
+        padding-left: 1rem;
+        width: 100%;
+    }
+
+    .introduction-image {
         width: fit-content;
         padding: 0;
         margin: 0;
     }
 
-    .introduction-image-wrapper img {
+    .introduction-image img {
         margin: -1rem 1rem 1rem -1rem;
-        height: 25rem;
-        width: calc(100% - 1rem);
+        height: auto;
+        width: 100%;
     }
 
     /* Single post */
