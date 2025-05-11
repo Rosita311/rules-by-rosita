@@ -208,25 +208,13 @@ button {
 
   /* Media Queries */
   @media  screen and (max-width: 1024px) {
-    .dotted-background-pink {
-        background-image: radial-gradient(var(--color-accent) 2px, transparent 2px); 
+    .dotted-background-pink, .dotted-background-blue {
         background-size: 15px 15px; 
         }
-
-    .dotted-background-blue {
-    background-image: radial-gradient(var(--color-contrast) 2px, transparent 2px); 
-    background-size: 15px 15px;
-    }
   }
 
  @media  screen and (max-width: 768px) {
-    .dotted-background-pink {
-        background-image: radial-gradient(var(--color-accent) 2px, transparent 2px); 
+    .dotted-background-pink, .dotted-background-blue {
         background-size: 10px 10px; 
         }
-
-    .dotted-background-blue {
-    background-image: radial-gradient(var(--color-contrast) 2px, transparent 2px); 
-    background-size: 10px 10px;
-    }
   }
