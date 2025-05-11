@@ -146,8 +146,9 @@ Pull requests en suggesties zijn welkom, maar houd er rekening mee dat dit een p
 
 ## Devlog
 
-### Afgerond
-- Hero met CSS-stippenpatroon afgerond (responsief en minimalistisch)
+## Afgerond
+
+- Hero met CSS-stippenpatroon afgerond 
 - Dark mode automatisch op systeemvoorkeur ingesteld
 - Dark mode toggle met localStorage toegevoegd
 - Primair rood kleurenschema afgestemd tussen light en dark mode
@@ -155,21 +156,38 @@ Pull requests en suggesties zijn welkom, maar houd er rekening mee dat dit een p
 - Skiplink toegevoegd voor schermlezers en toetsenbordgebruikers
 - Toegankelijke focusstijl voor interactieve elementen in kaart gebracht
 - Secondary button in dark mode verbeterd (contrast)
-- Footer berwerkt, inclusief link naar privacyverklaring
-- Een toegankelijke animatie is toegevoegd met ondersteuning voor `prefers-reduced-motion`.
-- GitHub Pages statische demo bijgewerkt
+- Footer bewerkt, inclusief link naar privacyverklaring
+- Toegankelijke animatie toegevoegd met `prefers-reduced-motion` ondersteuning
+- GitHub Pages demo opgezet: https://rosita311.github.io/RulesbyRosita-theme/
+- Basis design afgerond
+- Pagina-structuur opgezet (hero, cards, typografie, kleuren)
+- `page.html` als structuurtemplate voor o.a. search/404
 
-### Nog te doen
+## Nog te doen
+
+- Consistente focusstijl toevoegen (voor buttons, links, inputs – in light & dark mode)
+- Submenu toevoegen aan hoofdmenu (met aandacht voor toetsenbordnavigatie en aria-attributen)
+- Back to top knop 
 - Zoekfunctie verder integreren in WordPress-thema
-- Submenu toevoegen aan hoofdmenu
-- WordPress PHP-integratie voltooien (o.a. loop, dynamic content)
+- WordPress PHP-integratie voltooien (loop, dynamic content, template parts)
 - Logo optimaliseren voor light en dark mode
 - Favicon aanpassen (licht/donker)
-- Consistente focusstijl afmaken (en testen op schaalbaarheid)
 - Instellingenmenu inbouwen
-- Footer verder uitwerken (bijv. copyright of extra links)
+- Footer verder uitwerken (bijvoorbeeld copyright of extra links)
 
-### Ideeën voor later
+## SEO-taken
+
+- Voeg `<title>` en `<meta name="description">` toe per pagina of dynamisch via WordPress
+- Zorg voor juiste heading-structuur (één `<h1>`, hiërarchisch correct)
+- Gebruik beschrijvende alt-teksten voor afbeeldingen
+- Voeg `aria-label`s en `role`-attributen toe waar nodig voor screenreaders
+- Gebruik semantische HTML-elementen (`<main>`, `<article>`, `<nav>`, etc.)
+- Voeg `robots.txt` en eventueel een sitemap.xml toe bij live publicatie
+- Zorg dat paginatitels en URLs duidelijk zijn (permalinks in WordPress)
+- Controleer performance en SEO via tools zoals Lighthouse of PageSpeed Insights
+
+## Ideeën voor later
+
 - Thema omzetten naar block theme met `theme.json`
 - Custom post type maken voor gelezen boeken
 - Kleine speelse details 
