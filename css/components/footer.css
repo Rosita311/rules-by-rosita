@@ -166,7 +166,7 @@ footer {
     justify-content: start;
     align-items: flex-end;
     padding: 0 0 1rem 0;
-    gap: 0.5rem;
+    gap: 0.25rem;
     flex-wrap: wrap;
 }
 
@@ -279,16 +279,6 @@ footer {
         &:hover {
             text-decoration: none;
         }
-    }
-}
-
-.footer-info a {
-    font-family: var(--font-body);
-    color: var(--color-text);
-    text-decoration: underline;
-
-    &:hover {
-        text-decoration: none;
     }
 }
 
