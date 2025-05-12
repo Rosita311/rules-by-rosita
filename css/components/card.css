@@ -35,7 +35,6 @@
 
 .card h3 a, .card h2 a {
     font-family: var(--font-heading);
-    font-size: var(--font-size-xl);
     line-height: var(--line-height-md);
     text-decoration: none;
 }
@@ -118,7 +117,7 @@ body:not(.user-is-tabbing) .card:focus-within {
 .card-content {
     display: flex;
     flex-direction: column;
-    justify-content: start;
+    justify-content: space-between;
     padding: 1rem;
     margin-top: -3rem;
     gap: 1rem;
