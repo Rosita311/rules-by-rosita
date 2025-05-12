@@ -59,7 +59,7 @@
     display: flex;
     position: relative;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     max-width: 100%;
     width: calc(100% + 7rem);
     margin-left: -7rem;

@@ -48,6 +48,7 @@
   font-size: clamp(1.75rem, 4vw + 1rem, 2.5rem);
   width: 100%;
   line-height: 1.2em;
+  margin: 0;
 }
 
 .post-title.h2 {
@@ -151,7 +152,7 @@ body:not(.user-is-tabbing) .card:focus-within {
     margin: 0.5rem 0 1rem 0;
 }
 
-.card-content span.btn.btn-primary {
+.hero-card-content span.btn.btn-primary, .card-content span.btn.btn-primary {
     margin-top: 1rem;
 }
 
