@@ -29,14 +29,19 @@
         box-shadow: 8px 8px 0px 0px var(--color-accent);
 }
 
-.card h3, .card h2 {
-    margin-bottom: 0;
+.post-title {
+  font-size: clamp(1.25rem, 3vw + 1rem, 2rem);
+  line-height: 1.2em;
+  font-family: var(--font-heading);
+  font-weight: var(--font-weight-regular); /* of wat je mooi vindt */
+  margin: 0; 
 }
 
-.card h3 a, .card h2 a {
+.post-title a {
     font-family: var(--font-heading);
-    line-height: var(--line-height-md);
+    color: var(--color-text);  
     text-decoration: none;
+    margin: 0;
 }
 
 .card a {
@@ -128,7 +133,11 @@ body:not(.user-is-tabbing) .card:focus-within {
     font-size: 0.875rem;
     font-family: var(--font-body);
     color: var(--color-text);
-    margin-top: 0.5rem;
+    margin: 0.5rem 0 1rem 0;
+}
+
+.card-content span.btn.btn-primary {
+    margin-top: 1rem;
 }
 
 /* Media Queries */
