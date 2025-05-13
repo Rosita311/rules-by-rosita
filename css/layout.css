@@ -16,6 +16,58 @@
     gap: 4rem;
 }
 
+/* Back to top button */
+.back-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background-color: var(--color-contrast);
+  border: 2px solid var(--color-contrast);
+  padding: 0.75rem;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1000;
+  transition: opacity 0.3s ease, transform 0.2s ease;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.back-to-top.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.back-to-top {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-contrast);
+  border: 2px solid var(--color-contrast);
+  color: var(--color-bg-light);
+  padding: 0.5rem;
+  border-radius: 999px;
+  transition: all 0.3s ease;
+}
+
+.back-to-top svg {
+  stroke: var(--color-bg-light);
+  width: 1.5rem;
+  height: 1.5rem;
+  transition: stroke 0.3s ease;
+}
+
+.back-to-top:hover {
+  background-color: var(--color-footer);
+  color: var(--color-text);
+  border-color: var(--color-text);
+  transform: translateY(-4px);
+}
+
+.back-to-top:hover svg {
+  stroke: var(--color-text);
+}
+
+
 /* Media queries */
 
 
