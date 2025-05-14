@@ -1,6 +1,6 @@
 /* Single Post Styles */
 .container-main.single-post  {
-    padding: 0 clamp(0.5rem, 5vw, 2rem) 5rem clamp(0.5rem, 5vw, 2rem); 
+    padding: 0 clamp(0.5rem, 5vw, 2rem); 
 }
 
 .single-post-content {
@@ -9,7 +9,7 @@
     grid-template-areas: "content sidebar";
     gap: clamp(2rem, 5vw, 4rem); 
     background-color: var(--color-background);
-    margin: clamp(-5rem, -15vw, -3rem) auto 0 auto; 
+    margin: clamp(-5rem, -15vw, -3rem) 0 0 0;
     padding: clamp(0.5rem, 5vw, 2rem);
     width: min(90%, 70rem); 
     z-index: 1;
@@ -87,11 +87,6 @@
 }
 
 @media screen and (max-width: 1024px) {
-    .container-main.single-post  {
-        padding-left: 0;
-        padding-right: 0;
-    }
-
     .post-meta-wrapper {
         padding: 1.5rem 0; 
     }
