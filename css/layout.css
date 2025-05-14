@@ -63,6 +63,26 @@
   stroke: var(--color-text);
 }
 
+.back-to-top-tooltip {
+    visibility: hidden;
+    background-color: var(--color-background);
+    color: var(--color-text);
+    text-align: center;
+    font-size: 0.8rem;
+    border-radius: 0.3rem;
+    border: 1px solid var(--color-accent);
+    padding: 0.3rem 0.6rem;
+    margin-bottom: 0.3rem;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%; 
+    left: 50%;
+    margin-left: -60px;
+}
+
+.back-to-top:hover .back-to-top-tooltip {
+  visibility: visible;
+}
 
 /* Media queries */
 
