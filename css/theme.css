@@ -215,7 +215,32 @@ button {
         opacity: 1;
         transform: none;
     }
+
+  .back-to-top {
+    transition: none;
+    opacity: 1; 
+  }
+  .back-to-top.show {
+    opacity: 1; 
+  }
+  .back-to-top:hover {
+    transform: none; 
+  }
 } 
+
+
+@media (prefers-reduced-motion: no-preference) {
+  .back-to-top {
+    transition: opacity 0.3s ease, transform 0.2s ease; 
+  }
+  .back-to-top.show {
+    opacity: 1; 
+    pointer-events: auto;
+  }
+  .back-to-top:hover {
+    transform: translateY(-4px); 
+  }
+}
 
   @media  screen and (max-width: 1024px) {
     .dotted-background-pink, .dotted-background-blue {

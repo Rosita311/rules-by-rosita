@@ -191,5 +191,6 @@ if (window.scrollY > 300) {
 
 backToTop.addEventListener("click", () => {
 window.scrollTo({ top: 0, behavior: "smooth" });
+document.getElementById('top').focus();
 });
 

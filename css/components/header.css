@@ -19,6 +19,11 @@ img.rr-logo {
 
 }
 
+#top a:focus {
+  outline: 2px solid var(--color-text); 
+
+}
+
 /* Header Navigation */
 
 #header-nav {

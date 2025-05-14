@@ -21,32 +21,24 @@
   position: fixed;
   bottom: 2rem;
   right: 2rem;
+  color: var(--color-bg-light);
   background-color: var(--color-contrast);
   border: 2px solid var(--color-contrast);
-  padding: 0.75rem;
   border-radius: 50%;
-  cursor: pointer;
+  padding: 0.75rem;
   z-index: 1000;
+  opacity: 0; 
+  cursor: pointer;
+  pointer-events: auto; 
   transition: opacity 0.3s ease, transform 0.2s ease;
-  opacity: 0;
-  pointer-events: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .back-to-top.show {
   opacity: 1;
   pointer-events: auto;
-}
-
-.back-to-top {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background-color: var(--color-contrast);
-  border: 2px solid var(--color-contrast);
-  color: var(--color-bg-light);
-  padding: 0.5rem;
-  border-radius: 999px;
-  transition: all 0.3s ease;
 }
 
 .back-to-top svg {
@@ -61,6 +53,10 @@
   color: var(--color-text);
   border-color: var(--color-text);
   transform: translateY(-4px);
+}
+
+.back-to-top:focus {
+  outline: 2px solid var(--color-text);
 }
 
 .back-to-top:hover svg {
