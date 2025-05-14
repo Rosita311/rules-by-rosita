@@ -101,6 +101,10 @@
 }
 
 @media screen and (max-width: 768px) {
+    .container-main.single-post {
+        gap: 0;
+    }
+    
     .post-meta-wrapper {
         padding: 1.25rem 0; 
     }
