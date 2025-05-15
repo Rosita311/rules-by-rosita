@@ -21,7 +21,7 @@ img.rr-logo {
 
 #top a:focus {
   outline: 2px solid var(--color-text); 
-
+  border-radius: 0.25rem;  
 }
 
 /* Header Navigation */

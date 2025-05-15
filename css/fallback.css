@@ -53,6 +53,7 @@ html.no-js {
         width: auto !important;  /* geen breedte instellen */
         transition: none !important;
         border: none;
+        overflow-x: hidden;
     }
 
     html.no-js .header-container #header-nav ul {
@@ -95,7 +96,6 @@ html.no-js {
     html.no-js .header-container #close-sidebar-button {
         display: none !important;
     }
-    
   }
 
   @media screen and (max-width: 768px) {
