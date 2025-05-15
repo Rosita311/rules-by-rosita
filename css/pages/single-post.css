@@ -9,7 +9,7 @@
     grid-template-areas: "content sidebar";
     gap: clamp(2rem, 5vw, 4rem); 
     background-color: var(--color-background);
-    margin: clamp(-5rem, -15vw, -3rem) 0 0 0;
+    margin: clamp(-5rem, -15vw, -3rem) auto 0 auto;
     padding: clamp(0.5rem, 5vw, 2rem);
     width: min(90%, 70rem); 
     z-index: 1;
