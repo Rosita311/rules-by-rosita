@@ -1,5 +1,7 @@
 # Rules by Rosita Theme
 
+[Nederlands](#nederlands) • [English](#english)
+
 ## Inleiding
 
 Het **Rules by Rosita Theme** is een op maat gemaakt WordPress-thema dat ik ontwikkel als leerproject. Het doel van dit project is om mijn vaardigheden als developer te verbeteren door een volledig functioneel en toegankelijk thema te bouwen met moderne technieken. Het thema is ontworpen om een eenvoudige, responsieve en toegankelijke ervaring te bieden voor mijn persoonlijke blog, en is openbaar beschikbaar op GitHub voor toekomstige uitbreidingen of als leerbron.
@@ -195,3 +197,207 @@ Pull requests en suggesties zijn welkom, maar houd er rekening mee dat dit een p
 >  De footer fluistert iets… maar alleen als je goed kijkt 👀
 
 ## Changelog
+
+# Rules by Rosita Theme
+
+🇳🇱 [Nederlands](#nederlands) • 🇬🇧 English
+
+---
+
+## 🇬🇧 English
+
+## Introduction
+
+The **Rules by Rosita Theme** is a custom WordPress theme I’m developing as a learning project. The goal of this project is to improve my skills as a developer by building a fully functional and accessible theme using modern techniques. It’s designed to provide a simple, responsive, and accessible experience for my personal blog, and is publicly available on GitHub for learning or future expansion.
+
+The theme is being developed in **HTML**, **CSS**, **PHP**, and **JavaScript**, with a strong focus on **responsiveness**, **accessibility**, and **usability**.
+
+---
+
+## Development Process
+
+1. **Static mock-up**: Build a working static version using HTML, CSS, and JavaScript.
+2. **Template parts**: Break components into reusable template parts within WordPress.
+3. **PHP integration**: Combine the parts into a functional WordPress theme.
+4. **Accessibility**: Ensure usability for as many people as possible.
+
+---
+
+## Features
+
+- **Responsive design**: Works well on mobile, tablet, and desktop.
+- **Accessibility**: Supports screen readers like NVDA.
+- **Dark Mode**: Controlled via CSS custom properties, `prefers-color-scheme`, and a manual toggle using `localStorage`.
+- **Search function**: Easy access to content.
+- **Semantic HTML and ARIA**: For better structure and screen reader support.
+- **Logical tab order**: Consistent and expected keyboard navigation.
+
+---
+
+## Design
+
+A minimalist and clean style focused on readability and simplicity.
+
+### Color Palette
+
+**Light theme:**
+
+- Text: `#192324`
+- Primary: `#D7233E`
+- Accent 1: `#F8C9D7`
+- Accent 2: `#EBEBEB`
+- Footer: `#CBEEF3`
+- Contrast color: `#49B3C1`
+- Background: `#F8F4F5`
+- Menu button hover: `#F8C9D7`
+- Button hover: `#E38CA6`
+- Button text: `#F8F4F5`
+- Hero background: `#F8C9D7`
+
+**Dark theme:**
+
+- Text: `rgba(255, 255, 255, 0.87)`
+- Primary: `#DD3F60`
+- Accent 1: `#E38CA6`
+- Accent 2: `#293A3D`
+- Footer: `#103C42`
+- Contrast color: `#45A4B0`
+- Background: `#192324`
+- Card background: `#293A3D`
+- Menu button hover: `#293A3D`
+- Button hover: `#E38CA6`
+- Button text: `#192324`
+- Hero background: `#103C42`
+
+### Typography
+
+- **Body text**: `Nunito, sans-serif`
+- **Headings**: `Zilla Slab, serif`
+
+---
+
+## Accessibility
+
+- **Skip link** for quick access to main content.
+- **Dark mode** based on system preference with a manual toggle via `localStorage`.
+- **Semantic HTML** and **ARIA roles** for improved screen reader support.
+- **Tab order** that aligns with the visual and functional structure of the interface.
+
+---
+
+## Development Status
+
+See the [Devlog](#devlog) for a detailed overview of completed features and upcoming tasks.
+
+---
+
+## Future Ideas
+
+- Convert into a block theme using `theme.json` and Gutenberg block support.
+- Custom post type for book collection or reading list.
+
+---
+
+## Tools & Technologies Used
+
+- WordPress
+- HTML, CSS, JavaScript (ES6+), PHP
+- Git & GitHub
+- VS Code + GitHub Copilot
+- LocalWP
+- Google Fonts (Nunito & Zilla Slab)
+- Tabler Icons
+- CSS Flexbox & Grid
+
+---
+
+## Resources
+
+- **MDN Web Docs** – Reference for HTML, CSS, and JavaScript  
+  [https://developer.mozilla.org](https://developer.mozilla.org)
+
+- **WordPress Developer Handbook** – Documentation for theme building and WP functions  
+  [https://developer.wordpress.org/themes/](https://developer.wordpress.org/themes/)
+
+- **A Modern CSS Reset** – By Josh W. Comeau, used for consistent styling  
+  [https://www.joshwcomeau.com/css/custom-css-reset/](https://www.joshwcomeau.com/css/custom-css-reset/)
+
+- **A11Y Project** – Guidelines and tips on accessibility  
+  [https://www.a11yproject.com](https://www.a11yproject.com)
+
+- **Accessible Card Patterns** – Explained by Heydon Pickering  
+  [https://inclusive-components.design/cards/](https://inclusive-components.design/cards/)
+
+- **Tabler Icons** – Lightweight SVG icons  
+  [https://tabler.io/icons](https://tabler.io/icons)
+
+- **Google Fonts** – Typography (`Nunito` & `Zilla Slab`)  
+  [https://fonts.google.com](https://fonts.google.com)
+
+---
+
+## License
+
+This project is licensed under the **MIT License**.
+
+> The project is publicly available, but primarily intended for my personal blog. It’s shared as a learning resource and documentation — not as a ready-made commercial product.
+
+---
+
+## Contributing
+
+Pull requests and suggestions are welcome, but keep in mind this is a personal project. Feel free to explore the code and use what you learn.
+
+---
+
+## Devlog
+
+### Completed
+
+- Hero with CSS dotted background pattern
+- Dark mode set automatically via system preferences  
+- Dark mode toggle added using `localStorage`
+- Primary red color scheme harmonized for light and dark mode
+- Used `rem` and `em` for scalability
+- Skip link added for screen readers and keyboard users
+- Accessible focus style mapped for interactive elements
+- Improved contrast for secondary button in dark mode
+- Footer updated, including privacy policy link
+- Accessible animation added with `prefers-reduced-motion` support
+- GitHub Pages demo launched: [rulesbyrosita-theme](https://rosita311.github.io/RulesbyRosita-theme/)
+- Base design finalized
+- Page structure set up (hero, cards, typography, colors)
+- **Back to top button designed, implemented and tested** (accessible, mobile-friendly, animated, honors `prefers-reduced-motion`)
+
+### To Do
+
+- `page.html` as structure template (for search/404)
+- Add consistent focus styles (for buttons, links, inputs – light & dark mode)
+- Add submenu to main navigation (with keyboard and aria support)
+- Integrate search function further into WordPress theme
+- Complete PHP integration in WordPress (loop, dynamic content, template parts)
+- Optimize logo for light and dark mode
+- Adjust favicon (light/dark)
+- Build accessibility settings menu
+- Run accessibility testing with tools like WAVE (ongoing)
+
+### SEO Tasks
+
+- Add `<title>` and `<meta name="description">` for each page or dynamically via WordPress
+- Ensure correct heading structure (one `<h1>`, logical hierarchy)
+- Use descriptive `alt` text for images
+- Add `aria-label`s and `role` attributes where necessary for screen readers
+- Use semantic HTML elements (`<main>`, `<article>`, `<nav>`, etc.)
+- Add `robots.txt` and optionally a `sitemap.xml` when going live
+- Ensure page titles and URLs are clear (WordPress permalinks)
+- Use Lighthouse or PageSpeed Insights for performance and SEO checks
+
+### Ideas for Later
+
+- Convert theme to a block theme using `theme.json`
+- Create custom post type for books read
+
+> The footer whispers… but only if you look closely 👀
+
+## Changelog
+
