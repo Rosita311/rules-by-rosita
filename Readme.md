@@ -2,6 +2,8 @@
 
 [Nederlands](#nederlands) • [English](#english)
 
+## Nederlands
+
 ## Inleiding
 
 Het **Rules by Rosita Theme** is een op maat gemaakt WordPress-thema dat ik ontwikkel als leerproject. Het doel van dit project is om mijn vaardigheden als developer te verbeteren door een volledig functioneel en toegankelijk thema te bouwen met moderne technieken. Het thema is ontworpen om een eenvoudige, responsieve en toegankelijke ervaring te bieden voor mijn persoonlijke blog, en is openbaar beschikbaar op GitHub voor toekomstige uitbreidingen of als leerbron.
@@ -197,14 +199,9 @@ Pull requests en suggesties zijn welkom, maar houd er rekening mee dat dit een p
 >  De footer fluistert iets… maar alleen als je goed kijkt 👀
 
 ## Changelog
-
-# Rules by Rosita Theme
-
-🇳🇱 [Nederlands](#nederlands) • 🇬🇧 English
-
 ---
 
-## 🇬🇧 English
+## English
 
 ## Introduction
 
