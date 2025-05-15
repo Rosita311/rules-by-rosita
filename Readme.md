@@ -149,8 +149,8 @@ Pull requests en suggesties zijn welkom, maar houd er rekening mee dat dit een p
 ## Afgerond
 
 - Hero met CSS-stippenpatroon afgerond 
-- Dark mode automatisch op systeemvoorkeur ingesteld
-- Dark mode toggle met localStorage toegevoegd
+- Dark mode automatisch op systeemvoorkeur ingesteld  
+- Dark mode toggle met `localStorage` toegevoegd 
 - Primair rood kleurenschema afgestemd tussen light en dark mode
 - `rem` en `em` gebruikt voor schaalbaarheid
 - Skiplink toegevoegd voor schermlezers en toetsenbordgebruikers
@@ -158,22 +158,23 @@ Pull requests en suggesties zijn welkom, maar houd er rekening mee dat dit een p
 - Secondary button in dark mode verbeterd (contrast)
 - Footer bewerkt, inclusief link naar privacyverklaring
 - Toegankelijke animatie toegevoegd met `prefers-reduced-motion` ondersteuning
-- GitHub Pages demo opgezet: https://rosita311.github.io/RulesbyRosita-theme/
+- GitHub Pages demo opgezet: [rulesbyrosita-theme](https://rosita311.github.io/RulesbyRosita-theme/)  
 - Basis design afgerond
 - Pagina-structuur opgezet (hero, cards, typografie, kleuren)
-- `page.html` als structuurtemplate voor o.a. search/404
+- **Back to top-knop ontworpen, geïmplementeerd en getest** (toegankelijk, mobielvriendelijk, met animatie en voorkeuren voor `reduced motion`)  
+
 
 ## Nog te doen
 
+- `page.html` als structuurtemplate voor o.a. search/404
 - Consistente focusstijl toevoegen (voor buttons, links, inputs – in light & dark mode)
-- Submenu toevoegen aan hoofdmenu (met aandacht voor toetsenbordnavigatie en aria-attributen)
-- Back to top knop 
+- Submenu toevoegen aan hoofdmenu (met aandacht voor toetsenbordnavigatie en aria-attributen) 
 - Zoekfunctie verder integreren in WordPress-thema
 - WordPress PHP-integratie voltooien (loop, dynamic content, template parts)
 - Logo optimaliseren voor light en dark mode
 - Favicon aanpassen (licht/donker)
 - Instellingenmenu inbouwen
-- Footer verder uitwerken (bijvoorbeeld copyright of extra links)
+- Toegankelijkheid testen met tools als WAVE (Gebeurt tijdens het hele proces)
 
 ## SEO-taken
 
@@ -190,7 +191,6 @@ Pull requests en suggesties zijn welkom, maar houd er rekening mee dat dit een p
 
 - Thema omzetten naar block theme met `theme.json`
 - Custom post type maken voor gelezen boeken
-- Kleine speelse details 
 
 >  De footer fluistert iets… maar alleen als je goed kijkt 👀
 
