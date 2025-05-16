@@ -1,5 +1,5 @@
 /* Single Post Styles */
-.container-main.single-post  {
+.single-post  {
     padding: 0 clamp(0.5rem, 5vw, 2rem); 
 }
 
@@ -77,13 +77,6 @@
 
 /* Media queries */
 
-@media screen and (max-width: 1250px) {
-    .single-post-content {
-        max-width: 90%;
-        gap: 3rem;
-    }
-}
-
 @media screen and (max-width: 1024px) {
     .post-meta-wrapper {
         padding: 1.5rem 0; 
@@ -99,8 +92,9 @@
 }
 
 @media screen and (max-width: 768px) {
-    .container-main.single-post {
+    .single-post {
         gap: 0;
+        padding: 0 1rem;
     }
 
     .post-meta-wrapper {
