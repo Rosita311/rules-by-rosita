@@ -115,6 +115,10 @@ const updateNavbar = (e) => {
 media.addEventListener('change', updateNavbar);
 updateNavbar(media);
 
+// Submenu
+
+
+
 // Darkmode
 
 document.addEventListener('DOMContentLoaded', () => {

@@ -1,9 +1,77 @@
 
 /* Experimenting with CSS variables and custom properties for a more dynamic design. */
 
+/* Submenu */
+
+.has-submenu {
+  position: relative;
+}
+
+/* Stijl de knop */
+.has-submenu > button.submenu-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 1.5rem;
+  background: none;
+  border: none;
+  font: inherit;
+  cursor: pointer;
+  color: var(--color-text);
+}
+
+/* Visuele feedback bij hover/focus */
+.has-submenu > button.submenu-toggle:hover {
+     border-bottom: 2px solid var(--color-contrast);
+}
+.has-submenu > button.submenu-toggle:focus {
+  outline: 2px solid var(--color-text);
+}
+
+/* Submenu standaard verborgen */
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+  
+  flex-direction: column;
+  background-color: var(--color-background);
+  border-radius: 0.25rem;
+  border: 1px solid var(--color-accent);
+  padding: 0.5rem 0;
+  min-width: 10rem;
+  z-index: 10; 
+}
+
+/* Toon submenu als de parent 'open' is 
+.has-submenu.open .submenu {
+  display: flex;
+}
 
 
+.submenu li a {
+  display: block;
+  width: 100%;
+  padding: 1rem 1.5rem;
+  color: var(--color-text);
+  text-decoration: none;
+}
 
+.submenu li a:hover,
+.submenu li a:focus {
+  background-color: var(--color-contrast);
+  color: var(--color-bg-light);
+  outline: none;
+}
+
+
+.submenu li a[aria-current="page"] {
+  background-color: var(--color-primary);
+  color: var(--color-background);
+}
+
+*/
 
   
   
