@@ -124,7 +124,7 @@ updateNavbar(media);
 
 // const openSubmenu = () => {
 //     submenuButton.setAttribute('aria-expanded', 'true');
-//     HasSubmenu.classList.add('show');
+//     hasSubmenu.classList.add('show');
 //     submenuButton.setAttribute('aria-label', 'Submenu sluiten');
 //     submenuButton.setAttribute('aria-pressed', 'true');
 // }
