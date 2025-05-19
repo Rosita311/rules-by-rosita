@@ -45,10 +45,10 @@
   z-index: 10; 
 }
 
-/* Toon submenu als de parent 'open' is 
-.has-submenu.open .submenu {
+/*Toon submenu als de parent 'open' is  */
+ .has-submenu.open .submenu {
   display: flex;
-}
+} 
 
 
 .submenu li a {
@@ -72,7 +72,7 @@
   color: var(--color-background);
 }
 
-*/
+
 
   
   

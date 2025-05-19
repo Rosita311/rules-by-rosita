@@ -30,7 +30,7 @@ img.rr-logo {
    background-color: var(--color-background);
 }
 
-#header-nav ul {
+#header-nav > ul {
     list-style: none;
     display: flex;
     padding: 0;
