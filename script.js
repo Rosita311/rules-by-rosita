@@ -124,14 +124,14 @@ updateNavbar(media);
 
 // const openSubmenu = () => {
 //     submenuButton.setAttribute('aria-expanded', 'true');
-//     hasSubmenu.classList.add('show');
+//     hasSubmenu.classList.add('open');
 //     submenuButton.setAttribute('aria-label', 'Submenu sluiten');
 //     submenuButton.setAttribute('aria-pressed', 'true');
 // }
 
 // const closeSubmenu = () => {
 //     submenuButton.setAttribute('aria-expanded', 'false');
-//     hasSubmenu.classList.remove('show');
+//     hasSubmenu.classList.remove('open');
 //     submenuButton.setAttribute('aria-label', 'Submenu openen');
 //     submenuButton.setAttribute('aria-pressed', 'false');
 // }
