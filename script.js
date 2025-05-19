@@ -129,6 +129,13 @@ updateNavbar(media);
 //     submenuButton.setAttribute('aria-pressed', 'true');
 // }
 
+// const closeSubmenu = () => {
+//     submenuButton.setAttribute('aria-expanded', 'false');
+//     hasSubmenu.classList.remove('show');
+//     submenuButton.setAttribute('aria-label', 'Submenu openen');
+//     submenuButton.setAttribute('aria-pressed', 'false');
+// }
+
 // Darkmode
 
 document.addEventListener('DOMContentLoaded', () => {
