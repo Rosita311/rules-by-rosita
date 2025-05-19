@@ -117,7 +117,17 @@ updateNavbar(media);
 
 // Submenu
 
+// const hasSubmenu = document.querySelector('.has-submenu');
+// const submenuButton = document.querySelector('.submenu-toggle');
+// const submenu = document.querySelector('.submenu'); 
 
+
+// const openSubmenu = () => {
+//     submenuButton.setAttribute('aria-expanded', 'true');
+//     HasSubmenu.classList.add('show');
+//     submenuButton.setAttribute('aria-label', 'Submenu sluiten');
+//     submenuButton.setAttribute('aria-pressed', 'true');
+// }
 
 // Darkmode
 
