@@ -116,25 +116,70 @@ media.addEventListener('change', updateNavbar);
 updateNavbar(media);
 
 // Submenu
+document.addEventListener('DOMContentLoaded', () => {
+    const submenuToggles = document.querySelectorAll('.submenu-toggle');
 
-// const hasSubmenu = document.querySelector('.has-submenu');
-// const submenuButton = document.querySelector('.submenu-toggle');
-// const submenu = document.querySelector('.submenu'); 
+    submenuToggles.forEach(button => {
+        const parentItem = button.closest('.has-submenu');
+        if (!parentItem) return; // Skip als structuur niet klopt
 
+        const submenu = parentItem.querySelector('.submenu');
+        if (!submenu) return; // Skip als submenu niet bestaat
 
-// const openSubmenu = () => {
-//     submenuButton.setAttribute('aria-expanded', 'true');
-//     hasSubmenu.classList.add('open');
-//     submenuButton.setAttribute('aria-label', 'Submenu sluiten');
-//     submenuButton.setAttribute('aria-pressed', 'true');
-// }
+        let hoverTimeout;
 
-// const closeSubmenu = () => {
-//     submenuButton.setAttribute('aria-expanded', 'false');
-//     hasSubmenu.classList.remove('open');
-//     submenuButton.setAttribute('aria-label', 'Submenu openen');
-//     submenuButton.setAttribute('aria-pressed', 'false');
-// }
+        const openSubmenu = () => {
+            button.setAttribute('aria-expanded', 'true');
+            button.setAttribute('aria-pressed', 'true');
+            button.setAttribute('aria-label', 'Submenu sluiten');
+            parentItem.classList.add('open');
+        };
+
+        const closeSubmenu = () => {
+            button.setAttribute('aria-expanded', 'false');
+            button.setAttribute('aria-pressed', 'false');
+            button.setAttribute('aria-label', 'Submenu openen');
+            parentItem.classList.remove('open');
+        };
+
+        // Klik
+        button.addEventListener('click', (e) => {
+            e.preventDefault();
+            if (parentItem.classList.contains('open')) {
+                closeSubmenu();
+            } else {
+                openSubmenu();
+            }
+        });
+
+        // Hover
+        parentItem.addEventListener('mouseenter', () => {
+            clearTimeout(hoverTimeout);
+            hoverTimeout = setTimeout(openSubmenu, 300);
+        });
+
+        parentItem.addEventListener('mouseleave', () => {
+            clearTimeout(hoverTimeout);
+            hoverTimeout = setTimeout(closeSubmenu, 300);
+        });
+
+        // Keyboard
+        button.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                if (parentItem.classList.contains('open')) {
+                    closeSubmenu();
+                } else {
+                    openSubmenu();
+                }
+            } else if (e.key === 'Escape') {
+                closeSubmenu();
+                button.focus();
+            }
+        });
+    });
+});
+       
 
 // Darkmode
 
