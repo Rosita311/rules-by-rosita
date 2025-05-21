@@ -34,11 +34,14 @@ img.rr-logo {
     list-style: none;
     display: flex;
     padding: 0;
+    margin: 0;
+    gap: 1.5rem;
 } 
 
-#header-nav li {
+#header-nav > li {
     display: flex;
-    padding: 0 2rem;
+    padding: 0;
+    margin: 0;
 }
 
 #header-nav a {
