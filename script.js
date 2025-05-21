@@ -121,10 +121,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     submenuToggles.forEach(button => {
         const parentItem = button.closest('.has-submenu');
-        if (!parentItem) return; // Skip als structuur niet klopt
+        if (!parentItem) return; 
 
         const submenu = parentItem.querySelector('.submenu');
-        if (!submenu) return; // Skip als submenu niet bestaat
+        if (!submenu) return; 
 
         let hoverTimeout;
 
@@ -141,8 +141,7 @@ document.addEventListener('DOMContentLoaded', () => {
             button.setAttribute('aria-label', 'Submenu openen');
             parentItem.classList.remove('open');
         };
-
-        // Klik
+ 
         button.addEventListener('click', (e) => {
             e.preventDefault();
             if (parentItem.classList.contains('open')) {
@@ -152,18 +151,16 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-        // Hover
         parentItem.addEventListener('mouseenter', () => {
             clearTimeout(hoverTimeout);
-            hoverTimeout = setTimeout(openSubmenu, 300);
+            hoverTimeout = setTimeout(openSubmenu, 500);
         });
 
         parentItem.addEventListener('mouseleave', () => {
             clearTimeout(hoverTimeout);
-            hoverTimeout = setTimeout(closeSubmenu, 300);
+            hoverTimeout = setTimeout(closeSubmenu, 500);
         });
 
-        // Keyboard
         button.addEventListener('keydown', (e) => {
             if (e.key === 'Enter' || e.key === ' ') {
                 e.preventDefault();
@@ -180,7 +177,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
        
-
 // Darkmode
 
 document.addEventListener('DOMContentLoaded', () => {
