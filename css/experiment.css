@@ -91,7 +91,7 @@
 
 .submenu li a[aria-current="page"] {
   background-color: var(--color-primary);
-  color: var(--color-background);
+  color: var(--color-background) !important;
 }
 
 @media screen and (max-width: 1024px) {
