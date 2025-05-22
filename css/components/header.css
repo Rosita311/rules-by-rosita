@@ -35,13 +35,11 @@ img.rr-logo {
     display: flex;
     padding: 0;
     margin: 0;
-    gap: 2rem;
 } 
 
 #header-nav > li {
     display: flex;
     padding: 0;
-    margin: 0;
 }
 
 #header-nav a {
@@ -52,6 +50,7 @@ img.rr-logo {
     text-decoration: none;
     color: var(--color-text);
     padding: 1em 0; 
+    margin: 0 1.5rem;
     border-bottom: 2px solid transparent;
     transition: background-color 150ms ease;
 

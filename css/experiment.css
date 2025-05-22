@@ -59,7 +59,7 @@
   padding: 1rem 1.5rem !important;
   color: var(--color-text);
   text-decoration: none;
-  margin: 0;
+  margin: 0 !important;
 }
 
 .submenu li a:hover,
