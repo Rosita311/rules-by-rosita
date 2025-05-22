@@ -20,6 +20,8 @@
   font: inherit;
   cursor: pointer;
   color: var(--color-text);
+  border-bottom: 2px solid transparent; 
+  transition: border-bottom 150ms ease, background-color 150ms ease;
 }
 
 /* Visuele feedback bij hover/focus */
@@ -29,6 +31,10 @@
 .has-submenu > button.submenu-toggle:focus {
   outline: 2px solid var(--color-text);
 }
+
+.has-submenu.open > .submenu-toggle {
+    border-bottom: 2px solid var(--color-primary);
+  }
 
 /* Submenu standaard verborgen */
 .submenu {
@@ -60,6 +66,19 @@
   color: var(--color-text);
   text-decoration: none;
   margin: 0 !important;
+
+      &:hover  {
+            border-bottom: none;
+            background-color: var(--color-contrast);
+            color: var(--color-bg-light);
+      }
+
+      &:focus {
+            border-bottom: none;
+            background-color: var(--color-primary);
+            color: var(--color-background);
+            outline: 2px solid var(--color-text);
+      }
 }
 
 .submenu li a:hover,
@@ -82,12 +101,24 @@
         width: 100%;
         transition: background-color 150ms ease;
 
-        &:hover, &:focus {
+        &:hover  {
             border-bottom: none;
             background-color: var(--color-contrast);
             color: var(--color-bg-light);
       }
+
+      &:focus {
+            border-bottom: none;
+            background-color: var(--color-primary);
+            color: var(--color-background);
+            outline: 2px solid var(--color-text);
+      }
     }
+
+  .has-submenu.open > .submenu-toggle {
+      background-color: var(--color-primary);
+      color: var(--color-background);
+  }
   .submenu {
     position: static;
     width: 100%;

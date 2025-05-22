@@ -181,6 +181,7 @@ img.rr-logo {
         overflow-y: auto;
         overscroll-behavior: contain;
         -webkit-overflow-scrolling: touch;
+        overflow-x: hidden;
     }
 
     .header-container #header-nav.show {
@@ -202,10 +203,17 @@ img.rr-logo {
         width: 100%;
         transition: background-color 150ms ease;
 
-        &:hover, &:focus {
+        &:hover {
             border-bottom: none;
             background-color: var(--color-contrast);
             color: var(--color-bg-light);
+        }
+
+        &:focus {
+            border-bottom: none;
+            background-color: var(--color-primary);
+            color: var(--color-);
+            outline: 2px solid var(--color-text);
         }
     }
 
