@@ -198,6 +198,7 @@ img.rr-logo {
 
     .header-container #header-nav a {
         padding: 1em 2.5em;
+        margin: 0;
         width: 100%;
         transition: background-color 150ms ease;
 
