@@ -88,7 +88,7 @@ img.rr-logo {
   background-color: var(--color-text);
   color: var(--color-background);
   border-radius: 50%;
-  outline: none; /* Optioneel, alleen als je de default outline niet wilt */
+  outline: 2px solid var(--color-text); 
 }
 
 .menu-button:focus-visible svg,
@@ -308,6 +308,7 @@ img.rr-logo {
             border-bottom: none;
             background-color: var(--color-text);
             color: var(--color-background);
+            outline: 2px solid var(--color-text); 
       }
     }
 

@@ -169,6 +169,7 @@ footer {
   background-color: var(--color-text);
   color: var(--color-background);
   border-radius: 50%;
+  outline: 2px solid var(--color-text); 
 }
 
 .footer-social-media a:focus-visible svg {
