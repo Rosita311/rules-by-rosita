@@ -231,6 +231,7 @@ img.rr-logo {
             background-color: var(--color-primary);
             color: var(--color-background);
             outline: 2px solid var(--color-text);
+            border-radius: 0;
       }
 }
 
@@ -243,6 +244,7 @@ img.rr-logo {
   background-color: var(--color-text);
   color: var(--color-background);
   outline: 2px solid var(--color-text);
+  border-radius: 0;
 }
 
 
@@ -320,7 +322,8 @@ img.rr-logo {
             border-bottom: none;
             background-color: var(--color-text);
             color: var(--color-background);
-            outline: 2px solid var(--color-text); 
+            outline: 2px solid var(--color-text);
+            border-radius: 0; 
       }
     }
 
@@ -374,6 +377,7 @@ img.rr-logo {
             background-color: var(--color-text);
             color: var(--color-background);
             outline: 2px solid var(--color-text);
+            border-radius: 0;
       }
     }
 
