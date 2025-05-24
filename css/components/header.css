@@ -6,6 +6,10 @@
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
 }
+#top a:focus-visible {
+  outline: 2px solid var(--color-text); 
+  border-radius: 0.25rem;  
+}
 
 img.rr-logo {
     max-width: 10rem;
@@ -17,11 +21,6 @@ img.rr-logo {
     justify-content: flex-end;
     align-items: center; 
 
-}
-
-#top a:focus {
-  outline: 2px solid var(--color-text); 
-  border-radius: 0.25rem;  
 }
 
 /* Header Navigation */
