@@ -14,28 +14,39 @@ const navLinks = document.querySelectorAll('#header-nav a');
 let currentTrapHandler = null;
 let escKeyHandler = null;
 
+// Trap focus within the sidebar when open
+
 const trapFocus = (container) => {
-    const focusableSelectors = 'a[href], button:not([disabled]), textarea, input, select, [tabindex]:not([tabindex="-1"])';
-    const focusableEls = container.querySelectorAll(focusableSelectors);
-    const firstEl = focusableEls[0];
-    const lastEl = focusableEls[focusableEls.length - 1];
+  const isVisible = el => !!(el.offsetWidth || el.offsetHeight || el.getClientRects().length);
 
-    const handleTrap = (e) => {
-        if (e.key === 'Tab') {
-            if(e.shiftKey && document.activeElement === firstEl) {
-                e.preventDefault();
-                lastEl.focus();
-            } else if (!e.shiftKey && document.activeElement === lastEl) {
-                e.preventDefault();
-                firstEl.focus();
-            }
-        }
+  const focusableSelectors = 'a[href], button:not([disabled]), textarea, input, select, [tabindex]:not([tabindex="-1"])';
+
+  const handleTrap = (e) => {
+    if (e.key === 'Tab') {
+      const focusableEls = Array.from(container.querySelectorAll(focusableSelectors))
+    .filter(el => !el.hasAttribute('disabled') && isVisible(el));
+
+      const firstEl = focusableEls[0];
+      const lastEl = focusableEls[focusableEls.length - 1];
+
+      if (e.shiftKey && document.activeElement === firstEl) {
+        e.preventDefault();
+        lastEl.focus();
+      } else if (!e.shiftKey && document.activeElement === lastEl) {
+        e.preventDefault();
+        firstEl.focus();
+      }
     }
-    container.addEventListener('keydown', handleTrap);
-    container.setAttribute('data-trap-bound', 'true');
-
-    return handleTrap;
   };
+
+  container.addEventListener('keydown', handleTrap);
+  container.setAttribute('data-trap-bound', 'true');
+
+  return handleTrap;
+};
+
+
+
 
   const openSidebar = () => {
     navbar.classList.add("show");
@@ -95,20 +106,25 @@ navLinks.forEach(link => {
 
 const updateNavbar = (e) => {
     const isMobile = e.matches;
-    console.log("Screen changed. Mobile view:", isMobile)
-    if (isMobile) {
-            navbar.setAttribute('inert', '');
-        } else {
-            navbar.removeAttribute('inert');
-            navbar.classList.remove("show");
-            overlay.style.display = "none";
-            openButton.setAttribute('aria-expanded', 'false');
+    console.log("Screen changed. Mobile view:", isMobile);
 
-            if (currentTrapHandler) {
-                navbar.removeEventListener('keydown', currentTrapHandler);
-                navbar.removeAttribute('data-trap-bound');
-                currentTrapHandler = null;
-            }
+    if (isMobile) {
+        navbar.setAttribute('inert', '');
+    } else {
+        navbar.removeAttribute('inert');
+        mainContent.removeAttribute('inert');
+        menuButtons.removeAttribute('inert');
+        footer.removeAttribute('inert');
+
+        navbar.classList.remove("show");
+        overlay.style.display = "none";
+        openButton.setAttribute('aria-expanded', 'false');
+
+        if (currentTrapHandler) {
+            navbar.removeEventListener('keydown', currentTrapHandler);
+            navbar.removeAttribute('data-trap-bound');
+            currentTrapHandler = null;
+        }
     }
 };
 
@@ -125,6 +141,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const submenu = parentItem.querySelector('.submenu');
         if (!submenu) return; 
+
+        submenu.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && parentItem.classList.contains('open')) {
+            closeSubmenu();
+            button.focus();
+        }
+    });
+
 
         let hoverTimeout;
 
