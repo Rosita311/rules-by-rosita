@@ -44,6 +44,22 @@ html.no-js {
     display: none; 
   }
 
+  /* 
+  v.no-js .has-submenu > .submenu {
+  display: block; /* submenu standaard zichtbaar zonder JS 
+}
+
+.no-js .has-submenu > .submenu {
+  display: none;
+}
+
+.has-submenu:hover > .submenu,
+.has-submenu:focus-within > .submenu {
+  display: block;
+}
+
+*/
+
 @media screen and (max-width: 1024px) {
     html.no-js #header-nav {
         position: static;      /* geen fixed/slide‑in positionering */
