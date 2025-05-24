@@ -79,11 +79,25 @@ img.rr-logo {
     &:hover {
         background-color: var(--color-menu-button-hover);
     }
-
-    &:focus {
-        outline: 2px solid var(--color-primary);
-    }
  }
+
+.menu-button:focus-visible,
+#open-sidebar-button:focus-visible,
+#close-sidebar-button:focus-visible,
+#theme-switch:focus-visible {
+  background-color: var(--color-text);
+  color: var(--color-background);
+  border-radius: 50%;
+  outline: none; /* Optioneel, alleen als je de default outline niet wilt */
+}
+
+.menu-button:focus-visible svg,
+#open-sidebar-button:focus-visible svg,
+#close-sidebar-button:focus-visible svg,
+#theme-switch:focus-visible svg {
+  stroke: var(--color-background);
+}
+
 
 /* Mobile Menu */
 
@@ -93,22 +107,12 @@ img.rr-logo {
     margin-left: auto;
     padding: 0.5em;
     margin-right: 0.25rem;
-
-    &:focus {
-        border-radius: 50%;
-        outline: 2px solid var(--color-primary);
-    }
 }
 
 #close-sidebar-button {
     display: none;
     background: none;
     padding: 0.5em;
-
-    &:focus {
-        border-radius: 50%;
-        outline: 2px solid var(--color-primary);
-    }
 }
 
 #overlay {
@@ -142,6 +146,97 @@ img.rr-logo {
 
 .darkmode #theme-switch svg:last-child {
     display: block;
+}
+
+/* Submenu */
+.has-submenu {
+  position: relative;
+}
+
+.has-submenu > button.submenu-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 0;
+  margin: 0 1.5rem;
+  background: none;
+  border: none;
+  font: inherit;
+  cursor: pointer;
+  color: var(--color-text);
+  border-bottom: 2px solid transparent; 
+  transition: border-bottom 150ms ease, background-color 150ms ease;
+}
+
+/* Visuele feedback bij hover/focus */
+.has-submenu > button.submenu-toggle:hover {
+     border-bottom: 2px solid var(--color-contrast);
+}
+.has-submenu > button.submenu-toggle:focus {
+  outline: 2px solid var(--color-text);
+  border-bottom: 2px solid var(--color-contrast);
+}
+
+.has-submenu.open > .submenu-toggle {
+    border-bottom: 2px solid var(--color-primary);
+  }
+
+/* Submenu standaard verborgen */
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+  
+  flex-direction: column;
+  background-color: var(--color-background);
+  border-radius: 0.25rem;
+  border: 1px solid var(--color-accent);
+  margin: 0;
+  list-style: none;
+  min-width: 10rem;
+  z-index: 10; 
+}
+
+/*Toon submenu als de parent 'open' is  */
+ .has-submenu.open .submenu {
+  display: flex;
+} 
+
+
+.submenu > li a {
+  display: block;
+  width: 100%;
+  padding: 1rem 1.5rem !important;
+  color: var(--color-text);
+  text-decoration: none;
+  margin: 0 !important;
+
+      &:hover  {
+            border-bottom: none;
+            background-color: var(--color-contrast);
+            color: var(--color-bg-light);
+      }
+
+      &:focus-visible {
+            border-bottom: none;
+            background-color: var(--color-primary);
+            color: var(--color-background);
+            outline: 2px solid var(--color-text);
+      }
+}
+
+.submenu li a:hover,
+.submenu li a:focus {
+  background-color: var(--color-contrast);
+  color: var(--color-bg-light);
+  outline: none;
+}
+
+
+.submenu li a[aria-current="page"] {
+  background-color: var(--color-primary);
+  color: var(--color-background) !important;
 }
 
 
@@ -209,12 +304,11 @@ img.rr-logo {
             color: var(--color-bg-light);
         }
 
-        &:focus {
+        &:focus-visible {
             border-bottom: none;
-            background-color: var(--color-primary);
-            color: var(--color-);
-            outline: 2px solid var(--color-text);
-        }
+            background-color: var(--color-text);
+            color: var(--color-background);
+      }
     }
 
     .header-container #header-nav a[aria-current="page"] {
@@ -247,3 +341,51 @@ img.rr-logo {
         gap: 0;
     }
 }
+
+/* Submenu */
+@media screen and (max-width: 1024px) {
+    .has-submenu > button.submenu-toggle {
+        padding: 1em 2.5em;
+        margin: 0;
+        width: 100%;
+        transition: background-color 150ms ease;
+
+        &:hover  {
+            border-bottom: none;
+            background-color: var(--color-contrast);
+            color: var(--color-bg-light);
+      }
+
+      &:focus-visible {
+            border-bottom: none;
+            background-color: var(--color-text);
+            color: var(--color-background);
+            outline: 2px solid var(--color-text);
+      }
+    }
+
+  .has-submenu.open > .submenu-toggle {
+      background-color: var(--color-primary);
+      color: var(--color-background);
+  }
+  .submenu {
+    position: static;
+    width: 100%;
+    border-radius: 0;
+    border: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .submenu > li {
+    width: 100%;
+  }
+  
+  .submenu > li a {
+    padding: 1rem 3.5em !important;
+    width: 100%;
+    transition: background-color 150ms ease;
+  }
+  
+}
+

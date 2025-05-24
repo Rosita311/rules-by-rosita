@@ -90,6 +90,11 @@ footer {
         border: 2px solid var(--color-text);
         transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
     }
+
+    &:focus-visible {
+        outline: 2px solid var(--color-text);
+        border-radius: 0.25rem;
+    }
 }
 
 .footer-social-media {
@@ -117,7 +122,7 @@ footer {
     list-style-type: none;
 }
 
-.footer-social-media li {
+.footer-social-media li a {
     padding: 0.5em;
     border-radius: 50%;
     display: flex;
@@ -130,11 +135,6 @@ footer {
     &:hover {
         background-color: var(--color-contrast);
         transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
-    }
-
-    &:focus {
-        border-radius: 50%;
-        outline: 2px solid var(--color-primary);
     }
 }
 
@@ -153,6 +153,11 @@ footer {
     stroke: var(--color-bg-light); 
     transition: stroke 0.3s ease-in-out;
   }
+
+    .footer-social-media li:focus svg {
+        stroke: var(--color-background); 
+        transition: stroke 0.3s ease-in-out;
+    }
   
   .footer-social-media li svg {
     stroke: var(--color-text);
@@ -160,6 +165,15 @@ footer {
     pointer-events: visiblePainted; 
   }
   
+.footer-social-media a:focus-visible {
+  background-color: var(--color-text);
+  color: var(--color-background);
+  border-radius: 50%;
+}
+
+.footer-social-media a:focus-visible svg {
+  stroke: var(--color-background);
+}
 
 .footer-info {
     display: flex;

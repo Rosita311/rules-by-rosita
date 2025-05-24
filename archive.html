@@ -33,7 +33,21 @@
                     <li><a href="archive.html" aria-current="page">Persoonlijk(Archive)<span class="sr-only">(huidige pagina)</span></a></li>
                     <li><a href="page.html">Life(page)</a></li>
                     <li><a href="searchresults.html">Tips and Tricks(Zoekresultaten)</a></li>
-                    <li><a href="#">Over mij</a></li>
+                    <li class="has-submenu">
+                        <button
+                            aria-haspopup="true"
+                            aria-expanded="false"
+                            aria-controls="submenu-about"
+                            class="submenu-toggle"
+                        >
+                            Over mij
+                        </button>
+                        <ul id="submenu-about" class="submenu">
+                            <li><a href="single.html">Rosita</a></li>
+                            <li><a href="page.html">Contact</a></li>
+                            <li><a href="index.html">Privacyverklaring</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </nav> 
             <div class="menu-buttons">
