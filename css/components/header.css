@@ -227,11 +227,11 @@ img.rr-logo {
       }
 
       &:focus-visible {
-            border-bottom: none;
-            background-color: var(--color-primary);
-            color: var(--color-background);
+            border-bottom: none! important;
+            background-color: var(--color-text);
+            color: var(--color-background) !important;
             outline: 2px solid var(--color-text);
-            border-radius: 0;
+            border-radius: 0 !important;
       }
 }
 
@@ -239,14 +239,6 @@ img.rr-logo {
     background-color: var(--color-contrast);
     color: var(--color-bg-light);
 }
-
-.submenu li a:focus {
-  background-color: var(--color-text);
-  color: var(--color-background);
-  outline: 2px solid var(--color-text);
-  border-radius: 0;
-}
-
 
 .submenu li a[aria-current="page"] {
   background-color: var(--color-primary);
