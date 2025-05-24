@@ -234,11 +234,15 @@ img.rr-logo {
       }
 }
 
-.submenu li a:hover,
+.submenu li a:hover {
+    background-color: var(--color-contrast);
+    color: var(--color-bg-light);
+}
+
 .submenu li a:focus {
-  background-color: var(--color-contrast);
-  color: var(--color-bg-light);
-  outline: none;
+  background-color: var(--color-text);
+  color: var(--color-background);
+  outline: 2px solid var(--color-text);
 }
 
 
