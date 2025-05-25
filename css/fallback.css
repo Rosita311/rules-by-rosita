@@ -44,9 +44,23 @@ html.no-js {
     display: none; 
   }
 
-  /* 
-  v.no-js .has-submenu > .submenu {
-  display: block; /* submenu standaard zichtbaar zonder JS 
+  .no-js .has-submenu > button.submenu-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 0;
+  margin: 0 1.5rem;
+  background: none;
+  border: none;
+  font: inherit;
+  cursor: pointer;
+  color: var(--color-text);
+  border-bottom: 2px solid transparent; 
+  transition: border-bottom 150ms ease, background-color 150ms ease;
+}
+
+  .no-js .has-submenu > .submenu {
+  display: block;
 }
 
 .no-js .has-submenu > .submenu {
@@ -58,7 +72,7 @@ html.no-js {
   display: block;
 }
 
-*/
+
 
 @media screen and (max-width: 1024px) {
     html.no-js #header-nav {
@@ -143,5 +157,13 @@ html.no-js {
     html.no-js #header-nav a {
         padding: 0.25em 0 0.25em 0; 
         width: auto;
+    }
+
+  .no-js .has-submenu > button.submenu-toggle {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.25rem 0;
+      margin: 0;
     }
   }

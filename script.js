@@ -177,12 +177,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
         parentItem.addEventListener('mouseenter', () => {
             clearTimeout(hoverTimeout);
-            hoverTimeout = setTimeout(openSubmenu, 500);
+            hoverTimeout = setTimeout(openSubmenu, 800);
         });
 
         parentItem.addEventListener('mouseleave', () => {
             clearTimeout(hoverTimeout);
-            hoverTimeout = setTimeout(closeSubmenu, 500);
+            hoverTimeout = setTimeout(closeSubmenu, 800);
         });
 
         button.addEventListener('keydown', (e) => {
