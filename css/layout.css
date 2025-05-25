@@ -55,12 +55,19 @@
   transform: translateY(-4px);
 }
 
-.back-to-top:focus {
-  outline: 2px solid var(--color-text);
-}
-
 .back-to-top:hover svg {
   stroke: var(--color-text);
+}
+
+.back-to-top:focus-visible {
+  background-color: var(--color-text);
+  color: var(--color-background);
+  border-radius: 50%;
+  outline: 2px solid var(--color-text); 
+}
+
+.back-to-top:focus-visible svg {
+  stroke: var(--color-background);
 }
 
 .back-to-top-tooltip {
