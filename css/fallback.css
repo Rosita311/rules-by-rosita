@@ -67,10 +67,10 @@ html.no-js {
   display: none;
 }
 
-.has-submenu:hover > .submenu,
-.has-submenu:focus-within > .submenu {
+.no-js .has-submenu:hover > .submenu,
+.no-js .has-submenu:focus-within > .submenu {
   display: block;
-}
+} 
 
 
 

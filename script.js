@@ -178,12 +178,12 @@ document.addEventListener('DOMContentLoaded', () => {
         parentItem.addEventListener('mouseenter', () => {
             clearTimeout(hoverTimeout);
             hoverTimeout = setTimeout(openSubmenu, 800);
-        });
+         });
 
         parentItem.addEventListener('mouseleave', () => {
             clearTimeout(hoverTimeout);
             hoverTimeout = setTimeout(closeSubmenu, 800);
-        });
+         });
 
         button.addEventListener('keydown', (e) => {
             if (e.key === 'Enter' || e.key === ' ') {
