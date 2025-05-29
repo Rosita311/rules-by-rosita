@@ -91,7 +91,7 @@ html {
 
 .entry-content a:not([class*="btn"])hover,
 .entry-content a:focus-visible {
-  text-decoration: none; /* underline verdwijnt */
+  text-decoration: none; 
 }
 
 .entry-content a:not([class*="btn"]):hover::after,
@@ -120,9 +120,6 @@ html {
   transform-origin: left;
   transition: transform 0.3s ease;
 }
-
-
-
 
 h1 {
     font-size: clamp(2rem, 5vw + 1rem, 3rem);
@@ -247,7 +244,15 @@ button {
     .page-title {
         animation: none;
         opacity: 1;
-        transform: none;
+        transform: none !important;
+    }
+
+    .entry-content a:not([class*="btn"]) {
+      transition: none !important;
+    }
+
+    .entry-content a:not([class*="btn"])::after {
+      transition: none !important;
     }
 
     .back-to-top {
