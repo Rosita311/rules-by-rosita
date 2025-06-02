@@ -175,15 +175,27 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
+        let hoverOpenTimeout;
+        let hoverCloseTimeout;
+
+        const cancelClose = () => clearTimeout(hoverCloseTimeout);
+
+        // Hover in
         parentItem.addEventListener('mouseenter', () => {
-            clearTimeout(hoverTimeout);
-            hoverTimeout = setTimeout(openSubmenu, 800);
-         });
+            clearTimeout(hoverCloseTimeout);
+            hoverOpenTimeout = setTimeout(openSubmenu, 300);
+        });
 
         parentItem.addEventListener('mouseleave', () => {
-            clearTimeout(hoverTimeout);
-            hoverTimeout = setTimeout(closeSubmenu, 800);
-         });
+            clearTimeout(hoverOpenTimeout);
+            hoverCloseTimeout = setTimeout(closeSubmenu, 300);
+        });
+
+        submenu.addEventListener('mouseenter', cancelClose);
+        submenu.addEventListener('mouseleave', () => {
+            hoverCloseTimeout = setTimeout(closeSubmenu, 300);
+        });
+
 
         button.addEventListener('keydown', (e) => {
             if (e.key === 'Enter' || e.key === ' ') {

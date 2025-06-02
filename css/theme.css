@@ -220,6 +220,10 @@ button {
   /* Media Queries */
   
   @media (prefers-reduced-motion: reduce) {
+    .chevron {
+      transition: none !important;
+    }
+    
     .page-title {
         animation: none;
         opacity: 1;

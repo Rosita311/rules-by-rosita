@@ -246,7 +246,26 @@ img.rr-logo {
   color: var(--color-background) !important;
 }
 
+.submenu-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  background: none;
+  border: none;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
 
+.chevron {
+  display: inline-block;
+  transition: transform 0.25s ease-in-out;
+  transform-origin: center;
+}
+
+.submenu-toggle[aria-expanded="true"] .chevron {
+  transform: rotate(-90deg);
+}
 
 /* Media Queries */
 
