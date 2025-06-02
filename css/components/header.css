@@ -9,13 +9,19 @@
 
 #top a :focus-visible {
   outline: 2px solid var(--color-text);
+  outline-offset: 2px;
   border-radius: 0.25rem;
 }
 
-
-img.rr-logo {
+.site-logo img {
     max-width: 10rem;
     margin-right: 2rem;
+}
+
+.site-logo a:focus-visible {
+  outline: 2px solid var(--color-text);
+  outline-offset: 4px;
+  border-radius: 0.25rem;
 }
 
 .menu-items {
@@ -276,8 +282,9 @@ img.rr-logo {
         padding-right: 1.5rem;
     }
 
-    .header-container img.rr-logo {
+    .site-logo img {
         max-width: 7rem;
+        margin-bottom: 0.5rem;
     }
 
     body.menu-open {
@@ -361,8 +368,9 @@ img.rr-logo {
 }
 
 @media screen and (max-width: 768px) {
-    .header-container img.rr-logo {
+    .site-logo img {
         max-width: 5rem;
+        margin-bottom: 0;
     }
 
     #open-sidebar-button {
