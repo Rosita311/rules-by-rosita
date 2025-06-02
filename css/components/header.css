@@ -354,6 +354,10 @@ img.rr-logo {
         padding: 0.5em;
         margin: 2em;
     }
+
+    .submenu-toggle:hover .chevron svg {
+        stroke: var(--color-bg-light);
+    }
 }
 
 @media screen and (max-width: 768px) {
