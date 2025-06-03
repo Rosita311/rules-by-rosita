@@ -7,18 +7,12 @@
     padding-bottom: 0.5rem;
 }
 
-#top a :focus-visible {
-  outline: 2px solid var(--color-text);
-  outline-offset: 2px;
-  border-radius: 0.25rem;
-}
-
-.site-logo img {
+.site-logo {
     max-width: 10rem;
     margin-right: 2rem;
 }
 
-.site-logo a:focus-visible {
+a#top:focus-visible {
   outline: 2px solid var(--color-text);
   outline-offset: 4px;
   border-radius: 0.25rem;
