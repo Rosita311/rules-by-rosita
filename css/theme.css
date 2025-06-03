@@ -220,8 +220,8 @@ button {
   /* Media Queries */
   
   @media (prefers-reduced-motion: reduce) {
-    .chevron {
-      transition: none !important;
+    .submenu-toggle[aria-expanded="true"] .chevron {
+      transform: none !important;
     }
     
     .page-title {
