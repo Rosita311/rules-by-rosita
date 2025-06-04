@@ -129,6 +129,24 @@
     gap: 1.5rem;
 }
 
+.introduction-iconlist {
+    list-style-type: none;
+}
+
+.introduction-iconlist li {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 0.75rem;
+}
+
+.introduction-iconlist .icon {
+    margin-right: 0.5rem;
+    stroke: var(--color-text);
+}
+
+
 /* Page hero styles */
 .page-hero { 
     padding-top: 7rem;
