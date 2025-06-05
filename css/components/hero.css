@@ -126,11 +126,11 @@
     justify-content: center;
     max-width: 100%;
     width: 100%;
-    gap: 1.5rem;
 }
 
 .introduction-iconlist {
     list-style-type: none;
+    padding: 0;
 }
 
 .introduction-iconlist li {
@@ -142,7 +142,7 @@
 }
 
 .introduction-iconlist .icon {
-    margin-right: 0.5rem;
+    margin-right: 1rem;
     stroke: var(--color-text);
 }
 

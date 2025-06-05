@@ -132,6 +132,17 @@ h6 {
     line-height: 1.4em;
 }
 
+    .entry-content h2,
+    .entry-content h3,
+    .entry-content h4,
+    .entry-content h5,
+    .entry-content h6,
+    .entry-content p,
+    .entry-content ul,
+    .entry-content ol {
+      margin-bottom: 1rem;
+    }
+
 svg {
     width: 1.5rem;
     height: 1.5rem;
