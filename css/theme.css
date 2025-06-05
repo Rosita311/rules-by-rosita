@@ -199,6 +199,44 @@ button {
     background-size: 20px 20px;
 }
 
+/* Forms */
+.site-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+    max-width: 25rem;
+  }
+  
+  .site-form label {
+    font-weight: bold;
+  }
+  
+  .site-form-row {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+  
+.site-form input[type="email"],
+.site-form input[type="text"],
+.site-form input[type="password"],
+.site-form input[type="search"],
+.site-form input[type="url"],
+.site-form textarea {
+    padding: 0.5rem 0.5rem;
+    border-radius: 0.25rem;
+    border: 1px solid var(--color-text);
+    flex: 1 1 auto;
+    min-width: 200px;
+    background-color: var(--color-background);
+    font-family: var(--font-body);
+    font-size: 1rem;
+    color: var(--color-text);
+}
+
+
  /* A11y */
 .skip-link {
     position: absolute;

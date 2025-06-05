@@ -62,36 +62,6 @@ footer {
     flex-wrap: wrap;
 }
 
-.footer-form {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    width: 100%;
-    max-width: 25rem;
-  }
-  
-  .footer-form label {
-    font-weight: bold;
-  }
-  
-  .footer-form-row {
-    display: flex;
-    flex-direction: row;
-    gap: 0.5rem;
-    flex-wrap: wrap;
-  }
-  
-.footer-form input[type="email"] {
-    padding: 0.75rem 0.5rem;
-    border-radius: 0.25rem;
-    border: 1px solid var(--color-text);
-    flex: 1 1 auto;
-    min-width: 200px;
-    background-color: var(--color-background);
-    font-family: var(--font-body);
-    font-size: 1rem;
-    color: var(--color-text);
-}
 
 .footer-btn {
     border: 2px solid var(--color-contrast);
