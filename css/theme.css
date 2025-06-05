@@ -24,7 +24,7 @@
     --color-bg-light: #192324;
     --color-menu-button-hover: #f8c9d7;
     --color-button-hover: #E38CA6;
-    --color-button-text: #F8F4F5;
+    --color-primary-btn-text: #F8F4F5;
     --color-page-hero-bg: #f8c9d7;
     --color-plumbob: #7ecf3a; /* originele Sims-groen */
     --color-plumbob-hover: #aaff66;
@@ -34,7 +34,7 @@
 
 .darkmode {
     --color-text: rgba(255, 255, 255, 0.87);
-    --color-primary: #DD3F60;
+    --color-primary: #F7636F;
     --color-accent: #E38CA6;
     --color-accent-2: #293a3d;
     --color-footer: #103C42; 
@@ -44,7 +44,7 @@
     --color-card-bg: #293a3d;
     --color-menu-button-hover: #293a3d;
     --color-button-hover: #E38CA6;
-    --color-button-text: #192324;
+    --color-primary-btn-text: #192324;
     --color-page-hero-bg: #103C42;
     --color-plumbob: #7ecf3a;
     --color-plumbob-hover: #b6ff7e;
@@ -162,12 +162,12 @@ button {
     font-family: var(--font-body);
     font-size: 1.125rem;
     font-weight: 700;
-    color: var(--color-button-text);
+    color: var(--color-text);
 }
 
 .btn-primary {
     background-color: var(--color-primary);
-    color: var(--color-button-text);
+    color: var(--color-primary-btn-text);
     border: none;
     transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
@@ -269,6 +269,12 @@ button {
   /* Media Queries */
   
   @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+      animation: none !important;
+      transition: none !important;
+      scroll-behavior: auto !important;
+    }
+    
     .submenu-toggle[aria-expanded="true"] .chevron {
       transform: none !important;
     }
@@ -277,14 +283,6 @@ button {
         animation: none;
         opacity: 1;
         transform: none !important;
-    }
-
-    .entry-content a:not([class*="btn"]) {
-      transition: none !important;
-    }
-
-    .entry-content a:not([class*="btn"])::after {
-      transition: none !important;
     }
 
     .back-to-top {

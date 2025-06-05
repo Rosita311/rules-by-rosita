@@ -225,7 +225,7 @@ a #top:focus-visible {
       &:hover  {
             border-bottom: none;
             background-color: var(--color-contrast);
-            color: var(--color-bg-light);
+            color: var(--color-bg-light) !important;
       }
 
       &:focus-visible {
