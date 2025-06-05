@@ -10,6 +10,8 @@
 .site-logo {
     max-width: 10rem;
     margin-right: 2rem;
+    width: 100%;
+    height: auto;
 }
 
 a #top:focus-visible {
