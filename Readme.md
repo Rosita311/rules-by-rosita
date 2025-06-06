@@ -84,6 +84,7 @@ Een minimalistische en heldere stijl, afgestemd op leesbaarheid en eenvoud.
 ---
 
 ## Ontwikkelstatus
+
 - Zie de [Devlog](#devlog) voor een gedetailleerd overzicht van afgeronde onderdelen en geplande taken.
 
 ---
@@ -131,7 +132,6 @@ Een minimalistische en heldere stijl, afgestemd op leesbaarheid en eenvoud.
 - **Google Fonts** – Voor typografie (`Nunito` & `Zilla Slab`)  
   [https://fonts.google.com](https://fonts.google.com)
 
-
 ---
 
 ## Licentie
@@ -152,53 +152,54 @@ Pull requests en suggesties zijn welkom, maar houd er rekening mee dat dit een p
 
 ### Afgerond
 
-- Hero met CSS-stippenpatroon afgerond  
-- Dark mode automatisch op systeemvoorkeur ingesteld  
-- Dark mode toggle met `localStorage` toegevoegd  
-- Primair rood kleurenschema afgestemd tussen light en dark mode  
-- `rem` en `em` gebruikt voor schaalbaarheid  
-- Skiplink toegevoegd voor schermlezers en toetsenbordgebruikers  
-- Toegankelijke focusstijl voor interactieve elementen in kaart gebracht  
-- Secondary button in dark mode verbeterd (contrast)  
-- Footer bewerkt, inclusief link naar privacyverklaring  
-- Toegankelijke animatie toegevoegd met `prefers-reduced-motion` ondersteuning  
-- GitHub Pages demo opgezet: [rulesbyrosita-theme](https://rosita311.github.io/RulesbyRosita-theme/)  
-- Basis design afgerond  
-- Pagina-structuur opgezet (hero, cards, typografie, kleuren)  
-- Submenu toegevoegd aan hoofdmenu (met aandacht voor toetsenbordnavigatie en aria-attributen)  
-- Basic zoekpagina toegevoegd  
-- `page.html` als structuurtemplate voor o.a. 404-pagina’s en andere pagina’s  
-- **Back to top-knop ontworpen, geïmplementeerd en getest** (toegankelijk, mobielvriendelijk, met animatie en voorkeuren voor `reduced motion`)  
+- Hero met CSS-stippenpatroon afgerond
+- Dark mode automatisch op systeemvoorkeur ingesteld
+- Dark mode toggle met `localStorage` toegevoegd
+- Primair rood kleurenschema afgestemd tussen light en dark mode
+- `rem` en `em` gebruikt voor schaalbaarheid
+- Skiplink toegevoegd voor schermlezers en toetsenbordgebruikers
+- Toegankelijke focusstijl voor interactieve elementen in kaart gebracht
+- Secondary button in dark mode verbeterd (contrast)
+- Footer bewerkt, inclusief link naar privacyverklaring
+- Toegankelijke animatie toegevoegd met `prefers-reduced-motion` ondersteuning
+- GitHub Pages demo opgezet: [rulesbyrosita-theme](https://rosita311.github.io/RulesbyRosita-theme/)
+- Basis design afgerond
+- Pagina-structuur opgezet (hero, cards, typografie, kleuren)
+- Submenu toegevoegd aan hoofdmenu (met aandacht voor toetsenbordnavigatie en aria-attributen)
+- Basic zoekpagina toegevoegd
+- `page.html` als structuurtemplate voor o.a. 404-pagina’s en andere pagina’s
+- **Back to top-knop ontworpen, geïmplementeerd en getest** (toegankelijk, mobielvriendelijk, met animatie en voorkeuren voor `reduced motion`)
 
 ### Nog te doen
 
-- Consistente focusstijl toevoegen (voor buttons, links, inputs – in light & dark mode)  
-- Zoekfunctie verder integreren in WordPress-thema  
-- WordPress PHP-integratie voltooien (loop, dynamic content, template parts)  
-- Logo optimaliseren voor light en dark mode  
-- Favicon aanpassen (licht/donker)  
-- Instellingenmenu inbouwen  
-- Toegankelijkheid testen met tools als WAVE (gebeurt tijdens het hele proces)  
+- Consistente focusstijl toevoegen (voor buttons, links, inputs – in light & dark mode)
+- Zoekfunctie verder integreren in WordPress-thema
+- WordPress PHP-integratie voltooien (loop, dynamic content, template parts)
+- Logo optimaliseren voor light en dark mode
+- Favicon aanpassen (licht/donker)
+- Instellingenmenu inbouwen
+- Toegankelijkheid testen met tools als WAVE (gebeurt tijdens het hele proces)
 
 ### SEO-taken
 
-- Voeg `<title>` en `<meta name="description">` toe per pagina of dynamisch via WordPress  
-- Zorg voor juiste heading-structuur (één `<h1>`, hiërarchisch correct)  
-- Gebruik beschrijvende alt-teksten voor afbeeldingen  
-- Voeg `aria-label`s en `role`-attributen toe waar nodig voor screenreaders  
-- Gebruik semantische HTML-elementen (`<main>`, `<article>`, `<nav>`, etc.)  
-- Voeg `robots.txt` en eventueel een sitemap.xml toe bij live publicatie  
-- Zorg dat paginatitels en URLs duidelijk zijn (permalinks in WordPress)  
-- Controleer performance en SEO via tools zoals Lighthouse of PageSpeed Insights  
+- Voeg `<title>` en `<meta name="description">` toe per pagina of dynamisch via WordPress
+- Zorg voor juiste heading-structuur (één `<h1>`, hiërarchisch correct)
+- Gebruik beschrijvende alt-teksten voor afbeeldingen
+- Voeg `aria-label`s en `role`-attributen toe waar nodig voor screenreaders
+- Gebruik semantische HTML-elementen (`<main>`, `<article>`, `<nav>`, etc.)
+- Voeg `robots.txt` en eventueel een sitemap.xml toe bij live publicatie
+- Zorg dat paginatitels en URLs duidelijk zijn (permalinks in WordPress)
+- Controleer performance en SEO via tools zoals Lighthouse of PageSpeed Insights
 
 ### Ideeën voor later
 
-- Thema omzetten naar block theme met `theme.json`  
-- Custom post type maken voor gelezen boeken  
+- Thema omzetten naar block theme met `theme.json`
+- Custom post type maken voor gelezen boeken
 
->  De footer fluistert iets… maar alleen als je goed kijkt 👀
+> De footer fluistert iets… maar alleen als je goed kijkt 👀
 
 ## Changelog
+
 ---
 
 ## English
@@ -347,55 +348,54 @@ Pull requests and suggestions are welcome, but keep in mind this is a personal p
 
 ---
 
-## Devlog 
+## Devlog
 
 ### Completed
 
-- Hero section with CSS dotted pattern completed  
-- Dark mode automatically set by system preference  
-- Dark mode toggle added with `localStorage` persistence  
-- Primary red color scheme harmonized between light and dark mode  
-- Used `rem` and `em` units for scalability  
-- Skiplink added for screen reader and keyboard users  
-- Accessible focus styles mapped for interactive elements  
-- Secondary button contrast improved in dark mode  
-- Footer edited, including link to privacy statement  
-- Accessible animation added with `prefers-reduced-motion` support  
-- GitHub Pages demo setup: [rulesbyrosita-theme](https://rosita311.github.io/RulesbyRosita-theme/)  
-- Basic design finalized  
-- Page structure set up (hero, cards, typography, colors)  
-- Submenu added to main menu (with keyboard navigation and ARIA attributes in mind)  
-- Basic search page added  
-- `page.html` template created for e.g. 404 and other pages  
-- **Back to top button designed, implemented and tested** (accessible, mobile-friendly, with animation and reduced motion preferences)  
+- Hero section with CSS dotted pattern completed
+- Dark mode automatically set by system preference
+- Dark mode toggle added with `localStorage` persistence
+- Primary red color scheme harmonized between light and dark mode
+- Used `rem` and `em` units for scalability
+- Skiplink added for screen reader and keyboard users
+- Accessible focus styles mapped for interactive elements
+- Secondary button contrast improved in dark mode
+- Footer edited, including link to privacy statement
+- Accessible animation added with `prefers-reduced-motion` support
+- GitHub Pages demo setup: [rulesbyrosita-theme](https://rosita311.github.io/RulesbyRosita-theme/)
+- Basic design finalized
+- Page structure set up (hero, cards, typography, colors)
+- Submenu added to main menu (with keyboard navigation and ARIA attributes in mind)
+- Basic search page added
+- `page.html` template created for e.g. 404 and other pages
+- **Back to top button designed, implemented and tested** (accessible, mobile-friendly, with animation and reduced motion preferences)
 
 ### To Do
 
-- Add consistent focus styles (for buttons, links, inputs – in light & dark mode)  
-- Further integrate search function in WordPress theme  
-- Complete WordPress PHP integration (loop, dynamic content, template parts)  
-- Optimize logo for light and dark mode  
-- Adjust favicon (light/dark)  
-- Build settings menu  
-- Test accessibility with tools like WAVE (ongoing throughout the process)  
+- Add consistent focus styles (for buttons, links, inputs – in light & dark mode)
+- Further integrate search function in WordPress theme
+- Complete WordPress PHP integration (loop, dynamic content, template parts)
+- Optimize logo for light and dark mode
+- Adjust favicon (light/dark)
+- Build settings menu
+- Test accessibility with tools like WAVE (ongoing throughout the process)
 
 ### SEO Tasks
 
-- Add `<title>` and `<meta name="description">` per page or dynamically via WordPress  
-- Ensure correct heading structure (one `<h1>`, hierarchical)  
-- Use descriptive alt texts for images  
-- Add `aria-label`s and `role` attributes where needed for screen readers  
-- Use semantic HTML elements (`<main>`, `<article>`, `<nav>`, etc.)  
-- Add `robots.txt` and sitemap.xml on live deployment  
-- Make sure page titles and URLs are clear (permalinks in WordPress)  
-- Check performance and SEO with tools like Lighthouse or PageSpeed Insights  
+- Add `<title>` and `<meta name="description">` per page or dynamically via WordPress
+- Ensure correct heading structure (one `<h1>`, hierarchical)
+- Use descriptive alt texts for images
+- Add `aria-label`s and `role` attributes where needed for screen readers
+- Use semantic HTML elements (`<main>`, `<article>`, `<nav>`, etc.)
+- Add `robots.txt` and sitemap.xml on live deployment
+- Make sure page titles and URLs are clear (permalinks in WordPress)
+- Check performance and SEO with tools like Lighthouse or PageSpeed Insights
 
 ### Ideas for Later
 
-- Convert theme to block theme with `theme.json`  
-- Create custom post type for books read  
+- Convert theme to block theme with `theme.json`
+- Create custom post type for books read
 
 > The footer whispers… but only if you look closely 👀
 
 ## Changelog
-
