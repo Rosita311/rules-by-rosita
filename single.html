@@ -1,330 +1,965 @@
 <!DOCTYPE html>
-<html lang="nl" class="no-js">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Welkom op Rulesbyrosita.nl, mijn blog over inspiratie over het leven (met een beperking), mijn zoektocht naar de regels in het leven,persoonlijke ontwikkeling, en lifestyle. Have fun! Liefs Rosita">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Zilla+Slab&family=Zilla+Slab+Highlight&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="./css/style.css">
-    <script src="script.js"  defer></script>
+<html
+  lang="nl"
+  class="no-js"
+>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1"
+    />
+    <meta
+      name="description"
+      content="Welkom op Rulesbyrosita.nl, mijn blog over inspiratie over het leven (met een beperking), mijn zoektocht naar de regels in het leven,persoonlijke ontwikkeling, en lifestyle. Have fun! Liefs Rosita"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Zilla+Slab&family=Zilla+Slab+Highlight&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./css/style.css"
+    />
+    <script
+      src="script.js"
+      defer
+    ></script>
     <title>Single</title>
-</head>
-<body >
-    <a href="#main-content" class="skip-link">Sla het menu over</a>
+  </head>
+  <body>
+    <a
+      href="#main-content"
+      class="skip-link"
+      >Sla het menu over</a
+    >
     <header>
-        <div class="header-container"> 
-            <a href="index.html" id="top">
-                <img src="./assets/Logo_rulesbyrosita.png" class="site-logo" alt="Logo Rules by Rosita, Ga naar de homepage">
-            </a>
-            <div class="menu-items">
-            <button id="open-sidebar-button" onclick="openSidebar()" aria-label="Open menu" aria-expanded="false" aria-controls="header-nav">
-                <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-menu-2"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 6l16 0" /><path d="M4 12l16 0" /><path d="M4 18l16 0" /></svg>  
-            </button>
-            <nav id="header-nav" aria-label="Hoofdmenu">
-                <ul>
-                    <li><button id="close-sidebar-button" onclick="closeSidebar()" aria-label="Sluit menu">
-                        <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-x"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M18 6l-12 12" /><path d="M6 6l12 12" /></svg>                      
-                    </button></li>
-                    <li><a href="archive.html">Persoonlijk(Archive)</a></li>
-                    <li><a href="page.html">Life(page)</a></li>
-                    <li><a href="searchresults.html">Tips and Tricks(Zoekresultaten)</a></li>
-                    <li class="has-submenu">
-                        <button
-                            aria-haspopup="true"
-                            aria-expanded="false"
-                            aria-controls="submenu-about"
-                            class="submenu-toggle"
-                        >
-                            Over mij
-                            <span class="chevron" aria-hidden="true">
-                                <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 9l6 6l6 -6" /></svg>
-                            </span>
-                        </button>
-                        <ul id="submenu-about" class="submenu">
-                            <li><a href="single.html">Rosita</a></li>
-                            <li><a href="page.html">Contact</a></li>
-                            <li><a href="index.html">Privacyverklaring</a></li>
-                        </ul>
-                    </li>
+      <div class="header-container">
+        <a
+          href="index.html"
+          id="top"
+        >
+          <img
+            src="./assets/Logo_rulesbyrosita.png"
+            class="site-logo"
+            alt="Logo Rules by Rosita, Ga naar de homepage"
+          />
+        </a>
+        <div class="menu-items">
+          <button
+            id="open-sidebar-button"
+            onclick="openSidebar()"
+            aria-label="Open menu"
+            aria-expanded="false"
+            aria-controls="header-nav"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="icon icon-tabler icons-tabler-outline icon-tabler-menu-2"
+            >
+              <path
+                stroke="none"
+                d="M0 0h24v24H0z"
+                fill="none"
+              />
+              <path d="M4 6l16 0" />
+              <path d="M4 12l16 0" />
+              <path d="M4 18l16 0" />
+            </svg>
+          </button>
+          <nav
+            id="header-nav"
+            aria-label="Hoofdmenu"
+          >
+            <ul>
+              <li>
+                <button
+                  id="close-sidebar-button"
+                  onclick="closeSidebar()"
+                  aria-label="Sluit menu"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-x"
+                  >
+                    <path
+                      stroke="none"
+                      d="M0 0h24v24H0z"
+                      fill="none"
+                    />
+                    <path d="M18 6l-12 12" />
+                    <path d="M6 6l12 12" />
+                  </svg>
+                </button>
+              </li>
+              <li><a href="archive.html">Persoonlijk(Archive)</a></li>
+              <li><a href="page.html">Life(page)</a></li>
+              <li>
+                <a href="searchresults.html">Tips and Tricks(Zoekresultaten)</a>
+              </li>
+              <li class="has-submenu">
+                <button
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  aria-controls="submenu-about"
+                  class="submenu-toggle"
+                >
+                  Over mij
+                  <span
+                    class="chevron"
+                    aria-hidden="true"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down"
+                    >
+                      <path
+                        stroke="none"
+                        d="M0 0h24v24H0z"
+                        fill="none"
+                      />
+                      <path d="M6 9l6 6l6 -6" />
+                    </svg>
+                  </span>
+                </button>
+                <ul
+                  id="submenu-about"
+                  class="submenu"
+                >
+                  <li><a href="single.html">Rosita</a></li>
+                  <li><a href="page.html">Contact</a></li>
+                  <li><a href="index.html">Privacyverklaring</a></li>
                 </ul>
-            </nav> 
-            <div class="menu-buttons">
-                <button aria-label="Zoeken" class="menu-button">
-                    <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-search"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" /><path d="M21 21l-6 -6" /></svg>
-                </button>
-                <button id="theme-switch" class="menu-button">
-                    <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-moon"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" /></svg>
-                    <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-sun"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" /><path d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7" /></svg>
-                </button>
-            </div>
-            </div>
+              </li>
+            </ul>
+          </nav>
+          <div class="menu-buttons">
+            <button
+              aria-label="Zoeken"
+              class="menu-button"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="icon icon-tabler icons-tabler-outline icon-tabler-search"
+              >
+                <path
+                  stroke="none"
+                  d="M0 0h24v24H0z"
+                  fill="none"
+                />
+                <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
+                <path d="M21 21l-6 -6" />
+              </svg>
+            </button>
+            <button
+              id="theme-switch"
+              class="menu-button"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="icon icon-tabler icons-tabler-outline icon-tabler-moon"
+              >
+                <path
+                  stroke="none"
+                  d="M0 0h24v24H0z"
+                  fill="none"
+                />
+                <path
+                  d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"
+                />
+              </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="icon icon-tabler icons-tabler-outline icon-tabler-sun"
+              >
+                <path
+                  stroke="none"
+                  d="M0 0h24v24H0z"
+                  fill="none"
+                />
+                <path d="M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" />
+                <path
+                  d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7"
+                />
+              </svg>
+            </button>
+          </div>
         </div>
-        <div id="overlay" onclick="closeSidebar()" aria-hidden="true"></div>  
+      </div>
+      <div
+        id="overlay"
+        onclick="closeSidebar()"
+        aria-hidden="true"
+      ></div>
     </header>
     <main id="main-content">
-        <section class="single-post-hero hero-section">
-            <div class="hero-image">
-                <img src="./assets/benjamin-davies-Oja2ty_9ZLM-unsplash.jpg" alt="skyline van Londen">
-            </div>
-        </section>
-        <div class="container-main single-post">
-            <section class="single-post-content">
-                <div class="post-content-wrapper">
-                    <h1 class="post-title h1">Flexbox of Grid? Wat ik wanneer gebruik</h1>
-                    <div class="post-meta-wrapper dotted-background-blue">
-                        <nav aria-label="Berichtinformatie">
-                            <ul class="post-meta">
-                                <li class="post-meta-item">
-                                    <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-calendar-due">
-                                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                                        <path d="M4 5m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z" />
-                                        <path d="M16 3v4" /><path d="M8 3v4" /><path d="M4 11h16" />
-                                        <path d="M12 16m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /></svg>
-                                        <time datetime="2025-03-25" aria-label="Gepubliceerd op 25 maart 2025">25-03-2025</time>     
-                                </li>
-                            
-                                <li class="post-meta-item">
-                                    <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-messages"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M21 14l-3 -3h-7a1 1 0 0 1 -1 -1v-6a1 1 0 0 1 1 -1h9a1 1 0 0 1 1 1v10" /><path d="M14 15v2a1 1 0 0 1 -1 1h-7l-3 3v-10a1 1 0 0 1 1 -1h2" /></svg>
-                                    <p>5<span class="sr-only">reacties</span></p>
-                                </li>
-                            
-                                <li class="post-meta-item">
-                                    <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-clock-hour-4"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" /><path d="M12 12l3 2" /><path d="M12 7v5" /></svg>
-                                    <p><span class="sr-only">Leestijd:</span>5 minuten</p>
-                                </li>
-                            
-                                <li class="post-meta-item">
-                                    <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-folder" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                                        <path d="M5 19a2 2 0 0 1 -2 -2v-10a2 2 0 0 1 2 -2h5l2 2h7a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-14" />
-                                    </svg>
-                                    <p><span class="sr-only">Categorie:</span>Tips and Tricks</p>
-                                </li>
-                            
-                                <li class="post-meta-item" aria-label="Tags: HTML, CSS, JavaScript">
-                                    <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-tags">
-                                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                                        <path d="M3 8v4.172a2 2 0 0 0 .586 1.414l5.71 5.71a2.41 2.41 0 0 0 3.408 0l3.592 -3.592a2.41 2.41 0 0 0 0 -3.408l-5.71 -5.71a2 2 0 0 0 -1.414 -.586h-4.172a2 2 0 0 0 -2 2z" />
-                                        <path d="M18 19l1.592 -1.592a4.82 4.82 0 0 0 0 -6.816l-4.592 -4.592" />
-                                        <path d="M7 10h-.01" /></svg>
-                                    <p><span class="sr-only">Tags:</span> <a href="#">HTML</a>, <a href="#">CSS</a>, <a href="#">JavaScript</a></p>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
-                    <div class="entry-content">
-                        <h2>Hier komt een blogbericht (single post).</h2>
-                        <p>Deze pagina wordt gebruikt om individuele <a href="#">blogberichten</a> te tonen. Bovenaan staat de titel en de inhoud van het bericht, gevolgd door metadata zoals de publicatiedatum en categorie. In de sidebar komen standaard WordPress-widgets te staan, zoals een zoekfunctie, recente berichten of categorieën. Onderaan het bericht wordt het huidige reactieformulier vervangen door het WordPress comments-systeem, zodat bezoekers eenvoudig kunnen reageren.</p>   
+      <section class="single-post-hero hero-section">
+        <div class="hero-image">
+          <img
+            src="./assets/benjamin-davies-Oja2ty_9ZLM-unsplash.jpg"
+            alt="skyline van Londen"
+          />
+        </div>
+      </section>
+      <div class="container-main single-post">
+        <section class="single-post-content">
+          <div class="post-content-wrapper">
+            <h1 class="post-title h1">
+              Flexbox of Grid? Wat ik wanneer gebruik
+            </h1>
+            <div class="post-meta-wrapper dotted-background-blue">
+              <nav aria-label="Berichtinformatie">
+                <ul class="post-meta">
+                  <li class="post-meta-item">
+                    <svg
+                      aria-hidden="true"
+                      focusable="false"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="icon icon-tabler icons-tabler-outline icon-tabler-calendar-due"
+                    >
+                      <path
+                        stroke="none"
+                        d="M0 0h24v24H0z"
+                        fill="none"
+                      />
+                      <path
+                        d="M4 5m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"
+                      />
+                      <path d="M16 3v4" />
+                      <path d="M8 3v4" />
+                      <path d="M4 11h16" />
+                      <path d="M12 16m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                    </svg>
+                    <time
+                      datetime="2025-03-25"
+                      aria-label="Gepubliceerd op 25 maart 2025"
+                      >25-03-2025</time
+                    >
+                  </li>
 
-                        <h2>Lorem Ipsum</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est iste pariatur ab accusantium perferendis cupiditate harum illum atque quos dicta beatae assumenda repellat corrupti ea reprehenderit culpa perspiciatis hic doloribus ipsa quasi, suscipit dolore. Molestiae praesentium aliquam, nobis, modi labore quo dolorem dolores repudiandae est, corrupti aperiam! Totam aperiam, facere, aliquid culpa doloremque, debitis quam ratione sunt doloribus reprehenderit dignissimos officiis? Illo, cumque quisquam incidunt sit rem rerum facere enim laborum reiciendis repudiandae quis sint! Enim laudantium modi sunt quam nobis reprehenderit quibusdam quasi culpa, ullam ducimus. In, dolorem expedita neque doloribus quod unde. Iste nemo commodi voluptas ipsam placeat.</p>
-                    </div>
-                    <div class="post-comments">
-                        <h2>Reacties</h2>
-                        <div class="comment-form">
-                            <form action="post-comment.php" method="POST" class="site-form">
-                                <label for="name">Naam:</label>
-                                <input type="text" id="name" name="name" required>
-                                <label for="comment">Reactie:</label>
-                                <textarea id="comment" name="comment" required></textarea>
-                                <button class="btn btn-secondary" type="submit">Verstuur</button>
-                            </form>
-                        </div>
-                        <div class="comment-list">
-                            <div class="comment-item">
-                                <p><strong>Naam:</strong> Reactie tekst hier.</p>
-                            </div>
-                            <div class="comment-item">
-                                <p><strong>Naam:</strong> Reactie tekst hier.</p>
-                            </div>
-                        </div>
-                    </div>
-            </div>
-            <aside class="sidebar">
-                <div class="sidebar-widget">
-                    <h2>Over mij</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatibus.</p>
-                </div>
-                <div class="sidebar-widget">
-                    <h2>Populaire berichten</h2>
-                    <ul class="popular-posts">
-                        <li><a href="single.html">Bericht 1</a></li>
-                        <li><a href="single.html">Bericht 2</a></li>
-                        <li><a href="single.html">Bericht 3</a></li>
-                    </ul>
-                </div>
-                <div class="sidebar-widget">
-                    <h2>Categorieën</h2>
-                    <ul class="categories-list">
-                        <li><a href="archive.html">Categorie 1</a></li>
-                        <li><a href="archive.html">Categorie 2</a></li>
-                        <li><a href="archive.html">Categorie 3</a></li>
-                    </ul>                                   
-                </div>
-            </aside>
-    </section>
-    <section class="blogpost-section">
-                <h2>Recente blogposts</h2>
-                <ul class="blog-listing-grid">
-                    <li class="card hover-shadow">
-                        <div class="card-image">
-                            <img src="./assets/pexels-thisisengineering-3861958.jpg" alt="">
-                        </div>
-                        <div class="card-content-wrapper">
-                            <div class="card-content">
-                                <div class="card-info">
-                                    <h3 class="post-title h3"><a href="single.html" aria-describedby="excerpt-2 lees-meer-2">Dark mode: hoe dan?</a></h3>
-                                    <p class="post-date">25-03-2025</p>
-                                    <p id="excerpt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam quaerat repudiandae unde eligendi sunt commodi eos aut cumque accusamus atque.</p>
-                                </div>
-                                <span aria-hidden="true" id="lees-meer-2" class="btn btn-primary">Lees meer</span>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="card hover-shadow">
-                        <div class="card-image">
-                            <img src="./assets/thomas-lefebvre-V63oM8OPJSo-unsplash.jpg" alt="">
-                        </div>
-                        <div class="card-content-wrapper">
-                            <div class="card-content">
-                                <div class="card-info">
-                                    <h3 class="post-title h3"><a href="single.html" aria-describedby="excerpt-3 lees-meer-3">Dark mode toevoegen met prefers-color-scheme en CSS</a></h3>
-                                    <p class="post-date">25-03-2025</p>
-                                    <p id="excerpt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam quaerat repudiandae unde eligendi sunt commodi eos aut cumque accusamus atque.</p>
-                                </div>
-                                <span aria-hidden="true" id="lees-meer-3" class="btn btn-primary">Lees meer</span>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="card hover-shadow">
-                        <div class="card-image">
-                            <img src="./assets/brina-blum-e9f27fbKAWw-unsplash.jpg" alt="">
-                        </div>
-                        <div class="card-content-wrapper">
-                            <div class="card-content">
-                                <div class="card-info">
-                                    <h3 class="post-title h3"><a href="single.html" aria-describedby="excerpt-4 lees-meer-4">Mijn eerste WordPress-thema</a></h3>
-                                    <p class="post-date">25-03-2025</p>
-                                    <p id="excerpt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam quaerat repudiandae unde eligendi sunt commodi eos aut cumque accusamus atque.</p>
-                                </div>
-                                <span aria-hidden="true" id="lees-meer-4" class="btn btn-primary">Lees meer</span>
-                            </div>
-                        </div>
-                    </li>
+                  <li class="post-meta-item">
+                    <svg
+                      aria-hidden="true"
+                      focusable="false"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="icon icon-tabler icons-tabler-outline icon-tabler-messages"
+                    >
+                      <path
+                        stroke="none"
+                        d="M0 0h24v24H0z"
+                        fill="none"
+                      />
+                      <path
+                        d="M21 14l-3 -3h-7a1 1 0 0 1 -1 -1v-6a1 1 0 0 1 1 -1h9a1 1 0 0 1 1 1v10"
+                      />
+                      <path
+                        d="M14 15v2a1 1 0 0 1 -1 1h-7l-3 3v-10a1 1 0 0 1 1 -1h2"
+                      />
+                    </svg>
+                    <p>5<span class="sr-only">reacties</span></p>
+                  </li>
+
+                  <li class="post-meta-item">
+                    <svg
+                      aria-hidden="true"
+                      focusable="false"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="icon icon-tabler icons-tabler-outline icon-tabler-clock-hour-4"
+                    >
+                      <path
+                        stroke="none"
+                        d="M0 0h24v24H0z"
+                        fill="none"
+                      />
+                      <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
+                      <path d="M12 12l3 2" />
+                      <path d="M12 7v5" />
+                    </svg>
+                    <p><span class="sr-only">Leestijd:</span>5 minuten</p>
+                  </li>
+
+                  <li class="post-meta-item">
+                    <svg
+                      aria-hidden="true"
+                      focusable="false"
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="icon icon-tabler icon-tabler-folder"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      stroke-width="2"
+                      stroke="currentColor"
+                      fill="none"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path
+                        stroke="none"
+                        d="M0 0h24v24H0z"
+                        fill="none"
+                      />
+                      <path
+                        d="M5 19a2 2 0 0 1 -2 -2v-10a2 2 0 0 1 2 -2h5l2 2h7a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-14"
+                      />
+                    </svg>
+                    <p>
+                      <span class="sr-only">Categorie:</span>Tips and Tricks
+                    </p>
+                  </li>
+
+                  <li
+                    class="post-meta-item"
+                    aria-label="Tags: HTML, CSS, JavaScript"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      focusable="false"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="icon icon-tabler icons-tabler-outline icon-tabler-tags"
+                    >
+                      <path
+                        stroke="none"
+                        d="M0 0h24v24H0z"
+                        fill="none"
+                      />
+                      <path
+                        d="M3 8v4.172a2 2 0 0 0 .586 1.414l5.71 5.71a2.41 2.41 0 0 0 3.408 0l3.592 -3.592a2.41 2.41 0 0 0 0 -3.408l-5.71 -5.71a2 2 0 0 0 -1.414 -.586h-4.172a2 2 0 0 0 -2 2z"
+                      />
+                      <path
+                        d="M18 19l1.592 -1.592a4.82 4.82 0 0 0 0 -6.816l-4.592 -4.592"
+                      />
+                      <path d="M7 10h-.01" />
+                    </svg>
+                    <p>
+                      <span class="sr-only">Tags:</span> <a href="#">HTML</a>,
+                      <a href="#">CSS</a>, <a href="#">JavaScript</a>
+                    </p>
+                  </li>
                 </ul>
-            </section>
-             <button class="back-to-top" aria-describedby="back-to-top-desc">
-                <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-up"><path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                    <path d="M6 15l6 -6l6 6" />
-                </svg>
-                <span id="back-to-top-desc" class="sr-only">Terug naar boven</span>
-                <span class="back-to-top-tooltip" aria-hidden="true">Terug naar boven</span>
-            </button>
-        </div>    
+              </nav>
+            </div>
+            <div class="entry-content">
+              <h2>Hier komt een blogbericht (single post).</h2>
+              <p>
+                Deze pagina wordt gebruikt om individuele
+                <a href="#">blogberichten</a> te tonen. Bovenaan staat de titel
+                en de inhoud van het bericht, gevolgd door metadata zoals de
+                publicatiedatum en categorie. In de sidebar komen standaard
+                WordPress-widgets te staan, zoals een zoekfunctie, recente
+                berichten of categorieën. Onderaan het bericht wordt het huidige
+                reactieformulier vervangen door het WordPress comments-systeem,
+                zodat bezoekers eenvoudig kunnen reageren.
+              </p>
+
+              <h2>Lorem Ipsum</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Est
+                iste pariatur ab accusantium perferendis cupiditate harum illum
+                atque quos dicta beatae assumenda repellat corrupti ea
+                reprehenderit culpa perspiciatis hic doloribus ipsa quasi,
+                suscipit dolore. Molestiae praesentium aliquam, nobis, modi
+                labore quo dolorem dolores repudiandae est, corrupti aperiam!
+                Totam aperiam, facere, aliquid culpa doloremque, debitis quam
+                ratione sunt doloribus reprehenderit dignissimos officiis? Illo,
+                cumque quisquam incidunt sit rem rerum facere enim laborum
+                reiciendis repudiandae quis sint! Enim laudantium modi sunt quam
+                nobis reprehenderit quibusdam quasi culpa, ullam ducimus. In,
+                dolorem expedita neque doloribus quod unde. Iste nemo commodi
+                voluptas ipsam placeat.
+              </p>
+            </div>
+            <div class="post-comments">
+              <h2>Reacties</h2>
+              <div class="comment-form">
+                <form
+                  action="post-comment.php"
+                  method="POST"
+                  class="site-form"
+                >
+                  <label for="name">Naam:</label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    required
+                  />
+                  <label for="comment">Reactie:</label>
+                  <textarea
+                    id="comment"
+                    name="comment"
+                    required
+                  ></textarea>
+                  <button
+                    class="btn btn-secondary"
+                    type="submit"
+                  >
+                    Verstuur
+                  </button>
+                </form>
+              </div>
+              <div class="comment-list">
+                <div class="comment-item">
+                  <p><strong>Naam:</strong> Reactie tekst hier.</p>
+                </div>
+                <div class="comment-item">
+                  <p><strong>Naam:</strong> Reactie tekst hier.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <aside class="sidebar">
+            <div class="sidebar-widget">
+              <h2>Over mij</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Quisquam, voluptatibus.
+              </p>
+            </div>
+            <div class="sidebar-widget">
+              <h2>Populaire berichten</h2>
+              <ul class="popular-posts">
+                <li><a href="single.html">Bericht 1</a></li>
+                <li><a href="single.html">Bericht 2</a></li>
+                <li><a href="single.html">Bericht 3</a></li>
+              </ul>
+            </div>
+            <div class="sidebar-widget">
+              <h2>Categorieën</h2>
+              <ul class="categories-list">
+                <li><a href="archive.html">Categorie 1</a></li>
+                <li><a href="archive.html">Categorie 2</a></li>
+                <li><a href="archive.html">Categorie 3</a></li>
+              </ul>
+            </div>
+          </aside>
+        </section>
+        <section class="blogpost-section">
+          <h2>Recente blogposts</h2>
+          <ul class="blog-listing-grid">
+            <li class="card hover-shadow">
+              <div class="card-image">
+                <img
+                  src="./assets/pexels-thisisengineering-3861958.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="card-content-wrapper">
+                <div class="card-content">
+                  <div class="card-info">
+                    <h3 class="post-title h3">
+                      <a
+                        href="single.html"
+                        aria-describedby="excerpt-2 lees-meer-2"
+                        >Dark mode: hoe dan?</a
+                      >
+                    </h3>
+                    <p class="post-date">25-03-2025</p>
+                    <p id="excerpt-2">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Veniam quaerat repudiandae unde eligendi sunt commodi eos
+                      aut cumque accusamus atque.
+                    </p>
+                  </div>
+                  <span
+                    aria-hidden="true"
+                    id="lees-meer-2"
+                    class="btn btn-primary"
+                    >Lees meer</span
+                  >
+                </div>
+              </div>
+            </li>
+            <li class="card hover-shadow">
+              <div class="card-image">
+                <img
+                  src="./assets/thomas-lefebvre-V63oM8OPJSo-unsplash.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="card-content-wrapper">
+                <div class="card-content">
+                  <div class="card-info">
+                    <h3 class="post-title h3">
+                      <a
+                        href="single.html"
+                        aria-describedby="excerpt-3 lees-meer-3"
+                        >Dark mode toevoegen met prefers-color-scheme en CSS</a
+                      >
+                    </h3>
+                    <p class="post-date">25-03-2025</p>
+                    <p id="excerpt-3">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Veniam quaerat repudiandae unde eligendi sunt commodi eos
+                      aut cumque accusamus atque.
+                    </p>
+                  </div>
+                  <span
+                    aria-hidden="true"
+                    id="lees-meer-3"
+                    class="btn btn-primary"
+                    >Lees meer</span
+                  >
+                </div>
+              </div>
+            </li>
+            <li class="card hover-shadow">
+              <div class="card-image">
+                <img
+                  src="./assets/brina-blum-e9f27fbKAWw-unsplash.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="card-content-wrapper">
+                <div class="card-content">
+                  <div class="card-info">
+                    <h3 class="post-title h3">
+                      <a
+                        href="single.html"
+                        aria-describedby="excerpt-4 lees-meer-4"
+                        >Mijn eerste WordPress-thema</a
+                      >
+                    </h3>
+                    <p class="post-date">25-03-2025</p>
+                    <p id="excerpt-4">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Veniam quaerat repudiandae unde eligendi sunt commodi eos
+                      aut cumque accusamus atque.
+                    </p>
+                  </div>
+                  <span
+                    aria-hidden="true"
+                    id="lees-meer-4"
+                    class="btn btn-primary"
+                    >Lees meer</span
+                  >
+                </div>
+              </div>
+            </li>
+          </ul>
+        </section>
+        <button
+          class="back-to-top"
+          aria-describedby="back-to-top-desc"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-up"
+          >
+            <path
+              stroke="none"
+              d="M0 0h24v24H0z"
+              fill="none"
+            />
+            <path d="M6 15l6 -6l6 6" />
+          </svg>
+          <span
+            id="back-to-top-desc"
+            class="sr-only"
+            >Terug naar boven</span
+          >
+          <span
+            class="back-to-top-tooltip"
+            aria-hidden="true"
+            >Terug naar boven</span
+          >
+        </button>
+      </div>
     </main>
     <footer>
-        <div class="footer-container">
-            <div class="footer-content">
-                <div class="footer-menu">
-                    <h2>Menu</h2>
-                    <nav aria-label="Footer menu">
-                        <ul>
-                            <li><a href="archive.html">Persoonlijk</a></li>
-                            <li><a href="archive.html">Life</a></li>
-                            <li><a href="archive.html">Tips and Tricks</a></li>
-                            <li><a href="page.html">Over mij</a></li>
-                            <li><a href="page.html">Contact</a></li>
-                            <li><a href="page.html">Privacy</a></li>
-                        </ul>
-                    </nav>
+      <div class="footer-container">
+        <div class="footer-content">
+          <div class="footer-menu">
+            <h2>Menu</h2>
+            <nav aria-label="Footer menu">
+              <ul>
+                <li><a href="archive.html">Persoonlijk</a></li>
+                <li><a href="archive.html">Life</a></li>
+                <li><a href="archive.html">Tips and Tricks</a></li>
+                <li><a href="page.html">Over mij</a></li>
+                <li><a href="page.html">Contact</a></li>
+                <li><a href="page.html">Privacy</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="footer-social">
+            <div class="footer-subscribe">
+              <h2>Abonneer je op mijn blog</h2>
+              <form
+                action="#"
+                method="post"
+                class="site-form"
+              >
+                <label for="email">E-mailadres:</label>
+                <div class="site-form-row">
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                    placeholder="Vul hier je e-mailadres in"
+                  />
+                  <button
+                    type="submit"
+                    class="btn btn-secondary footer-btn"
+                  >
+                    Abonneer
+                  </button>
                 </div>
-                <div class="footer-social">
-                    <div class="footer-subscribe">
-                        <h2>Abonneer je op mijn blog</h2>
-                        <form action="#" method="post" class="site-form">
-                            <label for="email">E-mailadres:</label>
-                            <div class="site-form-row">
-                                <input type="email" id="email" name="email" required placeholder="Vul hier je e-mailadres in">
-                                <button type="submit" class="btn btn-secondary footer-btn">Abonneer</button>
-                            </div>
-                            <p>Je kunt je op elk moment afmelden via de link in de footer van elke e-mail.</p>
-                        </form>
-                    </div>
-                    <div class="footer-social-media">
-                            <h2 id="social">Volg mij op Sociale media</h2>
-                            <ul aria-labelledby="social">
-                                <li><a href="https://www.facebook.com/Rulesbyrosita/" aria-label="Bezoek mijn Facebookpagina">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-facebook">
-                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                        <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" />
-                                    </svg>
-                                </a></li>
-                                <li><a href="https://www.instagram.com/rulesbyrosita/" aria-label="Bezoek mijn Instagram profiel">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-instagram">
-                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                        <path d="M4 8a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z" />
-                                        <path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" />
-                                        <path d="M16.5 7.5v.01" />
-                                    </svg>
-                                </a></li>
-                                <li><a href="https://www.linkedin.com/in/rosita-rampertaap/" aria-label="Bezoek mijn LinkedIn profiel">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-linkedin">
-                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                        <path d="M8 11v5" />
-                                        <path d="M8 8v.01" />
-                                        <path d="M12 16v-5" />
-                                        <path d="M16 16v-3a2 2 0 1 0 -4 0" />
-                                        <path d="M3 7a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v10a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4z" />
-                                    </svg>
-                                </a></li>
-                                <li><a href="https://mstdn.social/@rulesbyrosita" aria-label="Bezoek mijn Mastodon profiel">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-mastodon">
-                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                        <path d="M18.648 15.254c-1.816 1.763 -6.648 1.626 -6.648 1.626a18.262 18.262 0 0 1 -3.288 -.256c1.127 1.985 4.12 2.81 8.982 2.475c-1.945 2.013 -13.598 5.257 -13.668 -7.636l-.026 -1.154c0 -3.036 .023 -4.115 1.352 -5.633c1.671 -1.91 6.648 -1.666 6.648 -1.666s4.977 -.243 6.648 1.667c1.329 1.518 1.352 2.597 1.352 5.633s-.456 4.074 -1.352 4.944z" />
-                                        <path d="M12 11.204v-2.926c0 -1.258 -.895 -2.278 -2 -2.278s-2 1.02 -2 2.278v4.722m4 -4.722c0 -1.258 .895 -2.278 2 -2.278s2 1.02 2 2.278v4.722" />
-                                    </svg>
-                                </a></li>
-                                <li><a href="https://github.com/Rosita311" aria-label="Volg mij op GitHub">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-github">
-                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                        <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
-                                    </svg>
-                                </a></li>
-                                <li><a href="https://wordpress.com/reader/feeds/54417229" aria-label="Volg mij via WordPress.com">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-wordpress">
-                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                        <path d="M9.5 9h3" />
-                                        <path d="M4 9h2.5" />
-                                        <path d="M11 9l3 11l4 -9" />
-                                        <path d="M5.5 9l3.5 11l3 -7" />
-                                        <path d="M18 11c.177 -.528 1 -1.364 1 -2.5c0 -1.78 -.776 -2.5 -1.875 -2.5c-.898 0 -1.125 .812 -1.125 1.429c0 1.83 2 2.058 2 3.571z" />
-                                        <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
-                                    </svg>
-                                </a></li>
-                                <li><a href="https://nl.pinterest.com/rulesbyrosita/" aria-label="Volg mij op Pinterest">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-pinterest">
-                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                        <path d="M8 20l4 -9" />
-                                        <path d="M10.7 14c.437 1.263 1.43 2 2.55 2c2.071 0 3.75 -1.554 3.75 -4a5 5 0 1 0 -9.7 1.7" />
-                                        <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
-                                    </svg>
-                                </a></li>
-                            </ul>
-                        </div>
-                    </div>
+                <p>
+                  Je kunt je op elk moment afmelden via de link in de footer van
+                  elke e-mail.
+                </p>
+              </form>
             </div>
-            <div class="footer-info">
-                <div class="footer-plumbob" tabindex="0" role="button" aria-describedby="plumbob-desc">
-                    <svg viewBox="0 0 100 160" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                    <polygon points="50,0 90,80 50,160 10,80" class="plumbob-shape" />
+            <div class="footer-social-media">
+              <h2 id="social">Volg mij op Sociale media</h2>
+              <ul aria-labelledby="social">
+                <li>
+                  <a
+                    href="https://www.facebook.com/Rulesbyrosita/"
+                    aria-label="Bezoek mijn Facebookpagina"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="icon icon-tabler icons-tabler-outline icon-tabler-brand-facebook"
+                    >
+                      <path
+                        stroke="none"
+                        d="M0 0h24v24H0z"
+                        fill="none"
+                      />
+                      <path
+                        d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3"
+                      />
                     </svg>
-                    <span id="plumbob-desc" class="sr-only">Sims plumbob animatie zegt: Sul sul!</span>
-                    <span class="plumbob-easteregg" aria-hidden="true" hidden>Sul sul!</span>
-                </div> 
-                <p>&copy; 2025 Rules by Rosita</p>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.instagram.com/rulesbyrosita/"
+                    aria-label="Bezoek mijn Instagram profiel"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="icon icon-tabler icons-tabler-outline icon-tabler-brand-instagram"
+                    >
+                      <path
+                        stroke="none"
+                        d="M0 0h24v24H0z"
+                        fill="none"
+                      />
+                      <path
+                        d="M4 8a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z"
+                      />
+                      <path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" />
+                      <path d="M16.5 7.5v.01" />
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.linkedin.com/in/rosita-rampertaap/"
+                    aria-label="Bezoek mijn LinkedIn profiel"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="icon icon-tabler icons-tabler-outline icon-tabler-brand-linkedin"
+                    >
+                      <path
+                        stroke="none"
+                        d="M0 0h24v24H0z"
+                        fill="none"
+                      />
+                      <path d="M8 11v5" />
+                      <path d="M8 8v.01" />
+                      <path d="M12 16v-5" />
+                      <path d="M16 16v-3a2 2 0 1 0 -4 0" />
+                      <path
+                        d="M3 7a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v10a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4z"
+                      />
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://mstdn.social/@rulesbyrosita"
+                    aria-label="Bezoek mijn Mastodon profiel"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="icon icon-tabler icons-tabler-outline icon-tabler-brand-mastodon"
+                    >
+                      <path
+                        stroke="none"
+                        d="M0 0h24v24H0z"
+                        fill="none"
+                      />
+                      <path
+                        d="M18.648 15.254c-1.816 1.763 -6.648 1.626 -6.648 1.626a18.262 18.262 0 0 1 -3.288 -.256c1.127 1.985 4.12 2.81 8.982 2.475c-1.945 2.013 -13.598 5.257 -13.668 -7.636l-.026 -1.154c0 -3.036 .023 -4.115 1.352 -5.633c1.671 -1.91 6.648 -1.666 6.648 -1.666s4.977 -.243 6.648 1.667c1.329 1.518 1.352 2.597 1.352 5.633s-.456 4.074 -1.352 4.944z"
+                      />
+                      <path
+                        d="M12 11.204v-2.926c0 -1.258 -.895 -2.278 -2 -2.278s-2 1.02 -2 2.278v4.722m4 -4.722c0 -1.258 .895 -2.278 2 -2.278s2 1.02 2 2.278v4.722"
+                      />
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://github.com/Rosita311"
+                    aria-label="Volg mij op GitHub"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="icon icon-tabler icons-tabler-outline icon-tabler-brand-github"
+                    >
+                      <path
+                        stroke="none"
+                        d="M0 0h24v24H0z"
+                        fill="none"
+                      />
+                      <path
+                        d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"
+                      />
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://wordpress.com/reader/feeds/54417229"
+                    aria-label="Volg mij via WordPress.com"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="icon icon-tabler icons-tabler-outline icon-tabler-brand-wordpress"
+                    >
+                      <path
+                        stroke="none"
+                        d="M0 0h24v24H0z"
+                        fill="none"
+                      />
+                      <path d="M9.5 9h3" />
+                      <path d="M4 9h2.5" />
+                      <path d="M11 9l3 11l4 -9" />
+                      <path d="M5.5 9l3.5 11l3 -7" />
+                      <path
+                        d="M18 11c.177 -.528 1 -1.364 1 -2.5c0 -1.78 -.776 -2.5 -1.875 -2.5c-.898 0 -1.125 .812 -1.125 1.429c0 1.83 2 2.058 2 3.571z"
+                      />
+                      <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://nl.pinterest.com/rulesbyrosita/"
+                    aria-label="Volg mij op Pinterest"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="icon icon-tabler icons-tabler-outline icon-tabler-brand-pinterest"
+                    >
+                      <path
+                        stroke="none"
+                        d="M0 0h24v24H0z"
+                        fill="none"
+                      />
+                      <path d="M8 20l4 -9" />
+                      <path
+                        d="M10.7 14c.437 1.263 1.43 2 2.55 2c2.071 0 3.75 -1.554 3.75 -4a5 5 0 1 0 -9.7 1.7"
+                      />
+                      <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
+                    </svg>
+                  </a>
+                </li>
+              </ul>
             </div>
-        </footer>
-</body>
+          </div>
+        </div>
+        <div class="footer-info">
+          <div
+            class="footer-plumbob"
+            tabindex="0"
+            role="button"
+            aria-describedby="plumbob-desc"
+          >
+            <svg
+              viewBox="0 0 100 160"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+            >
+              <polygon
+                points="50,0 90,80 50,160 10,80"
+                class="plumbob-shape"
+              />
+            </svg>
+            <span
+              id="plumbob-desc"
+              class="sr-only"
+              >Sims plumbob animatie zegt: Sul sul!</span
+            >
+            <span
+              class="plumbob-easteregg"
+              aria-hidden="true"
+              hidden
+              >Sul sul!</span
+            >
+          </div>
+          <p>&copy; 2025 Rules by Rosita</p>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>
