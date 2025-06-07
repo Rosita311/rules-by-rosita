@@ -199,8 +199,9 @@ document.addEventListener("DOMContentLoaded", () => {
       if (e.key === "Enter" || e.key === " ") {
         e.preventDefault();
         if (parentItem.classList.contains("open")) {
-          closeSubmenu();
           setTimeout(closeSubmenu, 300);
+          closeSubmenu();
+          
         } else {
           openSubmenu();
         }
