@@ -200,6 +200,7 @@ document.addEventListener("DOMContentLoaded", () => {
         e.preventDefault();
         if (parentItem.classList.contains("open")) {
           closeSubmenu();
+          setTimeout(closeSubmenu, 300);
         } else {
           openSubmenu();
         }
