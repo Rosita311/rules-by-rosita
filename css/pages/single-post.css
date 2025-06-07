@@ -43,7 +43,8 @@
   gap: 0.5rem;
 }
 
-.post-meta li p {
+.post-meta li p, .post-meta li p a, .post-meta li svg {
+  font-size: 0.875rem;
   margin: 0;
 }
 
