@@ -135,6 +135,13 @@ h6 {
   line-height: 1.4em;
 }
 
+section h1,
+article h1,
+nav h1,
+aside h1 {
+  font-size: clamp(2rem, 5vw + 1rem, 3rem);
+}
+
 .entry-content h2,
 .entry-content h3,
 .entry-content h4,

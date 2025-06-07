@@ -43,8 +43,8 @@
   text-decoration: none;
 }
 
-.post-title.h1 {
-  font-size: clamp(1.75rem, 4vw + 1rem, 2.5rem);
+section .post-title.h1 {
+  font-size: clamp(1.5rem, 4vw + 1rem, 2.5rem);
   width: 100%;
   line-height: 1.1em;
   margin: 0;
