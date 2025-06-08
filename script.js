@@ -293,26 +293,52 @@ backToTop.addEventListener("click", () => {
   document.getElementById("top").focus();
 });
 
-// Accessibility settings panel
-  const toggleButton = document.getElementById('accessibility-toggle');
-  const panel = document.getElementById('accessibility-settings');
-  const closeButton = document.getElementById('close-accessibility');
+// Accessibility settings
+const toggleButton = document.getElementById("accessibility-toggle");
+const panel = document.getElementById("accessibility-settings");
+const closeButton = document.getElementById("close-accessibility");
 
-  toggleButton.addEventListener('click', () => {
-    panel.classList.toggle('show');
-    panel.setAttribute('aria-hidden', !panel.classList.contains('show'));
+const settingsMap = {
+  "toggle-text": "large-text",
+  "toggle-contrast": "high-contrast",
+  "toggle-dyslexic": "dyslexic-font",
+  "toggle-reduce-motion": "reduce-motion"
+};
+
+// Paneel openen/sluiten
+toggleButton.addEventListener("click", () => {
+  panel.classList.toggle("show");
+  panel.setAttribute("aria-hidden", !panel.classList.contains("show"));
+});
+
+closeButton.addEventListener("click", () => {
+  panel.classList.remove("show");
+  panel.setAttribute("aria-hidden", "true");
+});
+
+// Instellingen toepassen en opslaan
+Object.keys(settingsMap).forEach((id) => {
+  const input = document.getElementById(id);
+  const className = settingsMap[id];
+
+  input.addEventListener("change", () => {
+    document.body.classList.toggle(className, input.checked);
+    localStorage.setItem(className, input.checked);
   });
+});
 
-  closeButton.addEventListener('click', () => {
-    panel.classList.remove('show');
-    panel.setAttribute('aria-hidden', 'true');
-  });
+// Herstel instellingen bij laden
+window.addEventListener("DOMContentLoaded", () => {
+  Object.keys(settingsMap).forEach((id) => {
+    const input = document.getElementById(id);
+    const className = settingsMap[id];
 
-  // Optioneel: sluit bij Escape
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') {
-      panel.classList.remove('show');
-      panel.setAttribute('aria-hidden', 'true');
+    const isActive = localStorage.getItem(className) === "true";
+    input.checked = isActive;
+    if (isActive) {
+      document.body.classList.add(className);
     }
   });
+});
+
 
