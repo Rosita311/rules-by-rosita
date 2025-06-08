@@ -12,6 +12,7 @@
 
 /* Accessibility-knop altijd zichtbaar */
 .accessibility-button, .back-to-top {
+  position: relative;
   background-color: var(--color-contrast);
   color: var(--color-bg-light);
   border: 2px solid var(--color-contrast);
@@ -41,8 +42,7 @@
 
 .accessibility-button svg, .back-to-top svg {
   stroke: var(--color-bg-light);
-  height: 2rem;
-  width: 2rem;
+  
   transition: stroke 0.3s ease;
 }
 
@@ -81,12 +81,14 @@
   z-index: 1;
   bottom: 125%;
   left: 50%;
-  margin-left: -60px;
+  margin-left: -80px;
 }
 
-.accessibility-tooltip:hover .accessibility-tooltip, 
+.accessibility-button:hover .accessibility-tooltip, 
 .back-to-top:hover .back-to-top-tooltip {
-  visibility: visible;
+  visibility: visible !important;
+  opacity: 1;
+  pointer-events: auto;
 }
 
 
