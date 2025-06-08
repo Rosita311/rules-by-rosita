@@ -1,60 +1,73 @@
 
 /* Experimenting with CSS variables and custom properties for a more dynamic design. */
 
-/* Back to top button */
-.back-to-top {
+.floating-button-wrapper {
   position: fixed;
   bottom: 2rem;
   right: 2rem;
-  color: var(--color-bg-light);
+  display: flex;
+  gap: 1rem;
+  z-index: 1000;
+}
+
+/* Accessibility-knop altijd zichtbaar */
+.accessibility-button, .back-to-top {
   background-color: var(--color-contrast);
+  color: var(--color-bg-light);
   border: 2px solid var(--color-contrast);
   border-radius: 50%;
   padding: 0.5rem;
-  z-index: 1000;
-  opacity: 0;
   cursor: pointer;
-  pointer-events: auto;
-  transition: opacity 0.3s ease, transform 0.2s ease;
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
+.back-to-top {
+  opacity: 0;
+  pointer-events: auto;
+}
 
 .back-to-top.show {
   opacity: 1;
   pointer-events: auto;
 }
 
-.back-to-top svg {
+.accessibility-button {
+  opacity: 1 !important;
+  pointer-events: auto;
+}
+
+.accessibility-button svg, .back-to-top svg {
   stroke: var(--color-bg-light);
+  height: 2rem;
+  width: 2rem;
   transition: stroke 0.3s ease;
 }
 
-.back-to-top:hover {
+.accessibility-button:hover, .back-to-top:hover {
   background-color: var(--color-footer);
   color: var(--color-text);
   border-color: var(--color-text);
   transform: translateY(-4px);
 }
 
-.back-to-top:hover svg {
+.accessibility-button:hover svg, .back-to-top:hover svg {
   stroke: var(--color-text);
 }
 
-.back-to-top:focus-visible {
+.accessibility-button:focus-visible, .back-to-top:focus-visible {
+  outline: 2px solid var(--color-text);
   background-color: var(--color-text);
   color: var(--color-background);
-  border-radius: 50%;
-  outline: 2px solid var(--color-text);
 }
 
-.back-to-top:focus-visible svg {
+.accessibility-button:focus-visible svg, .back-to-top:focus-visible svg {
   stroke: var(--color-background);
 }
 
-.back-to-top-tooltip {
+.accessibility-tooltip, .back-to-top-tooltip {
   visibility: hidden;
   background-color: var(--color-background);
   color: var(--color-text);
@@ -71,6 +84,9 @@
   margin-left: -60px;
 }
 
+.accessibility-tooltip:hover .accessibility-tooltip, 
 .back-to-top:hover .back-to-top-tooltip {
   visibility: visible;
 }
+
+
