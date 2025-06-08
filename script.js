@@ -137,59 +137,41 @@ document.addEventListener("DOMContentLoaded", () => {
 
   submenuToggles.forEach((button) => {
     const parentItem = button.closest(".has-submenu");
-    if (!parentItem) return;
-
     const submenu = parentItem.querySelector(".submenu");
-    if (!submenu) return;
 
-    submenu.addEventListener("keydown", (e) => {
-      if (e.key === "Escape" && parentItem.classList.contains("open")) {
-        closeSubmenu();
-        button.focus();
-      }
-    });
-
-    let hoverTimeout;
+    let hoverOpenTimeout, hoverCloseTimeout;
 
     const openSubmenu = () => {
+      console.log("Opening submenu");
+      closeAllSubmenus();
+      parentItem.classList.add("open");
       button.setAttribute("aria-expanded", "true");
       button.setAttribute("aria-pressed", "true");
       button.setAttribute("aria-label", "Submenu sluiten");
-      parentItem.classList.add("open");
     };
 
     const closeSubmenu = () => {
+      console.log("Closing submenu");
+      parentItem.classList.remove("open");
       button.setAttribute("aria-expanded", "false");
       button.setAttribute("aria-pressed", "false");
       button.setAttribute("aria-label", "Submenu openen");
-      parentItem.classList.remove("open");
     };
 
-    // button.addEventListener("click", (e) => {
-    //   e.preventDefault();
-    //   if (parentItem.classList.contains("open")) {
-    //     closeSubmenu();
-    //   } else {
-    //     openSubmenu();
-    //   }
-    // });
+    const closeAllSubmenus = () => {
+      document.querySelectorAll(".has-submenu.open").forEach((item) => {
+        item.classList.remove("open");
+        const toggle = item.querySelector(".submenu-toggle");
+        toggle?.setAttribute("aria-expanded", "false");
+        toggle?.setAttribute("aria-pressed", "false");
+        toggle?.setAttribute("aria-label", "Submenu openen");
+      });
+    };
 
+    // Click toggles submenu
     button.addEventListener("click", (e) => {
       e.preventDefault();
-      clearTimeout(hoverOpenTimeout);
-      clearTimeout(hoverCloseTimeout);
-
       const isOpen = parentItem.classList.contains("open");
-
-      document.querySelectorAll(".has-submenu.open").forEach((item) => {
-        if (item !== parentItem) {
-          item.classList.remove("open");
-          const toggle = item.querySelector(".submenu-toggle");
-          toggle?.setAttribute("aria-expanded", "false");
-          toggle?.setAttribute("aria-pressed", "false");
-          toggle?.setAttribute("aria-label", "Submenu openen");
-        }
-      });
 
       if (isOpen) {
         closeSubmenu();
@@ -198,43 +180,40 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
 
-    let hoverOpenTimeout;
-    let hoverCloseTimeout;
-
-    const cancelClose = () => clearTimeout(hoverCloseTimeout);
-
-    // Hover in
+    // Hover ondersteuning op desktop (breder dan 992px)
     parentItem.addEventListener("mouseenter", () => {
-      clearTimeout(hoverCloseTimeout);
-      hoverOpenTimeout = setTimeout(openSubmenu, 300);
+      if (window.innerWidth > 992) {
+        clearTimeout(hoverCloseTimeout);
+        hoverOpenTimeout = setTimeout(openSubmenu, 300);
+      }
     });
 
     parentItem.addEventListener("mouseleave", () => {
-      clearTimeout(hoverOpenTimeout);
-      hoverCloseTimeout = setTimeout(closeSubmenu, 300);
+      if (window.innerWidth > 992) {
+        clearTimeout(hoverOpenTimeout);
+        hoverCloseTimeout = setTimeout(closeSubmenu, 300);
+      }
     });
 
-    submenu.addEventListener("mouseenter", cancelClose);
-    submenu.addEventListener("mouseleave", () => {
-      hoverCloseTimeout = setTimeout(closeSubmenu, 300);
+    // Sluit submenu als je ergens anders klikt
+    document.addEventListener("click", (e) => {
+      if (!parentItem.contains(e.target)) {
+        closeSubmenu();
+      }
     });
 
-    button.addEventListener("keydown", (e) => {
-      if (e.key === "Enter" || e.key === " ") {
-        e.preventDefault();
-        if (parentItem.classList.contains("open")) {
-          setTimeout(closeSubmenu, 300);
-          closeSubmenu();
-        } else {
-          openSubmenu();
-        }
-      } else if (e.key === "Escape") {
+    // Escape key sluit submenu
+    submenu.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") {
         closeSubmenu();
         button.focus();
       }
     });
   });
 });
+
+
+
 
 // Darkmode
 
