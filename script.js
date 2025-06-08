@@ -292,3 +292,27 @@ backToTop.addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
   document.getElementById("top").focus();
 });
+
+// Accessibility settings panel
+  const toggleButton = document.getElementById('accessibility-toggle');
+  const panel = document.getElementById('accessibility-settings');
+  const closeButton = document.getElementById('close-accessibility');
+
+  toggleButton.addEventListener('click', () => {
+    panel.classList.toggle('show');
+    panel.setAttribute('aria-hidden', !panel.classList.contains('show'));
+  });
+
+  closeButton.addEventListener('click', () => {
+    panel.classList.remove('show');
+    panel.setAttribute('aria-hidden', 'true');
+  });
+
+  // Optioneel: sluit bij Escape
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      panel.classList.remove('show');
+      panel.setAttribute('aria-hidden', 'true');
+    }
+  });
+
