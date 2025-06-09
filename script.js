@@ -307,7 +307,7 @@ const settingsMap = {
   "toggle-reduce-motion": "reduce-motion"
 };
 
-// Paneel openen/sluiten
+//Paneel openen/sluiten
 toggleButton.addEventListener("click", () => {
   const isVisible = panel.classList.toggle("show");
   panel.setAttribute("aria-hidden", !isVisible);
@@ -318,39 +318,89 @@ closeButton.addEventListener("click", () => {
   panel.setAttribute("aria-hidden", "true");
 });
 
-// Checkbox-wijzigingen toepassen en opslaan in localStorage
-for (const [checkboxId, className] of Object.entries(settingsMap)) {
-  const input = document.getElementById(checkboxId);
+// Instellingen bijhouden in localStorage
 
-  if (!input) continue;
+const accessibilityOptions = {
+  "toggle-dyslexic": "dyslexic-font",
+  "toggle-contrast": "high-contrast",
+  "toggle-text": "large-text",
+  "toggle-reduce-motion": "reduce-motion"
+};
 
-  input.addEventListener("change", () => {
-    const isEnabled = input.checked;
-    document.body.classList.toggle(className, isEnabled);
-    localStorage.setItem(className, isEnabled);
-
-    if (className === "high-contrast" && isEnabled) {
-  document.body.classList.remove("darkmode");
+// Theme-toggle verbergen bij hoog contrast
+function updateThemeToggleVisibility() {
+  const themeToggle = document.getElementById("theme-toggle");
+  const isHighContrast = document.body.classList.contains("high-contrast");
+  if (themeToggle) {
+    themeToggle.style.display = isHighContrast ? "none" : "";
+  }
 }
 
+// Icon updaten op basis van status
+function updateButtonIcon(button, state) {
+  const iconOn = button.querySelector(".icon-on");
+  const iconOff = button.querySelector(".icon-off");
+
+  if (iconOn && iconOff) {
+    iconOn.style.display = state ? "inline" : "none";
+    iconOff.style.display = state ? "none" : "inline";
+  }
+}
+
+// Instelling aan/uitzetten
+function toggleSetting(button, className) {
+  const isActive = button.getAttribute("aria-pressed") === "true";
+  const newState = !isActive;
+
+  button.setAttribute("aria-pressed", String(newState));
+  document.body.classList.toggle(className, newState);
+  localStorage.setItem(className, newState);
+
+  updateButtonIcon(button, newState);
+  if (className === "high-contrast") {
+    updateThemeToggleVisibility();
+  }
+}
+
+// Herstel bij laden
+function restoreSettings() {
+  Object.entries(accessibilityOptions).forEach(([buttonId, className]) => {
+    const button = document.getElementById(buttonId);
+    const savedState = localStorage.getItem(className) === "true";
+
+    button.setAttribute("aria-pressed", String(savedState));
+    document.body.classList.toggle(className, savedState);
+    updateButtonIcon(button, savedState);
+
+    button.addEventListener("click", () => toggleSetting(button, className));
+  });
+
+  updateThemeToggleVisibility();
+}
+
+// Resetknop
+function setupResetButton() {
+  const resetBtn = document.getElementById("reset-accessibility");
+  if (!resetBtn) return;
+
+  resetBtn.addEventListener("click", () => {
+    Object.entries(accessibilityOptions).forEach(([buttonId, className]) => {
+      const button = document.getElementById(buttonId);
+      document.body.classList.remove(className);
+      button.setAttribute("aria-pressed", "false");
+      localStorage.removeItem(className);
+      updateButtonIcon(button, false);
+    });
+    updateThemeToggleVisibility();
   });
 }
 
-// Instellingen herstellen bij laden van de pagina
 window.addEventListener("DOMContentLoaded", () => {
-  for (const [checkboxId, className] of Object.entries(settingsMap)) {
-    const input = document.getElementById(checkboxId);
-    const isEnabled = localStorage.getItem(className) === "true";
-
-    if (input) {
-      input.checked = isEnabled;
-    }
-
-    if (isEnabled) {
-      document.body.classList.add(className);
-    }
-  }
+  restoreSettings();
+  setupResetButton();
 });
+
+
 
 
 
