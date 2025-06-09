@@ -1,4 +1,3 @@
-
 /* Experimenting with CSS variables and custom properties for a more dynamic design. */
 
 .floating-button-wrapper {
@@ -11,7 +10,8 @@
 }
 
 /* Accessibility-knop altijd zichtbaar */
-.accessibility-button, .back-to-top {
+.accessibility-button,
+.back-to-top {
   position: relative;
   background-color: var(--color-contrast);
   color: var(--color-bg-light);
@@ -40,34 +40,40 @@
   pointer-events: auto;
 }
 
-.accessibility-button svg, .back-to-top svg {
+.accessibility-button svg,
+.back-to-top svg {
   stroke: var(--color-bg-light);
-  
+
   transition: stroke 0.3s ease;
 }
 
-.accessibility-button:hover, .back-to-top:hover {
+.accessibility-button:hover,
+.back-to-top:hover {
   background-color: var(--color-footer);
   color: var(--color-text);
   border-color: var(--color-text);
   transform: translateY(-4px);
 }
 
-.accessibility-button:hover svg, .back-to-top:hover svg {
+.accessibility-button:hover svg,
+.back-to-top:hover svg {
   stroke: var(--color-text);
 }
 
-.accessibility-button:focus-visible, .back-to-top:focus-visible {
+.accessibility-button:focus-visible,
+.back-to-top:focus-visible {
   outline: 2px solid var(--color-text);
   background-color: var(--color-text);
   color: var(--color-background);
 }
 
-.accessibility-button:focus-visible svg, .back-to-top:focus-visible svg {
+.accessibility-button:focus-visible svg,
+.back-to-top:focus-visible svg {
   stroke: var(--color-background);
 }
 
-.accessibility-tooltip, .back-to-top-tooltip {
+.accessibility-tooltip,
+.back-to-top-tooltip {
   visibility: hidden;
   background-color: var(--color-background);
   color: var(--color-text);
@@ -84,7 +90,7 @@
   margin-left: -80px;
 }
 
-.accessibility-button:hover .accessibility-tooltip, 
+.accessibility-button:hover .accessibility-tooltip,
 .back-to-top:hover .back-to-top-tooltip {
   visibility: visible !important;
   opacity: 1;
@@ -102,7 +108,7 @@
   border: 2px solid var(--color-accent);
   border-radius: 0.5rem;
   padding: 1rem;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
   z-index: 9999;
   display: none;
 }
@@ -133,7 +139,7 @@
   cursor: pointer;
   transition: border-color 0.2s, background 0.2s;
 
-   &:hover {
+  &:hover {
     background-color: var(--color-menu-button-hover);
     color: var(--color-text);
   }
@@ -203,7 +209,7 @@ body.dyslexic-font em,
 body.dyslexic-font blockquote,
 body.dyslexic-font td,
 body.dyslexic-font th {
-  font-family: 'Atkinson Hyperlegible', Arial, sans-serif;
+  font-family: "Atkinson Hyperlegible", Arial, sans-serif;
 }
 
 body.dyslexic-font h1,
@@ -226,7 +232,6 @@ html {
 html.large-text {
   font-size: 125%; /* Verhoog de basislettergrootte met 25% */
 }
-
 
 /* High Contrast kleuren */
 :root {
@@ -259,16 +264,15 @@ html.large-text {
 body.high-contrast .dotted-background-pink,
 body.high-contrast .dotted-background-blue {
   background-image: none;
-  background-color: var(--color-background); 
+  background-color: var(--color-background);
 }
 .high-contrast #accessibility-settings button:hover {
   background-color: var(--color-menu-button-hover);
   color: var(--color-background);
-  
 }
 .high-contrast .menu-button:hover svg,
- .high-contrast #theme-switch:hover svg,
- .high-contrast #accessibility-settings button:hover svg { 
+.high-contrast #theme-switch:hover svg,
+.high-contrast #accessibility-settings button:hover svg {
   stroke: var(--color-background);
 }
 
@@ -319,5 +323,3 @@ body.high-contrast .dotted-background-blue {
   opacity: 1;
   transform: none;
 }
-
-

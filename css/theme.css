@@ -293,7 +293,7 @@ button {
 
   .page-title {
     animation: none;
-    opacity: 1;
+    opacity: 1 !important;
     transform: none;
   }
 
