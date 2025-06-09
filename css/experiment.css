@@ -132,10 +132,7 @@ body.large-text {
   font-size: 1.25em;
 }
 
-body.high-contrast {
-  background-color: #000;
-  color: #fff;
-}
+
 
 body.reduce-motion * {
   transition: none !important;
@@ -154,6 +151,7 @@ body.dyslexic-font p,
 body.dyslexic-font span,
 body.dyslexic-font li,
 body.dyslexic-font a,
+body.dyslexic-font #header-nav a,
 body.dyslexic-font button,
 body.dyslexic-font input,
 body.dyslexic-font textarea,
