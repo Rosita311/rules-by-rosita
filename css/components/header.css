@@ -227,6 +227,15 @@ a #top:focus-visible {
     color: var(--color-bg-light) !important;
   }
 
+  /* Fix: Flattened selector for valid CSS */
+  .submenu > li a:hover svg {
+    stroke: var(--color-text) !important;
+  }
+
+  .darkmode &:hover svg {
+    stroke: var(--color-background);
+  }
+
   &:focus-visible {
     border-bottom: none !important;
     background-color: var(--color-text);
@@ -357,7 +366,7 @@ a #top:focus-visible {
   }
 
   .submenu-toggle:hover .chevron svg {
-    stroke: var(--color-bg-light);
+    stroke: var(--color-bg-light) !important;
   }
 }
 
@@ -387,7 +396,7 @@ a #top:focus-visible {
     &:hover {
       border-bottom: none;
       background-color: var(--color-contrast);
-      color: var(--color-bg-light);
+      color: var(--color-bg-light) !important;
     }
 
     &:focus-visible {
@@ -403,6 +412,11 @@ a #top:focus-visible {
     background-color: var(--color-primary);
     color: var(--color-background);
   }
+
+  body:not(.darkmode) .has-submenu.open > .submenu-toggle .chevron svg {
+    stroke: var(--color-background);
+  }
+
   .submenu {
     position: static;
     width: 100%;

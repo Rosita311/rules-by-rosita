@@ -294,10 +294,12 @@ backToTop.addEventListener("click", () => {
 });
 
 // Accessibility settings
+// Toegankelijkheidselementen selecteren
 const toggleButton = document.getElementById("accessibility-toggle");
 const panel = document.getElementById("accessibility-settings");
 const closeButton = document.getElementById("close-accessibility");
 
+// Koppeling tussen checkbox-ID's en CSS-klassen
 const settingsMap = {
   "toggle-text": "large-text",
   "toggle-contrast": "high-contrast",
@@ -307,8 +309,8 @@ const settingsMap = {
 
 // Paneel openen/sluiten
 toggleButton.addEventListener("click", () => {
-  panel.classList.toggle("show");
-  panel.setAttribute("aria-hidden", !panel.classList.contains("show"));
+  const isVisible = panel.classList.toggle("show");
+  panel.setAttribute("aria-hidden", !isVisible);
 });
 
 closeButton.addEventListener("click", () => {
@@ -316,29 +318,39 @@ closeButton.addEventListener("click", () => {
   panel.setAttribute("aria-hidden", "true");
 });
 
-// Instellingen toepassen en opslaan
-Object.keys(settingsMap).forEach((id) => {
-  const input = document.getElementById(id);
-  const className = settingsMap[id];
+// Checkbox-wijzigingen toepassen en opslaan in localStorage
+for (const [checkboxId, className] of Object.entries(settingsMap)) {
+  const input = document.getElementById(checkboxId);
+
+  if (!input) continue;
 
   input.addEventListener("change", () => {
-    document.body.classList.toggle(className, input.checked);
-    localStorage.setItem(className, input.checked);
+    const isEnabled = input.checked;
+    document.body.classList.toggle(className, isEnabled);
+    localStorage.setItem(className, isEnabled);
+
+    if (className === "high-contrast" && isEnabled) {
+  document.body.classList.remove("darkmode");
+}
+
   });
-});
+}
 
-// Herstel instellingen bij laden
+// Instellingen herstellen bij laden van de pagina
 window.addEventListener("DOMContentLoaded", () => {
-  Object.keys(settingsMap).forEach((id) => {
-    const input = document.getElementById(id);
-    const className = settingsMap[id];
+  for (const [checkboxId, className] of Object.entries(settingsMap)) {
+    const input = document.getElementById(checkboxId);
+    const isEnabled = localStorage.getItem(className) === "true";
 
-    const isActive = localStorage.getItem(className) === "true";
-    input.checked = isActive;
-    if (isActive) {
+    if (input) {
+      input.checked = isEnabled;
+    }
+
+    if (isEnabled) {
       document.body.classList.add(className);
     }
-  });
+  }
 });
+
 
 

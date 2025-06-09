@@ -137,11 +137,102 @@ body.high-contrast {
   color: #fff;
 }
 
-body.dyslexic-font {
-   font-family: "Atkinson Hyperlegible", sans-serif;
-}
-
 body.reduce-motion * {
   transition: none !important;
   animation: none !important;
 }
+
+/* Dislexie font */
+body.dyslexic-font,
+body.dyslexic-font h1,
+body.dyslexic-font h2,
+body.dyslexic-font h3,
+body.dyslexic-font h4,
+body.dyslexic-font h5,
+body.dyslexic-font h6,
+body.dyslexic-font p,
+body.dyslexic-font span,
+body.dyslexic-font li,
+body.dyslexic-font a,
+body.dyslexic-font button,
+body.dyslexic-font input,
+body.dyslexic-font textarea,
+body.dyslexic-font label,
+body.dyslexic-font strong,
+body.dyslexic-font em,
+body.dyslexic-font blockquote,
+body.dyslexic-font td,
+body.dyslexic-font th {
+  font-family: 'Atkinson Hyperlegible', Arial, sans-serif;
+}
+
+body.dyslexic-font h1,
+body.dyslexic-font h2,
+body.dyslexic-font h3,
+body.dyslexic-font h4,
+body.dyslexic-font h5,
+body.dyslexic-font h6 {
+  font-weight: 700;
+}
+
+
+/* High Contrast kleuren */
+:root {
+  --hc-bg: #000000;
+  --hc-text: #ffffff;
+  --hc-accent: #00ffff; /* cyaan/blauwachtig voor sterke visuele accenten */
+  --hc-danger: #ff0000; /* felrood voor fouten/warnings */
+  --hc-focus: #ffff00; /* geel voor focus indication */
+}
+
+.high-contrast {
+  --color-background: var(--hc-bg);
+  --color-bg-dark: var(--hc-bg);
+  --color-bg-light: var(--hc-bg);
+  --color-text: var(--hc-text);
+  --color-text-dark: var(--hc-text);
+  --color-primary: var(--hc-accent);
+  --color-accent: var(--hc-accent);
+  --color-accent-2: var(--hc-bg);
+  --color-contrast: var(--hc-accent);
+  --color-footer: var(--hc-bg);
+  --color-menu-button-hover: var(--hc-accent);
+  --color-button-hover: var(--hc-accent);
+  --color-primary-btn-text: var(--hc-bg);
+  --color-page-hero-bg: var(--hc-bg);
+  --color-plumbob: var(--hc-accent);
+  --color-plumbob-hover: var(--hc-focus);
+}
+
+body.high-contrast .dotted-background-pink,
+body.high-contrast .dotted-background-blue {
+  background-image: none;
+  background-color: var(--color-background); 
+}
+
+.high-contrast .menu-button:hover svg,
+ .high-contrast #theme-switch:hover svg {
+  stroke: var(--color-background);
+}
+
+/* Algemene focusstijl in high contrast modus */
+.high-contrast :focus-visible,
+.high-contrast a:focus-visible,
+.high-contrast #header-nav a:focus-visible,
+.high-contrast button:focus-visible,
+.high-contrast input:focus-visible,
+.high-contrast textarea:focus-visible,
+.high-contrast select:focus-visible,
+.high-contrast .menu-button:focus-visible,
+.high-contrast #open-sidebar-button:focus-visible,
+.high-contrast #close-sidebar-button:focus-visible,
+.high-contrast #theme-switch:focus-visible,
+.high-contrast .footer-menu nav a:focus-visible,
+.high-contrast .footer-btn:focus-visible,
+.high-contrast .has-submenu > button.submenu-toggle:focus-visible {
+  outline: 3px solid var(--hc-focus);
+  outline-offset: 2px;
+  transition: none; /* Geen animatie voor directe visuele feedback */
+}
+
+
