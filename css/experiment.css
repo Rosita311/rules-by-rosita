@@ -235,4 +235,6 @@ body.high-contrast .dotted-background-blue {
   transition: none; /* Geen animatie voor directe visuele feedback */
 }
 
-
+.high-contrast #theme-switch {
+  display: none; /* Verberg de themewisselaar in high contrast modus */
+}

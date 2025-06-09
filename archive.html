@@ -278,6 +278,190 @@
         aria-hidden="true"
       ></div>
     </header>
+    <section
+      id="accessibility-settings"
+      class="accessibility-panel"
+      role="dialog"
+      aria-labelledby="accessibility-heading"
+      hidden
+    >
+      <h2 id="accessibility-heading">Toegankelijkheid</h2>
+      <h3>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="icon icon-tabler icons-tabler-outline icon-tabler-settings"
+        >
+          <path
+            stroke="none"
+            d="M0 0h24v24H0z"
+            fill="none"
+          />
+          <path
+            d="M10.325 4.317c.426 -1.756 2.924 -1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543 -.94 3.31 .826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756 .426 1.756 2.924 0 3.35a1.724 1.724 0 0 0 -1.066 2.573c.94 1.543 -.826 3.31 -2.37 2.37a1.724 1.724 0 0 0 -2.572 1.065c-.426 1.756 -2.924 1.756 -3.35 0a1.724 1.724 0 0 0 -2.573 -1.066c-1.543 .94 -3.31 -.826 -2.37 -2.37a1.724 1.724 0 0 0 -1.065 -2.572c-1.756 -.426 -1.756 -2.924 0 -3.35a1.724 1.724 0 0 0 1.066 -2.573c-.94 -1.543 .826 -3.31 2.37 -2.37c1 .608 2.296 .07 2.572 -1.065z"
+          />
+          <path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" /></svg>Instellingen</h3>
+      <ul>
+        <li>
+          <label>
+            <input
+              type="checkbox"
+              id="toggle-text"
+            />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="icon icon-tabler icons-tabler-outline icon-tabler-text-size"
+            >
+              <path
+                stroke="none"
+                d="M0 0h24v24H0z"
+                fill="none"
+              />
+              <path d="M3 7v-2h13v2" />
+              <path d="M10 5v14" />
+              <path d="M12 19h-4" />
+              <path d="M15 13v-1h6v1" />
+              <path d="M18 12v7" />
+              <path d="M17 19h2" />
+            </svg>
+            Grotere tekst
+          </label>
+        </li>
+        <li>
+          <label>
+            <input
+              type="checkbox"
+              id="toggle-contrast"
+            />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              class="icon icon-tabler icons-tabler-filled icon-tabler-contrast"
+            >
+              <path
+                stroke="none"
+                d="M0 0h24v24H0z"
+                fill="none"
+              />
+              <path
+                d="M17 3.34a10 10 0 1 1 -15 8.66l.005 -.324a10 10 0 0 1 14.995 -8.336m-9 1.732a8 8 0 0 0 4.001 14.928l-.001 -16a8 8 0 0 0 -4 1.072"
+              />
+            </svg>
+            Hoog contrast
+          </label>
+        </li>
+        <li>
+          <label>
+            <input
+              type="checkbox"
+              id="toggle-dyslexic"
+            />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="icon icon-tabler icons-tabler-outline icon-tabler-letter-case"
+            >
+              <path
+                stroke="none"
+                d="M0 0h24v24H0z"
+                fill="none"
+              />
+              <path
+                d="M17.5 15.5m-3.5 0a3.5 3.5 0 1 0 7 0a3.5 3.5 0 1 0 -7 0"
+              />
+              <path d="M3 19v-10.5a3.5 3.5 0 0 1 7 0v10.5" />
+              <path d="M3 13h7" />
+              <path d="M21 12v7" />
+            </svg>
+            Dyslexievriendelijk lettertype
+          </label>
+        </li>
+        <li>
+          <label>
+            <input
+              type="checkbox"
+              id="toggle-reduce-motion"
+            />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="icon icon-tabler icons-tabler-outline icon-tabler-player-pause"
+            >
+              <path
+                stroke="none"
+                d="M0 0h24v24H0z"
+                fill="none"
+              />
+              <path
+                d="M6 5m0 1a1 1 0 0 1 1 -1h2a1 1 0 0 1 1 1v12a1 1 0 0 1 -1 1h-2a1 1 0 0 1 -1 -1z"
+              />
+              <path
+                d="M14 5m0 1a1 1 0 0 1 1 -1h2a1 1 0 0 1 1 1v12a1 1 0 0 1 -1 1h-2a1 1 0 0 1 -1 -1z"
+              />
+            </svg>
+            Animaties uitschakelen
+          </label>
+        </li>
+      </ul>
+      <button
+        id="close-accessibility"
+        aria-label="Sluiten"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="icon icon-tabler icons-tabler-outline icon-tabler-x"
+        >
+          <path
+            stroke="none"
+            d="M0 0h24v24H0z"
+            fill="none"
+          />
+          <path d="M18 6l-12 12" />
+          <path d="M6 6l12 12" />
+        </svg>
+        Sluiten
+      </button>
+    </section>
     <main id="main-content">
       <section class="hero-section page-hero dotted-background-pink">
         <div class="page-hero-content">
@@ -493,40 +677,81 @@
             </li>
           </ul>
         </section>
-        <button
-          class="back-to-top"
-          aria-describedby="back-to-top-desc"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-up"
+        <div class="floating-button-wrapper">
+          <button
+            class="back-to-top"
+            aria-describedby="back-to-top-desc"
           >
-            <path
-              stroke="none"
-              d="M0 0h24v24H0z"
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
               fill="none"
-            />
-            <path d="M6 15l6 -6l6 6" />
-          </svg>
-          <span
-            id="back-to-top-desc"
-            class="sr-only"
-            >Terug naar boven</span
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-up"
+            >
+              <path
+                stroke="none"
+                d="M0 0h24v24H0z"
+                fill="none"
+              />
+              <path d="M6 15l6 -6l6 6" />
+            </svg>
+            <span
+              id="back-to-top-desc"
+              class="sr-only"
+              >Terug naar boven</span
+            >
+            <span
+              class="back-to-top-tooltip"
+              aria-hidden="true"
+              >Terug naar boven</span
+            >
+          </button>
+          <button
+            id="accessibility-toggle"
+            class="accessibility-button"
+            aria-haspopup="dialog"
+            aria-controls="accessibility-settings"
+            aria-label="Toegankelijkheidsinstellingen openen"
           >
-          <span
-            class="back-to-top-tooltip"
-            aria-hidden="true"
-            >Terug naar boven</span
-          >
-        </button>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="icon icon-tabler icons-tabler-outline icon-tabler-accessible"
+            >
+              <path
+                stroke="none"
+                d="M0 0h24v24H0z"
+                fill="none"
+              />
+              <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
+              <path d="M10 16.5l2 -3l2 3m-2 -3v-2l3 -1m-6 0l3 1" />
+              <circle
+                cx="12"
+                cy="7.5"
+                r=".5"
+                fill="currentColor"
+              />
+            </svg>
+            <span
+              class="accessibility-tooltip"
+              aria-hidden="true"
+              >Toegankelijkheid</span
+            >
+          </button>
+        </div>
       </div>
     </main>
     <footer>
