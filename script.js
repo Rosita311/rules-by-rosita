@@ -212,9 +212,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-
-
-
 // Darkmode
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -304,7 +301,7 @@ const settingsMap = {
   "toggle-text": "large-text",
   "toggle-contrast": "high-contrast",
   "toggle-dyslexic": "dyslexic-font",
-  "toggle-reduce-motion": "reduce-motion"
+  "toggle-reduce-motion": "reduce-motion",
 };
 
 //Paneel openen/sluiten
@@ -324,7 +321,7 @@ const accessibilityOptions = {
   "toggle-dyslexic": "dyslexic-font",
   "toggle-contrast": "high-contrast",
   "toggle-text": "large-text",
-  "toggle-reduce-motion": "reduce-motion"
+  "toggle-reduce-motion": "reduce-motion",
 };
 
 // Theme-toggle verbergen bij hoog contrast
@@ -356,7 +353,10 @@ function toggleSetting(button, className) {
   document.body.classList.toggle(className, newState);
   localStorage.setItem(className, newState);
 
-   button.setAttribute("aria-pressed", String(newState));
+  const target =
+    className === "large-text" ? document.documentElement : document.body;
+  target.classList.toggle(className, newState);
+
   if (className === "large-text") {
     document.documentElement.classList.toggle(className, newState);
   } else {
@@ -377,7 +377,10 @@ function restoreSettings() {
     const savedState = localStorage.getItem(className) === "true";
 
     button.setAttribute("aria-pressed", String(savedState));
-    document.body.classList.toggle(className, savedState);
+    const target =
+      className === "large-text" ? document.documentElement : document.body;
+    target.classList.toggle(className, savedState);
+
     updateButtonIcon(button, savedState);
 
     button.addEventListener("click", () => toggleSetting(button, className));
@@ -394,7 +397,10 @@ function setupResetButton() {
   resetBtn.addEventListener("click", () => {
     Object.entries(accessibilityOptions).forEach(([buttonId, className]) => {
       const button = document.getElementById(buttonId);
-      document.body.classList.remove(className);
+      const target =
+        className === "large-text" ? document.documentElement : document.body;
+      target.classList.remove(className);
+
       button.setAttribute("aria-pressed", "false");
       localStorage.removeItem(className);
       updateButtonIcon(button, false);
@@ -407,8 +413,3 @@ window.addEventListener("DOMContentLoaded", () => {
   restoreSettings();
   setupResetButton();
 });
-
-
-
-
-
