@@ -59,10 +59,14 @@ html {
 body {
   font-family: var(--font-body);
   background-color: var(--color-background);
+  font-size: 1rem;
   color: var(--color-text);
   max-width: 100%;
   margin: 0 auto;
 }
+
+
+
 
 h1,
 h2,

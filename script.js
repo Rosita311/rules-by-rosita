@@ -356,6 +356,14 @@ function toggleSetting(button, className) {
   document.body.classList.toggle(className, newState);
   localStorage.setItem(className, newState);
 
+   button.setAttribute("aria-pressed", String(newState));
+  if (className === "large-text") {
+    document.documentElement.classList.toggle(className, newState);
+  } else {
+    document.body.classList.toggle(className, newState);
+  }
+  localStorage.setItem(className, newState);
+
   updateButtonIcon(button, newState);
   if (className === "high-contrast") {
     updateThemeToggleVisibility();

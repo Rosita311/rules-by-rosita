@@ -154,7 +154,7 @@
 
 #accessibility-settings button[aria-pressed="true"] {
   background-color: var(--color-contrast);
-  color: var(--color-background);
+  color: var(--color-bg-light);
   font-weight: 600;
 }
 
@@ -180,9 +180,7 @@
 }
 
 /* Accessibility settings */
-body.large-text {
-  font-size: 1.25em;
-}
+
 
 
 
@@ -223,6 +221,18 @@ body.dyslexic-font h4,
 body.dyslexic-font h5,
 body.dyslexic-font h6 {
   font-weight: 700;
+}
+
+/* Grotere tekst */
+/* Normaal */
+html {
+  font-size: 100%; /* = 16px */
+}
+
+/* Bij grote tekst */
+
+html.large-text {
+  font-size: 125%; /* Verhoog de basislettergrootte met 25% */
 }
 
 
