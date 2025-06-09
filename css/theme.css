@@ -65,9 +65,6 @@ body {
   margin: 0 auto;
 }
 
-
-
-
 h1,
 h2,
 h3,
@@ -297,20 +294,23 @@ button {
   .page-title {
     animation: none;
     opacity: 1;
-    transform: none !important;
+    transform: none;
   }
 
-  .back-to-top, .accessibility-button {
+  .back-to-top,
+  .accessibility-button {
     transition: none !important;
     scroll-behavior: auto;
     opacity: 1;
   }
 
-  .back-to-top.show, .accessibility-button.show {
+  .back-to-top.show,
+  .accessibility-button.show {
     opacity: 1;
   }
 
-  .back-to-top:hover, .accessibility-button:hover {
+  .back-to-top:hover,
+  .accessibility-button:hover {
     transform: none !important;
   }
 }

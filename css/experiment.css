@@ -313,3 +313,11 @@ body.high-contrast .dotted-background-blue {
   transform: none !important;
   opacity: 1 !important;
 }
+
+.reduce-motion .page-title {
+  animation: none;
+  opacity: 1;
+  transform: none;
+}
+
+
