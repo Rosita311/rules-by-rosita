@@ -227,8 +227,7 @@ a #top:focus-visible {
     color: var(--color-bg-light) !important;
   }
 
-  /* Fix: Flattened selector for valid CSS */
-  .submenu > li a:hover svg {
+  &:hover svg {
     stroke: var(--color-text) !important;
   }
 

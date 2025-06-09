@@ -111,31 +111,41 @@
   display: block;
 }
 
-#accessibility-settings header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
 #accessibility-settings h2 {
   font-size: 1.5rem;
   margin: 0;
 }
 
-#accessibility-settings button {
+.accessibility-header {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  gap: 0.5rem;
-  background: none;
-  border: 2px solid transparent;
-  padding: 0.5rem 0.75rem;
-  border-radius: 8px;
-  font: inherit;
-  cursor: pointer;
-  transition: border-color 0.2s, background 0.2s;
+  margin-bottom: 1rem;
 }
 
-#accessibility-settings button:hover,
+#accessibility-settings button {
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s;
+
+   &:hover {
+    background-color: var(--color-menu-button-hover);
+    color: var(--color-text);
+  }
+}
+
+#close-accessibility {
+  padding: 4px !important;
+  border-radius: 50% !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
 #accessibility-settings button:focus-visible {
   border-color: var(--color-contrast);
   background-color: var(--color-accent-2);
@@ -169,14 +179,7 @@
   margin-top: 0.5rem;
 }
 
-.icon {
-  width: 20px;
-  height: 20px;
-}
-
-
-
-/* Accessibilitu settings */
+/* Accessibility settings */
 body.large-text {
   font-size: 1.25em;
 }
@@ -256,9 +259,14 @@ body.high-contrast .dotted-background-blue {
   background-image: none;
   background-color: var(--color-background); 
 }
-
+.high-contrast #accessibility-settings button:hover {
+  background-color: var(--color-menu-button-hover);
+  color: var(--color-background);
+  
+}
 .high-contrast .menu-button:hover svg,
- .high-contrast #theme-switch:hover svg {
+ .high-contrast #theme-switch:hover svg,
+ .high-contrast #accessibility-settings button:hover svg { 
   stroke: var(--color-background);
 }
 
