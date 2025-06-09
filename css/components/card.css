@@ -168,6 +168,7 @@ body:not(.user-is-tabbing) .hero-card-content:focus-within {
 
 @media screen and (max-width: 768px) {
   .blog-listing-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 4rem;
   }
 }

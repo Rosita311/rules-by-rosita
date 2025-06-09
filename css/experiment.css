@@ -181,14 +181,6 @@
 
 /* Accessibility settings */
 
-
-
-
-body.reduce-motion * {
-  transition: none !important;
-  animation: none !important;
-}
-
 /* Dislexie font */
 body.dyslexic-font,
 body.dyslexic-font h1,
@@ -302,4 +294,22 @@ body.high-contrast .dotted-background-blue {
 
 .high-contrast #theme-switch {
   display: none; /* Verberg de themewisselaar in high contrast modus */
+}
+
+.reduce-motion * {
+  animation: none !important;
+  transition: none !important;
+  scroll-behavior: auto !important;
+}
+
+.reduce-motion .submenu-toggle[aria-expanded="true"] .chevron,
+.reduce-motion .page-title,
+.reduce-motion .back-to-top,
+.reduce-motion .accessibility-button,
+.reduce-motion .back-to-top.show,
+.reduce-motion .accessibility-button.show,
+.reduce-motion .back-to-top:hover,
+.reduce-motion .accessibility-button:hover {
+  transform: none !important;
+  opacity: 1 !important;
 }

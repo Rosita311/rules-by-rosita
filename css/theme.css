@@ -300,17 +300,17 @@ button {
     transform: none !important;
   }
 
-  .back-to-top {
+  .back-to-top, .accessibility-button {
     transition: none !important;
     scroll-behavior: auto;
     opacity: 1;
   }
 
-  .back-to-top.show {
+  .back-to-top.show, .accessibility-button.show {
     opacity: 1;
   }
 
-  .back-to-top:hover {
+  .back-to-top:hover, .accessibility-button:hover {
     transform: none !important;
   }
 }
