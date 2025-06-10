@@ -36,6 +36,16 @@
   flex-wrap: wrap;
 }
 
+.post-meta-item ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 0.5rem
+}
+
 .post-meta li {
   display: flex;
   align-items: center;
