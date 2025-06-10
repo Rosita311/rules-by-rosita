@@ -172,7 +172,7 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     };
 
-    // 📱 Klikgedrag voor touch/keyboard
+    // Klikgedrag voor touch/keyboard
     button.addEventListener("click", (e) => {
       if (isMouseUser && window.innerWidth > 992) {
         // Negeer klik als muisgebruiker op desktop
@@ -192,29 +192,29 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-    // 🖱️ Hovergedrag op desktop
+    // Hovergedrag op desktop
     parentItem.addEventListener("mouseenter", () => {
       if (isMouseUser && window.innerWidth > 992) {
         clearTimeout(hoverCloseTimeout);
-        hoverOpenTimeout = setTimeout(openSubmenu, 150);
+        hoverOpenTimeout = setTimeout(openSubmenu, 300);
       }
     });
 
     parentItem.addEventListener("mouseleave", () => {
       if (isMouseUser && window.innerWidth > 992) {
         clearTimeout(hoverOpenTimeout);
-        hoverCloseTimeout = setTimeout(closeSubmenu, 150);
+        hoverCloseTimeout = setTimeout(closeSubmenu, 300);
       }
     });
 
-    // 🔒 Sluit submenu bij klik buiten het menu
+    // Sluit submenu bij klik buiten het menu
     document.addEventListener("click", (e) => {
       if (!parentItem.contains(e.target)) {
         closeSubmenu();
       }
     });
 
-    // ⌨️ Escape sluit submenu
+    // Escape sluit submenu
     submenu?.addEventListener("keydown", (e) => {
       if (e.key === "Escape") {
         closeSubmenu();
