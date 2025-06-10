@@ -134,6 +134,12 @@ updateNavbar(media);
 // Submenu
 document.addEventListener("DOMContentLoaded", () => {
   const submenuToggles = document.querySelectorAll(".submenu-toggle");
+  let isMouseUser = false;
+
+  // Detecteer muisgebruik
+  window.addEventListener("mousemove", () => {
+    isMouseUser = true;
+  }, { once: true }); // Alleen eerste keer nodig
 
   submenuToggles.forEach((button) => {
     const parentItem = button.closest(".has-submenu");
@@ -142,7 +148,6 @@ document.addEventListener("DOMContentLoaded", () => {
     let hoverOpenTimeout, hoverCloseTimeout;
 
     const openSubmenu = () => {
-      console.log("Opening submenu");
       closeAllSubmenus();
       parentItem.classList.add("open");
       button.setAttribute("aria-expanded", "true");
@@ -151,7 +156,6 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     const closeSubmenu = () => {
-      console.log("Closing submenu");
       parentItem.classList.remove("open");
       button.setAttribute("aria-expanded", "false");
       button.setAttribute("aria-pressed", "false");
@@ -168,42 +172,50 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     };
 
-    // Click toggles submenu
+    // 📱 Klikgedrag voor touch/keyboard
     button.addEventListener("click", (e) => {
+      if (isMouseUser && window.innerWidth > 992) {
+        // Negeer klik als muisgebruiker op desktop
+        return;
+      }
       e.preventDefault();
       const isOpen = parentItem.classList.contains("open");
-
-      if (isOpen) {
-        closeSubmenu();
-      } else {
-        openSubmenu();
-      }
+      isOpen ? closeSubmenu() : openSubmenu();
     });
 
-    // Hover ondersteuning op desktop (breder dan 992px)
+    button.addEventListener("keydown", (e) => {
+  if (e.key === "Enter" || e.key === " ") {
+    e.preventDefault(); // voorkom scroll bij spatie
+    const isOpen = parentItem.classList.contains("open");
+    isOpen ? closeSubmenu() : openSubmenu();
+  }
+});
+
+
+    // 🖱️ Hovergedrag op desktop
     parentItem.addEventListener("mouseenter", () => {
-      if (window.innerWidth > 992) {
+      if (isMouseUser && window.innerWidth > 992) {
         clearTimeout(hoverCloseTimeout);
-        hoverOpenTimeout = setTimeout(openSubmenu, 300);
+        hoverOpenTimeout = setTimeout(openSubmenu, 150);
       }
     });
 
     parentItem.addEventListener("mouseleave", () => {
-      if (window.innerWidth > 992) {
+      if (isMouseUser && window.innerWidth > 992) {
         clearTimeout(hoverOpenTimeout);
-        hoverCloseTimeout = setTimeout(closeSubmenu, 300);
+        hoverCloseTimeout = setTimeout(closeSubmenu, 150);
       }
     });
 
-    // Sluit submenu als je ergens anders klikt
+    // 🔒 Sluit submenu bij klik buiten het menu
     document.addEventListener("click", (e) => {
       if (!parentItem.contains(e.target)) {
         closeSubmenu();
       }
     });
 
-    // Escape key sluit submenu
-    submenu.addEventListener("keydown", (e) => {
+    // ⌨️ Escape sluit submenu
+    submenu?.addEventListener("keydown", (e) => {
       if (e.key === "Escape") {
         closeSubmenu();
         button.focus();
@@ -211,6 +223,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
 
 // Darkmode
 
