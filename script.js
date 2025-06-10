@@ -317,16 +317,49 @@ const settingsMap = {
   "toggle-reduce-motion": "reduce-motion",
 };
 
-//Paneel openen/sluiten
+// Paneel openen/sluiten via klik
 toggleButton.addEventListener("click", () => {
-  const isVisible = panel.classList.toggle("show");
-  panel.setAttribute("aria-hidden", !isVisible);
+  togglePanel();
 });
 
+// Ook openen/sluiten met Enter of Spatie
+toggleButton.addEventListener("keydown", (e) => {
+  if (e.key === "Enter" || e.key === " ") {
+    e.preventDefault();
+    togglePanel();
+  }
+});
+
+// Sluitknop sluit het paneel
 closeButton.addEventListener("click", () => {
+  closePanel();
+});
+
+// Escape sluit het paneel
+panel.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") {
+    closePanel();
+    toggleButton.focus();
+  }
+});
+
+// Functies
+
+function togglePanel() {
+  const isVisible = panel.classList.toggle("show");
+  panel.setAttribute("aria-hidden", !isVisible);
+
+  if (isVisible) {
+    const firstInput = panel.querySelector("input, button, select, textarea, [tabindex]:not([tabindex='-1'])");
+    if (firstInput) firstInput.focus();
+  }
+}
+
+function closePanel() {
   panel.classList.remove("show");
   panel.setAttribute("aria-hidden", "true");
-});
+}
+
 
 // Instellingen bijhouden in localStorage
 

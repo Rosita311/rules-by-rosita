@@ -143,6 +143,16 @@
     background-color: var(--color-menu-button-hover);
     color: var(--color-text);
   }
+
+  &:focus-visible {
+  background-color: var(--color-text);
+  color: var(--color-background);
+  outline: 2px solid var(--color-text);
+}
+}
+
+#accessibility-settings button:focus-visible svg {
+  stroke: var(--color-background);
 }
 
 #close-accessibility {
@@ -152,11 +162,12 @@
   align-items: center !important;
 }
 
-#accessibility-settings button:focus-visible {
-  border-color: var(--color-contrast);
-  background-color: var(--color-accent-2);
-  outline: none;
-}
+/* #accessibility-settings button:focus-visible {
+  background-color: var(--color-text);
+  color: var(--color-background);
+  border-radius: 50%;
+  outline: 2px solid var(--color-text);
+} */
 
 #accessibility-settings button[aria-pressed="true"] {
   background-color: var(--color-contrast);
@@ -290,7 +301,8 @@ body.high-contrast .dotted-background-blue {
 .high-contrast #theme-switch:focus-visible,
 .high-contrast .footer-menu nav a:focus-visible,
 .high-contrast .footer-btn:focus-visible,
-.high-contrast .has-submenu > button.submenu-toggle:focus-visible {
+.high-contrast .has-submenu > button.submenu-toggle:focus-visible,
+.high-contrast #accessibility-settings button:focus-visible {
   outline: 3px solid var(--hc-focus);
   outline-offset: 2px;
   transition: none; /* Geen animatie voor directe visuele feedback */
