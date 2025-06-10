@@ -45,7 +45,10 @@ const trapFocus = (container) => {
   container.addEventListener("keydown", handleTrap);
   container.setAttribute("data-trap-bound", "true");
 
-  return handleTrap;
+    return () => {
+    container.removeEventListener("keydown", handleTrap);
+    container.removeAttribute("data-trap-bound");
+  };
 };
 
 const openSidebar = () => {
@@ -370,10 +373,15 @@ function togglePanel() {
   }
 }
 
-function closePanel() {
+const closePanel = () => {
   panel.classList.remove("show");
   panel.setAttribute("aria-hidden", "true");
-  toggleButton.focus(); 
+  toggleButton.focus();
+  
+  if (typeof releaseTrap === "function") {
+    releaseTrap();
+    releaseTrap = null;
+  }
 }
 
 
