@@ -14,7 +14,7 @@ const navLinks = document.querySelectorAll("#header-nav a");
 let currentTrapHandler = null;
 let escKeyHandler = null;
 
-// Trap focus within the sidebar when open
+// Trap focus within the sidebar and accessibility menu when open
 
 const trapFocus = (container) => {
   const isVisible = (el) =>
@@ -317,6 +317,8 @@ const settingsMap = {
   "toggle-reduce-motion": "reduce-motion",
 };
 
+let releaseTrap; // om later de trap te stoppen
+
 // Paneel openen/sluiten via klik
 toggleButton.addEventListener("click", () => {
   togglePanel();
@@ -352,7 +354,7 @@ document.querySelector('a[href="#accessibility-settings"]').addEventListener("cl
   firstFocusable?.focus();
 
   // Focus trap starten
-  // releaseTrap = trapFocus(panel);
+  releaseTrap = trapFocus(panel);
 });
 
 
