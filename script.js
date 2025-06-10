@@ -339,7 +339,6 @@ closeButton.addEventListener("click", () => {
 panel.addEventListener("keydown", (e) => {
   if (e.key === "Escape") {
     closePanel();
-    toggleButton.focus();
   }
 });
 
