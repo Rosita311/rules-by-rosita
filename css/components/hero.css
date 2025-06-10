@@ -146,6 +146,10 @@
   stroke: var(--color-text);
 }
 
+.introduction-label-text {
+  font-weight: bold;
+}
+
 /* Page hero styles */
 .page-hero {
   padding-top: 7rem;
