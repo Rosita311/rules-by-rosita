@@ -162,17 +162,14 @@
   align-items: center !important;
 }
 
-/* #accessibility-settings button:focus-visible {
-  background-color: var(--color-text);
-  color: var(--color-background);
-  border-radius: 50%;
-  outline: 2px solid var(--color-text);
-} */
-
 #accessibility-settings button[aria-pressed="true"] {
   background-color: var(--color-contrast);
   color: var(--color-bg-light);
   font-weight: 600;
+}
+
+#accessibility-settings button[aria-pressed="true"] svg {
+  stroke: var(--color-bg-light);
 }
 
 .accessibility-group {

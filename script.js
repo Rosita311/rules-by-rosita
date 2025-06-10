@@ -125,7 +125,7 @@ const updateNavbar = (e) => {
     mainContent.removeAttribute("inert");
     menuButtons.removeAttribute("inert");
     footer.removeAttribute("inert");
-  
+
     navbar.classList.remove("show");
     overlay.style.display = "none";
     openButton.setAttribute("aria-expanded", "false");
@@ -361,7 +361,7 @@ document
     );
     firstFocusable?.focus();
 
-   activateTrap(panel);
+    activateTrap(panel);
   });
 
 // Functies
