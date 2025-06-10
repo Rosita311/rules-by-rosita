@@ -186,6 +186,10 @@ a #top:focus-visible {
   border-radius: 0.25rem;
 }
 
+.chevron:focus-visible svg {
+  stroke: currentColor;
+}
+
 .has-submenu.open > .submenu-toggle {
   border-bottom: 2px solid var(--color-primary);
 }

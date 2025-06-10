@@ -11,7 +11,7 @@ const menuButtons = document.querySelector(".menu-buttons");
 const footer = document.querySelector(".footer-container");
 const navLinks = document.querySelectorAll("#header-nav a");
 
-let currentTrapHandler = null;
+let activeFocusTrap = null;
 let escKeyHandler = null;
 
 // Trap focus within the sidebar and accessibility menu when open
@@ -45,11 +45,27 @@ const trapFocus = (container) => {
   container.addEventListener("keydown", handleTrap);
   container.setAttribute("data-trap-bound", "true");
 
-    return () => {
+  return () => {
     container.removeEventListener("keydown", handleTrap);
     container.removeAttribute("data-trap-bound");
   };
 };
+
+const activateTrap = (container) => {
+  if (typeof activeFocusTrap === "function") {
+    activeFocusTrap(); // verwijder oude trap
+  }
+  activeFocusTrap = trapFocus(container);
+};
+
+const deactivateTrap = () => {
+  if (typeof activeFocusTrap === "function") {
+    activeFocusTrap();
+    activeFocusTrap = null;
+  }
+};
+
+// sidebar
 
 const openSidebar = () => {
   navbar.classList.add("show");
@@ -57,7 +73,7 @@ const openSidebar = () => {
   openButton.setAttribute("aria-expanded", "true");
 
   if (media.matches) {
-    currentTrapHandler = trapFocus(navbar);
+    activateTrap(navbar);
     navbar.removeAttribute("inert");
     mainContent.setAttribute("inert", "");
     menuButtons.setAttribute("inert", "");
@@ -78,6 +94,7 @@ const closeSidebar = () => {
   document.body.classList.remove("menu-open");
   openButton.setAttribute("aria-expanded", "false");
   if (media.matches) {
+    deactivateTrap();
     navbar.setAttribute("inert", "");
     mainContent.removeAttribute("inert");
     menuButtons.removeAttribute("inert");
@@ -85,17 +102,6 @@ const closeSidebar = () => {
     overlay.style.display = "none";
   }
   openButton.focus();
-
-  if (currentTrapHandler) {
-    navbar.removeEventListener("keydown", currentTrapHandler);
-    navbar.removeAttribute("data-trap-bound");
-    currentTrapHandler = null;
-  }
-
-  if (escKeyHandler) {
-    document.removeEventListener("keydown", escKeyHandler);
-    escKeyHandler = null;
-  }
 };
 
 navLinks.forEach((link) => {
@@ -109,25 +115,20 @@ navLinks.forEach((link) => {
 
 const updateNavbar = (e) => {
   const isMobile = e.matches;
-  console.log("Screen changed. Mobile view:", isMobile);
 
   if (isMobile) {
+    activateTrap(navbar);
     navbar.setAttribute("inert", "");
   } else {
+    deactivateTrap();
     navbar.removeAttribute("inert");
     mainContent.removeAttribute("inert");
     menuButtons.removeAttribute("inert");
     footer.removeAttribute("inert");
-
+  
     navbar.classList.remove("show");
     overlay.style.display = "none";
     openButton.setAttribute("aria-expanded", "false");
-
-    if (currentTrapHandler) {
-      navbar.removeEventListener("keydown", currentTrapHandler);
-      navbar.removeAttribute("data-trap-bound");
-      currentTrapHandler = null;
-    }
   }
 };
 
@@ -140,9 +141,13 @@ document.addEventListener("DOMContentLoaded", () => {
   let isMouseUser = false;
 
   // Detecteer muisgebruik
-  window.addEventListener("mousemove", () => {
-    isMouseUser = true;
-  }, { once: true }); // Alleen eerste keer nodig
+  window.addEventListener(
+    "mousemove",
+    () => {
+      isMouseUser = true;
+    },
+    { once: true }
+  ); // Alleen eerste keer nodig
 
   submenuToggles.forEach((button) => {
     const parentItem = button.closest(".has-submenu");
@@ -187,13 +192,12 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     button.addEventListener("keydown", (e) => {
-  if (e.key === "Enter" || e.key === " ") {
-    e.preventDefault(); // voorkom scroll bij spatie
-    const isOpen = parentItem.classList.contains("open");
-    isOpen ? closeSubmenu() : openSubmenu();
-  }
-});
-
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault(); // voorkom scroll bij spatie
+        const isOpen = parentItem.classList.contains("open");
+        isOpen ? closeSubmenu() : openSubmenu();
+      }
+    });
 
     // Hovergedrag op desktop
     parentItem.addEventListener("mouseenter", () => {
@@ -226,7 +230,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
-
 
 // Darkmode
 
@@ -320,8 +323,6 @@ const settingsMap = {
   "toggle-reduce-motion": "reduce-motion",
 };
 
-let releaseTrap; // om later de trap te stoppen
-
 // Paneel openen/sluiten via klik
 toggleButton.addEventListener("click", () => {
   togglePanel();
@@ -347,43 +348,46 @@ panel.addEventListener("keydown", (e) => {
   }
 });
 
-document.querySelector('a[href="#accessibility-settings"]').addEventListener("click", (e) => {
-  e.preventDefault();
+document
+  .querySelector('a[href="#accessibility-settings"]')
+  .addEventListener("click", (e) => {
+    e.preventDefault();
 
-  panel.classList.add("show");
-  panel.setAttribute("aria-hidden", "false");
+    panel.classList.add("show");
+    panel.setAttribute("aria-hidden", "false");
 
-  const firstFocusable = panel.querySelector('button, [tabindex]:not([tabindex="-1"])');
-  firstFocusable?.focus();
+    const firstFocusable = panel.querySelector(
+      'button, [tabindex]:not([tabindex="-1"])'
+    );
+    firstFocusable?.focus();
 
-  // Focus trap starten
-  releaseTrap = trapFocus(panel);
-});
-
+   activateTrap(panel);
+  });
 
 // Functies
 
-function togglePanel() {
+const togglePanel = () => {
   const isVisible = panel.classList.toggle("show");
   panel.setAttribute("aria-hidden", !isVisible);
 
   if (isVisible) {
-    const firstInput = panel.querySelector("input, button, select, textarea, [tabindex]:not([tabindex='-1'])");
+    const firstInput = panel.querySelector(
+      "input, button, select, textarea, [tabindex]:not([tabindex='-1'])"
+    );
     if (firstInput) firstInput.focus();
+    activateTrap(panel);
+  } else {
+    deactivateTrap();
+    toggleButton.focus;
   }
-}
+};
 
 const closePanel = () => {
+  deactivateTrap();
   panel.classList.remove("show");
   panel.setAttribute("aria-hidden", "true");
   toggleButton.focus();
-  
-  if (typeof releaseTrap === "function") {
-    releaseTrap();
-    releaseTrap = null;
-  }
-}
-
+};
 
 // Instellingen bijhouden in localStorage
 
