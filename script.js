@@ -343,6 +343,20 @@ panel.addEventListener("keydown", (e) => {
   }
 });
 
+document.querySelector('a[href="#accessibility-settings"]').addEventListener("click", (e) => {
+  e.preventDefault();
+
+  panel.classList.add("show");
+  panel.setAttribute("aria-hidden", "false");
+
+  const firstFocusable = panel.querySelector('button, [tabindex]:not([tabindex="-1"])');
+  firstFocusable?.focus();
+
+  // Focus trap starten
+  // releaseTrap = trapFocus(panel);
+});
+
+
 // Functies
 
 function togglePanel() {
@@ -358,6 +372,7 @@ function togglePanel() {
 function closePanel() {
   panel.classList.remove("show");
   panel.setAttribute("aria-hidden", "true");
+  toggleButton.focus(); 
 }
 
 
