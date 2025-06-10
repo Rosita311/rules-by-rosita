@@ -369,6 +369,8 @@ document
 const togglePanel = () => {
   const isVisible = panel.classList.toggle("show");
   panel.setAttribute("aria-hidden", !isVisible);
+  toggleButton.setAttribute("aria-expanded", isVisible);
+
 
   if (isVisible) {
     const firstInput = panel.querySelector(
@@ -378,7 +380,7 @@ const togglePanel = () => {
     activateTrap(panel);
   } else {
     deactivateTrap();
-    toggleButton.focus;
+    toggleButton.focus();
   }
 };
 
@@ -386,6 +388,7 @@ const closePanel = () => {
   deactivateTrap();
   panel.classList.remove("show");
   panel.setAttribute("aria-hidden", "true");
+  toggleButton.setAttribute("aria-expanded", "false");
   toggleButton.focus();
 };
 

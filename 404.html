@@ -290,30 +290,6 @@
     >
       <header class="accessibility-header">
         <h2 id="accessibility-heading">Toegankelijkheid</h2>
-        <button
-          id="close-accessibility"
-          aria-label="Sluit instellingen"
-        >
-          <svg
-            aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="icon icon-tabler icon-tabler-x"
-          >
-            <path
-              stroke="none"
-              d="M0 0h24v24H0z"
-              fill="none"
-            />
-            <path d="M18 6L6 18M6 6l12 12" />
-          </svg>
-        </button>
       </header>
 
       <div class="accessibility-group">
@@ -491,6 +467,30 @@
             </button>
           </li>
         </ul>
+        <button
+          id="close-accessibility"
+          aria-label="Sluit instellingen"
+        >
+          <svg
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="icon icon-tabler icon-tabler-x"
+          >
+            <path
+              stroke="none"
+              d="M0 0h24v24H0z"
+              fill="none"
+            />
+            <path d="M18 6L6 18M6 6l12 12" />
+          </svg>
+        </button>
       </div>
     </section>
     <main id="main-content">
@@ -579,6 +579,7 @@
             id="accessibility-toggle"
             class="accessibility-button"
             aria-haspopup="dialog"
+            aria-expanded="false"
             aria-controls="accessibility-settings"
             aria-label="Toegankelijkheidsinstellingen openen"
           >

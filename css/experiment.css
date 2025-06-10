@@ -160,6 +160,7 @@
   border-radius: 50% !important;
   justify-content: center !important;
   align-items: center !important;
+  position: absolute; top: 1rem; right: 1rem;
 }
 
 #accessibility-settings button[aria-pressed="true"] {
