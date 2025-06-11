@@ -79,6 +79,7 @@ const openSidebar = () => {
     menuButtons.setAttribute("inert", "");
     footer.setAttribute("inert", "");
     overlay.style.display = "block";
+    toggleButton.style.display ="none";
   }
 
   escKeyHandler = (e) => {
@@ -100,6 +101,7 @@ const closeSidebar = () => {
     menuButtons.removeAttribute("inert");
     footer.removeAttribute("inert");
     overlay.style.display = "none";
+    toggleButton.style.display ="block";
   }
   openButton.focus();
 };
@@ -299,8 +301,10 @@ const backToTop = document.querySelector(".back-to-top");
 window.addEventListener("scroll", () => {
   if (window.scrollY > 300) {
     backToTop.classList.add("show");
+    backToTop.setAttribute("aria-hidden", "false")
   } else {
     backToTop.classList.remove("show");
+    backToTop.setAttribute("aria-hidden", "true")
   }
 });
 
