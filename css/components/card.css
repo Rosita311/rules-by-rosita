@@ -26,7 +26,7 @@
 }
 
 .hover-shadow:hover {
-  box-shadow: 8px 8px 0px 0px var(--color-accent);
+  box-shadow: 0.5rem 0.5rem 0rem 0rem var(--color-accent);
 }
 
 .post-title {
@@ -79,23 +79,23 @@ section .post-title.h1 {
 .hero-card-content a:focus-visible::after,
 .card a:focus-visible::after {
   outline: 3px solid var(--color-text);
-  box-shadow: 8px 8px 0px 0px var(--color-text);
+  box-shadow: 0.5rem 0.5rem 0rem 0rem var(--color-text);
 }
 
 .hero-card-content:focus-within,
 .card:focus-within {
   outline: 3px solid var(--color-text);
-  box-shadow: 8px 8px 0 var(--color-text);
+  box-shadow: 0.5rem 0.5rem 0 var(--color-text);
 }
 
 .user-is-tabbing .card:focus-within {
   outline: 3px solid var(--color-text);
-  box-shadow: 8px 8px 0 0 var(--color-text);
+  box-shadow: 0.5rem 0.5rem 0 0 var(--color-text);
 }
 
 .user-is-tabbing .hero-card-content:focus-within {
   outline: 3px solid var(--color-text);
-  box-shadow: 8px 8px 0 0 var(--color-text);
+  box-shadow: 0.5rem 0.5rem 0 0 var(--color-text);
 }
 
 body:not(.user-is-tabbing) .card:focus-within {
