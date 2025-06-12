@@ -247,6 +247,16 @@ button {
   color: var(--color-text);
 }
 
+.back-to-top {
+  display: none; /* standaard verborgen */
+  /* ... andere styling ... */
+}
+
+.back-to-top.show {
+  display: block; /* of inline-block, wat je wilt */
+}
+
+
 /* A11y */
 .skip-link {
   position: absolute;

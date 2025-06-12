@@ -309,10 +309,12 @@ const backToTop = document.querySelector(".back-to-top");
 window.addEventListener("scroll", () => {
   if (window.scrollY > 300) {
     backToTop.classList.add("show");
-    backToTop.setAttribute("aria-hidden", "false")
+    backToTop.removeAttribute("aria-hidden");
+    backToTop.removeAttribute("tabindex");
   } else {
     backToTop.classList.remove("show");
-    backToTop.setAttribute("aria-hidden", "true")
+    backToTop.setAttribute("aria-hidden", "true");
+    backToTop.setAttribute("tabindex", "-1");
   }
 });
 
