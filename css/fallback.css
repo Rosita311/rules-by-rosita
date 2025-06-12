@@ -74,6 +74,15 @@ html.no-js {
   display: block;
 }
 
+.no-js .accessibility-button {
+  display: none;
+}
+
+.no-js #accessibility-settings {
+  display: none;
+}
+
+
 @media screen and (max-width: 1024px) {
   html.no-js #header-nav {
     position: static; /* geen fixed/slide‑in positionering */
