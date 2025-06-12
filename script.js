@@ -11,6 +11,11 @@ const menuButtons = document.querySelector(".menu-buttons");
 const footer = document.querySelector(".footer-container");
 const navLinks = document.querySelectorAll("#header-nav a");
 
+// Toegankelijkheidselementen selecteren
+const toggleButton = document.getElementById("accessibility-toggle");
+const panel = document.getElementById("accessibility-settings");
+const closeButton = document.getElementById("close-accessibility");
+
 let activeFocusTrap = null;
 let escKeyHandler = null;
 
@@ -79,7 +84,7 @@ const openSidebar = () => {
     menuButtons.setAttribute("inert", "");
     footer.setAttribute("inert", "");
     overlay.style.display = "block";
-    toggleButton.style.display ="none";
+    if (toggleButton) toggleButton.style.display = "none";
   }
 
   escKeyHandler = (e) => {
@@ -101,7 +106,7 @@ const closeSidebar = () => {
     menuButtons.removeAttribute("inert");
     footer.removeAttribute("inert");
     overlay.style.display = "none";
-    toggleButton.style.display ="block";
+    if (toggleButton) toggleButton.style.display = "block";
   }
   openButton.focus();
 };
@@ -121,16 +126,19 @@ const updateNavbar = (e) => {
   if (isMobile) {
     activateTrap(navbar);
     navbar.setAttribute("inert", "");
+    if (navbar.classList.contains("show")) {
+      toggleButton.style.display = "none";
+    }
   } else {
     deactivateTrap();
     navbar.removeAttribute("inert");
     mainContent.removeAttribute("inert");
     menuButtons.removeAttribute("inert");
     footer.removeAttribute("inert");
-
     navbar.classList.remove("show");
     overlay.style.display = "none";
     openButton.setAttribute("aria-expanded", "false");
+    toggleButton.style.display = "block";
   }
 };
 
@@ -314,10 +322,7 @@ backToTop.addEventListener("click", () => {
 });
 
 // Accessibility settings
-// Toegankelijkheidselementen selecteren
-const toggleButton = document.getElementById("accessibility-toggle");
-const panel = document.getElementById("accessibility-settings");
-const closeButton = document.getElementById("close-accessibility");
+
 
 // Koppeling tussen checkbox-ID's en CSS-klassen
 const settingsMap = {
