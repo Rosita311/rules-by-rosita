@@ -381,12 +381,15 @@ const togglePanel = () => {
   panel.setAttribute("aria-hidden", !isVisible);
   toggleButton.setAttribute("aria-expanded", isVisible);
 
-
   if (isVisible) {
-    const firstInput = panel.querySelector(
-      "input, button, select, textarea, [tabindex]:not([tabindex='-1'])"
-    );
-    if (firstInput) firstInput.focus();
+    // Focus verplaatsen naar de titel met aria-live
+    const heading = panel.querySelector("#accessibility-heading");
+    if (heading) {
+      setTimeout(() => {
+        heading.focus();
+      }, 150);
+    }
+
     activateTrap(panel);
   } else {
     deactivateTrap();
