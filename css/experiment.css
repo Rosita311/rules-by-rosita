@@ -1,9 +1,5 @@
 /* Experimenting with CSS variables and custom properties for a more dynamic design. */
 
-
-
-
-
 /* Accessibility-knop altijd zichtbaar */
 .accessibility-button,
 .back-to-top {
@@ -19,7 +15,7 @@
   align-items: center;
   justify-content: center;
   transition: background-color 0.3s ease, transform 0.2s ease;
-   
+   z-index: 100;
 }
 
 .back-to-top {
