@@ -325,7 +325,6 @@ backToTop.addEventListener("click", () => {
 
 // Accessibility settings
 
-
 // Koppeling tussen checkbox-ID's en CSS-klassen
 const settingsMap = {
   "toggle-text": "large-text",
