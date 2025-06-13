@@ -164,7 +164,7 @@
 #accessibility-settings button[aria-pressed="true"] {
   background-color: var(--color-contrast);
   color: var(--color-bg-light);
-  font-weight: 600;
+  font-weight: 700;
 }
 
 #accessibility-settings button[aria-pressed="true"] svg {
