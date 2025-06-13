@@ -333,9 +333,9 @@ body.high-contrast .dotted-background-blue {
 }
 
 /* Media Queries */
-@media screen and (max-width: 1024px) {
+/* @media screen and (max-width: 1024px) {
   
-}
+} */
 
 @media screen and (max-width: 768px) {
   #accessibility-settings {
