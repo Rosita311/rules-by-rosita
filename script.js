@@ -16,10 +16,13 @@ const toggleButton = document.getElementById("accessibility-toggle");
 const panel = document.getElementById("accessibility-settings");
 const closeButton = document.getElementById("close-accessibility");
 
-let activeFocusTrap = null;
-let escKeyHandler = null;
+// Back to top
+const backToTop = document.querySelector(".back-to-top");
+
 
 // Trap focus within the sidebar and accessibility menu when open
+let activeFocusTrap = null;
+let escKeyHandler = null;
 
 const trapFocus = (container) => {
   const isVisible = (el) =>
@@ -85,6 +88,7 @@ const openSidebar = () => {
     footer.setAttribute("inert", "");
     overlay.style.display = "block";
     if (toggleButton) toggleButton.style.display = "none";
+    if (backToTop) backToTop.style.display = "none";
   }
 
   escKeyHandler = (e) => {
@@ -107,6 +111,7 @@ const closeSidebar = () => {
     footer.removeAttribute("inert");
     overlay.style.display = "none";
     if (toggleButton) toggleButton.style.display = "block";
+    if (backToTop) backToTop.style.display = "block";
   }
   openButton.focus();
 };
@@ -128,6 +133,7 @@ const updateNavbar = (e) => {
     navbar.setAttribute("inert", "");
     if (navbar.classList.contains("show")) {
       toggleButton.style.display = "none";
+      backToTop.style.display = "none";
     }
   } else {
     deactivateTrap();
@@ -139,6 +145,7 @@ const updateNavbar = (e) => {
     overlay.style.display = "none";
     openButton.setAttribute("aria-expanded", "false");
     toggleButton.style.display = "block";
+    backToTop.style.display = "block";
   }
 };
 
@@ -304,7 +311,6 @@ document.body.addEventListener("mousedown", () => {
 });
 
 // Back to top button
-const backToTop = document.querySelector(".back-to-top");
 
 window.addEventListener("scroll", () => {
   if (window.scrollY > 300) {
