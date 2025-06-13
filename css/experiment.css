@@ -331,3 +331,16 @@ body.high-contrast .dotted-background-blue {
   opacity: 1;
   transform: none;
 }
+
+/* Media Queries */
+@media screen and (max-width: 1024px) {
+  
+}
+
+@media screen and (max-width: 768px) {
+  #accessibility-settings {
+  padding-top: calc(1rem + env(safe-area-inset-top));
+  height: 100dvh;
+  overflow-y: auto;
+}
+}
