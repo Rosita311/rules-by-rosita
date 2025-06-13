@@ -110,7 +110,6 @@
   border: 2px solid var(--color-accent);
   border-radius: 0.5rem;
   padding: 1rem;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
   z-index: 9999;
   display: none;
 }
