@@ -298,6 +298,11 @@ button {
     scroll-behavior: auto !important;
   }
 
+
+   .has-submenu > button.submenu-toggle::after {
+    transition: none !important;
+  }
+  
   .submenu-toggle[aria-expanded="true"] .chevron {
     transform: none !important;
   }
