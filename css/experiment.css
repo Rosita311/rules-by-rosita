@@ -15,7 +15,7 @@
   align-items: center;
   justify-content: center;
   transition: background-color 0.3s ease, transform 0.2s ease;
-   z-index: 100;
+  z-index: 100;
 }
 
 .back-to-top {
@@ -102,15 +102,18 @@
 #accessibility-settings {
   position: fixed;
   right: 2rem;
-  bottom: 6rem;
+  bottom: calc(4rem + 2rem);
   width: 20rem;
   max-width: 90%;
+  max-height: calc(100dvh - 8rem);
+  overflow-y: auto;
+  height: auto;
   background: var(--color-background);
   color: var(--color-text);
   border: 2px solid var(--color-accent);
   border-radius: 0.5rem;
   padding: 1rem;
-  z-index: 9999;
+  z-index: 1000;
   display: none;
 }
 
@@ -146,10 +149,10 @@
   }
 
   &:focus-visible {
-  background-color: var(--color-text);
-  color: var(--color-background);
-  outline: 2px solid var(--color-text);
-}
+    background-color: var(--color-text);
+    color: var(--color-background);
+    outline: 2px solid var(--color-text);
+  }
 }
 
 #accessibility-settings button:focus-visible svg {
@@ -161,7 +164,9 @@
   border-radius: 50% !important;
   justify-content: center !important;
   align-items: center !important;
-  position: absolute; top: 1rem; right: 1rem;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
 }
 
 #accessibility-settings button[aria-pressed="true"] {
@@ -337,25 +342,17 @@ body.high-contrast .dotted-background-blue {
 
 .reduce-motion #header-nav a::after,
 .reduce-motion .has-submenu > button.submenu-toggle::after,
-.reduce-motion .has-submenu > button.submenu-toggle[aria-current="page"]::after {
-    transition: none;
-  }
+.reduce-motion
+  .has-submenu
+  > button.submenu-toggle[aria-current="page"]::after {
+  transition: none;
+}
 
 /* Media Queries */
-/* @media screen and (max-width: 1024px) {
-  
-} */
 
 @media screen and (max-width: 768px) {
-    #accessibility-settings {
-    position: fixed;
-    bottom: calc(4rem + 2rem); /* 4rem = knophoogte+ruimte, 2rem = extra marge */
+  #accessibility-settings {
     left: 50%;
     transform: translateX(-50%);
-    max-height: calc(100dvh - 8rem);
-    overflow-y: auto;
-    height: auto;
-    padding: 1rem;
-    z-index: 1000;
   }
 }
