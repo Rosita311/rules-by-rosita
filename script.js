@@ -74,7 +74,7 @@ const deactivateTrap = () => {
 };
 
 // sidebar
-
+let panelWasOpen = false;
 const openSidebar = () => {
   navbar.classList.add("show");
   document.body.classList.add("menu-open");
@@ -89,7 +89,10 @@ const openSidebar = () => {
     overlay.style.display = "block";
     if (toggleButton) toggleButton.style.display = "none";
     if (backToTop) backToTop.style.display = "none";
-  }
+    if (panel) {
+      panelWasOpen = panel.classList.contains("show");
+      if (panelWasOpen) closePanel();
+    }
 
   escKeyHandler = (e) => {
     if (e.key === "Escape") {
@@ -97,6 +100,7 @@ const openSidebar = () => {
     }
   };
   document.addEventListener("keydown", escKeyHandler);
+}
 };
 
 const closeSidebar = () => {
@@ -112,6 +116,10 @@ const closeSidebar = () => {
     overlay.style.display = "none";
     if (toggleButton) toggleButton.style.display = "block";
     if (backToTop) backToTop.style.display = "block";
+  }
+   if (!media.matches && panel && panelWasOpen) {
+    openPanel();
+    panelWasOpen = false; // Reset status na herstel
   }
   openButton.focus();
 };
@@ -134,6 +142,10 @@ const updateNavbar = (e) => {
     if (navbar.classList.contains("show")) {
       toggleButton.style.display = "none";
       backToTop.style.display = "none";
+      if (panel && panel.classList.contains("show")) {
+        panelWasOpen = true;
+        closePanel();
+      }
     }
   } else {
     deactivateTrap();
@@ -146,6 +158,10 @@ const updateNavbar = (e) => {
     openButton.setAttribute("aria-expanded", "false");
     toggleButton.style.display = "block";
     backToTop.style.display = "block";
+    if (panel && panelWasOpen) {
+      panelWasOpen = false;
+      openPanel();
+    }
   }
 };
 
@@ -402,6 +418,22 @@ const togglePanel = () => {
     toggleButton.focus();
   }
 };
+
+const openPanel = () => {
+  panel.classList.add("show");
+  panel.setAttribute("aria-hidden", "false");
+  toggleButton.setAttribute("aria-expanded", "true");
+
+  const heading = panel.querySelector("#accessibility-heading");
+  if (heading) {
+    setTimeout(() => {
+      heading.focus();
+    }, 150);
+  }
+
+  activateTrap(panel);
+};
+
 
 const closePanel = () => {
   deactivateTrap();
