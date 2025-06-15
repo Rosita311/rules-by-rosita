@@ -256,7 +256,6 @@ button {
   display: block; /* of inline-block, wat je wilt */
 }
 
-
 /* A11y */
 .skip-link {
   position: absolute;
@@ -299,15 +298,22 @@ button {
   }
 
   #header-nav a::after,
- .has-submenu > button.submenu-toggle::after,
- .has-submenu > button.submenu-toggle[aria-current="page"]::after {
+  .has-submenu > button.submenu-toggle::after,
+  .has-submenu > button.submenu-toggle[aria-current="page"]::after {
     transition: none;
   }
 
-   .has-submenu > button.submenu-toggle::after {
+  #header-nav > ul > li > a::after,
+  #header-nav > ul > li > a:hover::after,
+  #header-nav > ul > li > a[aria-current="page"]:hover::after {
+    transition: none !important;
+    animation: none !important;
+  }
+
+  .has-submenu > button.submenu-toggle::after {
     transition: none !important;
   }
-  
+
   .submenu-toggle[aria-expanded="true"] .chevron {
     transform: none !important;
   }
@@ -349,4 +355,3 @@ button {
     background-size: 10px 10px;
   }
 }
-

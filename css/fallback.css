@@ -82,7 +82,6 @@ html.no-js {
   display: none;
 }
 
-
 @media screen and (max-width: 1024px) {
   html.no-js #header-nav {
     position: static; /* geen fixed/slide‑in positionering */

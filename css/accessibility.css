@@ -342,10 +342,12 @@ body.high-contrast .dotted-background-blue {
 
 .reduce-motion #header-nav a::after,
 .reduce-motion .has-submenu > button.submenu-toggle::after,
-.reduce-motion
-  .has-submenu
-  > button.submenu-toggle[aria-current="page"]::after {
-  transition: none;
+.reduce-motion.has-submenu > button.submenu-toggle[aria-current="page"]::after,
+.reduce-motion #header-nav > ul > li > a::after,
+.reduce-motion #header-nav > ul > li > a:hover::after,
+.reduce-motion #header-nav > ul > li > a[aria-current="page"]:hover::after {
+  transition: none !important;
+  animation: none !important;
 }
 
 /* Media Queries */
