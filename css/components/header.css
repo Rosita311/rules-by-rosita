@@ -72,17 +72,19 @@ a #top:focus-visible {
   background-color: var(--color-contrast);
   transform: scaleX(0);
   transform-origin: left;
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, background-color 150ms ease;
 }
 
 #header-nav a:hover::after {
   transform: scaleX(1);
 }
 
-#header-nav a[aria-current="page"],
-#header-nav a[aria-current="page"]:hover {
-  border-bottom: 2px solid var(--color-primary);
+#header-nav a[aria-current="page"]::after,
+#header-nav a[aria-current="page"]:hover::after {
+  transform: scaleX(1);
+  background-color: var(--color-primary);
 }
+
 
 .menu-buttons {
   display: flex;
