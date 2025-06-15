@@ -335,6 +335,12 @@ body.high-contrast .dotted-background-blue {
   transform: none;
 }
 
+.reduce-motion #header-nav a::after,
+.reduce-motion .has-submenu > button.submenu-toggle::after,
+.reduce-motion .has-submenu > button.submenu-toggle[aria-current="page"]::after {
+    transition: none;
+  }
+
 /* Media Queries */
 /* @media screen and (max-width: 1024px) {
   

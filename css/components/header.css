@@ -62,7 +62,7 @@ a #top:focus-visible {
   }
 }
 
-#header-nav a::after {
+#header-nav > ul > li > a::after {
   content: "";
   position: absolute;
   left: 0;
@@ -75,12 +75,12 @@ a #top:focus-visible {
   transition: transform 0.3s ease-in-out, background-color 150ms ease;
 }
 
-#header-nav a:hover::after {
+#header-nav > ul > li > a:hover::after {
   transform: scaleX(1);
 }
 
-#header-nav a[aria-current="page"]::after,
-#header-nav a[aria-current="page"]:hover::after {
+#header-nav > ul > li > a[aria-current="page"]::after,
+#header-nav > ul > li > a[aria-current="page"]:hover::after {
   transform: scaleX(1);
   background-color: var(--color-primary);
 }
