@@ -85,7 +85,6 @@ a #top:focus-visible {
   background-color: var(--color-primary);
 }
 
-
 .menu-buttons {
   display: flex;
   gap: 0.75rem;
@@ -176,7 +175,7 @@ a #top:focus-visible {
 }
 
 .has-submenu > button.submenu-toggle {
-   position: relative;
+  position: relative;
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -387,7 +386,8 @@ a #top:focus-visible {
 
   #header-nav a::after,
   .has-submenu.open > button.submenu-toggle::after,
-.has-submenu > button.submenu-toggle[aria-current="page"]::after {
+  .has-submenu > button.submenu-toggle[aria-current="page"]::after,
+  .has-submenu > button.submenu-toggle::after {
     display: none;
   }
 
@@ -405,7 +405,7 @@ a #top:focus-visible {
     stroke: var(--color-bg-light) !important;
   }
 
-  /* Submenu */ 
+  /* Submenu */
   .has-submenu > button.submenu-toggle {
     padding: 1em 2.5em;
     margin: 0;
@@ -483,4 +483,3 @@ a #top:focus-visible {
     gap: 0;
   }
 }
-
