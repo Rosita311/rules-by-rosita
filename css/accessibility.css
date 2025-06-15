@@ -1,6 +1,3 @@
-/* Experimenting with CSS variables and custom properties for a more dynamic design. */
-
-/* Accessibility-knop altijd zichtbaar */
 .accessibility-button,
 .back-to-top {
   position: fixed !important;

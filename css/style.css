@@ -14,6 +14,7 @@ Version: 1.0
 /* Theme styles */
 @import "theme.css";
 @import "layout.css";
+@import "accessibility.css";
 
 /* Components */
 @import "components/header.css";
@@ -23,6 +24,3 @@ Version: 1.0
 
 /* Pages */
 @import "pages/single-post.css";
-
-/* Experimental styles*/
-@import "experiment.css";
