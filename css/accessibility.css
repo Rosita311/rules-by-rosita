@@ -220,7 +220,10 @@ body.dyslexic-font strong,
 body.dyslexic-font em,
 body.dyslexic-font blockquote,
 body.dyslexic-font td,
-body.dyslexic-font th {
+body.dyslexic-font th,
+body.dyslexic-font .accessibility-tooltip,
+body.dyslexic-font .back-to-top-tooltip,
+body.dyslexic-font .page-title nav p {
   font-family: "Atkinson Hyperlegible", Arial, sans-serif;
 }
 

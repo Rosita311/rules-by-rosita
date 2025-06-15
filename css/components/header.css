@@ -62,6 +62,13 @@ a #top:focus-visible {
   }
 }
 
+#header-nav > ul > li > a {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+}
+
+/* Lijn onder alle links */
 #header-nav > ul > li > a::after {
   content: "";
   position: absolute;
@@ -75,15 +82,35 @@ a #top:focus-visible {
   transition: transform 0.3s ease-in-out, background-color 150ms ease;
 }
 
+/* Hover animatie */
 #header-nav > ul > li > a:hover::after {
   transform: scaleX(1);
 }
 
-#header-nav > ul > li > a[aria-current="page"]::after,
-#header-nav > ul > li > a[aria-current="page"]:hover::after {
+/* Actieve link: standaard streep zichtbaar */
+#header-nav > ul > li > a[aria-current="page"]::after {
   transform: scaleX(1);
   background-color: var(--color-primary);
 }
+
+/* Hover op actieve link: herstart animatie */
+#header-nav > ul > li > a[aria-current="page"]:hover::after {
+  animation: underline-reappear 0.6s forwards;
+  background-color: var(--color-primary);
+}
+
+/* Keyframe voor het link-naar-rechts effect */
+@keyframes underline-reappear {
+  from {
+    transform: scaleX(0);
+    transform-origin: left;
+  }
+  to {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+}
+
 
 .menu-buttons {
   display: flex;

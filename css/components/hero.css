@@ -163,11 +163,22 @@
   background-color: var(--color-background);
   width: fit-content;
   padding: 0.5rem;
-  font-size: clamp(2rem, 5vw + 1rem, 3rem);
   opacity: 0;
   transform: scale(0.98);
   animation: fadeInScale 0.6s ease-out forwards;
   animation-delay: 0.2s;
+}
+
+.page-title nav p {
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  color: var(--color-text);
+  font-weight: var(--font-weight-medium);
+}
+
+.page-title h1 {
+  font-size: clamp(2rem, 5vw + 1rem, 3rem);
+  margin-top: 1rem;
 }
 
 /* Animation */
