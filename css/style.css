@@ -24,3 +24,6 @@ Version: 1.0
 
 /* Pages */
 @import "pages/single-post.css";
+
+/* Extra */
+@import "experiment.css"
