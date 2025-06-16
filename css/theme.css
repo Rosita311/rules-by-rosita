@@ -270,7 +270,7 @@ button {
 }
 
 .skip-link:focus {
-  top: 1rem;
+  top: 2.5rem;
   left: 1rem;
   z-index: 100;
 }

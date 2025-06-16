@@ -169,7 +169,7 @@
   animation-delay: 0.2s;
 }
 
-.page-title nav p {
+.breadcrumbs {
   font-family: var(--font-body);
   font-size: 0.875rem;
   color: var(--color-text);
