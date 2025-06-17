@@ -198,31 +198,11 @@ get_template_part('template-parts/accessibility-panel'); ?>
         </div>
         
   </article>
+  <?php if (is_active_sidebar('main-sidebar')) : ?>
   <aside class="sidebar">
-    <div class="sidebar-widget">
-      <h2>Over mij</h2>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        Quisquam, voluptatibus.
-      </p>
-    </div>
-    <div class="sidebar-widget">
-      <h2>Populaire berichten</h2>
-      <ul class="popular-posts">
-        <li><a href="single.html">Bericht 1</a></li>
-        <li><a href="single.html">Bericht 2</a></li>
-        <li><a href="single.html">Bericht 3</a></li>
-      </ul>
-    </div>
-    <div class="sidebar-widget">
-      <h2>Categorieën</h2>
-      <ul class="categories-list">
-        <li><a href="archive.html">Categorie 1</a></li>
-        <li><a href="archive.html">Categorie 2</a></li>
-        <li><a href="archive.html">Categorie 3</a></li>
-      </ul>
-    </div>
+    <?php dynamic_sidebar('main-sidebar'); ?>
   </aside>
+  <?php endif; ?>
   </section>
   <section class="blogpost-section">
     <h2>Recente blogposts</h2>
