@@ -160,13 +160,18 @@ svg {
   stroke: var(--color-text);
 }
 
+img, video, iframe { max-width: 100%; height: auto; }
+pre, code, p { overflow-wrap: break-word; }
+.post-content { max-width: 60ch; margin: auto; padding: 0 1rem; }
+
 /* Button styles */
 button {
   all: unset;
   cursor: pointer;
 }
 
-.btn {
+.btn,
+.comment-form input[type="submit"] {
   padding: 0.75rem 1.5rem;
   border-radius: 0.25rem;
   width: fit-content;
@@ -183,7 +188,8 @@ button {
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
-.btn-secondary {
+.btn-secondary,
+.comment-form input[type="submit"] {
   background-color: var(--color-contrast);
   color: var(--color-bg-light);
   text-decoration: none;
@@ -191,7 +197,8 @@ button {
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
-.btn-secondary:hover {
+.btn-secondary:hover,
+.comment-form input[type="submit"]:hover {
   background-color: var(--color-footer);
   color: var(--color-text);
 }
@@ -211,15 +218,17 @@ button {
 }
 
 /* Forms */
-.site-form {
+.site-form,
+.comment-form {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
   width: 100%;
-  max-width: 25rem;
+  max-width: 100%;
 }
 
-.site-form label {
+.site-form label,
+.comment-form label {
   font-weight: bold;
 }
 
@@ -235,7 +244,11 @@ button {
 .site-form input[type="password"],
 .site-form input[type="search"],
 .site-form input[type="url"],
-.site-form textarea {
+.site-form textarea,
+.comment-form input,
+.comment-form textarea {
+  display: block;
+  width: 100%;
   padding: 0.5rem 0.5rem;
   border-radius: 0.25rem;
   border: 1px solid var(--color-text);

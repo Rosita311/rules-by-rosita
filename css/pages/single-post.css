@@ -87,6 +87,43 @@
   gap: 2rem;
 }
 
+.comments-area {
+  margin-top: 4rem;
+  border-top: 1px solid #ccc;
+  padding-top: 2rem;
+}
+
+.comment-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.comment {
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 1rem;
+}
+
+.comment .comment-meta {
+  font-size: 0.875rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+.comment .comment-content {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.comment .reply {
+  margin-top: 0.5rem;
+}
+
+.comment .reply a {
+  font-size: 0.875rem;
+  color: #0073aa;
+}
+
 /* Media queries */
 
 @media screen and (max-width: 1024px) {
