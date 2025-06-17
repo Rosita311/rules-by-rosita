@@ -20,7 +20,7 @@
     <header>
       <div class="header-container">
         <a
-          href="index.html"
+          href="<?php echo esc_url(home_url('/')); ?>"
           id="top"
         >
         <img src="<?php echo get_template_directory_uri(); ?>/assets/Logo_rulesbyrosita.png" 
