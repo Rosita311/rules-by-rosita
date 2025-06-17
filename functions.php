@@ -19,9 +19,9 @@ function rulesbyrosita_enqueue_assets() {
   // Eigen stylesheet
   wp_enqueue_style(
     'rulesbyrosita-style',
-    get_template_directory_uri() . '/css/style.css',
+    get_template_directory_uri() . '/style.css',
     array('rulesbyrosita-google-fonts'), 
-    filemtime(get_template_directory() . '/css/style.css')
+    filemtime(get_template_directory() . '/style.css')
   );
 
   // JavaScript

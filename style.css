@@ -1,0 +1,29 @@
+/*
+Theme Name: Rosita's Theme
+Author: Rosita Rampertaap
+Description: Een modern, schaalbaar thema met darkmode en toegankelijkheid.
+Version: 1.0
+*/
+
+/* Imports */
+@import "css/reset.css";
+
+/* Fallback JS Disabled */
+@import "css/fallback.css";
+
+/* Theme styles */
+@import "css/theme.css";
+@import "css/layout.css";
+@import "css/accessibility.css";
+
+/* Components */
+@import "css/components/header.css";
+@import "css/components/footer.css";
+@import "css/components/hero.css";
+@import "css/components/card.css";
+
+/* Pages */
+@import "css/pages/single-post.css";
+
+/* Extra */
+@import "/css/experiment.css"
