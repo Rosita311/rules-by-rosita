@@ -24,7 +24,7 @@ get_template_part('template-parts/accessibility-panel'); ?>
   </section>
   <div class="container-main single-post">
     <section class="single-post-content">
-      <div class="post-content-wrapper">
+      <article class="post-content-wrapper" <?php post_class(); ?>>
         <?php
         if (function_exists('yoast_breadcrumb')) {
           yoast_breadcrumb('<nav aria-label="Kruimelpad" class="breadcrumbs">', '</nav>');
@@ -197,7 +197,7 @@ get_template_part('template-parts/accessibility-panel'); ?>
 
         </div>
         
-  </div>
+  </article>
   <aside class="sidebar">
     <div class="sidebar-widget">
       <h2>Over mij</h2>

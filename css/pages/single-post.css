@@ -93,7 +93,7 @@
   padding-top: 2rem;
 }
 
-.comment-list {
+.comment-list > ul {
   list-style: none;
   padding-left: 0;
 }
