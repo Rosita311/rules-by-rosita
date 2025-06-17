@@ -44,7 +44,17 @@ function rulesbyrosita_resource_hints($hints, $relation_type) {
 }
 add_filter('wp_resource_hints', 'rulesbyrosita_resource_hints', 10, 2);
 
-
+function rosita_register_sidebars() {
+  register_sidebar(array(
+    'name' => 'Main Sidebar',
+    'id' => 'main-sidebar',
+    'before_widget' => '<div class="widget">',
+    'after_widget'  => '</div>',
+    'before_title'  => '<h2 class="widget-title">',
+    'after_title'   => '</h2>',
+  ));
+}
+add_action('widgets_init', 'rosita_register_sidebars');
 
 /*
 $title = get_the_title(); 
