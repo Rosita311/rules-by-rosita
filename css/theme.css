@@ -224,7 +224,7 @@ button {
   flex-direction: column;
   gap: 0.5rem;
   width: 100%;
-  max-width: 100%;
+  max-width: 40rem;
 }
 
 .site-form label,
