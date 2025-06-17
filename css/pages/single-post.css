@@ -62,6 +62,9 @@
 
 .sidebar {
   grid-area: sidebar;
+}
+
+.sidebar-inner {
   display: flex;
   flex-direction: column;
   padding-left: clamp(1rem, 5vw, 2rem);
