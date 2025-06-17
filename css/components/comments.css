@@ -1,0 +1,88 @@
+/* Reactiesectie */
+
+/* Titel reacties */
+.post-comments h2 {
+  font-size: 2rem;
+}
+
+/* Lijst met reacties */
+
+ol.comment-list {
+  list-style: none !important;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+
+ol.comment-list > li:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+/* Individuele reactie */
+.comment {
+  margin: 2rem 0;
+  padding: 1.5rem 2rem;
+  border: 1px solid var(--color-accent);
+}
+
+.children .comment {
+  border: none;
+  background-color: var(--color-accent-2);
+  padding-left: 1.5rem; /* inspringen */
+  margin-bottom: 1rem;
+  list-style-type: none;
+}
+
+.comment:last-child {
+  margin-bottom: 2rem;
+}
+
+/* Avatar */
+.comment .avatar {
+  float: left;
+  margin: 0 1rem 0 0;
+  border-radius: 50%;
+  width: 4rem;
+  height: 4rem;
+  object-fit: cover;
+}
+
+/* Reactietekst */
+.comment .comment-content {
+  overflow: hidden;
+}
+
+/* Auteur naam */
+.comment .comment-author {
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+  display: block;
+  color: var(--color-text);
+  font-size: 1.25rem;
+}
+
+/* Metadata (datum, etc) */
+.comment .comment-meta {
+  font-size: 1rem;
+  color: var(--color-text);
+  margin-bottom: 1rem;
+}
+
+/* Antwoordlink */
+.comment-reply-link {
+  display: inline-block;
+  margin: 0.5rem 0 2rem 0;
+  font-size: 0.9rem;
+  color: var(--color-primary);
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+/* Reactie in afwachting */
+.comment-awaiting-moderation {
+  font-style: italic;
+  margin-top: 0.5rem;
+}

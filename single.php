@@ -187,14 +187,12 @@ get_template_part('template-parts/accessibility-panel'); ?>
           <?php the_content(); ?>
         </div>
         <div class="post-comments">
-          <h2>Reacties</h2>
           <?php
           if (comments_open() || get_comments_number()) {
             comments_template();
           } else {
             echo '<p>Reacties zijn gesloten voor dit bericht.</p>';
           } ?>
-
         </div>
         
   </article>

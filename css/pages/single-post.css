@@ -5,7 +5,7 @@
 
 .single-post-content {
   display: grid;
-  grid-template-columns: 3fr 1fr;
+  grid-template-columns: 3.5fr 1.5fr;
   grid-template-areas: "content sidebar";
   gap: clamp(2rem, 5vw, 4rem);
   background-color: var(--color-background);
@@ -64,7 +64,7 @@
   grid-area: sidebar;
   display: flex;
   flex-direction: column;
-  padding: 0 clamp(1rem, 5vw, 2rem);
+  padding-left: clamp(1rem, 5vw, 2rem);
   gap: 2rem;
   border-left: 2px solid var(--color-accent);
 }
@@ -81,47 +81,7 @@
   gap: 1rem;
 }
 
-.post-comments {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
 
-.comments-area {
-  margin-top: 4rem;
-  border-top: 1px solid var(--color-accent);
-  padding-top: 2rem;
-}
-
-.comment-list > ul {
-  list-style: none;
-  padding-left: 0;
-}
-
-.comment {
-  margin: 2rem 0;
-  border-bottom: 1px solid var(--color-accent);
-  padding-bottom: 1rem;
-}
-
-.comment .comment-meta {
-  font-size: 1rem;
-  color: var(--color-text);
-  margin-bottom: 0.5rem;
-}
-
-.comment .comment-content {
-  font-size: 1rem;
-  line-height: 1.5;
-}
-
-.comment .reply {
-  margin-top: 0.5rem;
-}
-
-.comment .reply a {
-  font-size: 1rem;
-}
 
 /* Media queries */
 

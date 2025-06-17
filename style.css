@@ -21,6 +21,7 @@ Version: 1.0
 @import "css/components/footer.css";
 @import "css/components/hero.css";
 @import "css/components/card.css";
+@import "css/components/comments.css";
 
 /* Pages */
 @import "css/pages/single-post.css";
