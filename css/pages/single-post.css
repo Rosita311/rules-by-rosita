@@ -130,4 +130,9 @@
     border-top: 2px solid var(--color-accent);
     border-left: none;
   }
+
+  .sidebar-inner {
+    padding-left: 0;
+    border-left: none;
+  }
 }
