@@ -204,7 +204,7 @@ get_template_part('template-parts/accessibility-panel'); ?>
   </aside>
   <?php endif; ?>
   </section>
-  section class="blogpost-section">
+  <section class="blogpost-section">
   <h2>Gerelateerde blogposts</h2>
   <?php 
   $categories = get_the_category();
