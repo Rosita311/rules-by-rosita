@@ -204,34 +204,39 @@ get_template_part('template-parts/accessibility-panel'); ?>
   </aside>
   <?php endif; ?>
   </section>
-  <section class="blogpost-section">
-    <h2>Gerelateerde blogposts</h2>
-    <?php 
-    $categories = get_the_category();
-if ($categories) {
-  $category_id = $categories[0]->term_id; 
+  section class="blogpost-section">
+  <h2>Gerelateerde blogposts</h2>
+  <?php 
+  $categories = get_the_category();
+  if ($categories) {
+    $category_id = $categories[0]->term_id;
 
-  $args = array(
-  'posts_per_page' => 3,
-  'post__not_in' => array(get_the_ID()), 
-  'cat' => $category_id,
-);
+    $args = array(
+      'posts_per_page' => 3,
+      'post__not_in'   => array(get_the_ID()),
+      'cat'            => $category_id,
+    );
 
-$related_query = new WP_Query($args);
-}
+    $related_query = new WP_Query($args);
 
-if ($related_query->have_posts()) : 
-    ?>
-    <ul class="blog-listing-grid">
-      <?php 
-      while ($related_query->have_posts()) : $related_query->the_post();
-        get_template_part('template-parts/card');
-      endwhile;
-      wp_reset_postdata(); 
+    if ($related_query->have_posts()) : ?>
+      <ul class="blog-listing-grid">
+        <?php 
+        while ($related_query->have_posts()) : $related_query->the_post();
+          get_template_part('template-parts/card');
+        endwhile; 
+        ?>
+      </ul>
+      <?php
+      wp_reset_postdata();
+    else:
+      echo '<p>Geen gerelateerde berichten gevonden.</p>';
     endif;
-      ?>
-    </ul>
-  </section>
+  } else {
+    echo '<p>Geen categorie gevonden.</p>';
+  }
+  ?>
+</section>
   <?php get_template_part('template-parts/back-to-top'); ?>
   </div>
 </main>
