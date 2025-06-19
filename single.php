@@ -206,100 +206,30 @@ get_template_part('template-parts/accessibility-panel'); ?>
   </section>
   <section class="blogpost-section">
     <h2>Recente blogposts</h2>
+    <?php 
+    $categories = get_the_category();
+if ($categories) {
+  $category_id = $categories[0]->term_id; 
+
+  $args = array(
+  'posts_per_page' => 3,
+  'post__not_in' => array(get_the_ID()), 
+  'cat' => $category_id,
+);
+
+$related_query = new WP_Query($args);
+}
+
+if ($related_query->have_posts()) : 
+    ?>
     <ul class="blog-listing-grid">
-      <li class="card hover-shadow">
-        <div class="card-image">
-          <img
-            src="./assets/pexels-thisisengineering-3861958.jpg"
-            alt=""
-            loading="lazy"
-            width="600"
-            height="400" />
-        </div>
-        <div class="card-content-wrapper">
-          <div class="card-content">
-            <div class="card-info">
-              <h3 class="post-title h3">
-                <a
-                  href="single.html"
-                  aria-describedby="excerpt-2 lees-meer-2">Dark mode: hoe dan?</a>
-              </h3>
-              <p class="post-date">25-03-2025</p>
-              <p id="excerpt-2">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Veniam quaerat repudiandae unde eligendi sunt commodi eos
-                aut cumque accusamus atque.
-              </p>
-            </div>
-            <span
-              aria-hidden="true"
-              id="lees-meer-2"
-              class="btn btn-primary">Lees meer</span>
-          </div>
-        </div>
-      </li>
-      <li class="card hover-shadow">
-        <div class="card-image">
-          <img
-            src="./assets/thomas-lefebvre-V63oM8OPJSo-unsplash.jpg"
-            alt=""
-            loading="lazy"
-            width="600"
-            height="400" />
-        </div>
-        <div class="card-content-wrapper">
-          <div class="card-content">
-            <div class="card-info">
-              <h3 class="post-title h3">
-                <a
-                  href="single.html"
-                  aria-describedby="excerpt-3 lees-meer-3">Dark mode toevoegen met prefers-color-scheme en CSS</a>
-              </h3>
-              <p class="post-date">25-03-2025</p>
-              <p id="excerpt-3">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Veniam quaerat repudiandae unde eligendi sunt commodi eos
-                aut cumque accusamus atque.
-              </p>
-            </div>
-            <span
-              aria-hidden="true"
-              id="lees-meer-3"
-              class="btn btn-primary">Lees meer</span>
-          </div>
-        </div>
-      </li>
-      <li class="card hover-shadow">
-        <div class="card-image">
-          <img
-            src="./assets/brina-blum-e9f27fbKAWw-unsplash.jpg"
-            alt=""
-            loading="lazy"
-            width="600"
-            height="400" />
-        </div>
-        <div class="card-content-wrapper">
-          <div class="card-content">
-            <div class="card-info">
-              <h3 class="post-title h3">
-                <a
-                  href="single.html"
-                  aria-describedby="excerpt-4 lees-meer-4">Mijn eerste WordPress-thema</a>
-              </h3>
-              <p class="post-date">25-03-2025</p>
-              <p id="excerpt-4">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Veniam quaerat repudiandae unde eligendi sunt commodi eos
-                aut cumque accusamus atque.
-              </p>
-            </div>
-            <span
-              aria-hidden="true"
-              id="lees-meer-4"
-              class="btn btn-primary">Lees meer</span>
-          </div>
-        </div>
-      </li>
+      <?php 
+      while ($related_query->have_posts()) : $related_query->the_post();
+        get_template_part('template-parts/card');
+      endwhile;
+      wp_reset_postdata(); 
+    endif;
+      ?>
     </ul>
   </section>
   <?php get_template_part('template-parts/back-to-top'); ?>
