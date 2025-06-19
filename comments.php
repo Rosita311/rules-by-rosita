@@ -1,4 +1,5 @@
-<h2 class="comments-title">
+<h2>Reacties</h2>
+<p class="comments-title">
   <?php
   printf(
     /* translators: 1: comment count number, 2: post title */
@@ -12,7 +13,7 @@
     get_the_title()
   );
   ?>
-</h2>
+</p>
 <?php
 if (post_password_required()) {
   return;
