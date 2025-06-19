@@ -205,7 +205,7 @@ get_template_part('template-parts/accessibility-panel'); ?>
   <?php endif; ?>
   </section>
   <section class="blogpost-section">
-    <h2>Recente blogposts</h2>
+    <h2>Gerelateerde blogposts</h2>
     <?php 
     $categories = get_the_category();
 if ($categories) {
