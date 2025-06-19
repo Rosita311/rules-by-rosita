@@ -56,6 +56,15 @@ function rosita_register_sidebars() {
 }
 add_action('widgets_init', 'rosita_register_sidebars');
 
+function get_reading_time() {
+    $content = get_post_field('post_content', get_the_ID());
+    $word_count = str_word_count(strip_tags($content));
+    $minutes = ceil($word_count / 200); // gemiddeld 200 woorden per minuut
+   $label = ($minutes === 1) ? 'minuut' : 'minuten';
+    return $minutes . ' ' . $label;
+}
+
+
 /*
 $title = get_the_title(); 
 $delimiter = '-';
