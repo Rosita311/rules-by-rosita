@@ -22,6 +22,7 @@ Version: 1.0
 @import "css/components/hero.css";
 @import "css/components/card.css";
 @import "css/components/comments.css";
+@import "css/components/sidebar-single.css";
 
 /* Pages */
 @import "css/pages/single-post.css";
