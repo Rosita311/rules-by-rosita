@@ -154,6 +154,18 @@ aside h1 {
   margin-bottom: 1rem;
 }
 
+.entry-content img,
+.entry-content figure,
+.entry-content video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
 svg {
   width: 1.5rem;
   height: 1.5rem;
