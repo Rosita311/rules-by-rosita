@@ -22,12 +22,12 @@
                 method="post"
                 class="site-form"
               >
-                <label for="email">E-mailadres:</label>
+                <label for="footer-email">E-mailadres:</label>
                 <div class="site-form-row">
                   <input
                     type="email"
-                    id="email"
-                    name="email"
+                    id="footer-email"
+                    name="footer-email"
                     required
                     placeholder="Vul hier je e-mailadres in"
                   />

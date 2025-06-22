@@ -47,5 +47,29 @@ if (post_password_required()) {
 
   <?php endif; ?>
 
-  <?php comment_form(); ?>
+  <div id="respond" class="comment-respond">
+  <?php
+  comment_form(array(
+    'fields' => array(
+      'author' => '<p class="form-group">
+        <label for="comment-author">Naam <span aria-hidden="true">*</span></label>
+        <input id="comment-author" name="author" type="text" required aria-required="true" />
+      </p>',
+      'email' => '<p class="form-group">
+        <label for="comment-email">E-mail <span aria-hidden="true">*</span></label>
+        <input id="comment-email" name="email" type="email" required aria-required="true" />
+      </p>',
+    ),
+    'comment_field' => '<p class="form-group">
+      <label for="comment-text">Reactie <span aria-hidden="true">*</span></label>
+      <textarea id="comment-text" name="comment" rows="5" required aria-required="true"></textarea>
+    </p>',
+    'comment_notes_before' => '',
+    'comment_notes_after' => '',
+    'label_submit' => 'Verzenden',
+    'class_submit' => 'btn btn-secondary',
+  ));
+  ?>
+</div>
+
 
