@@ -257,6 +257,7 @@ button {
   color: var(--color-bg-light);
   text-decoration: none;
   border: none;
+  margin: 1rem 0;
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
@@ -312,7 +313,7 @@ button {
 .comment-form textarea {
   display: block;
   width: 100%;
-  padding: 0.5rem 0.5rem;
+  padding: 0.75rem 1.5rem;
   border-radius: 0.25rem;
   border: 1px solid var(--color-text);
   flex: 1 1 auto;
@@ -332,91 +333,7 @@ button {
   display: block; /* of inline-block, wat je wilt */
 }
 
-/* A11y */
-.skip-link {
-  position: absolute;
-  top: -5rem;
-  background-color: var(--color-background);
-  color: var(--color-text);
-  padding: 0.75rem 1.5rem;
-  margin: 0;
-  font-family: var(--font-body);
-  font-size: 1rem;
-  font-weight: 600;
-}
-
-.skip-link:focus {
-  top: 2.5rem;
-  left: 1rem;
-  z-index: 100;
-}
-
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  border: 0;
-}
-
 /* Media Queries */
-
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation: none !important;
-    transition: none !important;
-    scroll-behavior: auto !important;
-  }
-
-  #header-nav a::after,
-  .has-submenu > button.submenu-toggle::after,
-  .has-submenu > button.submenu-toggle[aria-current="page"]::after {
-    transition: none;
-  }
-
-  #header-nav > ul > li > a::after,
-  #header-nav > ul > li > a:hover::after,
-  #header-nav > ul > li > a[aria-current="page"]:hover::after {
-    transition: none !important;
-    animation: none !important;
-  }
-
-  .has-submenu > button.submenu-toggle::after {
-    transition: none !important;
-  }
-
-  .submenu-toggle[aria-expanded="true"] .chevron {
-    transform: none !important;
-  }
-
-  .page-title {
-    animation: none;
-    opacity: 1 !important;
-    transform: none;
-  }
-
-  .back-to-top,
-  .accessibility-button {
-    transition: none !important;
-    scroll-behavior: auto;
-    opacity: 1;
-  }
-
-  .back-to-top.show,
-  .accessibility-button.show {
-    opacity: 1;
-  }
-
-  .back-to-top:hover,
-  .accessibility-button:hover {
-    transform: none !important;
-  }
-}
 
 @media screen and (max-width: 1024px) {
   .dotted-background-pink,
