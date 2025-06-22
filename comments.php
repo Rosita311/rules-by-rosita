@@ -5,7 +5,6 @@ $comments_number = get_comments_number();
 <p class="comments-title"> 
 <?php
 if ($comments_number > 0) : 
-    // Ensure all functions are called within PHP tags
     printf(
       _n(
         '1 reactie op “%2$s”',
