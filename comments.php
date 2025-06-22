@@ -14,7 +14,7 @@ if ($comments_number > 0) :
         'textdomain'
       ),
       number_format_i18n($comments_number),
-      get_the_title()
+      esc_html(get_the_title())
     ); 
     else : 
   printf('Geen reacties op “%s”', esc_html(get_the_title()));
