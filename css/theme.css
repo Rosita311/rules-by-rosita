@@ -351,6 +351,12 @@ button {
   font-size: 0.95rem;
 }
 
+.privacy-link {
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
 .checkbox-consent input[type="checkbox"] {
   width: 1.2rem;
   height: 1.2rem;
@@ -363,10 +369,8 @@ button {
   cursor: pointer;
   user-select: none;
   line-height: 1.2;
-  margin: 0; /* voorkom onverwachte marge */
+  margin: 0; 
 }
-
-
 
 .back-to-top {
   display: none; /* standaard verborgen */

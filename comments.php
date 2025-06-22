@@ -2,9 +2,9 @@
 <?php
 $comments_number = get_comments_number();
 ?>
-<p class="comments-title"> 
-<?php
-if ($comments_number > 0) : 
+<p class="comments-title">
+  <?php
+  if ($comments_number > 0) :
     printf(
       _n(
         '1 reactie op “%2$s”',
@@ -14,11 +14,11 @@ if ($comments_number > 0) :
       ),
       number_format_i18n($comments_number),
       esc_html(get_the_title())
-    ); 
-    else : 
-  printf('Geen reacties op “%s”', esc_html(get_the_title()));
-endif;
-?> 
+    );
+  else :
+    printf('Geen reacties op “%s”', esc_html(get_the_title()));
+  endif;
+  ?>
 </p>
 <?php
 if (post_password_required()) {
@@ -32,7 +32,7 @@ if (post_password_required()) {
       wp_list_comments(array(
         'style'      => 'ol',
         'short_ping' => true,
-        'avatar_size'=> 48,
+        'avatar_size' => 48,
       ));
       ?>
     </ol>
@@ -48,42 +48,42 @@ if (post_password_required()) {
   <?php endif; ?>
 
   <div id="respond" class="comment-respond">
-  <?php
-  comment_form(array(
-    'title_reply' => 'Geef een reactie',
-    'fields' => array(
-      'author' => '<p class="form-group">
+    <?php
+    comment_form(array(
+      'title_reply' => 'Geef een reactie',
+      'fields' => array(
+        'author' => '<p class="form-group">
         <label for="comment-author">Naam <span aria-hidden="true">*</span></label>
         <input id="comment-author" name="author" type="text" required aria-required="true" />
       </p>',
-      'email' => '<p class="form-group">
+        'email' => '<p class="form-group">
         <label for="comment-email">E-mail <span aria-hidden="true">*</span></label>
         <input id="comment-email" name="email" type="email" required aria-required="true" />
       </p>',
-      'url' => '<p class="form-group">
+        'url' => '<p class="form-group">
         <label for="comment-url">Website</label>
         <input id="comment-url" name="url" type="url" />
       </p>',
-    ),
-    'comment_field' => '<p class="form-group">
+      ),
+      'comment_field' => '<p class="form-group">
       <label for="comment-text">Reactie <span aria-hidden="true">*</span></label>
       <textarea id="comment-text" name="comment" rows="5" required aria-required="true"></textarea>
     </p>',
-    'comment_notes_before' => '<span class="required-field-message">Vereiste velden zijn gemarkeerd met <span class="required">*</span></span>',
-    'comment_notes_after' => '
+      'comment_notes_before' => '<span class="required-field-message">Vereiste velden zijn gemarkeerd met <span class="required">*</span></span>',
+      'comment_notes_after' => '
+    <p class="privacy-link">
+      <a href="/privacyverklaring" rel="noopener noreferrer">Privacyverklaring</a>
+  </p>
   <p class="form-group checkbox-consent">
     <input type="checkbox" id="comment-privacy" name="comment-privacy" required />
     <label for="comment-privacy">
       Ik ga akkoord met het opslaan van mijn reactie en gegevens volgens de 
-      <a href="/privacybeleid" target="_blank" rel="noopener">privacyverklaring</a>.
+      privacyverklaring.
     </label>
   </p>
 ',
-    'label_submit' => 'Verzenden',
-    'class_submit' => 'btn btn-secondary',
-  ));
-  ?>
-</div>
-
-
-
+      'label_submit' => 'Verzenden',
+      'class_submit' => 'btn btn-secondary',
+    ));
+    ?>
+  </div>
