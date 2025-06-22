@@ -13,7 +13,6 @@ Version: 1.0
 
 /* Theme styles */
 @import "css/theme.css";
-@import "css/layout.css";
 @import "css/accessibility.css";
 
 /* Components */
@@ -25,7 +24,7 @@ Version: 1.0
 @import "css/components/sidebar-single.css";
 
 /* Pages */
-@import "css/pages/single-post.css";
+@import "css/pages/single.css";
 
 /* Extra */
-@import "/css/experiment.css"
+@import "css/experiment.css"
