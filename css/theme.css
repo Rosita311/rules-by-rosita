@@ -315,9 +315,8 @@ button {
 
 .form-group {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   gap: 0.25rem;
-  flex-wrap: wrap;
 }
 
 .form-submit {
@@ -338,12 +337,35 @@ button {
   border-radius: 0.25rem;
   border: 1px solid var(--color-text);
   flex: 1 1 auto;
-  min-width: 200px;
   background-color: var(--color-background);
   font-family: var(--font-body);
   font-size: 1rem;
   color: var(--color-text);
 }
+
+.checkbox-consent {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.checkbox-consent input[type="checkbox"] {
+  width: 1.2rem;
+  height: 1.2rem;
+  margin-right: 0.5rem; 
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.checkbox-consent label {
+  cursor: pointer;
+  user-select: none;
+  line-height: 1.2;
+  margin: 0; /* voorkom onverwachte marge */
+}
+
 
 
 .back-to-top {

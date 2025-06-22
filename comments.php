@@ -50,6 +50,7 @@ if (post_password_required()) {
   <div id="respond" class="comment-respond">
   <?php
   comment_form(array(
+    'title_reply' => 'Geef een reactie',
     'fields' => array(
       'author' => '<p class="form-group">
         <label for="comment-author">Naam <span aria-hidden="true">*</span></label>
@@ -59,17 +60,30 @@ if (post_password_required()) {
         <label for="comment-email">E-mail <span aria-hidden="true">*</span></label>
         <input id="comment-email" name="email" type="email" required aria-required="true" />
       </p>',
+      'url' => '<p class="form-group">
+        <label for="comment-url">Website</label>
+        <input id="comment-url" name="url" type="url" />
+      </p>',
     ),
     'comment_field' => '<p class="form-group">
       <label for="comment-text">Reactie <span aria-hidden="true">*</span></label>
       <textarea id="comment-text" name="comment" rows="5" required aria-required="true"></textarea>
     </p>',
-    'comment_notes_before' => '',
-    'comment_notes_after' => '',
+    'comment_notes_before' => '<span class="required-field-message">Vereiste velden zijn gemarkeerd met <span class="required">*</span></span>',
+    'comment_notes_after' => '
+  <p class="form-group checkbox-consent">
+    <input type="checkbox" id="comment-privacy" name="comment-privacy" required />
+    <label for="comment-privacy">
+      Ik ga akkoord met het opslaan van mijn reactie en gegevens volgens de 
+      <a href="/privacybeleid" target="_blank" rel="noopener">privacyverklaring</a>.
+    </label>
+  </p>
+',
     'label_submit' => 'Verzenden',
     'class_submit' => 'btn btn-secondary',
   ));
   ?>
 </div>
+
 
 

@@ -64,6 +64,36 @@ function get_reading_time() {
     return $minutes . ' ' . $label;
 }
 
+function rosita_reorder_comment_fields($fields) {
+    // Haal de comment veld op
+    $comment_field = $fields['comment'];
+
+    // Haal de overige velden
+    unset($fields['comment']);
+
+    // Voeg alle velden in gewenste volgorde toe
+    $ordered_fields = array();
+
+    if (isset($fields['author'])) $ordered_fields['author'] = $fields['author'];
+    if (isset($fields['email'])) $ordered_fields['email'] = $fields['email'];
+    if (isset($fields['url'])) $ordered_fields['url'] = $fields['url'];
+
+    // Reactieveld komt daarna
+    $ordered_fields['comment'] = $comment_field;
+
+    return $ordered_fields;
+}
+add_filter('comment_form_fields', 'rosita_reorder_comment_fields');
+
+
+function validate_comment_consent($commentdata) {
+  if (!isset($_POST['comment-consent'])) {
+    wp_die('Je moet akkoord gaan met het privacybeleid om een reactie te plaatsen.');
+  }
+  return $commentdata;
+}
+add_filter('preprocess_comment', 'validate_comment_consent');
+
 
 /*
 $title = get_the_title(); 
