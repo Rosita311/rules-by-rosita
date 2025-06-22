@@ -85,14 +85,26 @@ function rosita_reorder_comment_fields($fields) {
 }
 add_filter('comment_form_fields', 'rosita_reorder_comment_fields');
 
-
-function validate_comment_consent($commentdata) {
-  if (!isset($_POST['comment-consent'])) {
-    wp_die('Je moet akkoord gaan met het privacybeleid om een reactie te plaatsen.');
+function check_comment_privacy_consent($comment_post_ID) {
+  // Admins hoeven niet te checken
+  if (current_user_can('manage_options')) {
+    return;
   }
-  return $commentdata;
+
+  if (empty($_POST['comment-privacy'])) {
+    // Als de checkbox niet is aangevinkt, voeg een foutmelding toe
+    wp_die(
+      __('Je moet akkoord gaan met de privacyverklaring voordat je een reactie kunt plaatsen.'),
+      __('Privacy Consent Required'),
+      array('response' => 403)
+    );
+  } else {
+    // Checkbox is aangevinkt, sla de reactie op
+    $_POST['comment_approved'] = 1; // Zorg ervoor dat de reactie goedgekeurd wordt
+  }
 }
-add_filter('preprocess_comment', 'validate_comment_consent');
+add_action('pre_comment_on_post', 'check_comment_privacy_consent');
+
 
 
 /*

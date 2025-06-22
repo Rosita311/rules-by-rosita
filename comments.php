@@ -49,6 +49,26 @@ if (post_password_required()) {
 
   <div id="respond" class="comment-respond">
     <?php
+// Controleer of de gebruiker is ingelogd en of het een beheerder is
+$current_user = wp_get_current_user();
+$is_admin = user_can($current_user, 'manage_options'); // beheerder check
+
+$checkbox_html = '';
+if (!$is_admin) {
+  $checkbox_html = '
+    <p class="privacy-link">
+      <a href="/privacyverklaring" rel="noopener noreferrer">Privacyverklaring</a>
+  </p>
+  <p class="form-group checkbox-consent">
+    <input type="checkbox" id="comment-privacy" name="comment-privacy"/>
+    <label for="comment-privacy">
+      Ik ga akkoord met het opslaan van mijn reactie en gegevens volgens de 
+      privacyverklaring.
+    </label>
+  </p>
+';
+};
+
     comment_form(array(
       'title_reply' => 'Geef een reactie',
       'fields' => array(
@@ -70,20 +90,15 @@ if (post_password_required()) {
       <textarea id="comment-text" name="comment" rows="5" required aria-required="true"></textarea>
     </p>',
       'comment_notes_before' => '<span class="required-field-message">Vereiste velden zijn gemarkeerd met <span class="required">*</span></span>',
-      'comment_notes_after' => '
-    <p class="privacy-link">
-      <a href="/privacyverklaring" rel="noopener noreferrer">Privacyverklaring</a>
-  </p>
-  <p class="form-group checkbox-consent">
-    <input type="checkbox" id="comment-privacy" name="comment-privacy" required />
-    <label for="comment-privacy">
-      Ik ga akkoord met het opslaan van mijn reactie en gegevens volgens de 
-      privacyverklaring.
-    </label>
-  </p>
-',
-      'label_submit' => 'Verzenden',
+      'comment_notes_after' => $checkbox_html,
+      'label_submit' => 'Reactie plaatsen',
       'class_submit' => 'btn btn-secondary',
     ));
+
+    global $wp_error;
+
+if (is_wp_error($wp_error) && $wp_error->get_error_code() == 'comment_privacy_error') {
+    echo '<p class="comment-error" style="color:red;">' . esc_html($wp_error->get_error_message()) . '</p>';
+}
     ?>
   </div>

@@ -1,13 +1,20 @@
 /* Reactiesectie */
 
 /* Titel reacties */
-.post-comments-wrapper h2{
+.post-comments-wrapper h2 {
   font-size: 2rem;
 }
+
 .comments-title {
   font-size: 1.25rem;
   color: var(--color-text);
   margin: 0.5rem 0;
+}
+
+.post-comments h3 {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 /* Lijst met reacties */

@@ -372,9 +372,9 @@ button {
   margin: 0; 
 }
 
+/* Back to top button */
 .back-to-top {
-  display: none; /* standaard verborgen */
-  /* ... andere styling ... */
+  display: none; /
 }
 
 .back-to-top.show {
