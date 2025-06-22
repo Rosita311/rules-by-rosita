@@ -1,9 +1,11 @@
 <h2>Reacties</h2>
 <?php
 $comments_number = get_comments_number();
-if ($comments_number > 0) : ?>
-  <p class="comments-title">
-    <?php
+?>
+<p class="comments-title"> 
+<?php
+if ($comments_number > 0) : 
+    // Ensure all functions are called within PHP tags
     printf(
       _n(
         '1 reactie op “%2$s”',
@@ -13,13 +15,12 @@ if ($comments_number > 0) : ?>
       ),
       number_format_i18n($comments_number),
       get_the_title()
-    );
-    ?>
-  </p>
-<?php else : 
-  printf('Geen reacties op “%s”', esc_html(get_the_title())); 
-endif; ?>
-
+    ); 
+    else : 
+  printf('Geen reacties op “%s”', esc_html(get_the_title()));
+endif;
+?> 
+</p>
 <?php
 if (post_password_required()) {
   return;
@@ -49,4 +50,3 @@ if (post_password_required()) {
 
   <?php comment_form(); ?>
 
-</div>

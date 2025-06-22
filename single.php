@@ -188,7 +188,7 @@ get_template_part('template-parts/accessibility-panel'); ?>
         <div class="entry-content">
           <?php the_content(); ?>
         </div>
-        <div class="post-comments">
+        <div class="post-comments-wrapper">
           <?php
           if (comments_open() || get_comments_number()) {
             comments_template();
