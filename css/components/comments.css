@@ -3,16 +3,12 @@
 /* Titel reacties */
 .post-comments-wrapper h2{
   font-size: 2rem;
-  margin-bottom: 0.5rem;
 }
 .comments-title {
   font-size: 1.25rem;
   color: var(--color-text);
+  margin: 0.5rem 0;
 }
-.post-comments {
-  margin-top: 1rem;
-}
-
 
 /* Lijst met reacties */
 
