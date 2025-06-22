@@ -136,6 +136,24 @@ h6 {
   line-height: 1.4em;
 }
 
+/* General Layout styles */
+.header-container,
+.page-hero-content,
+.container-main,
+.footer-container {
+  max-width: 80rem;
+  padding: 0 clamp(1rem, 4vw, 2.5rem);
+  margin: 0 auto;
+}
+
+/* Main content */
+.container-main {
+  display: flex;
+  flex-direction: column;
+  padding: 5rem clamp(1rem, 4vw, 2.5rem);
+  gap: 4rem;
+}
+
 section h1,
 article h1,
 nav h1,
