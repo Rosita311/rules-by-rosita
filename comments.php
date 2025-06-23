@@ -55,10 +55,17 @@ if (post_password_required()) {
 
     $checkbox_html = '';
     if (!$is_admin) {
-      $checkbox_html = '
-    <p class="privacy-link">
-      <a href="/privacyverklaring" rel="noopener noreferrer">Lees de privacyverklaring</a>
+     $checkbox_html = '
+  <p class="privacy-link">
+    <a href="/privacyverklaring" rel="noopener noreferrer">
+      Lees de privacyverklaring
+    </a>
   </p>
+  <div id="privacy-error"
+       class="comment-error"
+       data-error="' . esc_attr(__('Je moet akkoord gaan met de privacyverklaring om een reactie te plaatsen.', 'textdomain')) . '"
+       style="display:none; color: var(--color-primary); margin-bottom: 0.5rem;">
+  </div>
   <p class="form-group checkbox-consent">
     <input type="checkbox" id="comment-privacy" name="comment-privacy"/>
     <label for="comment-privacy">
@@ -83,21 +90,24 @@ if (post_password_required()) {
       'fields' => array(
         'author' => '<p class="form-group">
         <label for="comment-author">Naam <span aria-hidden="true">*</span></label>
-        <input id="comment-author" name="author" type="text" required aria-required="true" />
+        <input id="comment-author" name="author" type="text" aria-required="true" />
+        <div id="error-author" class="field-error"></div>
       </p>',
         'email' => '<p class="form-group">
         <label for="comment-email">E-mail <span aria-hidden="true">*</span></label>
-        <input id="comment-email" name="email" type="email" required aria-required="true" />
+        <input id="comment-email" name="email" type="email" aria-required="true" />
+        <div id="error-email" class="field-error"></div>
       </p>',
-        'url' => '<p class="form-group">
+        'url' => '<p class="form-group url-field">
         <label for="comment-url">Website</label>
         <input id="comment-url" name="url" type="url" />
       </p>',
       ),
       'comment_field' => '<p class="form-group">
-      <label for="comment-text">Reactie <span aria-hidden="true">*</span></label>
-      <textarea id="comment-text" name="comment" rows="5" required aria-required="true"></textarea>
-    </p>' . $error_html,
+  <label for="comment">Reactie <span aria-hidden="true">*</span></label>
+  <textarea id="comment" name="comment" rows="5" aria-required="true"></textarea>
+  <div id="error-comment" class="field-error"></div>
+</p>' . $error_html,
       'comment_notes_before' => '<span class="required-field-message">Vereiste velden zijn gemarkeerd met <span class="required">*</span></span>',
       'comment_notes_after' => $checkbox_html,
       'label_submit' => 'Reactie plaatsen',

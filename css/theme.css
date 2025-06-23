@@ -303,8 +303,8 @@ button {
 .comment-form {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
   width: 100%;
+  gap: 0.5rem;
   max-width: 40rem;
 }
 
@@ -313,10 +313,20 @@ button {
   font-weight: bold;
 }
 
+
 .form-group {
   display: flex;
   flex-direction: column;
   gap: 0.25rem;
+  margin-bottom: 0;
+}
+
+.form-group.url-field {
+  margin-bottom: 0.5rem; 
+}
+
+.form-group:last-child {
+  margin-bottom: 0; 
 }
 
 .form-submit {
@@ -370,6 +380,17 @@ button {
   user-select: none;
   line-height: 1.2;
   margin: 0; 
+}
+
+.field-error {
+  display: none;
+  color: var(--color-primary);
+  font-size: 0.9rem;
+  margin-top: 0.25rem;
+}
+
+.field-error.active {
+  display: block;
 }
 
 /* Back to top button */

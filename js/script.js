@@ -345,6 +345,72 @@ backToTop.addEventListener("click", () => {
   document.getElementById("top").focus();
 });
 
+console.log(document.getElementById('error-comment'));
+
+// Comment form validation
+document.addEventListener('DOMContentLoaded', function () {
+  const form = document.getElementById('commentform');
+  const author = document.getElementById('comment-author');
+  const email = document.getElementById('comment-email');
+  const comment = document.getElementById('comment');
+
+  form.addEventListener('submit', function (e) {
+    let valid = true;
+
+    // Reset fouten
+    document.querySelectorAll('.field-error').forEach(el => el.style.display = 'none');
+
+    if (!author.value.trim()) {
+      document.getElementById('error-author').textContent = 'Vul je naam in.';
+      document.getElementById('error-author').style.display = 'block';
+      valid = false;
+    }
+
+    if (!email.value.trim()) {
+      document.getElementById('error-email').textContent = 'Vul je e-mailadres in.';
+      document.getElementById('error-email').style.display = 'block';
+      valid = false;
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim())) {
+      document.getElementById('error-email').textContent = 'Voer een geldig e-mailadres in.';
+      document.getElementById('error-email').style.display = 'block';
+      valid = false;
+    }
+
+    if (!comment.value.trim()) {
+      document.getElementById('error-comment').textContent = 'Schrijf een reactie.';
+      document.getElementById('error-comment').style.display = 'block';
+      valid = false;
+    }
+
+    if (!valid) {
+      e.preventDefault(); // Stop verzending van formulier
+    }
+  });
+});
+
+// Comment privacy checkbox validation
+document.addEventListener('DOMContentLoaded', function () {
+  const form = document.querySelector('form.comment-form');
+  if (!form) return;
+
+  form.addEventListener('submit', function (e) {
+    const checkbox = document.getElementById('comment-privacy');
+    const errorBox = document.getElementById('privacy-error');
+
+    if (checkbox && !checkbox.checked) {
+      e.preventDefault();
+
+      if (errorBox) {
+        errorBox.textContent = errorBox.dataset.error;
+        errorBox.style.display = 'block';
+        checkbox.focus();
+      }
+    } else {
+      if (errorBox) errorBox.style.display = 'none';
+    }
+  });
+});
+
 // Accessibility settings
 
 // Koppeling tussen checkbox-ID's en CSS-klassen
