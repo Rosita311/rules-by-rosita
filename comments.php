@@ -57,7 +57,7 @@ $checkbox_html = '';
 if (!$is_admin) {
   $checkbox_html = '
     <p class="privacy-link">
-      <a href="/privacyverklaring" rel="noopener noreferrer">Privacyverklaring</a>
+      <a href="/privacyverklaring" rel="noopener noreferrer">Lees de privacyverklaring</a>
   </p>
   <p class="form-group checkbox-consent">
     <input type="checkbox" id="comment-privacy" name="comment-privacy"/>
