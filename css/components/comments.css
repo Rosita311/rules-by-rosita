@@ -94,3 +94,13 @@ ol.comment-list > li:not(:last-child) {
   font-style: italic;
   margin-top: 0.5rem;
 }
+
+.comment-error {
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  margin-top: 0.5rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+}

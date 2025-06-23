@@ -49,13 +49,13 @@ if (post_password_required()) {
 
   <div id="respond" class="comment-respond">
     <?php
-// Controleer of de gebruiker is ingelogd en of het een beheerder is
-$current_user = wp_get_current_user();
-$is_admin = user_can($current_user, 'manage_options'); // beheerder check
+    // Controleer of de gebruiker is ingelogd en of het een beheerder is
+    $current_user = wp_get_current_user();
+    $is_admin = user_can($current_user, 'manage_options'); // beheerder check
 
-$checkbox_html = '';
-if (!$is_admin) {
-  $checkbox_html = '
+    $checkbox_html = '';
+    if (!$is_admin) {
+      $checkbox_html = '
     <p class="privacy-link">
       <a href="/privacyverklaring" rel="noopener noreferrer">Lees de privacyverklaring</a>
   </p>
@@ -67,7 +67,16 @@ if (!$is_admin) {
     </label>
   </p>
 ';
-};
+    };
+    // Controleer of er een fout is opgeslagen in de transient
+    // Alleen ophalen, niet direct echo
+    $comment_error = get_transient('comment_privacy_error');
+    if ($comment_error) {
+      $error_html = '<p class="comment-error">' . esc_html($comment_error) . '</p>';
+      delete_transient('comment_privacy_error');
+    } else {
+      $error_html = '';
+    }
 
     comment_form(array(
       'title_reply' => 'Geef een reactie',
@@ -88,17 +97,14 @@ if (!$is_admin) {
       'comment_field' => '<p class="form-group">
       <label for="comment-text">Reactie <span aria-hidden="true">*</span></label>
       <textarea id="comment-text" name="comment" rows="5" required aria-required="true"></textarea>
-    </p>',
+    </p>' . $error_html,
       'comment_notes_before' => '<span class="required-field-message">Vereiste velden zijn gemarkeerd met <span class="required">*</span></span>',
       'comment_notes_after' => $checkbox_html,
       'label_submit' => 'Reactie plaatsen',
       'class_submit' => 'btn btn-secondary',
     ));
 
-    global $wp_error;
 
-if (is_wp_error($wp_error) && $wp_error->get_error_code() == 'comment_privacy_error') {
-    echo '<p class="comment-error" style="color:red;">' . esc_html($wp_error->get_error_message()) . '</p>';
-}
+
     ?>
   </div>
