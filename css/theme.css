@@ -304,7 +304,7 @@ button {
   display: flex;
   flex-direction: column;
   width: 100%;
-  gap: 0.5rem;
+  gap: 1rem;
   max-width: 40rem;
 }
 
@@ -362,7 +362,6 @@ button {
 }
 
 .privacy-link {
-  margin: 0.5rem 0;
   font-size: 0.875rem;
   font-weight: 500;
 }
