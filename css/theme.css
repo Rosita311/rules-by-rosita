@@ -362,7 +362,7 @@ button {
 }
 
 .privacy-link {
-  margin-top: 0.5rem;
+  margin: 0.5rem 0;
   font-size: 0.875rem;
   font-weight: 500;
 }

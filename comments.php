@@ -57,7 +57,7 @@ if (post_password_required()) {
     if (!$is_admin) {
      $checkbox_html = '
   <p class="privacy-link">
-    <a href="/privacyverklaring" rel="noopener noreferrer">
+    <a href=" ' . esc_url(get_privacy_policy_url()) . '" rel="noopener noreferrer">
       Lees de privacyverklaring
     </a>
   </p>
@@ -88,26 +88,26 @@ if (post_password_required()) {
     comment_form(array(
       'title_reply' => 'Geef een reactie',
       'fields' => array(
-        'author' => '<p class="form-group">
+        'author' => '<div class="form-group">
         <label for="comment-author">Naam <span aria-hidden="true">*</span></label>
         <input id="comment-author" name="author" type="text" aria-required="true" />
         <div id="error-author" class="field-error"></div>
-      </p>',
-        'email' => '<p class="form-group">
+      </div>',
+        'email' => '<div class="form-group">
         <label for="comment-email">E-mail <span aria-hidden="true">*</span></label>
         <input id="comment-email" name="email" type="email" aria-required="true" />
         <div id="error-email" class="field-error"></div>
-      </p>',
-        'url' => '<p class="form-group url-field">
+      </div>',
+        'url' => '<div class="form-group url-field">
         <label for="comment-url">Website</label>
         <input id="comment-url" name="url" type="url" />
-      </p>',
+      </div>',
       ),
-      'comment_field' => '<p class="form-group">
+      'comment_field' => '<div class="form-group">
   <label for="comment">Reactie <span aria-hidden="true">*</span></label>
   <textarea id="comment" name="comment" rows="5" aria-required="true"></textarea>
   <div id="error-comment" class="field-error"></div>
-</p>' . $error_html,
+</div>' . $error_html,
       'comment_notes_before' => '<span class="required-field-message">Vereiste velden zijn gemarkeerd met <span class="required">*</span></span>',
       'comment_notes_after' => $checkbox_html,
       'label_submit' => 'Reactie plaatsen',
