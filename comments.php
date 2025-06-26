@@ -61,7 +61,7 @@ if (post_password_required()) {
       Lees de privacyverklaring
     </a>
   </p>
-  <div id="privacy-error"
+  <div role="alert" id="privacy-error"
        class="comment-error"
        data-error="' . esc_attr(__('Je moet akkoord gaan met de privacyverklaring om een reactie te plaatsen.', 'textdomain')) . '"
        style="display:none; color: var(--color-primary); margin-bottom: 0.5rem;">
@@ -90,13 +90,13 @@ if (post_password_required()) {
       'fields' => array(
         'author' => '<div class="form-group">
         <label for="comment-author">Naam <span aria-hidden="true">*</span></label>
-        <input id="comment-author" name="author" type="text" aria-required="true" />
-        <div id="error-author" class="field-error"></div>
+        <input id="comment-author" name="author" type="text" ariadescribedby="error-author" aria-required="true" />
+        <div role="alert" id="error-author" class="field-error"></div>
       </div>',
         'email' => '<div class="form-group">
         <label for="comment-email">E-mail <span aria-hidden="true">*</span></label>
-        <input id="comment-email" name="email" type="email" aria-required="true" />
-        <div id="error-email" class="field-error"></div>
+        <input id="comment-email" name="email" type="email" ariadescribedby="error-email" aria-required="true" />
+        <div role="alert" id="error-email" class="field-error"></div>
       </div>',
         'url' => '<div class="form-group url-field">
         <label for="comment-url">Website</label>
@@ -105,8 +105,8 @@ if (post_password_required()) {
       ),
       'comment_field' => '<div class="form-group">
   <label for="comment">Reactie <span aria-hidden="true">*</span></label>
-  <textarea id="comment" name="comment" rows="5" aria-required="true"></textarea>
-  <div id="error-comment" class="field-error"></div>
+  <textarea id="comment" name="comment" rows="5" ariadescribedby="error-comment" aria-required="true"></textarea>
+  <div role="alert" id="error-comment" class="field-error"></div>
 </div>' . $error_html,
       'comment_notes_before' => '<span class="required-field-message">Vereiste velden zijn gemarkeerd met <span class="required">*</span></span>',
       'comment_notes_after' => $checkbox_html,
