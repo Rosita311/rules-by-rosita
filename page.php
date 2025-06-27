@@ -10,3 +10,5 @@ get_template_part('template-parts/accessibility-panel'); ?>
     </div>
 </main>
 <?php get_footer(); ?>
+
+<!-- https://developer.wordpress.org/themes/basics/template-files/ -->
