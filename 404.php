@@ -2,8 +2,9 @@
 get_template_part('template-parts/accessibility-panel'); ?>
 <main id="main-content">
     <?php get_template_part('template-parts/page-hero'); ?>
-    <section class="entry-content">
+    <div class="container-main">
         404.php
+        <section class="entry-content">
           <div class="search-form-container">
             <h2>Deze pagina bestaat niet</h2>
             <p>
@@ -43,5 +44,7 @@ get_template_part('template-parts/accessibility-panel'); ?>
             />
           </div>
         </section>
+        <?php get_template_part('template-parts/back-to-top'); ?>
+    </div>
 </main>
 <?php get_footer(); ?>
