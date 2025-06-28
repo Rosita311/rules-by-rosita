@@ -27,12 +27,15 @@ get_template_part('template-parts/accessibility-panel'); ?>
         <section class="introduction">
             <div class="introduction-content-wrapper">
                 <div class="introduction-card-content entry-content">
-                    <h2><?php get_field('introductie_titel')?></h2>
+                    <h2>Hi!</h2>
                     <p>
-                        <?php get_field('introductie_titel')?>
+                        Welkom op Rulesbyrosita.nl, mijn blog over inspiratie over het
+                        leven (met een beperking), mijn zoektocht naar de regels in het
+                        leven,persoonlijke ontwikkeling, en lifestyle. Have fun! Liefs
+                        Rosita
                     </p>
 
-                    <h3><?php get_field('introductie_titel')?></h3>
+                    <h3>Wat me bezighoudt</h3>
                     <ul class="introduction-iconlist">
                         <li>
                             <svg
@@ -63,7 +66,7 @@ get_template_part('template-parts/accessibility-panel'); ?>
                                 <path d="M16 16l3.923 -.98" />
                             </svg>
                             <span><span class="introduction-label-text">Ik lees:</span>
-                                <?php get_field('introductie_titel')?></span>
+                                Atomic Habits - James Clear</span>
                         </li>
                         <li>
                             <svg
@@ -87,7 +90,7 @@ get_template_part('template-parts/accessibility-panel'); ?>
                                 <path d="M14 4l-4 16" />
                             </svg>
                             <span><span class="introduction-label-text">Ik leer:</span>
-                                <?php get_field('introductie_titel')?></span>
+                                WordPress: Unlock the Power of Code</span>
                         </li>
                         <li>
                             <svg
@@ -111,18 +114,18 @@ get_template_part('template-parts/accessibility-panel'); ?>
                                 <path d="M16 3l-4 4l-4 -4" />
                             </svg>
                             <span><span class="introduction-label-text">Ik kijk:</span>
-                                <a href="https://www.netflix.com/nl/title/70136137"><?php get_field('introductie_titel')?></a></span>
+                                <a href="https://www.netflix.com/nl/title/70136137">Sex and the City</a></span>
                         </li>
                     </ul>
                     <a
                         class="btn btn-secondary"
-                        href="<?php get_field('introductie_titel')?>"><?php get_field('introductie_titel')?></a>
+                        href="#">Over mij</a>
                 </div>
             </div>
             <div class="introduction-image-wrapper">
                 <div class="introduction-image dotted-background-blue">
                     <img
-                        src="<?php get_field('introductie_afbeelding')?>"
+                        src="<?php echo get_template_directory_uri(); ?>/assets/alex-sheldon-0ncyUZzWqmQ-unsplash.jpg"
                         alt="placeholder potret"
                         loading="lazy"
                         width="400"
