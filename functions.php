@@ -105,8 +105,9 @@ function remove_editor_from_front_page() {
 
     $post_id = intval($_GET['post']);
     $frontpage_id = get_option('page_on_front');
+    $posts_page_id = get_option('page_for_posts');
 
-    if ($post_id === intval($frontpage_id)) {
+    if ($post_id === intval($frontpage_id) || $post_id === intval($posts_page_id)) {
         remove_post_type_support('page', 'editor');
     }
 }

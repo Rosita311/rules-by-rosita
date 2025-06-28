@@ -7,6 +7,7 @@
   gap: 4rem;
   padding: 2rem 0;
   flex-direction: column;
+  justify-content: center;
 }
 
 .blog-listing-grid {

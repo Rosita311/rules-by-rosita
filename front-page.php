@@ -158,7 +158,9 @@ get_template_part('template-parts/accessibility-panel'); ?>
                     <p>Geen berichten gevonden.</p>
                 <?php endif; ?>
             </ul>
-            <a href="<?php echo get_permalink(get_option('page_for_posts')); ?>">Bekijk alle blogposts</a>
+            <div class="button-wrapper">
+                <a class="btn btn-secondary" href="<?php echo get_permalink(get_option('page_for_posts')); ?>">Bekijk alle blogposts</a>
+            </div>
         </section>
         <?php get_template_part('template-parts/back-to-top'); ?>
     </div>
