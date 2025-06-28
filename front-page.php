@@ -158,6 +158,7 @@ get_template_part('template-parts/accessibility-panel'); ?>
                     <p>Geen berichten gevonden.</p>
                 <?php endif; ?>
             </ul>
+            <a href="<?php echo get_permalink(get_option('page_for_posts')); ?>">Bekijk alle blogposts</a>
         </section>
         <?php get_template_part('template-parts/back-to-top'); ?>
     </div>

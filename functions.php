@@ -98,13 +98,20 @@ function my_comment_privacy_check($commentdata) {
 add_filter('preprocess_comment', 'my_comment_privacy_check');
 
 function remove_editor_from_front_page() {
+    // Alleen in admin en bij bewerken van een pagina
+    if (!is_admin() || !isset($_GET['post'])) {
+        return;
+    }
+
+    $post_id = intval($_GET['post']);
     $frontpage_id = get_option('page_on_front');
-    remove_post_type_support('page', 'editor');
-    if (get_the_ID() == $frontpage_id) {
+
+    if ($post_id === intval($frontpage_id)) {
         remove_post_type_support('page', 'editor');
     }
 }
 add_action('admin_init', 'remove_editor_from_front_page');
+
 
 /*
 $title = get_the_title(); 
