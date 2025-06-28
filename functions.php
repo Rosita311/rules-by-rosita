@@ -95,9 +95,16 @@ function my_comment_privacy_check($commentdata) {
     }
     return $commentdata;
 }
-add_filter('preprocess_comment', 'my_comment_privacy_check')
+add_filter('preprocess_comment', 'my_comment_privacy_check');
 
-
+function remove_editor_from_front_page() {
+    $frontpage_id = get_option('page_on_front');
+    remove_post_type_support('page', 'editor');
+    if (get_the_ID() == $frontpage_id) {
+        remove_post_type_support('page', 'editor');
+    }
+}
+add_action('admin_init', 'remove_editor_from_front_page');
 
 /*
 $title = get_the_title(); 
