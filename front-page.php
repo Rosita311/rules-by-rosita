@@ -5,11 +5,6 @@ get_template_part('template-parts/accessibility-panel'); ?>
         <div class="hero-content dotted-background-pink">
             <ul class="hero-listing">
                 <?php
-                // Get the current post ID
-                $post_id = get_the_ID();
-                $leesmeer_id = 'lees-meer-' . $post_id;
-                $excerpt_id = 'excerpt-' . $post_id;
-
                 // Query for the hero post
                 $hero_query = new WP_Query([
                     'posts_per_page' => 1, // Limit to one post for the hero section
@@ -18,35 +13,8 @@ get_template_part('template-parts/accessibility-panel'); ?>
                 if ($hero_query->have_posts()) :
                     // Loop through posts
                     while ($hero_query->have_posts()) : $hero_query->the_post();
-                    $post_id = get_the_ID();
-                ?>
-                        <li class="hero-card">
-                            <div class="hero-image-wrapper">
-                                <img
-                                    src="<?php echo get_the_post_thumbnail_url($post_id, 'large'); ?>"
-                                    alt="<?php the_title_attribute(); ?>"
-                                    loading="lazy" width="600" height="400" />
-                            </div>
-                            <div class="hero-card-content-wrapper">
-                                <div class="hero-card-content hover-shadow">
-                                    <div class="post-info">
-                                        <h1 class="post-title h1">
-                                            <a href="<?php the_permalink(); ?>" aria-describedby="<?php echo $excerpt_id . ' ' . $leesmeer_id; ?>">
-                                                <?php the_title(); ?>
-                                            </a>
-                                        </h1>
-                                        <p class="post-date"><?php the_time('j-m-Y'); ?></p>
-                                        <p id="<?php echo $excerpt_id; ?>">
-                                            <?php echo wp_trim_words(get_the_excerpt(), 30, '...'); ?>
-                                        </p>
-                                    </div>
-                                    <span aria-hidden="true" id="<?php echo $leesmeer_id; ?>" class="btn btn-primary">
-                                        Lees meer
-                                    </span>
-                                </div>
-                            </div>
-                        </li>
-                    <?php
+                         $post_id = get_the_ID();
+                        get_template_part('template-parts/hero-card');
                     endwhile;
                 else : ?>
                     <p>Geen berichten gevonden.</p>
@@ -171,12 +139,13 @@ get_template_part('template-parts/accessibility-panel'); ?>
                 <?php
                 $home_query = new WP_Query([
                     'posts_per_page' => 6,
+                    'offset' => 1, // Skip the first post for the hero section
                     'post_type' => 'post',
                 ]);
                 if ($home_query->have_posts()) :
                     // Loop through posts
                     while ($home_query->have_posts()) : $home_query->the_post();
-                    $post_id = get_the_ID();
+                        $post_id = get_the_ID();
                         get_template_part('template-parts/card');
                     endwhile; ?>
                     <nav class="pagination">
