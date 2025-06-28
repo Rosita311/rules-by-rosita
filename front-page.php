@@ -27,15 +27,13 @@ get_template_part('template-parts/accessibility-panel'); ?>
         <section class="introduction">
             <div class="introduction-content-wrapper">
                 <div class="introduction-card-content entry-content">
-                    <h2>Hi!</h2>
+                    <?php $homepage_id = get_option('page_on_front'); ?>
+                    <h2><?php the_field('introductie_titel', $homepage_id); ?></h2>
                     <p>
-                        Welkom op Rulesbyrosita.nl, mijn blog over inspiratie over het
-                        leven (met een beperking), mijn zoektocht naar de regels in het
-                        leven,persoonlijke ontwikkeling, en lifestyle. Have fun! Liefs
-                        Rosita
+                        <?php the_field('introductie_tekst', $homepage_id); ?>
                     </p>
 
-                    <h3>Wat me bezighoudt</h3>
+                    <h3><?php the_field('over_mij_titel', $homepage_id); ?></h3>
                     <ul class="introduction-iconlist">
                         <li>
                             <svg
@@ -66,7 +64,7 @@ get_template_part('template-parts/accessibility-panel'); ?>
                                 <path d="M16 16l3.923 -.98" />
                             </svg>
                             <span><span class="introduction-label-text">Ik lees:</span>
-                                Atomic Habits - James Clear</span>
+                                <?php the_field('lezen', $homepage_id); ?></span>
                         </li>
                         <li>
                             <svg
@@ -90,7 +88,7 @@ get_template_part('template-parts/accessibility-panel'); ?>
                                 <path d="M14 4l-4 16" />
                             </svg>
                             <span><span class="introduction-label-text">Ik leer:</span>
-                                WordPress: Unlock the Power of Code</span>
+                                <?php the_field('leren', $homepage_id); ?></span>
                         </li>
                         <li>
                             <svg
@@ -114,19 +112,19 @@ get_template_part('template-parts/accessibility-panel'); ?>
                                 <path d="M16 3l-4 4l-4 -4" />
                             </svg>
                             <span><span class="introduction-label-text">Ik kijk:</span>
-                                <a href="https://www.netflix.com/nl/title/70136137">Sex and the City</a></span>
+                                <a href="<?php the_field('kijken_link',$homepage_id); ?>"><?php the_field('kijken', $homepage_id); ?></a></span>
                         </li>
                     </ul>
                     <a
                         class="btn btn-secondary"
-                        href="#">Over mij</a>
+                        href="<?php the_field('knop_link', $homepage_id); ?>"><?php the_field('knop_link_tekst', $homepage_id); ?></a>
                 </div>
             </div>
             <div class="introduction-image-wrapper">
                 <div class="introduction-image dotted-background-blue">
                     <img
-                        src="<?php echo get_template_directory_uri(); ?>/assets/alex-sheldon-0ncyUZzWqmQ-unsplash.jpg"
-                        alt="placeholder potret"
+                        src="<?php the_field('introductie_afbeelding', $homepage_id); ?>"
+                        alt="<?php the_title_attribute(); ?>"
                         loading="lazy"
                         width="400"
                         height="400" />
