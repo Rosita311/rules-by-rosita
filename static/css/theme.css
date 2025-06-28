@@ -196,7 +196,7 @@ button {
   color: var(--color-text);
 }
 
-section.blogpost-section .button-wrapper {
+.button-wrapper {
   display: flex;
   justify-content: center !important;
   width: 100%;
