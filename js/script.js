@@ -19,7 +19,6 @@ const closeButton = document.getElementById("close-accessibility");
 // Back to top
 const backToTop = document.querySelector(".back-to-top");
 
-
 // Trap focus within the sidebar and accessibility menu when open
 let activeFocusTrap = null;
 let escKeyHandler = null;
@@ -94,13 +93,13 @@ const openSidebar = () => {
       if (panelWasOpen) closePanel();
     }
 
-  escKeyHandler = (e) => {
-    if (e.key === "Escape") {
-      closeSidebar();
-    }
-  };
-  document.addEventListener("keydown", escKeyHandler);
-}
+    escKeyHandler = (e) => {
+      if (e.key === "Escape") {
+        closeSidebar();
+      }
+    };
+    document.addEventListener("keydown", escKeyHandler);
+  }
 };
 
 const closeSidebar = () => {
@@ -117,7 +116,7 @@ const closeSidebar = () => {
     if (toggleButton) toggleButton.style.display = "block";
     if (backToTop) backToTop.style.display = "block";
   }
-   if (!media.matches && panel && panelWasOpen) {
+  if (!media.matches && panel && panelWasOpen) {
     openPanel();
     panelWasOpen = false; // Reset status na herstel
   }
@@ -345,72 +344,6 @@ backToTop.addEventListener("click", () => {
   document.getElementById("top").focus();
 });
 
-console.log(document.getElementById('error-comment'));
-
-// Comment form validation
-document.addEventListener('DOMContentLoaded', function () {
-  const form = document.getElementById('commentform');
-  const author = document.getElementById('comment-author');
-  const email = document.getElementById('comment-email');
-  const comment = document.getElementById('comment');
-
-  form.addEventListener('submit', function (e) {
-    let valid = true;
-
-    // Reset fouten
-    document.querySelectorAll('.field-error').forEach(el => el.style.display = 'none');
-
-    if (!author.value.trim()) {
-      document.getElementById('error-author').textContent = 'Vul je naam in.';
-      document.getElementById('error-author').style.display = 'block';
-      valid = false;
-    }
-
-    if (!email.value.trim()) {
-      document.getElementById('error-email').textContent = 'Vul je e-mailadres in.';
-      document.getElementById('error-email').style.display = 'block';
-      valid = false;
-    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim())) {
-      document.getElementById('error-email').textContent = 'Voer een geldig e-mailadres in.';
-      document.getElementById('error-email').style.display = 'block';
-      valid = false;
-    }
-
-    if (!comment.value.trim()) {
-      document.getElementById('error-comment').textContent = 'Schrijf een reactie.';
-      document.getElementById('error-comment').style.display = 'block';
-      valid = false;
-    }
-
-    if (!valid) {
-      e.preventDefault(); // Stop verzending van formulier
-    }
-  });
-});
-
-// Comment privacy checkbox validation
-document.addEventListener('DOMContentLoaded', function () {
-  const form = document.querySelector('form.comment-form');
-  if (!form) return;
-
-  form.addEventListener('submit', function (e) {
-    const checkbox = document.getElementById('comment-privacy');
-    const errorBox = document.getElementById('privacy-error');
-
-    if (checkbox && !checkbox.checked) {
-      e.preventDefault();
-
-      if (errorBox) {
-        errorBox.textContent = errorBox.dataset.error;
-        errorBox.style.display = 'block';
-        checkbox.focus();
-      }
-    } else {
-      if (errorBox) errorBox.style.display = 'none';
-    }
-  });
-});
-
 // Accessibility settings
 
 // Koppeling tussen checkbox-ID's en CSS-klassen
@@ -499,7 +432,6 @@ const openPanel = () => {
 
   activateTrap(panel);
 };
-
 
 const closePanel = () => {
   deactivateTrap();
@@ -606,4 +538,90 @@ function setupResetButton() {
 window.addEventListener("DOMContentLoaded", () => {
   restoreSettings();
   setupResetButton();
+});
+
+// Comment privacy checkbox validation
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("commentform");
+  if (!form) return;
+
+  const author = document.getElementById("comment-author");
+  const email = document.getElementById("comment-email");
+  const comment = document.getElementById("comment");
+  const checkbox = document.getElementById("comment-privacy");
+  const errorBox = document.getElementById("privacy-error");
+
+  form.addEventListener("submit", function (e) {
+    let valid = true;
+    let firstInvalid = null;
+
+    // Reset alle fouten
+    document
+      .querySelectorAll(".field-error")
+      .forEach((el) => (el.style.display = "none"));
+    if (errorBox) errorBox.style.display = "none";
+
+    // Naam
+    if (!author?.value.trim()) {
+      const error = document.getElementById("error-author");
+      if (error) {
+        error.textContent = "Vul je naam in.";
+        error.style.display = "block";
+      }
+      if (!firstInvalid) firstInvalid = author;
+      valid = false;
+    }
+
+    // Email
+    if (!email?.value.trim()) {
+      const error = document.getElementById("error-email");
+      if (error) {
+        error.textContent = "Vul je e-mailadres in.";
+        error.style.display = "block";
+      }
+      if (!firstInvalid) firstInvalid = email;
+      valid = false;
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim())) {
+      const error = document.getElementById("error-email");
+      if (error) {
+        error.textContent = "Voer een geldig e-mailadres in.";
+        error.style.display = "block";
+      }
+      if (!firstInvalid) firstInvalid = email;
+      valid = false;
+    }
+
+    // Comment
+    if (!comment?.value.trim()) {
+      const error = document.getElementById("error-comment");
+      if (error) {
+        error.textContent = "Schrijf een reactie.";
+        error.style.display = "block";
+      }
+      if (!firstInvalid) firstInvalid = comment;
+      valid = false;
+    }
+
+    // Privacy checkbox
+    if (checkbox && !checkbox.checked) {
+      if (errorBox) {
+        errorBox.textContent =
+          errorBox.dataset.error || "Je moet akkoord gaan.";
+        errorBox.style.display = "block";
+      }
+      if (!firstInvalid) firstInvalid = checkbox;
+      valid = false;
+    }
+
+    if (!valid) {
+      e.preventDefault(); // Stop formulierverzending
+
+      // Focus na render
+      setTimeout(() => {
+        if (firstInvalid) {
+          firstInvalid.focus({ preventScroll: false });
+        }
+      }, 0);
+    }
+  });
 });
