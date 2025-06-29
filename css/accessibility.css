@@ -341,6 +341,19 @@ body.high-contrast .dotted-background-blue {
   transition: none; /* Geen animatie voor directe visuele feedback */
 }
 
+.high-contrast .field-error {
+  color: var(--hc-danger);
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 0.5rem;
+}
+
+.high-contrast .comment-error {
+  color: var(--hc-danger) !important;
+  border: 2px solid var(--hc-danger);
+  font-size: 1rem;
+}
+
 .high-contrast #theme-switch {
   display: none; /* Verberg de themewisselaar in high contrast modus */
 }
