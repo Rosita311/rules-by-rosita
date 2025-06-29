@@ -284,6 +284,11 @@ button {
   color: var(--color-text);
 }
 
+.button-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
 .hover-shadow:hover {
   box-shadow: 8px 8px 0px 0px var(--color-accent);
 }
