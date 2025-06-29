@@ -64,6 +64,36 @@ function rulesbyrosita_register_menus() {
 }
 add_action('after_setup_theme', 'rulesbyrosita_register_menus');
 
+function rulesbyrosita_customize_register($wp_customize) {
+  $wp_customize->add_section('social_settings', array(
+    'title'    => __('Social Media', 'rulesbyrosita'),
+    'priority' => 30,
+  ));
+
+  $socials = [
+    'facebook' => 'Facebook URL',
+    'instagram' => 'Instagram URL',
+    'linkedin' => 'LinkedIn URL',
+    'mastodon' => 'Mastodon URL',
+    'github' => 'GitHub URL',
+    'wordpress' => 'WordPress.com RSS Feed',
+    'pinterest' => 'Pinterest URL'
+  ];
+
+  foreach ($socials as $key => $label) {
+    $wp_customize->add_setting("rulesbyrosita_{$key}_url", array(
+      'default' => '',
+      'sanitize_callback' => 'esc_url_raw',
+    ));
+
+    $wp_customize->add_control("rulesbyrosita_{$key}_url", array(
+      'label' => __($label, 'rulesbyrosita'),
+      'section' => 'social_settings',
+      'type' => 'url',
+    ));
+  }
+}
+add_action('customize_register', 'rulesbyrosita_customize_register');
 
 function get_reading_time() {
     $content = get_post_field('post_content', get_the_ID());
