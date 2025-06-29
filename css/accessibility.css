@@ -346,6 +346,10 @@ body.high-contrast .dotted-background-blue {
   transition: none; /* Geen animatie voor directe visuele feedback */
 }
 
+.high-contrast .logo-red-part {
+  fill: var(--hc-danger) !important;
+}
+
 .high-contrast .field-error {
   color: var(--hc-danger);
   font-size: 1rem;

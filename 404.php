@@ -36,7 +36,7 @@ get_template_part('template-parts/accessibility-panel'); ?>
           </div>
           <div class="error-image">
             <img
-              src="./assets/error-image.jpg"
+              src="<?php echo get_template_directory_uri(); ?>/assets/images/error-image.jpg"
               alt="404 pagina niet gevonden afbeelding"
               loading="lazy"
               width="600"
