@@ -25,12 +25,7 @@
           href="<?php echo esc_url(home_url('/')); ?>"
           id="top"
         >
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/Logo_rulesbyrosita.png" 
-            alt="Rules by Rosita logo ga naar de homepage" 
-            class="site-logo"
-            loading="lazy"
-            width="200"
-            height="200">
+        <?php get_template_part('template-parts/logo'); ?>
         </a>
         <div class="menu-items">
           <button

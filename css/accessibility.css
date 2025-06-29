@@ -252,6 +252,9 @@ body.dyslexic-font td,
 body.dyslexic-font th,
 body.dyslexic-font .accessibility-tooltip,
 body.dyslexic-font .back-to-top-tooltip,
+body.dyslexic-font .btn,
+body.dyslexic-font .field-error,
+body.dyslexic-font .comment-error,
 body.dyslexic-font .page-title nav p {
   font-family: "Atkinson Hyperlegible", Arial, sans-serif;
 }
@@ -261,7 +264,9 @@ body.dyslexic-font h2,
 body.dyslexic-font h3,
 body.dyslexic-font h4,
 body.dyslexic-font h5,
-body.dyslexic-font h6 {
+body.dyslexic-font h6,
+body.dyslexic-font .field-error,
+body.dyslexic-font .comment-error {
   font-weight: 700;
 }
 

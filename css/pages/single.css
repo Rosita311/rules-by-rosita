@@ -1,6 +1,7 @@
 /* Single Post Styles */
 .single-post {
   padding: 0 clamp(0.5rem, 5vw, 2rem);
+  padding-bottom: 9rem;
 }
 
 .single-post-content {
@@ -80,6 +81,7 @@
   .single-post {
     gap: 0;
     padding: 0 1rem;
+    padding-bottom: 5rem;
   }
 
   .post-meta-wrapper {

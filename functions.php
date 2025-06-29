@@ -11,7 +11,7 @@ function rulesbyrosita_enqueue_assets() {
   // Google Fonts
   wp_enqueue_style(
     'rulesbyrosita-google-fonts',
-    'https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Zilla+Slab&display=swap',
+    'https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100..900;1,100..900&family=Zilla+Slab&display=swap',
     array(),
     null
   );
