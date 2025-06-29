@@ -5,17 +5,20 @@
         <h2>Menu</h2>
         <nav aria-label="Footer menu">
           <?php
-  wp_nav_menu(array(
-    'theme_location' => 'footer-menu',
-    'container' => false,
-    'menu_class' => 'footer-menu-list'
-  ));
-  ?>
+          wp_nav_menu(array(
+            'theme_location' => 'footer-menu',
+            'container' => false,
+            'menu_class' => 'footer-menu-list'
+          ));
+          ?>
         </nav>
       </div>
       <div class="footer-social">
         <div class="footer-subscribe">
           <h2>Abonneer je op mijn blog</h2>
+          <div class="site-form jetpack-form">
+            <?php echo do_shortcode('[jetpack_subscription_form]'); ?>
+          </div>
           <form
             action="#"
             method="post"
@@ -36,10 +39,7 @@
                 Abonneer
               </button>
             </div>
-            <p>
-              Je kunt je op elk moment afmelden via de link in de footer van
-              elke e-mail.
-            </p>
+            <p>Dit is een testformulier — Jetpack werkt pas op een live site.</p>
           </form>
         </div>
         <div class="footer-social-media">

@@ -62,21 +62,6 @@ footer {
   flex-wrap: wrap;
 }
 
-.footer-btn {
-  border: 2px solid var(--color-contrast);
-  white-space: nowrap;
-
-  &:hover {
-    border: 2px solid var(--color-text);
-    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
-  }
-
-  &:focus-visible {
-    outline: 2px solid var(--color-text);
-    border-radius: 0.25rem;
-  }
-}
-
 .footer-social-media {
   display: flex;
   flex-direction: column;
@@ -232,9 +217,6 @@ footer {
     }
   }
 }
-
-
-
 
 /* Media Queries */
 

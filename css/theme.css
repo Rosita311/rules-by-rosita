@@ -345,7 +345,8 @@ button {
 .site-form input[type="url"],
 .site-form textarea,
 .comment-form input,
-.comment-form textarea {
+.comment-form textarea,
+.jetpack-form input[type="email"] {
   display: block;
   width: 100%;
   padding: 0.75rem 1.5rem;
@@ -395,6 +396,26 @@ button {
 
 .field-error.active {
   display: block;
+}
+
+.jetpack-form {
+  max-width: 500px;
+}
+
+
+.footer-btn .jetpack-form input[type="submit"] {
+  border: 2px solid var(--color-contrast);
+  white-space: nowrap;
+
+  &:hover {
+    border: 2px solid var(--color-text);
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--color-text);
+    border-radius: 0.25rem;
+  }
 }
 
 /* Back to top button */
