@@ -56,6 +56,15 @@ function rosita_register_sidebars() {
 }
 add_action('widgets_init', 'rosita_register_sidebars');
 
+function rulesbyrosita_register_menus() {
+  register_nav_menus(array(
+    'footer-menu' => __('Footer', 'rulesbyrosita'),
+    'header-menu' => __('Header', 'rulesbyrosita'),
+  ));
+}
+add_action('after_setup_theme', 'rulesbyrosita_register_menus');
+
+
 function get_reading_time() {
     $content = get_post_field('post_content', get_the_ID());
     $word_count = str_word_count(strip_tags($content));

@@ -4,14 +4,13 @@
       <div class="footer-menu">
         <h2>Menu</h2>
         <nav aria-label="Footer menu">
-          <ul>
-            <li><a href="archive.html">Persoonlijk</a></li>
-            <li><a href="archive.html">Life</a></li>
-            <li><a href="archive.html">Tips and Tricks</a></li>
-            <li><a href="page.html">Over mij</a></li>
-            <li><a href="page.html">Contact</a></li>
-            <li><a href="page.html">Privacy</a></li>
-          </ul>
+          <?php
+  wp_nav_menu(array(
+    'theme_location' => 'footer-menu',
+    'container' => false,
+    'menu_class' => 'footer-menu-list'
+  ));
+  ?>
         </nav>
       </div>
       <div class="footer-social">
