@@ -108,7 +108,7 @@
             <?php foreach ($socials as $key => $data):
               if (!empty($data['url'])): ?>
                 <li>
-                  <a href="<?php echo esc_url($data['url']); ?>" aria-label="Bezoek mijn <?php echo esc_attr($data['label']); ?> profiel" target="_blank" rel="noopener noreferrer">
+                  <a href="<?php echo esc_url($data['url']); ?>" aria-label="Bezoek mijn <?php echo esc_attr($data['label']); ?> profiel" rel="noopener noreferrer">
                     <?php echo $data['svg']; ?>
                   </a>
                 </li>
