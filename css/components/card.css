@@ -161,14 +161,23 @@ body:not(.user-is-tabbing) .hero-card-content:focus-within {
 /* Media Queries */
 
 @media screen and (max-width: 1024px) {
+  .blogpost-section {
+    gap: 3rem;
+  }
+
   .blog-listing-grid {
     gap: 3rem;
   }
 }
 
 @media screen and (max-width: 768px) {
+  .blogpost-section {
+    gap: 2rem;
+  }
+
   .blog-listing-grid {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 4rem;
+    margin-bottom: -2rem;
   }
 }
