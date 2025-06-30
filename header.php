@@ -23,7 +23,7 @@
       <div class="header-container">
         <a
           href="<?php echo esc_url(home_url('/')); ?>"
-          id="top" aria-label="Logo Rules by Rosita, ga naar de homepage"
+          id="top" aria-label="Rules by Rosita logo, ga naar de homepage"
         >
         <?php get_template_part('template-parts/logo'); ?>
         </a>

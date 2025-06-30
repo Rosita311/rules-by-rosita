@@ -62,6 +62,7 @@ function rulesbyrosita_register_menus() {
     'header-menu' => __('Header', 'rulesbyrosita'),
   ));
 }
+
 add_action('after_setup_theme', 'rulesbyrosita_register_menus');
 
 function rulesbyrosita_customize_register($wp_customize) {
