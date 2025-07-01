@@ -1,4 +1,6 @@
 <?php
+require_once get_template_directory() . '/inc/class-rules-walker-nav-menu.php';
+
 function rulesbyrosita_theme_setup() {
   if ( function_exists( 'add_theme_support' ) ) {
     add_theme_support('title-tag');
