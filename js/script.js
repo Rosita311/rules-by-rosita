@@ -193,6 +193,8 @@ document.addEventListener("DOMContentLoaded", () => {
       button.setAttribute("aria-expanded", "true");
       button.setAttribute("aria-pressed", "true");
       button.setAttribute("aria-label", "Submenu sluiten");
+      submenu?.setAttribute("aria-hidden", "false");
+  submenu?.setAttribute("tabindex", "0"); 
     };
 
     const closeSubmenu = () => {
@@ -200,6 +202,8 @@ document.addEventListener("DOMContentLoaded", () => {
       button.setAttribute("aria-expanded", "false");
       button.setAttribute("aria-pressed", "false");
       button.setAttribute("aria-label", "Submenu openen");
+      submenu?.setAttribute("aria-hidden", "true");
+  submenu?.setAttribute("tabindex", "-1");
     };
 
     const closeAllSubmenus = () => {
@@ -209,15 +213,16 @@ document.addEventListener("DOMContentLoaded", () => {
         toggle?.setAttribute("aria-expanded", "false");
         toggle?.setAttribute("aria-pressed", "false");
         toggle?.setAttribute("aria-label", "Submenu openen");
+        toggle?.setAttribute("aria-hidden", "true");
       });
     };
 
     // Klikgedrag voor touch/keyboard
     button.addEventListener("click", (e) => {
-      if (isMouseUser && window.innerWidth > 992) {
-        // Negeer klik als muisgebruiker op desktop
-        return;
-      }
+      if (window.innerWidth > 992 && isMouseUser) {
+  return; // alléén muis op desktop
+}
+
       e.preventDefault();
       const isOpen = parentItem.classList.contains("open");
       isOpen ? closeSubmenu() : openSubmenu();
@@ -247,11 +252,12 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     // Sluit submenu bij klik buiten het menu
-    document.addEventListener("click", (e) => {
-      if (!parentItem.contains(e.target)) {
-        closeSubmenu();
-      }
-    });
+  parentItem.addEventListener("focusout", (e) => {
+  // Check of de nieuw gefocuste target NIET in het submenu zit
+  if (!parentItem.contains(e.relatedTarget)) {
+    closeSubmenu();
+  }
+});
 
     // Escape sluit submenu
     submenu?.addEventListener("keydown", (e) => {
@@ -262,6 +268,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
 
 // Darkmode
 

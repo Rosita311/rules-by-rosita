@@ -59,6 +59,7 @@ a #top:focus-visible {
   &:focus-visible {
     outline: 2px solid var(--color-text);
     border-radius: 0.25rem;
+    padding: 1em 0;
   }
 }
 
@@ -244,6 +245,7 @@ a #top:focus-visible {
 .has-submenu > button.submenu-toggle:focus-visible {
   outline: 2px solid var(--color-text);
   border-radius: 0.25rem;
+  padding: 1em 0;
 }
 
 /* Submenu standaard verborgen */
@@ -424,7 +426,7 @@ a #top:focus-visible {
   .header-container #close-sidebar-button {
     display: block;
     padding: 0.5em;
-    margin: 2em;
+    margin: 4em 2em 2em 2em;
   }
 
   .submenu-toggle:hover .chevron svg {
