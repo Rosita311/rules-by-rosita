@@ -579,20 +579,21 @@ function initSubmenus() {
     };
 
     button.addEventListener("click", (e) => {
-      if (isMouseUser && window.innerWidth > 992) return;
+       if (isMouseUser && window.innerWidth > 992) return;
 
       e.preventDefault();
       const isOpen = parentItem.classList.contains("open");
       isOpen ? closeSubmenu() : openSubmenu();
     });
 
-    button.addEventListener("keydown", (e) => {
+    /*button.addEventListener("keydown", (e) => {
       if (e.key === "Enter" || e.key === " ") {
         e.preventDefault();
         const isOpen = parentItem.classList.contains("open");
         isOpen ? closeSubmenu() : openSubmenu();
       }
-    });
+    });*/
+
 
     parentItem.addEventListener("mouseenter", () => {
       if (isMouseUser && window.innerWidth > 992) {
