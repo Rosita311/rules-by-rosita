@@ -586,13 +586,13 @@ function initSubmenus() {
       isOpen ? closeSubmenu() : openSubmenu();
     });
 
-    /*button.addEventListener("keydown", (e) => {
+    button.addEventListener("keydown", (e) => {
       if (e.key === "Enter" || e.key === " ") {
         e.preventDefault();
         const isOpen = parentItem.classList.contains("open");
         isOpen ? closeSubmenu() : openSubmenu();
       }
-    });*/
+    });
 
 
     parentItem.addEventListener("mouseenter", () => {
