@@ -532,116 +532,103 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-//  Submenu's
 function initSubmenus() {
   const submenuToggles = document.querySelectorAll(".submenu-toggle");
   let isMouseUser = false;
 
-  // Detecteer of gebruiker een muis gebruikt
-  window.addEventListener("mousemove", () => {
-    isMouseUser = true;
-  }, { once: true });
+  window.addEventListener(
+    "mousemove",
+    () => {
+      isMouseUser = true;
+    },
+    { once: true }
+  );
 
-   // Detecteer toetsenbordgebruik (tab, pijltjestoetsen)
-  window.addEventListener("keydown", (e) => {
-    const keysThatIndicateKeyboard = ["Tab", "ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight"];
-    if (keysThatIndicateKeyboard.includes(e.key)) {
-      isMouseUser = false;
-    }
-  }, { once: true });
-
-  // Submenu openen
-  const openSubmenu = (button, parentItem, submenu) => {
-    closeAllSubmenus();
-    parentItem.classList.add("open");
-    button.setAttribute("aria-expanded", "true");
-    button.setAttribute("aria-pressed", "true");
-    button.setAttribute("aria-label", "Submenu sluiten");
-    submenu?.setAttribute("aria-hidden", "false");
-  };
-
-  // Submenu sluiten
-  const closeSubmenu = (button, parentItem, submenu) => {
-    parentItem.classList.remove("open");
-    button.setAttribute("aria-expanded", "false");
-    button.setAttribute("aria-pressed", "false");
-    button.setAttribute("aria-label", "Submenu openen");
-    submenu?.setAttribute("aria-hidden", "true");
-  };
-
-  // Sluit alle open submenu’s
-  const closeAllSubmenus = () => {
-    document.querySelectorAll(".has-submenu.open").forEach((item) => {
-      item.classList.remove("open");
-      const toggle = item.querySelector(".submenu-toggle");
-      const submenu = toggle && document.getElementById(toggle.getAttribute("aria-controls"));
-      toggle?.setAttribute("aria-expanded", "false");
-      toggle?.setAttribute("aria-pressed", "false");
-      toggle?.setAttribute("aria-label", "Submenu openen");
-      submenu?.setAttribute("aria-hidden", "true");
-    });
-  };
-
-  // Voeg event listeners toe aan elke toggle
-   submenuToggles.forEach((button) => {
+  submenuToggles.forEach((button) => {
     const parentItem = button.closest(".has-submenu");
     const submenu = document.getElementById(button.getAttribute("aria-controls"));
 
     let hoverOpenTimeout, hoverCloseTimeout;
 
+    const openSubmenu = () => {
+      closeAllSubmenus();
+      parentItem.classList.add("open");
+      button.setAttribute("aria-expanded", "true");
+      button.setAttribute("aria-pressed", "true");
+      button.setAttribute("aria-label", "Submenu sluiten");
+      submenu?.setAttribute("aria-hidden", "false");
+    };
+
+    const closeSubmenu = () => {
+      parentItem.classList.remove("open");
+      button.setAttribute("aria-expanded", "false");
+      button.setAttribute("aria-pressed", "false");
+      button.setAttribute("aria-label", "Submenu openen");
+      submenu?.setAttribute("aria-hidden", "true");
+    };
+
+    const closeAllSubmenus = () => {
+      document.querySelectorAll(".has-submenu.open").forEach((item) => {
+        item.classList.remove("open");
+        const toggle = item.querySelector(".submenu-toggle");
+        const controlledId = toggle?.getAttribute("aria-controls");
+        const submenuEl = controlledId ? document.getElementById(controlledId) : null;
+
+        toggle?.setAttribute("aria-expanded", "false");
+        toggle?.setAttribute("aria-pressed", "false");
+        toggle?.setAttribute("aria-label", "Submenu openen");
+        submenuEl?.setAttribute("aria-hidden", "true");
+      });
+    };
+
     button.addEventListener("click", (e) => {
-      // Alleen blokkeren klik als muisgebruiker op desktop (> 992px)
       if (isMouseUser && window.innerWidth > 992) return;
 
       e.preventDefault();
       const isOpen = parentItem.classList.contains("open");
-      isOpen
-        ? closeSubmenu(button, parentItem, submenu)
-        : openSubmenu(button, parentItem, submenu);
+      isOpen ? closeSubmenu() : openSubmenu();
     });
 
-    // Hover gedrag alleen als muisgebruiker en desktop
+    button.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        const isOpen = parentItem.classList.contains("open");
+        isOpen ? closeSubmenu() : openSubmenu();
+      }
+    });
+
     parentItem.addEventListener("mouseenter", () => {
       if (isMouseUser && window.innerWidth > 992) {
         clearTimeout(hoverCloseTimeout);
-        hoverOpenTimeout = setTimeout(() => {
-          openSubmenu(button, parentItem, submenu);
-        }, 300);
+        hoverOpenTimeout = setTimeout(openSubmenu, 300);
       }
     });
 
     parentItem.addEventListener("mouseleave", () => {
       if (isMouseUser && window.innerWidth > 992) {
         clearTimeout(hoverOpenTimeout);
-        hoverCloseTimeout = setTimeout(() => {
-          closeSubmenu(button, parentItem, submenu);
-        }, 300);
+        hoverCloseTimeout = setTimeout(closeSubmenu, 300);
+      }
+    });
+
+    document.addEventListener("click", (e) => {
+      if (!parentItem.contains(e.target)) {
+        closeSubmenu();
       }
     });
 
     submenu?.addEventListener("keydown", (e) => {
       if (e.key === "Escape") {
-        closeSubmenu(button, parentItem, submenu);
+        closeSubmenu();
         button.focus();
-      }
-    });
-  });
-
-  // Buitenklik sluit submenu’s
-  document.addEventListener("click", (e) => {
-    submenuToggles.forEach((button) => {
-      const parentItem = button.closest(".has-submenu");
-      const submenu = document.getElementById(button.getAttribute("aria-controls"));
-      if (parentItem && !parentItem.contains(e.target)) {
-        closeSubmenu(button, parentItem, submenu);
       }
     });
   });
 }
 
+// ✅ Zorg dat het script altijd werkt — ook als DOM al klaar is
 if (document.readyState === "loading") {
   document.addEventListener("DOMContentLoaded", initSubmenus);
 } else {
   initSubmenus();
 }
-
