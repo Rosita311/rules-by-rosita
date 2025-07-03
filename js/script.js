@@ -555,7 +555,6 @@ function initSubmenus() {
       parentItem.classList.add("open");
       button.setAttribute("aria-expanded", "true");
       button.setAttribute("aria-pressed", "true");
-      button.setAttribute("aria-label", "Submenu sluiten");
       submenu?.setAttribute("aria-hidden", "false");
     };
 
@@ -563,7 +562,6 @@ function initSubmenus() {
       parentItem.classList.remove("open");
       button.setAttribute("aria-expanded", "false");
       button.setAttribute("aria-pressed", "false");
-      button.setAttribute("aria-label", "Submenu openen");
       submenu?.setAttribute("aria-hidden", "true");
     };
 
@@ -576,7 +574,6 @@ function initSubmenus() {
 
         toggle?.setAttribute("aria-expanded", "false");
         toggle?.setAttribute("aria-pressed", "false");
-        toggle?.setAttribute("aria-label", "Submenu openen");
         submenuEl?.setAttribute("aria-hidden", "true");
       });
     };
