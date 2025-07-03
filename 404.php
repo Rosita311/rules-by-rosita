@@ -5,41 +5,43 @@ get_template_part('template-parts/accessibility-panel'); ?>
   <div class="container-main">
     404.php
     <section class="entry-content">
-      <div class="search-form-container">
-        <h2>Deze pagina bestaat niet</h2>
-        <p>
-          Het lijkt erop dat de pagina die je zoekt niet (meer) bestaat. Misschien heb je een typefout gemaakt, of is de pagina verhuisd.
-        </p>
-        <p>Hier zijn een paar dingen die je kunt doen:</p>
-        <ul>
-          <li><a href="<?php echo esc_url(home_url('/')); ?>">Terug naar de homepage</a></li>
-          <li><a href="<?php echo esc_url(home_url('/contact')); ?>">Neem contact op met ons</a></li>
-          <li>Gebruik de zoekfunctie hieronder:</li>
-        </ul>
-        <form action="<?php echo esc_url(home_url('/')); ?>" method="get" class="search-form site-form">
-          <label for="search">Zoeken</label>
-          <div class="site-form">
-            <input
-              type="search"
-              id="search"
-              name="s"
-              placeholder="Waar ben je naar op zoek?"
-              required
-              aria-label="Zoekterm" />
-            <button type="submit" class="btn btn-secondary">
-              Zoeken
-            </button>
+      <div class="introduction-content-wrapper">
+        <div class="introduction-card-content entry-content">
+          <h2>Deze pagina bestaat niet</h2>
+          <p>
+            Het lijkt erop dat de pagina die je zoekt niet (meer) bestaat. Misschien heb je een typefout gemaakt, of is de pagina verhuisd.
+          </p>
+          <p>Hier zijn een paar dingen die je kunt doen:</p>
+          <ul>
+            <li><a href="<?php echo esc_url(home_url('/')); ?>">Terug naar de homepage</a></li>
+            <li><a href="<?php echo esc_url(home_url('/contact')); ?>">Neem contact op met ons</a></li>
+            <li>Gebruik de zoekfunctie hieronder:</li>
+          </ul>
+          <form action="<?php echo esc_url(home_url('/')); ?>" method="get" class="search-form site-form">
+            <label for="search">Zoeken</label>
+            <div class="site-form">
+              <input
+                type="search"
+                id="search"
+                name="s"
+                placeholder="Waar ben je naar op zoek?"
+                required
+                aria-label="Zoekterm" />
+              <button type="submit" class="btn btn-secondary">
+                Zoeken
+              </button>
+            </div>
+          </form>
+        </div>
+        <div class="introduction-image-wrapper">
+          <div class="introduction-image dotted-background-blue">
+            <img
+              src="<?php echo get_template_directory_uri(); ?>/assets/error-image.jpg"
+              alt="Illustratie van een verdwaalde weg of foutmelding"
+              loading="lazy"
+              width="400"
+              height="400" />
           </div>
-        </form>
-      </div>
-      <div class="introduction-image-wrapper">
-        <div class="error-image">
-          <img
-            src="<?php echo get_template_directory_uri(); ?>/assets/error-image.jpg"
-            alt="Illustratie van een verdwaalde weg of foutmelding"
-            loading="lazy"
-            width="800"
-            height="600" />
         </div>
       </div>
     </section>
