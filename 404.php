@@ -4,45 +4,45 @@ get_template_part('template-parts/accessibility-panel'); ?>
     <?php get_template_part('template-parts/page-hero'); ?>
     <div class="container-main">
         404.php
-        <section class="entry-content">
-          <div class="search-form-container">
-            <h2>Deze pagina bestaat niet</h2>
-            <p>
-              De pagina die je zoekt bestaat niet of is verwijderd. Misschien
-              kun je het vinden via de zoekfunctie hieronder.
-            </p>
-            <form
-              action="#"
-              method="post"
-              class="search-form"
-            >
-              <label for="email">Zoeken</label>
-              <div class="search-form-row">
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  required
-                  placeholder="Zoeken..."
+          <section class="entry-content error-404">
+            <div class="search-form-container">
+                <h2>Deze pagina bestaat niet</h2>
+                <p>
+                    Het lijkt erop dat de pagina die je zoekt niet (meer) bestaat. Misschien heb je een typefout gemaakt, of is de pagina verhuisd.
+                </p>
+                <p>Hier zijn een paar dingen die je kunt doen:</p>
+                <ul>
+                    <li><a href="<?php echo esc_url(home_url('/')); ?>">Terug naar de homepage</a></li>
+                    <li><a href="<?php echo esc_url(home_url('/contact')); ?>">Neem contact op met ons</a></li>
+                    <li>Gebruik de zoekfunctie hieronder:</li>
+                </ul>
+                <form action="<?php echo esc_url(home_url('/')); ?>" method="get" class="search-form">
+                    <label for="search">Zoeken</label>
+                    <div class="search-form-row">
+                        <input
+                            type="search"
+                            id="search"
+                            name="s"
+                            placeholder="Waar ben je naar op zoek?"
+                            required
+                            aria-label="Zoekterm"
+                        />
+                        <button type="submit" class="btn btn-secondary footer-btn">
+                            Zoeken
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="error-image">
+                <img
+                    src="<?php echo get_template_directory_uri(); ?>/assets/error-image.jpg"
+                    alt="Illustratie van een verdwaalde weg of foutmelding"
+                    loading="lazy"
+                    width="800"
+                    height="600"
                 />
-                <button
-                  type="submit"
-                  class="btn btn-secondary footer-btn"
-                >
-                  Zoeken
-                </button>
-              </div>
-            </form>
-          </div>
-          <div class="error-image">
-            <img
-              src="<?php echo get_template_directory_uri(); ?>/assets/images/error-image.jpg"
-              alt="404 pagina niet gevonden afbeelding"
-              loading="lazy"
-              width="600"
-              height="400"
-            />
-          </div>
+            </div>
         </section>
         <?php get_template_part('template-parts/back-to-top'); ?>
     </div>
