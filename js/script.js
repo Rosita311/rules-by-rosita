@@ -542,6 +542,14 @@ function initSubmenus() {
     isMouseUser = true;
   }, { once: true });
 
+   // Detecteer toetsenbordgebruik (tab, pijltjestoetsen)
+  window.addEventListener("keydown", (e) => {
+    const keysThatIndicateKeyboard = ["Tab", "ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight"];
+    if (keysThatIndicateKeyboard.includes(e.key)) {
+      isMouseUser = false;
+    }
+  }, { once: true });
+
   // Submenu openen
   const openSubmenu = (button, parentItem, submenu) => {
     closeAllSubmenus();
@@ -575,14 +583,14 @@ function initSubmenus() {
   };
 
   // Voeg event listeners toe aan elke toggle
-  submenuToggles.forEach((button) => {
+   submenuToggles.forEach((button) => {
     const parentItem = button.closest(".has-submenu");
     const submenu = document.getElementById(button.getAttribute("aria-controls"));
 
     let hoverOpenTimeout, hoverCloseTimeout;
 
-    // Klik activeert submenu op mobiel en toetsenbordgebruik
     button.addEventListener("click", (e) => {
+      // Alleen blokkeren klik als muisgebruiker op desktop (> 992px)
       if (isMouseUser && window.innerWidth > 992) return;
 
       e.preventDefault();
@@ -592,7 +600,7 @@ function initSubmenus() {
         : openSubmenu(button, parentItem, submenu);
     });
 
-    // Hover gedrag voor desktopgebruikers
+    // Hover gedrag alleen als muisgebruiker en desktop
     parentItem.addEventListener("mouseenter", () => {
       if (isMouseUser && window.innerWidth > 992) {
         clearTimeout(hoverCloseTimeout);
@@ -611,7 +619,6 @@ function initSubmenus() {
       }
     });
 
-    // ESC sluit submenu en zet focus terug
     submenu?.addEventListener("keydown", (e) => {
       if (e.key === "Escape") {
         closeSubmenu(button, parentItem, submenu);
@@ -620,7 +627,7 @@ function initSubmenus() {
     });
   });
 
-  // Buitenklik sluit submenu’s (één globale listener)
+  // Buitenklik sluit submenu’s
   document.addEventListener("click", (e) => {
     submenuToggles.forEach((button) => {
       const parentItem = button.closest(".has-submenu");
@@ -632,9 +639,9 @@ function initSubmenus() {
   });
 }
 
-// Script initialiseren zodra DOM klaar is
 if (document.readyState === "loading") {
   document.addEventListener("DOMContentLoaded", initSubmenus);
 } else {
   initSubmenus();
 }
+
