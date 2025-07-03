@@ -448,6 +448,7 @@ a #top:focus-visible {
 
     &:focus-visible {
       border-bottom: none;
+      padding: 1em 2.5em;
       background-color: var(--color-text);
       color: var(--color-background);
       outline: 2px solid var(--color-text);
