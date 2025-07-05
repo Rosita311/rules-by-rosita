@@ -532,17 +532,21 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+// submenu
 function initSubmenus() {
   const submenuToggles = document.querySelectorAll(".submenu-toggle");
-  let isMouseUser = false;
 
-  window.addEventListener(
-    "mousemove",
-    () => {
-      isMouseUser = true;
-    },
-    { once: true }
-  );
+  document.addEventListener("click", (e) => {
+    document.querySelectorAll(".has-submenu.open").forEach((item) => {
+      if (!item.contains(e.target)) {
+        const toggle = item.querySelector(".submenu-toggle");
+        const submenu = document.getElementById(toggle?.getAttribute("aria-controls"));
+        item.classList.remove("open");
+        toggle?.setAttribute("aria-expanded", "false");
+        submenu?.setAttribute("aria-hidden", "true");
+      }
+    });
+  });
 
   submenuToggles.forEach((button) => {
     const parentItem = button.closest(".has-submenu");
@@ -554,15 +558,14 @@ function initSubmenus() {
       closeAllSubmenus();
       parentItem.classList.add("open");
       button.setAttribute("aria-expanded", "true");
-      button.setAttribute("aria-pressed", "true");
       submenu?.setAttribute("aria-hidden", "false");
     };
 
     const closeSubmenu = () => {
       parentItem.classList.remove("open");
       button.setAttribute("aria-expanded", "false");
-      button.setAttribute("aria-pressed", "false");
       submenu?.setAttribute("aria-hidden", "true");
+      parentItem.dataset.openedByClick = "false";
     };
 
     const closeAllSubmenus = () => {
@@ -571,47 +574,35 @@ function initSubmenus() {
         const toggle = item.querySelector(".submenu-toggle");
         const controlledId = toggle?.getAttribute("aria-controls");
         const submenuEl = controlledId ? document.getElementById(controlledId) : null;
-
         toggle?.setAttribute("aria-expanded", "false");
-        toggle?.setAttribute("aria-pressed", "false");
         submenuEl?.setAttribute("aria-hidden", "true");
+        item.dataset.openedByClick = "false";
       });
     };
 
     button.addEventListener("click", (e) => {
-       if (isMouseUser && window.innerWidth > 992) return;
-
       e.preventDefault();
       const isOpen = parentItem.classList.contains("open");
-      isOpen ? closeSubmenu() : openSubmenu();
-    });
 
-    button.addEventListener("keydown", (e) => {
-      if (e.key === "Enter" || e.key === " ") {
-        e.preventDefault();
-        const isOpen = parentItem.classList.contains("open");
-        isOpen ? closeSubmenu() : openSubmenu();
+      if (isOpen) {
+        closeSubmenu();
+      } else {
+        openSubmenu();
+        parentItem.dataset.openedByClick = "true";
       }
     });
 
-
     parentItem.addEventListener("mouseenter", () => {
-      if (isMouseUser && window.innerWidth > 992) {
+      if (window.innerWidth > 992 && parentItem.dataset.openedByClick !== "true") {
         clearTimeout(hoverCloseTimeout);
-        hoverOpenTimeout = setTimeout(openSubmenu, 300);
+        hoverOpenTimeout = setTimeout(openSubmenu, 150);
       }
     });
 
     parentItem.addEventListener("mouseleave", () => {
-      if (isMouseUser && window.innerWidth > 992) {
+      if (window.innerWidth > 992 && parentItem.dataset.openedByClick !== "true") {
         clearTimeout(hoverOpenTimeout);
         hoverCloseTimeout = setTimeout(closeSubmenu, 300);
-      }
-    });
-
-    document.addEventListener("click", (e) => {
-      if (!parentItem.contains(e.target)) {
-        closeSubmenu();
       }
     });
 
@@ -623,6 +614,7 @@ function initSubmenus() {
     });
   });
 }
+
 
 // Script initialiseren zodra DOM klaar is
 if (document.readyState === "loading") {

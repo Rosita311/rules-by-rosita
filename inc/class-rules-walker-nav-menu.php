@@ -21,6 +21,7 @@ class Rules_Walker_Nav_Menu extends Walker_Nav_Menu
     if ($has_children) {
       $output .= '<button class="submenu-toggle"';
       $output .= ' aria-haspopup="true"';
+      $output .= ' type="button"';
       $output .= ' aria-expanded="false"';
       $output .= ' aria-controls="' . esc_attr($submenu_id) . '">';
       $output .= esc_html($item->title);
