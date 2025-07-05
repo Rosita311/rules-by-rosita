@@ -167,8 +167,6 @@ const updateNavbar = (e) => {
 media.addEventListener("change", updateNavbar);
 updateNavbar(media);
 
-
-
 // Darkmode
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -540,7 +538,9 @@ function initSubmenus() {
     document.querySelectorAll(".has-submenu.open").forEach((item) => {
       if (!item.contains(e.target)) {
         const toggle = item.querySelector(".submenu-toggle");
-        const submenu = document.getElementById(toggle?.getAttribute("aria-controls"));
+        const submenu = document.getElementById(
+          toggle?.getAttribute("aria-controls")
+        );
         item.classList.remove("open");
         toggle?.setAttribute("aria-expanded", "false");
         submenu?.setAttribute("aria-hidden", "true");
@@ -550,7 +550,9 @@ function initSubmenus() {
 
   submenuToggles.forEach((button) => {
     const parentItem = button.closest(".has-submenu");
-    const submenu = document.getElementById(button.getAttribute("aria-controls"));
+    const submenu = document.getElementById(
+      button.getAttribute("aria-controls")
+    );
 
     let hoverOpenTimeout, hoverCloseTimeout;
 
@@ -573,7 +575,9 @@ function initSubmenus() {
         item.classList.remove("open");
         const toggle = item.querySelector(".submenu-toggle");
         const controlledId = toggle?.getAttribute("aria-controls");
-        const submenuEl = controlledId ? document.getElementById(controlledId) : null;
+        const submenuEl = controlledId
+          ? document.getElementById(controlledId)
+          : null;
         toggle?.setAttribute("aria-expanded", "false");
         submenuEl?.setAttribute("aria-hidden", "true");
         item.dataset.openedByClick = "false";
@@ -593,14 +597,20 @@ function initSubmenus() {
     });
 
     parentItem.addEventListener("mouseenter", () => {
-      if (window.innerWidth > 992 && parentItem.dataset.openedByClick !== "true") {
+      if (
+        window.innerWidth > 992 &&
+        parentItem.dataset.openedByClick !== "true"
+      ) {
         clearTimeout(hoverCloseTimeout);
         hoverOpenTimeout = setTimeout(openSubmenu, 150);
       }
     });
 
     parentItem.addEventListener("mouseleave", () => {
-      if (window.innerWidth > 992 && parentItem.dataset.openedByClick !== "true") {
+      if (
+        window.innerWidth > 992 &&
+        parentItem.dataset.openedByClick !== "true"
+      ) {
         clearTimeout(hoverOpenTimeout);
         hoverCloseTimeout = setTimeout(closeSubmenu, 300);
       }
@@ -612,9 +622,15 @@ function initSubmenus() {
         button.focus();
       }
     });
+
+    parentItem.addEventListener("focusout", (e) => {
+      if (!parentItem.contains(e.relatedTarget)) {
+        // Sluit submenu direct (of met timeout als je wilt)
+        closeSubmenu();
+      }
+    });
   });
 }
-
 
 // Script initialiseren zodra DOM klaar is
 if (document.readyState === "loading") {
