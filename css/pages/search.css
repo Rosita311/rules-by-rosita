@@ -1,0 +1,106 @@
+.hidden {
+  display: none !important;
+}
+
+#search-overlay {
+  position: fixed;
+  top: 10%;
+  right: 0;
+  /* bottom: calc(4rem + 2rem); */
+  width: 60rem;
+  transform: translateX(-50%);
+  max-width: 90%;
+  max-height: calc(100dvh - 8rem);
+  overflow-y: auto;
+  height: auto;
+  background: var(--color-background);
+  color: var(--color-text);
+  border: 2px solid var(--color-accent);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  z-index: 1000;
+  display: none;
+}
+
+#search-overlay.show {
+  display: block;
+}
+
+#accessibility-settings h2 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.accessibility-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+#accessibility-settings button {
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s;
+
+  &:hover {
+    background-color: var(--color-menu-button-hover);
+    color: var(--color-text);
+  }
+
+  &:focus-visible {
+    background-color: var(--color-text);
+    color: var(--color-background);
+    outline: 2px solid var(--color-text);
+  }
+}
+
+#accessibility-settings button:focus-visible svg {
+  stroke: var(--color-background);
+}
+
+#close-accessibility {
+  padding: 4px !important;
+  border-radius: 50% !important;
+  justify-content: center !important;
+  align-items: center !important;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+#accessibility-settings button[aria-pressed="true"] {
+  background-color: var(--color-contrast);
+  color: var(--color-bg-light);
+  font-weight: 700;
+}
+
+#accessibility-settings button[aria-pressed="true"] svg {
+  stroke: var(--color-bg-light);
+}
+
+.accessibility-group {
+  margin-top: 1rem;
+}
+
+.accessibility-group h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.25rem;
+  border-bottom: 1px solid var(--color-accent-2);
+  padding-bottom: 0.25rem;
+}
+
+.accessibility-group ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.accessibility-group li + li {
+  margin-top: 0.5rem;
+}

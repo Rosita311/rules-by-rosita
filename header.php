@@ -75,7 +75,8 @@
         <div class="menu-buttons">
           <button
             aria-label="Zoeken"
-            class="menu-button">
+            class="menu-button"
+            id="search-toggle">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -144,3 +145,4 @@
       onclick="closeSidebar()"
       aria-hidden="true"></div>
   </header>
+  <?php get_template_part('template-parts/search-overlay'); ?>

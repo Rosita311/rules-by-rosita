@@ -11,6 +11,11 @@ const menuButtons = document.querySelector(".menu-buttons");
 const footer = document.querySelector(".footer-container");
 const navLinks = document.querySelectorAll("#header-nav a");
 
+// Zoekfunctie
+const searchOverlay = document.getElementById('search-overlay');
+const searchToggle = document.getElementById('search-toggle');
+const searchClose = document.getElementById('search-close');
+
 // Toegankelijkheidselementen selecteren
 const toggleButton = document.getElementById("accessibility-toggle");
 const panel = document.getElementById("accessibility-settings");
@@ -228,6 +233,50 @@ document.body.addEventListener("keydown", () => {
 document.body.addEventListener("mousedown", () => {
   document.body.classList.remove("user-is-tabbing");
 });
+
+// Search button
+/*
+document.getElementById('search-button').addEventListener('click', function() {
+  window.location.href = '/?s=';
+});
+*/
+
+function openSearch() {
+  searchOverlay.classList.remove('hidden');
+  searchOverlay.removeAttribute('hidden');
+  searchOverlay.setAttribute('aria-hidden', 'false');
+  
+  overlay.classList.remove('hidden');
+  overlay.setAttribute('aria-hidden', 'false');
+  
+  searchToggle.setAttribute('aria-expanded', 'true');
+  document.getElementById('search-input').focus();
+}
+
+function closeSearch() {
+  searchOverlay.classList.add('hidden');
+  searchOverlay.setAttribute('hidden', '');
+  searchOverlay.setAttribute('aria-hidden', 'true');
+  
+  overlay.classList.add('hidden');
+  overlay.setAttribute('aria-hidden', 'true');
+  
+  searchToggle.setAttribute('aria-expanded', 'false');
+  searchToggle.focus();
+}
+
+searchToggle.addEventListener('click', openSearch);
+searchClose.addEventListener('click', closeSearch);
+overlay.addEventListener('click', closeSearch);
+
+// Esc toets sluit ook de overlay
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && !searchOverlay.classList.contains('hidden')) {
+    closeSearch();
+  }
+});
+
+
 
 // Back to top button
 
