@@ -241,43 +241,6 @@ document.getElementById('search-button').addEventListener('click', function() {
 });
 */
 
-function openSearch() {
-  searchOverlay.classList.remove('hidden');
-  searchOverlay.removeAttribute('hidden');
-  searchOverlay.setAttribute('aria-hidden', 'false');
-  
-  overlay.classList.remove('hidden');
-  overlay.setAttribute('aria-hidden', 'false');
-  
-  searchToggle.setAttribute('aria-expanded', 'true');
-  document.getElementById('search-input').focus();
-}
-
-function closeSearch() {
-  searchOverlay.classList.add('hidden');
-  searchOverlay.setAttribute('hidden', '');
-  searchOverlay.setAttribute('aria-hidden', 'true');
-  
-  overlay.classList.add('hidden');
-  overlay.setAttribute('aria-hidden', 'true');
-  
-  searchToggle.setAttribute('aria-expanded', 'false');
-  searchToggle.focus();
-}
-
-searchToggle.addEventListener('click', openSearch);
-searchClose.addEventListener('click', closeSearch);
-overlay.addEventListener('click', closeSearch);
-
-// Esc toets sluit ook de overlay
-document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape' && !searchOverlay.classList.contains('hidden')) {
-    closeSearch();
-  }
-});
-
-
-
 // Back to top button
 
 window.addEventListener("scroll", () => {
@@ -296,6 +259,63 @@ backToTop.addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
   document.getElementById("top").focus();
 });
+
+// Zoekfunctie
+  // if (!searchToggle || !searchOverlay || !searchClose) return;
+
+  function toggleSearch() {
+    const isOpen = searchOverlay.classList.contains("show");
+
+    if (isOpen) {
+      closeSearch();
+    } else {
+      openSearch();
+    }
+  }
+
+  function openSearch() {
+    searchOverlay.classList.add("show");
+    searchOverlay.removeAttribute("hidden");
+    searchOverlay.setAttribute("aria-hidden", "false");
+    searchToggle.setAttribute("aria-expanded", "true");
+
+    const firstInput = searchOverlay.querySelector("input, button, [tabindex]:not([tabindex='-1'])");
+    firstInput?.focus();
+  }
+
+  function closeSearch() {
+    searchOverlay.classList.remove("show");
+    searchOverlay.setAttribute("hidden", "");
+    searchOverlay.setAttribute("aria-hidden", "true");
+    searchToggle.setAttribute("aria-expanded", "false");
+  }
+
+  // Klik op toggle knop
+  searchToggle.addEventListener("click", () => {
+    toggleSearch();
+  });
+
+  // Enter of spatie op toggle
+  searchToggle.addEventListener("keydown", (e) => {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      toggleSearch();
+    }
+  });
+
+  // Klik op sluitknop
+  searchClose.addEventListener("click", () => {
+    closeSearch();
+  });
+
+  // Escape sluit overlay
+  searchOverlay.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+      closeSearch();
+    }
+  });
+
+
 
 // Accessibility settings
 

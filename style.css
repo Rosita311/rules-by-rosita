@@ -26,6 +26,7 @@ Version: 1.0
 /* Pages */
 @import "css/pages/page.css";
 @import "css/pages/single.css";
+@import "css/pages/search.css";
 
 /* Extra */
 @import "css/experiment.css";

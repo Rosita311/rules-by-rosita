@@ -1,11 +1,10 @@
 <!-- Zoek Overlay -->
 <section
     id="search-overlay"
-    class="search-overlay hidden"
+    class="search-overlay"
     role="dialog"
     aria-modal="true"
     aria-labelledby="search-label"
-    aria-hidden="true"
     hidden>
 <div class="search-overlay-inner" tabindex="-1">
         
@@ -32,7 +31,7 @@
             </svg>
         </button>
             <form role="search" method="get" action="<?php echo esc_url(home_url('/')); ?>" class="search-form">
-                <label id="search-label" for="search-input" class="screen-reader-text">Zoeken</label>
+                <label id="search-label" for="search-input">Zoeken</label>
                 <input
                     id="search-input"
                     class="search-input"
@@ -40,10 +39,7 @@
                     name="s"
                     placeholder="Waar ben je naar op zoek?"
                     required
-                    aria-describedby="search-instructions" />
-                <div id="search-instructions" class="screen-reader-text">
-                    Typ je zoekterm en druk op Enter om te zoeken.
-                </div>
+                     />
                 <button type="submit" class="btn btn-secondary">Zoeken</button>
             </form>
         </div>

@@ -74,8 +74,11 @@
         </nav>
         <div class="menu-buttons">
           <button
-            aria-label="Zoeken"
-            class="menu-button"
+            aria-label="Open zoekfunctie"
+            class="menu-button search-button"
+            aria-haspopup="dialog"
+            aria-expanded="false"
+            aria-controls="search-overlay"
             id="search-toggle">
             <svg
               xmlns="http://www.w3.org/2000/svg"
