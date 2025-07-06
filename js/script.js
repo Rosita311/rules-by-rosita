@@ -598,7 +598,7 @@ function initSubmenus() {
 
     parentItem.addEventListener("mouseenter", () => {
       if (
-        window.innerWidth > 992 &&
+        !media.matches &&
         parentItem.dataset.openedByClick !== "true"
       ) {
         clearTimeout(hoverCloseTimeout);
@@ -608,7 +608,7 @@ function initSubmenus() {
 
     parentItem.addEventListener("mouseleave", () => {
       if (
-        window.innerWidth > 992 &&
+        !media.machtes &&
         parentItem.dataset.openedByClick !== "true"
       ) {
         clearTimeout(hoverOpenTimeout);
@@ -624,7 +624,7 @@ function initSubmenus() {
     });
 
     parentItem.addEventListener("focusout", (e) => {
-      if (!parentItem.contains(e.relatedTarget)) {
+      if (!parentItem.contains(e.relatedTarget) && !media.matches) {
         hoverCloseTimeout = setTimeout(closeSubmenu, 300);
       }
     });
