@@ -1,8 +1,9 @@
 #search-overlay {
   position: fixed;
-  right: 2rem;
-  top: 10%;
-  width: 80rem;
+  left: 50%;
+  top: 7.375rem;
+  transform: translateX(-50%);
+  width: calc(80rem - 2rem);
   max-width: 90%;
   max-height: calc(100dvh - 8rem);
   overflow-y: auto;
