@@ -5,8 +5,8 @@ get_template_part('template-parts/accessibility-panel'); ?>
   <div class="container-main">
     404.php
     <section class="entry-content">
-      <div class="introduction-content-wrapper">
-        <div class="introduction-card-content entry-content">
+      <div class="not-found-content-wrapper">
+        <div class="not-found-content">
           <h2>Deze pagina bestaat niet</h2>
           <p>
             Het lijkt erop dat de pagina die je zoekt niet (meer) bestaat. Misschien heb je een typefout gemaakt, of is de pagina verhuisd.
@@ -33,11 +33,11 @@ get_template_part('template-parts/accessibility-panel'); ?>
             </div>
           </form>
         </div>
-        <div class="introduction-image-wrapper">
-          <div class="introduction-image dotted-background-blue">
+        <div class="not-found-image-wrapper">
+          <div class="not-found-image dotted-background-blue">
             <img
-              src="<?php echo get_template_directory_uri(); ?>/assets/error-image.jpg"
-              alt="Illustratie van een verdwaalde weg of foutmelding"
+              src="<?php echo get_template_directory_uri(); ?>/assets/404-image.png"
+              alt="Illustratie van een 404 foutmelding met een verkeerspilon en een waarschuwingsbord"
               loading="lazy"
               width="400"
               height="400" />

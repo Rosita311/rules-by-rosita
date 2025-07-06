@@ -1,0 +1,113 @@
+/* Introduction */
+
+.introduction, .not-found-content-wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 5rem;
+  margin: 0 auto;
+}
+
+.introduction-image-wrapper, .not-found-image-wrapper {
+  display: flex;
+  justify-content: end;
+  position: relative;
+  width: 60%;
+  max-width: 100%;
+  padding-left: 2rem;
+  margin: 0;
+}
+
+.introduction-image img, .not-found-image img {
+  aspect-ratio: 1 / 1;
+  width: 100%;
+  height: auto;
+  min-height: 15rem;
+  max-height: 35rem;
+  object-fit: cover;
+  margin: -2rem 2rem 2rem -2rem;
+  position: relative;
+}
+
+.introduction-content-wrapper, .not-found-content {
+  width: 40%;
+  max-width: 100%;
+}
+
+.introduction-card-content, .not-found-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 100%;
+  width: 100%;
+}
+
+.introduction-iconlist {
+  list-style-type: none;
+  padding: 0;
+}
+
+.introduction-iconlist li {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.introduction-iconlist .icon {
+  margin-right: 1rem;
+  stroke: var(--color-text);
+}
+
+.introduction-label-text {
+  font-weight: bold;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 1024px) {
+  .introduction-image-wrapper, .not-found-image-wrapper {
+    justify-content: center;
+    padding-left: 1.5rem;
+    width: 50%;
+  }
+
+  .introduction-image img, .not-found-image img {
+    margin: -1.5rem 1.5rem 1.5rem -1.5rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .introduction, .not-found-content-wrapper {
+    gap: 4rem;
+    flex-direction: column;
+  }
+
+  .introduction-content-wrapper, .not-found-content {
+    width: 100%;
+  }
+
+  .introduction-card-content, .not-found-content {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .introduction-image-wrapper, .not-found-image-wrapper {
+    padding-left: 1rem;
+    width: 100%;
+  }
+
+  .introduction-image, .not-found-image {
+    width: fit-content;
+    padding: 0;
+    margin: 0;
+  }
+
+  .introduction-image img, .not-found-image img {
+    margin: -1rem 1rem 1rem -1rem;
+    height: auto;
+    width: 100%;
+  }
+} 

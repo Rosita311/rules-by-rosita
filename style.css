@@ -24,6 +24,7 @@ Version: 1.0
 @import "css/components/sidebar-single.css";
 
 /* Pages */
+@import "css/pages/page.css";
 @import "css/pages/single.css";
 
 /* Extra */
