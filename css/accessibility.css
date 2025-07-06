@@ -340,7 +340,8 @@ body.high-contrast .dotted-background-blue {
 .high-contrast .footer-menu nav a:focus-visible,
 .high-contrast .footer-btn:focus-visible,
 .high-contrast .has-submenu > button.submenu-toggle:focus-visible,
-.high-contrast #accessibility-settings button:focus-visible {
+.high-contrast #accessibility-settings button:focus-visible,
+.high-contrast .search-input:focus {
   outline: 3px solid var(--hc-focus);
   outline-offset: 2px;
   transition: none; /* Geen animatie voor directe visuele feedback */

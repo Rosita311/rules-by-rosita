@@ -346,6 +346,7 @@ button {
 .site-form textarea,
 .comment-form input,
 .comment-form textarea,
+.search-input,
 .jetpack-form input[type="email"] {
   display: block;
   width: 100%;

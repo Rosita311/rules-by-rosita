@@ -31,16 +31,22 @@
             </svg>
         </button>
             <form role="search" method="get" action="<?php echo esc_url(home_url('/')); ?>" class="search-form">
-                <label id="search-label" for="search-input">Zoeken</label>
-                <input
-                    id="search-input"
-                    class="search-input"
-                    type="search"
-                    name="s"
-                    placeholder="Waar ben je naar op zoek?"
-                    required
-                     />
-                <button type="submit" class="btn btn-secondary">Zoeken</button>
-            </form>
+  <label id="search-label" for="search-input" class="screen-reader-text">Zoeken</label>
+  
+  <input
+    id="search-input"
+    class="search-input"
+    type="search"
+    name="s"
+    placeholder="Waar ben je naar op zoek?"
+    required
+    aria-describedby="search-instructions" />
+  
+  <div id="search-instructions" class="screen-reader-text">
+    Typ je zoekterm en druk op Enter om te zoeken.
+  </div>
+
+  <button type="submit" class="btn btn-secondary">Zoeken</button>
+</form>
         </div>
 </section>
