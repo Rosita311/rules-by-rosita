@@ -602,7 +602,7 @@ function initSubmenus() {
         parentItem.dataset.openedByClick !== "true"
       ) {
         clearTimeout(hoverCloseTimeout);
-        hoverOpenTimeout = setTimeout(openSubmenu, 150);
+        hoverOpenTimeout = setTimeout(openSubmenu, 500);
       }
     });
 
