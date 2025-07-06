@@ -13,7 +13,7 @@ get_template_part('template-parts/accessibility-panel'); ?>
                 if ($hero_query->have_posts()) :
                     // Loop through posts
                     while ($hero_query->have_posts()) : $hero_query->the_post();
-                         $post_id = get_the_ID();
+                        $post_id = get_the_ID();
                         get_template_part('template-parts/hero-card');
                     endwhile;
                 else : ?>
@@ -112,7 +112,7 @@ get_template_part('template-parts/accessibility-panel'); ?>
                                 <path d="M16 3l-4 4l-4 -4" />
                             </svg>
                             <span><span class="introduction-label-text">Ik kijk:</span>
-                                <a href="<?php the_field('kijken_link',$homepage_id); ?>"><?php the_field('kijken', $homepage_id); ?></a></span>
+                                <a href="<?php the_field('kijken_link', $homepage_id); ?>"><?php the_field('kijken', $homepage_id); ?></a></span>
                         </li>
                     </ul>
                     <a
@@ -153,7 +153,6 @@ get_template_part('template-parts/accessibility-panel'); ?>
                         next_posts_link('Volgende &raquo;');
                         ?>
                     </nav>
-
                 <?php else : ?>
                     <p>Geen berichten gevonden.</p>
                 <?php endif; ?>

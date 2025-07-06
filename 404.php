@@ -7,31 +7,40 @@ get_template_part('template-parts/accessibility-panel'); ?>
     <section class="entry-content">
       <div class="not-found-content-wrapper">
         <div class="not-found-content">
-          <h2>Deze pagina bestaat niet</h2>
+          <h2>Oeps! Deze pagina bestaat niet</h2>
           <p>
-            Het lijkt erop dat de pagina die je zoekt niet (meer) bestaat. Misschien heb je een typefout gemaakt, of is de pagina verhuisd.
+            De pagina die je probeert te openen is verhuisd, verwijderd of heeft nooit bestaan.
           </p>
-          <p>Hier zijn een paar dingen die je kunt doen:</p>
-          <ul>
-            <li><a href="<?php echo esc_url(home_url('/')); ?>">Terug naar de homepage</a></li>
-            <li><a href="<?php echo esc_url(home_url('/contact')); ?>">Neem contact op met ons</a></li>
-            <li>Gebruik de zoekfunctie hieronder:</li>
-          </ul>
-          <form action="<?php echo esc_url(home_url('/')); ?>" method="get" class="search-form site-form">
-            <label for="search">Zoeken</label>
-            <div class="site-form">
-              <input
-                type="search"
-                id="search"
-                name="s"
-                placeholder="Waar ben je naar op zoek?"
-                required
-                aria-label="Zoekterm" />
-              <button type="submit" class="btn btn-secondary">
-                Zoeken
-              </button>
+          <div class="not-found-actions">
+            <div class="action-card">
+              <h3>Terug naar de homepage</h3>
+              <p><a href="<?php echo esc_url(home_url('/')); ?>">Ga terug naar de homepage</a> en begin opnieuw.</p>
             </div>
-          </form>
+
+            <div class="action-card">
+              <h3>Vragen?</h3>
+              <p>Neem gerust <a href="<?php echo esc_url(home_url('/contact')); ?>">contact met mij op</a> als je iets mist of hulp nodig hebt.</p>
+            </div>
+
+            <div class="action-card">
+              <h3>Iets anders zoeken</h3>
+              <form action="<?php echo esc_url(home_url('/')); ?>" method="get" class="search-form site-form">
+                <label for="search">Zoek op mijn blog:</label>
+                <div class="site-form">
+                  <input
+                    type="search"
+                    id="search"
+                    name="s"
+                    placeholder="Waar ben je naar op zoek?"
+                    required
+                    aria-label="Zoekterm" />
+                  <button type="submit" class="btn btn-secondary">
+                    Zoeken
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
         </div>
         <div class="not-found-image-wrapper">
           <div class="not-found-image dotted-background-blue">
@@ -59,6 +68,15 @@ get_template_part('template-parts/accessibility-panel'); ?>
             $post_id = get_the_ID();
             get_template_part('template-parts/card');
           endwhile;
+        ?>
+          <nav class="pagination">
+            <?php
+            // Simple previous/next pagination
+            previous_posts_link('&laquo; Vorige');
+            next_posts_link('Volgende &raquo;');
+            ?>
+          </nav>
+        <?php
         else : ?>
           <p>Geen berichten gevonden.</p>
         <?php endif; ?>
