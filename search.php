@@ -1,0 +1,22 @@
+<?php get_header();
+get_template_part('template-parts/accessibility-panel'); ?>
+<main id="main-content">
+    <?php get_template_part('template-parts/page-hero'); ?>
+    <div class="container-main">
+        <section class="blogpost-section">
+            <p>search.php</p>
+            <?php if (have_posts()) : ?>
+                <ul class="search-results">
+                    <?php while (have_posts()) : the_post();
+                        $post_id = get_the_ID();
+                        get_template_part('template-parts/card');
+                    endwhile; ?>
+                </ul>
+            <?php else : ?>
+                <p>Geen resultaten gevonden.</p>
+            <?php endif; ?>
+        </section>
+        <?php get_template_part('template-parts/back-to-top'); ?>
+    </div>
+</main>
+<?php get_footer(); ?>
