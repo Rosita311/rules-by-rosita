@@ -625,8 +625,7 @@ function initSubmenus() {
 
     parentItem.addEventListener("focusout", (e) => {
       if (!parentItem.contains(e.relatedTarget)) {
-        // Sluit submenu direct (of met timeout als je wilt)
-        closeSubmenu();
+        hoverCloseTimeout = setTimeout(closeSubmenu, 300);
       }
     });
   });
