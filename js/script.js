@@ -14,7 +14,7 @@ const navLinks = document.querySelectorAll("#header-nav a");
 // Zoekfunctie
 const searchOverlay = document.getElementById('search-overlay');
 const searchToggle = document.getElementById('search-toggle');
-const searchClose = document.getElementById('search-close');
+const searchClose = document.getElementById('close-search');
 
 // Toegankelijkheidselementen selecteren
 const toggleButton = document.getElementById("accessibility-toggle");
