@@ -282,6 +282,8 @@ backToTop.addEventListener("click", () => {
 
     const firstInput = searchOverlay.querySelector("input, button, [tabindex]:not([tabindex='-1'])");
     firstInput?.focus();
+
+     activateTrap(searchOverlay);
   }
 
   function closeSearch() {
@@ -292,6 +294,7 @@ backToTop.addEventListener("click", () => {
     searchOverlay.setAttribute("aria-hidden", "true");
     searchToggle.setAttribute("aria-expanded", "false");
     searchToggle.focus(); 
+    deactivateTrap();
   }
 
   // Klik op toggle knop
