@@ -185,7 +185,7 @@
   stroke: var(--color-background);
 }
 
-#close-accessibility {
+#close-accessibility, #close-search {
   padding: 4px !important;
   border-radius: 50% !important;
   justify-content: center !important;

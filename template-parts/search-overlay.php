@@ -9,7 +9,7 @@
 <div class="search-overlay-inner" tabindex="-1">
         
             <button
-            id="search-close"
+            id="close-search"
             class="search-close-btn"
             aria-label="Sluit zoekfunctie">
             <svg
@@ -30,6 +30,7 @@
                 <path d="M18 6L6 18M6 6l12 12" />
             </svg>
         </button>
+        </div>
             <form role="search" method="get" action="<?php echo esc_url(home_url('/')); ?>" class="search-form">
   <label id="search-label" for="search-input" class="screen-reader-text">Zoeken</label>
   
@@ -48,5 +49,4 @@
 
   <button type="submit" class="btn btn-secondary">Zoeken</button>
 </form>
-        </div>
 </section>
