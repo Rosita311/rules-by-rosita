@@ -276,6 +276,7 @@ backToTop.addEventListener("click", () => {
   function openSearch() {
     searchOverlay.classList.add("show");
     searchOverlay.removeAttribute("hidden");
+    searchOverlay.removeAttribute("inert");
     searchOverlay.setAttribute("aria-hidden", "false");
     searchToggle.setAttribute("aria-expanded", "true");
 
@@ -284,10 +285,13 @@ backToTop.addEventListener("click", () => {
   }
 
   function closeSearch() {
+    document.activeElement.blur();
     searchOverlay.classList.remove("show");
     searchOverlay.setAttribute("hidden", "");
+    searchOverlay.setAttribute("inert", "");
     searchOverlay.setAttribute("aria-hidden", "true");
     searchToggle.setAttribute("aria-expanded", "false");
+    searchToggle.focus(); 
   }
 
   // Klik op toggle knop
