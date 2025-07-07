@@ -305,11 +305,11 @@ button {
 
 /* Forms */
 
-.site-form, 
-.search-form {
+.site-form {
   display: flex;
   gap: 1rem;
   width: 100%;
+  flex-direction: column;
 }
 
 .comment-form {
@@ -425,6 +425,9 @@ button {
   max-width: 500px;
 }
 
+.search-form {
+  margin-top: 1rem;
+}
 
 .footer-btn, .jetpack-form input[type="submit"] {
   border: 2px solid var(--color-contrast);

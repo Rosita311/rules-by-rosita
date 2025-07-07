@@ -110,11 +110,9 @@ if (post_password_required()) {
 </div>' . $error_html,
       'comment_notes_before' => '<span class="required-field-message">Vereiste velden zijn gemarkeerd met <span class="required">*</span></span>',
       'comment_notes_after' => $checkbox_html,
+      'class_form' => 'site-form',
       'label_submit' => 'Reactie plaatsen',
       'class_submit' => 'btn btn-secondary',
     ));
-
-
-
     ?>
   </div>
