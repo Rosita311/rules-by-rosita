@@ -24,21 +24,23 @@ get_template_part('template-parts/accessibility-panel'); ?>
 
             <div class="action-card">
               <h3>Iets anders zoeken</h3>
-              <form action="<?php echo esc_url(home_url('/')); ?>" method="get" class="search-form site-form">
-                <label for="search">Zoek op mijn blog:</label>
-                <div class="site-form">
-                  <input
-                    type="search"
-                    id="search"
-                    name="s"
-                    placeholder="Waar ben je naar op zoek?"
-                    required
-                    aria-label="Zoekterm" />
-                  <button type="submit" class="btn btn-secondary">
-                    Zoeken
-                  </button>
-                </div>
-              </form>
+              <form role="search" method="get" action="<?php echo esc_url(home_url('/')); ?>" class="search-form">
+    <div class="form-group"></div>
+    <label id="search-label" for="search-input" class="search-label">Zoeken</label>
+    <div class="form-group-row">
+      <input
+        id="search-input"
+        class="search-input"
+        type="search"
+        name="s"
+        placeholder="Waar ben je naar op zoek?"
+        required
+        aria-describedby="search-instructions" />
+
+      <button type="submit" class="btn btn-secondary">Zoeken</button>
+    </div>
+    </div>
+  </form>
             </div>
           </div>
         </div>

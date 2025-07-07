@@ -19,6 +19,23 @@
           <div class="site-form jetpack-form">
             <?php echo do_shortcode('[jetpack_subscription_form]'); ?>
           </div>
+            <form action="#"
+            method="post"
+            class="site-form">
+    <label id="search-label" for="search-input" class="search-label">Zoeken</label>
+    <div class="form-group-row">
+      <input
+        id="search-input"
+        class="search-input"
+        type="search"
+        name="s"
+        placeholder="Waar ben je naar op zoek?"
+        required
+        aria-describedby="search-instructions" />
+
+      <button type="submit" class="btn btn-secondary">Zoeken</button>
+    </div>
+  </form>
           <form
             action="#"
             method="post"

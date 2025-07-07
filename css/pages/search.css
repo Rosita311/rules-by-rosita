@@ -21,14 +21,5 @@
 }
 
 .search-form {
-  display: flex;
-  flex-direction: row;
-  gap: 1rem;
-  width: 100%;
-  margin-top: 3rem;
-}
-
-.search-input:focus {
-  outline: 2px solid var(--color-text);
-  border-radius: 0.25rem;
+  margin-top: 1rem;
 }

@@ -1,52 +1,52 @@
 <!-- Zoek Overlay -->
 <section
-    id="search-overlay"
-    class="search-overlay"
-    role="dialog"
-    aria-modal="true"
-    aria-labelledby="search-label"
-    hidden>
-<div class="search-overlay-inner" tabindex="-1">
-        
-            <button
-            id="close-search"
-            class="search-close-btn"
-            aria-label="Sluit zoekfunctie">
-            <svg
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="icon icon-tabler icon-tabler-x">
-                <path
-                    stroke="none"
-                    d="M0 0h24v24H0z"
-                    fill="none" />
-                <path d="M18 6L6 18M6 6l12 12" />
-            </svg>
-        </button>
-        </div>
-            <form role="search" method="get" action="<?php echo esc_url(home_url('/')); ?>" class="search-form">
-  <label id="search-label" for="search-input" class="screen-reader-text">Zoeken</label>
-  
-  <input
-    id="search-input"
-    class="search-input"
-    type="search"
-    name="s"
-    placeholder="Waar ben je naar op zoek?"
-    required
-    aria-describedby="search-instructions" />
-  
-  <div id="search-instructions" class="screen-reader-text">
-    Typ je zoekterm en druk op Enter om te zoeken.
-  </div>
+  id="search-overlay"
+  class="search-overlay"
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby="search-label"
+  hidden>
+  <div class="search-overlay-inner" tabindex="-1">
 
-  <button type="submit" class="btn btn-secondary">Zoeken</button>
-</form>
+    <button
+      id="close-search"
+      class="search-close-btn"
+      aria-label="Sluit zoekfunctie">
+      <svg
+        aria-hidden="true"
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="icon icon-tabler icon-tabler-x">
+        <path
+          stroke="none"
+          d="M0 0h24v24H0z"
+          fill="none" />
+        <path d="M18 6L6 18M6 6l12 12" />
+      </svg>
+    </button>
+  </div>
+  <form role="search" method="get" action="<?php echo esc_url(home_url('/')); ?>" class="search-form site-form">
+    <div class="form-group">
+      <label id="search-label" for="search-input" class="search-label">Zoeken</label>
+      <div class="form-group-row">
+        <input
+          id="search-input"
+          class="search-input"
+          type="search"
+          name="s"
+          placeholder="Waar ben je naar op zoek?"
+          required
+          aria-describedby="search-instructions" />
+
+        <button type="submit" class="btn btn-secondary">Zoeken</button>
+      </div>
+    </div>
+  </form>
+
 </section>
