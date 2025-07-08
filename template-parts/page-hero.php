@@ -12,7 +12,12 @@
           } elseif (is_archive()) {
             the_archive_title();
           } elseif (is_search()) {
-            echo 'Zoekresultaten voor: ' . get_search_query();
+            $search_query = get_search_query();
+             if (trim($search_query) === '') {
+              echo 'Zoekresultaten';
+             } else {
+              echo 'Zoekresultaten voor: ' . get_search_query();
+             }
           } elseif (is_404()) {
             echo 'Pagina niet gevonden';
           } else {

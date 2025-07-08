@@ -234,12 +234,6 @@ document.body.addEventListener("mousedown", () => {
   document.body.classList.remove("user-is-tabbing");
 });
 
-// Search button
-/*
-document.getElementById('search-button').addEventListener('click', function() {
-  window.location.href = '/?s=';
-});
-*/
 
 // Back to top button
 
@@ -261,8 +255,7 @@ backToTop.addEventListener("click", () => {
 });
 
 // Zoekfunctie
-  // if (!searchToggle || !searchOverlay || !searchClose) return;
-
+  if (searchOverlay && searchToggle && searchClose) {
   function toggleSearch() {
     const isOpen = searchOverlay.classList.contains("show");
 
@@ -283,7 +276,7 @@ backToTop.addEventListener("click", () => {
     const firstInput = searchOverlay.querySelector("input, button, [tabindex]:not([tabindex='-1'])");
     firstInput?.focus();
 
-     activateTrap(searchOverlay);
+    activateTrap(searchOverlay); // focus trap
   }
 
   function closeSearch() {
@@ -293,16 +286,17 @@ backToTop.addEventListener("click", () => {
     searchOverlay.setAttribute("inert", "");
     searchOverlay.setAttribute("aria-hidden", "true");
     searchToggle.setAttribute("aria-expanded", "false");
-    searchToggle.focus(); 
-    deactivateTrap();
+    searchToggle.focus();
+    deactivateTrap(); // release focus
   }
 
-  // Klik op toggle knop
-  searchToggle.addEventListener("click", () => {
+  // Klik op zoekknop
+  searchToggle.addEventListener("click", (e) => {
+    e.preventDefault(); // Voorkom standaard <a> gedrag
     toggleSearch();
   });
 
-  // Enter of spatie op toggle
+  // Enter of spatie op zoekknop
   searchToggle.addEventListener("keydown", (e) => {
     if (e.key === "Enter" || e.key === " ") {
       e.preventDefault();
@@ -310,10 +304,8 @@ backToTop.addEventListener("click", () => {
     }
   });
 
-  // Klik op sluitknop
-  searchClose.addEventListener("click", () => {
-    closeSearch();
-  });
+  // Sluitknop
+  searchClose.addEventListener("click", closeSearch);
 
   // Escape sluit overlay
   searchOverlay.addEventListener("keydown", (e) => {
@@ -321,8 +313,7 @@ backToTop.addEventListener("click", () => {
       closeSearch();
     }
   });
-
-
+}
 
 // Accessibility settings
 

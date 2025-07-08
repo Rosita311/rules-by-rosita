@@ -36,6 +36,19 @@ html.no-js {
   }
 }
 
+.no-js body.admin-bar #site-header {
+  margin-top: 32px !important;
+}
+
+
+
+/* Search fallback */
+.no-js .search-form-fallback {
+  display: block;
+}
+
+
+
 /* Mobile menu fallback */
 
 /* Algemene fallback stijlen voor als geen JS beschikbaar is */
@@ -83,6 +96,7 @@ html.no-js {
 }
 
 @media screen and (max-width: 1024px) {
+
   html.no-js #header-nav {
     position: static; /* geen fixed/slide‑in positionering */
     display: block !important;
@@ -174,5 +188,11 @@ html.no-js {
     gap: 0.5rem;
     padding: 0.25rem 0;
     margin: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .no-js body.admin-bar #site-header {
+    margin-top: 46px; /* op mobiel is de adminbar hoger */
   }
 }

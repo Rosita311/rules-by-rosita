@@ -141,6 +141,7 @@ body:not(.user-is-tabbing) .hero-card-content:focus-within {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  width: 100%;
   padding: 1rem;
   margin-top: -3rem;
   gap: 1rem;
@@ -151,6 +152,7 @@ body:not(.user-is-tabbing) .hero-card-content:focus-within {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  width: 100%;
   padding: 1rem;
   gap: 1rem;
   background-color: var(--color-background);
