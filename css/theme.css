@@ -321,17 +321,15 @@ button {
 
 /* Single pagination */
 
-.pagination {
-  display: flex;
-  justify-content: center;
-}
-
+.pagination,
 .single-pagination {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   gap: 2rem;
   margin-bottom: 2rem;
+  background-color: var(--color-background);
 }
+
 
 .single-pagination .post-prev,
 .single-pagination .post-next {
@@ -344,15 +342,14 @@ button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0.5rem 0.75rem;
   border-radius: 0.25rem;
   gap: 0.5rem;
   text-decoration: none;
   font-weight: 500;
+  padding: 0.5rem 0.75rem;
   border-radius: 0.5rem;
   color: var(--color-text);
   cursor: pointer;
-  transition: border-color 0.2s, background 0.2s;
 
   &:hover {
     background-color: var(--color-menu-button-hover);
