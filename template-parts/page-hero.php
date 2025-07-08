@@ -14,7 +14,7 @@
           } elseif (is_search()) {
             $search_query = get_search_query();
              if (trim($search_query) === '') {
-              echo 'Zoekresultaten';
+              echo 'Zoeken';
              } else {
               echo 'Zoekresultaten voor: ' . get_search_query();
              }
