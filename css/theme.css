@@ -290,11 +290,11 @@ button {
 }
 
 .hover-shadow-pink:hover {
-  box-shadow: 8px 8px 0px 0px var(--color-accent);
+  box-shadow: 0.5rem 0.5rem 0 0 var(--color-accent);
 }
 
 .hover-shadow-blue:hover {
-  box-shadow: 8px 8px 0px 0px var(--color-contrast);
+  box-shadow: 0.5rem 0.5rem 0 0 var(--color-contrast);
 }
 
 .dotted-background-pink {
