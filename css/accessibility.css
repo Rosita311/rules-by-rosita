@@ -325,6 +325,17 @@ body.high-contrast .dotted-background-blue {
   stroke: var(--color-background);
 }
 
+.high-contrast .btn-secondary:hover,
+.high-contrast .btn-secondary:focus,
+.high-contrast .card-page-content:hover .btn-secondary {
+  background-color: var(--color-accent); 
+  color: var(--color-background); 
+}
+
+.high-contrast .card:hover {
+  border: 1px solid var(--color-contrast)
+}
+
 /* Algemene focusstijl in high contrast modus */
 .high-contrast :focus-visible,
 .high-contrast a:focus-visible,

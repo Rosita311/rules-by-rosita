@@ -115,7 +115,7 @@ body:not(.user-is-tabbing) .hero-card-content:focus-within {
   transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
-.card-page-content:hover .btn-secondary{
+.card-page-content:hover .btn-secondary {
   background-color: var(--color-footer);
   color: var(--color-bg-dark);
   transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
