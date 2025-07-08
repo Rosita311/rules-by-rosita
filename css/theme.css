@@ -289,8 +289,12 @@ button {
   justify-content: center;
 }
 
-.hover-shadow:hover {
+.hover-shadow-pink:hover {
   box-shadow: 8px 8px 0px 0px var(--color-accent);
+}
+
+.hover-shadow-blue:hover {
+  box-shadow: 8px 8px 0px 0px var(--color-contrast);
 }
 
 .dotted-background-pink {

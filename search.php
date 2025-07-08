@@ -5,16 +5,20 @@ get_template_part('template-parts/accessibility-panel'); ?>
     <div class="container-main">
         <p>search.php</p>
         <noscript>
-        <section class="entry-content" aria-label="Zoekresultaten">
-            <?php get_search_form(); ?>
-        </section>
+            <section class="entry-content" aria-label="Zoekresultaten">
+                <?php get_search_form(); ?>
+            </section>
         </noscript>
         <section class="blogpost-section">
             <?php if (have_posts()) : ?>
                 <ul class="search-results blog-listing-grid">
                     <?php while (have_posts()) : the_post();
                         $post_id = get_the_ID();
-                        get_template_part('template-parts/card');
+                        if (get_post_type() === 'page') {
+                            get_template_part('template-parts/card-page');
+                        } else {
+                            get_template_part('template-parts/card');
+                        }
                     endwhile; ?>
                 </ul>
             <?php else : ?>
