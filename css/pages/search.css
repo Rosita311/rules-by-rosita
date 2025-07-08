@@ -1,5 +1,5 @@
 #search-overlay {
-  position: fixed;
+  position: absolute;
   left: 50%;
   top: 7.375rem;
   transform: translateX(-50%);
@@ -18,5 +18,10 @@
 
 #search-overlay.show {
   display: block;
+}
+
+.search-overlay-inner {
+  display: flex;
+  margin-bottom: 1rem;
 }
 
