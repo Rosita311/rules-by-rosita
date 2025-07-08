@@ -79,7 +79,6 @@
   gap: 0.5rem;
   text-decoration: none;
   font-weight: 500;
-  padding: 0.75rem 1.25rem;
   border-radius: 0.5rem;
   background-color: var(--color-background); 
   color: var(--color-text);
@@ -87,9 +86,7 @@
 }
 
 .single-pagination a:hover {
-  background-color: var(--color-accent);
-  border-color: var(--color-accent);
-  color: #fff;
+  color: var(--color-primary) ;
 }
 
 .single-pagination .chevron {
