@@ -60,6 +60,52 @@
   font-size: 0.875rem;
   margin: 0;
 }
+/* Pagination */
+.single-pagination {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-top: 4rem;
+}
+
+.single-pagination .post-prev,
+.single-pagination .post-next {
+  flex: 1;
+}
+
+.single-pagination a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.5rem;
+  background-color: var(--color-background); 
+  color: var(--color-text);
+  
+}
+
+.single-pagination a:hover {
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
+  color: #fff;
+}
+
+.single-pagination .chevron {
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+.post-prev {
+  text-align: left;
+}
+
+.post-next {
+  text-align: right;
+}
+
+
 
 /* Media queries */
 

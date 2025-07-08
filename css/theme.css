@@ -317,6 +317,45 @@ button {
   background-size: 20px 20px;
 }
 
+/* Pagination */
+.pagination ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0 0;
+}
+
+.pagination li {
+  margin: 0;
+}
+
+.pagination a,
+.pagination span {
+  display: inline-block;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+  background-color: var(--color-bg-light);
+  color: var(--color-text);
+  border: 1px solid var(--color-contrast);
+  text-decoration: none;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.pagination a:hover {
+  background-color: var(--color-accent);
+  color: #fff;
+}
+
+.pagination .current {
+  background-color: var(--color-contrast);
+  color: #fff;
+  font-weight: bold;
+  pointer-events: none;
+}
+
+
 /* Forms */
 
 .site-form {

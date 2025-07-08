@@ -24,13 +24,7 @@ get_template_part('template-parts/accessibility-panel'); ?>
                         }
                     endwhile; ?>
                 </ul>
-                <nav class="pagination">
-                    <?php
-                    // Simple previous/next pagination
-                    previous_posts_link('&laquo; Vorige');
-                    next_posts_link('Volgende &raquo;');
-                    ?>
-                </nav>
+                    <?php get_template_part('template-parts/pagination'); ?>
             <?php else : ?>
                 <h2>Niets gevonden</h2>
                 <p>Er kwam niets overeen met je zoektermen. Probeer het nog eens met andere zoektermen.</p>
