@@ -20,10 +20,14 @@
   display: block;
 }
 
-.search-overlay-inner {
-  display: flex;
+#search-overlay label {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 400;
   margin-bottom: 1rem;
 }
+
+
 
 .search-form-fallback {
   display: none;

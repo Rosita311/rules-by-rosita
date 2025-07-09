@@ -197,8 +197,6 @@ get_template_part('template-parts/accessibility-panel'); ?>
   </div>
 </nav>
 
-
-
         <div class="post-comments-wrapper">
           <?php
           if (comments_open() || get_comments_number()) {
