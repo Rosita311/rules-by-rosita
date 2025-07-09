@@ -25,6 +25,7 @@
       </a>
       <div class="menu-items">
         <button
+          class="btn-icon-small"
           id="open-sidebar-button"
           onclick="openSidebar()"
           aria-label="Open menu"
@@ -54,6 +55,7 @@
           <ul>
             <li>
               <button
+              class="btn-icon-small"
                 id="close-sidebar-button"
                 onclick="closeSidebar()"
                 aria-label="Sluit menu">
@@ -79,7 +81,7 @@
         <div class="menu-buttons">
           <a href="<?php echo esc_url(home_url('/')); ?>?s="
             aria-label="Open zoekfunctie"
-            class="menu-button search-button"
+            class="menu-button search-button btn-icon-small"
             aria-haspopup="dialog"
             aria-expanded="false"
             aria-controls="search-overlay"
@@ -105,7 +107,7 @@
           </a>
           <button
             id="theme-switch"
-            class="menu-button">
+            class="menu-button btn-icon-small">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"

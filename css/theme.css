@@ -268,7 +268,7 @@ button {
   width: fit-content;
   font-family: var(--font-body);
   font-size: 1.125rem;
-  font-weight: 700;
+  font-weight: 500;
   color: var(--color-text);
 }
 
@@ -292,6 +292,41 @@ button {
 .comment-form input[type="submit"]:hover {
   background-color: var(--color-footer);
   color: var(--color-text);
+}
+
+.btn-icon-large {
+  padding: 0.5rem 0.75rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s;
+
+  &:hover {
+    background-color: var(--color-menu-button-hover);
+    color: var(--color-text);
+  }
+
+  &:focus-visible {
+    background-color: var(--color-text);
+    color: var(--color-background);
+    outline: 2px solid var(--color-text);
+  }
+}
+
+.btn-icon-large:focus-visible svg {
+  stroke: var(--color-background);
+}
+
+.btn-icon-large[aria-pressed="true"] {
+  background-color: var(--color-contrast);
+  color: var(--color-bg-light);
+  font-weight: 700;
+}
+
+.btn-icon-large[aria-pressed="true"] svg {
+  stroke: var(--color-bg-light);
 }
 
 .button-wrapper {

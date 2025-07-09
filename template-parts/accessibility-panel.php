@@ -20,6 +20,7 @@
         <ul>
           <li>
             <button
+            class="btn btn-icon-large"
               id="toggle-dyslexic"
               type="button"
               aria-pressed="false"
@@ -54,6 +55,7 @@
           </li>
           <li>
             <button
+            class="btn btn-icon-large"
               id="toggle-text"
               type="button"
               aria-pressed="false"
@@ -94,6 +96,7 @@
         <ul>
           <li>
             <button
+            class="btn btn-icon-large"
               id="toggle-contrast"
               type="button"
               aria-pressed="false"
@@ -121,6 +124,7 @@
           </li>
           <li>
             <button
+            class="btn btn-icon-large"
               id="toggle-reduce-motion"
               type="button"
               aria-pressed="false"
@@ -161,6 +165,7 @@
         <ul>
           <li>
             <button
+            class="btn btn-icon-large"
               id="reset-accessibility"
               type="button"
             >
