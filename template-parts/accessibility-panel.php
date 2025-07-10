@@ -197,6 +197,7 @@
         </ul>
         <button
           id="close-accessibility"
+          class="btn-icon-small"
           aria-label="Sluit instellingen"
         >
           <svg

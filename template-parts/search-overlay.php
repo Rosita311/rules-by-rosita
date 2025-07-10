@@ -10,7 +10,7 @@
 
     <button
       id="close-search"
-      class="search-close-btn btn-icon-small"
+      class="btn-icon-small"
       aria-label="Sluit zoekfunctie">
       <svg
         aria-hidden="true"

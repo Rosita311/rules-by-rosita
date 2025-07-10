@@ -118,35 +118,6 @@ a #top:focus-visible {
   align-items: center;
 }
 
-.menu-button {
-  padding: 0.5em;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  &:hover {
-    background-color: var(--color-menu-button-hover);
-  }
-}
-
-.menu-button:focus-visible,
-#open-sidebar-button:focus-visible,
-#close-sidebar-button:focus-visible,
-#theme-switch:focus-visible {
-  background-color: var(--color-text);
-  color: var(--color-background);
-  border-radius: 50%;
-  outline: 2px solid var(--color-text);
-}
-
-.menu-button:focus-visible svg,
-#open-sidebar-button:focus-visible svg,
-#close-sidebar-button:focus-visible svg,
-#theme-switch:focus-visible svg {
-  stroke: var(--color-background);
-}
-
 /* Mobile Menu */
 
 #open-sidebar-button {
@@ -175,11 +146,6 @@ a #top:focus-visible {
 }
 
 /* Theme switcher */
-
-#theme-switch svg {
-  stroke: var(--color-text);
-}
-
 #theme-switch svg:first-child {
   display: block;
 }

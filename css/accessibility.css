@@ -159,16 +159,6 @@
   margin-bottom: 1rem;
 }
 
-#close-accessibility, #close-search {
-  padding: 4px !important;
-  border-radius: 50% !important;
-  justify-content: center !important;
-  align-items: center !important;
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-}
-
 .accessibility-group {
   margin-top: 1rem;
 }

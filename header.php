@@ -81,12 +81,13 @@
         <div class="menu-buttons">
           <a href="<?php echo esc_url(home_url('/')); ?>?s="
             aria-label="Open zoekfunctie"
-            class="menu-button search-button btn-icon-small"
+            class="search-button btn-icon-small"
             aria-haspopup="dialog"
             aria-expanded="false"
             aria-controls="search-overlay"
             id="search-toggle">
             <svg
+            aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
               width="24"
               height="24"
@@ -107,8 +108,9 @@
           </a>
           <button
             id="theme-switch"
-            class="menu-button btn-icon-small">
+            class="btn-icon-small">
             <svg
+            aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
               width="24"
               height="24"
@@ -127,6 +129,7 @@
                 d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
             </svg>
             <svg
+            aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
               width="24"
               height="24"
