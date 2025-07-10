@@ -368,6 +368,7 @@ display: inline-flex;
 .pagination,
 .single-pagination {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 2rem;
   margin-bottom: 2rem;
@@ -403,14 +404,6 @@ display: inline-flex;
 .pagination li {
   display: inline-flex;
 }
-
-.pagination .current {
-  font-weight: bold;
-  background-color: var(--color-contrast);
-  color: var(--color-text);
-}
-
-
 
 /* Forms */
 
@@ -576,4 +569,36 @@ display: inline-flex;
   .dotted-background-blue {
     background-size: 10px 10px;
   }
+
+  .pagination-list,
+  .pagination,
+  .single-pagination {
+    flex-direction: column;
+    align-items: start;
+    gap: 1rem;
+  }
+
+  .pagination-list li {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .btn-icon-large {
+    width: 100%;
+    justify-content: start;
+  }
+
+  .single-pagination .post-prev,
+  .single-pagination .post-next {
+    width: 100%;
+    text-align: left;
+  }
+
+
+  .btn-icon-large {
+  min-width: 2.5rem; /* voor touch targets */
+  white-space: nowrap; /* voorkomt afbreken van woorden */
+  text-align: center;
+}
+
 }
