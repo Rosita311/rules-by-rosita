@@ -298,7 +298,6 @@ button {
 display: inline-flex;
   align-items: center;
   justify-content: center;
-  border-radius: 0.25rem;
   gap: 0.5rem;
   text-decoration: none;
   font-weight: 500;
@@ -311,12 +310,12 @@ display: inline-flex;
     background-color: var(--color-menu-button-hover);
     color: var(--color-text);
   }
+}
 
-  &:focus-visible {
-    background-color: var(--color-text);
-    color: var(--color-background);
-    outline: 2px solid var(--color-text);
-  }
+.btn-icon-large:focus-visible,
+.btn-icon-large:focus-visible * {
+  color: var(--color-background) !important;
+  background-color: var(--color-text);
 }
 
 .btn-icon-large:focus-visible svg {
