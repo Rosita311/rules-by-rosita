@@ -189,14 +189,31 @@ get_template_part('template-parts/accessibility-panel'); ?>
           <?php the_content(); ?>
         </div>
         <nav class="single-pagination" aria-label="Post navigatie">
-  <div class="post-prev">
-    <?php previous_post_link('%link', '<svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-left"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M15 6l-6 6l6 6" /></svg><span>Vorige post</span>'); ?>
-  </div>
-  <div class="post-next">
-    <?php next_post_link('%link', '<span>Volgende post</span><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 6l6 6l-6 6" /></svg>'); ?>
-  </div>
-</nav>
-
+          <div class="post-prev">
+            <?php previous_post_link(
+              '%link',
+              '<span class="btn-icon-large">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-chevron-left">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+          <path d="M15 6l-6 6l6 6" />
+        </svg>
+        <span>Vorige post</span>
+      </span>'
+            ); ?>
+          </div>
+          <div class="post-next">
+            <?php next_post_link(
+              '%link',
+              '<span class="btn-icon-large">
+        <span>Volgende post</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-chevron-right">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+          <path d="M9 6l6 6l-6 6" />
+        </svg>
+      </span>'
+            ); ?>
+          </div>
+        </nav>
         <div class="post-comments-wrapper">
           <?php
           if (comments_open() || get_comments_number()) {
