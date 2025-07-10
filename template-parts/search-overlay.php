@@ -6,8 +6,8 @@
   aria-modal="true"
   aria-labelledby="search-label"
   hidden>
-  <div class="search-overlay-inner" tabindex="-1">
-
+  <?php get_search_form(); ?>
+    <div class="search-overlay-inner" tabindex="-1">
     <button
       id="close-search"
       class="btn-icon-small"
@@ -31,6 +31,4 @@
       </svg>
     </button>
   </div>
-  <?php get_search_form(); ?>
-
 </section>
