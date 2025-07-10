@@ -34,7 +34,12 @@ function rulesbyrosita_enqueue_assets() {
     filemtime(get_template_directory() . '/js/script.js'),
     true
   );
+
+   if (is_singular() && comments_open() && get_option('thread_comments')) {
+    wp_enqueue_script('comment-reply');
+  }
 }
+
 add_action('wp_enqueue_scripts', 'rulesbyrosita_enqueue_assets');
 
 function rulesbyrosita_resource_hints($hints, $relation_type) {
