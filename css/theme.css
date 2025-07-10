@@ -295,13 +295,17 @@ button {
 }
 
 .btn-icon-large {
-  padding: 0.5rem 0.75rem;
-  display: flex;
-  justify-content: center;
+display: inline-flex;
   align-items: center;
+  justify-content: center;
+  border-radius: 0.25rem;
   gap: 0.5rem;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.25rem;
+  color: var(--color-text);
   cursor: pointer;
-  transition: border-color 0.2s, background 0.2s;
 
   &:hover {
     background-color: var(--color-menu-button-hover);
@@ -327,6 +331,12 @@ button {
 
 .btn-icon-large[aria-pressed="true"] svg {
   stroke: var(--color-bg-light);
+}
+
+.btn-icon-large[aria-current="page"] {
+  background-color: var(--color-contrast);
+  color: var(--color-bg-light);
+  pointer-events: none;
 }
 
 .button-wrapper {
@@ -370,34 +380,6 @@ button {
 .single-pagination .post-next {
   flex: 1;
 }
-
-.pagination a,
-.pagination span,
-.single-pagination a {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 0.25rem;
-  gap: 0.5rem;
-  text-decoration: none;
-  font-weight: 500;
-  padding: 0.5rem 0.75rem;
-  border-radius: 0.5rem;
-  color: var(--color-text);
-  cursor: pointer;
-
-  &:hover {
-    background-color: var(--color-menu-button-hover);
-    color: var(--color-text);
-  }
-
-  &:focus-visible {
-    background-color: var(--color-text);
-    color: var(--color-background);
-    outline: 2px solid var(--color-text);
-  }
-}
-
 
 .single-pagination .chevron {
   font-size: 1.5rem;
