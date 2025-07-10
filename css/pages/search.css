@@ -30,3 +30,7 @@
 .search-form-fallback {
   display: none;
 }
+
+.search-input::placeholder {
+  color: var(--color-placeholder);
+}

@@ -258,6 +258,7 @@ html.large-text {
   --color-accent-2: var(--hc-bg);
   --color-contrast: var(--hc-accent);
   --color-footer: var(--hc-bg);
+  --color-placeholder: var(--hc-focus);
   --color-icon-button-hover: var(--hc-accent);
   --color-button-hover: var(--hc-accent);
   --color-primary-btn-text: var(--hc-bg);
