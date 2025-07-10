@@ -570,8 +570,15 @@ display: inline-flex;
     background-size: 10px 10px;
   }
 
-  .pagination-list,
-  .pagination,
+  
+  .pagination {
+    margin: 2rem 0;
+  }
+
+  .page-numbers {
+    flex-wrap: wrap;
+  }
+
   .single-pagination {
     flex-direction: column;
     align-items: start;
@@ -579,13 +586,7 @@ display: inline-flex;
   }
 
   .pagination-list li {
-    width: 100%;
     justify-content: center;
-  }
-
-  .btn-icon-large {
-    width: 100%;
-    justify-content: start;
   }
 
   .single-pagination .post-prev,
