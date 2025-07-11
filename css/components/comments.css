@@ -89,6 +89,12 @@ ol.comment-list > li:not(:last-child) {
   transition: color 0.3s ease;
 }
 
+a#cancel-comment-reply-link {
+  margin-left: 2rem;
+  font-family: var(--font-body);
+  font-size: 1rem;
+}
+
 /* Reactie in afwachting */
 .comment-awaiting-moderation {
   font-style: italic;
