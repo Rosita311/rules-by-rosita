@@ -474,6 +474,7 @@ button {
 .comment-form label,
 .search-label {
   font-weight: bold;
+  color: var(--color-text);
 }
 
 .form-group {
