@@ -25,6 +25,12 @@
   margin-bottom: 0.25rem !important;
 }
 
+.forminator-consent__label p {
+  gap: 0.5rem !important;
+  font-size: 1rem !important;
+  color: var(--color-text) !important;
+}
+
 /* Submit button */
 .forminator-ui .forminator-button {
   background-color: var(--color-primary, #005aa7);
