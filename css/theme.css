@@ -274,7 +274,8 @@ button {
 }
 
 .btn,
-.comment-form input[type="submit"] {
+.comment-form input[type="submit"],
+.forminator-ui .forminator-button {
   padding: 0.75rem 1.5rem;
   border-radius: 0.25rem;
   width: fit-content;
@@ -292,7 +293,8 @@ button {
 }
 
 .btn-secondary,
-.comment-form input[type="submit"] {
+.comment-form input[type="submit"],
+.forminator-ui .forminator-button {
   background-color: var(--color-contrast);
   color: var(--color-bg-light);
   text-decoration: none;
@@ -301,9 +303,10 @@ button {
 }
 
 .btn-secondary:hover,
-.comment-form input[type="submit"]:hover {
-  background-color: var(--color-footer);
-  color: var(--color-text);
+.comment-form input[type="submit"]:hover,
+.forminator-ui .forminator-button:hover {
+  background-color: var(--color-footer) !important;
+  color: var(--color-text)b !important;
 }
 
 .btn-secondary:focus-visible,

@@ -32,16 +32,7 @@
 }
 
 /* Submit button */
-.forminator-ui .forminator-button {
-  background-color: var(--color-primary, #005aa7);
-  color: #fff;
-  padding: 0.5rem 1rem;
-  border-radius: 6px;
-  font-weight: bold;
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.2s ease-in-out;
-}
+
 
 .forminator-ui .forminator-button:hover {
   background-color: var(--color-primary-dark, #004a91);
