@@ -306,11 +306,12 @@ button {
 .comment-form input[type="submit"]:hover,
 .forminator-ui .forminator-button:hover {
   background-color: var(--color-footer) !important;
-  color: var(--color-text)b !important;
+  color: var(--color-text) !important;
 }
 
 .btn-secondary:focus-visible,
-.comment-form input[type="submit"]:focus-visible {
+.comment-form input[type="submit"]:focus-visible,
+.forminator-ui .forminator-button:focus-visible {
   outline: 2px solid var(--color-text);
   outline-offset: 2px;
 }
@@ -458,7 +459,8 @@ button {
 
 /* Forms */
 
-.site-form {
+.site-form,
+.forminator-ui {
   display: flex;
   gap: 1rem;
   width: 100%;
@@ -521,9 +523,12 @@ button {
 .comment-form input,
 .comment-form textarea,
 .search-input,
-.jetpack-form input[type="email"] {
+.jetpack-form input[type="email"],
+.forminator-ui textarea,
+.forminator-ui input {
   display: block;
   width: 100%;
+  max-width: 100%;
   padding: 0.75rem 1.5rem;
   border-radius: 0.25rem;
   border: 1px solid var(--color-text);
