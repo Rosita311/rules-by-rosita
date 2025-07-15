@@ -477,9 +477,11 @@ button {
 
 .site-form label,
 .comment-form label,
-.search-label {
+.search-label,
+.forminator-label,
+.forminator-required {
   font-weight: bold;
-  color: var(--color-text);
+  color: var(--color-text) !important;
 }
 
 .form-group {
