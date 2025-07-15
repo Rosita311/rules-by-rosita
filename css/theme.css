@@ -305,8 +305,8 @@ button {
 .btn-secondary:hover,
 .comment-form input[type="submit"]:hover,
 .forminator-ui .forminator-button:hover {
-  background-color: var(--color-footer) !important;
-  color: var(--color-text) !important;
+  background-color: var(--color-footer);
+  color: var(--color-text);
 }
 
 .btn-secondary:focus-visible,
@@ -567,14 +567,16 @@ button {
   margin: 0;
 }
 
-.field-error {
+.field-error,
+.forminator-ui .forminator-error-message {
   display: none;
-  color: var(--color-primary);
-  font-size: 0.9rem;
-  margin-top: 0.25rem;
+  color: var(--color-primary) !important;
+  background-color: var(--color-background) !important;
+  font-size: 0.9rem !important;
+  margin-top: 0.25rem !important;
 }
 
-.field-error.active {
+.field-error.active, {
   display: block;
 }
 
