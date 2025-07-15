@@ -1,5 +1,5 @@
  <search>
-   <form role="search" method="get" action="<?php echo esc_url(home_url('/')); ?>" class="site-form">
+   <form method="get" action="<?php echo esc_url(home_url('/')); ?>" class="site-form">
      <div class="form-group">
        <label id="search-label" for="search-input" class="search-label">Zoeken</label>
        <div class="form-group-row">
