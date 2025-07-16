@@ -24,6 +24,7 @@
     border-radius: 0.5rem !important;
     padding: 1rem !important;
     box-shadow: none !important;
+    right: 10rem !important;
 }
 
 .cmplz-title {
@@ -74,7 +75,7 @@
     border: none !important;
 }
 
-.cmplz-btn.cmplz-accept:hover, .cmplz-btn.cmplz-deny:hover  {
+body .cmplz-cookiebanner .cmplz-btn.cmplz-accept:hover, .cmplz-btn.cmplz-deny:hover  {
     background-color: var(--color-accent) !important;
     color: var(--color-bg-light) !important;
 }
@@ -156,7 +157,7 @@
 /* Zorg dat hover ook netjes werkt */
 .cmplz-close:hover,
 .cmplz-close-button:hover {
-    opacity: 0.8;
+color: var(--color-text) !important;
 }
 
 
