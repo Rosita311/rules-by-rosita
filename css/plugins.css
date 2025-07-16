@@ -136,6 +136,37 @@
     font-size: 0.9rem !important;
 }
 
+/* Zorg dat alle Complianz-iconen de tekstkleur gebruiken */
+.cmplz-icon,
+.cmplz-icon svg,
+.cmplz-icon path,
+#cmplz-manage-consent-container .cmplz-icon,
+#cmplz-cookiebanner-container .cmplz-icon,
+.cmplz-close,
+.cmplz-close svg,
+.cmplz-close path,
+.cmplz-close-button,
+.cmplz-close-button svg,
+.cmplz-close-button path {
+    fill: var(--color-text) !important;
+    stroke: var(--color-text) !important;
+    color: var(--color-text) !important;
+}
+
+/* Zorg dat hover ook netjes werkt */
+.cmplz-close:hover,
+.cmplz-close-button:hover {
+    opacity: 0.8;
+}
+
+
+/* Specifiek voor dropdown pijltjes en switch icons */
+.cmplz-dropdown summary::after,
+.cmplz-switch::after {
+    color: var(--color-text) !important;
+}
+
+
 /* Toggles (always active, etc.) */
 .cmplz-switch {
     background-color: var(--color-primary) !important;
