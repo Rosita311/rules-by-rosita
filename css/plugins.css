@@ -1,20 +1,142 @@
 /* Forminator */
 /* Custom styling  for the Forminator contactform is in theme.css under 'Forms'. */
 
-/* Complianz */
+ /* Complianz Cookie Banner Styling */
 
-.cmplz-cookiebanner .cmplz-buttons button {
-    all: unset; /* reset alle browser styles */
-    display: inline-block;
-    padding: 0.75rem 1.5rem;
-    border: 2px solid var(--color-contrast);
-    background-color: var(--color-contrast);
-    color: var(--color-text);
-    border-radius: 0.25rem;
-    cursor: pointer;
-    font-size: 1rem;
+ .cmplz-manage-consent, .manage-consent-1 .cmplz-show {
+    font-family: var(--font-body) !important;
+    font-size: 1rem !important;
+    color: var(--color-text) !important;
+    background-color: var(--color-background) !important;
+    border: 1px solid var(--color-accent) !important;
+    border-radius: 0.25rem !important;
+    padding: 1rem !important;   
+    box-shadow: none !important;
+ }
+
+/* Banner container */
+.cmplz-cookiebanner {
+    background-color: var(--color-background) !important;
+    color: var(--color-text) !important;
+    font-family: var(--font-body) !important;
+    font-size: 1rem !important;
+    border: 2px solid var(--color-accent) !important;
+    border-radius: 0.5rem !important;
+    padding: 1rem !important;
+    box-shadow: none !important;
 }
-.cmplz-cookiebanner .cmplz-buttons button:hover {
-    background-color: var(--color-footer);
-    border-color: var(--color-footer);
+
+.cmplz-title {
+    color: var(--color-text) !important;
+    font-family: var(--font-heading) !important;
+    font-size: 1.5rem !important;
+    margin-bottom: 0.5rem !important;
+}
+
+.cmplz-close svg{
+    stroke: var(--color-text) !important;
+}
+
+/* Banner text */
+.cmplz-message p,
+.cmplz-message {
+    color: var(--color-text) !important;
+    font-size: 1rem !important;
+    line-height: 1.5 !important;
+}
+
+.cmplz-link {
+    font-size: 1rem !important;
+    color: var(--color-primary) !important;
+    text-decoration: underline !important;
+}
+
+.cmplz-link:hover {
+    text-decoration: none !important;
+}
+
+/* Buttons */
+.cmplz-btn {
+    font-family: var(--font-body) !important;
+    height: auto !important;
+    font-size: 1rem !important;
+    font-weight: 600 !important;
+    border-radius: 0.25rem !important;
+    padding: 0.75rem 1.5rem !important;
+    border: 1px solid var(--color-accent) !important;
+    right: 10rem !important;
+}
+
+/* Accept and Deny buttons */
+.cmplz-btn.cmplz-accept, .cmplz-btn.cmplz-deny {
+    background-color: var(--color-primary) !important;
+    color: var(--color-background) !important;
+    border: none !important;
+}
+
+.cmplz-btn.cmplz-accept:hover, .cmplz-btn.cmplz-deny:hover  {
+    background-color: var(--color-accent) !important;
+    color: var(--color-bg-light) !important;
+}
+
+/* Settings button */
+.cmplz-view-preferences:hover, .cmplz-save-preferences:hover {
+  background-color: var(--color-accent-2) !important;
+}
+
+.cmplz-view-preferences, .cmplz-save-preferences {
+  font-weight: 500 !important;
+  background-color: var(--color-background) !important;
+  padding: 0.5rem 0.75rem !important;
+  border-radius: 0.25rem !important;
+  color: var(--color-text) !important;
+  border: none !important;
+}
+
+.cmplz-btn.cmplz-manage-options {
+    background: none !important;
+    border: none !important;
+    color: var(--color-primary) !important;
+    font-size: 0.875rem !important;
+    text-decoration: underline !important;
+}
+
+/* Dropdowns (Manage Consent) */
+#cmplz-manage-consent-container {
+    background-color: var(--color-background) !important;
+    color: var(--color-text) !important;
+    font-family: var(--font-body) !important;
+    padding: 1.5rem !important;
+    border-radius: 0.5rem !important;
+    border: 1px solid var(--color-text) !important;
+}
+
+#cmplz-manage-consent-container summary {
+    background-color: var(--color-background) !important;
+    color: var(--color-text) !important;
+    font-weight: 500 !important;
+    cursor: pointer !important;
+}
+
+.cmplz-category {
+    background-color: var(--color-accent-2) !important;
+}
+
+.cmplz-always-active {
+    color: var(--color-text) !important;
+}
+
+.cmplz-category-title {
+    color: var(--color-text) !important;
+    font-weight: 600 !important;
+}
+
+.cmplz-description {
+    color: var(--color-text) !important;
+    font-size: 0.9rem !important;
+}
+
+/* Toggles (always active, etc.) */
+.cmplz-switch {
+    background-color: var(--color-primary) !important;
 }

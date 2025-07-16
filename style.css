@@ -14,7 +14,7 @@ Version: 1.0
 /* Theme styles */
 @import "css/theme.css";
 @import "css/accessibility.css";
-@import "css/plugins.css";
+@import "css/plugins.css"; 
 
 /* Components */
 @import "css/components/header.css";
