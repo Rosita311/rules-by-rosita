@@ -96,6 +96,7 @@ body #cmplz-manage-consent-container summary {
 body #cmplz-manage-consent-container .cmplz-category {
     background-color: var(--color-accent-2);
 }
+
 body #cmplz-manage-consent-container .cmplz-category-title {
     color: var(--color-text);
     font-weight: 600;
