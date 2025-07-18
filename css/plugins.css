@@ -106,7 +106,7 @@ body #cmplz-manage-consent-container .cmplz-category-title {
     color: var(--color-text);
     font-weight: 600;
 }
-body #cmplz-manage-consent-container .cmplz-description {
+body .cmplz-cookiebanner .cmplz-categories .cmplz-category .cmplz-description{
     color: var(--color-text);
     font-size: 0.9rem;
 }
@@ -176,11 +176,6 @@ body .cmplz-cookiebanner .cmplz-btn.cmplz-accept:hover, .cmplz-btn.cmplz-deny:ho
 .cmplz-category-title {
     color: var(--color-text) !important;
     font-weight: 600 !important;
-}
-
-.cmplz-description {
-    color: var(--color-text) !important;
-    font-size: 0.9rem !important;
 }
 
 /* Zorg dat alle Complianz-iconen de tekstkleur gebruiken */
