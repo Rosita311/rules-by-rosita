@@ -126,7 +126,9 @@ body .cmplz-cookiebanner .cmplz-categories .cmplz-category .cmplz-description{
 
 /* Iconen (sluitknop, pijltjes, switches) */
 body #cmplz-cookiebanner-container .cmplz-icon svg,
-body #cmplz-manage-consent-container .cmplz-icon svg {
+body #cmplz-manage-consent-container .cmplz-icon svg,
+body .cmplz-cookiebanner .cmplz-close svg,
+.cmplz-cookiebanner .cmplz-close path {
     stroke: var(--color-text);
     fill: var(--color-text);
 }
@@ -154,12 +156,4 @@ body .manage-consent-1 .cmplz-show {
     height: auto !important;
     right: 10rem !important;
     box-shadow: none;
-}
-
-/* Zorg dat alle Complianz-iconen de tekstkleur gebruiken */
-.cmplz-close svg,
-.cmplz-close path {
-    fill: var(--color-text) !important;
-    stroke: var(--color-text) !important;
-    color: var(--color-text) !important;
 }
