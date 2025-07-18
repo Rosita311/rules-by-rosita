@@ -34,6 +34,7 @@
 
 .darkmode {
   --color-text: rgba(255, 255, 255, 0.87);
+  --color-text-dark: rgba(255, 255, 255, 0.87);
   --color-primary: #f7636f;
   --color-accent: #e38ca6;
   --color-accent-2: #293a3d;
