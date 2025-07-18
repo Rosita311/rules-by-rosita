@@ -98,6 +98,10 @@ body #cmplz-manage-consent-container .cmplz-category {
     background-color: var(--color-accent-2);
 }
 
+.cmplz-cookiebanner .cmplz-categories .cmplz-category .cmplz-category-header .cmplz-always-active {
+    color: var(--color-text) !important;
+}
+
 body #cmplz-manage-consent-container .cmplz-category-title {
     color: var(--color-text);
     font-weight: 600;
@@ -173,9 +177,7 @@ body .cmplz-cookiebanner .cmplz-btn.cmplz-accept:hover, .cmplz-btn.cmplz-deny:ho
     background-color: var(--color-accent-2) !important;
 }
 
-.cmplz-always-active {
-    color: var(--color-text) !important;
-}
+
 
 .cmplz-category-title {
     color: var(--color-text) !important;
