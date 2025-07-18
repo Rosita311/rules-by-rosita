@@ -61,7 +61,7 @@ body #cmplz-cookiebanner-container .cmplz-btn {
     padding: 0.75rem 1.5rem;
 }
 
-/* Accept & Deny */
+/* Accept, Deny & preferences */
 body #cmplz-cookiebanner-container .cmplz-btn.cmplz-accept,
 body #cmplz-cookiebanner-container .cmplz-btn.cmplz-deny {
     background-color: var(--color-primary);
@@ -72,6 +72,20 @@ body #cmplz-cookiebanner-container .cmplz-btn.cmplz-accept:hover,
 body #cmplz-cookiebanner-container .cmplz-btn.cmplz-deny:hover {
     background-color: var(--color-accent);
     color: var(--color-bg-light);
+}
+
+body .cmplz-cookiebanner .cmplz-buttons .cmplz-btn.cmplz-view-preferences,
+body .cmplz-cookiebanner .cmplz-buttons .cmplz-btn.cmplz-save-preferences {
+  font-weight: 500;
+  background-color: var(--color-background);
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.25rem;;
+  color: var(--color-text);
+  border: none;
+
+  &:hover {
+    background-color: var(--color-accent-2);
+  }
 }
 
 /* Manage Consent modal */
@@ -154,22 +168,6 @@ body .manage-consent-1 .cmplz-show {
 body .cmplz-cookiebanner .cmplz-btn.cmplz-accept:hover, .cmplz-btn.cmplz-deny:hover  {
     background-color: var(--color-accent) !important;
     color: var(--color-bg-light) !important;
-}
-
-/* Settings button */
-
-body .cmplz-cookiebanner .cmplz-buttons .cmplz-btn.cmplz-view-preferences,
-body .cmplz-cookiebanner .cmplz-buttons .cmplz-btn.cmplz-save-preferences {
-  font-weight: 500;
-  background-color: var(--color-background);
-  padding: 0.5rem 0.75rem;
-  border-radius: 0.25rem;;
-  color: var(--color-text);
-  border: none;
-
-  &:hover {
-    background-color: var(--color-accent-2);
-  }
 }
 
 /* Zorg dat alle Complianz-iconen de tekstkleur gebruiken */
