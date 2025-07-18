@@ -171,8 +171,6 @@ body .cmplz-cookiebanner .cmplz-btn.cmplz-accept:hover, .cmplz-btn.cmplz-deny:ho
   border: none !important;
 }
 
-/* Dropdowns (Manage Consent) */
-
 /* Zorg dat alle Complianz-iconen de tekstkleur gebruiken */
 .cmplz-close svg,
 .cmplz-close path {
