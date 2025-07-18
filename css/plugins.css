@@ -59,7 +59,6 @@ body #cmplz-cookiebanner-container .cmplz-btn {
     height: auto;
     border-radius: 0.25rem;
     padding: 0.75rem 1.5rem;
-    border: 1px solid var(--color-accent);
 }
 
 /* Accept & Deny */
@@ -158,17 +157,19 @@ body .cmplz-cookiebanner .cmplz-btn.cmplz-accept:hover, .cmplz-btn.cmplz-deny:ho
 }
 
 /* Settings button */
-.cmplz-view-preferences:hover, .cmplz-save-preferences:hover {
-  background-color: var(--color-accent-2) !important;
-}
 
-.cmplz-view-preferences, .cmplz-save-preferences {
-  font-weight: 500 !important;
-  background-color: var(--color-background) !important;
-  padding: 0.5rem 0.75rem !important;
-  border-radius: 0.25rem !important;
-  color: var(--color-text) !important;
-  border: none !important;
+body .cmplz-cookiebanner .cmplz-buttons .cmplz-btn.cmplz-view-preferences,
+body .cmplz-cookiebanner .cmplz-buttons .cmplz-btn.cmplz-save-preferences {
+  font-weight: 500;
+  background-color: var(--color-background);
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.25rem;;
+  color: var(--color-text);
+  border: none;
+
+  &:hover {
+    background-color: var(--color-accent-2);
+  }
 }
 
 /* Zorg dat alle Complianz-iconen de tekstkleur gebruiken */
