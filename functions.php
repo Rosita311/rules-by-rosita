@@ -160,6 +160,43 @@ function remove_editor_from_front_page() {
 }
 add_action('admin_init', 'remove_editor_from_front_page');
 
+function rulesbyrosita_gutenberg_colors() {
+    add_theme_support('editor-color-palette', array(
+        array(
+            'name'  => __('Tekst', 'rulesbyrosita'),
+            'slug'  => 'tekst',
+            'color' => 'var(--color-text)',
+        ),
+        array(
+            'name'  => __('Tekst donker', 'rulesbyrosita'),
+            'slug'  => 'tekst-donker',
+            'color' => 'var(--color-text-dark)',
+        ),
+        array(
+            'name'  => __('Accent', 'rulesbyrosita'),
+            'slug'  => 'accent',
+            'color' => 'var(--color-accent)',
+        ),
+        array(
+            'name'  => __('Accent 2', 'rulesbyrosita'),
+            'slug'  => 'accent-2',
+            'color' => 'var(--color-accent-2)',
+        ),
+        array(
+            'name'  => __('Background', 'rulesbyrosita'),
+            'slug'  => 'background',
+            'color' => 'var(--color-background)',
+        ),
+        array(
+            'name'  => __('Text', 'rulesbyrosita'),
+            'slug'  => 'text',
+            'color' => 'var(--color-text)',
+        ),
+    ));
+}
+add_action('after_setup_theme', 'rulesbyrosita_gutenberg_colors');
+
+
 
 /*
 $title = get_the_title(); 
