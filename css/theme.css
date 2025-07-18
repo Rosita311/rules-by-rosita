@@ -293,6 +293,8 @@ button {
 }
 
 .btn-secondary,
+.wp-block-button__link,
+.jetpack-subscribe-button,
 .comment-form input[type="submit"],
 .forminator-ui .forminator-button {
   background-color: var(--color-contrast);
@@ -303,6 +305,7 @@ button {
 }
 
 .btn-secondary:hover,
+.wp-block-button__link:hover,
 .comment-form input[type="submit"]:hover,
 .forminator-ui .forminator-button:hover {
   background-color: var(--color-footer);
@@ -310,6 +313,8 @@ button {
 }
 
 .btn-secondary:focus-visible,
+.wp-block-button__link:focus-visible,
+.jetpack-subscribe-button:focus-visible,
 .comment-form input[type="submit"]:focus-visible,
 .forminator-ui .forminator-button:focus-visible {
   outline: 3px solid var(--color-text);
@@ -331,6 +336,23 @@ button {
   &:hover {
     background-color: var(--color-menu-button-hover);
     color: var(--color-text);
+  }
+}
+
+.footer-btn,
+.jetpack-subscribe-button:hover
+.jetpack-form input[type="submit"] {
+  border: 2px solid var(--color-contrast);
+  white-space: nowrap;
+
+  &:hover {
+    border: 2px solid var(--color-text);
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
+
+  &:focus-visible {
+    outline: 3px solid var(--color-text);
+    border-radius: 0.25rem;
   }
 }
 
@@ -578,7 +600,7 @@ button {
   margin-top: 0.25rem !important;
 }
 
-.field-error.active, {
+.field-error.active {
   display: block;
 }
 
@@ -588,22 +610,6 @@ button {
 
 .search-form {
   margin-top: 1rem;
-}
-
-.footer-btn,
-.jetpack-form input[type="submit"] {
-  border: 2px solid var(--color-contrast);
-  white-space: nowrap;
-
-  &:hover {
-    border: 2px solid var(--color-text);
-    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
-  }
-
-  &:focus-visible {
-    outline: 3px solid var(--color-text);
-    border-radius: 0.25rem;
-  }
 }
 
 /* Back to top button */
