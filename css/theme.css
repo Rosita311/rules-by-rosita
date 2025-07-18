@@ -110,7 +110,7 @@ a:hover {
 
 /* Focus: duidelijke focusstijl */
 a:focus-visible {
-  outline: 2px solid var(--color-text);
+  outline: 3px solid var(--color-text);
   outline-offset: 2px;
   border-radius: 0.25rem;
 }
@@ -312,7 +312,7 @@ button {
 .btn-secondary:focus-visible,
 .comment-form input[type="submit"]:focus-visible,
 .forminator-ui .forminator-button:focus-visible {
-  outline: 2px solid var(--color-text);
+  outline: 3px solid var(--color-text);
   outline-offset: 2px;
 }
 
@@ -383,7 +383,7 @@ button {
   background-color: var(--color-text);
   color: var(--color-background);
   border-radius: 50%;
-  outline: 2px solid var(--color-text);
+  outline: 3px solid var(--color-text);
   outline-offset: 2px;
 }
 
@@ -493,7 +493,7 @@ button {
 }
 
 .search-input:focus {
-  outline: 2px solid var(--color-text);
+  outline: 3px solid var(--color-text);
   border-radius: 0.25rem;
 }
 
@@ -601,7 +601,7 @@ button {
   }
 
   &:focus-visible {
-    outline: 2px solid var(--color-text);
+    outline: 3px solid var(--color-text);
     border-radius: 0.25rem;
   }
 }

@@ -16,6 +16,11 @@
     height: auto;
     right: 10rem;
     box-shadow: none;
+
+    &:focus {
+        outline: 3px solid var(--color-text);
+        outline-offset: 2px;
+    }
  }
 
 /* Banner container */
@@ -43,6 +48,11 @@ body #cmplz-cookiebanner-container .cmplz-close svg {
     stroke: var(--color-text);
     fill: var(--color-text);
     transition: opacity 0.2s ease-in-out;
+
+      &:focus {
+        outline: 3px solid var(--color-text);
+        outline-offset: 2px;
+    }
 }
 body #cmplz-cookiebanner-container .cmplz-close:hover svg {
     opacity: 0.7;
@@ -61,6 +71,11 @@ body #cmplz-cookiebanner-container .cmplz-link {
     font-size: 1rem;
     color: var(--color-primary);
     text-decoration: underline;
+
+      &:focus {
+        outline: 3px solid var(--color-text);
+        outline-offset: 2px;
+    }
 }
 body #cmplz-cookiebanner-container .cmplz-link:hover {
     text-decoration: none;
@@ -74,6 +89,11 @@ body #cmplz-cookiebanner-container .cmplz-btn {
     height: auto;
     border-radius: 0.25rem;
     padding: 0.75rem 1.5rem;
+
+      &:focus {
+        outline: 3px solid var(--color-text);
+        outline-offset: 2px;
+    }
 }
 
 /* Accept, Deny & preferences */
@@ -155,4 +175,11 @@ body #cmplz-manage-consent-container .cmplz-switch::after {
 /* Toggles */
 body #cmplz-manage-consent-container .cmplz-switch {
     background-color: var(--color-primary);
+}
+
+.cmplz-btn:focus,
+.cmplz-link:focus,
+.cmplz-switch:focus {
+    outline: 2px solid var(--color-text);
+    outline-offset: 2px;
 }
