@@ -156,20 +156,6 @@ body .manage-consent-1 .cmplz-show {
     box-shadow: none;
 }
 
-/* Accept and Deny buttons */
-.cmplz-btn.cmplz-accept, .cmplz-btn.cmplz-deny {
-    background-color: var(--color-primary) !important;
-    color: var(--color-background) !important;
-    height: auto !important;
-    padding: 0.75rem 1.5rem !important;
-    border: none !important;
-}
-
-body .cmplz-cookiebanner .cmplz-btn.cmplz-accept:hover, .cmplz-btn.cmplz-deny:hover  {
-    background-color: var(--color-accent) !important;
-    color: var(--color-bg-light) !important;
-}
-
 /* Zorg dat alle Complianz-iconen de tekstkleur gebruiken */
 .cmplz-close svg,
 .cmplz-close path {
