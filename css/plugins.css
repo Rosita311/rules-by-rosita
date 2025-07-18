@@ -3,6 +3,21 @@
 
  /* Complianz Cookie Banner Styling */
 
+ /* Manage consent */
+ body #cmplz-manage-consent .cmplz-manage-consent {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-text);
+    background-color: var(--color-background);
+    border: 2px solid var(--color-accent);
+    border-radius: 0.25rem;
+    padding: 1rem;
+    height: auto;
+    right: 10rem;
+    box-shadow: none;
+ }
+
 /* Banner container */
 body #cmplz-cookiebanner-container .cmplz-cookiebanner {
     background-color: var(--color-background);
@@ -140,20 +155,4 @@ body #cmplz-manage-consent-container .cmplz-switch::after {
 /* Toggles */
 body #cmplz-manage-consent-container .cmplz-switch {
     background-color: var(--color-primary);
-}
-
-/* OUD */
-body button.cmplz-manage-consent,
-body .manage-consent-1 .cmplz-show {
-    font-family: var(--font-body);
-    font-size: 1rem;
-    font-weight: 600;
-    color: var(--color-text) !important;
-    background-color: var(--color-background) !important;
-    border: 2px solid var(--color-accent) !important;
-    border-radius: 0.25rem !important;
-    padding: 1rem;
-    height: auto !important;
-    right: 10rem !important;
-    box-shadow: none;
 }
