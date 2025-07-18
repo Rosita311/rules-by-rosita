@@ -177,8 +177,6 @@ body .cmplz-cookiebanner .cmplz-btn.cmplz-accept:hover, .cmplz-btn.cmplz-deny:ho
     background-color: var(--color-accent-2) !important;
 }
 
-
-
 .cmplz-category-title {
     color: var(--color-text) !important;
     font-weight: 600 !important;
@@ -196,4 +194,3 @@ body .cmplz-cookiebanner .cmplz-btn.cmplz-accept:hover, .cmplz-btn.cmplz-deny:ho
     stroke: var(--color-text) !important;
     color: var(--color-text) !important;
 }
-
