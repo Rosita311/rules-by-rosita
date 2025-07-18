@@ -102,7 +102,7 @@ body .cmplz-cookiebanner .cmplz-categories .cmplz-category .cmplz-category-heade
     color: var(--color-text);
 }
 
-body #cmplz-manage-consent-container .cmplz-category-title {
+body .cmplz-cookiebanner .cmplz-categories .cmplz-category .cmplz-category-header .cmplz-category-title {
     color: var(--color-text);
     font-weight: 600;
 }
@@ -172,11 +172,6 @@ body .cmplz-cookiebanner .cmplz-btn.cmplz-accept:hover, .cmplz-btn.cmplz-deny:ho
 }
 
 /* Dropdowns (Manage Consent) */
-
-.cmplz-category-title {
-    color: var(--color-text) !important;
-    font-weight: 600 !important;
-}
 
 /* Zorg dat alle Complianz-iconen de tekstkleur gebruiken */
 .cmplz-close svg,
