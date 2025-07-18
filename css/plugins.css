@@ -123,16 +123,18 @@ body #cmplz-manage-consent-container .cmplz-switch {
 }
 
 /* OUD */
- .cmplz-manage-consent, .manage-consent-1 .cmplz-show {
-    font-family: var(--font-body) !important;
-    font-size: 1rem !important;
+body button.cmplz-manage-consent,
+body .manage-consent-1 .cmplz-show {
+    font-family: var(--font-body);
+    font-size: 1rem;
     color: var(--color-text) !important;
     background-color: var(--color-background) !important;
-    border: 1px solid var(--color-accent) !important;
-    border-radius: 0.25rem !important;
-    padding: 1rem !important;   
-    box-shadow: none !important;
- }
+    border: 1px solid var(--color-accent);
+    border-radius: 0.25rem;
+    padding: 1rem;
+    box-shadow: none;
+}
+
 
 /* Buttons */
 .cmplz-btn {
