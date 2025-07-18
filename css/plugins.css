@@ -193,9 +193,7 @@ body .cmplz-cookiebanner .cmplz-btn.cmplz-accept:hover, .cmplz-btn.cmplz-deny:ho
 
 /* Zorg dat alle Complianz-iconen de tekstkleur gebruiken */
 .cmplz-close svg,
-.cmplz-close path,
-.cmplz-close-button svg,
-.cmplz-close-button path {
+.cmplz-close path {
     fill: var(--color-text) !important;
     stroke: var(--color-text) !important;
     color: var(--color-text) !important;
