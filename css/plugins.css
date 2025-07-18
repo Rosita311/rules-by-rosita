@@ -139,10 +139,6 @@ body .manage-consent-1 .cmplz-show {
     box-shadow: none;
 }
 
-
-/* Buttons */
-
-
 /* Accept and Deny buttons */
 .cmplz-btn.cmplz-accept, .cmplz-btn.cmplz-deny {
     background-color: var(--color-primary) !important;
