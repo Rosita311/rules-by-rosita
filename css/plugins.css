@@ -3,6 +3,125 @@
 
  /* Complianz Cookie Banner Styling */
 
+/* Banner container */
+body #cmplz-cookiebanner-container .cmplz-cookiebanner {
+    background-color: var(--color-background);
+    color: var(--color-text);
+    font-family: var(--font-body);
+    font-size: 1rem;
+    border: 2px solid var(--color-accent);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    box-shadow: none;
+}
+
+/* Titel */
+body #cmplz-cookiebanner-container .cmplz-title {
+    color: var(--color-text);
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Sluitknop */
+body #cmplz-cookiebanner-container .cmplz-close svg {
+    stroke: var(--color-text);
+    fill: var(--color-text);
+    transition: opacity 0.2s ease-in-out;
+}
+body #cmplz-cookiebanner-container .cmplz-close:hover svg {
+    opacity: 0.7;
+}
+
+/* Bannertekst */
+body #cmplz-cookiebanner-container .cmplz-message,
+body #cmplz-cookiebanner-container .cmplz-message p {
+    color: var(--color-text);
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Links */
+body #cmplz-cookiebanner-container .cmplz-link {
+    font-size: 1rem;
+    color: var(--color-primary);
+    text-decoration: underline;
+}
+body #cmplz-cookiebanner-container .cmplz-link:hover {
+    text-decoration: none;
+}
+
+/* Buttons */
+body #cmplz-cookiebanner-container .cmplz-btn {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 0.25rem;
+    padding: 0.75rem 1.5rem;
+    border: 1px solid var(--color-accent);
+}
+
+/* Accept & Deny */
+body #cmplz-cookiebanner-container .cmplz-btn.cmplz-accept,
+body #cmplz-cookiebanner-container .cmplz-btn.cmplz-deny {
+    background-color: var(--color-primary);
+    color: var(--color-background);
+    border: none;
+}
+body #cmplz-cookiebanner-container .cmplz-btn.cmplz-accept:hover,
+body #cmplz-cookiebanner-container .cmplz-btn.cmplz-deny:hover {
+    background-color: var(--color-accent);
+    color: var(--color-bg-light);
+}
+
+/* Manage Consent modal */
+body #cmplz-manage-consent-container {
+    background-color: var(--color-background);
+    color: var(--color-text);
+    font-family: var(--font-body);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid var(--color-text);
+}
+
+/* Dropdown titles */
+body #cmplz-manage-consent-container summary {
+    background-color: var(--color-background);
+    color: var(--color-text);
+    font-weight: 500;
+    cursor: pointer;
+}
+
+/* Category sections */
+body #cmplz-manage-consent-container .cmplz-category {
+    background-color: var(--color-accent-2);
+}
+body #cmplz-manage-consent-container .cmplz-category-title {
+    color: var(--color-text);
+    font-weight: 600;
+}
+body #cmplz-manage-consent-container .cmplz-description {
+    color: var(--color-text);
+    font-size: 0.9rem;
+}
+
+/* Iconen (sluitknop, pijltjes, switches) */
+body #cmplz-cookiebanner-container .cmplz-icon svg,
+body #cmplz-manage-consent-container .cmplz-icon svg {
+    stroke: var(--color-text);
+    fill: var(--color-text);
+}
+body #cmplz-cookiebanner-container .cmplz-dropdown summary::after,
+body #cmplz-manage-consent-container .cmplz-switch::after {
+    color: var(--color-text);
+}
+
+/* Toggles */
+body #cmplz-manage-consent-container .cmplz-switch {
+    background-color: var(--color-primary);
+}
+
+/* OUD */
  .cmplz-manage-consent, .manage-consent-1 .cmplz-show {
     font-family: var(--font-body) !important;
     font-size: 1rem !important;
@@ -13,48 +132,6 @@
     padding: 1rem !important;   
     box-shadow: none !important;
  }
-
-/* Banner container */
-.cmplz-cookiebanner {
-    background-color: var(--color-background) !important;
-    color: var(--color-text) !important;
-    font-family: var(--font-body) !important;
-    font-size: 1rem !important;
-    border: 2px solid var(--color-accent) !important;
-    border-radius: 0.5rem !important;
-    padding: 1rem !important;
-    box-shadow: none !important;
-    right: 10rem !important;
-}
-
-.cmplz-title {
-    color: var(--color-text) !important;
-    font-family: var(--font-heading) !important;
-    font-size: 1.5rem !important;
-    margin-bottom: 0.5rem !important;
-}
-
-.cmplz-close svg{
-    stroke: var(--color-text) !important;
-}
-
-/* Banner text */
-.cmplz-message p,
-.cmplz-message {
-    color: var(--color-text) !important;
-    font-size: 1rem !important;
-    line-height: 1.5 !important;
-}
-
-.cmplz-link {
-    font-size: 1rem !important;
-    color: var(--color-primary) !important;
-    text-decoration: underline !important;
-}
-
-.cmplz-link:hover {
-    text-decoration: none !important;
-}
 
 /* Buttons */
 .cmplz-btn {
@@ -94,30 +171,7 @@ body .cmplz-cookiebanner .cmplz-btn.cmplz-accept:hover, .cmplz-btn.cmplz-deny:ho
   border: none !important;
 }
 
-.cmplz-btn.cmplz-manage-options {
-    background: none !important;
-    border: none !important;
-    color: var(--color-primary) !important;
-    font-size: 0.875rem !important;
-    text-decoration: underline !important;
-}
-
 /* Dropdowns (Manage Consent) */
-#cmplz-manage-consent-container {
-    background-color: var(--color-background) !important;
-    color: var(--color-text) !important;
-    font-family: var(--font-body) !important;
-    padding: 1.5rem !important;
-    border-radius: 0.5rem !important;
-    border: 1px solid var(--color-text) !important;
-}
-
-#cmplz-manage-consent-container summary {
-    background-color: var(--color-background) !important;
-    color: var(--color-text) !important;
-    font-weight: 500 !important;
-    cursor: pointer !important;
-}
 
 .cmplz-category {
     background-color: var(--color-accent-2) !important;
@@ -138,15 +192,6 @@ body .cmplz-cookiebanner .cmplz-btn.cmplz-accept:hover, .cmplz-btn.cmplz-deny:ho
 }
 
 /* Zorg dat alle Complianz-iconen de tekstkleur gebruiken */
-.cmplz-icon,
-.cmplz-icon svg,
-.cmplz-icon path,
-#cmplz-manage-consent-container .cmplz-icon,
-#cmplz-cookiebanner-container .cmplz-icon,
-.cmplz-close,
-.cmplz-close svg,
-.cmplz-close path,
-.cmplz-close-button,
 .cmplz-close-button svg,
 .cmplz-close-button path {
     fill: var(--color-text) !important;
@@ -154,21 +199,3 @@ body .cmplz-cookiebanner .cmplz-btn.cmplz-accept:hover, .cmplz-btn.cmplz-deny:ho
     color: var(--color-text) !important;
 }
 
-/* Zorg dat hover ook netjes werkt */
-.cmplz-close:hover,
-.cmplz-close-button:hover {
-color: var(--color-text) !important;
-}
-
-
-/* Specifiek voor dropdown pijltjes en switch icons */
-.cmplz-dropdown summary::after,
-.cmplz-switch::after {
-    color: var(--color-text) !important;
-}
-
-
-/* Toggles (always active, etc.) */
-.cmplz-switch {
-    background-color: var(--color-primary) !important;
-}
