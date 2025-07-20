@@ -168,6 +168,11 @@ function rulesbyrosita_theme_colors() {
             'color' => 'var(--color-text)',
         ),
         array(
+            'name'  => __('Primary', 'rulesbyrosita'),
+            'slug'  => 'primary',
+            'color' => '#d7233e',
+        ),
+        array(
             'name'  => __('Accent', 'rulesbyrosita'),
             'slug'  => 'accent',
             'color' => 'var(--color-accent)',
