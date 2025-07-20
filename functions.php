@@ -42,6 +42,21 @@ function rulesbyrosita_enqueue_assets() {
 
 add_action('wp_enqueue_scripts', 'rulesbyrosita_enqueue_assets');
 
+function rulesbyrosita_editor_styles() {
+    add_theme_support('editor-styles');
+    add_editor_style('editor-style.css'); // maak dit bestand aan met je variabelen
+
+     wp_enqueue_style(
+        'rulesbyrosita-editor-fonts',
+        'https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;700&family=Zilla+Slab:wght@400;700&display=swap',
+        false,
+        null
+    );
+}
+
+add_action('after_setup_theme', 'rulesbyrosita_editor_styles');
+
+
 function rulesbyrosita_resource_hints($hints, $relation_type) {
   if ('preconnect' === $relation_type) {
     $hints[] = 'https://fonts.googleapis.com';
@@ -160,6 +175,7 @@ function remove_editor_from_front_page() {
 }
 add_action('admin_init', 'remove_editor_from_front_page');
 
+/*
 function rulesbyrosita_theme_colors() {
     add_theme_support('editor-color-palette', array(
         array(
