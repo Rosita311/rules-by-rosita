@@ -64,7 +64,7 @@ if (post_password_required()) {
   </p>
   <div role="alert" id="privacy-error"
        class="comment-error"
-       data-error="' . esc_attr('Je moet akkoord gaan met de privacyverklaring om een reactie te plaatsen.', 'rules-by-rosita')) . '"
+       data-error="' . esc_attr('Je moet akkoord gaan met de privacyverklaring om een reactie te plaatsen.', 'rules-by-rosita') . '"
        style="display:none; color: var(--color-primary); margin-bottom: 0.5rem;">
   </div>
   <p class="form-group checkbox-consent">
