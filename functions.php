@@ -2,18 +2,20 @@
 require_once get_template_directory() . '/inc/menu-walker.php';
 
 /* Theme setup */
-function rules_by_rosita_setup() {
+function rules_by_rosita_setup()
+{
     add_theme_support('title-tag');
     add_theme_support('post-thumbnails');
     add_theme_support('editor-styles');
     add_editor_style('editor-style.css');
-    add_theme_support('automatic-feed-links'); 
+    add_theme_support('automatic-feed-links');
 }
 add_action('after_setup_theme', 'rules_by_rosita_setup');
 
 
 /* Enqueue styles and scripts */
-function rules_by_rosita_enqueue_assets() {
+function rules_by_rosita_enqueue_assets()
+{
     // Google Fonts
     wp_enqueue_style(
         'rules-by-rosita-google-fonts',
@@ -46,7 +48,8 @@ function rules_by_rosita_enqueue_assets() {
 add_action('wp_enqueue_scripts', 'rules_by_rosita_enqueue_assets');
 
 /* Editor fonts for backend */
-function rules_by_rosita_editor_assets() {
+function rules_by_rosita_editor_assets()
+{
     wp_enqueue_style(
         'rules-by-rosita-editor-fonts',
         'https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;700&family=Zilla+Slab:wght@400;700&display=swap',
@@ -57,7 +60,8 @@ function rules_by_rosita_editor_assets() {
 add_action('enqueue_block_editor_assets', 'rules_by_rosita_editor_assets');
 
 /* Resource hints for fonts */
-function rules_by_rosita_resource_hints($hints, $relation_type) {
+function rules_by_rosita_resource_hints($hints, $relation_type)
+{
     if ('preconnect' === $relation_type) {
         $hints[] = 'https://fonts.googleapis.com';
         $hints[] = 'https://fonts.gstatic.com';
@@ -67,7 +71,8 @@ function rules_by_rosita_resource_hints($hints, $relation_type) {
 add_filter('wp_resource_hints', 'rules_by_rosita_resource_hints', 10, 2);
 
 /* Register menus */
-function rules_by_rosita_register_menus() {
+function rules_by_rosita_register_menus()
+{
     register_nav_menus(array(
         'footer-menu' => __('Footer', 'rules-by-rosita'),
         'header-menu' => __('Header', 'rules-by-rosita'),
@@ -76,7 +81,8 @@ function rules_by_rosita_register_menus() {
 add_action('after_setup_theme', 'rules_by_rosita_register_menus');
 
 /* Register sidebar */
-function rules_by_rosita_register_sidebars() {
+function rules_by_rosita_register_sidebars()
+{
     register_sidebar(array(
         'name' => 'Main Sidebar',
         'id' => 'main-sidebar',
@@ -90,86 +96,90 @@ add_action('widgets_init', 'rules_by_rosita_register_sidebars');
 
 /* Customizer settings */
 
-function rules_by_rosita_customize_register( $wp_customize ) {
-    $wp_customize->add_section( 'social_settings', array(
-        'title'    => __( 'Social Media', 'rules-by-rosita' ),
+function rules_by_rosita_customize_register($wp_customize)
+{
+    $wp_customize->add_section('social_settings', array(
+        'title'    => __('Social Media', 'rules-by-rosita'),
         'priority' => 30,
-    ) );
+    ));
 
     $socials = [
-        'facebook'   => 'Facebook URL',
-        'instagram'  => 'Instagram URL',
-        'linkedin'   => 'LinkedIn URL',
-        'mastodon'   => 'Mastodon URL',
-        'github'     => 'GitHub URL',
-        'wordpress'  => 'WordPress.com RSS Feed',
-        'pinterest'  => 'Pinterest URL',
+        'facebook'   => __('Facebook URL', 'rules-by-rosita'),
+        'instagram'   => __('Instagram URL', 'rules-by-rosita'),
+        'linkedin'   => __('LinkedIn URL', 'rules-by-rosita'),
+        'mastodon'   => __('Mastodon URL', 'rules-by-rosita'),
+        'github'     => __('GitHub URL', 'rules-by-rosita'),
+        'wordpress'  => __('WordPress.com RSS Feed', 'rules-by-rosita'),
+        'pinterest'  => __('Pinterest URL', 'rules-by-rosita'),
     ];
 
-    foreach ( $socials as $key => $label ) {
-        $wp_customize->add_setting( "rules_by_rosita_{$key}_url", array(
+    foreach ($socials as $key => $label) {
+        $wp_customize->add_setting("rules_by_rosita_{$key}_url", array(
             'default'           => '',
             'sanitize_callback' => 'esc_url_raw',
-        ) );
+        ));
 
-        $wp_customize->add_control( "rules_by_rosita_{$key}_url", array(
-            'label'   => __( $label, 'rules-by-rosita' ),
+        $wp_customize->add_control("rules_by_rosita_{$key}_url", array(
+            'label'   => $label,
             'section' => 'social_settings',
             'type'    => 'url',
-        ) );
+        ));
     }
 }
-add_action( 'customize_register', 'rules_by_rosita_customize_register' );
+add_action('customize_register', 'rules_by_rosita_customize_register');
 
 /* Calculate reading time */
-function rules_by_rosita_get_reading_time() {
-    $content = get_post_field( 'post_content', get_the_ID() );
-    $word_count = str_word_count( strip_tags( $content ) );
-    $minutes = ceil( $word_count / 200 ); // gemiddeld 200 woorden per minuut
-    $label = ( $minutes === 1 ) ? 'minuut' : 'minuten';
+function rules_by_rosita_get_reading_time()
+{
+    $content = get_post_field('post_content', get_the_ID());
+    $word_count = str_word_count(strip_tags($content));
+    $minutes = ceil($word_count / 200); // gemiddeld 200 woorden per minuut
+    $label = ($minutes === 1) ? 'minuut' : 'minuten';
     return $minutes . ' ' . $label;
 }
 
 /* Reorder comment fields */
-function rules_by_rosita_reorder_comment_fields( $fields ) {
+function rules_by_rosita_reorder_comment_fields($fields)
+{
     $comment_field = $fields['comment'];
-    unset( $fields['comment'] );
+    unset($fields['comment']);
 
     $ordered_fields = array();
-    if ( isset( $fields['author'] ) ) $ordered_fields['author'] = $fields['author'];
-    if ( isset( $fields['email'] ) ) $ordered_fields['email'] = $fields['email'];
-    if ( isset( $fields['url'] ) ) $ordered_fields['url'] = $fields['url'];
+    if (isset($fields['author'])) $ordered_fields['author'] = $fields['author'];
+    if (isset($fields['email'])) $ordered_fields['email'] = $fields['email'];
+    if (isset($fields['url'])) $ordered_fields['url'] = $fields['url'];
 
     $ordered_fields['comment'] = $comment_field;
 
     return $ordered_fields;
 }
-add_filter( 'comment_form_fields', 'rules_by_rosita_reorder_comment_fields' );
+add_filter('comment_form_fields', 'rules_by_rosita_reorder_comment_fields');
 
 /* Privacycheck on comment submission */
-function rules_by_rosita_comment_privacy_check( $commentdata ) {
-    if ( !is_user_logged_in() && empty( $_POST['comment-privacy'] ) ) {
-        set_transient( 'comment_privacy_error', __( 'Je moet akkoord gaan met de privacyverklaring om een reactie te plaatsen.', 'rules-by-rosita' ), 30 );
-        wp_redirect( wp_get_referer() . '#respond' );
+function rules_by_rosita_comment_privacy_check($commentdata)
+{
+    if (!is_user_logged_in() && empty($_POST['comment-privacy'])) {
+        set_transient('comment_privacy_error', __('Je moet akkoord gaan met de privacyverklaring om een reactie te plaatsen.', 'rules-by-rosita'), 30);
+        wp_redirect(wp_get_referer() . '#respond');
         exit;
     }
     return $commentdata;
 }
-add_filter( 'preprocess_comment', 'rules_by_rosita_comment_privacy_check' );
+add_filter('preprocess_comment', 'rules_by_rosita_comment_privacy_check');
 
 /* Remove editor from front page and posts page */
-function rules_by_rosita_remove_editor() {
-    if ( !is_admin() || !isset( $_GET['post'] ) ) {
+function rules_by_rosita_remove_editor()
+{
+    if (!is_admin() || !isset($_GET['post'])) {
         return;
     }
 
-    $post_id = intval( $_GET['post'] );
-    $frontpage_id = get_option( 'page_on_front' );
-    $posts_page_id = get_option( 'page_for_posts' );
+    $post_id = intval($_GET['post']);
+    $frontpage_id = get_option('page_on_front');
+    $posts_page_id = get_option('page_for_posts');
 
-    if ( $post_id === intval( $frontpage_id ) || $post_id === intval( $posts_page_id ) ) {
-        remove_post_type_support( 'page', 'editor' );
+    if ($post_id === intval($frontpage_id) || $post_id === intval($posts_page_id)) {
+        remove_post_type_support('page', 'editor');
     }
 }
-add_action( 'admin_init', 'rules_by_rosita_remove_editor');
-?>
+add_action('admin_init', 'rules_by_rosita_remove_editor');
