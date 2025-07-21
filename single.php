@@ -115,7 +115,7 @@ get_template_part('template-parts/accessibility-panel'); ?>
                   <path d="M12 12l3 2" />
                   <path d="M12 7v5" />
                 </svg>
-                <span class="sr-only">Leestijd:</span><?php echo get_reading_time(); ?>
+                <span class="sr-only">Leestijd:</span><?php echo rules_by_rosita_get_reading_time(); ?>
               </li>
 
               <li class="post-meta-item">
