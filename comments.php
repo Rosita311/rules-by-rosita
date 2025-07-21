@@ -10,7 +10,7 @@ $comments_number = get_comments_number();
         '1 reactie op “%2$s”',
         '%1$s reacties op “%2$s”',
         $comments_number,
-        'textdomain'
+        'rules-by-rosita'
       ),
       number_format_i18n($comments_number),
       esc_html(get_the_title())
@@ -64,7 +64,7 @@ if (post_password_required()) {
   </p>
   <div role="alert" id="privacy-error"
        class="comment-error"
-       data-error="' . esc_attr(__('Je moet akkoord gaan met de privacyverklaring om een reactie te plaatsen.', 'textdomain')) . '"
+       data-error="' . esc_attr('Je moet akkoord gaan met de privacyverklaring om een reactie te plaatsen.', 'rules-by-rosita')) . '"
        style="display:none; color: var(--color-primary); margin-bottom: 0.5rem;">
   </div>
   <p class="form-group checkbox-consent">

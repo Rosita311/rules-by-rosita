@@ -87,6 +87,7 @@ function rules_by_rosita_register_sidebars() {
 add_action('widgets_init', 'rules_by_rosita_register_sidebars');
 
 /* Customizer settings */
+
 function rules_by_rosita_customize_register( $wp_customize ) {
     $wp_customize->add_section( 'social_settings', array(
         'title'    => __( 'Social Media', 'rules-by-rosita' ),
@@ -146,7 +147,7 @@ add_filter( 'comment_form_fields', 'rules_by_rosita_reorder_comment_fields' );
 /* Privacycheck on comment submission */
 function rules_by_rosita_comment_privacy_check( $commentdata ) {
     if ( !is_user_logged_in() && empty( $_POST['comment-privacy'] ) ) {
-        set_transient( 'comment_privacy_error', __( 'Je moet akkoord gaan met de privacyverklaring om een reactie te plaatsen.', 'rules_by_rosita' ), 30 );
+        set_transient( 'comment_privacy_error', __( 'Je moet akkoord gaan met de privacyverklaring om een reactie te plaatsen.', 'rules-by-rosita' ), 30 );
         wp_redirect( wp_get_referer() . '#respond' );
         exit;
     }
