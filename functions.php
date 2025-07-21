@@ -136,6 +136,32 @@ function rules_by_rosita_customize_register($wp_customize)
 }
 add_action('customize_register', 'rules_by_rosita_customize_register');
 
+/* add Block styles */
+function rules_by_rosita_register_block_styles() {
+    // Voorbeeld: stijl toevoegen voor een paragraaf blok
+    register_block_style(
+        'core/paragraph',
+        array(
+            'name'  => 'highlight',
+            'label' => __('Highlight', 'rules-by-rosita'),
+        )
+    );
+}
+add_action('init', 'rules_by_rosita_register_block_styles');
+
+function rules_by_rosita_register_block_patterns() {
+    register_block_pattern(
+        'rules-by-rosita/hero-section',
+        array(
+            'title'       => __('Hero Section', 'rules-by-rosita'),
+            'description' => __('A custom hero section with heading and button', 'rules-by-rosita'),
+            'content'     => "<!-- wp:group --><div class=\"wp-block-group\"><!-- wp:heading --><h2>Your Hero Title</h2><!-- /wp:heading --><!-- wp:paragraph --><p>Your Hero Subtitle</p><!-- /wp:paragraph --></div><!-- /wp:group -->",
+        )
+    );
+}
+add_action('init', 'rules_by_rosita_register_block_patterns');
+
+
 /* Calculate reading time */
 function rules_by_rosita_get_reading_time()
 {
