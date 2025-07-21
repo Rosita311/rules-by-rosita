@@ -1,0 +1,36 @@
+#search-overlay {
+  position: absolute;
+  left: 50%;
+  top: 7.375rem;
+  transform: translateX(-50%);
+  width: calc(80rem - 2rem);
+  max-width: 90%;
+  max-height: calc(100dvh - 8rem);
+  overflow-y: auto;
+  background: var(--color-background);
+  color: var(--color-text);
+  border: 2px solid var(--color-accent);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  z-index: 1000;
+  display: none;
+}
+
+#search-overlay.show {
+  display: block;
+}
+
+#search-overlay label {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+.search-form-fallback {
+  display: none;
+}
+
+.search-input::placeholder {
+  color: var(--color-placeholder);
+}

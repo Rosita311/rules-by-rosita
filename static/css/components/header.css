@@ -15,7 +15,7 @@
 }
 
 a #top:focus-visible {
-  outline: 3px solid var(--color-text);
+  outline: 2px solid var(--color-text);
   outline-offset: 4px;
   border-radius: 0.25rem;
 }
@@ -57,9 +57,8 @@ a #top:focus-visible {
   transition: background-color 150ms ease;
 
   &:focus-visible {
-    outline: 3px solid var(--color-text);
+    outline: 2px solid var(--color-text);
     border-radius: 0.25rem;
-    padding: 1em 0;
   }
 }
 
@@ -118,6 +117,35 @@ a #top:focus-visible {
   align-items: center;
 }
 
+.menu-button {
+  padding: 0.5em;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:hover {
+    background-color: var(--color-menu-button-hover);
+  }
+}
+
+.menu-button:focus-visible,
+#open-sidebar-button:focus-visible,
+#close-sidebar-button:focus-visible,
+#theme-switch:focus-visible {
+  background-color: var(--color-text);
+  color: var(--color-background);
+  border-radius: 50%;
+  outline: 2px solid var(--color-text);
+}
+
+.menu-button:focus-visible svg,
+#open-sidebar-button:focus-visible svg,
+#close-sidebar-button:focus-visible svg,
+#theme-switch:focus-visible svg {
+  stroke: var(--color-background);
+}
+
 /* Mobile Menu */
 
 #open-sidebar-button {
@@ -146,6 +174,11 @@ a #top:focus-visible {
 }
 
 /* Theme switcher */
+
+#theme-switch svg {
+  stroke: var(--color-text);
+}
+
 #theme-switch svg:first-child {
   display: block;
 }
@@ -209,9 +242,8 @@ a #top:focus-visible {
 }
 
 .has-submenu > button.submenu-toggle:focus-visible {
-  outline: 3px solid var(--color-text);
+  outline: 2px solid var(--color-text);
   border-radius: 0.25rem;
-  padding: 1em 0;
 }
 
 /* Submenu standaard verborgen */
@@ -263,7 +295,7 @@ a #top:focus-visible {
     border-bottom: none !important;
     background-color: var(--color-text);
     color: var(--color-background) !important;
-    outline: 3px solid var(--color-text);
+    outline: 2px solid var(--color-text);
     border-radius: 0 !important;
   }
 }
@@ -367,7 +399,7 @@ a #top:focus-visible {
       border-bottom: none;
       background-color: var(--color-text);
       color: var(--color-background);
-      outline: 3px solid var(--color-text);
+      outline: 2px solid var(--color-text);
       border-radius: 0;
     }
   }
@@ -392,7 +424,7 @@ a #top:focus-visible {
   .header-container #close-sidebar-button {
     display: block;
     padding: 0.5em;
-    margin: 4em 2em 2em 2em;
+    margin: 2em;
   }
 
   .submenu-toggle:hover .chevron svg {
@@ -414,10 +446,9 @@ a #top:focus-visible {
 
     &:focus-visible {
       border-bottom: none;
-      padding: 1em 2.5em;
       background-color: var(--color-text);
       color: var(--color-background);
-      outline: 3px solid var(--color-text);
+      outline: 2px solid var(--color-text);
       border-radius: 0;
     }
   }

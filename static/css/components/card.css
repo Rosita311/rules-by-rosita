@@ -7,6 +7,7 @@
   gap: 4rem;
   padding: 2rem 0;
   flex-direction: column;
+  justify-content: center;
 }
 
 .blog-listing-grid {
@@ -108,16 +109,15 @@ body:not(.user-is-tabbing) .hero-card-content:focus-within {
   box-shadow: none;
 }
 
-.card-content:hover .btn-primary,
-.hero-card-content:hover .btn-primary {
+.card-content:hover .btn-primary {
   background-color: var(--color-accent);
   color: var(--color-bg-light);
   transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
-.card-page-content:hover .btn-secondary {
-  background-color: var(--color-footer);
-  color: var(--color-text);
+.hero-card-content:hover .btn-primary {
+  background-color: var(--color-accent);
+  color: var(--color-bg-light);
   transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
@@ -141,25 +141,10 @@ body:not(.user-is-tabbing) .hero-card-content:focus-within {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 100%;
   padding: 1rem;
   margin-top: -3rem;
   gap: 1rem;
   background-color: var(--color-background);
-}
-
-.card-page-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 100%;
-  padding: 1rem;
-  gap: 1rem;
-  background-color: var(--color-background);
-}
-
-.card-page-content h2 {
-  margin-bottom: 1rem;
 }
 
 .post-date {
@@ -170,31 +155,21 @@ body:not(.user-is-tabbing) .hero-card-content:focus-within {
 }
 
 .hero-card-content span.btn.btn-primary,
-.card-content span.btn.btn-primary,
-.card-page-content span.btn.btn-secondary {
+.card-content span.btn.btn-primary {
   margin-top: 1rem;
 }
 
 /* Media Queries */
 
 @media screen and (max-width: 1024px) {
-  .blogpost-section {
-    gap: 3rem;
-  }
-
   .blog-listing-grid {
     gap: 3rem;
   }
 }
 
 @media screen and (max-width: 768px) {
-  .blogpost-section {
-    gap: 2rem;
-  }
-
   .blog-listing-grid {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 4rem;
-    margin-bottom: -2rem;
   }
 }

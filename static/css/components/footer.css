@@ -47,7 +47,7 @@ footer {
   }
 
   &:focus-visible {
-    outline: 3px solid var(--color-text);
+    outline: 2px solid var(--color-text);
     outline-offset: 2px;
     border-radius: 0.25rem;
   }
@@ -60,6 +60,21 @@ footer {
   padding: 0;
   gap: 2rem;
   flex-wrap: wrap;
+}
+
+.footer-btn {
+  border: 2px solid var(--color-contrast);
+  white-space: nowrap;
+
+  &:hover {
+    border: 2px solid var(--color-text);
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--color-text);
+    border-radius: 0.25rem;
+  }
 }
 
 .footer-social-media {
@@ -137,7 +152,7 @@ footer {
   background-color: var(--color-text);
   color: var(--color-background);
   border-radius: 50%;
-  outline: 3px solid var(--color-text);
+  outline: 2px solid var(--color-text);
 }
 
 .footer-social-media a:focus-visible svg {

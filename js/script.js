@@ -11,6 +11,11 @@ const menuButtons = document.querySelector(".menu-buttons");
 const footer = document.querySelector(".footer-container");
 const navLinks = document.querySelectorAll("#header-nav a");
 
+// Zoekfunctie
+const searchOverlay = document.getElementById('search-overlay');
+const searchToggle = document.getElementById('search-toggle');
+const searchClose = document.getElementById('close-search');
+
 // Toegankelijkheidselementen selecteren
 const toggleButton = document.getElementById("accessibility-toggle");
 const panel = document.getElementById("accessibility-settings");
@@ -18,7 +23,6 @@ const closeButton = document.getElementById("close-accessibility");
 
 // Back to top
 const backToTop = document.querySelector(".back-to-top");
-
 
 // Trap focus within the sidebar and accessibility menu when open
 let activeFocusTrap = null;
@@ -94,13 +98,13 @@ const openSidebar = () => {
       if (panelWasOpen) closePanel();
     }
 
-  escKeyHandler = (e) => {
-    if (e.key === "Escape") {
-      closeSidebar();
-    }
-  };
-  document.addEventListener("keydown", escKeyHandler);
-}
+    escKeyHandler = (e) => {
+      if (e.key === "Escape") {
+        closeSidebar();
+      }
+    };
+    document.addEventListener("keydown", escKeyHandler);
+  }
 };
 
 const closeSidebar = () => {
@@ -117,7 +121,7 @@ const closeSidebar = () => {
     if (toggleButton) toggleButton.style.display = "block";
     if (backToTop) backToTop.style.display = "block";
   }
-   if (!media.matches && panel && panelWasOpen) {
+  if (!media.matches && panel && panelWasOpen) {
     openPanel();
     panelWasOpen = false; // Reset status na herstel
   }
@@ -167,102 +171,6 @@ const updateNavbar = (e) => {
 
 media.addEventListener("change", updateNavbar);
 updateNavbar(media);
-
-// Submenu
-document.addEventListener("DOMContentLoaded", () => {
-  const submenuToggles = document.querySelectorAll(".submenu-toggle");
-  let isMouseUser = false;
-
-  // Detecteer muisgebruik
-  window.addEventListener(
-    "mousemove",
-    () => {
-      isMouseUser = true;
-    },
-    { once: true }
-  ); // Alleen eerste keer nodig
-
-  submenuToggles.forEach((button) => {
-    const parentItem = button.closest(".has-submenu");
-    const submenu = parentItem.querySelector(".submenu");
-
-    let hoverOpenTimeout, hoverCloseTimeout;
-
-    const openSubmenu = () => {
-      closeAllSubmenus();
-      parentItem.classList.add("open");
-      button.setAttribute("aria-expanded", "true");
-      button.setAttribute("aria-pressed", "true");
-      button.setAttribute("aria-label", "Submenu sluiten");
-    };
-
-    const closeSubmenu = () => {
-      parentItem.classList.remove("open");
-      button.setAttribute("aria-expanded", "false");
-      button.setAttribute("aria-pressed", "false");
-      button.setAttribute("aria-label", "Submenu openen");
-    };
-
-    const closeAllSubmenus = () => {
-      document.querySelectorAll(".has-submenu.open").forEach((item) => {
-        item.classList.remove("open");
-        const toggle = item.querySelector(".submenu-toggle");
-        toggle?.setAttribute("aria-expanded", "false");
-        toggle?.setAttribute("aria-pressed", "false");
-        toggle?.setAttribute("aria-label", "Submenu openen");
-      });
-    };
-
-    // Klikgedrag voor touch/keyboard
-    button.addEventListener("click", (e) => {
-      if (isMouseUser && window.innerWidth > 992) {
-        // Negeer klik als muisgebruiker op desktop
-        return;
-      }
-      e.preventDefault();
-      const isOpen = parentItem.classList.contains("open");
-      isOpen ? closeSubmenu() : openSubmenu();
-    });
-
-    button.addEventListener("keydown", (e) => {
-      if (e.key === "Enter" || e.key === " ") {
-        e.preventDefault(); // voorkom scroll bij spatie
-        const isOpen = parentItem.classList.contains("open");
-        isOpen ? closeSubmenu() : openSubmenu();
-      }
-    });
-
-    // Hovergedrag op desktop
-    parentItem.addEventListener("mouseenter", () => {
-      if (isMouseUser && window.innerWidth > 992) {
-        clearTimeout(hoverCloseTimeout);
-        hoverOpenTimeout = setTimeout(openSubmenu, 300);
-      }
-    });
-
-    parentItem.addEventListener("mouseleave", () => {
-      if (isMouseUser && window.innerWidth > 992) {
-        clearTimeout(hoverOpenTimeout);
-        hoverCloseTimeout = setTimeout(closeSubmenu, 300);
-      }
-    });
-
-    // Sluit submenu bij klik buiten het menu
-    document.addEventListener("click", (e) => {
-      if (!parentItem.contains(e.target)) {
-        closeSubmenu();
-      }
-    });
-
-    // Escape sluit submenu
-    submenu?.addEventListener("keydown", (e) => {
-      if (e.key === "Escape") {
-        closeSubmenu();
-        button.focus();
-      }
-    });
-  });
-});
 
 // Darkmode
 
@@ -326,6 +234,7 @@ document.body.addEventListener("mousedown", () => {
   document.body.classList.remove("user-is-tabbing");
 });
 
+
 // Back to top button
 
 window.addEventListener("scroll", () => {
@@ -344,6 +253,67 @@ backToTop.addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
   document.getElementById("top").focus();
 });
+
+// Zoekfunctie
+  if (searchOverlay && searchToggle && searchClose) {
+  function toggleSearch() {
+    const isOpen = searchOverlay.classList.contains("show");
+
+    if (isOpen) {
+      closeSearch();
+    } else {
+      openSearch();
+    }
+  }
+
+  function openSearch() {
+    searchOverlay.classList.add("show");
+    searchOverlay.removeAttribute("hidden");
+    searchOverlay.removeAttribute("inert");
+    searchOverlay.setAttribute("aria-hidden", "false");
+    searchToggle.setAttribute("aria-expanded", "true");
+
+    const firstInput = searchOverlay.querySelector("input, button, [tabindex]:not([tabindex='-1'])");
+    firstInput?.focus();
+
+    activateTrap(searchOverlay); // focus trap
+  }
+
+  function closeSearch() {
+    document.activeElement.blur();
+    searchOverlay.classList.remove("show");
+    searchOverlay.setAttribute("hidden", "");
+    searchOverlay.setAttribute("inert", "");
+    searchOverlay.setAttribute("aria-hidden", "true");
+    searchToggle.setAttribute("aria-expanded", "false");
+    searchToggle.focus();
+    deactivateTrap(); // release focus
+  }
+
+  // Klik op zoekknop
+  searchToggle.addEventListener("click", (e) => {
+    e.preventDefault(); // Voorkom standaard <a> gedrag
+    toggleSearch();
+  });
+
+  // Enter of spatie op zoekknop
+  searchToggle.addEventListener("keydown", (e) => {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      toggleSearch();
+    }
+  });
+
+  // Sluitknop
+  searchClose.addEventListener("click", closeSearch);
+
+  // Escape sluit overlay
+  searchOverlay.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+      closeSearch();
+    }
+  });
+}
 
 // Accessibility settings
 
@@ -433,7 +403,6 @@ const openPanel = () => {
 
   activateTrap(panel);
 };
-
 
 const closePanel = () => {
   deactivateTrap();
@@ -541,3 +510,197 @@ window.addEventListener("DOMContentLoaded", () => {
   restoreSettings();
   setupResetButton();
 });
+
+// Comment privacy checkbox validation
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("commentform");
+  if (!form) return;
+
+  const author = document.getElementById("comment-author");
+  const email = document.getElementById("comment-email");
+  const comment = document.getElementById("comment");
+  const checkbox = document.getElementById("comment-privacy");
+  const errorBox = document.getElementById("privacy-error");
+
+  form.addEventListener("submit", function (e) {
+    let valid = true;
+    let firstInvalid = null;
+
+    // Reset alle fouten
+    document
+      .querySelectorAll(".field-error")
+      .forEach((el) => (el.style.display = "none"));
+    if (errorBox) errorBox.style.display = "none";
+
+    // Naam
+    if (!author?.value.trim()) {
+      const error = document.getElementById("error-author");
+      if (error) {
+        error.textContent = "Vul je naam in.";
+        error.style.display = "block";
+      }
+      if (!firstInvalid) firstInvalid = author;
+      valid = false;
+    }
+
+    // Email
+    if (!email?.value.trim()) {
+      const error = document.getElementById("error-email");
+      if (error) {
+        error.textContent = "Vul je e-mailadres in.";
+        error.style.display = "block";
+      }
+      if (!firstInvalid) firstInvalid = email;
+      valid = false;
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim())) {
+      const error = document.getElementById("error-email");
+      if (error) {
+        error.textContent = "Voer een geldig e-mailadres in.";
+        error.style.display = "block";
+      }
+      if (!firstInvalid) firstInvalid = email;
+      valid = false;
+    }
+
+    // Comment
+    if (!comment?.value.trim()) {
+      const error = document.getElementById("error-comment");
+      if (error) {
+        error.textContent = "Schrijf een reactie.";
+        error.style.display = "block";
+      }
+      if (!firstInvalid) firstInvalid = comment;
+      valid = false;
+    }
+
+    // Privacy checkbox
+    if (checkbox && !checkbox.checked) {
+      if (errorBox) {
+        errorBox.textContent =
+          errorBox.dataset.error || "Je moet akkoord gaan.";
+        errorBox.style.display = "block";
+      }
+      if (!firstInvalid) firstInvalid = checkbox;
+      valid = false;
+    }
+
+    if (!valid) {
+      e.preventDefault(); // Stop formulierverzending
+
+      // Focus na render
+      setTimeout(() => {
+        if (firstInvalid) {
+          firstInvalid.focus({ preventScroll: false });
+        }
+      }, 0);
+    }
+  });
+});
+
+// submenu
+function initSubmenus() {
+  const submenuToggles = document.querySelectorAll(".submenu-toggle");
+
+  document.addEventListener("click", (e) => {
+    document.querySelectorAll(".has-submenu.open").forEach((item) => {
+      if (!item.contains(e.target)) {
+        const toggle = item.querySelector(".submenu-toggle");
+        const submenu = document.getElementById(
+          toggle?.getAttribute("aria-controls")
+        );
+        item.classList.remove("open");
+        toggle?.setAttribute("aria-expanded", "false");
+        submenu?.setAttribute("aria-hidden", "true");
+      }
+    });
+  });
+
+  submenuToggles.forEach((button) => {
+    const parentItem = button.closest(".has-submenu");
+    const submenu = document.getElementById(
+      button.getAttribute("aria-controls")
+    );
+
+    let hoverOpenTimeout, hoverCloseTimeout;
+
+    const openSubmenu = () => {
+      closeAllSubmenus();
+      parentItem.classList.add("open");
+      button.setAttribute("aria-expanded", "true");
+      submenu?.setAttribute("aria-hidden", "false");
+    };
+
+    const closeSubmenu = () => {
+      parentItem.classList.remove("open");
+      button.setAttribute("aria-expanded", "false");
+      submenu?.setAttribute("aria-hidden", "true");
+      parentItem.dataset.openedByClick = "false";
+    };
+
+    const closeAllSubmenus = () => {
+      document.querySelectorAll(".has-submenu.open").forEach((item) => {
+        item.classList.remove("open");
+        const toggle = item.querySelector(".submenu-toggle");
+        const controlledId = toggle?.getAttribute("aria-controls");
+        const submenuEl = controlledId
+          ? document.getElementById(controlledId)
+          : null;
+        toggle?.setAttribute("aria-expanded", "false");
+        submenuEl?.setAttribute("aria-hidden", "true");
+        item.dataset.openedByClick = "false";
+      });
+    };
+
+    button.addEventListener("click", (e) => {
+      e.preventDefault();
+      const isOpen = parentItem.classList.contains("open");
+
+      if (isOpen) {
+        closeSubmenu();
+      } else {
+        openSubmenu();
+        parentItem.dataset.openedByClick = "true";
+      }
+    });
+
+    parentItem.addEventListener("mouseenter", () => {
+      if (
+        !media.matches &&
+        parentItem.dataset.openedByClick !== "true"
+      ) {
+        clearTimeout(hoverCloseTimeout);
+        hoverOpenTimeout = setTimeout(openSubmenu, 500);
+      }
+    });
+
+    parentItem.addEventListener("mouseleave", () => {
+      if (
+        !media.machtes &&
+        parentItem.dataset.openedByClick !== "true"
+      ) {
+        clearTimeout(hoverOpenTimeout);
+        hoverCloseTimeout = setTimeout(closeSubmenu, 300);
+      }
+    });
+
+    submenu?.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") {
+        closeSubmenu();
+        button.focus();
+      }
+    });
+
+    parentItem.addEventListener("focusout", (e) => {
+      if (!parentItem.contains(e.relatedTarget) && !media.matches) {
+        hoverCloseTimeout = setTimeout(closeSubmenu, 300);
+      }
+    });
+  });
+}
+
+// Script initialiseren zodra DOM klaar is
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", initSubmenus);
+} else {
+  initSubmenus();
+}

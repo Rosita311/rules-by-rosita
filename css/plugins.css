@@ -1,0 +1,185 @@
+/* Forminator */
+/* Custom styling  for the Forminator contactform is in theme.css under 'Forms'. */
+
+ /* Complianz Cookie Banner Styling */
+
+ /* Manage consent */
+ body #cmplz-manage-consent .cmplz-manage-consent {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-text);
+    background-color: var(--color-background);
+    border: 2px solid var(--color-accent);
+    border-radius: 0.25rem;
+    padding: 1rem;
+    height: auto;
+    right: 10rem;
+    box-shadow: none;
+
+    &:focus {
+        outline: 3px solid var(--color-text);
+        outline-offset: 2px;
+    }
+ }
+
+/* Banner container */
+body #cmplz-cookiebanner-container .cmplz-cookiebanner {
+    background-color: var(--color-background);
+    color: var(--color-text);
+    font-family: var(--font-body);
+    font-size: 1rem;
+    border: 2px solid var(--color-accent);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    box-shadow: none;
+}
+
+/* Titel */
+body #cmplz-cookiebanner-container .cmplz-title {
+    color: var(--color-text);
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Sluitknop */
+body #cmplz-cookiebanner-container .cmplz-close svg {
+    stroke: var(--color-text);
+    fill: var(--color-text);
+    transition: opacity 0.2s ease-in-out;
+
+      &:focus {
+        outline: 3px solid var(--color-text);
+        outline-offset: 2px;
+    }
+}
+body #cmplz-cookiebanner-container .cmplz-close:hover svg {
+    opacity: 0.7;
+}
+
+/* Bannertekst */
+body #cmplz-cookiebanner-container .cmplz-message,
+body #cmplz-cookiebanner-container .cmplz-message p {
+    color: var(--color-text);
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Links */
+body #cmplz-cookiebanner-container .cmplz-link {
+    font-size: 1rem;
+    color: var(--color-primary);
+    text-decoration: underline;
+
+      &:focus {
+        outline: 3px solid var(--color-text);
+        outline-offset: 2px;
+    }
+}
+body #cmplz-cookiebanner-container .cmplz-link:hover {
+    text-decoration: none;
+}
+
+/* Buttons */
+body #cmplz-cookiebanner-container .cmplz-btn {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: 600;
+    height: auto;
+    border-radius: 0.25rem;
+    padding: 0.75rem 1.5rem;
+
+      &:focus {
+        outline: 3px solid var(--color-text);
+        outline-offset: 2px;
+    }
+}
+
+/* Accept, Deny & preferences */
+body #cmplz-cookiebanner-container .cmplz-btn.cmplz-accept,
+body #cmplz-cookiebanner-container .cmplz-btn.cmplz-deny {
+    background-color: var(--color-primary);
+    color: var(--color-background);
+    border: none;
+}
+body #cmplz-cookiebanner-container .cmplz-btn.cmplz-accept:hover,
+body #cmplz-cookiebanner-container .cmplz-btn.cmplz-deny:hover {
+    background-color: var(--color-accent);
+    color: var(--color-bg-light);
+}
+
+body .cmplz-cookiebanner .cmplz-buttons .cmplz-btn.cmplz-view-preferences,
+body .cmplz-cookiebanner .cmplz-buttons .cmplz-btn.cmplz-save-preferences {
+  font-weight: 500;
+  background-color: var(--color-background);
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.25rem;;
+  color: var(--color-text);
+  border: none;
+
+  &:hover {
+    background-color: var(--color-accent-2);
+  }
+}
+
+/* Manage Consent modal */
+body #cmplz-manage-consent-container {
+    background-color: var(--color-background);
+    color: var(--color-text);
+    font-family: var(--font-body);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid var(--color-text);
+}
+
+/* Dropdown titles */
+body #cmplz-manage-consent-container summary {
+    background-color: var(--color-background);
+    color: var(--color-text);
+    font-weight: 500;
+    cursor: pointer;
+}
+
+/* Category sections */
+body .cmplz-cookiebanner .cmplz-categories .cmplz-category {
+    background-color: var(--color-accent-2);
+}
+
+body .cmplz-cookiebanner .cmplz-categories .cmplz-category .cmplz-category-header .cmplz-always-active {
+    color: var(--color-text);
+}
+
+body .cmplz-cookiebanner .cmplz-categories .cmplz-category .cmplz-category-header .cmplz-category-title {
+    color: var(--color-text);
+    font-weight: 600;
+}
+body .cmplz-cookiebanner .cmplz-categories .cmplz-category .cmplz-description{
+    color: var(--color-text);
+    font-size: 0.9rem;
+}
+
+/* Iconen (sluitknop, pijltjes, switches) */
+body #cmplz-cookiebanner-container .cmplz-icon svg,
+body #cmplz-manage-consent-container .cmplz-icon svg,
+body .cmplz-cookiebanner .cmplz-close svg,
+.cmplz-cookiebanner .cmplz-close path {
+    stroke: var(--color-text);
+    fill: var(--color-text);
+}
+body #cmplz-cookiebanner-container .cmplz-dropdown summary::after,
+body #cmplz-manage-consent-container .cmplz-switch::after {
+    color: var(--color-text);
+}
+
+/* Toggles */
+body #cmplz-manage-consent-container .cmplz-switch {
+    background-color: var(--color-primary);
+}
+
+.cmplz-btn:focus,
+.cmplz-link:focus,
+.cmplz-switch:focus {
+    outline: 2px solid var(--color-text);
+    outline-offset: 2px;
+}

@@ -1,0 +1,96 @@
+/* Editor Styles: Variabelen en basisstijl */
+
+/* Light Mode */
+:root {
+ 
+  /* Font weights */
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+
+  /* Fonts */
+  --font-body: "Nunito", sans-serif;
+  --font-heading: "Zilla Slab", serif;
+
+  /* Kleuren */
+  --color-text: #192324;
+  --color-text-dark: rgba(255, 255, 255, 0.87);
+  --color-primary: #d7233e;
+  --color-accent: #f8c9d7;
+  --color-accent-2: #ebebeb;
+  --color-footer: #cbeef3;
+  --color-contrast: #49b3c1;
+  --color-background: #f8f4f5;
+  --color-bg-dark: #f8f4f5;
+  --color-bg-light: #192324;
+  --color-placeholder: #6E6E6E;
+  --color-menu-button-hover: #f8c9d7;
+  --color-button-hover: #e38ca6;
+  --color-primary-btn-text: #f8f4f5;
+  --color-plumbob: #7ecf3a;
+  --color-plumbob-hover: #aaff66;
+}
+
+/* Dark Mode */
+body.darkmode {
+  --color-text: rgba(255, 255, 255, 0.87);
+  --color-text-dark: rgba(255, 255, 255, 0.87);
+  --color-primary: #f7636f;
+  --color-accent: #e38ca6;
+  --color-accent-2: #293a3d;
+  --color-footer: #103c42;
+  --color-contrast: #45a4b0;
+  --color-background: #192324;
+  --color-bg-light: #192324;
+  --color-card-bg: #293a3d;
+  --color-placeholder: #8A8A8A;
+  --color-menu-button-hover: #293a3d;
+  --color-button-hover: #e38ca6;
+  --color-primary-btn-text: #192324;
+  --color-plumbob: #7ecf3a;
+  --color-plumbob-hover: #b6ff7e;
+}
+
+/* Basis Gutenberg editor styling */
+body {
+  background-color: var(--wp--preset--color--background);
+  color: var(--wp--preset--color--text);
+}
+
+a {
+  color: var(--wp--preset--color--primary);
+} 
+
+body.block-editor-page {
+  font-family: var(--font-body);
+  color: var(--color-text);
+  background-color: var(--color-background);
+}
+
+.editor-styles-wrapper h1,
+.editor-styles-wrapper h2,
+.editor-styles-wrapper h3,
+.editor-styles-wrapper h4,
+.editor-styles-wrapper h5,
+.editor-styles-wrapper h6 {
+  font-family: var(--font-heading);
+}
+
+.editor-styles-wrapper p {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--color-text);
+}
+
+/* Links in de editor */
+.editor-styles-wrapper a {
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+
+.editor-styles-wrapper a:hover {
+  text-decoration: none;
+}
+
+

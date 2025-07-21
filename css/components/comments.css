@@ -1,0 +1,112 @@
+/* Reactiesectie */
+
+/* Titel reacties */
+.post-comments-wrapper h2 {
+  font-size: 2rem;
+}
+
+.comments-title {
+  font-size: 1.25rem;
+  color: var(--color-text);
+  margin: 0.5rem 0;
+}
+
+.post-comments h3 {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Lijst met reacties */
+
+ol.comment-list {
+  list-style: none !important;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+ol.comment-list > li:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+/* Individuele reactie */
+.comment {
+  margin: 2rem 0;
+  padding: 1.5rem 2rem;
+  border: 1px solid var(--color-accent);
+  border-radius: 0.25rem;
+}
+
+.children .comment {
+  border: none;
+  padding-left: 1.5rem; /* inspringen */
+  margin-bottom: 1rem;
+  list-style-type: none;
+  border-top: 2px dashed var(--color-accent-2);
+}
+
+/* Avatar */
+.comment .avatar {
+  float: left;
+  margin: 0 1rem 0 0;
+  border-radius: 50%;
+  width: 4rem;
+  height: 4rem;
+  object-fit: cover;
+}
+
+/* Reactietekst */
+.comment .comment-content {
+  overflow: hidden;
+}
+
+/* Auteur naam */
+.comment .comment-author {
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+  display: block;
+  color: var(--color-text);
+  font-size: 1.25rem;
+}
+
+/* Metadata (datum, etc) */
+.comment .comment-meta {
+  font-size: 1rem;
+  color: var(--color-text);
+  margin-bottom: 1rem;
+}
+
+/* Antwoordlink */
+.comment-reply-link {
+  display: inline-block;
+  margin: 0.5rem 0 2rem 0;
+  font-size: 0.9rem;
+  color: var(--color-primary);
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+a#cancel-comment-reply-link {
+  margin-left: 2rem;
+  font-family: var(--font-body);
+  font-size: 1rem;
+}
+
+/* Reactie in afwachting */
+.comment-awaiting-moderation {
+  font-style: italic;
+  margin-top: 0.5rem;
+}
+
+.comment-error {
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  margin-top: 0.5rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+}

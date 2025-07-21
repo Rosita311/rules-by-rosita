@@ -1,34 +1,3 @@
-.screen-reader-text,
-.skip-link {
-  position: absolute;
-  top: -5rem;
-  background-color: var(--color-background);
-  color: var(--color-text);
-  padding: 0.75rem 1.5rem;
-  margin: 0;
-  font-family: var(--font-body);
-  font-size: 1rem;
-  font-weight: 600;
-}
-
-.screen-reader-text:focus,
-.skip-link:focus {
-  top: 2.5rem;
-  left: 1rem;
-  z-index: 100;
-}
-
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  border: 0;
-}
-
 .accessibility-button,
 .back-to-top {
   position: fixed !important;
@@ -161,6 +130,52 @@
   margin-bottom: 1rem;
 }
 
+#accessibility-settings button {
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s;
+
+  &:hover {
+    background-color: var(--color-menu-button-hover);
+    color: var(--color-text);
+  }
+
+  &:focus-visible {
+    background-color: var(--color-text);
+    color: var(--color-background);
+    outline: 2px solid var(--color-text);
+  }
+}
+
+#accessibility-settings button:focus-visible svg {
+  stroke: var(--color-background);
+}
+
+#close-accessibility {
+  padding: 4px !important;
+  border-radius: 50% !important;
+  justify-content: center !important;
+  align-items: center !important;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+#accessibility-settings button[aria-pressed="true"] {
+  background-color: var(--color-contrast);
+  color: var(--color-bg-light);
+  font-weight: 700;
+}
+
+#accessibility-settings button[aria-pressed="true"] svg {
+  stroke: var(--color-bg-light);
+}
+
 .accessibility-group {
   margin-top: 1rem;
 }
@@ -201,7 +216,6 @@ body.dyslexic-font button,
 body.dyslexic-font input,
 body.dyslexic-font textarea,
 body.dyslexic-font label,
-body.dyslexic-font #search-overlay label,
 body.dyslexic-font strong,
 body.dyslexic-font em,
 body.dyslexic-font blockquote,
@@ -209,9 +223,6 @@ body.dyslexic-font td,
 body.dyslexic-font th,
 body.dyslexic-font .accessibility-tooltip,
 body.dyslexic-font .back-to-top-tooltip,
-body.dyslexic-font .btn,
-body.dyslexic-font .field-error,
-body.dyslexic-font .comment-error,
 body.dyslexic-font .page-title nav p {
   font-family: "Atkinson Hyperlegible", Arial, sans-serif;
 }
@@ -221,10 +232,7 @@ body.dyslexic-font h2,
 body.dyslexic-font h3,
 body.dyslexic-font h4,
 body.dyslexic-font h5,
-body.dyslexic-font h6,
-body.dyslexic-font .field-error,
-body.dyslexic-font #search-overlay label,
-body.dyslexic-font .comment-error {
+body.dyslexic-font h6 {
   font-weight: 700;
 }
 
@@ -260,8 +268,7 @@ html.large-text {
   --color-accent-2: var(--hc-bg);
   --color-contrast: var(--hc-accent);
   --color-footer: var(--hc-bg);
-  --color-placeholder: var(--hc-focus);
-  --color-icon-button-hover: var(--hc-accent);
+  --color-menu-button-hover: var(--hc-accent);
   --color-button-hover: var(--hc-accent);
   --color-primary-btn-text: var(--hc-bg);
   --color-page-hero-bg: var(--hc-bg);
@@ -274,32 +281,14 @@ body.high-contrast .dotted-background-blue {
   background-image: none;
   background-color: var(--color-background);
 }
-.high-contrast .btn-icon-large:hover,
-.high-contrast .btn-icon-small:hover {
-  background-color: var(--color-icon-button-hover);
+.high-contrast #accessibility-settings button:hover {
+  background-color: var(--color-menu-button-hover);
   color: var(--color-background);
 }
-.high-contrast .btn-icon-large:hover svg,
-.high-contrast .btn-icon-small:hover svg {
+.high-contrast .menu-button:hover svg,
+.high-contrast #theme-switch:hover svg,
+.high-contrast #accessibility-settings button:hover svg {
   stroke: var(--color-background);
-}
-
-.high-contrast #open-sidebar-button svg,
-.high-contrast #close-sidebar-button svg {
- stroke: var(--color-text)
-}
-
-.high-contrast .btn-secondary:hover,
-.high-contrast .btn-secondary:focus-visible,
-.high-contrast .card-page-content:hover .btn-secondary {
-  background-color: var(--color-accent); 
-  color: var(--color-background); 
-}
-.high-contrast .card {
-  border: 1px solid var(--color-text);
-}
-.high-contrast .card:hover {
-  border: 1px solid var(--color-contrast)
 }
 
 /* Algemene focusstijl in high contrast modus */
@@ -317,28 +306,10 @@ body.high-contrast .dotted-background-blue {
 .high-contrast .footer-menu nav a:focus-visible,
 .high-contrast .footer-btn:focus-visible,
 .high-contrast .has-submenu > button.submenu-toggle:focus-visible,
-.high-contrast #accessibility-settings button:focus-visible,
-.high-contrast .search-input:focus {
+.high-contrast #accessibility-settings button:focus-visible {
   outline: 3px solid var(--hc-focus);
   outline-offset: 2px;
   transition: none; /* Geen animatie voor directe visuele feedback */
-}
-
-.high-contrast .logo-red-part {
-  fill: var(--hc-danger) !important;
-}
-
-.high-contrast .field-error {
-  color: var(--hc-danger);
-  font-size: 1rem;
-  font-weight: 600;
-  margin-top: 0.5rem;
-}
-
-.high-contrast .comment-error {
-  color: var(--hc-danger) !important;
-  border: 2px solid var(--hc-danger);
-  font-size: 1rem;
 }
 
 .high-contrast #theme-switch {
@@ -380,59 +351,6 @@ body.high-contrast .dotted-background-blue {
 }
 
 /* Media Queries */
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation: none !important;
-    transition: none !important;
-    scroll-behavior: auto !important;
-  }
-
-  #header-nav a::after,
-  .has-submenu > button.submenu-toggle::after,
-  .has-submenu > button.submenu-toggle[aria-current="page"]::after {
-    transition: none;
-  }
-
-  #header-nav > ul > li > a::after,
-  #header-nav > ul > li > a:hover::after,
-  #header-nav > ul > li > a[aria-current="page"]:hover::after {
-    transition: none !important;
-    animation: none !important;
-  }
-
-  .has-submenu > button.submenu-toggle::after {
-    transition: none !important;
-  }
-
-  .submenu-toggle[aria-expanded="true"] .chevron {
-    transform: none !important;
-  }
-
-  .page-title {
-    animation: none;
-    opacity: 1 !important;
-    transform: none;
-  }
-
-  .back-to-top,
-  .accessibility-button {
-    transition: none !important;
-    scroll-behavior: auto;
-    opacity: 1;
-  }
-
-  .back-to-top.show,
-  .accessibility-button.show {
-    opacity: 1;
-  }
-
-  .back-to-top:hover,
-  .accessibility-button:hover {
-    transform: none !important;
-  }
-}
 
 @media screen and (max-width: 768px) {
   #accessibility-settings {

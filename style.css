@@ -1,0 +1,43 @@
+/*
+Theme Name: Rules by Rosita
+Author: Rosita Rampertaap
+Author URI: https://rulesbyrosita.nl
+Theme URI: https://rulesbyrosita.nl
+Description: Een modern, schaalbaar thema met darkmode en toegankelijkheid.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: rules-by-rosita
+Tags: custom-background, custom-logo, block-styles, translation-ready
+Copyright: Copyright (c) 2025 Rosita Rampertaap
+Tested up to: 6.8
+Requires PHP: 7.4
+*/
+
+/* Imports */
+@import "css/reset.css";
+
+/* Fallback JS Disabled */
+@import "css/fallback.css";
+
+/* Theme styles */
+@import "css/theme.css";
+@import "css/accessibility.css";
+@import "css/plugins.css"; 
+
+/* Components */
+@import "css/components/header.css";
+@import "css/components/footer.css";
+@import "css/components/hero.css";
+@import "css/components/card.css";
+@import "css/components/comments.css";
+@import "css/components/sidebar-single.css";
+
+/* Pages */
+@import "css/pages/page.css";
+@import "css/pages/single.css";
+@import "css/pages/search.css";
+
+/* Extra */
+@import "css/experiment.css";
+

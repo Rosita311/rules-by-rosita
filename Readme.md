@@ -132,6 +132,12 @@ Een minimalistische en heldere stijl, afgestemd op leesbaarheid en eenvoud.
 - **Google Fonts** – Voor typografie (`Nunito` & `Zilla Slab`)  
   [https://fonts.google.com](https://fonts.google.com)
 
+- **Forminator Documentation** – Plugin documentatie 
+  [https://wpmudev.com/docs/wpmu-dev-plugins/forminator/] (https://wpmudev.com/docs/wpmu-dev-plugins/forminator/)
+
+- **Complianz Documentation** – Plugin documentatie
+  [https://complianz.io/support/#documentation] (https://complianz.io/support/#documentation)
+
 ---
 
 ## Licentie
@@ -331,6 +337,12 @@ See the [Devlog](#devlog) for a detailed overview of completed features and upco
 
 - **Google Fonts** – Typography (`Nunito` & `Zilla Slab`)  
   [https://fonts.google.com](https://fonts.google.com)
+
+  **Forminator Dovumentation** – plugin documentation 
+  [https://wpmudev.com/docs/wpmu-dev-plugins/forminator/] (https://wpmudev.com/docs/wpmu-dev-plugins/forminator/)
+
+- **Complianz Documentation** – Plugin documentation
+  [https://complianz.io/support/#documentation] (https://complianz.io/support/#documentation)
 
 ---
 
