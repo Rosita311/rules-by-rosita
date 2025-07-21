@@ -6,9 +6,11 @@ function rules_by_rosita_setup() {
     add_theme_support('title-tag');
     add_theme_support('post-thumbnails');
     add_theme_support('editor-styles');
-    add_editor_style('editor-style.css'); // Editor-specific CSS
+    add_editor_style('editor-style.css');
+    add_theme_support('automatic-feed-links'); 
 }
 add_action('after_setup_theme', 'rules_by_rosita_setup');
+
 
 /* Enqueue styles and scripts */
 function rules_by_rosita_enqueue_assets() {
