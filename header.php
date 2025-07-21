@@ -73,7 +73,7 @@
             'container' => false,
             'menu_class' => '',
             'items_wrap' => '<ul>%3$s</ul>',
-            'walker' => new Rules_Walker_Nav_Menu()
+            'walker' => new Rules_by_rosita_Walker_Nav_Menu()
           ]);
           ?>
 

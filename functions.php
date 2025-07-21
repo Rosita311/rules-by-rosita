@@ -1,5 +1,5 @@
 <?php
-require_once get_template_directory() . '/inc/class-rules-walker-nav-menu.php';
+require_once get_template_directory() . '/inc/menu-walker.php';
 
 /* Theme setup */
 function rules_by_rosita_setup() {
@@ -155,7 +155,7 @@ function rules_by_rosita_comment_privacy_check( $commentdata ) {
 add_filter( 'preprocess_comment', 'rules_by_rosita_comment_privacy_check' );
 
 /* Remove editor from front page and posts page */
-function rules_by_rosita_remove_editor_from_front_page() {
+function rules_by_rosita_remove_editor() {
     if ( !is_admin() || !isset( $_GET['post'] ) ) {
         return;
     }
@@ -168,5 +168,5 @@ function rules_by_rosita_remove_editor_from_front_page() {
         remove_post_type_support( 'page', 'editor' );
     }
 }
-add_action( 'admin_init', 'rules_by_rosita_remove_editor_from_front_page' );
+add_action( 'admin_init', 'rules_by_rosita_remove_editor');
 ?>

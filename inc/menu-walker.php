@@ -1,6 +1,6 @@
 <?php
 
-class Rules_Walker_Nav_Menu extends Walker_Nav_Menu
+class Rules_by_rosita_Walker_Nav_Menu extends Walker_Nav_Menu
 {
   private $current_item;
 
