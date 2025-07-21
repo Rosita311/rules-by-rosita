@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html
-  lang="nl"
+  <?php language_attributes(); ?>
   class="no-js">
 
 <head>
