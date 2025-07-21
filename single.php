@@ -186,7 +186,14 @@ get_template_part('template-parts/accessibility-panel'); ?>
           </nav>
         </div>
         <div class="entry-content">
-          <?php the_content(); ?>
+          <?php the_content();
+          the_content();
+
+          wp_link_pages(array(
+            'before' => '<div class="page-links">' . __('Pages:', 'rules-by-rosita'),
+            'after'  => '</div>',
+          ));
+          ?>
         </div>
         <!-- Pagination -->
         <?php

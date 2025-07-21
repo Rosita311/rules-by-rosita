@@ -9,7 +9,8 @@
   <?php wp_head(); ?>
 </head>
 
-<body>
+<body <?php body_class(); ?>>
+   <?php wp_body_open(); ?>
   <a
     href="#main-content"
     class="skip-link">Sla het menu over</a>

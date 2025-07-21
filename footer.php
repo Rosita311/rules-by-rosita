@@ -40,7 +40,7 @@
               </div>
               <p>Dit is een testformulier — Jetpack werkt pas op een live site.</p>
           </form>
-          <a href="<?php echo home_url('/dit-bestaat-niet'); ?>">Bekijk de 404</a>
+          <a href="<?php echo esc_url(home_url('/dit-bestaat-niet')); ?>">Bekijk de 404</a>
         </div>
       </div>
 

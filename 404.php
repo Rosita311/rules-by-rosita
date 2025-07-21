@@ -31,7 +31,7 @@ get_template_part('template-parts/accessibility-panel'); ?>
         <div class="not-found-image-wrapper">
           <div class="not-found-image dotted-background-blue">
             <img
-              src="<?php echo get_template_directory_uri(); ?>/assets/404-image.png"
+              src="<?php echo esc_url(get_template_directory_uri() . '/assets/404-image.png'); ?>"
               alt="Illustratie van een 404 foutmelding met een verkeerspilon en een waarschuwingsbord"
               loading="lazy"
               width="400"
