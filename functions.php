@@ -9,6 +9,14 @@ function rules_by_rosita_setup()
     add_theme_support('editor-styles');
     add_editor_style('editor-style.css');
     add_theme_support('automatic-feed-links');
+
+    add_theme_support('wp-block-styles');
+    add_theme_support('responsive-embeds');
+    add_theme_support('html5', array('search-form', 'comment-form', 'comment-list', 'gallery', 'caption', 'style', 'script'));
+    add_theme_support('custom-logo');
+    add_theme_support('custom-header');
+    add_theme_support('custom-background');
+    add_theme_support('align-wide');
 }
 add_action('after_setup_theme', 'rules_by_rosita_setup');
 
