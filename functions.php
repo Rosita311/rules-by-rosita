@@ -89,7 +89,7 @@ add_action('widgets_init', 'rules_by_rosita_register_sidebars');
 /* Customizer settings */
 function rules_by_rosita_customize_register( $wp_customize ) {
     $wp_customize->add_section( 'social_settings', array(
-        'title'    => __( 'Social Media', 'rules_by_rosita' ),
+        'title'    => __( 'Social Media', 'rules-by-rosita' ),
         'priority' => 30,
     ) );
 
@@ -110,7 +110,7 @@ function rules_by_rosita_customize_register( $wp_customize ) {
         ) );
 
         $wp_customize->add_control( "rules_by_rosita_{$key}_url", array(
-            'label'   => __( $label, 'rules_by_rosita' ),
+            'label'   => __( $label, 'rules-by-rosita' ),
             'section' => 'social_settings',
             'type'    => 'url',
         ) );

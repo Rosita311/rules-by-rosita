@@ -53,6 +53,15 @@ body.darkmode {
 }
 
 /* Basis Gutenberg editor styling */
+body {
+  background-color: var(--wp--preset--color--background);
+  color: var(--wp--preset--color--text);
+}
+
+a {
+  color: var(--wp--preset--color--primary);
+} 
+
 body.block-editor-page {
   font-family: var(--font-body);
   color: var(--color-text);
@@ -83,4 +92,5 @@ body.block-editor-page {
 .editor-styles-wrapper a:hover {
   text-decoration: none;
 }
+
 
