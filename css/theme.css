@@ -26,6 +26,15 @@
   --color-primary-btn-text: #f8f4f5;
   --color-plumbob: #7ecf3a; /* originele Sims-groen */
   --color-plumbob-hover: #aaff66;
+
+  /* WordPress preset colors */
+  --wp--preset--color--primary: var(--color-primary);
+  --wp--preset--color--accent: var(--color-accent);
+  --wp--preset--color--accent-2: var(--color-accent-2);
+  --wp--preset--color--footer: var(--color-footer);
+  --wp--preset--color--contrast: var(--color-contrast);
+  --wp--preset--color--background: var(--color-background);
+  --wp--preset--color--placeholder: var(--color-placeholder);
 }
 
 /* Darkmode */
@@ -46,6 +55,63 @@
   --color-primary-btn-text: #192324;
   --color-plumbob: #7ecf3a;
   --color-plumbob-hover: #b6ff7e;
+}
+
+/* Colorpalette theme.json */
+ .has-text-color {
+  color: var(--color-text) !important;
+}
+ .has-text-background-color {
+  color: var(--color-text) !important;
+}
+
+ .has-primary-color {
+  color: var(--color-primary) !important;
+}
+ .has-primary-background-color {
+  color: var(--color-primary) !important;
+}
+
+ .has-accent-color{
+  color: var(--color-accent) !important;
+}
+ .has-accent-background-color {
+  background-color: var(--color-accent) !important;
+}
+
+ .has-accent-2-color {
+  color: var(--color-accent-2) !important;
+}
+ .has-accent-2-background-color {
+  background-color: var(--color-accent-2) !important;
+}
+
+ .has-footer-color {
+  color: var(--color-footer) !important;
+}
+ .has-footer-background-color {
+  background-color: var(--color-footer) !important;
+}
+
+ .has-contrast-color {
+  color: var(--color-contrast) !important;
+}
+ .has-contrast-background-color {
+  background-color: var(--color-contrast) !important;
+}
+
+ .has-background-color {
+  color: var(--color-background) !important;
+}
+ .has-background-background-color {
+  background-color: var(--color-background) !important;
+}
+
+ .has-placeholder-color{
+  color: var(--color-placeholder) !important;
+}
+.has-placeholder-background-color {
+  background-color: var(--color-placeholder) !important;
 }
 
 /* Global styles */

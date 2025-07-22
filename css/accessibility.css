@@ -324,6 +324,28 @@ body.high-contrast .dotted-background-blue {
   transition: none; /* Geen animatie voor directe visuele feedback */
 }
 
+.high-contrast .has-text-color,
+.high-contrast .has-primary-color,
+.high-contrast .has-accent-color, 
+.high-contrast .has-accent-2-color,
+.high-contrast .has-footer-color,
+.high-contrast .has-contrast-color,
+.high-contrast .has-background-color, 
+.high-contrast .has-placeholder-color {
+  color: var(--hc-focus) !important;
+}
+
+ .high-contrast .has-text-background-color,
+ .high-contrast .has-primary-background-color,
+ .high-contrast .has-accent-background-color,
+ .high-contrast .has-accent-2-background-color,
+ .high-contrast .has-footer-background-color,
+ .high-contrast .has-contrast-background-color,
+ .high-contrast .has-background-background-color,
+ .high-contrast .has-placeholder-background-color {
+  background-color: var(--hc-bg) !important;
+}
+
 .high-contrast .logo-red-part {
   fill: var(--hc-danger) !important;
 }
