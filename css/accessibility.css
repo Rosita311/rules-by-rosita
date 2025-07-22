@@ -302,6 +302,18 @@ body.high-contrast .dotted-background-blue {
   border: 1px solid var(--color-contrast)
 }
 
+/* Links in high-contrast */
+.high-contrast a,
+.high-contrast a:visited {
+  color: var(--hc-accent) !important;
+}
+
+.high-contrast a:hover,
+.high-contrast a:focus {
+  color: var(--hc-focus) !important; /* Of een andere hoverkleur */
+  text-decoration: underline !important;
+}
+
 /* Algemene focusstijl in high contrast modus */
 .high-contrast :focus-visible,
 .high-contrast a:focus-visible,
