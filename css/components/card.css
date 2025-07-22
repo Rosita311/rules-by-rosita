@@ -111,7 +111,7 @@ body:not(.user-is-tabbing) .hero-card-content:focus-within {
 .card-content:hover .btn-primary,
 .hero-card-content:hover .btn-primary {
   background-color: var(--color-accent);
-  color: var(--color-bg-light);
+  color: var(--color-bg-light) !important;
   transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 

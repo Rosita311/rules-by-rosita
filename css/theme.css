@@ -394,12 +394,12 @@ button {
   font-family: var(--font-body);
   font-size: 1.125rem;
   font-weight: 500;
-  color: var(--color-text);
+  color: var(--color-text) !important;
 }
 
 .btn-primary {
   background-color: var(--color-primary);
-  color: var(--color-primary-btn-text);
+  color: var(--color-primary-btn-text) !important;
   border: none;
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
@@ -410,7 +410,7 @@ button {
 .comment-form input[type="submit"],
 .forminator-ui .forminator-button {
   background-color: var(--color-contrast);
-  color: var(--color-bg-light);
+  color: var(--color-bg-light)!important;
   text-decoration: none;
   border: none;
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
@@ -421,7 +421,7 @@ button {
 .comment-form input[type="submit"]:hover,
 .forminator-ui .forminator-button:hover {
   background-color: var(--color-footer);
-  color: var(--color-text);
+  color: var(--color-text) !important;
 }
 
 .btn-secondary:focus-visible,
