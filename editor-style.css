@@ -84,6 +84,10 @@ body.block-editor-page {
 .editor-styles-wrapper h5,
 .editor-styles-wrapper h6 {
   font-family: var(--font-heading);
+  font-weight: var(--font-weight-regular);
+  color: var(--color-text);
+  margin: 0 0 1rem;
+
 }
 
 .editor-styles-wrapper p {
@@ -102,4 +106,26 @@ body.block-editor-page {
   text-decoration: none;
 }
 
+.wp-block-button__link {
+  background-color: var(--color-contrast);
+  color: var(--color-bg-light);
+  text-decoration: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.25rem;
+  width: fit-content;
+  font-family: var(--font-body);
+  font-size: 1.125rem;
+  font-weight: 500;
+  border: none;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  margin-bottom: 1rem;
+}
+.wp-block-button__link:hover {
+  background-color: var(--color-footer);
+  color: var(--color-text);
+}
+.wp-block-button__link:focus {
+  outline: 3px solid var(--color-text);
+  outline-offset: 2px;
+}
 
