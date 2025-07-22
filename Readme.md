@@ -80,6 +80,7 @@ Een minimalistische en heldere stijl, afgestemd op leesbaarheid en eenvoud.
 - **Dark mode** met systeemvoorkeur en handmatige schakelaar via `localStorage`.
 - **Semantische HTML** en **ARIA-rollen** voor betere schermlezerondersteuning.
 - **Tabvolgorde** die aansluit op visuele en functionele logica van de interface.
+- **Toegankelijkheidsinstellingen menu** met opties voor Leesbaar font, Hoog contrast, grotere teksten en animaties uitschakelen
 
 ---
 
@@ -175,15 +176,23 @@ Pull requests en suggesties zijn welkom, maar houd er rekening mee dat dit een p
 - Basic zoekpagina toegevoegd
 - `page.html` als structuurtemplate voor o.a. 404-pagina’s en andere pagina’s
 - **Back to top-knop ontworpen, geïmplementeerd en getest** (toegankelijk, mobielvriendelijk, met animatie en voorkeuren voor `reduced motion`)
+- Toegankelijkheidstest: WAVE & Lighthouse
+- Consistente focusstijl (light & dark mode)
+- Zoekfunctie geïntegreerd in WordPress
+- WordPress PHP-integratie afgerond (loop, dynamische content, template parts) 
+- Instellingenmenu voltooid (incl. dark mode toggle)
+- Correcte headingstructuur (één <h1>, logische hiërarchie)
+- Semantische HTML + ARIA-implementatie
+- Animaties met prefers-reduced-motion
+- Submenu met toetsenbordnavigatie + ARIA
+- Basic zoekpagina
+
 
 ### Nog te doen
 
-- Consistente focusstijl toevoegen (voor buttons, links, inputs – in light & dark mode)
-- Zoekfunctie verder integreren in WordPress-thema
-- WordPress PHP-integratie voltooien (loop, dynamic content, template parts)
-- Logo optimaliseren voor light en dark mode
-- Favicon aanpassen (licht/donker)
-- Instellingenmenu inbouwen
+- Favicon aanpassen 
+- Logo optimaliseren
+- robots.txt en sitemap.xml bij publicatie (Yoast kan dit deels regelen)
 - Toegankelijkheid testen met tools als WAVE (gebeurt tijdens het hele proces)
 
 ### SEO-taken
