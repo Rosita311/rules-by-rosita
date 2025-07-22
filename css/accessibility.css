@@ -265,8 +265,8 @@ html.large-text {
   --color-button-hover: var(--hc-accent);
   --color-primary-btn-text: var(--hc-bg);
   --color-page-hero-bg: var(--hc-bg);
-  --color-plumbob: var(--hc-accent);
-  --color-plumbob-hover: var(--hc-focus);
+  --color-plumbob: #00FF00;
+  --color-plumbob-hover: #7FFF00;
 }
 
 body.high-contrast .dotted-background-pink,
@@ -310,7 +310,7 @@ body.high-contrast .dotted-background-blue {
 
 .high-contrast a:hover,
 .high-contrast a:focus {
-  color: var(--hc-focus) !important; /* Of een andere hoverkleur */
+  color: var(--hc-danger) !important; /* Of een andere hoverkleur */
   text-decoration: underline !important;
 }
 
