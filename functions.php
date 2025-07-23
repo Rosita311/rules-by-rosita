@@ -277,7 +277,7 @@ function rules_by_rosita_duplicate_post_link($actions, $post) {
             'admin.php?action=rules_by_rosita_duplicate_post_as_draft&post=' . $post->ID,
             'rules_by_rosita_duplicate_post'
         );
-        $actions['duplicate'] = '<a href="' . esc_url($duplicate_url) . '" title="Duplicate this item">Dupliceren</a>';
+        $actions['duplicate'] = '<a href="' . esc_url($duplicate_url) . '" title="Dupliceer dit item">Dupliceren</a>';
     }
     return $actions;
 }
