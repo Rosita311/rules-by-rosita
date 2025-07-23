@@ -200,14 +200,10 @@ Pull requests en suggesties zijn welkom, maar houd er rekening mee dat dit een p
 
 ### SEO-taken
 
-- Voeg `<title>` en `<meta name="description">` toe per pagina of dynamisch via WordPress
-- Zorg voor juiste heading-structuur (één `<h1>`, hiërarchisch correct)
-- Gebruik beschrijvende alt-teksten voor afbeeldingen
-- Voeg `aria-label`s en `role`-attributen toe waar nodig voor screenreaders
-- Gebruik semantische HTML-elementen (`<main>`, `<article>`, `<nav>`, etc.)
-- Voeg `robots.txt` en eventueel een sitemap.xml toe bij live publicatie
-- Zorg dat paginatitels en URLs duidelijk zijn (permalinks in WordPress)
+- Voeg `robots.txt` en eventueel een sitemap.xml toe bij live publicatie (Yoast maakt meestal een virtuele, maar check)
+- Zorg dat paginatitels en URLs duidelijk zijn (permalinks in WordPress) (SEO-vriendelijk: /post-name/)
 - Controleer performance en SEO via tools zoals Lighthouse of PageSpeed Insights
+- Sitemap.xml beschikbaar (Yoast regelt dit, test via /sitemap_index.xml).
 
 ### Ideeën voor later
 
@@ -419,14 +415,10 @@ Pull requests and suggestions are welcome, but keep in mind this is a personal p
 
 ### SEO Tasks
 
-- Add `<title>` and `<meta name="description">` per page or dynamically via WordPress
-- Ensure correct heading structure (one `<h1>`, hierarchical)
-- Use descriptive alt texts for images
-- Add `aria-label`s and `role` attributes where needed for screen readers
-- Use semantic HTML elements (`<main>`, `<article>`, `<nav>`, etc.)
-- Add `robots.txt` and sitemap.xml on live deployment
-- Make sure page titles and URLs are clear (permalinks in WordPress)
-- Check performance and SEO with tools like Lighthouse or PageSpeed Insights
+- Add `robots.txt` and, if necessary, a sitemap.xml when publishing live (Yoast usually creates a virtual one, but check).
+- Ensure page titles and URLs are clear (permalinks in WordPress) (SEO-friendly: /post-name/).
+- Check performance and SEO using tools like Lighthouse or PageSpeed Insights.
+- Sitemap.xml available (Yoast handles this; test via /sitemap_index.xml).
 
 ### Ideas for Later
 
