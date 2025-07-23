@@ -179,6 +179,8 @@ Pull requests en suggesties zijn welkom, maar houd er rekening mee dat dit een p
 - Toegankelijkheidstest: WAVE & Lighthouse
 - Consistente focusstijl (light & dark mode)
 - Zoekfunctie geïntegreerd in WordPress
+- Favicon aangepast 
+- Logo geoptimaliseerd
 - WordPress PHP-integratie afgerond (loop, dynamische content, template parts) 
 - Instellingenmenu voltooid (incl. dark mode toggle)
 - Correcte headingstructuur (één <h1>, logische hiërarchie)
@@ -187,13 +189,14 @@ Pull requests en suggesties zijn welkom, maar houd er rekening mee dat dit een p
 - Submenu met toetsenbordnavigatie + ARIA
 - Basic zoekpagina
 
-
 ### Nog te doen
 
-- Favicon aanpassen 
-- Logo optimaliseren
+
 - robots.txt en sitemap.xml bij publicatie (Yoast kan dit deels regelen)
 - Toegankelijkheid testen met tools als WAVE (gebeurt tijdens het hele proces)
+- Browsercompatibiliteit checken (Chrome, Firefox, Safari, Edge).
+- Veiligheid: wp-config en bestandstoegang goed ingesteld?
+- Backup maken van het thema en de database.
 
 ### SEO-taken
 
@@ -210,6 +213,9 @@ Pull requests en suggesties zijn welkom, maar houd er rekening mee dat dit een p
 
 - Thema omzetten naar block theme met `theme.json`
 - Custom post type maken voor gelezen boeken
+- Site-kleuren via Customizer (primary, accent, background, text).
+- Typografie via Customizer (basis en kopteksten).
+- Mogelijkheid om extra scripts toe te voegen in `<head>` (Analytics).
 
 > De footer fluistert iets… maar alleen als je goed kijkt 👀
 
@@ -373,33 +379,43 @@ Pull requests and suggestions are welcome, but keep in mind this is a personal p
 
 ### Completed
 
-- Hero section with CSS dotted pattern completed
-- Dark mode automatically set by system preference
-- Dark mode toggle added with `localStorage` persistence
-- Primary red color scheme harmonized between light and dark mode
-- Used `rem` and `em` units for scalability
-- Skiplink added for screen reader and keyboard users
-- Accessible focus styles mapped for interactive elements
-- Secondary button contrast improved in dark mode
+- Hero with CSS dot pattern finalized
+- Dark mode automatically set to system preference
+- Dark mode toggle with `localStorage` added
+- Primary red color scheme aligned between light and dark mode
+- `rem` and `em` used for scalability
+- Skiplink added for screen readers and keyboard users
+- Accessible focus style for interactive elements mapped
+- Secondary button in dark mode improved (contrast)
 - Footer edited, including link to privacy statement
 - Accessible animation added with `prefers-reduced-motion` support
-- GitHub Pages demo setup: [rulesbyrosita-theme](https://rosita311.github.io/RulesbyRosita-theme/)
+- GitHub Pages demo created: [rulesbyrosita-theme](https://rosita311.github.io/RulesbyRosita-theme/)
 - Basic design finalized
-- Page structure set up (hero, cards, typography, colors)
-- Submenu added to main menu (with keyboard navigation and ARIA attributes in mind)
+- Page structure established (hero, cards, typography, colors)
+- Submenu added to main menu (with attention to keyboard navigation and aria attributes)
 - Basic search page added
-- `page.html` template created for e.g. 404 and other pages
-- **Back to top button designed, implemented and tested** (accessible, mobile-friendly, with animation and reduced motion preferences)
+- `page.html` as structure template For 404 pages and other pages
+- Designed, implemented, and tested Back to top button (accessible, mobile-friendly, with animation and reduced motion preferences)
+- Accessibility testing: WAVE & Lighthouse
+- Consistent focus style (light & dark mode)
+- Search function integrated into WordPress
+- Adjusted favicon
+- Optimized logo
+- Completed WordPress PHP integration (loop, dynamic content, template parts)
+- Completed settings menu (including dark mode toggle)
+- Correct heading structure (one <h1>, logical hierarchy)
+- Semantic HTML + ARIA implementation
+- Animations with reduced motion preferences
+- Submenu with keyboard navigation + ARIA
+- Basic search page
 
 ### To Do
 
-- Add consistent focus styles (for buttons, links, inputs – in light & dark mode)
-- Further integrate search function in WordPress theme
-- Complete WordPress PHP integration (loop, dynamic content, template parts)
-- Optimize logo for light and dark mode
-- Adjust favicon (light/dark)
-- Build settings menu
-- Test accessibility with tools like WAVE (ongoing throughout the process)
+- Edit robots.txt and sitemap.xml upon publication (Yoast can partially handle this)
+- Test accessibility with tools like WAVE (this is done throughout the entire process)
+- Check browser compatibility (Chrome, Firefox, Safari, Edge)
+- Security: Are wp-config and file permissions configured correctly?
+- Back up the theme and database.
 
 ### SEO Tasks
 
@@ -414,8 +430,11 @@ Pull requests and suggestions are welcome, but keep in mind this is a personal p
 
 ### Ideas for Later
 
-- Convert theme to block theme with `theme.json`
-- Create custom post type for books read
+- Convert theme to block theme using `theme.json`
+- Create a custom post type for books read
+- Site colors via the Customizer (primary, accent, background, text).
+- Typography via the Customizer (basic and headings).
+- Ability to add additional scripts in `<head>` (Analytics).
 
 > The footer whispers… but only if you look closely 👀
 
