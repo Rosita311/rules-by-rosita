@@ -69,8 +69,9 @@ footer {
   width: 100%;
 }
 
+.footer-menu h2,
 .footer-widgets h2 {
-  font-size: 1.5rem;
+  font-size: 2rem;
   margin-bottom: 1rem;
   font-family: var(--font-heading);
 }
@@ -81,14 +82,6 @@ footer {
   justify-content: start;
   align-items: start;
   width: 100%;
-}
-
-.footer-menu h2,
-.footer-subscribe h2,
-.social-media h2 {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-  font-family: var(--font-heading);
 }
 
 .social-media ul {
