@@ -90,8 +90,8 @@ add_action('after_setup_theme', 'rules_by_rosita_register_menus');
 function rules_by_rosita_register_sidebars()
 {
     register_sidebar(array(
-        'name' => 'Main Sidebar',
-        'id' => 'main-sidebar',
+        'name' => 'Sidebar',
+        'id' => 'sidebar',
         'before_widget' => '<div class="widget">',
         'after_widget'  => '</div>',
         'before_title'  => '<h2 class="widget-title">',
@@ -103,7 +103,7 @@ add_action('widgets_init', 'rules_by_rosita_register_sidebars');
 /* Register footer widget area */
 function rules_by_rosita_register_footer_widgets() {
     register_sidebar( array(
-        'name'          => __( 'Footer Widgets Area', 'rules-by-rosita' ),
+        'name'          => __( 'Footer-widgetgebied', 'rules-by-rosita' ),
         'id'            => 'footer-widgets',
         'description'   => __( 'Voeg hier widgets toe die in de footer moeten worden weergegeven.', 'rules-by-rosita' ),
         'before_widget' => '<div id="%1$s" class="widget %2$s">',
