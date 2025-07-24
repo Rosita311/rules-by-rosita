@@ -53,7 +53,7 @@ footer {
   }
 }
 
-.footer-social {
+.footer-widgets-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -269,7 +269,14 @@ footer {
     gap: 2rem;
   }
 
-  .footer-social-media {
+  .footer-menu h2,
+  .footer-widgets h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-family: var(--font-heading);
+  }
+
+  .social-media {
     display: flex;
     flex-direction: column;
     justify-content: start;
