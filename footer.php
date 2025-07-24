@@ -15,6 +15,11 @@
       </div>
       <div class="footer-social">
         <div class="footer-subscribe">
+          <?php if (is_active_sidebar('footer-widgets')) : ?>
+            <div class="footer-widgets">
+              <?php dynamic_sidebar('footer-widgets'); ?>
+            </div>
+          <?php endif; ?>
           <h2>Abonneer je op mijn blog</h2>
           <div class="site-form jetpack-form">
             <?php echo do_shortcode('[jetpack_subscription_form]'); ?>

@@ -100,6 +100,21 @@ function rules_by_rosita_register_sidebars()
 }
 add_action('widgets_init', 'rules_by_rosita_register_sidebars');
 
+/* Register footer widget area */
+function rules_by_rosita_register_footer_widgets() {
+    register_sidebar( array(
+        'name'          => __( 'Footer Widgets Area', 'rules-by-rosita' ),
+        'id'            => 'footer-widgets',
+        'description'   => __( 'Voeg hier widgets toe die in de footer moeten worden weergegeven.', 'rules-by-rosita' ),
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h2 class="widget-title">',
+        'after_title'   => '</h2>',
+    ) );
+}
+add_action( 'widgets_init', 'rules_by_rosita_register_footer_widgets' );
+
+
 /* Customizer settings */
 
 function rules_by_rosita_customize_register($wp_customize)
