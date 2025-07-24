@@ -62,7 +62,20 @@ footer {
   flex-wrap: wrap;
 }
 
-.footer-social-media {
+.footer-widgets {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+}
+
+.footer-widgets h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-family: var(--font-heading);
+}
+
+.social-media {
   display: flex;
   flex-direction: column;
   justify-content: start;
@@ -72,13 +85,13 @@ footer {
 
 .footer-menu h2,
 .footer-subscribe h2,
-.footer-social-media h2 {
+.social-media h2 {
   font-size: 1.5rem;
   margin-bottom: 1rem;
   font-family: var(--font-heading);
 }
 
-.footer-social-media ul {
+.social-media ul {
   display: flex;
   width: 100%;
   background-color: transparent;
@@ -90,7 +103,7 @@ footer {
   list-style-type: none;
 }
 
-.footer-social-media li a {
+.social-media li a {
   padding: 0;
   border-radius: 50%;
   display: flex;
@@ -106,41 +119,41 @@ footer {
   }
 }
 
-.footer-social-media li svg:hover {
+.social-media li svg:hover {
   stroke: var(--color-text);
   transition: stroke 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
-.footer-social-media li {
+.social-media li {
   display: inline-block;
   padding: 0;
   cursor: pointer;
 }
 
-.footer-social-media li:hover svg {
+.social-media li:hover svg {
   stroke: var(--color-bg-light);
   transition: stroke 0.3s ease-in-out;
 }
 
-.footer-social-media li:focus svg {
+.social-media li:focus svg {
   stroke: var(--color-background);
   transition: stroke 0.3s ease-in-out;
 }
 
-.footer-social-media li svg {
+.social-media li svg {
   stroke: var(--color-text);
   fill: transparent;
   pointer-events: visiblePainted;
 }
 
-.footer-social-media a:focus-visible {
+.social-media a:focus-visible {
   background-color: var(--color-text);
   color: var(--color-background);
   border-radius: 50%;
   outline: 3px solid var(--color-text);
 }
 
-.footer-social-media a:focus-visible svg {
+.social-media a:focus-visible svg {
   stroke: var(--color-background);
 }
 
