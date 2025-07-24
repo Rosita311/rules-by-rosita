@@ -20,10 +20,6 @@
               <?php dynamic_sidebar('footer-widgets'); ?>
             </div>
           <?php endif; ?>
-          <h2>Abonneer je op mijn blog</h2>
-          <div class="site-form jetpack-form">
-            <?php echo do_shortcode('[jetpack_subscription_form]'); ?>
-          </div>
           <form
             action="#"
             method="post"
