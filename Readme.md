@@ -206,7 +206,7 @@ Pull requests en suggesties zijn welkom, maar houd er rekening mee dat dit een p
 - Logo geoptimaliseerd
 - WordPress PHP-integratie afgerond (loop, dynamische content, template parts) 
 - Instellingenmenu voltooid (incl. dark mode toggle)
-- Correcte headingstructuur (één <h1>, logische hiërarchie)
+- Correcte headingstructuur (H1 t/m H6 hiërarchie)
 - Semantische HTML + ARIA-implementatie
 - Animaties met prefers-reduced-motion
 - Submenu met toetsenbordnavigatie + ARIA
@@ -438,7 +438,7 @@ Pull requests and suggestions are welcome, but keep in mind this is a personal p
 - Optimized logo
 - Completed WordPress PHP integration (loop, dynamic content, template parts)
 - Completed settings menu (including dark mode toggle)
-- Correct heading structure (one <h1>, logical hierarchy)
+- Correct heading structure (H1 to H6 hierarchy)
 - Semantic HTML + ARIA implementation
 - Animations with reduced-motion preferences
 - Submenu with keyboard navigation + ARIA
