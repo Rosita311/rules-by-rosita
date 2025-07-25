@@ -8,6 +8,8 @@
 .comments-title {
   font-size: 1.25rem;
   color: var(--color-text);
+  display: flex;
+  flex-direction: column; 
   margin: 0.5rem 0;
 }
 

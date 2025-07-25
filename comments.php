@@ -16,8 +16,7 @@ $comments_number = get_comments_number();
       esc_html(get_the_title())
     );
     ?>
-    <br/>
-    <a href="#after-comments" class="skip-link-inline" aria-label="Sla reacties over en ga naar gerelateerde berichten">Sla reacties over</a>
+    <a href="#after-comments" class="skip-link-inline" aria-label="Sla reacties over en ga naar gerelateerde berichten">Sla de reacties over</a>
 <?php
   else :
     printf('Geen reacties op “%s”', esc_html(get_the_title()));
