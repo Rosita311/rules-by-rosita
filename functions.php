@@ -222,12 +222,7 @@ function rules_by_rosita_register_social_widget() {
 }
 add_action('widgets_init', 'rules_by_rosita_register_social_widget');
 
-/* Shortcode [social_icons] */
-add_shortcode('social_icons', 'RulesByRosita_Social_Render');
-
-/**
- * Render functie voor widget & shortcode
- */
+// social media in customizer
 function RulesByRosita_Social_Render() {
     ob_start();
 
