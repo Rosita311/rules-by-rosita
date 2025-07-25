@@ -18,6 +18,7 @@ Het thema wordt ontwikkeld in **HTML**, **CSS**, **PHP** en **JavaScript**, met 
 2. **Template parts**: Opsplitsen van componenten in herbruikbare template parts binnen WordPress.
 3. **PHP-integratie**: Samenvoegen van onderdelen tot een functioneel WordPress-thema.
 4. **Toegankelijkheid**: Gericht op gebruiksvriendelijkheid en bruikbaarheid voor zoveel mogelijk mensen.
+5. **Testen en debuggen**: Test en debug het thema voordat het live gaat.
 
 ---
 
@@ -250,6 +251,7 @@ The theme is being developed in **HTML**, **CSS**, **PHP**, and **JavaScript**, 
 2. **Template parts**: Break components into reusable template parts within WordPress.
 3. **PHP integration**: Combine the parts into a functional WordPress theme.
 4. **Accessibility**: Ensure usability for as many people as possible.
+5. **Testing and debugging**: Test and debug theme before live.
 
 ---
 
