@@ -92,8 +92,12 @@ Een minimalistische en heldere stijl, afgestemd op leesbaarheid en eenvoud.
 
 ## Ideeën voor de toekomst
 
-- Omzetten naar een blocktheme met `theme.json` en ondersteuning voor Gutenberg-blokken.
-- Custom posttype voor boekencollectie of leeslijst.
+- Thema omzetten naar block theme met `theme.json`
+- Sociale media iconen widget converteren naar blockwidget.
+- Custom post type maken voor gelezen boeken
+- Site-kleuren via Customizer (primary, accent, background, text).
+- Typografie via Customizer (basis en kopteksten).
+- Mogelijkheid om extra scripts toe te voegen in `<head>` (Analytics).
 
 ---
 
@@ -107,6 +111,24 @@ Een minimalistische en heldere stijl, afgestemd op leesbaarheid en eenvoud.
 - Google Fonts (Nunito & Zilla Slab)
 - Tabler Icons
 - CSS Flexbox & Grid
+
+---
+
+## Plugins
+
+- Yoast
+- Advanced Custom Fields
+- Antispam Bee
+- Imsanity
+- Forminator
+- Complianz
+- Limit Login Attempts Reloaded
+- Public Post Preview
+- Themecheck
+- Site Kit by Google
+- WP Accessibility
+- Accessibility Checker
+- Jetpack
 
 ---
 
@@ -187,10 +209,11 @@ Pull requests en suggesties zijn welkom, maar houd er rekening mee dat dit een p
 - Semantische HTML + ARIA-implementatie
 - Animaties met prefers-reduced-motion
 - Submenu met toetsenbordnavigatie + ARIA
-- Basic zoekpagina
+- Dupliceer post/pagina functie
+- Widgetgebied in footer voor Jetpack abonnementen widget en social media iconen widget.
+- Custom widget voor social media iconen.
 
 ### Nog te doen
-
 
 - robots.txt en sitemap.xml bij publicatie (Yoast kan dit deels regelen)
 - Toegankelijkheid testen met tools als WAVE (gebeurt tijdens het hele proces)
@@ -204,14 +227,6 @@ Pull requests en suggesties zijn welkom, maar houd er rekening mee dat dit een p
 - Zorg dat paginatitels en URLs duidelijk zijn (permalinks in WordPress) (SEO-vriendelijk: /post-name/)
 - Controleer performance en SEO via tools zoals Lighthouse of PageSpeed Insights
 - Sitemap.xml beschikbaar (Yoast regelt dit, test via /sitemap_index.xml).
-
-### Ideeën voor later
-
-- Thema omzetten naar block theme met `theme.json`
-- Custom post type maken voor gelezen boeken
-- Site-kleuren via Customizer (primary, accent, background, text).
-- Typografie via Customizer (basis en kopteksten).
-- Mogelijkheid om extra scripts toe te voegen in `<head>` (Analytics).
 
 > De footer fluistert iets… maar alleen als je goed kijkt 👀
 
@@ -308,8 +323,12 @@ See the [Devlog](#devlog) for a detailed overview of completed features and upco
 
 ## Future Ideas
 
-- Convert into a block theme using `theme.json` and Gutenberg block support.
-- Custom post type for book collection or reading list.
+- Convert theme to block theme using `theme.json`
+- Convert social media icon widgets to block widgets.
+- Create custom post types for books read.
+- Site colors via the Customizer (primary, accent, background, text).
+- Typography via the Customizer (basic and headers).
+- Ability to add additional scripts in `<head>` (Analytics).
 
 ---
 
@@ -323,6 +342,24 @@ See the [Devlog](#devlog) for a detailed overview of completed features and upco
 - Google Fonts (Nunito & Zilla Slab)
 - Tabler Icons
 - CSS Flexbox & Grid
+
+---
+
+## Plugins
+
+- Yoast
+- Advanced Custom Fields
+- Antispam Bee
+- Imsanity
+- Forminator
+- Complianz
+- Limit Login Attempts Reloaded
+- Public Post Preview
+- Themecheck
+- Site Kit by Google
+- WP Accessibility
+- Accessibility Checker
+- Jetpack
 
 ---
 
@@ -390,7 +427,7 @@ Pull requests and suggestions are welcome, but keep in mind this is a personal p
 - Page structure established (hero, cards, typography, colors)
 - Submenu added to main menu (with attention to keyboard navigation and aria attributes)
 - Basic search page added
-- `page.html` as structure template For 404 pages and other pages
+- `page.html` as structure template For 404 pages and other pages, among others.
 - Designed, implemented, and tested Back to top button (accessible, mobile-friendly, with animation and reduced motion preferences)
 - Accessibility testing: WAVE & Lighthouse
 - Consistent focus style (light & dark mode)
@@ -401,9 +438,11 @@ Pull requests and suggestions are welcome, but keep in mind this is a personal p
 - Completed settings menu (including dark mode toggle)
 - Correct heading structure (one <h1>, logical hierarchy)
 - Semantic HTML + ARIA implementation
-- Animations with reduced motion preferences
+- Animations with reduced-motion preferences
 - Submenu with keyboard navigation + ARIA
-- Basic search page
+- Duplicate post/page function
+- Footer widget area for Jetpack subscription widget and social media icon widget.
+- Custom widget for social media icons.
 
 ### To Do
 
@@ -419,14 +458,6 @@ Pull requests and suggestions are welcome, but keep in mind this is a personal p
 - Ensure page titles and URLs are clear (permalinks in WordPress) (SEO-friendly: /post-name/).
 - Check performance and SEO using tools like Lighthouse or PageSpeed Insights.
 - Sitemap.xml available (Yoast handles this; test via /sitemap_index.xml).
-
-### Ideas for Later
-
-- Convert theme to block theme using `theme.json`
-- Create a custom post type for books read
-- Site colors via the Customizer (primary, accent, background, text).
-- Typography via the Customizer (basic and headings).
-- Ability to add additional scripts in `<head>` (Analytics).
 
 > The footer whispers… but only if you look closely 👀
 
