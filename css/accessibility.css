@@ -184,7 +184,7 @@
 
 /* Accessibility settings */
 
-/* Dislexie font */
+/* Dislexie font  */
 body.dyslexic-font,
 body.dyslexic-font h1,
 body.dyslexic-font h2,
@@ -212,7 +212,8 @@ body.dyslexic-font .back-to-top-tooltip,
 body.dyslexic-font .btn,
 body.dyslexic-font .field-error,
 body.dyslexic-font .comment-error,
-body.dyslexic-font .page-title nav p {
+body.dyslexic-font .page-title nav p,
+body.dyslectic-font #cmplz-cookiebanner-container .cmplz-btn {
   font-family: "Atkinson Hyperlegible", Arial, sans-serif;
 }
 
@@ -226,6 +227,11 @@ body.dyslexic-font .field-error,
 body.dyslexic-font #search-overlay label,
 body.dyslexic-font .comment-error {
   font-weight: 700;
+}
+  
+body.dyslectic-font {
+  --font-body: "Atkinson Hyperlegible", Arial, sans-serif;
+  --font-heading: "Atkinson Hyperlegible", Arial, sans-serif;
 }
 
 /* Grotere tekst */

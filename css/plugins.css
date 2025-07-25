@@ -183,3 +183,8 @@ body #cmplz-manage-consent-container .cmplz-switch {
     outline: 2px solid var(--color-text);
     outline-offset: 2px;
 }
+
+body.dyslectic-font #cmplz-cookiebanner-container .cmplz-btn,
+body.dyslectic-font #cmplz-cookiebanner-container .cmplz-title {
+  font-family: "Atkinson Hyperlegible", Arial, sans-serif !important;
+}

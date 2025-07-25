@@ -1,10 +1,10 @@
 /* Footer component styles */
-footer {
+.site-footer {
   background-color: var(--color-footer);
   color: var(--color-text);
 }
 
-footer a {
+.site-footer a {
   color: var(--color-text);
 }
 
