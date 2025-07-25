@@ -29,10 +29,7 @@ get_template_part('template-parts/accessibility-panel'); ?>
                 <div class="introduction-card-content entry-content">
                     <?php $homepage_id = get_option('page_on_front'); ?>
                     <h2><?php the_field('introductie_titel', $homepage_id); ?></h2>
-                    <p>
-                        <?php the_field('introductie_tekst', $homepage_id); ?>
-                    </p>
-
+                    <p><?php the_field('introductie_tekst', $homepage_id); ?></p>   
                     <h3><?php the_field('over_mij_titel', $homepage_id); ?></h3>
                     <ul class="introduction-iconlist">
                         <li>

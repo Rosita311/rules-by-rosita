@@ -4,6 +4,10 @@ footer {
   color: var(--color-text);
 }
 
+footer a {
+  color: var(--color-text);
+}
+
 .footer-content {
   display: flex;
   justify-content: space-between;

@@ -494,6 +494,10 @@ button {
   pointer-events: none;
 }
 
+a.btn-icon-large {
+  color: var(--color-text)
+}
+
 #close-accessibility,
 #close-search {
   position: absolute;

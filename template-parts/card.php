@@ -1,5 +1,10 @@
-<!-- Get ID -->
 <?php
+$thumb_id = get_post_thumbnail_id();
+$alt_text = get_post_meta($thumb_id, '_wp_attachment_image_alt', true);
+if (empty($alt_text)) {
+    $alt_text = get_the_title();
+}
+// Get the current post ID
 $post_id = get_the_ID();
 $leesmeer_id = 'lees-meer-' . $post_id;
 $excerpt_id = 'excerpt-' . $post_id;
@@ -10,7 +15,7 @@ $excerpt_id = 'excerpt-' . $post_id;
   <div class="card-image">
     <img
       src="<?php echo get_the_post_thumbnail_url($post_id, 'large'); ?>"
-      alt="<?php the_title_attribute(); ?>"
+      alt="<?php echo esc_attr($alt_text); ?>"
       loading="lazy" />
   </div>
   <div class="card-content-wrapper">

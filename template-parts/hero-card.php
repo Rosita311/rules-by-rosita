@@ -1,4 +1,9 @@
 <?php
+$thumb_id = get_post_thumbnail_id();
+$alt_text = get_post_meta($thumb_id, '_wp_attachment_image_alt', true);
+if (empty($alt_text)) {
+    $alt_text = get_the_title();
+}
 // Get the current post ID
 $post_id = get_the_ID();
 $leesmeer_id = 'lees-meer-' . $post_id;
@@ -8,7 +13,7 @@ $excerpt_id = 'excerpt-' . $post_id;
     <div class="hero-image-wrapper">
         <img
             src="<?php echo get_the_post_thumbnail_url($post_id, 'large'); ?>"
-            alt="<?php the_title_attribute(); ?>"
+            alt="<?php echo esc_attr($alt_text); ?>"
             loading="lazy" width="600" height="400" />
     </div>
     <div class="hero-card-content-wrapper">
