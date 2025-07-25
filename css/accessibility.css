@@ -18,6 +18,12 @@
   z-index: 100;
 }
 
+
+.skip-link-inline {
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
 .sr-only {
   position: absolute;
   width: 1px;

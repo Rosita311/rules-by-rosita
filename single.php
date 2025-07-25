@@ -186,7 +186,7 @@ get_template_part('template-parts/accessibility-panel'); ?>
           </nav>
         </div>
         <div class="entry-content">
-          <?php the_content();
+          <?php
           the_content();
 
           wp_link_pages(array(
@@ -242,7 +242,7 @@ get_template_part('template-parts/accessibility-panel'); ?>
       <?php get_sidebar('single'); ?>
     </section>
     <section class="blogpost-section">
-      <h2>Gerelateerde blogposts</h2>
+      <h2 id="after-comments">Gerelateerde blogposts</h2>
       <?php
       $categories = get_the_category();
       if ($categories) {

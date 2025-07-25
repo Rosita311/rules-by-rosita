@@ -1,4 +1,4 @@
-<footer class="site-footer">
+<footer class="site-footer" role="contentinfo">
   <div class="footer-container">
     <div class="footer-content">
       <div class="footer-menu">
