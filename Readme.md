@@ -388,7 +388,7 @@ See the [Devlog](#devlog) for a detailed overview of completed features and upco
 - **Google Fonts** – Typography (`Nunito` & `Zilla Slab`)  
   [https://fonts.google.com](https://fonts.google.com)
 
-  **Forminator Documentation** – plugin documentation 
+- **Forminator Documentation** – plugin documentation 
   [https://wpmudev.com/docs/wpmu-dev-plugins/forminator/](https://wpmudev.com/docs/wpmu-dev-plugins/forminator/)
 
 - **Complianz Documentation** – Plugin documentation
