@@ -61,6 +61,7 @@
 .footer-widgets-container {
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
   padding: 0;
   gap: 2rem;
   flex-wrap: wrap;
