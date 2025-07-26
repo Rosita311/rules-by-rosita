@@ -663,7 +663,7 @@ a.btn-icon-large {
 .comment-form input,
 .comment-form textarea,
 .search-input,
-.jetpack-form input[type="email"],
+.jetpack-subscribe-form input[type="email"],
 .forminator-ui textarea,
 .forminator-ui input {
   display: block;
