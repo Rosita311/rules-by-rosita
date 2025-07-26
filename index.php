@@ -4,7 +4,6 @@ get_template_part('template-parts/accessibility-panel'); ?>
   <?php get_template_part('template-parts/page-hero'); ?>
   <div class="container-main">
     <section class="blogpost-section">
-      <p>index.php</p>
       <ul class="blog-listing-grid">
         <?php
         if (have_posts()) :

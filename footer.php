@@ -19,28 +19,6 @@
               <?php dynamic_sidebar('footer-widgets'); ?>
             </div>
           <?php endif; ?>
-          <form
-            action="#"
-            method="post"
-            class="site-form">
-            <div class="form-group">
-              <label for="footer-email">E-mailadres:</label>
-              <div class="form-group-row">
-                <input
-                  type="email"
-                  id="footer-email"
-                  name="footer-email"
-                  required
-                  placeholder="Vul hier je e-mailadres in" />
-                <button
-                  type="submit"
-                  class="btn btn-secondary footer-btn">
-                  Abonneer
-                </button>
-              </div>
-              <p>Dit is een testformulier — Jetpack werkt pas op een live site.</p>
-          </form>
-          <a href="<?php echo esc_url(home_url('/dit-bestaat-niet')); ?>">Bekijk de 404</a>
       </div>
     </div>
   </div>

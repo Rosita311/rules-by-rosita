@@ -3,7 +3,6 @@ get_template_part('template-parts/accessibility-panel'); ?>
 <main id="main-content">
   <?php get_template_part('template-parts/page-hero'); ?>
   <div class="container-main">
-    page.php
     <section class="entry-content">
           <?php the_content(); ?>
         </section>
