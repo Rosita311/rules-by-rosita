@@ -198,7 +198,7 @@ Pull requests en suggesties zijn welkom, maar houd er rekening mee dat dit een p
 - Secondary button in dark mode verbeterd (contrast)
 - Footer bewerkt, inclusief link naar privacyverklaring
 - Toegankelijke animatie toegevoegd met `prefers-reduced-motion` ondersteuning
-- GitHub Pages demo opgezet: [rulesbyrosita-theme](https://rosita311.github.io/RulesbyRosita-theme/)
+- GitHub Pages demo opgezet: [rulesbyrosita-theme](https://rosita311.github.io/rules-by-rosita/)
 - Basis design afgerond
 - Pagina-structuur opgezet (hero, cards, typografie, kleuren)
 - Submenu toegevoegd aan hoofdmenu (met aandacht voor toetsenbordnavigatie en aria-attributen)
