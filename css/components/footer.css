@@ -166,7 +166,7 @@
 /* Plumbob */
 .footer-plumbob {
   display: inline-block;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
   cursor: pointer;
   position: relative;
   width: 2rem;

@@ -147,6 +147,9 @@ Een minimalistische en heldere stijl, afgestemd op leesbaarheid en eenvoud.
 - **A11Y Project** – Richtlijnen en tips voor toegankelijkheid  
   [https://www.a11yproject.com](https://www.a11yproject.com)
 
+- **W3C** - Officiele WCAG richtlijnen
+  [https://www.w3.org/WAI/standards-guidelines/wcag/](https://www.w3.org/WAI/standards-guidelines/wcag/)
+
 - **Accessible Card Patterns** – Uitleg over toegankelijke kaarten door Heydon Pickering  
   [https://inclusive-components.design/cards/](https://inclusive-components.design/cards/)
 
@@ -161,6 +164,9 @@ Een minimalistische en heldere stijl, afgestemd op leesbaarheid en eenvoud.
 
 - **Complianz Documentation** – Plugin documentatie
   [https://complianz.io/support/#documentation](https://complianz.io/support/#documentation)
+
+- **Jetpack documentation** - Plugin documentatie
+  [https://jetpack.com/support/features/](https://jetpack.com/support/features/)
 
 ---
 
@@ -379,6 +385,9 @@ See the [Devlog](#devlog) for a detailed overview of completed features and upco
 - **A11Y Project** – Guidelines and tips on accessibility  
   [https://www.a11yproject.com](https://www.a11yproject.com)
 
+- **W3C** - Official WCAG Guidelines
+  [https://www.w3.org/WAI/standards-guidelines/wcag/](https://www.w3.org/WAI/standards-guidelines/wcag/)
+
 - **Accessible Card Patterns** – Explained by Heydon Pickering  
   [https://inclusive-components.design/cards/](https://inclusive-components.design/cards/)
 
@@ -393,6 +402,9 @@ See the [Devlog](#devlog) for a detailed overview of completed features and upco
 
 - **Complianz Documentation** – Plugin documentation
   [https://complianz.io/support/#documentation](https://complianz.io/support/#documentation)
+
+- **Jetpack documentation** - Plugin documentation
+  [https://jetpack.com/support/features/](https://jetpack.com/support/features/)
 
 ---
 
