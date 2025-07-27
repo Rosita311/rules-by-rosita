@@ -3,7 +3,6 @@ get_template_part('template-parts/accessibility-panel'); ?>
 <main id="main-content">
     <?php get_template_part('template-parts/page-hero'); ?>
     <div class="container-main">
-        <p>search.php</p>
         <div class="search-form-fallback">
             <section class="entry-content" aria-label="Zoekresultaten">
                 <?php get_search_form(); ?>
