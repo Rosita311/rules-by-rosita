@@ -37,6 +37,3 @@ Requires PHP: 7.4
 @import "css/pages/page.css";
 @import "css/pages/single.css";
 @import "css/pages/search.css";
-
-/* Extra */
-@import "css/experiment.css";
