@@ -12,9 +12,9 @@ const footer = document.querySelector(".footer-container");
 const navLinks = document.querySelectorAll("#header-nav a");
 
 // Zoekfunctie
-const searchOverlay = document.getElementById('search-overlay');
-const searchToggle = document.getElementById('search-toggle');
-const searchClose = document.getElementById('close-search');
+const searchOverlay = document.getElementById("search-overlay");
+const searchToggle = document.getElementById("search-toggle");
+const searchClose = document.getElementById("close-search");
 
 // Toegankelijkheidselementen selecteren
 const toggleButton = document.getElementById("accessibility-toggle");
@@ -234,7 +234,6 @@ document.body.addEventListener("mousedown", () => {
   document.body.classList.remove("user-is-tabbing");
 });
 
-
 // Back to top button
 
 window.addEventListener("scroll", () => {
@@ -255,7 +254,7 @@ backToTop.addEventListener("click", () => {
 });
 
 // Zoekfunctie
-  if (searchOverlay && searchToggle && searchClose) {
+if (searchOverlay && searchToggle && searchClose) {
   function toggleSearch() {
     const isOpen = searchOverlay.classList.contains("show");
 
@@ -273,7 +272,9 @@ backToTop.addEventListener("click", () => {
     searchOverlay.setAttribute("aria-hidden", "false");
     searchToggle.setAttribute("aria-expanded", "true");
 
-    const firstInput = searchOverlay.querySelector("input, button, [tabindex]:not([tabindex='-1'])");
+    const firstInput = searchOverlay.querySelector(
+      "input, button, [tabindex]:not([tabindex='-1'])"
+    );
     firstInput?.focus();
 
     activateTrap(searchOverlay); // focus trap
@@ -533,7 +534,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (errorBox) errorBox.style.display = "none";
 
     // Naam
-    if (!author?.value.trim()) {
+    if (author && !author.value.trim()) {
       const error = document.getElementById("error-author");
       if (error) {
         error.textContent = "Vul je naam in.";
@@ -544,7 +545,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // Email
-    if (!email?.value.trim()) {
+    if (email && !email.value.trim()) {
       const error = document.getElementById("error-email");
       if (error) {
         error.textContent = "Vul je e-mailadres in.";
@@ -552,7 +553,10 @@ document.addEventListener("DOMContentLoaded", function () {
       }
       if (!firstInvalid) firstInvalid = email;
       valid = false;
-    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim())) {
+    } else if (
+      email &&
+      !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim())
+    ) {
       const error = document.getElementById("error-email");
       if (error) {
         error.textContent = "Voer een geldig e-mailadres in.";
@@ -574,7 +578,9 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // Privacy checkbox
-    if (checkbox && !checkbox.checked) {
+    const isAdmin = form.dataset.isAdmin === "1";
+
+    if (!isAdmin && checkbox && !checkbox.checked) {
       if (errorBox) {
         errorBox.textContent =
           errorBox.dataset.error || "Je moet akkoord gaan.";
@@ -585,6 +591,14 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     if (!valid) {
+      console.log("Form values:", {
+        author: author?.value,
+        email: email?.value,
+        comment: comment?.value,
+        checkbox: checkbox?.checked,
+        isAdmin,
+      });
+
       e.preventDefault(); // Stop formulierverzending
 
       // Focus na render
@@ -664,20 +678,14 @@ function initSubmenus() {
     });
 
     parentItem.addEventListener("mouseenter", () => {
-      if (
-        !media.matches &&
-        parentItem.dataset.openedByClick !== "true"
-      ) {
+      if (!media.matches && parentItem.dataset.openedByClick !== "true") {
         clearTimeout(hoverCloseTimeout);
         hoverOpenTimeout = setTimeout(openSubmenu, 500);
       }
     });
 
     parentItem.addEventListener("mouseleave", () => {
-      if (
-        !media.machtes &&
-        parentItem.dataset.openedByClick !== "true"
-      ) {
+      if (!media.machtes && parentItem.dataset.openedByClick !== "true") {
         clearTimeout(hoverOpenTimeout);
         hoverCloseTimeout = setTimeout(closeSubmenu, 300);
       }

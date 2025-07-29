@@ -380,8 +380,11 @@ pre code {
 /* Button styles */
 button {
   all: unset;
+  display: inline-block; 
+  box-sizing: border-box;
   cursor: pointer;
 }
+
 
 .btn,
 .wp-block-button__link,
@@ -395,6 +398,7 @@ button {
   font-size: 1.125rem;
   font-weight: 500;
   color: var(--color-text) !important;
+  cursor: pointer
 }
 
 .btn-primary {
@@ -781,4 +785,15 @@ a.btn-icon-large {
     white-space: nowrap; /* voorkomt afbreken van woorden */
     text-align: center;
   }
+
+  .form-group-row {
+    display: flex;
+    flex-direction: column;
+  }
+  .form-group-row button {
+    width: 100%;
+    text-align: center;
+  }
+
+
 }

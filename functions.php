@@ -174,7 +174,7 @@ function rules_by_rosita_register_block_patterns() {
 add_action('init', 'rules_by_rosita_register_block_patterns');
 
 
-/* Social Media Widget + Shortcode */
+/* Social Media Widget */
 class RulesByRosita_Social_Widget extends WP_Widget {
 
     public function __construct() {
@@ -336,6 +336,21 @@ function rules_by_rosita_remove_editor()
     }
 }
 add_action('admin_init', 'rules_by_rosita_remove_editor');
+
+/* Add data attrubute id user is admin*/
+add_action('comment_form_before', function() {
+    $is_admin = current_user_can('manage_options') ? '1' : '0';
+    ?>
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var form = document.getElementById('commentform');
+      if (form) {
+        form.dataset.isAdmin = '<?php echo esc_js($is_admin); ?>';
+      }
+    });
+    </script>
+    <?php
+});
 
 /* Duplicate Page/Post functionality */
 function rules_by_rosita_duplicate_post_as_draft() {

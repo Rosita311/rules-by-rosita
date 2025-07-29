@@ -15,9 +15,9 @@ $comments_number = get_comments_number();
       number_format_i18n($comments_number),
       esc_html(get_the_title())
     );
-    ?>
+  ?>
     <a href="#after-comments" class="skip-link-inline" aria-label="Sla reacties over en ga naar gerelateerde berichten">Sla de reacties over</a>
-<?php
+  <?php
   else :
     printf('Geen reacties op “%s”', esc_html(get_the_title()));
   endif;
@@ -59,7 +59,8 @@ if (post_password_required()) {
 
     $checkbox_html = '';
     if (!$is_admin) {
-     $checkbox_html = '
+      // Voeg de checkbox toe voor niet-beheerders
+      $checkbox_html = '
   <p class="privacy-link">
     <a href=" ' . esc_url(get_privacy_policy_url()) . '" rel="noopener noreferrer">
       Lees de privacyverklaring
@@ -115,6 +116,9 @@ if (post_password_required()) {
       'comment_notes_before' => '<span class="required-field-message">Vereiste velden zijn gemarkeerd met <span class="required">*</span></span>',
       'comment_notes_after' => $checkbox_html,
       'class_form' => 'site-form',
+      'attributes' => [
+        'data-is-admin' => current_user_can('manage_options') ? '1' : '0'
+      ],
       'label_submit' => 'Reactie plaatsen',
       'class_submit' => 'btn btn-secondary',
     ));
