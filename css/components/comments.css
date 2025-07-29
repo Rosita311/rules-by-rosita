@@ -9,7 +9,7 @@
   font-size: 1.25rem;
   color: var(--color-text);
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
   margin: 0.5rem 0;
 }
 
@@ -111,4 +111,27 @@ a#cancel-comment-reply-link {
   margin-top: 0.5rem;
   font-weight: 600;
   font-size: 0.9rem;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+  .comment {
+    margin: 1.5rem 0;
+    padding: 1.5rem;
+    border: 1px solid var(--color-accent);
+    border-radius: 0.25rem;
+  }
+
+  ol.children {
+    padding-left: 1rem;
+    margin: 0;
+  }
+
+  .children .comment {
+    border: none;
+    padding-left: 0; 
+    margin-bottom: 1rem;
+    list-style-type: none;
+    border-top: 2px dashed var(--color-accent-2);
+  }
 }

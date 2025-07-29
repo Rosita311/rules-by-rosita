@@ -290,9 +290,6 @@ aside h1 {
 .entry-content ol {
   margin-bottom: 1rem;
 }
-
-.entry-content img,
-.entry-content figure,
 .entry-content video {
   display: block;
   max-width: 100%;
@@ -302,6 +299,26 @@ aside h1 {
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
+
+.entry-content figure {
+  display: block;
+  max-width: 100%;
+  margin: 2rem auto; 
+  text-align: center;
+}
+
+.entry-content figure img {
+  margin: 0; 
+  display: block;
+  height: auto;
+}
+
+.entry-content figure figcaption {
+  font-size: 0.875rem;
+  color: var(--color-text);
+  margin-top: 0.5rem; 
+}
+
 
 svg {
   width: 1.5rem;
@@ -350,6 +367,8 @@ p {
   font-weight: bold;
   color: var(--color-contrast);
 }
+
+
 
 /* Inline code */
 code {
@@ -794,6 +813,4 @@ a.btn-icon-large {
     width: 100%;
     text-align: center;
   }
-
-
 }
