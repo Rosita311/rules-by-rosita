@@ -228,18 +228,17 @@ get_template_part('template-parts/accessibility-panel'); ?>
             <?php endif; ?>
           </div>
         </nav>
-        <!-- Post Comments -->
-        <div class="post-comments-wrapper">
-          <?php
-          if (comments_open() || get_comments_number()) {
-            comments_template();
-          } else {
-            echo '<p>Reacties zijn gesloten voor dit bericht.</p>';
-          } ?>
-        </div>
-
       </article>
       <?php get_sidebar('single'); ?>
+    </section>
+    <!-- Post Comments -->
+    <section class="post-comments-wrapper">
+      <?php
+      if (comments_open() || get_comments_number()) {
+        comments_template();
+      } else {
+        echo '<p>Reacties zijn gesloten voor dit bericht.</p>';
+      } ?>
     </section>
     <section class="blogpost-section">
       <h2 id="after-comments">Gerelateerde blogposts</h2>

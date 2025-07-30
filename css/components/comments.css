@@ -114,7 +114,11 @@ a#cancel-comment-reply-link {
 }
 
 /* Media Queries */
+
 @media screen and (max-width: 768px) {
+  .post-comments-wrapper {
+    margin-top: 2rem;
+  }
   .comment {
     margin: 1.5rem 0;
     padding: 1.5rem;
