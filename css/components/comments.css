@@ -1,4 +1,9 @@
 /* Reactiesectie */
+.post-comments-wrapper {
+  margin: 0 auto;
+    width: min(90%, 70rem);
+    padding: 0 clamp(0.5rem, 5vw, 2rem);
+  }
 
 /* Titel reacties */
 .post-comments-wrapper h2 {
@@ -118,7 +123,9 @@ a#cancel-comment-reply-link {
 @media screen and (max-width: 768px) {
   .post-comments-wrapper {
     margin-top: 2rem;
+    padding: 0;
   }
+
   .comment {
     margin: 1.5rem 0;
     padding: 1.5rem;
