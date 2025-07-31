@@ -160,8 +160,7 @@ p {
 }
 
 /* Algemene linkstijl in tekst */
-a,
-a:visited {
+a {
   color: var(--color-primary);
   text-decoration: underline;
   text-decoration-thickness: 1.5px;
