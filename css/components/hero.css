@@ -143,11 +143,6 @@
 /* Media Queries */
 
 @media screen and (max-width: 1024px) {
-  .hero-section {
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
-  }
-
   .hero-card {
     display: flex;
     flex-direction: row;

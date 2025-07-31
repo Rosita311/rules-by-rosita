@@ -4,9 +4,14 @@
 
 .blogpost-section {
   display: flex;
-  gap: 4rem;
   padding: 2rem 0;
   flex-direction: column;
+}
+
+.blogpost-section h2 {
+  font-family: var(--font-heading);
+  color: var(--color-text);
+  margin-bottom: 4rem;
 }
 
 .blog-listing-grid {
@@ -15,6 +20,7 @@
   list-style-type: none;
   gap: 2rem;
   margin: 0 auto;
+  margin-bottom: 2rem;
   padding: 0;
 }
 

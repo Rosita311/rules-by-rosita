@@ -1,16 +1,11 @@
-/* Single Post Styles */
-.single-post {
-  padding: 0 clamp(0.5rem, 5vw, 2rem);
-  padding-bottom: 9rem;
-}
-
 .single-post-content {
   display: grid;
   grid-template-columns: 3.5fr 1.5fr;
   grid-template-areas: "content sidebar";
   gap: clamp(2rem, 5vw, 4rem);
   background-color: var(--color-background);
-  margin: clamp(-5rem, -15vw, -3rem) auto 0 auto;
+  margin: 0 auto;
+  margin-top: -10rem;
   padding: clamp(0.5rem, 5vw, 2rem);
   width: min(90%, 70rem);
   z-index: 1;
@@ -64,12 +59,12 @@
 /* Media queries */
 
 @media screen and (max-width: 1024px) {
-  .post-meta-wrapper {
-    padding: 1.5rem 0;
-  }
-
   .single-post-content {
     grid-template-columns: minmax(0, 2.5fr) minmax(120px, 1fr);
+  }
+
+  .post-meta-wrapper {
+    padding: 1.5rem 0;
   }
 
   .related-posts {
@@ -80,7 +75,6 @@
 @media screen and (max-width: 768px) {
   .single-post {
     gap: 0;
-    padding: 0 1rem;
     padding-bottom: 5rem;
   }
 
@@ -97,7 +91,7 @@
     padding-left: 1rem;
     padding-right: 1rem;
     width: 100%;
-    margin-top: clamp(-3rem, -5vw, -2rem);
+    margin-top: -7rem;
     border-bottom: 2px solid var(--color-accent);
   }
 }

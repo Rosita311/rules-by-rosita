@@ -22,7 +22,7 @@ get_template_part('template-parts/accessibility-panel'); ?>
       <?php } ?>
     </div>
   </section>
-  <div class="container-main single-post">
+  <div class="container-main">
     <section class="single-post-content">
       <article class="post-content-wrapper" <?php post_class(); ?>>
         <?php
@@ -200,7 +200,6 @@ get_template_part('template-parts/accessibility-panel'); ?>
         $prev_post = get_previous_post();
         $next_post = get_next_post();
         ?>
-
         <nav class="single-pagination" aria-label="Post navigatie">
           <div class="post-prev">
             <?php if ($prev_post): ?>
