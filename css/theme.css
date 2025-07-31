@@ -436,10 +436,6 @@ button {
   cursor: pointer;
 }
 
-a.btn {
-  color: var(--color-text);
-}
-
 .btn-primary {
   background-color: var(--color-primary);
   color: var(--color-primary-btn-text);
