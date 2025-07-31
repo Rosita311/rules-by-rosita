@@ -217,11 +217,11 @@ body #cmplz-manage-consent-container .cmplz-switch {
 }
 
 .footer-widgets-container #subscribe-submit button[type="submit"]:hover {
-  border: 2px solid var(--color-text);
+  border: 2px solid var(--color-text) !important;
 }
 
 #subscribe-submit button[type="submit"]:focus-visible {
-  outline: 2px solid var(--color-text);
+  outline: 2px solid var(--color-text) !important;
   outline-offset: 2px;
 }
 
