@@ -282,6 +282,23 @@ aside h1 {
   font-size: clamp(2rem, 5vw + 1rem, 3rem);
 }
 
+.entry-content {
+  width: 100%;
+  overflow-x: hidden;
+   overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+.entry-content img,
+.entry-content iframe,
+.entry-content table,
+.entry-content pre {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  overflow-x: auto;
+}
+
 .entry-content h2,
 .entry-content h3,
 .entry-content h4,
@@ -292,6 +309,7 @@ aside h1 {
 .entry-content ol {
   margin-bottom: 1rem;
 }
+
 .entry-content video {
   display: block;
   max-width: 100%;
@@ -320,7 +338,6 @@ aside h1 {
   color: var(--color-text);
   margin-top: 0.5rem; 
 }
-
 
 svg {
   width: 1.5rem;
@@ -557,6 +574,7 @@ a.btn-icon-large {
 .button-wrapper {
   display: flex;
   justify-content: center;
+  margin-top: 2rem;
 }
 
 .hover-shadow-pink:hover {
