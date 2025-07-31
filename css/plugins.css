@@ -213,7 +213,7 @@ body #cmplz-manage-consent-container .cmplz-switch {
 #subscribe-submit button[type="submit"]:hover {
   background-color: var(--color-footer);
   border: 2px solid var(--color-footer);
-  color: var(--color-text);
+  color: var(--color-text) !important;
 }
 
 .footer-widgets-container #subscribe-submit button[type="submit"]:hover {
