@@ -184,20 +184,14 @@ body #cmplz-manage-consent-container .cmplz-switch {
     outline-offset: 2px;
 }
 
-body.dyslectic-font #cmplz-cookiebanner-container .cmplz-btn,
-body.dyslectic-font #cmplz-cookiebanner-container .cmplz-title {
-  font-family: "Atkinson Hyperlegible", Arial, sans-serif !important;
-}
-
 /* Jetpack subscription widget */
 #subscribe-email input[type="email"] {
   padding: 0.75rem 1rem;
   font-size: 1rem;
-  border: 2px solid var(--color-border, #ccc);
+  border: 2px solid var(--color-text);
   border-radius: 0.25rem;
   width: 100%;
-  font-family: var(--font-body, sans-serif);
-  box-sizing: border-box;
+  font-family: var(--font-body);
 }
 
 #subscribe-submit button[type="submit"] {
