@@ -220,6 +220,10 @@ body.dyslectic-font #cmplz-cookiebanner-container .cmplz-title {
   color: var(--color-text);
 }
 
+.footer-widgets-container #subscribe-submit button[type="submit"]:hover {
+  border: 2px solid var(--color-text);
+}
+
 #subscribe-submit button[type="submit"]:focus-visible {
   outline: 2px solid var(--color-text);
   outline-offset: 2px;
