@@ -143,17 +143,11 @@ get_template_part('template-parts/accessibility-panel'); ?>
                         $post_id = get_the_ID();
                         get_template_part('template-parts/card');
                     endwhile; ?>
-                    <nav class="pagination">
-                        <?php
-                        // Simple previous/next pagination
-                        previous_posts_link('&laquo; Vorige');
-                        next_posts_link('Volgende &raquo;');
-                        ?>
-                    </nav>
                 <?php else : ?>
                     <p>Geen berichten gevonden.</p>
                 <?php endif; ?>
             </ul>
+            <?php get_template_part('template-parts/pagination'); ?>
             <div class="button-wrapper">
                 <a class="btn btn-secondary" href="<?php echo get_permalink(get_option('page_for_posts')); ?>">Bekijk alle blogposts</a>
             </div>
