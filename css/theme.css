@@ -434,7 +434,11 @@ button {
   font-size: 1.125rem;
   font-weight: 500;
   text-decoration: none;
-  cursor: pointer
+  cursor: pointer;
+}
+
+a.btn {
+  color: var(--color-text);
 }
 
 .btn-primary {

@@ -203,7 +203,7 @@ get_template_part('template-parts/accessibility-panel'); ?>
         <nav class="single-pagination" aria-label="Post navigatie">
           <div class="post-prev">
             <?php if ($prev_post): ?>
-              <a class="btn-icon-large" href="<?php echo get_permalink($prev_post); ?>">
+              <a class="btn btn-icon-large" href="<?php echo get_permalink($prev_post); ?>">
                 <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                   <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                   <path d="M15 6l-6 6l6 6" />
@@ -216,7 +216,7 @@ get_template_part('template-parts/accessibility-panel'); ?>
 
           <div class="post-next">
             <?php if ($next_post): ?>
-              <a class="btn-icon-large" href="<?php echo get_permalink($next_post); ?>">
+              <a class="btn btn-icon-large" href="<?php echo get_permalink($next_post); ?>">
                 <span>Volgende post</span>
                 <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-right" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                   <path stroke="none" d="M0 0h24v24H0z" fill="none" />
