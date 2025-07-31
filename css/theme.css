@@ -423,7 +423,6 @@ button {
 
 .btn,
 .wp-block-button__link,
-.jetpack-subscribe-button,
 .comment-form input[type="submit"],
 .forminator-ui .forminator-button {
   padding: 0.75rem 1.5rem;
@@ -449,7 +448,6 @@ a.btn {
 
 .btn-secondary,
 .wp-block-button__link,
-.jetpack-subscribe-button,
 .comment-form input[type="submit"],
 .forminator-ui .forminator-button {
   background-color: var(--color-contrast);
@@ -467,7 +465,6 @@ a.btn {
 
 .btn-secondary:focus-visible,
 .wp-block-button__link:focus-visible,
-.jetpack-subscribe-button:focus-visible,
 .comment-form input[type="submit"]:focus-visible,
 .forminator-ui .forminator-button:focus-visible {
   outline: 2px solid var(--color-text);
@@ -489,9 +486,7 @@ a.btn {
   }
 }
 
-.footer-btn,
-.jetpack-subscribe-button:hover
-.jetpack-form input[type="submit"] {
+.footer-btn {
   border: 2px solid var(--color-contrast);
   white-space: nowrap;
 
@@ -702,7 +697,6 @@ a.btn-icon-large {
 .comment-form input,
 .comment-form textarea,
 .search-input,
-.jetpack-subscribe-form input[type="email"],
 .forminator-ui textarea,
 .forminator-ui input {
   display: block;
@@ -757,10 +751,6 @@ a.btn-icon-large {
 
 .field-error.active {
   display: block;
-}
-
-.jetpack-form {
-  max-width: 500px;
 }
 
 .search-form {

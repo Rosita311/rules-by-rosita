@@ -188,3 +188,46 @@ body.dyslectic-font #cmplz-cookiebanner-container .cmplz-btn,
 body.dyslectic-font #cmplz-cookiebanner-container .cmplz-title {
   font-family: "Atkinson Hyperlegible", Arial, sans-serif !important;
 }
+
+/* Jetpack subscription widget */
+#subscribe-email input[type="email"] {
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border: 2px solid var(--color-border, #ccc);
+  border-radius: 0.25rem;
+  width: 100%;
+  font-family: var(--font-body, sans-serif);
+  box-sizing: border-box;
+}
+
+#subscribe-submit button[type="submit"] {
+  background-color: var(--color-contrast);
+  color: var(--color-bg-light);
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.25rem;
+  font-size: 1.125rem;
+  font-weight: 500;
+  border: none;
+  width: 100%;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  font-family: var(--font-body);
+}
+
+/* Hover & focus states */
+#subscribe-submit button[type="submit"]:hover {
+  background-color: var(--color-footer);
+  color: var(--color-text);
+}
+
+#subscribe-submit button[type="submit"]:focus-visible {
+  outline: 2px solid var(--color-text);
+  outline-offset: 2px;
+}
+
+.wp-block-jetpack-subscriptions__form-elements {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 40rem;
+}
