@@ -2,7 +2,6 @@
 .site-footer {
   background-color: var(--color-footer);
   color: var(--color-text);
-  
 }
 
 .site-footer a {
@@ -291,7 +290,6 @@
   }
 
   .footer-info {
-  align-items: flex-start;
- 
-}
+    align-items: flex-start;
+  }
 }

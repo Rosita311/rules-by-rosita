@@ -421,26 +421,25 @@ button {
   cursor: pointer;
 }
 
-
 .btn,
 .wp-block-button__link,
 .jetpack-subscribe-button,
 .comment-form input[type="submit"],
 .forminator-ui .forminator-button {
   padding: 0.75rem 1.5rem;
+  border: none;
   border-radius: 0.25rem;
   width: fit-content;
   font-family: var(--font-body);
   font-size: 1.125rem;
   font-weight: 500;
-  color: var(--color-text) !important;
+  text-decoration: none;
   cursor: pointer
 }
 
 .btn-primary {
   background-color: var(--color-primary);
-  color: var(--color-primary-btn-text) !important;
-  border: none;
+  color: var(--color-primary-btn-text);
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
@@ -450,9 +449,7 @@ button {
 .comment-form input[type="submit"],
 .forminator-ui .forminator-button {
   background-color: var(--color-contrast);
-  color: var(--color-bg-light)!important;
-  text-decoration: none;
-  border: none;
+  color: var(--color-bg-light); 
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
@@ -461,7 +458,7 @@ button {
 .comment-form input[type="submit"]:hover,
 .forminator-ui .forminator-button:hover {
   background-color: var(--color-footer);
-  color: var(--color-text) !important;
+  color: var(--color-text);
 }
 
 .btn-secondary:focus-visible,
@@ -469,7 +466,7 @@ button {
 .jetpack-subscribe-button:focus-visible,
 .comment-form input[type="submit"]:focus-visible,
 .forminator-ui .forminator-button:focus-visible {
-  outline: 3px solid var(--color-text);
+  outline: 2px solid var(--color-text);
   outline-offset: 2px;
 }
 
@@ -478,10 +475,7 @@ button {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  text-decoration: none;
-  font-weight: 500;
   padding: 0.5rem 0.75rem;
-  border-radius: 0.25rem;
   color: var(--color-text);
   cursor: pointer;
 
@@ -503,14 +497,13 @@ button {
   }
 
   &:focus-visible {
-    outline: 3px solid var(--color-text);
+    outline: 2px solid var(--color-text);
     border-radius: 0.25rem;
   }
 }
 
-.btn-icon-large:focus-visible,
-.btn-icon-large:focus-visible * {
-  color: var(--color-background) !important;
+.btn-icon-large:focus-visible {
+  color: var(--color-background);
   background-color: var(--color-text);
 }
 
@@ -518,6 +511,7 @@ button {
   stroke: var(--color-background);
 }
 
+.btn-icon-large[aria-current="page"],
 .btn-icon-large[aria-pressed="true"] {
   background-color: var(--color-contrast);
   color: var(--color-bg-light);
@@ -529,21 +523,11 @@ button {
 }
 
 .btn-icon-large[aria-current="page"] {
-  background-color: var(--color-contrast);
-  color: var(--color-bg-light);
-  font-weight: 700;
   pointer-events: none;
 }
 
 a.btn-icon-large {
   color: var(--color-text)
-}
-
-#close-accessibility,
-#close-search {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
 }
 
 .btn-icon-small {
@@ -562,7 +546,7 @@ a.btn-icon-large {
   background-color: var(--color-text);
   color: var(--color-background);
   border-radius: 50%;
-  outline: 3px solid var(--color-text);
+  outline: 2px solid var(--color-text);
   outline-offset: 2px;
 }
 
@@ -570,11 +554,20 @@ a.btn-icon-large {
   stroke: var(--color-background);
 }
 
+#close-accessibility,
+#close-search {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
 .button-wrapper {
   display: flex;
   justify-content: center;
   margin-top: 2rem;
 }
+
+/* Style effects */
 
 .hover-shadow-pink:hover {
   box-shadow: 0.5rem 0.5rem 0 0 var(--color-accent);
