@@ -188,6 +188,7 @@ body #cmplz-manage-consent-container .cmplz-switch {
 #subscribe-email input[type="email"] {
   padding: 0.75rem 1rem;
   font-size: 1rem;
+  background-color: var(--color-background);
   border: 2px solid var(--color-text);
   border-radius: 0.25rem;
   width: 100%;
@@ -196,7 +197,7 @@ body #cmplz-manage-consent-container .cmplz-switch {
 
 #subscribe-submit button[type="submit"] {
   background-color: var(--color-contrast);
-  color: var(--color-bg-light);
+  color: var(--color-bg-light) !important;
   padding: 0.75rem 1.5rem;
   border-radius: 0.25rem;
   font-size: 1.125rem;

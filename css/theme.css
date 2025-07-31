@@ -798,6 +798,7 @@ a.btn-icon-large {
   .single-pagination .post-prev,
   .single-pagination .post-next {
     width: 100%;
+    text-align: left;
   }
 
   .btn-icon-large {
