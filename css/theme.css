@@ -387,8 +387,6 @@ p {
   color: var(--color-contrast);
 }
 
-
-
 /* Inline code */
 code {
   background-color: var(--color-accent-2);
@@ -533,6 +531,7 @@ button {
 .btn-icon-large[aria-current="page"] {
   background-color: var(--color-contrast);
   color: var(--color-bg-light);
+  font-weight: 700;
   pointer-events: none;
 }
 

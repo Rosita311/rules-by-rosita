@@ -158,7 +158,7 @@
 .footer-info {
   display: flex;
   justify-content: start;
-  align-items: flex-start;
+  align-items: flex-end;
   padding: 0 0 1rem 0;
   width: 100%;
 }
@@ -289,4 +289,9 @@
     width: 100%;
     gap: 1rem;
   }
+
+  .footer-info {
+  align-items: flex-start;
+ 
+}
 }
