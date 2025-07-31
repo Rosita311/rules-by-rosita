@@ -201,7 +201,7 @@ body #cmplz-manage-consent-container .cmplz-switch {
   border-radius: 0.25rem;
   font-size: 1.125rem;
   font-weight: 500;
-  border: none;
+  border: 2px solid var(--color-contrast);
   width: 100%;
   cursor: pointer;
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
@@ -211,6 +211,7 @@ body #cmplz-manage-consent-container .cmplz-switch {
 /* Hover & focus states */
 #subscribe-submit button[type="submit"]:hover {
   background-color: var(--color-footer);
+  border: 2px solid var(--color-footer);
   color: var(--color-text);
 }
 
