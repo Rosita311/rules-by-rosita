@@ -792,12 +792,6 @@ a.btn-icon-large {
     flex-wrap: wrap;
   }
 
-  .single-pagination {
-    flex-direction: column;
-    align-items: start;
-    gap: 1rem;
-  }
-
   .pagination-list li {
     justify-content: center;
   }
@@ -805,7 +799,6 @@ a.btn-icon-large {
   .single-pagination .post-prev,
   .single-pagination .post-next {
     width: 100%;
-    text-align: left;
   }
 
   .btn-icon-large {
