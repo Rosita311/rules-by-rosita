@@ -185,7 +185,7 @@ body #cmplz-manage-consent-container .cmplz-switch {
 }
 
 /* Jetpack subscription widget */
-.footer-widgets .wp-widget-group__inner-blocks p{
+.footer-widgets-container p {
   margin-bottom: 1rem;
 }
 
