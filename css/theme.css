@@ -175,7 +175,7 @@ a:hover {
 
 /* Focus: duidelijke focusstijl */
 a:focus-visible {
-  outline: 3px solid var(--color-text);
+  outline: 2px solid var(--color-text);
   outline-offset: 2px;
   border-radius: 0.25rem;
 }
@@ -660,7 +660,7 @@ a.btn-icon-large {
 }
 
 .search-input:focus {
-  outline: 3px solid var(--color-text);
+  outline: 1px solid var(--color-text);
   border-radius: 0.25rem;
 }
 
