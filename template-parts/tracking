@@ -1,13 +1,13 @@
 <!-- Google Search Console -->
-<meta name="google-site-verification" content="15ORyHR-XnE6rDeRBDe6XV9PvnyeV-gERiOHh-wnhOQ" />
+<meta name="google-site-verification" content="<?php echo esc_attr($gs_verification); ?>" />
 
 <?php if (!is_user_logged_in()) : ?>
     <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-658J5D97BN"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=<?php echo esc_attr($ga_id); ?>"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', 'G-658J5D97BN');
+        gtag('config', '<?php echo esc_attr($ga_id); ?>');
     </script>
 <?php endif; ?>
