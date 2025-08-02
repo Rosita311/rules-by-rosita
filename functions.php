@@ -145,37 +145,6 @@ function rules_by_rosita_customize_register($wp_customize)
             'type'    => 'url',
         ));
     }
-    /* Add tracking codes to Customizer */
-    $wp_customize->add_section('tracking_codes_section', [
-        'title' => __('Tracking codes', 'rules-by-rosita'),
-        'priority' => 30,
-    ]);
-
-    // Google Site Verification
-    $wp_customize->add_setting('google_site_verification', [
-        'sanitize_callback' => 'sanitize_text_field', 
-        'default' => '',
-    ]);
-    $wp_customize->add_control('google_site_verification_control', [
-        'label' => __('Google Site Verification Code', 'rules-by-rosita'),
-        'section' => 'tracking_codes_section',
-        'settings' => 'google_site_verification',
-        'type' => 'text',
-        'description' => __('Google Search Console. Alleen de code, zonder meta tag etc. Bijvoorbeeld: abc123xyz456', 'rules-by-rosita'),
-    ]);
-
-    // Google Analytics ID
-    $wp_customize->add_setting('google_analytics_id', [
-        'sanitize_callback' => 'sanitize_text_field',
-        'default' => '',
-    ]);
-    $wp_customize->add_control('google_analytics_id_control', [
-        'label' => __('Google Analytics ID', 'rules-by-rosita'),
-        'section' => 'tracking_codes_section',
-        'settings' => 'google_analytics_id',
-        'type' => 'text',
-        'description' => __('Bijv. G-XXXXXXXXXX', 'rules-by-rosita'),
-    ]);
 }
 add_action('customize_register', 'rules_by_rosita_customize_register');
 

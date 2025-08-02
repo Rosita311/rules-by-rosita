@@ -6,11 +6,26 @@
 <head>
   <meta charset="<?php bloginfo('charset'); ?>">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <?php get_template_part('template-parts/tracking'); ?>
+  <!-- Tracking -->
+  <meta name="google-site-verification" content="15ORyHR-XnE6rDeRBDe6XV9PvnyeV-gERiOHh-wnhOQ" />
+  <?php if (!is_user_logged_in() && !empty($ga_id)) : ?>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-658J5D97BN"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'G-658J5D97BN');
+    </script>
+  <?php endif; ?>
+  <!-- Einde tracking -->
   <?php wp_head(); ?>
 </head>
+
 <body <?php body_class(); ?>>
-   <?php wp_body_open(); ?>
+  <?php wp_body_open(); ?>
   <a
     href="#main-content"
     class="skip-link">Sla het menu over</a>
@@ -56,7 +71,7 @@
           <ul>
             <li>
               <button
-              class="btn-icon-small"
+                class="btn-icon-small"
                 id="close-sidebar-button"
                 onclick="closeSidebar()"
                 aria-label="Sluit menu">
@@ -88,7 +103,7 @@
             aria-controls="search-overlay"
             id="search-toggle">
             <svg
-            aria-hidden="true"
+              aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
               width="24"
               height="24"
@@ -111,7 +126,7 @@
             id="theme-switch"
             class="btn-icon-small">
             <svg
-            aria-hidden="true"
+              aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
               width="24"
               height="24"
@@ -130,7 +145,7 @@
                 d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
             </svg>
             <svg
-            aria-hidden="true"
+              aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
               width="24"
               height="24"
