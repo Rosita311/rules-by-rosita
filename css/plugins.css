@@ -185,6 +185,10 @@ body #cmplz-manage-consent-container .cmplz-switch {
 }
 
 /* Jetpack subscription widget */
+.footer-widgets .wp-widget-group__inner-blocks p{
+  margin-bottom: 1rem;
+}
+
 #subscribe-email input[type="email"] {
   padding: 0.75rem 1rem;
   font-size: 1rem;
