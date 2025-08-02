@@ -93,10 +93,10 @@ get_template_part('template-parts/accessibility-panel'); ?>
                                             <path d="M17 8l4 4l-4 4" />
                                             <path d="M14 4l-4 16" />
                                         </svg>
-                                         <span><span class="introduction-label-text">Ik leer:</span>
-      <?php echo esc_html($leren); ?></span>
-  </li>
-<?php endif; ?>
+                                        <span><span class="introduction-label-text">Ik leer:</span>
+                                            <?php echo esc_html($leren); ?></span>
+                                    </li>
+                                <?php endif; ?>
 
                                 <?php if ($kijken) : ?>
                                     <li>
