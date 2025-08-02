@@ -51,7 +51,7 @@
   }
 
   &:focus-visible {
-    outline: 3px solid var(--color-text);
+    outline: 2px solid var(--color-text);
     outline-offset: 2px;
     border-radius: 0.25rem;
   }
@@ -147,7 +147,7 @@
   background-color: var(--color-text);
   color: var(--color-background);
   border-radius: 50%;
-  outline: 3px solid var(--color-text);
+  outline: 2px solid var(--color-text);
 }
 
 .social-media a:focus-visible svg {

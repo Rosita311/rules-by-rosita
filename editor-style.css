@@ -125,7 +125,7 @@ body.block-editor-page {
   color: var(--color-text);
 }
 .wp-block-button__link:focus {
-  outline: 3px solid var(--color-text);
+  outline: 2px solid var(--color-text);
   outline-offset: 2px;
 }
 
