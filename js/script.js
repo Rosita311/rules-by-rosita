@@ -83,7 +83,9 @@ const openSidebar = () => {
   navbar.classList.add("show");
   document.body.classList.add("menu-open");
   openButton.setAttribute("aria-expanded", "true");
-
+  if (searchOverlay?.classList.contains("show")) {
+    closeSearch();
+  }
   if (media.matches) {
     activateTrap(navbar);
     navbar.removeAttribute("inert");
@@ -91,12 +93,6 @@ const openSidebar = () => {
     menuButtons.setAttribute("inert", "");
     footer.setAttribute("inert", "");
     overlay.style.display = "block";
-    if (toggleButton) toggleButton.style.display = "none";
-    if (backToTop) backToTop.style.display = "none";
-    if (panel) {
-      panelWasOpen = panel.classList.contains("show");
-      if (panelWasOpen) closePanel();
-    }
 
     escKeyHandler = (e) => {
       if (e.key === "Escape") {
