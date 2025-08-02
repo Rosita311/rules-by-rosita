@@ -24,6 +24,7 @@ get_template_part('template-parts/accessibility-panel'); ?>
         </div>
     </section>
     <div class="container-main">
+        <?php if ( function_exists('get_field') ) : ?>
         <section class="introduction">
             <div class="introduction-content-wrapper">
                 <div class="introduction-card-content entry-content">
@@ -128,6 +129,7 @@ get_template_part('template-parts/accessibility-panel'); ?>
                 </div>
             </div>
         </section>
+        <?php endif; ?>
         <section class="blogpost-section">
             <h2>Recente blogposts</h2>
             <ul class="blog-listing-grid">
