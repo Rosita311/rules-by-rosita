@@ -93,6 +93,8 @@ const openSidebar = () => {
     menuButtons.setAttribute("inert", "");
     footer.setAttribute("inert", "");
     overlay.style.display = "block";
+    if (toggleButton) toggleButton.style.display = "none";
+    if (backToTop) backToTop.style.display = "none";
 
     escKeyHandler = (e) => {
       if (e.key === "Escape") {
