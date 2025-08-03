@@ -31,20 +31,27 @@ get_template_part('template-parts/accessibility-panel'); ?>
                 <div class="introduction-content-wrapper">
                     <div class="introduction-card-content entry-content">
 
-                        <?php if ($titel = get_field('introductie_titel', $homepage_id)) : ?>
-                            <h2><?php echo esc_html($titel); ?></h2>
-                        <?php endif; ?>
-
-                        <?php if ($tekst = get_field('introductie_tekst', $homepage_id)) : ?>
-                            <p><?php echo esc_html($tekst); ?></p>
-                        <?php endif; ?>
-
                         <?php
-                        $over_mij = get_field('over_mij_titel', $homepage_id);
-                        $lezen = get_field('lezen', $homepage_id);
-                        $leren = get_field('leren', $homepage_id);
-                        $kijken = get_field('kijken', $homepage_id);
+                        $intro_titel = get_field('introductie_titel', $homepage_id);
+                        $intro_tekst = get_field('introductie_tekst', $homepage_id);
+                        $over_mij    = get_field('over_mij_titel', $homepage_id);
+                        $lezen       = get_field('lezen', $homepage_id);
+                        $leren       = get_field('leren', $homepage_id);
+                        $kijken      = get_field('kijken', $homepage_id);
+                        $kijken_link = get_field('kijken_link', $homepage_id);
+                        $btn_link    = get_field('knop_link', $homepage_id);
+                        $btn_text    = get_field('knop_link_tekst', $homepage_id);
+                        $img         = get_field('introductie_afbeelding', $homepage_id);
                         ?>
+
+
+                        <?php if ($intro_titel) : ?>
+                            <h2><?php echo esc_html($intro_titel); ?></h2>
+                        <?php endif; ?>
+
+                        <?php if ($intro_tekst) : ?>
+                            <?php echo wp_kses_post($intro_tekst); ?>
+                        <?php endif; ?>
 
                         <?php if ($over_mij || $lezen || $leren || $kijken) : ?>
                             <?php if ($over_mij) : ?>
@@ -82,7 +89,7 @@ get_template_part('template-parts/accessibility-panel'); ?>
                                             <path d="M16 16l3.923 -.98" />
                                         </svg>
                                         <span><span class="introduction-label-text">Ik lees:</span>
-                                            <?php the_field('lezen', $homepage_id); ?></span>
+                                            <?php echo esc_html($lezen); ?></span>
                                     </li>
                                 <?php endif;
                                 if ($leren) : ?>
@@ -121,7 +128,7 @@ get_template_part('template-parts/accessibility-panel'); ?>
                                             <path d="M16 3l-4 4l-4 -4" />
                                         </svg>
                                         <span><span class="introduction-label-text">Ik kijk:</span>
-                                            <a href="<?php echo esc_url(get_field('kijken_link', $homepage_id)); ?>">
+                                            <a href="<?php echo esc_url($kijken_link); ?>">
                                                 <?php echo esc_html($kijken); ?>
                                             </a></span>
                                     </li>
@@ -129,22 +136,16 @@ get_template_part('template-parts/accessibility-panel'); ?>
                             </ul>
                         <?php endif; ?>
 
-                        <?php
-                        $btn_link = get_field('knop_link', $homepage_id);
-                        $btn_text = get_field('knop_link_tekst', $homepage_id);
-                        ?>
                         <?php if ($btn_link && $btn_text) : ?>
                             <a class="btn btn-secondary" href="<?php echo esc_url($btn_link); ?>">
                                 <?php echo esc_html($btn_text); ?>
                             </a>
                         <?php endif; ?>
-
                     </div>
                 </div>
-
                 <div class="introduction-image-wrapper">
                     <div class="introduction-image dotted-background-blue">
-                        <?php if ($img = get_field('introductie_afbeelding', $homepage_id)) : ?>
+                        <?php if ($img) : ?>
                             <img
                                 src="<?php echo esc_url($img); ?>"
                                 alt="<?php the_title_attribute(); ?>"
@@ -156,6 +157,7 @@ get_template_part('template-parts/accessibility-panel'); ?>
                 </div>
             </section>
         <?php endif; ?>
+
         <section class="blogpost-section">
             <h2>Recente blogposts</h2>
             <ul class="blog-listing-grid">
