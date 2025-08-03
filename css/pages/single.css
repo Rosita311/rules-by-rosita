@@ -16,7 +16,10 @@
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  max-width: 100%;
+  overflow-x: hidden;
 }
+
 .post-meta-wrapper {
   padding: 2rem 0;
   width: 100%;
@@ -76,6 +79,10 @@
   .single-post {
     gap: 0;
     padding-bottom: 5rem;
+  }
+
+  .post-content-wrapper {
+    overflow-x: hidden;
   }
 
   .post-meta-wrapper {
