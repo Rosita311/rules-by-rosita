@@ -1,7 +1,6 @@
 #search-overlay {
   position: absolute;
   left: 50%;
-  top: 7.375rem;
   transform: translateX(-50%);
   width: calc(80rem - 2rem);
   max-width: 90%;

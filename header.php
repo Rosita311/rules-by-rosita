@@ -168,6 +168,8 @@
     <div
       id="overlay"
       onclick="closeSidebar()"
-      aria-hidden="true"></div>
+      aria-hidden="true">
+    </div>
+    <?php get_template_part('template-parts/search-overlay'); ?>
   </header>
-  <?php get_template_part('template-parts/search-overlay'); ?>
+  
