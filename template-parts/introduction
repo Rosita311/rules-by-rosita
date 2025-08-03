@@ -18,7 +18,6 @@
                         $img         = get_field('introductie_afbeelding', $homepage_id);
                         ?>
 
-
                         <?php if ($intro_titel) : ?>
                             <h2><?php echo esc_html($intro_titel); ?></h2>
                         <?php endif; ?>
