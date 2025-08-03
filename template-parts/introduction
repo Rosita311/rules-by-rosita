@@ -1,6 +1,4 @@
 <?php if (function_exists('get_field')) :
-    $homepage_id = get_option('page_on_front'); ?>
-
     <section class="introduction">
         <div class="introduction-content-wrapper">
             <div class="introduction-card-content entry-content">
