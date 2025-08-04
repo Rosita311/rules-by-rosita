@@ -258,6 +258,15 @@
     margin: 0;
     padding: 0;
   }
+
+  .footer-widgets {
+    justify-content: flex-start;
+    gap: 0;
+  }
+
+   .footer-widgets .widget {
+    flex: 1 1 100%; 
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -266,10 +275,6 @@
     flex-direction: column;
     padding: 2rem 0;
     gap: 2rem;
-  }
-
-    .footer-widgets .widget {
-    flex: 1 1 100%; 
   }
 
   .footer-menu h2,
