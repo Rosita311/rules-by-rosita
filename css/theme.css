@@ -588,7 +588,15 @@ a.btn-icon-large {
 
 /* Single pagination */
 
-.pagination,
+.pagination {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  background-color: var(--color-background);
+}
+
 .single-pagination {
   display: flex;
   flex-wrap: wrap;
