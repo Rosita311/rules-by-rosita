@@ -220,7 +220,7 @@ body #cmplz-manage-consent-container .cmplz-switch {
   color: var(--color-text) !important;
 }
 
-.footer-widgets-container #subscribe-submit button[type="submit"]:hover {
+.footer-widgets #subscribe-submit button[type="submit"]:hover {
   border: 2px solid var(--color-text) !important;
 }
 
