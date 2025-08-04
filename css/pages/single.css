@@ -7,7 +7,7 @@
   margin: 0 auto;
   margin-top: -10rem;
   padding: clamp(0.5rem, 5vw, 2rem);
-  width: min(90%, 70rem);
+  width: min(90%, var(--site-max-width));
   z-index: 1;
 }
 
@@ -17,7 +17,7 @@
   flex-direction: column;
   gap: 2rem;
   max-width: 100%;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 
 .post-meta-wrapper {

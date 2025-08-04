@@ -13,13 +13,11 @@
           ?>
         </nav>
       </div>
-      <div class="footer-widgets-container">
         <?php if (is_active_sidebar('footer-widgets')) : ?>
           <div class="footer-widgets">
             <?php dynamic_sidebar('footer-widgets'); ?>
           </div>
         <?php endif; ?>
-      </div>
     </div>
     <div class="footer-info">
       <div

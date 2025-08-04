@@ -2,7 +2,7 @@
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  width: calc(80rem - 2rem);
+  width: calc(var(--site-max-width) - 2rem);
   max-width: 90%;
   max-height: calc(100dvh - 8rem);
   overflow-y: auto;
