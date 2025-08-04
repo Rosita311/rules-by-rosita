@@ -86,6 +86,9 @@ const openSidebar = () => {
   if (searchOverlay?.classList.contains("show")) {
     closeSearch();
   }
+  if (panel?.classList.contains("show")) {
+    closePanel();
+  }
   if (media.matches) {
     activateTrap(navbar);
     navbar.removeAttribute("inert");
@@ -103,6 +106,7 @@ const openSidebar = () => {
     };
     document.addEventListener("keydown", escKeyHandler);
   }
+  
 };
 
 const closeSidebar = () => {
