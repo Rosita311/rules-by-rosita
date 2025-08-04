@@ -193,7 +193,7 @@ body #cmplz-manage-consent-container .cmplz-switch {
   padding: 0.75rem 1rem;
   font-size: 1rem;
   background-color: var(--color-background);
-  border: 2px solid var(--color-text);
+  border: 2px solid var(--color-text) !important;
   border-radius: 0.25rem;
   width: 100%;
   font-family: var(--font-body);
