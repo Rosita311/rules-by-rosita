@@ -229,7 +229,7 @@ a #top:focus-visible {
   padding: 0;
   list-style: none;
   min-width: 10rem;
-  z-index: 10;
+  z-index: 9;
 }
 
 /*Toon submenu als de parent 'open' is  */
