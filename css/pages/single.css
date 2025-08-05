@@ -1,6 +1,6 @@
 .single-post-content {
   display: grid;
-  grid-template-columns: 4.5fr 1.5fr;
+  grid-template-columns: 3fr 1fr;
   grid-template-areas: "content sidebar";
   gap: clamp(2rem, 5vw, 4rem);
   background-color: var(--color-background);
