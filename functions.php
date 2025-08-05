@@ -108,7 +108,7 @@ function rules_by_rosita_register_footer_widgets() {
         'description'   => __( 'Voeg hier widgets toe die in de footer moeten worden weergegeven.', 'rules-by-rosita' ),
         'before_widget' => '<div id="%1$s" class="widget %2$s">',
         'after_widget'  => '</div>',
-        'before_title'  => '<h2 class="widget-title">',
+        'before_title'  => '<h2>',
         'after_title'   => '</h2>',
     ) );
 }

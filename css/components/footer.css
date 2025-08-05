@@ -75,79 +75,7 @@
   min-width: 250px;
 }
 
-.social-media {
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-  align-items: start;
-  width: 100%;
-}
 
-.social-media ul {
-  display: flex;
-  width: 100%;
-  background-color: transparent;
-  flex-wrap: wrap;
-  justify-content: start;
-  align-items: center;
-  padding: 0;
-  gap: 1rem;
-  list-style-type: none;
-}
-
-.social-media li a {
-  padding: 0;
-  border-radius: 50%;
-  display: flex;
-  color: var(--color-text);
-  justify-content: center;
-  align-items: center;
-  min-width: 2.5rem;
-  min-height: 2.5rem;
-
-  &:hover {
-    background-color: var(--color-contrast);
-    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
-  }
-}
-
-.social-media li svg:hover {
-  stroke: var(--color-text);
-  transition: stroke 0.3s ease-in-out, color 0.3s ease-in-out;
-}
-
-.social-media li {
-  display: inline-block;
-  padding: 0;
-  cursor: pointer;
-}
-
-.social-media li:hover svg {
-  stroke: var(--color-bg-light);
-  transition: stroke 0.3s ease-in-out;
-}
-
-.social-media li:focus svg {
-  stroke: var(--color-background);
-  transition: stroke 0.3s ease-in-out;
-}
-
-.social-media li svg {
-  stroke: var(--color-text);
-  fill: transparent;
-  pointer-events: visiblePainted;
-}
-
-.social-media a:focus-visible {
-  background-color: var(--color-text);
-  color: var(--color-background);
-  border-radius: 50%;
-  outline: 2px solid var(--color-text);
-}
-
-.social-media a:focus-visible svg {
-  stroke: var(--color-background);
-}
 
 .footer-info {
   display: flex;
@@ -261,7 +189,6 @@
 
   .footer-widgets {
     justify-content: flex-start;
-    gap: 0;
   }
 
    .footer-widgets .widget {
@@ -277,21 +204,13 @@
     gap: 2rem;
   }
 
-  .footer-menu h2,
-  .footer-widgets h2 {
+  .footer-menu h2 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
     font-family: var(--font-heading);
   }
 
-  .social-media {
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: start;
-    width: 100%;
-    gap: 1rem;
-  }
+  
 
   .footer-info {
     align-items: flex-start;
