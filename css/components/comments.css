@@ -122,7 +122,7 @@ a#cancel-comment-reply-link {
 
 @media screen and (max-width: 768px) {
   .post-comments-wrapper {
-    margin-top: 2rem;
+    width: 100%;
     padding: 0;
   }
 
