@@ -49,5 +49,4 @@
 <?php
 wp_footer(); // WordPress footer hook for scripts and styles 
 ?>
-
 </html>
