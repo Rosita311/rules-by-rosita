@@ -204,13 +204,19 @@
     gap: 2rem;
   }
 
+  .footer-menu {
+    width: 100%;
+  }
+
   .footer-menu h2 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
     font-family: var(--font-heading);
   }
 
-  
+  .footer-widgets {
+  width: 100%;
+}
 
   .footer-info {
     align-items: flex-start;
