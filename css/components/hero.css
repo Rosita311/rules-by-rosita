@@ -20,7 +20,7 @@
   list-style-type: none;
   margin: 0 auto;
   max-width: var(--site-max-width);
-  padding: 0 2rem;
+  padding: 0 clamp(1rem, 2vw, 2.5rem);
 }
 
 .hero-card {
