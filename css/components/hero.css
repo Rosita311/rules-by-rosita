@@ -124,11 +124,9 @@
 
 /* Single post hero styles */
 .single-post-hero {
-  background-color: var(--color-background);
-  padding: 0;
-  margin: 0 auto;
-  max-width: var(--site-max-width);
   width: 100%;
+  padding: 0;
+  background-color: var(--color-background);
 }
 
 .hero-image img {
@@ -141,6 +139,14 @@
 }
 
 /* Media Queries */
+@media screen and (min-width: 90rem) {
+  .single-post-hero {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 clamp(1rem, 2vw, 2.5rem);
+    max-width: var(--site-max-width);
+  }
+}
 
 @media screen and (max-width: 1024px) {
   .hero-card {

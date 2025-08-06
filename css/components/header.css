@@ -310,7 +310,6 @@ a #top:focus-visible {
 
   .site-logo {
     max-width: 7rem;
-    margin-bottom: 0.5rem;
   }
 
   body.menu-open {
@@ -467,7 +466,6 @@ a #top:focus-visible {
 @media screen and (max-width: 768px) {
   .site-logo {
     max-width: 5rem;
-    margin-bottom: 0;
   }
 
   #open-sidebar-button {
