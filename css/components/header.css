@@ -302,12 +302,6 @@ a #top:focus-visible {
 /* Media Queries */
 
 @media screen and (max-width: 1024px) {
-  .header-container,
-  .footer-container {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-  }
-
   .site-logo {
     max-width: 7rem;
   }
@@ -465,8 +459,7 @@ a #top:focus-visible {
 
 @media screen and (max-width: 768px) {
   .header-container {
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
+  padding: 0.25rem 1rem;
 }
   .site-logo {
     max-width: 5rem;
