@@ -18,8 +18,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   list-style-type: none;
-  gap: 2rem;
-  margin: 0 auto;
+  gap: 2rem; 
   margin-bottom: 2rem;
   padding: 0;
 }
