@@ -8,7 +8,7 @@ if ($wp_query->max_num_pages <= 1) {
 ?>
 
 <nav class="pagination" aria-label="Pagina navigatie">
-  <ul class="pagination-list">
+  <div class="pagination-list">
     <?php
     echo str_replace(
       ['<a', '<span'],
@@ -32,5 +32,5 @@ if ($wp_query->max_num_pages <= 1) {
       ])
     );
     ?>
-  </ul>
+  </div>
 </nav>
