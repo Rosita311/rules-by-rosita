@@ -415,6 +415,27 @@ const closePanel = () => {
   toggleButton.focus();
 };
 
+//  Click outsiide container  of search overlay and accessibility settings using a mouse
+document.addEventListener("click", (e) => {
+  // Sluit search overlay als deze open is en er buiten geklikt wordt
+  if (
+    searchOverlay?.classList.contains("show") &&
+    !searchOverlay.contains(e.target) &&
+    !searchToggle.contains(e.target) // voorkomt sluiten bij klik op toggle
+  ) {
+    closeSearch();
+  }
+
+  // Sluit accessibility settings als deze open zijn en er buiten geklikt wordt
+  if (
+    panel?.classList.contains("show") &&
+    !panel.contains(e.target) &&
+    !toggleButton.contains(e.target) // voorkomt sluiten bij klik op toggle
+  ) {
+    closePanel();
+  }
+});
+
 // Instellingen bijhouden in localStorage
 
 const accessibilityOptions = {
