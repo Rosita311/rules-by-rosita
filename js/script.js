@@ -417,20 +417,20 @@ const closePanel = () => {
 
 //  Click outsiide container  of search overlay and accessibility settings using a mouse
 document.addEventListener("click", (e) => {
-  // Sluit search overlay als deze open is en er buiten geklikt wordt
+   // Search overlay 
   if (
     searchOverlay?.classList.contains("show") &&
     !searchOverlay.contains(e.target) &&
-    !searchToggle.contains(e.target) // voorkomt sluiten bij klik op toggle
+    !searchToggle.contains(e.target) 
   ) {
     closeSearch();
   }
 
-  // Sluit accessibility settings als deze open zijn en er buiten geklikt wordt
+  // Accessibility settings
   if (
     panel?.classList.contains("show") &&
     !panel.contains(e.target) &&
-    !toggleButton.contains(e.target) // voorkomt sluiten bij klik op toggle
+    !toggleButton.contains(e.target) 
   ) {
     closePanel();
   }
