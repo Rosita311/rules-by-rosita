@@ -6,7 +6,7 @@ get_template_part('template-parts/accessibility-panel'); ?>
       <?php
       if (has_post_thumbnail()) {
         // Grote uitgelichte afbeelding, bijvoorbeeld 'large' of een custom size
-        $img_url = get_the_post_thumbnail_url(get_the_ID(), 'large');
+        $img_url = get_the_post_thumbnail_url(get_the_ID(), 'full');
         // Alt tekst automatisch uit titel halen:
         $alt_text = get_post_meta(get_post_thumbnail_id(get_the_ID()), '_wp_attachment_image_alt', true);
         if (!$alt_text) {
