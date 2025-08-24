@@ -154,11 +154,6 @@
 /* Media Queries */
 
 @media screen and (max-width: 1024px) {
-  .footer-content {
-    padding: 3rem 0;
-    gap: 3rem;
-  }
-
   .footer-menu {
     display: flex;
     justify-content: flex-start;
@@ -201,7 +196,6 @@
     display: flex;
     flex-direction: column;
     padding: 2rem 0;
-    gap: 2rem;
   }
 
   .footer-menu {
