@@ -7,7 +7,7 @@
 ## Inleiding
 
 Het **Rules by Rosita Theme** is een op maat gemaakt WordPress-thema dat ik ontwikkel als leerproject.  
-Het thema is gericht op **toegankelijkheid, responsiviteit** en **darkmode**, en is gebouwd voor mijn persoonlijke blog.  
+Het thema is gericht op **toegankelijkheid, responsiviteit** en **darkmode**, en is ontworpen en gebouwd voor mijn persoonlijke blog.  
 De code is openbaar beschikbaar als leerbron en om mijn ontwikkelproces te documenteren.
 
 ## Features
