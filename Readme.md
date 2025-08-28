@@ -7,7 +7,7 @@
 ## Inleiding
 
 Het **Rules by Rosita Theme** is een op maat gemaakt WordPress-thema dat ik ontwikkel als leerproject.  
-Het thema is gericht op **toegankelijkheid, responsiviteit** en **leesbaarheid**, en is ontworpen voor mijn persoonlijke blog.  
+Het thema is gericht op **toegankelijkheid, responsiviteit** en **darkmode**, en is gebouwd voor mijn persoonlijke blog.  
 De code is openbaar beschikbaar als leerbron en om mijn ontwikkelproces te documenteren.
 
 ## Features
@@ -16,7 +16,7 @@ De code is openbaar beschikbaar als leerbron en om mijn ontwikkelproces te docum
 - **Dark mode**: automatisch (prefers-color-scheme) + handmatige toggle (localStorage)  
 - **Zoekfunctie** geïntegreerd in WordPress  
 - **Minimalistisch design** met helder kleurenpalet en toegankelijke contrasten  
-- **Instellingenmenu** met toegankelijkheidsopties (groot lettertype, hoog contrast, animaties uit)  
+- **Instellingenmenu** met toegankelijkheidsopties (groot lettertype, leesbaar lettertype, hoog contrast, animaties uit)  
 
 ## Design
 - **Typografie**: Nunito (body) & Zilla Slab (koppen) via Google Fonts  
@@ -29,6 +29,7 @@ De code is openbaar beschikbaar als leerbron en om mijn ontwikkelproces te docum
 - Voorkeuren voor `prefers-reduced-motion`  
 - Consistente tabvolgorde  
 - Contrast-proof kleurgebruik  
+- Instellingenmenu met toegankelijkheidsopties
 
 ## Gebruikte tools & technologieën
 - WordPress  
@@ -39,17 +40,18 @@ De code is openbaar beschikbaar als leerbron en om mijn ontwikkelproces te docum
 
 ## Plugins
 - Yoast (SEO)  
-- Advanced Custom Fields  
+- Advanced Custom Fields 
+- Ads.txt Manager 
 - Antispam Bee  
 - Imsanity  
 - Forminator  
 - Complianz  
 - Limit Login Attempts Reloaded  
-- Public Post Preview  
-- Theme Check  
+- WPS Hide Login
+- Theme Check  (niet op de live site)
 - Site Kit by Google  
 - WP Accessibility  
-- Accessibility Checker  
+- Accessibility Checker (niet op de live site)
 - Jetpack  
 
 ## Documentatie & Bronnen
@@ -73,7 +75,7 @@ Zie [DEVLOG.md](./DEVLOG.md) voor een overzicht van afgeronde onderdelen, lopend
 ## Introduction
 
 The **Rules by Rosita Theme** is a custom-made WordPress theme I’m developing as a learning project.  
-The theme focuses on **accessibility, responsiveness**, and **readability**, and is designed for my personal blog.  
+The theme focuses on **accessibility, responsiveness**, and **darkmode**, and is designed and built for my personal blog.  
 The code is publicly available as a learning resource and to document my development process.
 
 ## Features
@@ -82,7 +84,7 @@ The code is publicly available as a learning resource and to document my develop
 - **Dark mode**: automatic (prefers-color-scheme) + manual toggle (localStorage)  
 - **Search functionality** integrated into WordPress  
 - **Minimalistic design** with a clean color palette and accessible contrasts  
-- **Settings menu** with accessibility options (larger font size, high contrast, disable animations)  
+- **Settings menu** with accessibility options (larger font size, readable font, high contrast, disable animations)  
 
 ## Design
 - **Typography**: Nunito (body) & Zilla Slab (headings) via Google Fonts  
@@ -95,6 +97,7 @@ The code is publicly available as a learning resource and to document my develop
 - Support for `prefers-reduced-motion`  
 - Consistent tab order  
 - Contrast-proof color usage  
+- Settings menu with accessibility options
 
 ## Tools & Technologies
 - WordPress  
@@ -105,17 +108,18 @@ The code is publicly available as a learning resource and to document my develop
 
 ## Plugins
 - Yoast (SEO)  
-- Advanced Custom Fields  
+- Advanced Custom Fields 
+- Ads.txt Manager 
 - Antispam Bee  
 - Imsanity  
 - Forminator  
 - Complianz  
 - Limit Login Attempts Reloaded  
-- Public Post Preview  
-- Theme Check  
+- WPS Hide Login
+- Theme Check  (not on live site)
 - Site Kit by Google  
 - WP Accessibility  
-- Accessibility Checker  
+- Accessibility Checker (not on live site)
 - Jetpack  
 
 ## Documentation & Resources
