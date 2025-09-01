@@ -296,7 +296,7 @@ aside h1 {
 .entry-content table,
 .entry-content pre {
   max-width: 100%;
-  height: auto;
+  height: 25rem;
   display: block;
   overflow-x: auto;
 }
@@ -323,7 +323,6 @@ aside h1 {
 }
 
 .entry-content figure {
-  display: block;
   max-width: 100%;
   margin: 2rem auto; 
   text-align: center;

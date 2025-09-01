@@ -25,8 +25,10 @@ get_template_part('template-parts/accessibility-panel'); ?>
                 </ul>
                     <?php get_template_part('template-parts/pagination'); ?>
             <?php else : ?>
-                <h2>Niets gevonden</h2>
-                <p>Er kwam niets overeen met je zoektermen. Probeer het nog eens met andere zoektermen.</p>
+                <div class="search-results-not-found">
+                    <h2>Niets gevonden</h2>
+                    <p>Er kwam niets overeen met je zoektermen. Probeer het nog eens met andere zoektermen.</p>
+                </div>
                 <?php get_search_form(); ?>
             <?php endif; ?>
         </section>
