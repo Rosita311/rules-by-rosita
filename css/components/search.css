@@ -30,10 +30,11 @@
   margin-bottom: 1rem;
 }
 
-.search-form-fallback {
-  display: none;
-}
-
 .search-input::placeholder {
   color: var(--color-placeholder);
+}
+
+/* If Javascript isn't available */
+.search-form-fallback {
+  display: none;
 }
