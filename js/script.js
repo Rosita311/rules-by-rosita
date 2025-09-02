@@ -417,11 +417,7 @@ const closePanel = () => {
 
 //  Click outsiide container  of search overlay and accessibility settings using a mouse
 document.addEventListener("click", (e) => {
-<<<<<<< HEAD
    // Search overlay 
-=======
-  // Search overlay 
->>>>>>> 35aec8f (recover GitHub connection)
   if (
     searchOverlay?.classList.contains("show") &&
     !searchOverlay.contains(e.target) &&
