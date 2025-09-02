@@ -6,11 +6,11 @@
   --font-weight-medium: 500;
   --font-weight-bold: 700;
 
-  --font-size-regular: 1rem;
-
   /* Fonts */
   --font-body: "Nunito", sans-serif;
   --font-heading: "Zilla Slab", serif;
+
+  --font-size-regular: 1rem;
 
   /* Sitewidth */
   --site-max-width: 90rem;
