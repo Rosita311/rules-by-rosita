@@ -6,6 +6,8 @@
   --font-weight-medium: 500;
   --font-weight-bold: 700;
 
+  --font-size-regular: 1rem;
+
   /* Fonts */
   --font-body: "Nunito", sans-serif;
   --font-heading: "Zilla Slab", serif;
@@ -130,7 +132,7 @@ body {
   flex-direction: column;
   font-family: var(--font-body);
   background-color: var(--color-background);
-  font-size: 1rem;
+  font-size: var(--font-size-regular);
   color: var(--color-text);
   max-width: 100%;
   margin: 0 auto;
@@ -156,7 +158,7 @@ h6 {
 
 p {
   font-family: var(--font-body);
-  font-size: 1rem; /* Blijft altijd 1rem */
+  font-size: var(--font-size-regular); 
   font-weight: var(--font-weight-regular);
   color: var(--color-text);
   line-height: 1.5em;
@@ -222,7 +224,7 @@ h6 {
 }
 
 .wp-caption-text {
-    font-size: 1rem;
+    font-size: var(--font-size-regular);
     line-height: 1.5;
     padding: 0.5em 0;
     color: var(--color-text);
@@ -235,7 +237,7 @@ h6 {
 
 .gallery-caption {
     font-style: italic;
-    font-size: 1rem;
+    font-size: var(--font-size-regular);
     color: var(--color-text);
 }
 
@@ -296,9 +298,14 @@ aside h1 {
 .entry-content table,
 .entry-content pre {
   max-width: 100%;
-  height: 25rem;
+  height: auto;
   display: block;
   overflow-x: auto;
+}
+
+.entry-content iframe {
+  height: 25rem;
+  margin-bottom: 2rem;
 }
 
 .entry-content h2,
@@ -655,7 +662,10 @@ a.btn-icon-large {
 .comment-form label,
 .search-label,
 .forminator-label,
+#forminator-field-consent-1_68b6d1726b718-label.forminator-label,
 .forminator-required {
+  font-family: var(--font-body);
+  font-size: var(--font-size-regular);
   font-weight: bold;
   color: var(--color-text) !important;
 }
@@ -721,7 +731,7 @@ a.btn-icon-large {
   flex-direction: row;
   align-items: center;
   gap: 0.5rem;
-  font-size: 1rem;
+  font-size: var(--font-size-regular);
 }
 
 .privacy-link {
@@ -777,6 +787,10 @@ a.btn-icon-large {
   .dotted-background-blue {
     background-size: 15px 15px;
   }
+
+  .entry-content iframe {
+    height: 20rem;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -827,5 +841,21 @@ a.btn-icon-large {
   .form-group-row button {
     width: 100%;
     text-align: center;
+  }
+
+    .entry-content figure {
+    display: block;
+    max-width: 100%;
+    margin: 2rem auto; 
+    text-align: center;
+  }
+
+  .entry-content iframe {
+    height: auto;
+  }
+
+  .wp-block-gallery.has-nested-images figure.wp-block-image:not(#individual-image) {
+    margin-bottom: 2rem;
+    width: 100%;
   }
 }

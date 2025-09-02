@@ -25,10 +25,15 @@ get_template_part('template-parts/accessibility-panel'); ?>
                 </ul>
                     <?php get_template_part('template-parts/pagination'); ?>
             <?php else : ?>
+<<<<<<< HEAD
                 <div class="search-results-not-found">
                     <h2>Niets gevonden</h2>
                     <p>Er kwam niets overeen met je zoektermen. Probeer het nog eens met andere zoektermen.</p>
                 </div>
+=======
+                <h2>Niets gevonden</h2>
+                <p>Er kwam niets overeen met je zoektermen. Probeer het nog eens met andere zoektermen.</p>
+>>>>>>> 35aec8f (recover GitHub connection)
                 <?php get_search_form(); ?>
             <?php endif; ?>
         </section>
