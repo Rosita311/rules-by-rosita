@@ -19,7 +19,10 @@ get_template_part('template-parts/accessibility-panel'); ?>
           loading="lazy"
           width="1200"
           height="600" />
-      <?php } ?>
+      <?php } 
+       else { ?>
+    <div class="hero-featured-image-fallback dotted-background-pink"></div>
+<?php } ?>
     </div>
   </section>
   <div class="container-main">

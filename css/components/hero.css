@@ -138,6 +138,14 @@
   object-fit: cover;
 }
 
+.hero-featured-image-fallback {
+  width: 100%;
+  aspect-ratio: 16 / 9; 
+  height: auto;
+  min-height: 15rem;
+  max-height: 35rem;
+}
+
 /* Media Queries */
 @media screen and (min-width: 90rem) {
   .single-post-hero {
