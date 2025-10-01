@@ -100,9 +100,14 @@
                                             <path d="M16 3l-4 4l-4 -4" />
                                         </svg>
                                         <span><span class="introduction-label-text">Ik kijk:</span>
+                                        <?php if ($kijken_link) : ?>
                                             <a href="<?php echo esc_url($kijken_link); ?>">
                                                 <?php echo esc_html($kijken); ?>
-                                            </a></span>
+                                            </a>
+                                        <?php else : ?>
+                                            <?php echo esc_html($kijken); ?>
+                                        <?php endif; ?>
+                                        </span>
                                     </li>
                                 <?php endif; ?>
                             </ul>
