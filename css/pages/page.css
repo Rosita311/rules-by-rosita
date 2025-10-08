@@ -45,21 +45,25 @@
 }
 
 .introduction-iconlist {
+  display: flex;
+  flex-direction: column;
   list-style-type: none;
   padding: 0;
+  gap: 0.75rem;
 }
 
 .introduction-iconlist li {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  align-items: center;
-  margin-bottom: 0.75rem;
+  align-items: flex-start;
+  gap: 1rem;
 }
 
 .introduction-iconlist .icon {
-  margin-right: 1rem;
   stroke: var(--color-text);
+  width: 1.5rem;
+  flex-shrink: 0;
 }
 
 .introduction-label-text {
