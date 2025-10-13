@@ -9,7 +9,11 @@ get_template_part('template-parts/accessibility-panel'); ?>
         if (have_posts()) :
           // Loop through posts
           while (have_posts()) : the_post();
-            get_template_part('template-parts/card');
+            if (!has_post_thumbnail()) {
+              get_template_part('template-parts/card-fallback');
+            } else {
+              get_template_part('template-parts/card');
+            }
           endwhile; ?>
         <?php else : ?>
           <p>Geen berichten gevonden.</p>

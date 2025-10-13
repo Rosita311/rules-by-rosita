@@ -19,10 +19,9 @@ get_template_part('template-parts/accessibility-panel'); ?>
           loading="lazy"
           width="1200"
           height="600" />
-      <?php } 
-       else { ?>
-    <div class="hero-featured-image-fallback dotted-background-pink"></div>
-<?php } ?>
+      <?php } else { ?>
+        <div class="hero-featured-image-fallback dotted-background-pink"></div>
+      <?php } ?>
     </div>
   </section>
   <div class="container-main">
@@ -261,7 +260,11 @@ get_template_part('template-parts/accessibility-panel'); ?>
           <ul class="blog-listing-grid">
             <?php
             while ($related_query->have_posts()) : $related_query->the_post();
-              get_template_part('template-parts/card');
+              if (!has_post_thumbnail()) {
+                get_template_part('template-parts/card-fallback');
+              } else {
+                get_template_part('template-parts/card');
+              }
             endwhile;
             ?>
           </ul>

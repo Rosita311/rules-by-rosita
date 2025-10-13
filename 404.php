@@ -51,7 +51,11 @@ get_template_part('template-parts/accessibility-panel'); ?>
           // Loop through posts
           while ($page_not_found_query->have_posts()) : $page_not_found_query->the_post();
             $post_id = get_the_ID();
-            get_template_part('template-parts/card');
+            if (!has_post_thumbnail()) {
+              get_template_part('template-parts/card-fallback');
+            } else {
+              get_template_part('template-parts/card');
+            }
           endwhile;
         ?>
           <nav class="pagination">

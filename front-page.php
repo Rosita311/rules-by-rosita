@@ -37,7 +37,11 @@ get_template_part('template-parts/accessibility-panel'); ?>
                     // Loop through posts
                     while ($home_query->have_posts()) : $home_query->the_post();
                         $post_id = get_the_ID();
-                        get_template_part('template-parts/card');
+                        if (!has_post_thumbnail()) {
+                            get_template_part('template-parts/card-fallback');
+                        } else {
+                            get_template_part('template-parts/card');
+                        }
                     endwhile; ?>
                 <?php else : ?>
                     <p>Geen berichten gevonden.</p>
