@@ -21,3 +21,4 @@ get_template_part('template-parts/accessibility-panel'); ?>
   </div>
 </main>
 <?php get_footer(); ?>
+

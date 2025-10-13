@@ -18,6 +18,8 @@ get_template_part('template-parts/accessibility-panel'); ?>
                         $post_id = get_the_ID();
                         if (get_post_type() === 'page') {
                             get_template_part('template-parts/card-page');
+                          }  elseif (!has_post_thumbnail()) {
+                            get_template_part('template-parts/card-fallback');
                         } else {
                             get_template_part('template-parts/card');
                         }

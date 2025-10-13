@@ -13,14 +13,10 @@ $excerpt_id = 'excerpt-' . $post_id;
 <!-- card -->
 <li class="card hover-shadow-pink">
   <div class="card-image">
-    <?php if ( has_post_thumbnail() ) : ?>
     <img
       src="<?php echo get_the_post_thumbnail_url($post_id, 'large'); ?>"
       alt="<?php echo esc_attr($alt_text); ?>"
       loading="lazy" />
-<?php else : ?>
-    <div class="card-image-fallback dotted-background-blue"></div>
-<?php endif; ?>  
   </div>
   <div class="card-content-wrapper">
     <div class="card-content">
