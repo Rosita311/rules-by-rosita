@@ -13,7 +13,12 @@ function rules_by_rosita_setup()
     add_theme_support('wp-block-styles');
     add_theme_support('responsive-embeds');
     add_theme_support('html5', array('search-form', 'comment-form', 'comment-list', 'gallery', 'caption', 'style', 'script'));
-    add_theme_support('custom-logo');
+    add_theme_support('custom-logo', array(
+        'height'      => 100,
+        'width'       => 300,
+        'flex-width'  => true,
+        'flex-height' => true,
+    ));
     add_theme_support('align-wide');
 }
 add_action('after_setup_theme', 'rules_by_rosita_setup');

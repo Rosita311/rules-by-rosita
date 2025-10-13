@@ -18,6 +18,7 @@
   /* Lightmode */
   --color-text: #192324;
   --color-text-dark: rgba(255, 255, 255, 0.87);
+  --color-hero-image-fallback: #f8f4f5;
   --color-primary: #d7233e;
   --color-accent: #f8c9d7;
   --color-accent-2: #ebebeb;
@@ -47,6 +48,7 @@
 .darkmode {
   --color-text: rgba(255, 255, 255, 0.87);
   --color-text-dark: rgba(255, 255, 255, 0.87);
+  --color-hero-image-fallback: #f8f4f5;
   --color-primary: #f7636f;
   --color-accent: #e38ca6;
   --color-accent-2: #293a3d;

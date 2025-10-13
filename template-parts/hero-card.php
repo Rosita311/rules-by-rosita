@@ -10,12 +10,23 @@ $leesmeer_id = 'lees-meer-' . $post_id;
 $excerpt_id = 'excerpt-' . $post_id;
 ?>
 <li class="hero-card">
+   <?php if(has_post_thumbnail()) { ?>
     <div class="hero-image-wrapper">
         <img
             src="<?php echo get_the_post_thumbnail_url($post_id, 'large'); ?>"
             alt="<?php echo esc_attr($alt_text); ?>"
             loading="lazy" width="600" height="400" />
     </div>
+    <?php } else { ?>
+        <div class="hero-image-fallback">
+        <?php 
+        if (function_exists('get_custom_logo') && has_custom_logo()) {
+            echo get_custom_logo();
+        } else { ?>
+            <span class="hero-no-logo">Geen afbeelding beschikbaar</span>
+        <?php } ?>
+        </div>
+    <?php } ?>
     <div class="hero-card-content-wrapper">
         <div class="hero-card-content hover-shadow">
             <div class="post-info">
