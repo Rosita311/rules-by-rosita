@@ -46,7 +46,7 @@
   min-height: 15rem;
   max-height: 35rem;
   border: 1px solid var(--color-accent);
-  background-color: var(--color-hero-image-fallback);
+  background-color: var(--color-background);
   padding: 8rem;
   margin-top: -2rem;
   margin-bottom: -2rem;
