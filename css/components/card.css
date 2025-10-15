@@ -16,7 +16,7 @@
 
 .blog-listing-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(21.25rem, 1fr));
   list-style-type: none;
   gap: 2rem; 
   margin-bottom: 2rem;
