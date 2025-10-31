@@ -493,5 +493,6 @@ body.high-contrast .dotted-background-blue {
   #accessibility-settings {
     left: 50%;
     transform: translateX(-50%);
+    max-width: 95%;
   }
 }
