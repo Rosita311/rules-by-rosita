@@ -40,14 +40,10 @@ html.no-js {
   margin-top: 32px !important;
 }
 
-
-
 /* Search fallback */
 .no-js .search-form-fallback {
   display: block;
 }
-
-
 
 /* Mobile menu fallback */
 
@@ -96,8 +92,8 @@ html.no-js {
 }
 
 @media screen and (max-width: 1024px) {
-
-  html.no-js #header-nav {
+  html.no-js #open-sidebar-button:hover ~ #header-nav,
+  html.no-js #open-sidebar-button:focus ~ #header-nav {
     position: static; /* geen fixed/slide‑in positionering */
     display: block !important;
     right: 0 !important; /* niet naar rechts verschuiven */
@@ -106,6 +102,10 @@ html.no-js {
     transition: none !important;
     border: none;
     overflow-x: hidden;
+  }
+
+  html.no-js #header-nav {
+    display: none;
   }
 
   html.no-js .header-container #header-nav ul {
@@ -142,12 +142,18 @@ html.no-js {
     color: var(--color-text);
   }
 
-  html.no-js .header-container #open-sidebar-button {
-    display: none !important;
+  /* Verberg alleen wat echt niet werkt zonder JS */
+  .no-js #close-sidebar-button,
+  .no-js #theme-switch,
+  .no-js #overlay {
+    display: none;
   }
 
-  html.no-js .header-container #close-sidebar-button {
-    display: none !important;
+  /* Toon open-menu-knop zodat bezoekers toch het menu kunnen zien */
+  .no-js #open-sidebar-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 
