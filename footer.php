@@ -41,7 +41,7 @@
           aria-hidden="true"
           hidden>Sul sul!</span>
       </div>
-      <p>&copy; <?php echo date('Y'); ?> Rules by Rosita. Door Rosita Rampertaap.</p>
+      <p>&copy; <?php echo date('Y'); ?> Rules by Rosita. Geschreven en gebouwd door Rosita Rampertaap.</p>
     </div>
   </div>
 </footer>
