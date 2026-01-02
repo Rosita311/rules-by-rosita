@@ -9,14 +9,17 @@
   <!-- Tracking -->
   <meta name="google-site-verification" content="15ORyHR-XnE6rDeRBDe6XV9PvnyeV-gERiOHh-wnhOQ" />
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-658J5D97BN"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-658J5D97BN"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
 
-  gtag('config', 'G-658J5D97BN');
-</script>
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-658J5D97BN');
+  </script>
   <!-- Einde tracking -->
   <?php wp_head(); ?>
 </head>
@@ -37,6 +40,42 @@
         <?php get_template_part('template-parts/logo'); ?>
       </a>
       <div class="menu-items">
+        <a
+          href="<?php echo esc_url(add_query_arg('menu', '1')); ?>"
+          id="menu-open-toggle-no-js"
+          class="no-js btn-icon-small">
+          <span class="sr-only">Open menu</span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="icon icon-tabler icons-tabler-outline icon-tabler-menu-2">
+            <path
+              stroke="none"
+              d="M0 0h24v24H0z"
+              fill="none" />
+            <path d="M4 6l16 0" />
+            <path d="M4 12l16 0" />
+            <path d="M4 18l16 0" />
+          </svg>
+        </a>
+        <a
+          href="<?php echo esc_url(remove_query_arg('menu')); ?>"
+          class=" no-js menu-close btn-icon-small"
+          id="menu-close-toggle-no-js"
+          aria-label="Sluit menu">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-x">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M18 6l-12 12" />
+            <path d="M6 6l12 12" />
+          </svg>
+        </a>
         <button
           class="btn-icon-small"
           id="open-sidebar-button"
@@ -64,7 +103,9 @@
             <path d="M4 18l16 0" />
           </svg>
         </button>
-        <nav id="header-nav" aria-label="Hoofdmenu">
+        <nav id="header-nav"
+          class="<?php echo rules_by_rosita_is_menu_open() ? 'is-open' : ''; ?>"
+          aria-label="Hoofdmenu">
           <ul>
             <li>
               <button
@@ -172,4 +213,3 @@
     </div>
     <?php get_template_part('template-parts/search-overlay'); ?>
   </header>
-  

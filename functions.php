@@ -2,7 +2,9 @@
 /* Load custom menu walker */
 require_once get_template_directory() . '/inc/menu-walker.php';
 // Menu fallback without js
-$menu_open = isset($_GET['menu']) && $_GET['menu'] == 1;
+function rules_by_rosita_is_menu_open(): bool {
+  return isset($_GET['menu']) && $_GET['menu'] === '1';
+}
 
 /* Theme setup */
 function rules_by_rosita_setup()
