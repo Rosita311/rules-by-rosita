@@ -50,6 +50,8 @@ html.no-js {
 /* Algemene fallback stijlen voor als geen JS beschikbaar is */
 html.no-js #open-sidebar-button,
 html.no-js #close-sidebar-button,
+html.no-js #menu-open-toggle-no-js,
+html.no-js #menu-close-toggle-no-js,
 html.no-js .back-to-top,
 html.no-js #theme-switch,
 html.no-js #overlay {
@@ -93,12 +95,42 @@ html.no-js #overlay {
 }
 
 @media screen and (max-width: 1024px) {
+  html.no-js #menu-open-toggle-no-js,
+  html.no-js #menu-close-toggle-no-js {
+    display: block;
+  }
+
   html.no-js #header-nav {
     display: none;
   }
 
   html.no-js #header-nav.is-open {
     display: block;
+    position: absolute !important; /* override fixed / right -100% */
+    top: 3rem;
+    right: 1rem;
+    width: min(18rem, 90vw);
+    height: fit-content;
+    background: var(--color-background);
+    border: 1px solid var(--color-accent);
+    border-radius: 0.25rem;
+    padding: 0.75rem;
+    z-index: 10;
+  }
+
+  html.no-js #header-nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  html.no-js #header-nav a,
+  html.no-js .submenu-toggle {
+    padding: 0.5rem 0.75rem;
+  }
+
+  html.no-js .submenu {
+    margin-left: 0.75rem;
   }
 }
 

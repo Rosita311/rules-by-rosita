@@ -134,6 +134,11 @@ a #top:focus-visible {
   padding: 0.5em;
 }
 
+#menu-open-toggle-no-js,
+#menu-close-toggle-no-js {
+  display: none;
+}
+
 #overlay {
   background: rgba(0, 0, 0, 0.5);
   position: fixed;
@@ -249,7 +254,7 @@ a #top:focus-visible {
     border-bottom: none;
     background-color: var(--color-contrast);
     color: var(--color-bg-light) !important;
-  }
+  }                                               
 
   &:hover svg {
     stroke: var(--color-text) !important;
