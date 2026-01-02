@@ -50,6 +50,7 @@ html.no-js {
 /* Algemene fallback stijlen voor als geen JS beschikbaar is */
 html.no-js #open-sidebar-button,
 html.no-js #close-sidebar-button,
+html.no-js .back-to-top,
 html.no-js #theme-switch,
 html.no-js #overlay {
   display: none;
