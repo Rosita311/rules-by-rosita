@@ -135,3 +135,9 @@ The theme is publicly available, but primarily intended for my own blog and lear
 
 ## Devlog
 See [DEVLOG.md](./DEVLOG.md) for an overview of completed features, ongoing tasks, and future ideas.
+
+## Changelog
+
+### Version 1.1 - 8-3-2026
+- Add fixed positioning for back-to-top and accessibility buttons for improved accessibility
+- Refactor accessibility button styles for improved layout and hover effects
