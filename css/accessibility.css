@@ -495,4 +495,28 @@ body.high-contrast .dotted-background-blue {
     transform: translateX(-50%);
     max-width: 95%;
   }
+
+     .back-to-top,
+  .accessibility-button {
+    position: fixed;
+    bottom: calc(1rem + env(safe-area-inset-bottom));
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .back-to-top {
+    margin-left: -2rem;
+  }
+
+  .accessibility-button {
+    margin-left: 2rem;
+  }
 }
