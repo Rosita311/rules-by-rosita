@@ -18,7 +18,6 @@
   z-index: 100;
 }
 
-
 .skip-link-inline {
   display: inline-block;
   font-size: 1rem;
@@ -49,7 +48,9 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease;
   z-index: 100;
 }
 
@@ -235,7 +236,7 @@ body.dyslexic-font #search-overlay label,
 body.dyslexic-font .comment-error {
   font-weight: 700;
 }
-  
+
 body.dyslectic-font {
   --font-body: "Atkinson Hyperlegible", Arial, sans-serif;
   --font-heading: "Atkinson Hyperlegible", Arial, sans-serif;
@@ -278,8 +279,8 @@ html.large-text {
   --color-button-hover: var(--hc-accent);
   --color-primary-btn-text: var(--hc-bg);
   --color-page-hero-bg: var(--hc-bg);
-  --color-plumbob: #00FF00;
-  --color-plumbob-hover: #7FFF00;
+  --color-plumbob: #00ff00;
+  --color-plumbob-hover: #7fff00;
 }
 
 /* Links in high-contrast */
@@ -289,7 +290,7 @@ html.large-text {
 }
 
 .high-contrast a:hover {
-  color: var(--hc-accent) !important; 
+  color: var(--hc-accent) !important;
 }
 
 body.high-contrast .dotted-background-pink,
@@ -309,13 +310,13 @@ body.high-contrast .dotted-background-blue {
 
 .high-contrast #open-sidebar-button svg,
 .high-contrast #close-sidebar-button svg {
- stroke: var(--color-text)
+  stroke: var(--color-text);
 }
 
 .high-contrast .wp-block-button__link,
 .high-contrast a.btn.btn-secondary {
-  background-color: var(--hc-accent);  /* fel contrasterende kleur */
-  color: var(--hc-bg) !important;      /* tekst moet afsteken tegen achtergrond */
+  background-color: var(--hc-accent); /* fel contrasterende kleur */
+  color: var(--hc-bg) !important; /* tekst moet afsteken tegen achtergrond */
   display: inline-block;
   text-decoration: none;
 }
@@ -324,14 +325,14 @@ body.high-contrast .dotted-background-blue {
 .high-contrast .btn-secondary:hover,
 .high-contrast .btn-secondary:focus-visible,
 .high-contrast .card-page-content:hover .btn-secondary {
-  background-color: var(--color-accent); 
-  color: var(--color-background) !important; 
+  background-color: var(--color-accent);
+  color: var(--color-background) !important;
 }
 .high-contrast .card {
   border: 1px solid var(--color-text);
 }
 .high-contrast .card:hover {
-  border: 1px solid var(--color-contrast)
+  border: 1px solid var(--color-contrast);
 }
 
 /* Algemene focusstijl in high contrast modus */
@@ -359,23 +360,23 @@ body.high-contrast .dotted-background-blue {
 
 .high-contrast .has-text-color,
 .high-contrast .has-primary-color,
-.high-contrast .has-accent-color, 
+.high-contrast .has-accent-color,
 .high-contrast .has-accent-2-color,
 .high-contrast .has-footer-color,
 .high-contrast .has-contrast-color,
-.high-contrast .has-background-color, 
+.high-contrast .has-background-color,
 .high-contrast .has-placeholder-color {
   color: var(--hc-focus) !important;
 }
 
- .high-contrast .has-text-background-color,
- .high-contrast .has-primary-background-color,
- .high-contrast .has-accent-background-color,
- .high-contrast .has-accent-2-background-color,
- .high-contrast .has-footer-background-color,
- .high-contrast .has-contrast-background-color,
- .high-contrast .has-background-background-color,
- .high-contrast .has-placeholder-background-color {
+.high-contrast .has-text-background-color,
+.high-contrast .has-primary-background-color,
+.high-contrast .has-accent-background-color,
+.high-contrast .has-accent-2-background-color,
+.high-contrast .has-footer-background-color,
+.high-contrast .has-contrast-background-color,
+.high-contrast .has-background-background-color,
+.high-contrast .has-placeholder-background-color {
   background-color: var(--hc-bg) !important;
 }
 
@@ -496,27 +497,31 @@ body.high-contrast .dotted-background-blue {
     max-width: 95%;
   }
 
-     .back-to-top,
+  .back-to-top,
   .accessibility-button {
     position: fixed;
     bottom: calc(1rem + env(safe-area-inset-bottom));
     left: 50%;
     transform: translateX(-50%);
-
     width: 3rem;
     height: 3rem;
     border-radius: 50%;
-
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 100;
   }
 
+  .accessibility-button:hover,
+.back-to-top:hover {
+  transform: translateY(-4px) translateX(-50%);
+}
+  
   .back-to-top {
-    margin-left: -2rem;
+    left: calc(50% - 2rem);
   }
 
   .accessibility-button {
-    margin-left: 2rem;
+    left: calc(50% + 2rem);
   }
 }
