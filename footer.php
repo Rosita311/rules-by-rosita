@@ -1,27 +1,27 @@
 <footer class="site-footer" role="contentinfo">
-  <div class="footer-container">
-    <div class="footer-content">
-      <div class="footer-menu">
+  <div class="site-footer__container">
+    <div class="site-footer__content">
+      <div class="site-footer__menu">
         <h2>Menu</h2>
         <nav aria-label="Footer menu">
           <?php
           wp_nav_menu(array(
             'theme_location' => 'footer-menu',
             'container' => false,
-            'menu_class' => 'footer-menu-list'
+            'menu_class' => 'site-footer__menu-list'
           ));
           ?>
         </nav>
       </div>
         <?php if (is_active_sidebar('footer-widgets')) : ?>
-          <div class="footer-widgets">
+          <div class="site-footer__widgets">
             <?php dynamic_sidebar('footer-widgets'); ?>
           </div>
         <?php endif; ?>
     </div>
-    <div class="footer-info">
+    <div class="site-footer__info">
       <div
-        class="footer-plumbob"
+        class="plumbob"
         tabindex="0"
         role="button"
         aria-describedby="plumbob-desc">
@@ -31,13 +31,13 @@
           aria-hidden="true">
           <polygon
             points="50,0 90,80 50,160 10,80"
-            class="plumbob-shape" />
+            class="plumbob__shape" />
         </svg>
         <span
           id="plumbob-desc"
           class="sr-only">Sims plumbob animatie zegt: Sul sul!</span>
         <span
-          class="plumbob-easteregg"
+          class="plumbob__easter-egg"
           aria-hidden="true"
           hidden>Sul sul!</span>
       </div>
@@ -47,6 +47,6 @@
 </footer>
 </body>
 <?php
-wp_footer(); // WordPress footer hook for scripts and styles 
+wp_footer(); // WordPress footer hook for scripts and styles
 ?>
 </html>

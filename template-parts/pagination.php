@@ -7,11 +7,11 @@ if ($wp_query->max_num_pages <= 1) {
 ?>
 
 <nav class="pagination" aria-label="Pagina navigatie">
-  <div class="pagination-list">
+  <div class="pagination__list">
     <?php
     echo str_replace(
       ['<a', '<span'],
-      ['<a class=" btn btn-icon-large"', '<span class=" btn btn-icon-large"'],
+      ['<a class=" btn btn--icon-large"', '<span class=" btn btn--icon-large"'],
       paginate_links([
         'prev_text' => '
       <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">

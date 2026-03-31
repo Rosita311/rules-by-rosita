@@ -12,15 +12,15 @@ $excerpt_id = 'excerpt-' . $post_id;
 
 <!-- card -->
 <li class="card hover-shadow-pink">
-  <div class="card-image">
+  <div class="card__image">
     <img
       src="<?php echo get_the_post_thumbnail_url($post_id, 'large'); ?>"
       alt="<?php echo esc_attr($alt_text); ?>"
       loading="lazy" />
   </div>
-  <div class="card-content-wrapper">
-    <div class="card-content">
-      <div class="card-info">
+  <div class="card__content-wrapper">
+    <div class="card__content">
+      <div class="card__info">
         <h2 class="post-title h2">
           <a href="<?php the_permalink(); ?>" aria-describedby="<?php echo $excerpt_id . ' ' . $leesmeer_id; ?>">
             <?php the_title(); ?>
@@ -31,7 +31,7 @@ $excerpt_id = 'excerpt-' . $post_id;
           <?php echo wp_trim_words(get_the_excerpt(), 30, '...'); ?>
         </p>
       </div>
-      <span aria-hidden="true" id="<?php echo $leesmeer_id; ?>" class="btn btn-primary">
+      <span aria-hidden="true" id="<?php echo $leesmeer_id; ?>" class="btn btn--primary">
         Lees meer
       </span>
     </div>

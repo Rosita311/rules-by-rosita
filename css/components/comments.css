@@ -1,16 +1,16 @@
 /* Reactiesectie */
-.post-comments-wrapper {
+.comments {
   margin: 0 auto;
     width: min(90%, var(--site-max-width));
     padding: 0 clamp(0.5rem, 5vw, 2rem);
   }
 
 /* Titel reacties */
-.post-comments-wrapper h2 {
+.comments h2 {
   font-size: 2rem;
 }
 
-.comments-title {
+.comments__title {
   font-size: 1.25rem;
   color: var(--color-text);
   display: flex;
@@ -18,7 +18,7 @@
   margin: 0.5rem 0;
 }
 
-.post-comments h3 {
+.comments__list h3 {
   font-size: 1.5rem;
   margin-top: 1rem;
   margin-bottom: 0.5rem;
@@ -121,7 +121,7 @@ a#cancel-comment-reply-link {
 /* Media Queries */
 
 @media screen and (max-width: 768px) {
-  .post-comments-wrapper {
+  .comments {
     width: 100%;
     padding: 0;
   }
@@ -140,7 +140,7 @@ a#cancel-comment-reply-link {
 
   .children .comment {
     border: none;
-    padding-left: 0; 
+    padding-left: 0;
     margin-bottom: 1rem;
     list-style-type: none;
     border-top: 2px dashed var(--color-accent-2);

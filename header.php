@@ -33,7 +33,7 @@
     href="#accessibility-settings"
     class="skip-link">Ga naar toegankelijkheidsinstellingen</a>
   <header>
-    <div class="header-container">
+    <div class="site-header__container">
       <a
         href="<?php echo esc_url(home_url('/')); ?>"
         id="top" aria-label="Rules by Rosita logo, ga naar de homepage">
@@ -77,7 +77,7 @@
           </svg>
         </a>
         <button
-          class="btn-icon-small"
+          class="btn--icon-small"
           id="open-sidebar-button"
           onclick="openSidebar()"
           aria-label="Open menu"
@@ -109,7 +109,7 @@
           <ul>
             <li>
               <button
-                class="btn-icon-small"
+                class="btn--icon-small"
                 id="close-sidebar-button"
                 onclick="closeSidebar()"
                 aria-label="Sluit menu">
@@ -132,10 +132,10 @@
           ?>
 
         </nav>
-        <div class="menu-buttons">
+        <div class="site-header__buttons">
           <a href="<?php echo esc_url(home_url('/')); ?>?s="
             aria-label="Open zoekfunctie"
-            class="search-button btn-icon-small"
+            class="search-button btn--icon-small"
             aria-haspopup="dialog"
             aria-expanded="false"
             aria-controls="search-overlay"
@@ -162,7 +162,7 @@
           </a>
           <button
             id="theme-switch"
-            class="btn-icon-small">
+            class="btn--icon-small">
             <svg
               aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"

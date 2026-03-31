@@ -5,7 +5,7 @@
       aria-labelledby="accessibility-heading"
       hidden
     >
-      <header class="accessibility-header">
+      <header class="accessibility-panel__header">
         <h2
           id="accessibility-heading"
           tabindex="-1"
@@ -15,12 +15,12 @@
         </h2>
       </header>
 
-      <div class="accessibility-group">
+      <div class="accessibility-panel__group">
         <h3>Leesbaarheid</h3>
         <ul>
           <li>
             <button
-            class="btn btn-icon-large"
+            class="btn btn--icon-large"
               id="toggle-dyslexic"
               type="button"
               aria-pressed="false"
@@ -55,7 +55,7 @@
           </li>
           <li>
             <button
-            class="btn btn-icon-large"
+            class="btn btn--icon-large"
               id="toggle-text"
               type="button"
               aria-pressed="false"
@@ -91,12 +91,12 @@
         </ul>
       </div>
 
-      <div class="accessibility-group">
+      <div class="accessibility-panel__group">
         <h3>Weergave</h3>
         <ul>
           <li>
             <button
-            class="btn btn-icon-large"
+            class="btn btn--icon-large"
               id="toggle-contrast"
               type="button"
               aria-pressed="false"
@@ -124,7 +124,7 @@
           </li>
           <li>
             <button
-            class="btn btn-icon-large"
+            class="btn btn--icon-large"
               id="toggle-reduce-motion"
               type="button"
               aria-pressed="false"
@@ -160,12 +160,12 @@
         </ul>
       </div>
 
-      <div class="accessibility-group">
+      <div class="accessibility-panel__group">
         <h3>Overig</h3>
         <ul>
           <li>
             <button
-            class="btn btn-icon-large"
+            class="btn btn--icon-large"
               id="reset-accessibility"
               type="button"
             >
@@ -197,7 +197,7 @@
         </ul>
         <button
           id="close-accessibility"
-          class="btn-icon-small"
+          class="btn--icon-small"
           aria-label="Sluit instellingen"
         >
           <svg
@@ -224,7 +224,7 @@
     </section>
     <button
       id="accessibility-toggle"
-      class="accessibility-button"
+      class="accessibility-btn"
       aria-haspopup="dialog"
       aria-expanded="false"
       aria-controls="accessibility-settings"
@@ -257,7 +257,7 @@
         />
       </svg>
       <span
-        class="accessibility-tooltip"
+        class="accessibility-btn__tooltip"
         aria-hidden="true"
         >Toegankelijkheid</span
       >

@@ -11,15 +11,15 @@ $excerpt_id = 'excerpt-' . $post_id;
 ?>
 <li class="hero-card">
    <?php if(has_post_thumbnail()) { ?>
-    <div class="hero-image-wrapper">
+    <div class="hero-card__image-wrapper">
         <img
             src="<?php echo get_the_post_thumbnail_url($post_id, 'large'); ?>"
             alt="<?php echo esc_attr($alt_text); ?>"
             loading="lazy" width="600" height="400" />
     </div>
     <?php } else { ?>
-        <div class="hero-image-fallback">
-        <?php 
+        <div class="hero-card__image-fallback">
+        <?php
         if (function_exists('get_custom_logo') && has_custom_logo()) {
             echo get_custom_logo();
         } else { ?>
@@ -27,9 +27,9 @@ $excerpt_id = 'excerpt-' . $post_id;
         <?php } ?>
         </div>
     <?php } ?>
-    <div class="hero-card-content-wrapper">
-        <div class="hero-card-content hover-shadow">
-            <div class="post-info">
+    <div class="hero-card__content-wrapper">
+        <div class="hero-card__content hover-shadow">
+            <div class="hero-card__info">
                 <h1 class="post-title h1">
                     <a href="<?php the_permalink(); ?>" aria-describedby="<?php echo $excerpt_id . ' ' . $leesmeer_id; ?>">
                         <?php the_title(); ?>
@@ -40,7 +40,7 @@ $excerpt_id = 'excerpt-' . $post_id;
                     <?php echo wp_trim_words(get_the_excerpt(), 30, '...'); ?>
                 </p>
             </div>
-            <span aria-hidden="true" id="<?php echo $leesmeer_id; ?>" class="btn btn-primary">
+            <span aria-hidden="true" id="<?php echo $leesmeer_id; ?>" class="btn btn--primary">
                 Lees meer
             </span>
         </div>

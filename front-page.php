@@ -2,8 +2,8 @@
 get_template_part('template-parts/accessibility-panel'); ?>
 <main id="main-content">
     <section class="hero-section">
-        <div class="hero-content dotted-background-pink">
-            <ul class="hero-listing">
+        <div class="hero__content dotted-background-pink">
+            <ul class="hero__listing">
                 <?php
                 // Query for the hero post
                 $hero_query = new WP_Query([
@@ -24,9 +24,9 @@ get_template_part('template-parts/accessibility-panel'); ?>
     </section>
     <div class="container-main">
         <?php get_template_part('template-parts/introduction'); ?>
-        <section class="blogpost-section">
+        <section class="blog-listing">
             <h2>Recente blogposts</h2>
-            <ul class="blog-listing-grid">
+            <ul class="blog-listing__grid">
                 <?php
                 $home_query = new WP_Query([
                     'posts_per_page' => 6,
@@ -49,7 +49,7 @@ get_template_part('template-parts/accessibility-panel'); ?>
             </ul>
             <?php get_template_part('template-parts/pagination'); ?>
             <div class="button-wrapper">
-                <a class="btn btn-secondary" href="<?php echo get_permalink(get_option('page_for_posts')); ?>">Bekijk alle blogposts</a>
+                <a class="btn btn--secondary" href="<?php echo get_permalink(get_option('page_for_posts')); ?>">Bekijk alle blogposts</a>
             </div>
         </section>
         <?php get_template_part('template-parts/back-to-top'); ?>

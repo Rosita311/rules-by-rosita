@@ -9,7 +9,7 @@
   margin: 0 auto;
 }
 
-.introduction-image-wrapper, .not-found-image-wrapper {
+.introduction__image-wrapper, .not-found-image-wrapper {
   display: flex;
   justify-content: end;
   position: relative;
@@ -19,7 +19,7 @@
   margin: 0;
 }
 
-.introduction-image img, .not-found-image img {
+.introduction__image img, .not-found-image img {
   aspect-ratio: 1 / 1;
   width: 100%;
   height: auto;
@@ -30,12 +30,12 @@
   position: relative;
 }
 
-.introduction-content-wrapper, .not-found-content {
+.introduction__content-wrapper, .not-found-content {
   width: 40%;
   max-width: 100%;
 }
 
-.introduction-card-content, .not-found-content {
+.introduction__content, .not-found-content {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -44,7 +44,7 @@
   width: 100%;
 }
 
-.introduction-iconlist {
+.introduction__icon-list {
   display: flex;
   flex-direction: column;
   list-style-type: none;
@@ -52,7 +52,7 @@
   gap: 0.75rem;
 }
 
-.introduction-iconlist li {
+.introduction__icon-list li {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -60,13 +60,13 @@
   gap: 1rem;
 }
 
-.introduction-iconlist .icon {
+.introduction__icon-list .icon {
   stroke: var(--color-text);
   width: 1.5rem;
   flex-shrink: 0;
 }
 
-.introduction-label-text {
+.introduction__label {
   font-weight: bold;
 }
 
@@ -83,14 +83,14 @@
     padding-left: 1.5rem;
     width: 100%;
   }
- 
-  .introduction-image-wrapper {
+
+  .introduction__image-wrapper {
     justify-content: center;
     padding-left: 1.5rem;
     width: 50%;
   }
 
-  .introduction-image img, .not-found-image img {
+  .introduction__image img, .not-found-image img {
     margin: -1.5rem 1.5rem 1.5rem -1.5rem;
   }
 }
@@ -101,29 +101,29 @@
     flex-direction: column;
   }
 
-  .introduction-content-wrapper, .not-found-content {
+  .introduction__content-wrapper, .not-found-content {
     width: 100%;
   }
 
-  .introduction-card-content, .not-found-content {
+  .introduction__content, .not-found-content {
     max-width: 100%;
     width: 100%;
   }
 
-  .introduction-image-wrapper, .not-found-image-wrapper {
+  .introduction__image-wrapper, .not-found-image-wrapper {
     padding-left: 1rem;
     width: 100%;
   }
 
-  .introduction-image, .not-found-image {
+  .introduction__image, .not-found-image {
     width: fit-content;
     padding: 0;
     margin: 0;
   }
 
-  .introduction-image img, .not-found-image img {
+  .introduction__image img, .not-found-image img {
     margin: -1rem 1rem 1rem -1rem;
     height: auto;
     width: 100%;
   }
-} 
+}

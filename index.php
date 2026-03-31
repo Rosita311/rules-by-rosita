@@ -3,8 +3,8 @@ get_template_part('template-parts/accessibility-panel'); ?>
 <main id="main-content">
   <?php get_template_part('template-parts/page-hero'); ?>
   <div class="container-main">
-    <section class="blogpost-section">
-      <ul class="blog-listing-grid">
+    <section class="blog-listing">
+      <ul class="blog-listing__grid">
         <?php
         if (have_posts()) :
           // Loop through posts

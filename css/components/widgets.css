@@ -2,7 +2,7 @@
   grid-area: sidebar;
 }
 
-.sidebar-inner {
+.sidebar__inner {
   display: flex;
   flex-direction: column;
   padding-left: clamp(1rem, 5vw, 2rem);
@@ -113,10 +113,10 @@
     border-left: none;
   }
 
-  .sidebar-inner {
+  .sidebar__inner {
     padding-left: 0;
     border-left: none;
-  } 
+  }
 
   .widget h2 {
   font-size: 1.5rem;
@@ -131,11 +131,3 @@
     gap: 1rem;
   }
 }
-
-
-
-
-
-
-
-
