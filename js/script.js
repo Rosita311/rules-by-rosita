@@ -7,8 +7,8 @@ const navbar = document.getElementById("header-nav");
 const overlay = document.getElementById("overlay");
 const media = window.matchMedia("(width < 1023px)");
 const mainContent = document.getElementById("main-content");
-const menuButtons = document.querySelector(".menu-buttons");
-const footer = document.querySelector(".footer-container");
+const menuButtons = document.querySelector(".site-header__buttons");
+const footer = document.querySelector(".site-footer__container");
 const navLinks = document.querySelectorAll("#header-nav a");
 
 // Zoekfunctie
@@ -552,7 +552,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Reset alle fouten
     document
-      .querySelectorAll(".field-error")
+      .querySelectorAll(".form__field-error")
       .forEach((el) => (el.style.display = "none"));
     if (errorBox) errorBox.style.display = "none";
 

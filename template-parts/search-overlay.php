@@ -7,10 +7,10 @@
   aria-labelledby="search-label"
   hidden>
   <?php get_search_form(); ?>
-    <div class="search-overlay-inner" tabindex="-1">
+    <div class="search-overlay__inner" tabindex="-1">
     <button
       id="close-search"
-      class="btn-icon-small"
+      class="btn--icon-small"
       aria-label="Sluit zoekfunctie">
       <svg
         aria-hidden="true"

@@ -1,7 +1,7 @@
 <?php get_header();
 get_template_part('template-parts/accessibility-panel'); ?>
 <main id="main-content">
-  <section class="single-post-hero hero-section">
+  <section class="single-post__hero hero-section">
     <div class="hero-image">
       <?php
       if (has_post_thumbnail()) {
@@ -25,8 +25,8 @@ get_template_part('template-parts/accessibility-panel'); ?>
     </div>
   </section>
   <div class="container-main">
-    <section class="single-post-content">
-      <article class="post-content-wrapper" <?php post_class(); ?>>
+    <section class="single-post__content">
+      <article class="single-post__content-wrapper" <?php post_class(); ?>>
         <?php
         if (function_exists('yoast_breadcrumb')) {
           yoast_breadcrumb('<nav aria-label="Kruimelpad" class="breadcrumbs">', '</nav>');
@@ -35,10 +35,10 @@ get_template_part('template-parts/accessibility-panel'); ?>
         <h1 class="post-title h1">
           <?php the_title(); ?>
         </h1>
-        <div class="post-meta-wrapper dotted-background-blue">
+        <div class="post-meta dotted-background-blue">
           <nav aria-label="Berichtinformatie">
-            <ul class="post-meta">
-              <li class="post-meta-item">
+            <ul class="post-meta__list">
+              <li class="post-meta__item">
                 <svg
                   aria-hidden="true"
                   focusable="false"
@@ -69,7 +69,7 @@ get_template_part('template-parts/accessibility-panel'); ?>
                   aria-hidden="true"><?php the_time('j-m-Y'); ?></time>
               </li>
 
-              <li class="post-meta-item">
+              <li class="post-meta__item">
                 <svg
                   aria-hidden="true"
                   focusable="false"
@@ -95,7 +95,7 @@ get_template_part('template-parts/accessibility-panel'); ?>
                 <?php comments_number('0', '1', '%'); ?><span class="sr-only">reacties</span>
               </li>
 
-              <li class="post-meta-item">
+              <li class="post-meta__item">
                 <svg
                   aria-hidden="true"
                   focusable="false"
@@ -120,7 +120,7 @@ get_template_part('template-parts/accessibility-panel'); ?>
                 <span class="sr-only">Leestijd:</span><?php echo rules_by_rosita_get_reading_time(); ?>
               </li>
 
-              <li class="post-meta-item">
+              <li class="post-meta__item">
                 <svg
                   aria-hidden="true"
                   focusable="false"
@@ -144,7 +144,7 @@ get_template_part('template-parts/accessibility-panel'); ?>
                 <span class="sr-only">Categorie:</span><?php the_category(', '); ?>
               </li>
 
-              <li class="post-meta-item">
+              <li class="post-meta__item">
                 <svg
                   aria-hidden="true"
                   focusable="false"
@@ -202,10 +202,10 @@ get_template_part('template-parts/accessibility-panel'); ?>
         $prev_post = get_previous_post();
         $next_post = get_next_post();
         ?>
-        <nav class="single-pagination" aria-label="Post navigatie">
-          <div class="post-prev">
+        <nav class="post-nav" aria-label="Post navigatie">
+          <div class="post-nav__prev">
             <?php if ($prev_post): ?>
-              <a class="btn btn-icon-large" href="<?php echo get_permalink($prev_post); ?>">
+              <a class="btn btn--icon-large" href="<?php echo get_permalink($prev_post); ?>">
                 <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                   <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                   <path d="M15 6l-6 6l6 6" />
@@ -216,9 +216,9 @@ get_template_part('template-parts/accessibility-panel'); ?>
             <?php endif; ?>
           </div>
 
-          <div class="post-next">
+          <div class="post-nav__next">
             <?php if ($next_post): ?>
-              <a class="btn btn-icon-large" href="<?php echo get_permalink($next_post); ?>">
+              <a class="btn btn--icon-large" href="<?php echo get_permalink($next_post); ?>">
                 <span>Volgende post</span>
                 <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-right" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                   <path stroke="none" d="M0 0h24v24H0z" fill="none" />
@@ -233,7 +233,7 @@ get_template_part('template-parts/accessibility-panel'); ?>
       <?php get_sidebar('single'); ?>
     </section>
     <!-- Post Comments -->
-    <section class="post-comments-wrapper">
+    <section class="comments">
       <?php
       if (comments_open() || get_comments_number()) {
         comments_template();
@@ -241,7 +241,7 @@ get_template_part('template-parts/accessibility-panel'); ?>
         echo '<p>Reacties zijn gesloten voor dit bericht.</p>';
       } ?>
     </section>
-    <section class="blogpost-section">
+    <section class="blog-listing">
       <h2 id="after-comments">Gerelateerde blogposts</h2>
       <?php
       $categories = get_the_category();
@@ -257,7 +257,7 @@ get_template_part('template-parts/accessibility-panel'); ?>
         $related_query = new WP_Query($args);
 
         if ($related_query->have_posts()) : ?>
-          <ul class="blog-listing-grid">
+          <ul class="blog-listing__grid">
             <?php
             while ($related_query->have_posts()) : $related_query->the_post();
               if (!has_post_thumbnail()) {

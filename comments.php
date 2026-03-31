@@ -2,13 +2,13 @@
 <?php
 $comments_number = get_comments_number();
 ?>
-<p class="comments-title">
+<p class="comments__title">
   <?php
   if ($comments_number > 0) :
     printf(
       _n(
-        '1 reactie op “%2$s”',
-        '%1$s reacties op “%2$s”',
+        '1 reactie op "%2$s"',
+        '%1$s reacties op "%2$s"',
         $comments_number,
         'rules-by-rosita'
       ),
@@ -19,7 +19,7 @@ $comments_number = get_comments_number();
     <a href="#after-comments" class="skip-link-inline" aria-label="Sla reacties over en ga naar gerelateerde berichten">Sla de reacties over</a>
   <?php
   else :
-    printf('Geen reacties op “%s”', esc_html(get_the_title()));
+    printf('Geen reacties op "%s"', esc_html(get_the_title()));
   endif;
   ?>
 </p>
@@ -28,7 +28,7 @@ if (post_password_required()) {
   return;
 }
 ?>
-<div id="comments" class="post-comments">
+<div id="comments" class="comments__list">
   <?php if (have_comments()) : ?>
     <ol class="comment-list">
       <?php
@@ -71,10 +71,10 @@ if (post_password_required()) {
        data-error="' . esc_attr('Je moet akkoord gaan met de privacyverklaring om een reactie te plaatsen.', 'rules-by-rosita') . '"
        style="display:none; color: var(--color-primary); margin-bottom: 0.5rem;">
   </div>
-  <p class="form-group checkbox-consent">
+  <p class="form__checkbox">
     <input type="checkbox" id="comment-privacy" name="comment-privacy"/>
     <label for="comment-privacy">
-      Ik ga akkoord met het opslaan van mijn reactie en gegevens volgens de 
+      Ik ga akkoord met het opslaan van mijn reactie en gegevens volgens de
       privacyverklaring.
     </label>
   </p>
@@ -93,34 +93,34 @@ if (post_password_required()) {
     comment_form(array(
       'title_reply' => 'Geef een reactie',
       'fields' => array(
-        'author' => '<div class="form-group">
+        'author' => '<div class="form__group">
         <label for="comment-author">Naam <span aria-hidden="true">*</span></label>
         <input id="comment-author" name="author" type="text" ariadescribedby="error-author" aria-required="true" />
-        <div role="alert" id="error-author" class="field-error"></div>
+        <div role="alert" id="error-author" class="form__field-error"></div>
       </div>',
-        'email' => '<div class="form-group">
+        'email' => '<div class="form__group">
         <label for="comment-email">E-mail <span aria-hidden="true">*</span></label>
         <input id="comment-email" name="email" type="email" ariadescribedby="error-email" aria-required="true" />
-        <div role="alert" id="error-email" class="field-error"></div>
+        <div role="alert" id="error-email" class="form__field-error"></div>
       </div>',
-        'url' => '<div class="form-group url-field">
+        'url' => '<div class="form__group url-field">
         <label for="comment-url">Website</label>
         <input id="comment-url" name="url" type="url" />
       </div>',
       ),
-      'comment_field' => '<div class="form-group">
+      'comment_field' => '<div class="form__group">
   <label for="comment">Reactie <span aria-hidden="true">*</span></label>
   <textarea id="comment" name="comment" rows="5" ariadescribedby="error-comment" aria-required="true"></textarea>
-  <div role="alert" id="error-comment" class="field-error"></div>
+  <div role="alert" id="error-comment" class="form__field-error"></div>
 </div>' . $error_html,
       'comment_notes_before' => '<span class="required-field-message">Vereiste velden zijn gemarkeerd met <span class="required">*</span></span>',
       'comment_notes_after' => $checkbox_html,
-      'class_form' => 'site-form',
+      'class_form' => 'form',
       'attributes' => [
         'data-is-admin' => current_user_can('manage_options') ? '1' : '0'
       ],
       'label_submit' => 'Reactie plaatsen',
-      'class_submit' => 'btn btn-secondary',
+      'class_submit' => 'btn btn--secondary',
     ));
     ?>
   </div>

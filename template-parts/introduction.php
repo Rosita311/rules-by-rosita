@@ -1,8 +1,8 @@
 <?php if (function_exists('get_field')) :
     $homepage_id = get_option('page_on_front'); ?>
     <section class="introduction">
-        <div class="introduction-content-wrapper">
-            <div class="introduction-card-content entry-content">
+        <div class="introduction__content-wrapper">
+            <div class="introduction__content entry-content">
 
                 <?php
                 $intro_titel = get_field('introductie_titel', $homepage_id);
@@ -32,7 +32,7 @@
                         <h3><?php echo esc_html($over_mij); ?></h3>
                     <?php endif; ?>
 
-                    <ul class="introduction-iconlist">
+                    <ul class="introduction__icon-list">
                         <?php if ($lezen) : ?>
                             <li>
                                 <svg
@@ -62,7 +62,7 @@
                                     <path d="M14 9l4 -1" />
                                     <path d="M16 16l3.923 -.98" />
                                 </svg>
-                                <span><span class="introduction-label-text">Ik lees:</span>
+                                <span><span class="introduction__label">Ik lees:</span>
                                     <?php if ($lezen_link) : ?>
                                         <a href="<?php echo esc_url($lezen_link); ?>">
                                             <?php echo esc_html($lezen); ?>
@@ -80,7 +80,7 @@
                                     <path d="M17 8l4 4l-4 4" />
                                     <path d="M14 4l-4 16" />
                                 </svg>
-                                <span><span class="introduction-label-text">Ik leer:</span>
+                                <span><span class="introduction__label">Ik leer:</span>
                                     <?php if ($leren_link) : ?>
                                         <a href="<?php echo esc_url($leren_link); ?>">
                                             <?php echo esc_html($leren); ?>
@@ -113,7 +113,7 @@
                                         d="M3 7m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v9a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z" />
                                     <path d="M16 3l-4 4l-4 -4" />
                                 </svg>
-                                <span><span class="introduction-label-text">Ik kijk:</span>
+                                <span><span class="introduction__label">Ik kijk:</span>
                                     <?php if ($kijken_link) : ?>
                                         <a href="<?php echo esc_url($kijken_link); ?>">
                                             <?php echo esc_html($kijken); ?>
@@ -128,14 +128,14 @@
                 <?php endif; ?>
 
                 <?php if ($btn_link && $btn_text) : ?>
-                    <a class="btn btn-secondary" href="<?php echo esc_url($btn_link); ?>">
+                    <a class="btn btn--secondary" href="<?php echo esc_url($btn_link); ?>">
                         <?php echo esc_html($btn_text); ?>
                     </a>
                 <?php endif; ?>
             </div>
         </div>
-        <div class="introduction-image-wrapper">
-            <div class="introduction-image dotted-background-blue">
+        <div class="introduction__image-wrapper">
+            <div class="introduction__image dotted-background-blue">
                 <?php if ($img) : ?>
                     <img
                         src="<?php echo esc_url($img); ?>"

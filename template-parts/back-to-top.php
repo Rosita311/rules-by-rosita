@@ -22,6 +22,6 @@
         id="back-to-top-desc"
         class="sr-only">Terug naar boven</span>
     <span
-        class="back-to-top-tooltip"
+        class="back-to-top__tooltip"
         aria-hidden="true">Terug naar boven</span>
 </button>
