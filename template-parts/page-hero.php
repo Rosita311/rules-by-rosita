@@ -1,6 +1,6 @@
 <section class="hero-section page-hero dotted-background-pink">
-  <div class="page-hero-content">
-    <div class="page-title">
+  <div class="page-hero__content">
+    <div class="page-hero__title">
       <?php
       if (function_exists('yoast_breadcrumb')) {
         yoast_breadcrumb('<nav aria-label="Kruimelpad" class="breadcrumbs">', '</nav>');

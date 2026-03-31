@@ -31,6 +31,26 @@ De code is openbaar beschikbaar als leerbron en om mijn ontwikkelproces te docum
 - Contrast-proof kleurgebruik  
 - Instellingenmenu met toegankelijkheidsopties
 
+## CSS-naamgeving — BEM
+
+Alle CSS-classes volgen de [BEM](https://getbem.com/)-methodologie (Block Element Modifier):
+
+```
+.block
+.block__element
+.block--modifier
+.block__element--modifier
+```
+
+Classes die bewust plat zijn gehouden (gedeeld over meerdere blocks):
+- `.container-main`, `.sr-only`, `.btn`, `.entry-content`
+- `.hover-shadow-pink` / `.hover-shadow-blue`
+- `.dotted-background-pink` / `.dotted-background-blue`
+- `.social-media`
+
+WordPress-gegenereerde classes (niet hernoemd):
+- `.widget`, `.comment`, `.comment-list`, `.has-submenu`, `.submenu`, `.wp-block-*`
+
 ## Gebruikte tools & technologieën
 - WordPress  
 - HTML, CSS (Flexbox & Grid), JavaScript (ES6+), PHP  
@@ -99,6 +119,26 @@ The code is publicly available as a learning resource and to document my develop
 - Contrast-proof color usage  
 - Settings menu with accessibility options
 
+## CSS Naming — BEM
+
+All CSS classes follow [BEM](https://getbem.com/) (Block Element Modifier):
+
+```
+.block
+.block__element
+.block--modifier
+.block__element--modifier
+```
+
+Classes intentionally kept flat (shared across multiple blocks):
+- `.container-main`, `.sr-only`, `.btn`, `.entry-content`
+- `.hover-shadow-pink` / `.hover-shadow-blue`
+- `.dotted-background-pink` / `.dotted-background-blue`
+- `.social-media`
+
+WordPress-generated classes (not renamed):
+- `.widget`, `.comment`, `.comment-list`, `.has-submenu`, `.submenu`, `.wp-block-*`
+
 ## Tools & Technologies
 - WordPress  
 - HTML, CSS (Flexbox & Grid), JavaScript (ES6+), PHP  
@@ -137,6 +177,9 @@ The theme is publicly available, but primarily intended for my own blog and lear
 See [DEVLOG.md](./DEVLOG.md) for an overview of completed features, ongoing tasks, and future ideas.
 
 ## Changelog
+
+### Version 1.2 - 31-3-2026
+- Refactor all CSS classes to BEM methodology across all PHP templates, CSS files, and JavaScript
 
 ### Version 1.1 - 8-3-2026
 - Add fixed positioning for back-to-top and accessibility buttons for improved accessibility

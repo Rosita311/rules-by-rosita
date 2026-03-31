@@ -35,7 +35,7 @@
   border: 0;
 }
 
-.accessibility-button,
+.accessibility-btn,
 .back-to-top {
   position: fixed !important;
   bottom: 2rem;
@@ -66,25 +66,25 @@
   pointer-events: auto;
 }
 
-.accessibility-button {
+.accessibility-btn {
   position: relative;
   opacity: 1 !important;
   pointer-events: auto;
   right: 2rem;
 }
 
-#accessibility-toggle[aria-expanded="true"] .accessibility-tooltip {
+#accessibility-toggle[aria-expanded="true"] .accessibility-btn__tooltip {
   display: none;
 }
 
-.accessibility-button svg,
+.accessibility-btn svg,
 .back-to-top svg {
   stroke: var(--color-bg-light);
 
   transition: stroke 0.3s ease;
 }
 
-.accessibility-button:hover,
+.accessibility-btn:hover,
 .back-to-top:hover {
   background-color: var(--color-footer);
   color: var(--color-text);
@@ -92,12 +92,12 @@
   transform: translateY(-4px);
 }
 
-.accessibility-button:hover svg,
+.accessibility-btn:hover svg,
 .back-to-top:hover svg {
   stroke: var(--color-text);
 }
 
-.accessibility-button:focus-visible,
+.accessibility-btn:focus-visible,
 .back-to-top:focus-visible {
   outline: 2px solid var(--color-text);
   background-color: var(--color-text);
@@ -105,13 +105,13 @@
   border: 2px solid var(--color-text);
 }
 
-.accessibility-button:focus-visible svg,
+.accessibility-btn:focus-visible svg,
 .back-to-top:focus-visible svg {
   stroke: var(--color-background);
 }
 
-.accessibility-tooltip,
-.back-to-top-tooltip {
+.accessibility-btn__tooltip,
+.back-to-top__tooltip {
   visibility: hidden;
   background-color: var(--color-background);
   color: var(--color-text);
@@ -128,8 +128,8 @@
   margin-left: -5rem;
 }
 
-.accessibility-button:hover .accessibility-tooltip,
-.back-to-top:hover .back-to-top-tooltip {
+.accessibility-btn:hover .accessibility-btn__tooltip,
+.back-to-top:hover .back-to-top__tooltip {
   visibility: visible !important;
   opacity: 1;
   pointer-events: auto;
@@ -162,31 +162,31 @@
   margin: 0;
 }
 
-.accessibility-header {
+.accessibility-panel__header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 1rem;
 }
 
-.accessibility-group {
+.accessibility-panel__group {
   margin-top: 1rem;
 }
 
-.accessibility-group h3 {
+.accessibility-panel__group h3 {
   margin: 0 0 0.5rem;
   font-size: 1.25rem;
   border-bottom: 1px solid var(--color-accent-2);
   padding-bottom: 0.25rem;
 }
 
-.accessibility-group ul {
+.accessibility-panel__group ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.accessibility-group li + li {
+.accessibility-panel__group li + li {
   margin-top: 0.5rem;
 }
 
@@ -215,12 +215,12 @@ body.dyslexic-font em,
 body.dyslexic-font blockquote,
 body.dyslexic-font td,
 body.dyslexic-font th,
-body.dyslexic-font .accessibility-tooltip,
-body.dyslexic-font .back-to-top-tooltip,
+body.dyslexic-font .accessibility-btn__tooltip,
+body.dyslexic-font .back-to-top__tooltip,
 body.dyslexic-font .btn,
-body.dyslexic-font .field-error,
+body.dyslexic-font .form__field-error,
 body.dyslexic-font .comment-error,
-body.dyslexic-font .page-title nav p,
+body.dyslexic-font .page-hero__title nav p,
 body.dyslectic-font #cmplz-cookiebanner-container .cmplz-btn {
   font-family: "Atkinson Hyperlegible", Arial, sans-serif;
 }
@@ -231,7 +231,7 @@ body.dyslexic-font h3,
 body.dyslexic-font h4,
 body.dyslexic-font h5,
 body.dyslexic-font h6,
-body.dyslexic-font .field-error,
+body.dyslexic-font .form__field-error,
 body.dyslexic-font #search-overlay label,
 body.dyslexic-font .comment-error {
   font-weight: 700;
@@ -298,13 +298,13 @@ body.high-contrast .dotted-background-blue {
   background-image: none;
   background-color: var(--color-background);
 }
-.high-contrast .btn-icon-large:hover,
-.high-contrast .btn-icon-small:hover {
+.high-contrast .btn--icon-large:hover,
+.high-contrast .btn--icon-small:hover {
   background-color: var(--color-icon-button-hover);
   color: var(--color-background);
 }
-.high-contrast .btn-icon-large:hover svg,
-.high-contrast .btn-icon-small:hover svg {
+.high-contrast .btn--icon-large:hover svg,
+.high-contrast .btn--icon-small:hover svg {
   stroke: var(--color-background);
 }
 
@@ -314,7 +314,7 @@ body.high-contrast .dotted-background-blue {
 }
 
 .high-contrast .wp-block-button__link,
-.high-contrast a.btn.btn-secondary {
+.high-contrast a.btn.btn--secondary {
   background-color: var(--hc-accent); /* fel contrasterende kleur */
   color: var(--hc-bg) !important; /* tekst moet afsteken tegen achtergrond */
   display: inline-block;
@@ -322,9 +322,9 @@ body.high-contrast .dotted-background-blue {
 }
 
 .high-contrast .wp-block-button__link:hover,
-.high-contrast .btn-secondary:hover,
-.high-contrast .btn-secondary:focus-visible,
-.high-contrast .card-page-content:hover .btn-secondary {
+.high-contrast .btn--secondary:hover,
+.high-contrast .btn--secondary:focus-visible,
+.high-contrast .card__content--page:hover .btn--secondary {
   background-color: var(--color-accent);
   color: var(--color-background) !important;
 }
@@ -347,8 +347,8 @@ body.high-contrast .dotted-background-blue {
 .high-contrast #open-sidebar-button:focus-visible,
 .high-contrast #close-sidebar-button:focus-visible,
 .high-contrast #theme-switch:focus-visible,
-.high-contrast .footer-menu nav a:focus-visible,
-.high-contrast .footer-btn:focus-visible,
+.high-contrast .site-footer__menu nav a:focus-visible,
+.high-contrast .btn--footer:focus-visible,
 .high-contrast .has-submenu > button.submenu-toggle:focus-visible,
 .high-contrast #accessibility-settings button:focus-visible,
 .high-contrast .search-input:focus,
@@ -384,7 +384,7 @@ body.high-contrast .dotted-background-blue {
   fill: var(--hc-danger) !important;
 }
 
-.high-contrast .field-error {
+.high-contrast .form__field-error {
   color: var(--hc-danger);
   font-size: 1rem;
   font-weight: 600;
@@ -408,18 +408,18 @@ body.high-contrast .dotted-background-blue {
 }
 
 .reduce-motion .submenu-toggle[aria-expanded="true"] .chevron,
-.reduce-motion .page-title,
+.reduce-motion .page-hero__title,
 .reduce-motion .back-to-top,
-.reduce-motion .accessibility-button,
+.reduce-motion .accessibility-btn,
 .reduce-motion .back-to-top.show,
-.reduce-motion .accessibility-button.show,
+.reduce-motion .accessibility-btn.show,
 .reduce-motion .back-to-top:hover,
-.reduce-motion .accessibility-button:hover {
+.reduce-motion .accessibility-btn:hover {
   transform: none !important;
   opacity: 1 !important;
 }
 
-.reduce-motion .page-title {
+.reduce-motion .page-hero__title {
   animation: none;
   opacity: 1;
   transform: none;
@@ -466,26 +466,26 @@ body.high-contrast .dotted-background-blue {
     transform: none !important;
   }
 
-  .page-title {
+  .page-hero__title {
     animation: none;
     opacity: 1 !important;
     transform: none;
   }
 
   .back-to-top,
-  .accessibility-button {
+  .accessibility-btn {
     transition: none !important;
     scroll-behavior: auto;
     opacity: 1;
   }
 
   .back-to-top.show,
-  .accessibility-button.show {
+  .accessibility-btn.show {
     opacity: 1;
   }
 
   .back-to-top:hover,
-  .accessibility-button:hover {
+  .accessibility-btn:hover {
     transform: none !important;
   }
 }

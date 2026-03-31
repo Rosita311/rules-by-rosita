@@ -1,24 +1,22 @@
 /* Card component styles */
 
-/* Card styles */
-
-.blogpost-section {
+.blog-listing {
   display: flex;
   padding: 2rem 0;
   flex-direction: column;
 }
 
-.blogpost-section h2 {
+.blog-listing h2 {
   font-family: var(--font-heading);
   color: var(--color-text);
   margin-bottom: 4rem;
 }
 
-.blog-listing-grid {
+.blog-listing__grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(21.25rem, 1fr));
   list-style-type: none;
-  gap: 2rem; 
+  gap: 2rem;
   margin-bottom: 2rem;
   padding: 0;
 }
@@ -69,7 +67,7 @@ section .post-title.h1 {
   outline: 0;
 }
 
-.hero-card-content a::after,
+.hero-card__content a::after,
 .card a::after {
   content: "";
   position: absolute;
@@ -82,13 +80,13 @@ section .post-title.h1 {
   z-index: 1;
 }
 
-.hero-card-content a:focus-visible::after,
+.hero-card__content a:focus-visible::after,
 .card a:focus-visible::after {
   outline: 2px solid var(--color-text);
   box-shadow: 0.5rem 0.5rem 0rem 0rem var(--color-text);
 }
 
-.hero-card-content:focus-within,
+.hero-card__content:focus-within,
 .card:focus-within {
   outline: 2px solid var(--color-text);
   box-shadow: 0.5rem 0.5rem 0 var(--color-text);
@@ -99,7 +97,7 @@ section .post-title.h1 {
   box-shadow: 0.5rem 0.5rem 0 0 var(--color-text);
 }
 
-.user-is-tabbing .hero-card-content:focus-within {
+.user-is-tabbing .hero-card__content:focus-within {
   outline: 2px solid var(--color-text);
   box-shadow: 0.5rem 0.5rem 0 0 var(--color-text);
 }
@@ -109,25 +107,25 @@ body:not(.user-is-tabbing) .card:focus-within {
   box-shadow: none;
 }
 
-body:not(.user-is-tabbing) .hero-card-content:focus-within {
+body:not(.user-is-tabbing) .hero-card__content:focus-within {
   outline: none;
   box-shadow: none;
 }
 
-.card-content:hover .btn-primary,
-.hero-card-content:hover .btn-primary {
+.card__content:hover .btn--primary,
+.hero-card__content:hover .btn--primary {
   background-color: var(--color-accent);
   color: var(--color-bg-light) !important;
   transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
-.card-page-content:hover .btn-secondary {
+.card__content--page:hover .btn--secondary {
   background-color: var(--color-footer);
   color: var(--color-text);
   transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
-.card-image img {
+.card__image img {
   aspect-ratio: 16 / 9;
   width: 100%;
   height: auto;
@@ -136,9 +134,9 @@ body:not(.user-is-tabbing) .hero-card-content:focus-within {
   z-index: 0;
 }
 
-.card-image-fallback {
+.card__image-fallback {
   width: 100%;
-  aspect-ratio: 16 / 9; 
+  aspect-ratio: 16 / 9;
   height: auto;
   min-height: 15rem;
   border: 1px solid var(--color-contrast);
@@ -147,14 +145,14 @@ body:not(.user-is-tabbing) .hero-card-content:focus-within {
   justify-content: center;
 }
 
-.card-content-wrapper {
+.card__content-wrapper {
   display: flex;
   flex-grow: 1;
   padding: 1rem;
   background-color: var(--color-accent-2);
 }
 
-.card-content {
+.card__content {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -165,7 +163,7 @@ body:not(.user-is-tabbing) .hero-card-content:focus-within {
   background-color: var(--color-background);
 }
 
-.card-page-content {
+.card__content--page {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -175,7 +173,7 @@ body:not(.user-is-tabbing) .hero-card-content:focus-within {
   background-color: var(--color-background);
 }
 
-.card-page-content h2 {
+.card__content--page h2 {
   margin-bottom: 1rem;
 }
 
@@ -186,23 +184,23 @@ body:not(.user-is-tabbing) .hero-card-content:focus-within {
   margin: 0.5rem 0 1rem 0;
 }
 
-.hero-card-content span.btn.btn-primary,
-.card-content span.btn.btn-primary,
-.card-page-content span.btn.btn-secondary {
+.hero-card__content span.btn.btn--primary,
+.card__content span.btn.btn--primary,
+.card__content--page span.btn.btn--secondary {
   margin-top: 1rem;
 }
 
 /* Media Queries */
 
 @media screen and (max-width: 1024px) {
-  .blog-listing-grid {
+  .blog-listing__grid {
     gap: 3rem;
   }
 }
 
 @media screen and (max-width: 768px) {
- 
-  .blog-listing-grid {
+
+  .blog-listing__grid {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 4rem;
   }

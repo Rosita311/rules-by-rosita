@@ -87,7 +87,7 @@ html.no-js {
   display: block;
 }
 
-.no-js .accessibility-button {
+.no-js .accessibility-btn {
   display: none;
 }
 
@@ -108,7 +108,7 @@ html.no-js {
     overflow-x: hidden;
   }
 
-  html.no-js .header-container #header-nav ul {
+  html.no-js .site-header__container #header-nav ul {
     width: 100%;
     flex-direction: row;
     flex-wrap: wrap;
@@ -142,23 +142,23 @@ html.no-js {
     color: var(--color-text);
   }
 
-  html.no-js .header-container #open-sidebar-button {
+  html.no-js .site-header__container #open-sidebar-button {
     display: none !important;
   }
 
-  html.no-js .header-container #close-sidebar-button {
+  html.no-js .site-header__container #close-sidebar-button {
     display: none !important;
   }
 }
 
 @media screen and (max-width: 768px) {
-  html.no-js .header-container {
+  html.no-js .site-header__container {
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
   }
 
-  html.no-js .menu-items {
+  html.no-js .site-header__nav {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
@@ -168,11 +168,11 @@ html.no-js {
     margin-top: 1rem;
   }
 
-  html.no-js .menu-buttons {
+  html.no-js .site-header__buttons {
     padding-top: 0.5rem;
   }
 
-  html.no-js .header-container #header-nav ul {
+  html.no-js .site-header__container #header-nav ul {
     gap: 0.5rem;
     flex-direction: column;
   }

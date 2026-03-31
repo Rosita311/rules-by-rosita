@@ -8,7 +8,7 @@ get_template_part('template-parts/accessibility-panel'); ?>
                 <?php get_search_form(); ?>
             </section>
         </div>
-        <section class="blogpost-section">
+        <section class="blog-listing">
             <?php
             $search_query = get_search_query(); // haalt de echte zoekterm op
             if (trim($search_query) === '') : ?>
