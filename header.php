@@ -39,7 +39,7 @@
         id="top" aria-label="Rules by Rosita logo, ga naar de homepage">
         <?php get_template_part('template-parts/logo'); ?>
       </a>
-      <div class="menu-items">
+      <div class="site-header__nav">
         <a
           href="<?php echo esc_url(add_query_arg('menu', '1')); ?>"
           id="menu-open-toggle-no-js"
