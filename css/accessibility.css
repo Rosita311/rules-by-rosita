@@ -496,32 +496,4 @@ body.high-contrast .dotted-background-blue {
     transform: translateX(-50%);
     max-width: 95%;
   }
-
-  .back-to-top,
-  .accessibility-button {
-    position: fixed;
-    bottom: calc(1rem + env(safe-area-inset-bottom));
-    left: 50%;
-    transform: translateX(-50%);
-    width: 3rem;
-    height: 3rem;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 100;
-  }
-
-  .accessibility-button:hover,
-.back-to-top:hover {
-  transform: translateY(-4px) translateX(-50%);
-}
-  
-  .back-to-top {
-    left: calc(50% - 2rem);
-  }
-
-  .accessibility-button {
-    left: calc(50% + 2rem);
-  }
 }
