@@ -13,7 +13,7 @@ get_template_part('template-parts/accessibility-panel'); ?>
             $search_query = get_search_query(); // haalt de echte zoekterm op
             if (trim($search_query) === '') : ?>
             <?php elseif (have_posts()) : ?>
-                <ul class="search-results blog-listing-grid">
+                <ul class="search-results blog-listing__grid">
                     <?php while (have_posts()) : the_post();
                         $post_id = get_the_ID();
                         if (get_post_type() === 'page') {
