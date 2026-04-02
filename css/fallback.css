@@ -70,7 +70,9 @@ html.no-js #overlay {
   cursor: pointer;
   color: var(--color-text);
   border-bottom: 2px solid transparent;
-  transition: border-bottom 150ms ease, background-color 150ms ease;
+  transition:
+    border-bottom 150ms ease,
+    background-color 150ms ease;
 }
 
 .no-js .has-submenu > .submenu {
@@ -103,11 +105,15 @@ html.no-js #overlay {
     display: none;
   }
 
-  html.no-js .site-header__nav:has(#header-nav.is-open) #menu-open-toggle-no-js {
+  html.no-js
+    .site-header__nav:has(#header-nav.is-open)
+    #menu-open-toggle-no-js {
     display: none;
   }
 
-  html.no-js .site-header__nav:has(#header-nav.is-open) #menu-close-toggle-no-js {
+  html.no-js
+    .site-header__nav:has(#header-nav.is-open)
+    #menu-close-toggle-no-js {
     display: block;
   }
 
@@ -138,8 +144,6 @@ html.no-js #overlay {
   html.no-js .submenu-toggle {
     padding: 1em 2.5em;
   }
-
-
 
   html.no-js .site-header__container #open-sidebar-button {
     display: none !important;
