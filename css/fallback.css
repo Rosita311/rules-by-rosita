@@ -95,8 +95,19 @@ html.no-js #overlay {
 }
 
 @media screen and (max-width: 1024px) {
-  html.no-js #menu-open-toggle-no-js,
+  html.no-js #menu-open-toggle-no-js {
+    display: block;
+  }
+
   html.no-js #menu-close-toggle-no-js {
+    display: none;
+  }
+
+  html.no-js .site-header__nav:has(#header-nav.is-open) #menu-open-toggle-no-js {
+    display: none;
+  }
+
+  html.no-js .site-header__nav:has(#header-nav.is-open) #menu-close-toggle-no-js {
     display: block;
   }
 
@@ -144,22 +155,13 @@ html.no-js #overlay {
 @media screen and (max-width: 768px) {
   html.no-js .site-header__container {
     display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
+    align-items: center;
+    justify-content: space-between;
   }
 
   html.no-js .site-header__nav {
     display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    align-items: flex-start;
-    justify-content: space-between;
-    border-top: 1px solid var(--color-accent);
-    margin-top: 1rem;
-  }
-
-  html.no-js .site-header__buttons {
-    padding-top: 0.5rem;
+    align-items: center;
   }
 }
 
