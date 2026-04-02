@@ -128,10 +128,27 @@ a #top:focus-visible {
   margin-right: 0.25rem;
 }
 
+#open-sidebar-button:focus-visible {
+  background-color: var(--color-text);
+  color: var(--color-background);
+  border-radius: 50%;
+  outline: 2px solid var(--color-text);
+  outline-offset: 2px;
+}
+
+#open-sidebar-button:focus-visible svg {
+  stroke: var(--color-background);
+}
+
 #close-sidebar-button {
   display: none;
   background: none;
   padding: 0.5em;
+}
+
+#menu-open-toggle-no-js,
+#menu-close-toggle-no-js {
+  display: none;
 }
 
 #overlay {
@@ -249,7 +266,7 @@ a #top:focus-visible {
     border-bottom: none;
     background-color: var(--color-contrast);
     color: var(--color-bg-light) !important;
-  }
+  }                                               
 
   &:hover svg {
     stroke: var(--color-text) !important;

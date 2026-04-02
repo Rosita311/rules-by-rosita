@@ -20,7 +20,7 @@ html.no-js {
 @media (prefers-color-scheme: dark) {
   html.no-js {
     --color-text: rgba(255, 255, 255, 0.87);
-    --color-primary: #d96377;
+    --color-primary: #f7636f;
     --color-accent: #e38ca6;
     --color-accent-2: #293a3d;
     --color-footer: #103c42;
@@ -40,22 +40,25 @@ html.no-js {
   margin-top: 32px !important;
 }
 
-
+html.no-js .skip-link--accessibility {
+  display: none;
+}
 
 /* Search fallback */
 .no-js .search-form-fallback {
   display: block;
 }
 
-
-
 /* Mobile menu fallback */
 
 /* Algemene fallback stijlen voor als geen JS beschikbaar is */
-.no-js #open-sidebar-button,
-.no-js #close-sidebar-button,
-.no-js #theme-switch,
-.no-js #overlay {
+html.no-js #open-sidebar-button,
+html.no-js #close-sidebar-button,
+html.no-js #menu-open-toggle-no-js,
+html.no-js #menu-close-toggle-no-js,
+html.no-js .back-to-top,
+html.no-js #theme-switch,
+html.no-js #overlay {
   display: none;
 }
 
@@ -63,19 +66,17 @@ html.no-js {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 1rem 0;
-  margin: 0 1.5rem;
+  padding: 1em 2.5em;
+  margin: 0;
   background: none;
   border: none;
   font: inherit;
   cursor: pointer;
   color: var(--color-text);
   border-bottom: 2px solid transparent;
-  transition: border-bottom 150ms ease, background-color 150ms ease;
-}
-
-.no-js .has-submenu > .submenu {
-  display: block;
+  transition:
+    border-bottom 150ms ease,
+    background-color 150ms ease;
 }
 
 .no-js .has-submenu > .submenu {
@@ -96,50 +97,92 @@ html.no-js {
 }
 
 @media screen and (max-width: 1024px) {
+  html.no-js #menu-open-toggle-no-js {
+    display: block;
+  }
+
+  html.no-js #menu-close-toggle-no-js {
+    display: none;
+  }
+
+  html.no-js
+    .site-header__nav:has(#header-nav.is-open)
+    #menu-open-toggle-no-js {
+    display: none;
+  }
+
+  html.no-js
+    .site-header__nav:has(#header-nav.is-open)
+    #menu-close-toggle-no-js {
+    display: block;
+  }
 
   html.no-js #header-nav {
-    position: static; /* geen fixed/slide‑in positionering */
-    display: block !important;
-    right: 0 !important; /* niet naar rechts verschuiven */
-    height: auto !important; /* geen hoogte instellen */
-    width: auto !important; /* geen breedte instellen */
-    transition: none !important;
-    border: none;
-    overflow-x: hidden;
+    display: none;
   }
 
-  html.no-js .site-header__container #header-nav ul {
-    width: 100%;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 1rem;
-    margin-right: 1rem;
+  html.no-js #header-nav.is-open {
+    display: block;
+    position: absolute !important; /* override fixed / right -100% */
+    top: 3rem;
+    right: 1rem;
+    width: min(18rem, 90vw);
+    height: fit-content;
+    background: var(--color-background);
+    border: 1px solid var(--color-accent);
+    border-radius: 0.25rem;
+    z-index: 10;
   }
 
-  html.no-js #header-nav a {
+  html.no-js #header-nav ul {
     display: flex;
-    font-family: var(--font-body);
-    font-size: 1rem;
-    font-weight: 500;
-    text-decoration: none;
-    color: var(--color-text);
-    padding: 1em 0;
-    background-color: var(--color-background);
-    border-bottom: 2px solid transparent;
-    transition: background-color 150ms ease;
-
-    &:hover,
-    &:focus {
-      border-bottom: 2px solid var(--color-contrast);
-      background-color: var(--color-background);
-      color: var(--color-text);
-    }
+    flex-direction: column;
+    gap: 0.25rem;
   }
 
-  html.no-js #header-nav a[aria-current="page"] {
-    border-bottom: 2px solid var(--color-primary);
-    background-color: var(--color-background);
-    color: var(--color-text);
+  html.no-js #header-nav a,
+  html.no-js .submenu-toggle {
+    padding: 1em 2.5em;
+  }
+
+  /* Submenu: hide by default, overriding the flex from #header-nav ul */
+  html.no-js #header-nav .submenu {
+    display: none;
+    position: static;
+    width: 100%;
+    flex-direction: column;
+    border: none;
+    border-left: 2px solid var(--color-accent);
+    border-radius: 0;
+    background: transparent;
+    margin: 0;
+    gap: 0;
+  }
+
+  /* Show on mouse hover or keyboard focus-within */
+  html.no-js #header-nav .has-submenu:hover > .submenu,
+  html.no-js #header-nav .has-submenu:focus-within > .submenu {
+    display: flex;
+  }
+
+  /* Button: match link styling */
+  html.no-js .has-submenu > button.submenu-toggle {
+    margin: 0;
+    width: 100%;
+    border-bottom: none;
+    transition: background-color 150ms ease;
+  }
+
+  html.no-js .has-submenu > button.submenu-toggle:hover {
+    background-color: var(--color-contrast);
+    color: var(--color-bg-light);
+  }
+
+  html.no-js .has-submenu > button.submenu-toggle:focus-visible {
+    background-color: var(--color-text);
+    color: var(--color-background);
+    outline: 2px solid var(--color-text);
+    border-radius: 0;
   }
 
   html.no-js .site-header__container #open-sidebar-button {
@@ -154,40 +197,13 @@ html.no-js {
 @media screen and (max-width: 768px) {
   html.no-js .site-header__container {
     display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
+    align-items: center;
+    justify-content: space-between;
   }
 
   html.no-js .site-header__nav {
     display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    align-items: flex-start;
-    justify-content: space-between;
-    border-top: 1px solid var(--color-accent);
-    margin-top: 1rem;
-  }
-
-  html.no-js .site-header__buttons {
-    padding-top: 0.5rem;
-  }
-
-  html.no-js .site-header__container #header-nav ul {
-    gap: 0.5rem;
-    flex-direction: column;
-  }
-
-  html.no-js #header-nav a {
-    padding: 0.25em 0 0.25em 0;
-    width: auto;
-  }
-
-  .no-js .has-submenu > button.submenu-toggle {
-    display: flex;
     align-items: center;
-    gap: 0.5rem;
-    padding: 0.25rem 0;
-    margin: 0;
   }
 }
 

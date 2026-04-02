@@ -1,5 +1,15 @@
 <?php
+/* Load custom menu walker */
 require_once get_template_directory() . '/inc/menu-walker.php';
+// Menu fallback without js
+function rules_by_rosita_is_menu_open(): bool {
+  return isset($_GET['menu']) && $_GET['menu'] === '1';
+}
+$menu_open_no_js = (
+  isset($_GET['menu']) &&
+  $_GET['menu'] === '1' &&
+  !wp_script_is('your-main-js-handle', 'enqueued')
+);
 
 /* Theme setup */
 function rules_by_rosita_setup()
