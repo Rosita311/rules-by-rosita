@@ -66,8 +66,8 @@ html.no-js #overlay {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 1em 2.5em;
-  margin: 0;
+  padding: 1rem 0;
+  margin: 0 1.5rem;
   background: none;
   border: none;
   font: inherit;
@@ -77,6 +77,21 @@ html.no-js #overlay {
   transition:
     border-bottom 150ms ease,
     background-color 150ms ease;
+}
+
+.has-submenu > button.submenu-toggle {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 0;
+  margin: 0 1.5rem;
+  background: none;
+  border: none;
+  font: inherit;
+  cursor: pointer;
+  color: var(--color-text);
+  border-bottom: 2px solid transparent;
 }
 
 .no-js .has-submenu > .submenu {
@@ -169,6 +184,8 @@ html.no-js #overlay {
   html.no-js .has-submenu > button.submenu-toggle {
     margin: 0;
     width: 100%;
+    padding: 1em 2.5em;
+    margin: 0;
     border-bottom: none;
     transition: background-color 150ms ease;
   }
