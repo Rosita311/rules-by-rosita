@@ -128,6 +128,18 @@ a #top:focus-visible {
   margin-right: 0.25rem;
 }
 
+#open-sidebar-button:focus-visible {
+  background-color: var(--color-text);
+  color: var(--color-background);
+  border-radius: 50%;
+  outline: 2px solid var(--color-text);
+  outline-offset: 2px;
+}
+
+#open-sidebar-button:focus-visible svg {
+  stroke: var(--color-background);
+}
+
 #close-sidebar-button {
   display: none;
   background: none;
