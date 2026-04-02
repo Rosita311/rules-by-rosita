@@ -178,6 +178,9 @@ See [DEVLOG.md](./DEVLOG.md) for an overview of completed features, ongoing task
 
 ## Changelog
 
+### Version 1.3 - 2-4-2026
+- Improve mobile menu when Javascript not available.
+
 ### Version 1.2 - 31-3-2026
 - Refactor all CSS classes to BEM methodology across all PHP templates, CSS files, and JavaScript
 
