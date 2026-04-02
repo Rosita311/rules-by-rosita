@@ -40,6 +40,10 @@ html.no-js {
   margin-top: 32px !important;
 }
 
+html.no-js .skip-link--accessibility {
+  display: none;
+}
+
 /* Search fallback */
 .no-js .search-form-fallback {
   display: block;

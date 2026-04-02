@@ -31,7 +31,7 @@
     class="skip-link">Sla het menu over</a>
   <a
     href="#accessibility-settings"
-    class="skip-link">Ga naar toegankelijkheidsinstellingen</a>
+    class="skip-link skip-link--accessibility">Ga naar toegankelijkheidsinstellingen</a>
   <header>
     <div class="site-header__container">
       <a
