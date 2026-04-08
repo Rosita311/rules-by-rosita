@@ -216,7 +216,7 @@ body #cmplz-manage-consent-container .cmplz-switch {
 /* Hover & focus states */
 #subscribe-submit button[type="submit"]:hover {
   background-color: var(--color-footer);
-  border: 2px solid var(--color-footer);
+  border: 2px solid var(--color-text);
   color: var(--color-text) !important;
 }
 

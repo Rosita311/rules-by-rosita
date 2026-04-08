@@ -489,7 +489,7 @@ button {
     color: var(--color-text);
   }
 }
-.site-footer .wp-block-button__link,
+
 .btn--footer {
   border: 2px solid var(--color-contrast);
   white-space: nowrap;
