@@ -216,11 +216,11 @@ body #cmplz-manage-consent-container .cmplz-switch {
 /* Hover & focus states */
 #subscribe-submit button[type="submit"]:hover {
   background-color: var(--color-footer);
-  border: 2px solid var(--color-text);
+  border: 2px solid var(--color-footer);
   color: var(--color-text) !important;
 }
 
-footer .footer-widgets #subscribe-submit button[type="submit"]:hover {
+footer #subscribe-submit button[type="submit"]:hover {
   border: 2px solid var(--color-text);
 }
 
