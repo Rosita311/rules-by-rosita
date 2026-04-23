@@ -37,6 +37,7 @@ Dit bestand houdt de voortgang van het thema bij. Het project is een doorlopend 
 - Dupliceer post/pagina functie toegevoegd  
 - Widgetgebied in footer voor Jetpack-abonnementen en social media iconen  
 - Custom widget voor social media iconen  
+- Linkshandig modus toegevoegd (toggle in toegankelijkheidsmenu, knoppen en menu verschuiven naar links op mobiel)  
 
 ---
 
@@ -100,6 +101,7 @@ The project is an ongoing learning process, and this log documents the steps, ch
 - Duplicate post/page feature added  
 - Footer widget area for Jetpack subscriptions and social media icons  
 - Custom widget for social media icons  
+- Left-handed mode added (toggle in accessibility menu, buttons and menu shift to the left on mobile)  
 
 ---
 

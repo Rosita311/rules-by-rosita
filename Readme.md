@@ -17,6 +17,7 @@ De code is openbaar beschikbaar als leerbron en om mijn ontwikkelproces te docum
 - **Zoekfunctie** geïntegreerd in WordPress  
 - **Minimalistisch design** met helder kleurenpalet en toegankelijke contrasten  
 - **Instellingenmenu** met toegankelijkheidsopties (groot lettertype, leesbaar lettertype, hoog contrast, animaties uit)  
+- **Linkshandig modus**: toegankelijkheidsoptie die knoppen en menu naar links verplaatst op mobiel  
 
 ## Design
 - **Typografie**: Nunito (body) & Zilla Slab (koppen) via Google Fonts  
@@ -29,7 +30,8 @@ De code is openbaar beschikbaar als leerbron en om mijn ontwikkelproces te docum
 - Voorkeuren voor `prefers-reduced-motion`  
 - Consistente tabvolgorde  
 - Contrast-proof kleurgebruik  
-- Instellingenmenu met toegankelijkheidsopties
+- Instellingenmenu met toegankelijkheidsopties  
+- Linkshandig modus voor éénhandig gebruik op mobiel  
 
 ## CSS-naamgeving — BEM
 
@@ -105,6 +107,7 @@ The code is publicly available as a learning resource and to document my develop
 - **Search functionality** integrated into WordPress  
 - **Minimalistic design** with a clean color palette and accessible contrasts  
 - **Settings menu** with accessibility options (larger font size, readable font, high contrast, disable animations)  
+- **Left-handed mode**: accessibility option that moves buttons and menu to the left on mobile  
 
 ## Design
 - **Typography**: Nunito (body) & Zilla Slab (headings) via Google Fonts  
@@ -117,7 +120,8 @@ The code is publicly available as a learning resource and to document my develop
 - Support for `prefers-reduced-motion`  
 - Consistent tab order  
 - Contrast-proof color usage  
-- Settings menu with accessibility options
+- Settings menu with accessibility options  
+- Left-handed mode for one-handed use on mobile  
 
 ## CSS Naming — BEM
 
@@ -177,6 +181,9 @@ The theme is publicly available, but primarily intended for my own blog and lear
 See [DEVLOG.md](./DEVLOG.md) for an overview of completed features, ongoing tasks, and future ideas.
 
 ## Changelog
+
+### Version 1.4 - 23-4-2026
+- Add left-handed mode toggle and styles for mobile accessibility
 
 ### Version 1.3 - 2-4-2026
 - Improve mobile menu when Javascript not available.
