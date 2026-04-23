@@ -490,3 +490,32 @@ a #top:focus-visible {
     gap: 0;
   }
 }
+
+/* Left-handed mode — mobile only */
+@media screen and (max-width: 768px) {
+  body.left-handed .site-header__nav {
+    order: -1;
+    justify-content: flex-start;
+  }
+
+  body.left-handed #open-sidebar-button {
+    margin-left: 0;
+  }
+
+  body.left-handed .site-header__logo {
+    margin-right: 0;
+    margin-left: 2rem;
+  }
+
+  body.left-handed .site-header__container #header-nav {
+    right: auto;
+    left: -100%;
+    border-left: none;
+    border-right: 1px solid var(--color-accent);
+  }
+
+  body.left-handed .site-header__container #header-nav.show {
+    left: 0;
+    right: auto;
+  }
+}

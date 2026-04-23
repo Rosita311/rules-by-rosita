@@ -443,6 +443,7 @@ const accessibilityOptions = {
   "toggle-contrast": "high-contrast",
   "toggle-text": "large-text",
   "toggle-reduce-motion": "reduce-motion",
+  "toggle-left-handed": "left-handed",
 };
 
 // Theme-toggle verbergen bij hoog contrast

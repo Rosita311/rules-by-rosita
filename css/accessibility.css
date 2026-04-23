@@ -490,10 +490,40 @@ body.high-contrast .dotted-background-blue {
   }
 }
 
+@media screen and (min-width: 769px) {
+  #toggle-left-handed {
+    display: none;
+  }
+}
+
 @media screen and (max-width: 768px) {
   #accessibility-settings {
     left: 50%;
     transform: translateX(-50%);
     max-width: 95%;
   }
+
+  /* Left-handed mode */
+  body.left-handed .back-to-top {
+    right: auto;
+    left: 6rem;
+  }
+
+  body.left-handed .accessibility-btn {
+    right: auto;
+    left: 2rem;
+  }
+
+  body.left-handed #accessibility-settings {
+    right: auto;
+    left: 1rem;
+    transform: none;
+  }
+
+  body.left-handed .back-to-top__tooltip,
+  body.left-handed .accessibility-btn__tooltip {
+    left: 0;
+    margin-left: 0;
+  }
 }
+
