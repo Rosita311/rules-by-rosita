@@ -127,7 +127,7 @@ const closeSidebar = () => {
     openPanel();
     panelWasOpen = false; // Reset status na herstel
   }
-  openButton.focus();
+  openButton?.focus();
 };
 
 navLinks.forEach((link) => {
@@ -146,8 +146,8 @@ const updateNavbar = (e) => {
     activateTrap(navbar);
     navbar.setAttribute("inert", "");
     if (navbar.classList.contains("show")) {
-      toggleButton.style.display = "none";
-      backToTop.style.display = "none";
+      if (toggleButton) toggleButton.style.display = "none";
+      if (backToTop) backToTop.style.display = "none";
       if (panel && panel.classList.contains("show")) {
         panelWasOpen = true;
         closePanel();
@@ -162,8 +162,8 @@ const updateNavbar = (e) => {
     navbar.classList.remove("show");
     overlay.style.display = "none";
     openButton.setAttribute("aria-expanded", "false");
-    toggleButton.style.display = "block";
-    backToTop.style.display = "block";
+    if (toggleButton) toggleButton.style.display = "block";
+    if (backToTop) backToTop.style.display = "block";
     if (panel && panelWasOpen) {
       panelWasOpen = false;
       openPanel();
@@ -238,22 +238,24 @@ document.body.addEventListener("mousedown", () => {
 
 // Back to top button
 
-window.addEventListener("scroll", () => {
-  if (window.scrollY > 300) {
-    backToTop.classList.add("show");
-    backToTop.removeAttribute("aria-hidden");
-    backToTop.removeAttribute("tabindex");
-  } else {
-    backToTop.classList.remove("show");
-    backToTop.setAttribute("aria-hidden", "true");
-    backToTop.setAttribute("tabindex", "-1");
-  }
-});
+if (backToTop) {
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+      backToTop.classList.add("show");
+      backToTop.removeAttribute("aria-hidden");
+      backToTop.removeAttribute("tabindex");
+    } else {
+      backToTop.classList.remove("show");
+      backToTop.setAttribute("aria-hidden", "true");
+      backToTop.setAttribute("tabindex", "-1");
+    }
+  });
 
-backToTop.addEventListener("click", () => {
-  window.scrollTo({ top: 0, behavior: "smooth" });
-  document.getElementById("top").focus();
-});
+  backToTop.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    document.getElementById("top").focus();
+  });
+}
 
 // Zoekfunctie
 if (searchOverlay && searchToggle && searchClose) {
@@ -328,46 +330,48 @@ const settingsMap = {
   "toggle-reduce-motion": "reduce-motion",
 };
 
-// Paneel openen/sluiten via klik
-toggleButton.addEventListener("click", () => {
-  togglePanel();
-});
-
-// Ook openen/sluiten met Enter of Spatie
-toggleButton.addEventListener("keydown", (e) => {
-  if (e.key === "Enter" || e.key === " ") {
-    e.preventDefault();
+if (toggleButton && panel && closeButton) {
+  // Paneel openen/sluiten via klik
+  toggleButton.addEventListener("click", () => {
     togglePanel();
-  }
-});
-
-// Sluitknop sluit het paneel
-closeButton.addEventListener("click", () => {
-  closePanel();
-});
-
-// Escape sluit het paneel
-panel.addEventListener("keydown", (e) => {
-  if (e.key === "Escape") {
-    closePanel();
-  }
-});
-
-document
-  .querySelector('a[href="#accessibility-settings"]')
-  .addEventListener("click", (e) => {
-    e.preventDefault();
-
-    panel.classList.add("show");
-    panel.setAttribute("aria-hidden", "false");
-
-    const firstFocusable = panel.querySelector(
-      'button, [tabindex]:not([tabindex="-1"])'
-    );
-    firstFocusable?.focus();
-
-    activateTrap(panel);
   });
+
+  // Ook openen/sluiten met Enter of Spatie
+  toggleButton.addEventListener("keydown", (e) => {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      togglePanel();
+    }
+  });
+
+  // Sluitknop sluit het paneel
+  closeButton.addEventListener("click", () => {
+    closePanel();
+  });
+
+  // Escape sluit het paneel
+  panel.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+      closePanel();
+    }
+  });
+
+  document
+    .querySelector('a[href="#accessibility-settings"]')
+    ?.addEventListener("click", (e) => {
+      e.preventDefault();
+
+      panel.classList.add("show");
+      panel.setAttribute("aria-hidden", "false");
+
+      const firstFocusable = panel.querySelector(
+        'button, [tabindex]:not([tabindex="-1"])'
+      );
+      firstFocusable?.focus();
+
+      activateTrap(panel);
+    });
+}
 
 // Functies
 
@@ -472,21 +476,14 @@ function toggleSetting(button, className) {
   const newState = !isActive;
 
   button.setAttribute("aria-pressed", String(newState));
-  document.body.classList.toggle(className, newState);
-  localStorage.setItem(className, newState);
 
   const target =
     className === "large-text" ? document.documentElement : document.body;
   target.classList.toggle(className, newState);
 
-  if (className === "large-text") {
-    document.documentElement.classList.toggle(className, newState);
-  } else {
-    document.body.classList.toggle(className, newState);
-  }
   localStorage.setItem(className, newState);
-
   updateButtonIcon(button, newState);
+
   if (className === "high-contrast") {
     updateThemeToggleVisibility();
   }
@@ -498,13 +495,14 @@ function restoreSettings() {
     const button = document.getElementById(buttonId);
     const savedState = localStorage.getItem(className) === "true";
 
-    button.setAttribute("aria-pressed", String(savedState));
     const target =
       className === "large-text" ? document.documentElement : document.body;
     target.classList.toggle(className, savedState);
 
-    updateButtonIcon(button, savedState);
+    if (!button) return;
 
+    button.setAttribute("aria-pressed", String(savedState));
+    updateButtonIcon(button, savedState);
     button.addEventListener("click", () => toggleSetting(button, className));
   });
 
@@ -709,7 +707,7 @@ function initSubmenus() {
     });
 
     parentItem.addEventListener("mouseleave", () => {
-      if (!media.machtes && parentItem.dataset.openedByClick !== "true") {
+      if (!media.matches && parentItem.dataset.openedByClick !== "true") {
         clearTimeout(hoverOpenTimeout);
         hoverCloseTimeout = setTimeout(closeSubmenu, 300);
       }
