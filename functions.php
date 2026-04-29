@@ -324,7 +324,7 @@ function rules_by_rosita_comment_privacy_check($commentdata)
 {
     if (!is_user_logged_in() && empty($_POST['comment-privacy'])) {
         set_transient('comment_privacy_error', __('Je moet akkoord gaan met de privacyverklaring om een reactie te plaatsen.', 'rules-by-rosita'), 30);
-        wp_redirect(wp_get_referer() . '#respond');
+        wp_redirect(esc_url_raw((wp_get_referer() ?: home_url('/')) . '#respond'));
         exit;
     }
     return $commentdata;

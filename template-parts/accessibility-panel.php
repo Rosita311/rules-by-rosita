@@ -2,6 +2,7 @@
       id="accessibility-settings"
       class="accessibility-panel"
       role="dialog"
+      aria-modal="true"
       aria-labelledby="accessibility-heading"
       hidden
     >

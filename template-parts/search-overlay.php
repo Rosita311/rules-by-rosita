@@ -5,7 +5,8 @@
   role="dialog"
   aria-modal="true"
   aria-labelledby="search-label"
-  hidden>
+  hidden
+  inert>
   <?php get_search_form(); ?>
     <div class="search-overlay__inner" tabindex="-1">
     <button

@@ -37,7 +37,7 @@
 
 .accessibility-btn,
 .back-to-top {
-  position: fixed !important;
+  position: fixed;
   bottom: 2rem;
   background-color: var(--color-contrast);
   color: var(--color-bg-light);
@@ -55,7 +55,6 @@
 }
 
 .back-to-top {
-  position: relative;
   opacity: 0;
   pointer-events: auto;
   right: 6rem;
@@ -67,8 +66,7 @@
 }
 
 .accessibility-btn {
-  position: relative;
-  opacity: 1 !important;
+  opacity: 1;
   pointer-events: auto;
   right: 2rem;
 }
@@ -221,7 +219,7 @@ body.dyslexic-font .btn,
 body.dyslexic-font .form__field-error,
 body.dyslexic-font .comment-error,
 body.dyslexic-font .page-hero__title nav p,
-body.dyslectic-font #cmplz-cookiebanner-container .cmplz-btn {
+body.dyslexic-font #cmplz-cookiebanner-container .cmplz-btn {
   font-family: "Atkinson Hyperlegible", Arial, sans-serif;
 }
 
@@ -237,7 +235,7 @@ body.dyslexic-font .comment-error {
   font-weight: 700;
 }
 
-body.dyslectic-font {
+body.dyslexic-font {
   --font-body: "Atkinson Hyperlegible", Arial, sans-serif;
   --font-heading: "Atkinson Hyperlegible", Arial, sans-serif;
 }

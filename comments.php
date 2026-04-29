@@ -68,7 +68,7 @@ if (post_password_required()) {
   </p>
   <div role="alert" id="privacy-error"
        class="comment-error"
-       data-error="' . esc_attr('Je moet akkoord gaan met de privacyverklaring om een reactie te plaatsen.', 'rules-by-rosita') . '"
+       data-error="' . esc_attr(__('Je moet akkoord gaan met de privacyverklaring om een reactie te plaatsen.', 'rules-by-rosita')) . '"
        style="display:none; color: var(--color-primary); margin-bottom: 0.5rem;">
   </div>
   <p class="form__checkbox">
@@ -95,12 +95,12 @@ if (post_password_required()) {
       'fields' => array(
         'author' => '<div class="form__group">
         <label for="comment-author">Naam <span aria-hidden="true">*</span></label>
-        <input id="comment-author" name="author" type="text" ariadescribedby="error-author" aria-required="true" />
+        <input id="comment-author" name="author" type="text" aria-describedby="error-author" aria-required="true" />
         <div role="alert" id="error-author" class="form__field-error"></div>
       </div>',
         'email' => '<div class="form__group">
         <label for="comment-email">E-mail <span aria-hidden="true">*</span></label>
-        <input id="comment-email" name="email" type="email" ariadescribedby="error-email" aria-required="true" />
+        <input id="comment-email" name="email" type="email" aria-describedby="error-email" aria-required="true" />
         <div role="alert" id="error-email" class="form__field-error"></div>
       </div>',
         'url' => '<div class="form__group url-field">
@@ -110,7 +110,7 @@ if (post_password_required()) {
       ),
       'comment_field' => '<div class="form__group">
   <label for="comment">Reactie <span aria-hidden="true">*</span></label>
-  <textarea id="comment" name="comment" rows="5" ariadescribedby="error-comment" aria-required="true"></textarea>
+  <textarea id="comment" name="comment" rows="5" aria-describedby="error-comment" aria-required="true"></textarea>
   <div role="alert" id="error-comment" class="form__field-error"></div>
 </div>' . $error_html,
       'comment_notes_before' => '<span class="required-field-message">Vereiste velden zijn gemarkeerd met <span class="required">*</span></span>',

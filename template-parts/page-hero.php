@@ -16,7 +16,7 @@
              if (trim($search_query) === '') {
               echo 'Zoeken';
              } else {
-              echo 'Zoekresultaten voor: ' . get_search_query();
+              echo 'Zoekresultaten voor: ' . esc_html(get_search_query());
              }
           } elseif (is_404()) {
             echo 'Pagina niet gevonden';

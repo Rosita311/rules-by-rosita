@@ -23,7 +23,6 @@
       <div
         class="plumbob"
         tabindex="0"
-        role="button"
         aria-describedby="plumbob-desc">
         <svg
           viewBox="0 0 100 160"

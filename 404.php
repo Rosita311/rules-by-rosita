@@ -71,7 +71,7 @@ get_template_part('template-parts/accessibility-panel'); ?>
         <?php endif; ?>
       </ul>
       <div class="button-wrapper">
-        <a class="btn btn--secondary" href="<?php echo get_permalink(get_option('page_for_posts')); ?>">Bekijk alle blogposts</a>
+        <a class="btn btn--secondary" href="<?php echo esc_url(get_permalink(get_option('page_for_posts'))); ?>">Bekijk alle blogposts</a>
       </div>
     </section>
     <?php get_template_part('template-parts/back-to-top'); ?>
