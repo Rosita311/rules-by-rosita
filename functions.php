@@ -430,3 +430,19 @@ function rules_by_rosita_duplicate_post_link($actions, $post) {
 }
 add_filter('post_row_actions', 'rules_by_rosita_duplicate_post_link', 10, 2);
 add_filter('page_row_actions', 'rules_by_rosita_duplicate_post_link', 10, 2);
+
+// Add icons functionality
+function rules_by_rosita_icon( string $name, string $aria_label = '' ): string {
+    $icons =[]; 
+
+    if ( ! isset( $icons[ $name])) return '';
+
+    $aria = $aria_label 
+        ? 'role="img" aria-label="' . esc_attr( $aria_label ) . '"'
+        : 'aria-hidden="true"';
+
+    $classes = 'icon icon-' . esc_attr( $name );
+    if ($class) $classes .= ' ' . esc_attr( $class );
+
+    return '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ' . $aria . ' class="' . $classes . '">' . $icons[ $name ] . '</svg>';
+}
