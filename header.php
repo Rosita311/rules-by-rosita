@@ -6,21 +6,7 @@
 <head>
   <meta charset="<?php bloginfo('charset'); ?>">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- Tracking -->
   <meta name="google-site-verification" content="15ORyHR-XnE6rDeRBDe6XV9PvnyeV-gERiOHh-wnhOQ" />
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-658J5D97BN"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag('js', new Date());
-
-    gtag('config', 'G-658J5D97BN');
-  </script>
-  <!-- Einde tracking -->
   <?php wp_head(); ?>
 </head>
 

@@ -30,3 +30,39 @@ function rules_by_rosita_customize_register( $wp_customize ) {
     }
 }
 add_action( 'customize_register', 'rules_by_rosita_customize_register' );
+
+function rules_by_rosita_analytics_register( $wp_customize ) {
+    $wp_customize->add_section( 'analytics_settings', array(
+        'title'    => __( 'Analytics', 'rules-by-rosita' ),
+        'priority' => 35,
+    ) );
+
+    $wp_customize->add_setting( 'rules_by_rosita_ga_id', array(
+        'default'           => '',
+        'sanitize_callback' => 'sanitize_text_field',
+    ) );
+
+    $wp_customize->add_control( 'rules_by_rosita_ga_id', array(
+        'label'       => __( 'Google Analytics ID', 'rules-by-rosita' ),
+        'description' => __( 'Bijv. G-XXXXXXXXXX', 'rules-by-rosita' ),
+        'section'     => 'analytics_settings',
+        'type'        => 'text',
+    ) );
+}
+add_action( 'customize_register', 'rules_by_rosita_analytics_register' );
+
+function rules_by_rosita_analytics() {
+    $ga_id = get_theme_mod( 'rules_by_rosita_ga_id' );
+    if ( ! $ga_id ) return;
+    $ga_id = esc_attr( $ga_id );
+    ?>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=<?php echo $ga_id; ?>"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', '<?php echo $ga_id; ?>');
+    </script>
+    <?php
+}
+add_action( 'wp_head', 'rules_by_rosita_analytics' );
