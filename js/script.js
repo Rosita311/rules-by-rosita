@@ -613,14 +613,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     if (!valid) {
-      console.log("Form values:", {
-        author: author?.value,
-        email: email?.value,
-        comment: comment?.value,
-        checkbox: checkbox?.checked,
-        isAdmin,
-      });
-
       e.preventDefault(); // Stop formulierverzending
 
       // Focus na render

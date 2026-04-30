@@ -1,4 +1,6 @@
 <?php
+define( 'RULES_BY_ROSITA_FONTS_URL', 'https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;700&family=Zilla+Slab:wght@400;700&display=swap' );
+
 /* Load custom menu walker */
 require_once get_template_directory() . '/inc/menu-walker.php';
 // Menu fallback without js
@@ -36,7 +38,7 @@ function rules_by_rosita_enqueue_assets()
     // Google Fonts
     wp_enqueue_style(
         'rules-by-rosita-google-fonts',
-        'https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;700&family=Zilla+Slab:wght@400;700&display=swap',
+        RULES_BY_ROSITA_FONTS_URL,
         array(),
         null
     );
@@ -46,7 +48,7 @@ function rules_by_rosita_enqueue_assets()
         'rules-by-rosita-style',
         get_template_directory_uri() . '/style.css',
         array('rules-by-rosita-google-fonts'),
-        filemtime(get_template_directory() . '/style.css')
+        filemtime(get_template_directory() . '/style.css') ?: wp_get_theme()->get('Version')
     );
 
     // Custom JS
@@ -54,7 +56,7 @@ function rules_by_rosita_enqueue_assets()
         'rules-by-rosita-script',
         get_template_directory_uri() . '/js/script.js',
         array(),
-        filemtime(get_template_directory() . '/js/script.js'),
+        filemtime(get_template_directory() . '/js/script.js') ?: wp_get_theme()->get('Version'),
         true
     );
 
@@ -69,7 +71,7 @@ function rules_by_rosita_editor_assets()
 {
     wp_enqueue_style(
         'rules-by-rosita-editor-fonts',
-        'https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;700&family=Zilla+Slab:wght@400;700&display=swap',
+        RULES_BY_ROSITA_FONTS_URL,
         false,
         null
     );
