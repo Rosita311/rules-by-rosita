@@ -492,6 +492,20 @@ function toggleSetting(button, className) {
 
 // Herstel bij laden
 function restoreSettings() {
+  if (!document.getElementById("accessibility-settings")) {
+    Object.values(accessibilityOptions).forEach((className) => {
+      const target = className === "large-text" ? document.documentElement : document.body;
+      target.classList.remove(className);
+      if (className === "reduce-motion") {
+        const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        target.classList.toggle(className, prefersReduced);
+      } else {
+        localStorage.removeItem(className);
+      }
+    });
+    return;
+  }
+
   Object.entries(accessibilityOptions).forEach(([buttonId, className]) => {
     const button = document.getElementById(buttonId);
     const savedState = localStorage.getItem(className) === "true";
