@@ -14,7 +14,7 @@ $excerpt_id = 'excerpt-' . $post_id;
 <li class="card hover-shadow-pink">
   <div class="card__image">
     <img
-      src="<?php echo get_the_post_thumbnail_url($post_id, 'large'); ?>"
+      src="<?php echo esc_url( get_the_post_thumbnail_url($post_id, 'large') ); ?>"
       alt="<?php echo esc_attr($alt_text); ?>"
       loading="lazy" />
   </div>
@@ -22,16 +22,16 @@ $excerpt_id = 'excerpt-' . $post_id;
     <div class="card__content">
       <div class="card__info">
         <h2 class="post-title h2">
-          <a href="<?php the_permalink(); ?>" aria-describedby="<?php echo $excerpt_id . ' ' . $leesmeer_id; ?>">
+          <a href="<?php the_permalink(); ?>" aria-describedby="<?php echo esc_attr( $excerpt_id . ' ' . $leesmeer_id ); ?>">
             <?php the_title(); ?>
           </a>
         </h2>
         <p class="post-date"><?php the_time('j-m-Y'); ?></p>
-        <p id="<?php echo $excerpt_id; ?>">
+        <p id="<?php echo esc_attr( $excerpt_id ); ?>">
           <?php echo wp_trim_words(get_the_excerpt(), 30, '...'); ?>
         </p>
       </div>
-      <span aria-hidden="true" id="<?php echo $leesmeer_id; ?>" class="btn btn--primary">
+      <span aria-hidden="true" id="<?php echo esc_attr( $leesmeer_id ); ?>" class="btn btn--primary">
         Lees meer
       </span>
     </div>

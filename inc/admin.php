@@ -33,6 +33,10 @@ function rules_by_rosita_duplicate_post_as_draft() {
         wp_die( 'Post not found.' );
     }
 
+    if ( ! current_user_can( 'edit_post', $post_id ) ) {
+        wp_die( 'Permission denied.' );
+    }
+
     $new_post_args = array(
         'post_title'   => $post->post_title . ' (Copy)',
         'post_content' => $post->post_content,
@@ -52,7 +56,7 @@ function rules_by_rosita_duplicate_post_as_draft() {
     $post_meta = get_post_meta( $post_id );
     foreach ( $post_meta as $meta_key => $meta_values ) {
         foreach ( $meta_values as $meta_value ) {
-            add_post_meta( $new_post_id, $meta_key, maybe_unserialize( $meta_value ) );
+            add_post_meta( $new_post_id, $meta_key, $meta_value );
         }
     }
 

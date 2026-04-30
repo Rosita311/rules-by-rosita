@@ -11,15 +11,15 @@ $excerpt_id = 'excerpt-' . $post_id;
     <div class="card__content--page">
       <div class="card__info">
         <h2 class="post-title h2">
-          <a href="<?php the_permalink(); ?>" aria-describedby="<?php echo $excerpt_id . ' ' . $leesmeer_id; ?>">
+          <a href="<?php the_permalink(); ?>" aria-describedby="<?php echo esc_attr( $excerpt_id . ' ' . $leesmeer_id ); ?>">
             <?php the_title(); ?>
           </a>
         </h2>
-        <p id="<?php echo $excerpt_id; ?>">
+        <p id="<?php echo esc_attr( $excerpt_id ); ?>">
           <?php echo wp_trim_words(get_the_excerpt(), 55, '...'); ?>
         </p>
       </div>
-      <span aria-hidden="true" id="<?php echo $leesmeer_id; ?>" class="btn btn--secondary">
+      <span aria-hidden="true" id="<?php echo esc_attr( $leesmeer_id ); ?>" class="btn btn--secondary">
         Lees meer
       </span>
     </div>
