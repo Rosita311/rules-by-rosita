@@ -2,7 +2,6 @@
 define( 'RULES_BY_ROSITA_FONTS_URL', 'https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;700&family=Zilla+Slab:wght@400;700&display=swap' );
 
 require_once get_template_directory() . '/inc/menu-walker.php';
-require_once get_template_directory() . '/inc/icons.php';
 require_once get_template_directory() . '/inc/customizer.php';
 require_once get_template_directory() . '/inc/social-widget.php';
 require_once get_template_directory() . '/inc/comments.php';
@@ -17,8 +16,6 @@ function rules_by_rosita_is_menu_open(): bool {
 function rules_by_rosita_setup() {
     add_theme_support( 'title-tag' );
     add_theme_support( 'post-thumbnails' );
-    add_theme_support( 'editor-styles' );
-    add_editor_style( 'editor-style.css' );
     add_theme_support( 'automatic-feed-links' );
     add_theme_support( 'wp-block-styles' );
     add_theme_support( 'responsive-embeds' );
@@ -68,8 +65,15 @@ function rules_by_rosita_editor_assets() {
     wp_enqueue_style(
         'rules-by-rosita-editor-fonts',
         RULES_BY_ROSITA_FONTS_URL,
-        false,
+        array(),
         null
+    );
+
+    wp_enqueue_style(
+        'rules-by-rosita-editor-style',
+        get_template_directory_uri() . '/editor-style.css',
+        array(),
+        filemtime( get_template_directory() . '/editor-style.css' ) ?: wp_get_theme()->get( 'Version' )
     );
 }
 add_action( 'enqueue_block_editor_assets', 'rules_by_rosita_editor_assets' );
