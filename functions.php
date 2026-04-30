@@ -16,6 +16,8 @@ function rules_by_rosita_is_menu_open(): bool {
 function rules_by_rosita_setup() {
     add_theme_support( 'title-tag' );
     add_theme_support( 'post-thumbnails' );
+    add_theme_support( 'editor-styles' );
+    add_editor_style( 'editor-style.css' );
     add_theme_support( 'automatic-feed-links' );
     add_theme_support( 'wp-block-styles' );
     add_theme_support( 'responsive-embeds' );
@@ -67,13 +69,6 @@ function rules_by_rosita_editor_assets() {
         RULES_BY_ROSITA_FONTS_URL,
         array(),
         null
-    );
-
-    wp_enqueue_style(
-        'rules-by-rosita-editor-style',
-        get_template_directory_uri() . '/editor-style.css',
-        array(),
-        filemtime( get_template_directory() . '/editor-style.css' ) ?: wp_get_theme()->get( 'Version' )
     );
 }
 add_action( 'enqueue_block_editor_assets', 'rules_by_rosita_editor_assets' );
