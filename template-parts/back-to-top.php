@@ -1,3 +1,5 @@
+<!-- Back to Top Button -->
+<?php if ( get_theme_mod( 'rules_by_rosita_back_to_top', true ) ) : ?>
 <button
     class="back-to-top"
     aria-describedby="back-to-top-desc">
@@ -9,3 +11,4 @@
         class="back-to-top__tooltip"
         aria-hidden="true">Terug naar boven</span>
 </button>
+<?php endif; ?>

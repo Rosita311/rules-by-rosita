@@ -33,7 +33,7 @@
           aria-label="Open menu"
           aria-expanded="false"
           aria-controls="header-nav">
-         <?php echo rules_by_rosita_icon('menu'); ?>
+          <?php echo rules_by_rosita_icon('menu'); ?>
         </button>
         <nav id="header-nav"
           class="<?php echo rules_by_rosita_is_menu_open() ? 'is-open' : ''; ?>"
@@ -85,12 +85,15 @@
             id="search-toggle">
             <?php echo rules_by_rosita_icon('search'); ?>
           </a>
-          <button
-            id="theme-switch"
-            class="btn--icon-small">
-            <?php echo rules_by_rosita_icon('moon'); 
-            echo rules_by_rosita_icon('sun'); ?>
-          </button>
+          <!-- Dark Mode Toggle -->
+          <?php if (get_theme_mod('rules_by_rosita_darkmode', true)) : ?>
+            <button
+              id="theme-switch"
+              class="btn--icon-small">
+              <?php echo rules_by_rosita_icon('moon');
+              echo rules_by_rosita_icon('sun'); ?>
+            </button>
+          <?php endif; ?>
         </div>
       </div>
     </div>
