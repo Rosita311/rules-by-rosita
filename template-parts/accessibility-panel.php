@@ -25,33 +25,8 @@
               id="toggle-dyslexic"
               type="button"
               aria-pressed="false"
-            >
-              <svg
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="icon icon-tabler icons-tabler-outline icon-tabler-letter-case"
-              >
-                <path
-                  stroke="none"
-                  d="M0 0h24v24H0z"
-                  fill="none"
-                />
-                <path
-                  d="M17.5 15.5m-3.5 0a3.5 3.5 0 1 0 7 0a3.5 3.5 0 1 0 -7 0"
-                />
-                <path d="M3 19v-10.5a3.5 3.5 0 0 1 7 0v10.5" />
-                <path d="M3 13h7" />
-                <path d="M21 12v7" />
-              </svg>
-              Leesbaar lettertype
+            ><?php echo rules_by_rosita_icon('letter-case'); ?>
+                           Leesbaar lettertype
             </button>
           </li>
           <li>
@@ -61,31 +36,7 @@
               type="button"
               aria-pressed="false"
             >
-              <svg
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="icon icon-tabler icons-tabler-outline icon-tabler-text-size"
-              >
-                <path
-                  stroke="none"
-                  d="M0 0h24v24H0z"
-                  fill="none"
-                />
-                <path d="M3 7v-2h13v2" />
-                <path d="M10 5v14" />
-                <path d="M12 19h-4" />
-                <path d="M15 13v-1h6v1" />
-                <path d="M18 12v7" />
-                <path d="M17 19h2" />
-              </svg>
+              <?php echo rules_by_rosita_icon('text-size'); ?>
               Grotere tekst
             </button>
           </li>
@@ -102,24 +53,7 @@
               type="button"
               aria-pressed="false"
             >
-              <svg
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-                class="icon icon-tabler icons-tabler-filled icon-tabler-contrast"
-              >
-                <path
-                  stroke="none"
-                  d="M0 0h24v24H0z"
-                  fill="none"
-                />
-                <path
-                  d="M17 3.34a10 10 0 1 1 -15 8.66l.005 -.324a10 10 0 0 1 14.995 -8.336m-9 1.732a8 8 0 0 0 4.001 14.928l-.001 -16a8 8 0 0 0 -4 1.072"
-                />
-              </svg>
+              <?php echo rules_by_rosita_icon( 'contrast', filled: true ); ?>
               Hoog contrast
             </button>
           </li>
@@ -130,31 +64,7 @@
               type="button"
               aria-pressed="false"
             >
-              <svg
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="icon icon-tabler icons-tabler-outline icon-tabler-player-pause"
-              >
-                <path
-                  stroke="none"
-                  d="M0 0h24v24H0z"
-                  fill="none"
-                />
-                <path
-                  d="M6 5m0 1a1 1 0 0 1 1 -1h2a1 1 0 0 1 1 1v12a1 1 0 0 1 -1 1h-2a1 1 0 0 1 -1 -1z"
-                />
-                <path
-                  d="M14 5m0 1a1 1 0 0 1 1 -1h2a1 1 0 0 1 1 1v12a1 1 0 0 1 -1 1h-2a1 1 0 0 1 -1 -1z"
-                />
-              </svg>
+              <?php echo rules_by_rosita_icon('player-pause'); ?>
               Animaties uitschakelen
             </button>
           </li>
@@ -171,25 +81,7 @@
               type="button"
               aria-pressed="false"
             >
-              <svg
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="icon icon-tabler icons-tabler-outline icon-tabler-hand-click"
-              >
-                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                <path d="M8 13v-8.5a1.5 1.5 0 0 1 3 0v7.5" />
-                <path d="M11 11.5v-2a1.5 1.5 0 0 1 3 0v2.5" />
-                <path d="M14 10.5a1.5 1.5 0 0 1 3 0v1.5" />
-                <path d="M17 11.5a1.5 1.5 0 0 1 3 0v4.5a6 6 0 0 1 -6 6h-2h.208a6 6 0 0 1 -5.012 -2.7l-.196 -.3c-.312 -.479 -1.407 -2.388 -3.286 -5.728a1.5 1.5 0 0 1 .536 -2.022a1.867 1.867 0 0 1 2.28 .28l1.47 1.47" />
-              </svg>
+              <?php echo rules_by_rosita_icon('hand-finger'); ?>
               Linkshandig
             </button>
           </li>
