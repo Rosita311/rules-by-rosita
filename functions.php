@@ -145,7 +145,10 @@ function rules_by_rosita_get_reading_time() {
 
 /* Icon helper */
 function rules_by_rosita_icon( string $name, string $aria_label = '', string $class = '', bool $filled = false ): string {
-    $icons = require get_template_directory() . '/inc/icons.php';
+    static $icons = null;
+    if ( $icons === null ) {
+        $icons = require get_template_directory() . '/inc/icons.php';
+    }
 
     if ( ! isset( $icons[ $name ] ) ) return '';
 

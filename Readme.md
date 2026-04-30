@@ -182,6 +182,16 @@ See [DEVLOG.md](./DEVLOG.md) for an overview of completed features, ongoing task
 
 ## Changelog
 
+### Version 1.5 - 30-4-2026
+- Replace all inline SVGs with a reusable `rules_by_rosita_icon()` helper function
+- Move icons array to `inc/icons.php`; add filled icon support via `$filled` parameter
+- Split `functions.php` into logical `inc/` files: customizer, social-widget, comments, admin
+- Add static cache to icon function so the icons file is only read once per request
+- Add `filemtime()` cache-busting fallback for CSS and JS assets
+- Move Google Fonts URL to a named constant (`RULES_BY_ROSITA_FONTS_URL`)
+- Remove debug `console.log` from `script.js`
+- Escape copyright year in footer with `esc_html()`
+
 ### Version 1.4 - 23-4-2026
 - Add left-handed mode toggle and styles for mobile accessibility
 

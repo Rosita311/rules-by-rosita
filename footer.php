@@ -40,12 +40,12 @@
           aria-hidden="true"
           hidden>Sul sul!</span>
       </div>
-      <p>&copy; <?php echo date('Y'); ?> Rules by Rosita. Geschreven en gebouwd door Rosita Rampertaap.</p>
+      <p>&copy; <?php echo esc_html( date( 'Y' ) ); ?> Rules by Rosita. Geschreven en gebouwd door Rosita Rampertaap.</p>
     </div>
   </div>
 </footer>
 </body>
 <?php
-wp_footer(); // WordPress footer hook for scripts and styles
+wp_footer();
 ?>
 </html>
