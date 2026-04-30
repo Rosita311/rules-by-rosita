@@ -191,6 +191,7 @@ See [DEVLOG.md](./DEVLOG.md) for an overview of completed features, ongoing task
 - Move Google Fonts URL to a named constant (`RULES_BY_ROSITA_FONTS_URL`)
 - Remove debug `console.log` from `script.js`
 - Escape copyright year in footer with `esc_html()`
+- Move Google Analytics script out of `header.php`; GA ID now configurable via Customizer
 
 ### Version 1.4 - 23-4-2026
 - Add left-handed mode toggle and styles for mobile accessibility

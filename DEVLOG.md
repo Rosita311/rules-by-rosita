@@ -38,6 +38,10 @@ Dit bestand houdt de voortgang van het thema bij. Het project is een doorlopend 
 - Widgetgebied in footer voor Jetpack-abonnementen en social media iconen  
 - Custom widget voor social media iconen  
 - Linkshandig modus toegevoegd (toggle in toegankelijkheidsmenu, knoppen en menu verschuiven naar links op mobiel)  
+- Alle inline SVG's vervangen door een herbruikbare `rules_by_rosita_icon()` helperfunctie  
+- Iconen verplaatst naar `inc/icons.php`; ondersteuning voor gevulde iconen toegevoegd  
+- `functions.php` opgesplitst in logische `inc/`-bestanden: customizer, social-widget, comments, admin  
+- Google Analytics ID instelbaar gemaakt via Customizer (Appearance → Customize → Analytics)  
 
 ---
 
@@ -48,6 +52,7 @@ Dit bestand houdt de voortgang van het thema bij. Het project is een doorlopend 
 - Veiligheid: `wp-config.php` en bestandstoegang optimaliseren  
 - Backups inrichten van thema en database  
 - Performance verbeteren (testen via Lighthouse / PageSpeed Insights)  
+- JavaScript modulariseren: `script.js` opsplitsen in losse modules (vereist build tools zoals webpack of esbuild)  
 
 ---
 
@@ -57,7 +62,6 @@ Dit bestand houdt de voortgang van het thema bij. Het project is een doorlopend 
 - Custom post type maken voor gelezen boeken  
 - Kleuren en typografie instelbaar maken via Customizer  
 - Accessibility instellingen, Back to top knop en Darkmode aan en uit te zetten via Customizer.
-- Mogelijkheid om extra scripts toe te voegen in `<head>` (bijv. Analytics)  
 
 ---
 
@@ -102,6 +106,10 @@ The project is an ongoing learning process, and this log documents the steps, ch
 - Footer widget area for Jetpack subscriptions and social media icons  
 - Custom widget for social media icons  
 - Left-handed mode added (toggle in accessibility menu, buttons and menu shift to the left on mobile)  
+- Replaced all inline SVGs with a reusable `rules_by_rosita_icon()` helper function  
+- Moved icons to `inc/icons.php`; added filled icon support  
+- Split `functions.php` into logical `inc/` files: customizer, social-widget, comments, admin  
+- Google Analytics ID now configurable via Customizer (Appearance → Customize → Analytics)  
 
 ---
 
@@ -112,6 +120,7 @@ The project is an ongoing learning process, and this log documents the steps, ch
 - Optimize security: `wp-config.php` and file access  
 - Set up backups for theme and database  
 - Improve performance (test with Lighthouse / PageSpeed Insights)  
+- Modularize JavaScript: split `script.js` into separate modules (requires build tools like webpack or esbuild)  
 
 ---
 
@@ -121,7 +130,6 @@ The project is an ongoing learning process, and this log documents the steps, ch
 - Create custom post type for books I’ve read  
 - Make colors and typography configurable via the Customizer  
 - Add toggles in the Customizer for Accessibility settings, Back-to-top button, and Dark mode  
-- Add option to include extra scripts in `<head>` (e.g. Analytics)  
 
 ---
 
