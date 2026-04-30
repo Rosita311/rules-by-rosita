@@ -1,3 +1,4 @@
+<!-- Accessibility Panel -->
 <section
       id="accessibility-settings"
       class="accessibility-panel"
@@ -105,6 +106,9 @@
         </button>
       </div>
     </section>
+
+    <!-- Accessibility Toggle Button -->
+     <?php if ( get_theme_mod( 'rules_by_rosita_accessibility_panel', true ) ) : ?>
     <button
       id="accessibility-toggle"
       class="accessibility-btn"
@@ -120,3 +124,4 @@
         >Toegankelijkheid</span
       >
     </button>
+<?php endif; ?>

@@ -7,6 +7,18 @@ function rules_by_rosita_customize_register($wp_customize)
         'priority' => 30,
     ));
 
+    // Dark mode toggle
+     $wp_customize->add_setting('rules_by_rosita_darkmode', array(
+        'default'           => true,
+        'sanitize_callback' => 'rest_sanitize_boolean',
+    ));
+    $wp_customize->add_control('rules_by_rosita_darkmode', array(
+        'label'   => __('Toon dark mode toggle', 'rules-by-rosita'),
+        'section' => 'theme_settings',
+        'type'    => 'checkbox',
+    ));
+
+    // Back to top button toggle
     $wp_customize->add_setting('rules_by_rosita_back_to_top', array(
         'default'           => true,
         'sanitize_callback' => 'rest_sanitize_boolean',
@@ -17,16 +29,7 @@ function rules_by_rosita_customize_register($wp_customize)
         'type'    => 'checkbox',
     ));
 
-    $wp_customize->add_setting('rules_by_rosita_darkmode', array(
-        'default'           => true,
-        'sanitize_callback' => 'rest_sanitize_boolean',
-    ));
-    $wp_customize->add_control('rules_by_rosita_darkmode', array(
-        'label'   => __('Toon dark mode toggle', 'rules-by-rosita'),
-        'section' => 'theme_settings',
-        'type'    => 'checkbox',
-    ));
-
+    // Accessibility settings toggle
     $wp_customize->add_setting('rules_by_rosita_accessibility_panel', array(
         'default'           => true,
         'sanitize_callback' => 'rest_sanitize_boolean',
@@ -37,7 +40,7 @@ function rules_by_rosita_customize_register($wp_customize)
         'type'    => 'checkbox',
     ));
 
-
+    // Social media widget settings
     $wp_customize->add_section('social_settings', array(
         'title'    => __('Social Media', 'rules-by-rosita'),
         'priority' => 40,

@@ -85,6 +85,7 @@
             id="search-toggle">
             <?php echo rules_by_rosita_icon('search'); ?>
           </a>
+          <!-- Dark Mode Toggle -->
           <?php if (get_theme_mod('rules_by_rosita_darkmode', true)) : ?>
             <button
               id="theme-switch"
