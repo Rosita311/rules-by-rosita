@@ -54,14 +54,13 @@ add_action( 'customize_register', 'rules_by_rosita_analytics_register' );
 function rules_by_rosita_analytics() {
     $ga_id = get_theme_mod( 'rules_by_rosita_ga_id' );
     if ( ! $ga_id ) return;
-    $ga_id = esc_attr( $ga_id );
     ?>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=<?php echo $ga_id; ?>"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=<?php echo esc_attr( $ga_id ); ?>"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', '<?php echo $ga_id; ?>');
+      gtag('config', '<?php echo esc_js( $ga_id ); ?>');
     </script>
     <?php
 }
