@@ -15,6 +15,12 @@ function rules_by_rosita_remove_editor() {
 }
 add_action( 'admin_init', 'rules_by_rosita_remove_editor' );
 
+add_action( 'admin_enqueue_scripts', function( $hook ) {
+    if ( in_array( $hook, array( 'widgets.php', 'customize.php' ), true ) ) {
+        wp_dequeue_script( 'wp-editor' );
+    }
+}, 100 );
+
 function rules_by_rosita_duplicate_post_as_draft() {
     if (
         ! ( isset( $_GET['post'] ) || isset( $_POST['post'] ) || ( isset( $_REQUEST['action'] ) && 'rules_by_rosita_duplicate_post_as_draft' == $_REQUEST['action'] ) )
