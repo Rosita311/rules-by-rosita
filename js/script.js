@@ -178,8 +178,17 @@ updateNavbar(media);
 
 document.addEventListener("DOMContentLoaded", () => {
   const themeSwitch = document.getElementById("theme-switch");
-  let darkmode = localStorage.getItem("darkmode");
   const root = document.documentElement;
+
+  if (!themeSwitch) {
+    localStorage.removeItem("darkmode");
+    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    root.classList.toggle("darkmode", prefersDark);
+    root.style.colorScheme = prefersDark ? "dark" : "light";
+    return;
+  }
+
+  let darkmode = localStorage.getItem("darkmode");
 
   const enableDarkmode = () => {
     root.classList.add("darkmode");
@@ -206,14 +215,6 @@ document.addEventListener("DOMContentLoaded", () => {
       enableDarkmode();
     } else {
       disableDarkmode();
-    }
-  }
-
-  if (!darkmode) {
-    if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-      darkmode = "active";
-    } else {
-      darkmode = "inactive";
     }
   }
 
