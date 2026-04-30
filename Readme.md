@@ -182,6 +182,12 @@ See [DEVLOG.md](./DEVLOG.md) for an overview of completed features, ongoing task
 
 ## Changelog
 
+### Version 1.6 - 30-4-2026
+- Make back-to-top button, dark mode toggle, and accessibility panel optional via Customizer
+- Add "Thema instellingen" section to Customizer for feature toggles
+- Security fixes: add capability check to duplicate post action, remove `maybe_unserialize()` from meta copy, add `esc_url()` and `esc_attr()` to card templates
+- Add workaround for Jetpack `wp-editor` conflict on widget editor screen
+
 ### Version 1.5 - 30-4-2026
 - Replace all inline SVGs with a reusable `rules_by_rosita_icon()` helper function
 - Move icons array to `inc/icons.php`; add filled icon support via `$filled` parameter

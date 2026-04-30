@@ -42,6 +42,9 @@ Dit bestand houdt de voortgang van het thema bij. Het project is een doorlopend 
 - Iconen verplaatst naar `inc/icons.php`; ondersteuning voor gevulde iconen toegevoegd  
 - `functions.php` opgesplitst in logische `inc/`-bestanden: customizer, social-widget, comments, admin  
 - Google Analytics ID instelbaar gemaakt via Customizer (Appearance → Customize → Analytics)  
+- Back-to-top knop, dark mode toggle en toegankelijkheidsvenster instelbaar gemaakt via Customizer  
+- Beveiligingsverbeteringen: capability check op dupliceer-post actie, `maybe_unserialize()` verwijderd, escaping verbeterd in card templates  
+- Workaround toegevoegd voor Jetpack `wp-editor` conflict in widget editor  
 
 ---
 
@@ -61,7 +64,6 @@ Dit bestand houdt de voortgang van het thema bij. Het project is een doorlopend 
 - Sociale media iconen widget omzetten naar block widget  
 - Custom post type maken voor gelezen boeken  
 - Kleuren en typografie instelbaar maken via Customizer  
-- Accessibility instellingen, Back to top knop en Darkmode aan en uit te zetten via Customizer.
 
 ---
 
@@ -110,6 +112,9 @@ The project is an ongoing learning process, and this log documents the steps, ch
 - Moved icons to `inc/icons.php`; added filled icon support  
 - Split `functions.php` into logical `inc/` files: customizer, social-widget, comments, admin  
 - Google Analytics ID now configurable via Customizer (Appearance → Customize → Analytics)  
+- Back-to-top button, dark mode toggle, and accessibility panel now optional via Customizer  
+- Security fixes: capability check on duplicate post action, removed `maybe_unserialize()`, improved escaping in card templates  
+- Added workaround for Jetpack `wp-editor` conflict on widget editor screen  
 
 ---
 
@@ -129,7 +134,6 @@ The project is an ongoing learning process, and this log documents the steps, ch
 - Convert social media icons widget into a block widget  
 - Create custom post type for books I’ve read  
 - Make colors and typography configurable via the Customizer  
-- Add toggles in the Customizer for Accessibility settings, Back-to-top button, and Dark mode  
 
 ---
 
