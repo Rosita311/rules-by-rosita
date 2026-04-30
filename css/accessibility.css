@@ -65,6 +65,10 @@
   pointer-events: auto;
 }
 
+.back-to-top--solo {
+  right: 2rem;
+}
+
 .accessibility-btn {
   opacity: 1;
   pointer-events: auto;

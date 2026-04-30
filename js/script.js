@@ -23,6 +23,9 @@ const closeButton = document.getElementById("close-accessibility");
 
 // Back to top
 const backToTop = document.querySelector(".back-to-top");
+if (!toggleButton && backToTop) {
+    backToTop.classList.add('back-to-top--solo');
+}
 
 // Trap focus within the sidebar and accessibility menu when open
 let activeFocusTrap = null;
