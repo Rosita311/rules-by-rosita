@@ -1,5 +1,5 @@
 # VSCode instellingen
 .vscode/
 
-
-
+# Node dependencies
+node_modules/

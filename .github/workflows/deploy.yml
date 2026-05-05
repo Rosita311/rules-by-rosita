@@ -23,3 +23,8 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./
           server-dir: /public_html/wp-content/themes/rules-by-rosita/
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/node_modules/**
+            js/src/**

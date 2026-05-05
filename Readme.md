@@ -55,10 +55,36 @@ WordPress-gegenereerde classes (niet hernoemd):
 
 ## Gebruikte tools & technologieën
 - WordPress  
-- HTML, CSS (Flexbox & Grid), JavaScript (ES6+), PHP  
+- HTML, CSS (Flexbox & Grid), JavaScript (ES modules), PHP  
 - Git & GitHub  
 - LocalWP  
 - VS Code + GitHub Copilot  
+- [esbuild](https://esbuild.github.io/) (JavaScript bundler)
+
+## JavaScript ontwikkeling
+
+De JavaScript is opgesplitst in ES-modules in de map `js/src/`:
+
+```
+js/src/
+├── main.js                  — instappunt, importeert alles
+└── modules/
+    ├── focus-trap.js        — toetsenbordfocusbeheer
+    ├── menu.js              — sidebar en responsief navigatiemenu
+    ├── darkmode.js          — dark mode toggle en localStorage
+    ├── search.js            — zoekoverlay
+    ├── accessibility.js     — toegankelijkheidspaneel en instellingen
+    └── back-to-top.js       — terug naar boven knop
+```
+
+`js/script.js` is het gebundelde en geminificeerde eindbestand dat WordPress laadt. **Bewerk dit bestand nooit direct** — alle wijzigingen gaan via `js/src/`.
+
+**Commando's:**
+
+```bash
+npm run build   # eenmalig bouwen voor productie
+npm run dev     # bouwen en automatisch herbouwen bij wijzigingen
+```
 
 ## Plugins
 - Yoast (SEO)  
@@ -145,10 +171,36 @@ WordPress-generated classes (not renamed):
 
 ## Tools & Technologies
 - WordPress  
-- HTML, CSS (Flexbox & Grid), JavaScript (ES6+), PHP  
+- HTML, CSS (Flexbox & Grid), JavaScript (ES modules), PHP  
 - Git & GitHub  
 - LocalWP  
 - VS Code + GitHub Copilot  
+- [esbuild](https://esbuild.github.io/) (JavaScript bundler)
+
+## JavaScript Development
+
+JavaScript is split into ES modules inside `js/src/`:
+
+```
+js/src/
+├── main.js                  — entry point, imports everything
+└── modules/
+    ├── focus-trap.js        — keyboard focus management
+    ├── menu.js              — sidebar and responsive navigation
+    ├── darkmode.js          — dark mode toggle and localStorage
+    ├── search.js            — search overlay
+    ├── accessibility.js     — accessibility panel and settings
+    └── back-to-top.js       — back to top button
+```
+
+`js/script.js` is the bundled and minified output file that WordPress loads. **Never edit this file directly** — all changes go through `js/src/`.
+
+**Commands:**
+
+```bash
+npm run build   # build once for production
+npm run dev     # build and watch for changes
+```
 
 ## Plugins
 - Yoast (SEO)  
@@ -181,6 +233,12 @@ The theme is publicly available, but primarily intended for my own blog and lear
 See [DEVLOG.md](./DEVLOG.md) for an overview of completed features, ongoing tasks, and future ideas.
 
 ## Changelog
+
+### Version 1.7 - 5-5-2026
+- Split `script.js` into ES modules using esbuild (`js/src/modules/`)
+- Add npm build pipeline: `npm run build` and `npm run dev`
+- Exclude `js/src/` and `node_modules/` from FTP deployment
+- Add `node_modules/` to `.gitignore`
 
 ### Version 1.6 - 30-4-2026
 - Make back-to-top button, dark mode toggle, and accessibility panel optional via Customizer

@@ -1,0 +1,25 @@
+{
+  "name": "rules-by-rosita",
+  "version": "1.0.0",
+  "description": "[Nederlands](#nederlands) • [English](#english)",
+  "main": "index.js",
+  "scripts": {
+    "build": "esbuild js/src/main.js --bundle --outfile=js/script.js --minify",
+    "dev": "esbuild js/src/main.js --bundle --outfile=js/script.js --watch"
+},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rosita311/rules-by-rosita.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Rosita311/rules-by-rosita/issues"
+  },
+  "homepage": "https://github.com/Rosita311/rules-by-rosita#readme",
+  "devDependencies": {
+    "esbuild": "^0.28.0"
+  }
+}
