@@ -41,7 +41,7 @@ get_template_part('template-parts/accessibility-panel'); ?>
     </section>
     <section class="blog-listing">
       <h2>Recente blogposts</h2>
-      <ul class="blog-listing-grid">
+      <ul class="blog-listing__grid">
         <?php
         $page_not_found_query = new WP_Query([
           'posts_per_page' => 3,
