@@ -234,6 +234,12 @@ See [DEVLOG.md](./DEVLOG.md) for an overview of completed features, ongoing task
 
 ## Changelog
 
+### Version 1.7.1 - 13-5-2026
+- Add wavy left border styling for blockquote and pull quote blocks using CSS mask-image
+- Fix pull quote default WordPress borders (border-top and border-bottom)
+- Fix blog grid class name mismatch on 404 page (`blog-listing-grid` → `blog-listing__grid`)
+- Add accessibility overrides for quote blocks (dyslexic font, high contrast)
+
 ### Version 1.7 - 5-5-2026
 - Split `script.js` into ES modules using esbuild (`js/src/modules/`)
 - Add npm build pipeline: `npm run build` and `npm run dev`
