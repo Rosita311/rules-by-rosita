@@ -370,31 +370,6 @@ p {
   padding: 0 1rem;
 }
 
-.wp-block-pullquote {
-  border-left: 4px solid var(--color-primary);
-  padding: 2rem 1.5rem !important;
-  margin: 0;
-  background-color: var(--color-accent-2);
-  color: var(--color-text);
-  text-align: left !important;
-  font-family: var(--font-heading) !important;
-  font-size: 1.5rem;
-  font-style: italic;
-  border-radius: 0.25rem;
-}
-
-.wp-block-pullquote p {
-  margin: 0;
-}
-
-.wp-block-pullquote cite {
-  display: block;
-  margin-top: 0.8em;
-  font-style: normal;
-  font-weight: bold;
-  color: var(--color-contrast);
-}
-
 /* Inline code */
 code {
   background-color: var(--color-accent-2);
@@ -419,6 +394,63 @@ pre code {
   font-size: 0.9em;
   line-height: 1.5;
   white-space: pre-wrap;
+}
+
+/* Blockquote + Pull quote */
+.entry-content .wp-block-quote,
+.wp-block-pullquote {
+  position: relative;
+  border: none;
+  border-top: none;
+  border-bottom: none;
+  padding: 0.5rem 0 0.5rem 2rem;
+  margin: 1.5rem 0;
+  background-color: transparent;
+  text-align: left !important;
+}
+
+figure.wp-block-pullquote {
+  padding: 2rem 0 2rem 2rem;
+  border: none;
+}
+
+.entry-content .wp-block-quote::before,
+.wp-block-pullquote::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 8px;
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='16'%3E%3Cpath d='M4 0 Q8 4 4 8 Q0 12 4 16' stroke='black' fill='none' stroke-width='3'/%3E%3C/svg%3E");
+  -webkit-mask-repeat: repeat-y;
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='16'%3E%3Cpath d='M4 0 Q8 4 4 8 Q0 12 4 16' stroke='black' fill='none' stroke-width='3'/%3E%3C/svg%3E");
+  mask-repeat: repeat-y;
+}
+
+.entry-content .wp-block-quote::before {
+  background-color: var(--color-contrast);
+}
+
+.wp-block-pullquote::before {
+  background-color: var(--color-accent);
+}
+
+.entry-content .wp-block-quote p,
+.wp-block-pullquote p {
+  font-family: var(--font-body);
+  font-style: italic;
+  font-size: 1.25rem;
+  margin: 0;
+}
+
+.entry-content .wp-block-quote cite,
+.wp-block-pullquote cite {
+  display: block;
+  font-size: 0.9rem;
+  font-style: normal;
+  margin-top: 0.5rem;
+  color: var(--color-text);
 }
 
 /* Button styles */

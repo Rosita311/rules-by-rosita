@@ -215,6 +215,8 @@ body.dyslexic-font #search-overlay label,
 body.dyslexic-font strong,
 body.dyslexic-font em,
 body.dyslexic-font blockquote,
+body.dyslexic-font .entry-content .wp-block-quote p,
+body.dyslexic-font .wp-block-pullquote p,
 body.dyslexic-font td,
 body.dyslexic-font th,
 body.dyslexic-font .accessibility-btn__tooltip,
@@ -237,6 +239,11 @@ body.dyslexic-font .form__field-error,
 body.dyslexic-font #search-overlay label,
 body.dyslexic-font .comment-error {
   font-weight: 700;
+}
+
+body.dyslexic-font .entry-content .wp-block-quote p,
+body.dyslexic-font .wp-block-pullquote p {
+  font-style: normal;
 }
 
 body.dyslexic-font {
@@ -380,6 +387,11 @@ body.high-contrast .dotted-background-blue {
 .high-contrast .has-background-background-color,
 .high-contrast .has-placeholder-background-color {
   background-color: var(--hc-bg) !important;
+}
+
+.high-contrast .entry-content .wp-block-quote::before,
+.high-contrast .wp-block-pullquote::before {
+  background-color: var(--hc-accent);
 }
 
 .high-contrast .logo-red-part {
