@@ -439,6 +439,10 @@ pre code {
   white-space: pre-wrap;
 }
 
+.wp-block-columns {
+  margin-bottom: 2rem;
+}
+
 /* Blockquote + Pull quote */
 .entry-content .wp-block-quote,
 .wp-block-pullquote {
