@@ -32,6 +32,10 @@
   --color-plumbob: #7ecf3a; /* originele Sims-groen */
   --color-plumbob-hover: #aaff66;
 
+  /* Code block — fixed dark style in both light and dark mode */
+  --color-code-bg: #103c42;
+  --color-code-text: rgba(255, 255, 255, 0.87);
+
   /* WordPress preset colors */
   --wp--preset--color--primary: var(--color-primary);
   --wp--preset--color--accent: var(--color-accent);
@@ -381,11 +385,49 @@ code {
 }
 
 /* Code blocks */
-pre code {
-  border-left: 4px solid var(--color-primary);
+.wp-block-code {
+  position: relative;
   display: block;
-  background-color: var(--color-accent-2);
-  color: var(--color-text);
+  background-color: var(--color-code-bg);
+  color: var(--color-code-text);
+  padding: 2rem 1.5rem 2rem 2.5rem;
+  margin: 2rem 0;
+  border: none;
+  border-radius: 0.25rem;
+  overflow-x: auto;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 0.9em;
+  line-height: 1.5;
+  white-space: pre-wrap;
+}
+
+.wp-block-code code {
+  background-color: transparent;
+  color: inherit;
+  padding: 0;
+  font-size: inherit;
+  border-radius: 0;
+}
+
+.wp-block-code::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 8px;
+  background-color: var(--color-primary);
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='16'%3E%3Cpath d='M4 0 Q8 4 4 8 Q0 12 4 16' stroke='black' fill='none' stroke-width='3'/%3E%3C/svg%3E");
+  -webkit-mask-repeat: repeat-y;
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='16'%3E%3Cpath d='M4 0 Q8 4 4 8 Q0 12 4 16' stroke='black' fill='none' stroke-width='3'/%3E%3C/svg%3E");
+  mask-repeat: repeat-y;
+}
+
+/* Non-Gutenberg code blocks */
+pre code {
+  display: block;
+  background-color: var(--color-code-bg);
+  color: var(--color-code-text);
   padding: 2rem 1.5rem;
   margin: 2rem 0;
   border-radius: 0.25rem;
