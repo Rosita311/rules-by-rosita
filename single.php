@@ -35,7 +35,7 @@ get_template_part('template-parts/accessibility-panel'); ?>
         <h1 class="post-title h1">
           <?php the_title(); ?>
         </h1>
-        <div class="post-meta dotted-background-blue">
+        <div class="post-meta">
           <nav aria-label="Berichtinformatie">
             <ul class="post-meta__list">
               <li class="post-meta__item">
