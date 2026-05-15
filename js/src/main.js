@@ -3,6 +3,7 @@ import { initDarkmode } from "./modules/darkmode.js";
 import { initSearch, closeSearch } from "./modules/search.js";
 import { initAccessibility, closePanel } from "./modules/accessibility.js";
 import { initBackToTop } from "./modules/back-to-top.js";
+import { initPrism } from "./modules/prism.js";
 
 document.documentElement.classList.replace("no-js", "js");
 
@@ -50,6 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initDarkmode();
   initAccessibility();
   initCommentForm();
+  initPrism();
 });
 
 function initCommentForm() {

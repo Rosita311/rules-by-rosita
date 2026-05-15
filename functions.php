@@ -71,6 +71,14 @@ function rules_by_rosita_editor_assets() {
         array(),
         null
     );
+
+    wp_enqueue_script(
+        'rules-by-rosita-code-language',
+        get_template_directory_uri() . '/js/editor-code-language.js',
+        array( 'wp-hooks', 'wp-compose', 'wp-block-editor', 'wp-components', 'wp-element' ),
+        filemtime( get_template_directory() . '/js/editor-code-language.js' ),
+        true
+    );
 }
 add_action( 'enqueue_block_editor_assets', 'rules_by_rosita_editor_assets' );
 
