@@ -234,6 +234,15 @@ See [DEVLOG.md](./DEVLOG.md) for an overview of completed features, ongoing task
 
 ## Changelog
 
+### Version 1.7.2 - 15-5-2026
+- Add wavy border styles to block editor (`editor-style.css`) so editor preview matches front end
+- Load Google Fonts inside editor iframe via `add_editor_style()` — fixes font display after WordPress 6.0+ iframe canvas change
+- Fix code block padding: replace `background-clip: content-box` with gradient approach so dark background includes proper padding around code text
+- Fix group block alignment in editor by using `margin-top`/`margin-bottom` instead of `margin` shorthand to preserve auto horizontal centering
+- Add base `font-family` to `.editor-styles-wrapper` so all content inherits Nunito
+- Rename wavy style labels to put color first: "Roze — golvende rand" etc. for easier identification in the style picker
+- Fix tooltip `border-radius` inconsistency: `0.3rem` → `0.25rem` in accessibility and footer CSS
+
 ### Version 1.7.1 - 13-5-2026
 - Add wavy left border styling for blockquote and pull quote blocks using CSS mask-image
 - Fix pull quote default WordPress borders (border-top and border-bottom)
