@@ -18,6 +18,7 @@ De code is openbaar beschikbaar als leerbron en om mijn ontwikkelproces te docum
 - **Minimalistisch design** met helder kleurenpalet en toegankelijke contrasten  
 - **Instellingenmenu** met toegankelijkheidsopties (groot lettertype, leesbaar lettertype, hoog contrast, animaties uit)  
 - **Linkshandig modus**: toegankelijkheidsoptie die knoppen en menu naar links verplaatst op mobiel  
+- **Syntaxiskleuring**: Prism.js met Pink Cat Boo-kleurenpalet; taal instelbaar per codeblok via een dropdown in de Gutenberg-editor  
 
 ## Design
 - **Typografie**: Nunito (body) & Zilla Slab (koppen) via Google Fonts  
@@ -59,7 +60,8 @@ WordPress-gegenereerde classes (niet hernoemd):
 - Git & GitHub  
 - LocalWP  
 - VS Code + GitHub Copilot  
-- [esbuild](https://esbuild.github.io/) (JavaScript bundler)
+- [esbuild](https://esbuild.github.io/) (JavaScript bundler)  
+- [Prism.js](https://prismjs.com/) (syntaxiskleuring)
 
 ## JavaScript ontwikkeling
 
@@ -74,7 +76,8 @@ js/src/
     ├── darkmode.js          — dark mode toggle en localStorage
     ├── search.js            — zoekoverlay
     ├── accessibility.js     — toegankelijkheidspaneel en instellingen
-    └── back-to-top.js       — terug naar boven knop
+    ├── back-to-top.js       — terug naar boven knop
+    └── prism.js             — syntaxiskleuring voor codeblokken (Prism.js)
 ```
 
 `js/script.js` is het gebundelde en geminificeerde eindbestand dat WordPress laadt. **Bewerk dit bestand nooit direct** — alle wijzigingen gaan via `js/src/`.
@@ -134,6 +137,7 @@ The code is publicly available as a learning resource and to document my develop
 - **Minimalistic design** with a clean color palette and accessible contrasts  
 - **Settings menu** with accessibility options (larger font size, readable font, high contrast, disable animations)  
 - **Left-handed mode**: accessibility option that moves buttons and menu to the left on mobile  
+- **Syntax highlighting**: Prism.js with a Pink Cat Boo color palette; language selectable per code block via a dropdown in the Gutenberg editor  
 
 ## Design
 - **Typography**: Nunito (body) & Zilla Slab (headings) via Google Fonts  
@@ -175,7 +179,8 @@ WordPress-generated classes (not renamed):
 - Git & GitHub  
 - LocalWP  
 - VS Code + GitHub Copilot  
-- [esbuild](https://esbuild.github.io/) (JavaScript bundler)
+- [esbuild](https://esbuild.github.io/) (JavaScript bundler)  
+- [Prism.js](https://prismjs.com/) (syntax highlighting)
 
 ## JavaScript Development
 
@@ -190,7 +195,8 @@ js/src/
     ├── darkmode.js          — dark mode toggle and localStorage
     ├── search.js            — search overlay
     ├── accessibility.js     — accessibility panel and settings
-    └── back-to-top.js       — back to top button
+    ├── back-to-top.js       — back to top button
+    └── prism.js             — syntax highlighting for code blocks (Prism.js)
 ```
 
 `js/script.js` is the bundled and minified output file that WordPress loads. **Never edit this file directly** — all changes go through `js/src/`.

@@ -84,3 +84,26 @@
 .wp-block-code .token.italic {
   font-style: italic;
 }
+
+/* PHP — only variables and functions are shifted pink;
+   strings (#fae8b6), operators (#fec831) and properties (#dcbff2)
+   stay at their global values for contrast. */
+.wp-block-code.language-php .token.function {
+  color: #ff7eb6;
+}
+
+.wp-block-code.language-php .token.variable {
+  color: #ffacc7;
+}
+
+/* HTML — attr-values in sky blue (distinct from code strings),
+   punctuation slightly brighter so < > = structure is scannable */
+.wp-block-code.language-html .token.attr-value,
+.wp-block-code.language-markup .token.attr-value {
+  color: #93d8f5;
+}
+
+.wp-block-code.language-html .token.punctuation,
+.wp-block-code.language-markup .token.punctuation {
+  color: rgba(255, 255, 255, 0.55);
+}
