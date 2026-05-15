@@ -48,11 +48,27 @@ ol.comment-list > li:not(:last-child) {
 
 .children .comment {
   border: none;
+  padding-top: 2rem;
   padding-left: 1.5rem; /* inspringen */
   margin-bottom: 1rem;
   list-style-type: none;
-  border-top: 2px dashed var(--color-accent-2);
+  position: relative;
 }
+
+.children .comment::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 8px;
+  background-color: var(--color-accent-2);
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='8'%3E%3Cpath d='M0 4 Q4 0 8 4 Q12 8 16 4' stroke='black' fill='none' stroke-width='3'/%3E%3C/svg%3E");
+  -webkit-mask-repeat: repeat-x;
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='8'%3E%3Cpath d='M0 4 Q4 0 8 4 Q12 8 16 4' stroke='black' fill='none' stroke-width='3'/%3E%3C/svg%3E");
+  mask-repeat: repeat-x;
+}
+
 
 /* Avatar */
 .comment .avatar {
@@ -139,10 +155,6 @@ a#cancel-comment-reply-link {
   }
 
   .children .comment {
-    border: none;
-    padding-left: 0;
-    margin-bottom: 1rem;
-    list-style-type: none;
-    border-top: 2px dashed var(--color-accent-2);
+    padding-left: 1rem;
   }
 }
