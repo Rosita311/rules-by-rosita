@@ -1,14 +1,20 @@
 /* Prism.js token colours
    Code block background is always #103c42 (dark teal) in both light and dark mode.
-   We use theme variables where they're safe on that background, and fixed
-   values where the variable would become invisible (e.g. --color-footer in
-   dark mode equals the code bg itself). */
+   Colors taken from the Pink Cat Boo VS Code theme (ftsamoyed). */
+
+.wp-block-code .token {
+  border: none;
+  padding: 0;
+  margin: 0;
+  border-radius: 0;
+  background: none;
+}
 
 .wp-block-code .token.comment,
 .wp-block-code .token.prolog,
 .wp-block-code .token.doctype,
 .wp-block-code .token.cdata {
-  color: rgba(203, 238, 243, 0.5);
+  color: #6d7a72;
   font-style: italic;
 }
 
@@ -17,51 +23,60 @@
 }
 
 .wp-block-code .token.tag {
-  color: var(--color-contrast);
+  color: #fa508c;
 }
 
-.wp-block-code .token.attr-name,
-.wp-block-code .token.function,
+.wp-block-code .token.attr-name {
+  color: #e6a1ff;
+}
+
+.wp-block-code .token.function {
+  color: #ffc85b;
+}
+
 .wp-block-code .token.class-name {
-  color: #cbeef3; /* light teal — --color-footer in light mode */
+  color: #f5a6c6;
 }
 
 .wp-block-code .token.string,
 .wp-block-code .token.attr-value,
 .wp-block-code .token.char,
 .wp-block-code .token.selector {
-  color: var(--color-accent);
+  color: #fae8b6;
 }
 
 .wp-block-code .token.keyword,
 .wp-block-code .token.atrule {
-  color: var(--color-contrast);
+  color: #ff4791;
 }
 
 .wp-block-code .token.boolean,
 .wp-block-code .token.number,
 .wp-block-code .token.constant,
 .wp-block-code .token.symbol {
-  color: var(--color-plumbob);
+  color: #ff38a2;
 }
 
 .wp-block-code .token.regex,
-.wp-block-code .token.important,
 .wp-block-code .token.variable {
-  color: var(--color-primary);
+  color: #eba4ac;
 }
 
 .wp-block-code .token.operator,
 .wp-block-code .token.entity,
 .wp-block-code .token.url {
-  color: rgba(255, 255, 255, 0.65);
+  color: #fec831;
 }
 
 .wp-block-code .token.property {
-  color: var(--color-accent);
+  color: #dcbff2;
 }
 
-.wp-block-code .token.important,
+.wp-block-code .token.important {
+  color: #fec831;
+  font-weight: bold;
+}
+
 .wp-block-code .token.bold {
   font-weight: bold;
 }

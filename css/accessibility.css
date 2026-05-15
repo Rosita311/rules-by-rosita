@@ -251,6 +251,13 @@ body.dyslexic-font {
   --font-heading: "Atkinson Hyperlegible", Arial, sans-serif;
 }
 
+/* Code blocks always stay monospace — never override with dyslexic font */
+body.dyslexic-font pre,
+body.dyslexic-font code,
+body.dyslexic-font .wp-block-code {
+  font-family: monospace;
+}
+
 /* Grotere tekst */
 /* Normaal */
 html {
@@ -413,6 +420,52 @@ body.high-contrast .dotted-background-blue {
 
 .high-contrast #theme-switch {
   display: none; /* Verberg de themewisselaar in high contrast modus */
+}
+
+.high-contrast .wp-block-code {
+  background-color: var(--hc-bg) !important;
+  background-image: none !important;
+}
+
+/* Prism token colours in high-contrast mode
+   Keywords/tags → yellow (--hc-focus), strings/functions → cyan (--hc-accent),
+   everything else → white (--hc-text), comments → dimmed white */
+.high-contrast .wp-block-code .token.comment,
+.high-contrast .wp-block-code .token.prolog,
+.high-contrast .wp-block-code .token.doctype,
+.high-contrast .wp-block-code .token.cdata {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.high-contrast .wp-block-code .token.keyword,
+.high-contrast .wp-block-code .token.atrule,
+.high-contrast .wp-block-code .token.tag {
+  color: var(--hc-focus);
+}
+
+.high-contrast .wp-block-code .token.string,
+.high-contrast .wp-block-code .token.attr-value,
+.high-contrast .wp-block-code .token.char,
+.high-contrast .wp-block-code .token.selector,
+.high-contrast .wp-block-code .token.function,
+.high-contrast .wp-block-code .token.attr-name,
+.high-contrast .wp-block-code .token.class-name {
+  color: var(--hc-accent);
+}
+
+.high-contrast .wp-block-code .token.boolean,
+.high-contrast .wp-block-code .token.number,
+.high-contrast .wp-block-code .token.constant,
+.high-contrast .wp-block-code .token.symbol,
+.high-contrast .wp-block-code .token.operator,
+.high-contrast .wp-block-code .token.entity,
+.high-contrast .wp-block-code .token.url,
+.high-contrast .wp-block-code .token.punctuation,
+.high-contrast .wp-block-code .token.regex,
+.high-contrast .wp-block-code .token.variable,
+.high-contrast .wp-block-code .token.property,
+.high-contrast .wp-block-code .token.important {
+  color: var(--hc-text);
 }
 
 .reduce-motion * {
