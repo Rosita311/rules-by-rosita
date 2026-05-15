@@ -384,6 +384,11 @@ code {
   font-size: 0.95em;
 }
 
+/* Paragraph with background color */
+p.has-background {
+  padding: 0.5rem 1rem;
+}
+
 /* Code blocks */
 .wp-block-code {
   position: relative;
@@ -391,7 +396,8 @@ code {
   background-color: var(--color-code-bg);
   background-clip: content-box;
   color: var(--color-code-text);
-  padding: 0 1.5rem;
+  padding: clamp(1rem, 4vw, 2rem);
+  padding-left: 1.5rem;
   margin: 2rem 0;
   border: none;
   border-radius: 0;
@@ -443,6 +449,50 @@ pre code {
   margin-bottom: 2rem;
 }
 
+/* Colored group blocks with wavy border */
+.wp-block-group.is-style-wavy-pink,
+.wp-block-group.is-style-wavy-red,
+.wp-block-group.is-style-wavy-teal {
+  position: relative;
+  padding: clamp(1rem, 4vw, 2rem) !important;
+  padding-left: 1.5rem !important;
+  margin: 2rem 0 !important;
+}
+
+.wp-block-group.is-style-wavy-pink.has-background,
+.wp-block-group.is-style-wavy-red.has-background,
+.wp-block-group.is-style-wavy-teal.has-background {
+  background-image: linear-gradient(to right, var(--color-background) 1.5rem, transparent 1.5rem) !important;
+  padding-left: calc(1.5rem + clamp(1rem, 4vw, 2rem)) !important;
+}
+
+.wp-block-group.is-style-wavy-pink::before,
+.wp-block-group.is-style-wavy-red::before,
+.wp-block-group.is-style-wavy-teal::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 8px;
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='16'%3E%3Cpath d='M4 0 Q8 4 4 8 Q0 12 4 16' stroke='black' fill='none' stroke-width='3'/%3E%3C/svg%3E");
+  -webkit-mask-repeat: repeat-y;
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='16'%3E%3Cpath d='M4 0 Q8 4 4 8 Q0 12 4 16' stroke='black' fill='none' stroke-width='3'/%3E%3C/svg%3E");
+  mask-repeat: repeat-y;
+}
+
+.wp-block-group.is-style-wavy-pink::before {
+  background-color: var(--color-accent);
+}
+
+.wp-block-group.is-style-wavy-red::before {
+  background-color: var(--color-primary);
+}
+
+.wp-block-group.is-style-wavy-teal::before {
+  background-color: var(--color-contrast);
+}
+
 /* Blockquote + Pull quote */
 .entry-content .wp-block-quote,
 .wp-block-pullquote {
@@ -450,14 +500,14 @@ pre code {
   border: none;
   border-top: none;
   border-bottom: none;
-  padding: 0.5rem 0 0.5rem 2rem;
+  padding: 0.5rem 0 0.5rem 1.5rem;
   margin: 1.5rem 0;
   background-color: transparent;
   text-align: left !important;
 }
 
 figure.wp-block-pullquote {
-  padding: 2rem 0 2rem 2rem;
+  padding: 2rem 0 2rem 1.5rem;
   border: none;
 }
 

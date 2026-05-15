@@ -121,6 +121,21 @@ function rules_by_rosita_register_block_styles() {
         'name'  => 'highlight',
         'label' => __( 'Highlight', 'rules-by-rosita' ),
     ) );
+
+    register_block_style( 'core/group', array(
+        'name'  => 'wavy-pink',
+        'label' => __( 'Golvende rand — Roze', 'rules-by-rosita' ),
+    ) );
+
+    register_block_style( 'core/group', array(
+        'name'  => 'wavy-red',
+        'label' => __( 'Golvende rand — Rood', 'rules-by-rosita' ),
+    ) );
+
+    register_block_style( 'core/group', array(
+        'name'  => 'wavy-teal',
+        'label' => __( 'Golvende rand — Blauwgroen', 'rules-by-rosita' ),
+    ) );
 }
 add_action( 'init', 'rules_by_rosita_register_block_styles' );
 
