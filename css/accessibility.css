@@ -302,6 +302,10 @@ html.large-text {
   color: var(--hc-accent) !important;
 }
 
+.high-contrast .has-submenu > button.submenu-toggle {
+  color: var(--hc-accent);
+}
+
 body.high-contrast .dotted-background-pink,
 body.high-contrast .dotted-background-blue {
   background-image: none;
@@ -310,11 +314,42 @@ body.high-contrast .dotted-background-blue {
 .high-contrast .btn--icon-large:hover,
 .high-contrast .btn--icon-small:hover {
   background-color: var(--color-icon-button-hover);
-  color: var(--color-background);
+  color: var(--color-background) !important;
 }
 .high-contrast .btn--icon-large:hover svg,
 .high-contrast .btn--icon-small:hover svg {
   stroke: var(--color-background);
+}
+
+/* Active nav item: yellow text + underline on desktop, yellow background on mobile */
+.high-contrast #header-nav > ul > li > a[aria-current="page"] {
+  color: var(--hc-focus) !important;
+}
+
+.high-contrast #header-nav > ul > li > a[aria-current="page"]::after,
+.high-contrast .has-submenu.open > button.submenu-toggle::after,
+.high-contrast .has-submenu > button.submenu-toggle[aria-current="page"]::after {
+  background-color: var(--hc-focus);
+}
+
+@media screen and (min-width: 1025px) {
+  .high-contrast .has-submenu.open > button.submenu-toggle,
+  .high-contrast .has-submenu > button.submenu-toggle[aria-current="page"] {
+    color: var(--hc-focus) !important;
+  }
+
+  .high-contrast .has-submenu > button.submenu-toggle:hover {
+    color: var(--hc-accent) !important;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .high-contrast .site-header__container #header-nav a[aria-current="page"],
+  .high-contrast .submenu li a[aria-current="page"],
+  .high-contrast .has-submenu.open > .submenu-toggle {
+    background-color: var(--hc-focus) !important;
+    color: var(--hc-bg) !important;
+  }
 }
 
 .high-contrast #open-sidebar-button svg,
@@ -336,6 +371,20 @@ body.high-contrast .dotted-background-blue {
 .high-contrast .card__content--page:hover .btn--secondary {
   background-color: var(--color-accent);
   color: var(--color-background) !important;
+}
+
+.high-contrast .sidebar .wp-block-button__link,
+.high-contrast .sidebar .wp-block-button a,
+.high-contrast .sidebar a.btn,
+.high-contrast .sidebar .wp-block-button__link:hover,
+.high-contrast .sidebar .wp-block-button a:hover,
+.high-contrast .sidebar a.btn:hover {
+  color: var(--hc-bg) !important;
+}
+
+.high-contrast .wp-block-code {
+  background-color: var(--hc-bg) !important;
+  background-image: none !important;
 }
 .high-contrast .card {
   border: 1px solid var(--color-text);
