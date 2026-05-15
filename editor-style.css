@@ -77,6 +77,11 @@ body.block-editor-page {
   background-color: var(--color-background);
 }
 
+.editor-styles-wrapper {
+  font-family: var(--font-body);
+  color: var(--color-text);
+}
+
 .editor-styles-wrapper h1,
 .editor-styles-wrapper h2,
 .editor-styles-wrapper h3,
@@ -87,7 +92,6 @@ body.block-editor-page {
   font-weight: var(--font-weight-regular);
   color: var(--color-text);
   margin: 0 0 1rem;
-
 }
 
 .editor-styles-wrapper p {
@@ -128,4 +132,140 @@ body.block-editor-page {
   outline: 2px solid var(--color-text);
   outline-offset: 2px;
 }
+
+/* Code block kleuren */
+:root {
+  --color-code-bg: #103c42;
+  --color-code-text: rgba(255, 255, 255, 0.87);
+}
+
+/* Code block */
+.editor-styles-wrapper .wp-block-code {
+  position: relative;
+  display: block;
+  background-color: var(--color-code-bg);
+  background-image: linear-gradient(to right, var(--color-background) 1.5rem, transparent 1.5rem);
+  color: var(--color-code-text);
+  padding: clamp(1rem, 4vw, 2rem);
+  padding-left: calc(1.5rem + clamp(1rem, 4vw, 2rem));
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  border: none;
+  border-radius: 0;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 0.9em;
+  line-height: 1.5;
+  white-space: pre-wrap;
+}
+
+.editor-styles-wrapper .wp-block-code::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 8px;
+  background-color: var(--color-primary);
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='16'%3E%3Cpath d='M4 0 Q8 4 4 8 Q0 12 4 16' stroke='black' fill='none' stroke-width='3'/%3E%3C/svg%3E");
+  -webkit-mask-repeat: repeat-y;
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='16'%3E%3Cpath d='M4 0 Q8 4 4 8 Q0 12 4 16' stroke='black' fill='none' stroke-width='3'/%3E%3C/svg%3E");
+  mask-repeat: repeat-y;
+}
+
+/* Blockquote */
+.editor-styles-wrapper .wp-block-quote {
+  position: relative;
+  border: none;
+  padding: 0.5rem 0 0.5rem 1.5rem;
+  margin: 1.5rem 0;
+  background-color: transparent;
+  text-align: left !important;
+}
+
+.editor-styles-wrapper .wp-block-quote::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 8px;
+  background-color: var(--color-contrast);
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='16'%3E%3Cpath d='M4 0 Q8 4 4 8 Q0 12 4 16' stroke='black' fill='none' stroke-width='3'/%3E%3C/svg%3E");
+  -webkit-mask-repeat: repeat-y;
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='16'%3E%3Cpath d='M4 0 Q8 4 4 8 Q0 12 4 16' stroke='black' fill='none' stroke-width='3'/%3E%3C/svg%3E");
+  mask-repeat: repeat-y;
+}
+
+/* Pullquote */
+.editor-styles-wrapper .wp-block-pullquote {
+  position: relative;
+  border: none;
+  padding: 2rem 0 2rem 1.5rem;
+  margin: 1.5rem 0;
+  text-align: left !important;
+}
+
+.editor-styles-wrapper .wp-block-pullquote::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 8px;
+  background-color: var(--color-accent);
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='16'%3E%3Cpath d='M4 0 Q8 4 4 8 Q0 12 4 16' stroke='black' fill='none' stroke-width='3'/%3E%3C/svg%3E");
+  -webkit-mask-repeat: repeat-y;
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='16'%3E%3Cpath d='M4 0 Q8 4 4 8 Q0 12 4 16' stroke='black' fill='none' stroke-width='3'/%3E%3C/svg%3E");
+  mask-repeat: repeat-y;
+}
+
+/* Group block — golvende rand stijlen */
+.editor-styles-wrapper .wp-block-group.is-style-wavy-pink,
+.editor-styles-wrapper .wp-block-group.is-style-wavy-red,
+.editor-styles-wrapper .wp-block-group.is-style-wavy-teal {
+  position: relative;
+  padding: clamp(1rem, 4vw, 2rem) !important;
+  padding-left: 1.5rem !important;
+  margin-top: 2rem !important;
+  margin-bottom: 2rem !important;
+}
+
+.editor-styles-wrapper .wp-block-group.is-style-wavy-pink.has-background,
+.editor-styles-wrapper .wp-block-group.is-style-wavy-red.has-background,
+.editor-styles-wrapper .wp-block-group.is-style-wavy-teal.has-background {
+  background-image: linear-gradient(to right, var(--color-background) 1.5rem, transparent 1.5rem) !important;
+  padding-left: calc(1.5rem + clamp(1rem, 4vw, 2rem)) !important;
+}
+
+.editor-styles-wrapper .wp-block-group.is-style-wavy-pink::before,
+.editor-styles-wrapper .wp-block-group.is-style-wavy-red::before,
+.editor-styles-wrapper .wp-block-group.is-style-wavy-teal::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 8px;
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='16'%3E%3Cpath d='M4 0 Q8 4 4 8 Q0 12 4 16' stroke='black' fill='none' stroke-width='3'/%3E%3C/svg%3E");
+  -webkit-mask-repeat: repeat-y;
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='16'%3E%3Cpath d='M4 0 Q8 4 4 8 Q0 12 4 16' stroke='black' fill='none' stroke-width='3'/%3E%3C/svg%3E");
+  mask-repeat: repeat-y;
+}
+
+.editor-styles-wrapper .wp-block-group.is-style-wavy-pink::before { background-color: var(--color-accent); }
+.editor-styles-wrapper .wp-block-group.is-style-wavy-red::before  { background-color: var(--color-primary); }
+.editor-styles-wrapper .wp-block-group.is-style-wavy-teal::before { background-color: var(--color-contrast); }
+
+/* Golvende rand kleur overrides — citaat, pullquote, code */
+.editor-styles-wrapper .wp-block-quote.is-style-wavy-pink::before,
+.editor-styles-wrapper .wp-block-pullquote.is-style-wavy-pink::before,
+.editor-styles-wrapper .wp-block-code.is-style-wavy-pink::before  { background-color: var(--color-accent); }
+
+.editor-styles-wrapper .wp-block-quote.is-style-wavy-red::before,
+.editor-styles-wrapper .wp-block-pullquote.is-style-wavy-red::before,
+.editor-styles-wrapper .wp-block-code.is-style-wavy-red::before   { background-color: var(--color-primary); }
+
+.editor-styles-wrapper .wp-block-quote.is-style-wavy-teal::before,
+.editor-styles-wrapper .wp-block-pullquote.is-style-wavy-teal::before,
+.editor-styles-wrapper .wp-block-code.is-style-wavy-teal::before  { background-color: var(--color-contrast); }
 

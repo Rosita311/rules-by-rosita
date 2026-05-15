@@ -394,10 +394,10 @@ p.has-background {
   position: relative;
   display: block;
   background-color: var(--color-code-bg);
-  background-clip: content-box;
+  background-image: linear-gradient(to right, var(--color-background) 1.5rem, transparent 1.5rem);
   color: var(--color-code-text);
   padding: clamp(1rem, 4vw, 2rem);
-  padding-left: 1.5rem;
+  padding-left: calc(1.5rem + clamp(1rem, 4vw, 2rem));
   margin: 2rem 0;
   border: none;
   border-radius: 0;
@@ -411,7 +411,7 @@ p.has-background {
 .wp-block-code code {
   background-color: transparent;
   color: inherit;
-  padding: 0 2rem;
+  padding: 0;
   font-size: inherit;
   border-radius: 0;
 }
@@ -531,6 +531,25 @@ figure.wp-block-pullquote {
 
 .wp-block-pullquote::before {
   background-color: var(--color-accent);
+}
+
+/* Wavy style color overrides — quote, pullquote, code */
+.entry-content .wp-block-quote.is-style-wavy-pink::before,
+.wp-block-pullquote.is-style-wavy-pink::before,
+.wp-block-code.is-style-wavy-pink::before {
+  background-color: var(--color-accent);
+}
+
+.entry-content .wp-block-quote.is-style-wavy-red::before,
+.wp-block-pullquote.is-style-wavy-red::before,
+.wp-block-code.is-style-wavy-red::before {
+  background-color: var(--color-primary);
+}
+
+.entry-content .wp-block-quote.is-style-wavy-teal::before,
+.wp-block-pullquote.is-style-wavy-teal::before,
+.wp-block-code.is-style-wavy-teal::before {
+  background-color: var(--color-contrast);
 }
 
 .entry-content .wp-block-quote p,
@@ -933,6 +952,10 @@ a.btn--icon-large {
   .dotted-background-pink,
   .dotted-background-blue {
     background-size: 10px 10px;
+  }
+
+  .wp-block-code code {
+    padding: 0 1rem;
   }
 
   .pagination {

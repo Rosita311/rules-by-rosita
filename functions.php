@@ -17,6 +17,7 @@ function rules_by_rosita_setup() {
     add_theme_support( 'title-tag' );
     add_theme_support( 'post-thumbnails' );
     add_theme_support( 'editor-styles' );
+    add_editor_style( RULES_BY_ROSITA_FONTS_URL );
     add_editor_style( 'editor-style.css' );
     add_theme_support( 'automatic-feed-links' );
     add_theme_support( 'wp-block-styles' );
@@ -122,20 +123,17 @@ function rules_by_rosita_register_block_styles() {
         'label' => __( 'Highlight', 'rules-by-rosita' ),
     ) );
 
-    register_block_style( 'core/group', array(
-        'name'  => 'wavy-pink',
-        'label' => __( 'Golvende rand — Roze', 'rules-by-rosita' ),
-    ) );
+    $wavy_styles = array(
+        array( 'name' => 'wavy-pink', 'label' => __( 'Roze — golvende rand', 'rules-by-rosita' ) ),
+        array( 'name' => 'wavy-red',  'label' => __( 'Rood — golvende rand', 'rules-by-rosita' ) ),
+        array( 'name' => 'wavy-teal', 'label' => __( 'Blauwgroen — golvende rand', 'rules-by-rosita' ) ),
+    );
 
-    register_block_style( 'core/group', array(
-        'name'  => 'wavy-red',
-        'label' => __( 'Golvende rand — Rood', 'rules-by-rosita' ),
-    ) );
-
-    register_block_style( 'core/group', array(
-        'name'  => 'wavy-teal',
-        'label' => __( 'Golvende rand — Blauwgroen', 'rules-by-rosita' ),
-    ) );
+    foreach ( array( 'core/group', 'core/quote', 'core/pullquote', 'core/code' ) as $block ) {
+        foreach ( $wavy_styles as $style ) {
+            register_block_style( $block, $style );
+        }
+    }
 }
 add_action( 'init', 'rules_by_rosita_register_block_styles' );
 
