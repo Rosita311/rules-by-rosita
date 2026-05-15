@@ -17,7 +17,6 @@
   flex-direction: column;
   gap: 2rem;
   max-width: 100%;
-  /* overflow-x: hidden; */
 }
 
 .post-meta {
