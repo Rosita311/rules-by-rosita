@@ -1,5 +1,5 @@
 <?php
-define( 'RULES_BY_ROSITA_FONTS_URL', 'https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;700&family=Zilla+Slab:wght@400;700&display=swap' );
+define( 'RULES_BY_ROSITA_FONTS_URL', 'https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Nunito:wght@300;400;500;700&family=Zilla+Slab:wght@400;700&display=swap' );
 
 require_once get_template_directory() . '/inc/menu-walker.php';
 require_once get_template_directory() . '/inc/customizer.php';
