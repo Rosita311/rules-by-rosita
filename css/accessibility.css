@@ -226,7 +226,7 @@ body.dyslexic-font .form__field-error,
 body.dyslexic-font .comment-error,
 body.dyslexic-font .page-hero__title nav p,
 body.dyslexic-font #cmplz-cookiebanner-container .cmplz-btn {
-  font-family: "Atkinson Hyperlegible", Arial, sans-serif;
+  font-family: "Atkinson Hyperlegible Next", Arial, sans-serif;
 }
 
 body.dyslexic-font h1,
@@ -247,8 +247,8 @@ body.dyslexic-font .wp-block-pullquote p {
 }
 
 body.dyslexic-font {
-  --font-body: "Atkinson Hyperlegible", Arial, sans-serif;
-  --font-heading: "Atkinson Hyperlegible", Arial, sans-serif;
+  --font-body: "Atkinson Hyperlegible Next", Arial, sans-serif;
+  --font-heading: "Atkinson Hyperlegible Next", Arial, sans-serif;
 }
 
 /* Code blocks always stay monospace — never override with dyslexic font */
