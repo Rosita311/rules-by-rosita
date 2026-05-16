@@ -9,6 +9,9 @@ import 'prismjs/components/prism-json';                // JSON
 
 const SVG_ATTRS = 'xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"';
 
+const ICON_DEFAULT =
+  `<svg ${SVG_ATTRS}><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 8l-4 4l4 4"/><path d="M17 8l4 4l-4 4"/><path d="M14 4l-4 16"/></svg>`;
+
 const LANG_ICONS = {
   'language-php':
     `<svg ${SVG_ATTRS}><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M2 12a10 9 0 1 0 20 0a10 9 0 1 0 -20 0"/><path d="M5.5 15l.395 -1.974l.605 -3.026h1.32a1 1 0 0 1 .986 1.164l-.167 1a1 1 0 0 1 -.986 .836h-1.653"/><path d="M15.5 15l.395 -1.974l.605 -3.026h1.32a1 1 0 0 1 .986 1.164l-.167 1a1 1 0 0 1 -.986 .836h-1.653"/><path d="M12 7.5l-1 5.5"/><path d="M11.6 10h2.4l-.5 3"/></svg>`,
@@ -23,18 +26,19 @@ const LANG_ICONS = {
   'language-bash':
     `<svg ${SVG_ATTRS}><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M8 9l3 3l-3 3"/><path d="M13 15l3 0"/><path d="M3 6a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2l0 -12"/></svg>`,
   'language-json':
-    `<svg ${SVG_ATTRS}><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 4a2 2 0 0 0 -2 2v3a2 3 0 0 1 -2 3a2 3 0 0 1 2 3v3a2 2 0 0 0 2 2"/><path d="M17 4a2 2 0 0 1 2 2v3a2 3 0 0 0 2 3a2 3 0 0 0 -2 3v3a2 2 0 0 1 -2 2"/></svg>`,
+    `<svg ${SVG_ATTRS}><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M20 16v-8l3 8v-8"/><path d="M15 8a2 2 0 0 1 2 2v4a2 2 0 1 1 -4 0v-4a2 2 0 0 1 2 -2"/><path d="M1 8h3v6.5a1.5 1.5 0 0 1 -3 0v-.5"/><path d="M7 15a1 1 0 0 0 1 1h1a1 1 0 0 0 1 -1v-2a1 1 0 0 0 -1 -1h-1a1 1 0 0 1 -1 -1v-2a1 1 0 0 1 1 -1h1a1 1 0 0 1 1 1"/></svg>`,
 };
 
 function injectLanguageIcons() {
   document.querySelectorAll( 'pre.wp-block-code' ).forEach( pre => {
-    const langClass = [ ...pre.classList ].find( c => c.startsWith( 'language-' ) );
-    if ( !langClass || !LANG_ICONS[ langClass ] ) return;
     if ( pre.querySelector( '.code-block__language-icon' ) ) return;
+
+    const langClass = [ ...pre.classList ].find( c => c.startsWith( 'language-' ) );
+    const icon = LANG_ICONS[ langClass ] ?? ICON_DEFAULT;
 
     const span = document.createElement( 'span' );
     span.className = 'code-block__language-icon';
-    span.innerHTML = LANG_ICONS[ langClass ];
+    span.innerHTML = icon;
     pre.appendChild( span );
   } );
 }
