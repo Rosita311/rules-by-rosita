@@ -389,6 +389,14 @@ body.high-contrast .dotted-background-blue {
   color: var(--hc-bg) !important;
 }
 
+.high-contrast code {
+  color: var(--hc-focus);
+}
+
+.high-contrast .wp-block-code code {
+  color: inherit;
+}
+
 .high-contrast .wp-block-code {
   background-color: var(--hc-bg) !important;
   background-image: none !important;

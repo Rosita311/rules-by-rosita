@@ -35,6 +35,7 @@
   /* Code block — fixed dark style in both light and dark mode */
   --color-code-bg: #103c42;
   --color-code-text: rgba(255, 255, 255, 0.87);
+  --color-inline-code-text: #103c42;
 
   /* WordPress preset colors */
   --wp--preset--color--primary: var(--color-primary);
@@ -49,6 +50,7 @@
 /* Darkmode */
 
 .darkmode {
+  --color-inline-code-text: #cbeef3;
   --color-text: rgba(255, 255, 255, 0.87);
   --color-text-dark: rgba(255, 255, 255, 0.87);
   --color-primary: #f7636f;
@@ -377,7 +379,7 @@ p {
 /* Inline code */
 code {
   background-color: var(--color-accent-2);
-  color: var(--color-primary);
+  color: var(--color-inline-code-text);
   font-family: "Courier New", Courier, monospace;
   padding: 0.2em 0.4em;
   border-radius: 0.25rem;
