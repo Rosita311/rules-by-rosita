@@ -15,6 +15,7 @@
     { label: 'HTML',       value: 'language-markup' },
     { label: 'Bash',       value: 'language-bash' },
     { label: 'JSON',       value: 'language-json' },
+    { label: 'Markdown',   value: 'language-markdown' },
   ];
 
   var withLanguageSelector = createHigherOrderComponent( function ( BlockEdit ) {

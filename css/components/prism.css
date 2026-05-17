@@ -98,7 +98,7 @@
 .code-block__language-icon svg {
   width: 1.5rem;
   height: 1.5rem;
-  stroke: var(--color-bg-dark);
+  stroke: var(--color-code-text);
 }
 
 /* PHP — only variables and functions are shifted pink;
