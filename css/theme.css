@@ -184,6 +184,18 @@ a:hover {
   text-decoration: none;
 }
 
+/* Links op gekleurde achtergronden krijgen de tekstkleur voor voldoende contrast */
+.has-primary-background-color a,
+.has-accent-background-color a,
+.has-accent-2-background-color a,
+.has-footer-background-color a,
+.has-contrast-background-color a,
+.has-background-background-color a,
+.has-placeholder-background-color a {
+  color: var(--color-text);
+}
+
+
 /* Focus: duidelijke focusstijl */
 a:focus-visible {
   outline: 2px solid var(--color-text);
