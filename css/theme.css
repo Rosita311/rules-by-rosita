@@ -192,7 +192,7 @@ a:hover {
 .has-contrast-background-color a,
 .has-background-background-color a,
 .has-placeholder-background-color a {
-  color: var(--color-text);
+  color: var(--color-text) !important;
 }
 
 
