@@ -40,10 +40,6 @@
   display: flex;
   align-items: center;
   gap: 0.4rem;
-}
-
-.post-meta__list li time,
-.post-meta__list li a {
   font-size: 0.875rem;
 }
 
