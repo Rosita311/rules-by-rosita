@@ -43,17 +43,8 @@
 }
 
 .post-meta__list li time,
-.post-meta__list li a,
-.post-meta__list li span:not(.sr-only) {
-  font-size: 0.875rem;
-  color: var(--color-text);
-}
-
 .post-meta__list li a {
-  color: var(--color-primary);
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 2px;
+  font-size: 0.875rem;
 }
 
 .post-meta__list li svg {
