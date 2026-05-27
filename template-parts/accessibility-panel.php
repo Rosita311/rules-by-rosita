@@ -6,7 +6,7 @@
     role="dialog"
     aria-modal="true"
     aria-labelledby="accessibility-heading"
-    hidden>
+    aria-hidden="true">
     <header class="accessibility-panel__header">
       <h2
         id="accessibility-heading"
