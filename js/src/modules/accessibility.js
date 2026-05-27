@@ -44,6 +44,7 @@ function toggleSetting(button, className) {
 
 export const togglePanel = () => {
   if (!panel || !toggleButton) return;
+  panel.removeAttribute("hidden");
   const isVisible = panel.classList.toggle("show");
   panel.setAttribute("aria-hidden", String(!isVisible));
   toggleButton.setAttribute("aria-expanded", String(isVisible));
