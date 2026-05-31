@@ -615,6 +615,19 @@ button {
   cursor: pointer;
   background-color: var(--color-contrast);
   color: var(--color-bg-light);
+  transition:
+    background-color 0.3s ease-in-out,
+    color 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: var(--color-footer);
+  color: var(--color-text);
+}
+
+button:focus-visible {
+  outline: 2px solid var(--color-text);
+  outline-offset: 2px;
 }
 
 .btn--primary,
@@ -634,9 +647,6 @@ button {
 .btn--primary {
   background-color: var(--color-primary);
   color: var(--color-primary-btn-text);
-  transition:
-    background-color 0.3s ease-in-out,
-    color 0.3s ease-in-out;
 }
 
 .btn--secondary,
