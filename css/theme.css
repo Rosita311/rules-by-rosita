@@ -683,22 +683,6 @@ button:focus-visible {
   outline-offset: 2px;
 }
 
-.btn--icon-large {
-  all: unset;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  padding: 0.5rem 0.75rem;
-  color: var(--color-text);
-  cursor: pointer;
-
-  &:hover {
-    background-color: var(--color-menu-button-hover);
-    color: var(--color-text);
-  }
-}
-
 .btn--footer {
   border: 2px solid var(--color-contrast);
   white-space: nowrap;
@@ -713,6 +697,23 @@ button:focus-visible {
   &:focus-visible {
     outline: 2px solid var(--color-text);
     border-radius: 0.25rem;
+  }
+}
+
+.btn--icon-large {
+  all: unset;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.25rem;
+  color: var(--color-text);
+  cursor: pointer;
+
+  &:hover {
+    background-color: var(--color-menu-button-hover);
+    color: var(--color-text);
   }
 }
 
