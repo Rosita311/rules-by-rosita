@@ -19,7 +19,7 @@ $excerpt_id = 'excerpt-' . $post_id;
           <?php echo wp_trim_words(get_the_excerpt(), 55, '...'); ?>
         </p>
       </div>
-      <span aria-hidden="true" id="<?php echo esc_attr( $leesmeer_id ); ?>" class="btn btn--secondary">
+      <span aria-hidden="true" id="<?php echo esc_attr( $leesmeer_id ); ?>" class="btn--secondary">
         Lees meer
       </span>
     </div>

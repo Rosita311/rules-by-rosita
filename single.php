@@ -92,7 +92,7 @@ get_template_part('template-parts/accessibility-panel'); ?>
         <nav class="post-nav" aria-label="Post navigatie">
           <div class="post-nav__prev">
             <?php if ( $prev_post ): ?>
-              <a class="btn btn--icon-large" href="<?php echo esc_url( get_permalink( $prev_post ) ); ?>">
+              <a class="btn--icon-large" href="<?php echo esc_url( get_permalink( $prev_post ) ); ?>">
                 <?php echo rules_by_rosita_icon( 'chevron-left' ); ?>
                 <span>Vorige post</span>
                 <span class="sr-only">: <?php echo esc_html( get_the_title( $prev_post ) ); ?></span>
@@ -101,7 +101,7 @@ get_template_part('template-parts/accessibility-panel'); ?>
           </div>
           <div class="post-nav__next">
             <?php if ( $next_post ): ?>
-              <a class="btn btn--icon-large" href="<?php echo esc_url( get_permalink( $next_post ) ); ?>">
+              <a class="btn--icon-large" href="<?php echo esc_url( get_permalink( $next_post ) ); ?>">
                 <span>Volgende post</span>
                 <?php echo rules_by_rosita_icon( 'chevron-right' ); ?>
                 <span class="sr-only">: <?php echo esc_html( get_the_title( $next_post ) ); ?></span>

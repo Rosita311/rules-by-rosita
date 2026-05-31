@@ -9,7 +9,7 @@
            type="search"
            name="s"
            placeholder="Typ wat je wilt vinden." />
-         <button type="submit" class="btn btn--secondary">Zoeken</button>
+         <button type="submit" class="btn--secondary">Zoeken</button>
        </div>
      </div>
    </form>

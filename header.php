@@ -65,13 +65,13 @@
           <a
             href="<?php echo esc_url(add_query_arg('menu', '1')); ?>#header-nav"
             id="menu-open-toggle-no-js"
-            class="btn btn--icon-small">
+            class="btn--icon-small">
             <span class="sr-only">Open menu</span>
             <?php echo rules_by_rosita_icon('menu'); ?>
           </a>
           <a
             href="<?php echo esc_url(remove_query_arg('menu')); ?>"
-            class="btn btn--icon-small"
+            class="btn--icon-small"
             id="menu-close-toggle-no-js"
             aria-label="Sluit menu">
             <?php echo rules_by_rosita_icon('x'); ?>

@@ -21,7 +21,7 @@
       <ul>
         <li>
           <button
-            class="btn btn--icon-large"
+            class="btn--icon-large"
             id="toggle-dyslexic"
             type="button"
             aria-pressed="false"><?php echo rules_by_rosita_icon('letter-case'); ?>
@@ -30,7 +30,7 @@
         </li>
         <li>
           <button
-            class="btn btn--icon-large"
+            class="btn--icon-large"
             id="toggle-text"
             type="button"
             aria-pressed="false">
@@ -46,7 +46,7 @@
       <ul>
         <li>
           <button
-            class="btn btn--icon-large"
+            class="btn--icon-large"
             id="toggle-contrast"
             type="button"
             aria-pressed="false">
@@ -56,7 +56,7 @@
         </li>
         <li>
           <button
-            class="btn btn--icon-large"
+            class="btn--icon-large"
             id="toggle-reduce-motion"
             type="button"
             aria-pressed="false">
@@ -72,7 +72,7 @@
       <ul>
         <li>
           <button
-            class="btn btn--icon-large"
+            class="btn--icon-large"
             id="toggle-left-handed"
             type="button"
             aria-pressed="false">
@@ -82,7 +82,7 @@
         </li>
         <li>
           <button
-            class="btn btn--icon-large"
+            class="btn--icon-large"
             id="reset-accessibility"
             type="button">
             <?php echo rules_by_rosita_icon('restore'); ?>
