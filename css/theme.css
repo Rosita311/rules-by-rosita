@@ -630,8 +630,7 @@ button:focus-visible {
   outline-offset: 2px;
 }
 
-.btn--primary,
-.btn--secondary {
+.btn--primary {
   display: inline-block;
   padding: 0.75rem 1.5rem;
   border-radius: 0.25rem;
@@ -642,9 +641,6 @@ button:focus-visible {
   width: fit-content;
   cursor: pointer;
   box-sizing: border-box;
-}
-
-.btn--primary {
   background-color: var(--color-primary);
   color: var(--color-primary-btn-text);
 }
@@ -653,14 +649,19 @@ button:focus-visible {
 .wp-block-button__link,
 .comment-form input[type="submit"],
 .forminator-ui .forminator-button {
-  background-color: var(--color-contrast);
-  color: var(--color-bg-light);
-  text-decoration: none;
-  width: fit-content;
-  border: none;
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
   border-radius: 0.25rem;
+  font-family: var(--font-body);
   font-size: 1.125rem;
   font-weight: 500;
+  text-decoration: none;
+  width: fit-content;
+  cursor: pointer;
+  box-sizing: border-box;
+  border: none;
+  background-color: var(--color-contrast);
+  color: var(--color-bg-light);
   transition:
     background-color 0.3s ease-in-out,
     color 0.3s ease-in-out;
