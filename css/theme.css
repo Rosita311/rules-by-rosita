@@ -690,6 +690,12 @@ button:focus-visible {
   justify-content: center;
   gap: 0.5rem;
   padding: 0.5rem 0.75rem;
+  border-radius: 0.25rem;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5;
+  box-sizing: border-box;
   color: var(--color-text);
   cursor: pointer;
 
