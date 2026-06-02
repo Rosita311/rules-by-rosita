@@ -71,10 +71,10 @@ a {
   color: var(--wp--preset--color--primary);
 } 
 
-body.block-editor-page {
+
+.editor-styles-wrapper {
   font-family: var(--font-body);
   color: var(--color-text);
-  background-color: var(--color-background);
 }
 
 .editor-styles-wrapper h1,
