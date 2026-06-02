@@ -1,6 +1,7 @@
 <?php
 /*
- * Template Name: Over mij
+ * Template Name: Over pagina
+ * Template Post Type: page
  */
 get_header();
 get_template_part('template-parts/accessibility-panel'); ?>
