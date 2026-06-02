@@ -11,7 +11,7 @@ if ($wp_query->max_num_pages <= 1) {
     <?php
     echo str_replace(
       ['<a', '<span'],
-      ['<a class="btn--icon-large"', '<span class="btn--icon-large"'],
+      ['<a class="btn btn__icon--large"', '<span class="btn btn__icon--large"'],
       paginate_links([
         'prev_text' => rules_by_rosita_icon('chevron-left') . '<span>Vorige</span>',
         'next_text' => '<span>Volgende</span>' . rules_by_rosita_icon('chevron-right'),

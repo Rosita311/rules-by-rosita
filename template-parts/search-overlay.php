@@ -11,7 +11,7 @@
     <div class="search-overlay__inner" tabindex="-1">
     <button
       id="close-search"
-      class="btn--icon-small"
+      class="btn btn__icon--small"
       aria-label="Sluit zoekfunctie">
       <?php echo rules_by_rosita_icon('x'); ?>
     </button>

@@ -27,7 +27,7 @@
       </a>
       <div class="site-header__nav">
         <button
-          class="btn--icon-small"
+          class="btn btn__icon--small"
           id="open-sidebar-button"
           onclick="openSidebar()"
           aria-label="Open menu"
@@ -42,7 +42,7 @@
           <ul>
             <li>
               <button
-                class="btn--icon-small"
+                class="btn btn__icon--small"
                 id="close-sidebar-button"
                 onclick="closeSidebar()"
                 aria-label="Sluit menu">
@@ -65,20 +65,20 @@
           <a
             href="<?php echo esc_url(add_query_arg('menu', '1')); ?>#header-nav"
             id="menu-open-toggle-no-js"
-            class="btn--icon-small">
+            class="btn btn__icon--small">
             <span class="sr-only">Open menu</span>
             <?php echo rules_by_rosita_icon('menu'); ?>
           </a>
           <a
             href="<?php echo esc_url(remove_query_arg('menu')); ?>"
-            class="btn--icon-small"
+            class="btn btn__icon--small"
             id="menu-close-toggle-no-js"
             aria-label="Sluit menu">
             <?php echo rules_by_rosita_icon('x'); ?>
           </a>
           <a href="<?php echo esc_url(home_url('/')); ?>?s="
             aria-label="Open zoekfunctie"
-            class="search-button btn--icon-small"
+            class="search-button btn btn__icon--small"
             aria-haspopup="dialog"
             aria-expanded="false"
             aria-controls="search-overlay"
@@ -89,7 +89,7 @@
           <?php if (get_theme_mod('rules_by_rosita_darkmode', true)) : ?>
             <button
               id="theme-switch"
-              class="btn--icon-small">
+              class="btn btn__icon--small">
               <?php echo rules_by_rosita_icon('moon');
               echo rules_by_rosita_icon('sun'); ?>
             </button>

@@ -318,13 +318,13 @@ body.high-contrast .dotted-background-blue {
   background-image: none;
   background-color: var(--color-background);
 }
-.high-contrast .btn--icon-large:hover,
-.high-contrast .btn--icon-small:hover {
+.high-contrast .btn__icon--large:hover,
+.high-contrast .btn__icon--small:hover {
   background-color: var(--color-icon-button-hover);
   color: var(--color-background) !important;
 }
-.high-contrast .btn--icon-large:hover svg,
-.high-contrast .btn--icon-small:hover svg {
+.high-contrast .btn__icon--large:hover svg,
+.high-contrast .btn__icon--small:hover svg {
   stroke: var(--color-background);
 }
 

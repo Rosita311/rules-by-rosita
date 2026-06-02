@@ -603,7 +603,8 @@ figure.wp-block-pullquote {
 }
 
 /* Button styles */
-button {
+button,
+.btn {
   display: inline-block;
   box-sizing: border-box;
   padding: 0.75rem 1.5rem;
@@ -620,51 +621,35 @@ button {
     color 0.3s ease-in-out;
 }
 
-button:hover {
+button:hover,
+.btn:hover {
   background-color: var(--color-footer);
   color: var(--color-text);
 }
 
-button:focus-visible {
+button:focus-visible,
+.btn:focus-visible {
   outline: 2px solid var(--color-text);
   outline-offset: 2px;
 }
 
 .btn--primary {
-  display: inline-block;
-  padding: 0.75rem 1.5rem;
-  border-radius: 0.25rem;
-  font-family: var(--font-body);
-  font-size: 1.125rem;
-  font-weight: 500;
-  text-decoration: none;
-  width: fit-content;
-  cursor: pointer;
-  box-sizing: border-box;
   background-color: var(--color-primary);
   color: var(--color-primary-btn-text);
+  text-decoration: none;
+  width: fit-content;
 }
 
 .btn--secondary,
 .wp-block-button__link,
 .comment-form input[type="submit"],
 .forminator-ui .forminator-button {
-  display: inline-block;
-  padding: 0.75rem 1.5rem;
-  border-radius: 0.25rem;
-  font-family: var(--font-body);
-  font-size: 1.125rem;
-  font-weight: 500;
-  text-decoration: none;
-  width: fit-content;
-  cursor: pointer;
-  box-sizing: border-box;
-  border: none;
   background-color: var(--color-contrast);
   color: var(--color-bg-light);
-  transition:
-    background-color 0.3s ease-in-out,
-    color 0.3s ease-in-out;
+  text-decoration: none;
+  width: fit-content;
+  border: none;
+  border-radius: 0.25rem;
 }
 
 .btn--secondary:hover,
@@ -683,7 +668,24 @@ button:focus-visible {
   outline-offset: 2px;
 }
 
-.btn--icon-large {
+.btn--footer {
+  border: 2px solid var(--color-contrast);
+  white-space: nowrap;
+
+  &:hover {
+    border: 2px solid var(--color-text);
+    transition:
+      background-color 0.3s ease-in-out,
+      color 0.3s ease-in-out;
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--color-text);
+    border-radius: 0.25rem;
+  }
+}
+
+.btn__icon--large {
   all: unset;
   display: inline-flex;
   align-items: center;
@@ -705,69 +707,35 @@ button:focus-visible {
   }
 }
 
-.btn--footer {
-  border: 2px solid var(--color-contrast);
-  white-space: nowrap;
-
-  &:hover {
-    border: 2px solid var(--color-text);
-    transition:
-      background-color 0.3s ease-in-out,
-      color 0.3s ease-in-out;
-  }
-
-  &:focus-visible {
-    outline: 2px solid var(--color-text);
-    border-radius: 0.25rem;
-  }
-}
-
-.btn--icon-large {
-  all: unset;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  padding: 0.5rem 0.75rem;
-  border-radius: 0.25rem;
-  color: var(--color-text);
-  cursor: pointer;
-
-  &:hover {
-    background-color: var(--color-menu-button-hover);
-    color: var(--color-text);
-  }
-}
-
-.btn--icon-large:focus-visible {
+.btn__icon--large:focus-visible {
   color: var(--color-background);
   background-color: var(--color-text);
 }
 
-.btn--icon-large:focus-visible svg {
+.btn__icon--large:focus-visible svg {
   stroke: var(--color-background);
 }
 
-.btn--icon-large[aria-current="page"],
-.btn--icon-large[aria-pressed="true"] {
+.btn__icon--large[aria-current="page"],
+.btn__icon--large[aria-pressed="true"] {
   background-color: var(--color-contrast);
   color: var(--color-bg-light);
   font-weight: 700;
 }
 
-.btn--icon-large[aria-pressed="true"] svg {
+.btn__icon--large[aria-pressed="true"] svg {
   stroke: var(--color-bg-light);
 }
 
-.btn--icon-large[aria-current="page"] {
+.btn__icon--large[aria-current="page"] {
   pointer-events: none;
 }
 
-a.btn--icon-large {
+a.btn__icon--large {
   color: var(--color-text);
 }
 
-.btn--icon-small {
+.btn__icon--small {
   all: unset;
   padding: 0.5em;
   border-radius: 50%;
@@ -780,7 +748,7 @@ a.btn--icon-large {
   }
 }
 
-.btn--icon-small:focus-visible {
+.btn__icon--small:focus-visible {
   background-color: var(--color-text);
   color: var(--color-background);
   border-radius: 50%;
@@ -788,7 +756,7 @@ a.btn--icon-large {
   outline-offset: 2px;
 }
 
-.btn--icon-small:focus-visible svg {
+.btn__icon--small:focus-visible svg {
   stroke: var(--color-background);
 }
 
@@ -1067,7 +1035,7 @@ a.btn--icon-large {
     text-align: left;
   }
 
-  .btn--icon-large {
+  .btn__icon--large {
     min-width: 2.5rem; /* voor touch targets */
     white-space: nowrap; /* voorkomt afbreken van woorden */
     text-align: center;
