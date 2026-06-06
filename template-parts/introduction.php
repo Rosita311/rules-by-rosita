@@ -77,7 +77,7 @@
                     </ul>
                 <?php endif; ?>
 
-                <?php if ($btn_link && $btn_text) : ?>
+                <?php if( !is_page('rosita') && $btn_link && $btn_text) : ?>
                     <a class="btn btn--secondary" href="<?php echo esc_url($btn_link); ?>">
                         <?php echo esc_html($btn_text); ?>
                     </a>

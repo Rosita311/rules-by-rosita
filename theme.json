@@ -36,7 +36,10 @@
       ]
     },
     "spacing": {
-      "units": [ "px", "em", "rem", "%" ]
+      "padding": true,
+      "margin": true,
+      "blockGap": true,
+      "units": [ "rem", "em", "px", "%" ]
     },
     "layout": {
       "contentSize": "52.5rem",

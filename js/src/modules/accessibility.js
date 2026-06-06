@@ -130,14 +130,14 @@ export function initAccessibility() {
   restoreSettings();
   setupResetButton();
 
-  document.querySelectorAll('[aria-hidden="true"]').forEach(el => {
-    if (['A', 'BUTTON', 'INPUT', 'TEXTAREA', 'SELECT'].includes(el.tagName)) {
-      el.setAttribute('tabindex', '-1');
-    }
-    el.querySelectorAll('a, button, input, textarea, select, [tabindex]').forEach(focusable => {
-      focusable.setAttribute('tabindex', '-1');
-    });
-  });
+  // document.querySelectorAll('[aria-hidden="true"]').forEach(el => {
+  //   if (['A', 'BUTTON', 'INPUT', 'TEXTAREA', 'SELECT'].includes(el.tagName)) {
+  //     el.setAttribute('tabindex', '-1');
+  //   }
+  //   el.querySelectorAll('a, button, input, textarea, select, [tabindex]').forEach(focusable => {
+  //     focusable.setAttribute('tabindex', '-1');
+  //   });
+  // });
 
   if (!toggleButton || !panel || !closeButton) return;
 
