@@ -12,13 +12,15 @@
 
 <body <?php body_class(); ?>>
   <?php wp_body_open(); ?>
-  <a
-    href="#main-content"
-    class="skip-link">Sla het menu over</a>
-  <a
-    href="#accessibility-settings"
-    class="skip-link skip-link--accessibility">Ga naar toegankelijkheidsinstellingen</a>
   <header>
+    <nav aria-label="Navigatiesnelkoppelingen">
+      <a
+        href="#main-content"
+        class="skip-link">Sla het menu over</a>
+      <a
+        href="#accessibility-settings"
+        class="skip-link skip-link--accessibility">Ga naar toegankelijkheidsinstellingen</a>
+    </nav>
     <div class="site-header__container">
       <a
         href="<?php echo esc_url(home_url('/')); ?>"
