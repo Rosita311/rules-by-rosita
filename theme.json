@@ -128,7 +128,7 @@
         },
         ":hover": {
           "color": {
-            "text": "var(--wp--preset--color--text)"
+            "text": "var(--wp--preset--color--primary)"
           },
           "typography": {
             "textDecoration": "none"
