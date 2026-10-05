@@ -142,8 +142,6 @@ a #top:focus-visible {
 
 #close-sidebar-button {
   display: none;
-  background: none;
-  padding: 0.5em;
 }
 
 #menu-open-toggle-no-js,
@@ -400,8 +398,7 @@ a #top:focus-visible {
   }
 
   .site-header__container #close-sidebar-button {
-    display: block;
-    padding: 0.5em;
+    display: flex;
     margin: 4em 2em 2em 2em;
   }
 
