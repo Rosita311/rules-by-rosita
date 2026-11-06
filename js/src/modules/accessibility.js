@@ -12,14 +12,6 @@ const accessibilityOptions = {
   "toggle-left-handed": "left-handed",
 };
 
-function updateThemeToggleVisibility() {
-  const themeToggle = document.getElementById("theme-toggle");
-  const isHighContrast = document.body.classList.contains("high-contrast");
-  if (themeToggle) {
-    themeToggle.style.display = isHighContrast ? "none" : "";
-  }
-}
-
 function updateButtonIcon(button, state) {
   const iconOn = button.querySelector(".icon-on");
   const iconOff = button.querySelector(".icon-off");
@@ -37,9 +29,6 @@ function toggleSetting(button, className) {
   target.classList.toggle(className, newState);
   localStorage.setItem(className, newState);
   updateButtonIcon(button, newState);
-  if (className === "high-contrast") {
-    updateThemeToggleVisibility();
-  }
 }
 
 export const togglePanel = () => {
@@ -103,8 +92,6 @@ function restoreSettings() {
     updateButtonIcon(button, savedState);
     button.addEventListener("click", () => toggleSetting(button, className));
   });
-
-  updateThemeToggleVisibility();
 }
 
 function setupResetButton() {
@@ -122,7 +109,6 @@ function setupResetButton() {
       }
       localStorage.removeItem(className);
     });
-    updateThemeToggleVisibility();
   });
 }
 
