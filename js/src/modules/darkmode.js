@@ -2,9 +2,22 @@ export function initDarkmode() {
   const themeSwitch = document.getElementById("theme-switch");
   const root = document.documentElement;
 
+  const getTheme = () => {
+    const saved = localStorage.getItem("theme");
+    if (saved === "light") {
+      return "light";
+    } else if (saved === "dark") {
+      return "dark";
+    } else {
+      return "system";
+    }
+  };
+
   if (!themeSwitch) {
     localStorage.removeItem("darkmode");
-    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const prefersDark = window.matchMedia(
+      "(prefers-color-scheme: dark)",
+    ).matches;
     root.classList.toggle("darkmode", prefersDark);
     root.style.colorScheme = prefersDark ? "dark" : "light";
     return;
