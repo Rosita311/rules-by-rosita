@@ -79,22 +79,40 @@
             <?php echo rules_by_rosita_icon('x'); ?>
           </a>
           <a href="<?php echo esc_url(home_url('/')); ?>?s="
-            aria-label="Open zoekfunctie"
+            id="search-toggle"
             class="search-button btn btn__icon--small"
+            aria-label="Open zoekfunctie"
             aria-haspopup="dialog"
             aria-expanded="false"
-            aria-controls="search-overlay"
-            id="search-toggle">
+            aria-controls="search-overlay">
             <?php echo rules_by_rosita_icon('search'); ?>
           </a>
           <!-- Theme Switcher -->
           <?php if (get_theme_mod('rules_by_rosita_theme_switcher', true)) : ?>
-            <button
-              id="theme-switch"
-              class="btn btn__icon--small">
-              <?php echo rules_by_rosita_icon('moon');
-              echo rules_by_rosita_icon('sun'); ?>
-            </button>
+            <div class="theme-switcher">
+              <button
+                id="theme-switch"
+                class="btn btn__icon--small"
+                type="button"
+                aria-label="Weergave"
+                aria-expanded="false"
+                aria-controls="theme-menu">
+                <?php echo rules_by_rosita_icon('moon');
+                echo rules_by_rosita_icon('sun');
+                echo rules_by_rosita_icon('device-desktop'); ?>
+              </button>
+              <div id="theme-menu" hidden>
+                <fieldset>
+                  <legend>Weergave</legend>
+                  <input type="radio" id="theme-light">
+                  <label for="theme-light">Licht</label>
+                  <input type="radio" id="theme-dark">
+                  <label for="theme-dark">Donker</label>
+                  <input type="radio" id="theme-system">
+                  <label for="theme-system">Systeem</label>
+                </fieldset>
+              </div>
+            </div>
           <?php endif; ?>
         </div>
       </div>
