@@ -97,8 +97,9 @@
                 aria-label="Weergave"
                 aria-expanded="false"
                 aria-controls="theme-menu">
-                <?php echo rules_by_rosita_icon('moon');
+                <?php
                 echo rules_by_rosita_icon('sun');
+                echo rules_by_rosita_icon('moon');
                 echo rules_by_rosita_icon('device-desktop'); ?>
               </button>
               <div id="theme-menu" hidden>
