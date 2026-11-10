@@ -1,5 +1,5 @@
 import { initMenu, openSidebar, closeSidebar } from "./modules/menu.js";
-import { initDarkmode } from "./modules/darkmode.js";
+import { initThemeSwitcher } from "./modules/theme-switcher.js";
 import { initSearch, closeSearch } from "./modules/search.js";
 import { initAccessibility, closePanel } from "./modules/accessibility.js";
 import { initBackToTop } from "./modules/back-to-top.js";
@@ -48,7 +48,7 @@ document.addEventListener("click", (e) => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-  initDarkmode();
+  initThemeSwitcher();
   initAccessibility();
   initCommentForm();
   initPrism();

@@ -24,7 +24,7 @@ const setTheme = (theme) => {
   applyTheme(theme);
 };
 
-export function initDarkmode() {
+export function initThemeSwitcher() {
   const themeSwitch = document.getElementById("theme-switch");
   const root = document.documentElement;
 
