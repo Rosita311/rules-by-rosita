@@ -7,13 +7,13 @@ function rules_by_rosita_customize_register($wp_customize)
         'priority' => 30,
     ));
 
-    // Dark mode toggle
-     $wp_customize->add_setting('rules_by_rosita_darkmode', array(
+    // Theme switcher toggle
+    $wp_customize->add_setting('rules_by_rosita_theme_switcher', array(
         'default'           => true,
         'sanitize_callback' => 'rest_sanitize_boolean',
     ));
-    $wp_customize->add_control('rules_by_rosita_darkmode', array(
-        'label'   => __('Toon dark mode toggle', 'rules-by-rosita'),
+    $wp_customize->add_control('rules_by_rosita_theme_switcher', array(
+        'label'   => __('Toon keuze licht/donker', 'rules-by-rosita'),
         'section' => 'theme_settings',
         'type'    => 'checkbox',
     ));
@@ -110,3 +110,15 @@ function rules_by_rosita_analytics()
 <?php
 }
 add_action('wp_head', 'rules_by_rosita_analytics');
+
+// Migratie: rules_by_rosita_darkmode → rules_by_rosita_theme_switcher (nov 2026). Mag weg na een tijdje.
+function rules_by_rosita_migrate_theme_switcher_setting()
+{
+    $mods = get_theme_mods();
+    if (!is_array($mods) || !array_key_exists('rules_by_rosita_darkmode', $mods)) {
+        return;
+    }
+    set_theme_mod('rules_by_rosita_theme_switcher', $mods['rules_by_rosita_darkmode']);
+    remove_theme_mod('rules_by_rosita_darkmode');
+}
+add_action('after_setup_theme', 'rules_by_rosita_migrate_theme_switcher_setting');
