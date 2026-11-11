@@ -39,5 +39,11 @@ export function initThemeSwitcher() {
   }
 
   localStorage.removeItem("darkmode");
-  applyTheme(getTheme());
-}
+  const theme = getTheme();
+  applyTheme(theme);
+
+  const radios = document.querySelectorAll('input[name="theme"]');
+  radios.forEach((radio) => {
+    radio.checked = (radio.value === theme);
+  });
+};
