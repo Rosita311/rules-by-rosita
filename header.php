@@ -102,15 +102,21 @@
                 echo rules_by_rosita_icon('moon');
                 echo rules_by_rosita_icon('device-desktop'); ?>
               </button>
-              <div id="theme-menu" hidden>
+              <div id="theme-menu" class="theme-switcher__menu" hidden>
                 <fieldset>
                   <legend>Weergave</legend>
-                  <input type="radio" id="theme-light">
-                  <label for="theme-light">Licht</label>
-                  <input type="radio" id="theme-dark">
-                  <label for="theme-dark">Donker</label>
-                  <input type="radio" id="theme-system">
-                  <label for="theme-system">Systeem</label>
+                  <div>
+                    <input name="theme" value="light" type="radio" id="theme-light">
+                    <label for="theme-light"><?php echo rules_by_rosita_icon('sun'); ?>Licht</label>
+                  </div>
+                  <div>
+                    <input name="theme" value="dark" type="radio" id="theme-dark">
+                    <label for="theme-dark"><?php echo rules_by_rosita_icon('moon'); ?>Donker</label>
+                  </div>
+                  <div>
+                    <input name="theme" value="system" type="radio" id="theme-system">
+                    <label for="theme-system"><?php echo rules_by_rosita_icon('device-desktop'); ?>Systeem</label>
+                  </div>
                 </fieldset>
               </div>
             </div>
