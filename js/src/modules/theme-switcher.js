@@ -26,6 +26,7 @@ const setTheme = (theme) => {
 
 export function initThemeSwitcher() {
   const themeSwitch = document.getElementById("theme-switch");
+  const themeMenu = document.getElementById("theme-menu");
   const root = document.documentElement;
 
   if (!themeSwitch) {
@@ -48,5 +49,11 @@ export function initThemeSwitcher() {
     radio.addEventListener("change", () => {
       setTheme(radio.value);
     });
+  });
+
+  themeSwitch.addEventListener("click", () => {
+    const isOpen = themeSwitch.getAttribute("aria-expanded") === "true";
+    themeSwitch.setAttribute("aria-expanded", String(!isOpen));
+    themeMenu.hidden = isOpen;
   });
 };
