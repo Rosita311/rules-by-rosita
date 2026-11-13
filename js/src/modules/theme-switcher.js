@@ -16,7 +16,6 @@ const applyTheme = (theme) => {
   const isDark = theme === "dark" || (theme === "system" && prefersDark);
   // tijdelijk, tot de CSS op data-theme draait
   root.classList.toggle("darkmode", isDark);
-  root.style.colorScheme = isDark ? "dark" : "light";
 };
 
 const setTheme = (theme) => {

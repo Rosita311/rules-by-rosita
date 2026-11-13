@@ -336,11 +336,7 @@ a #top:focus-visible {
   }
 
   &:hover svg {
-    stroke: var(--color-text) !important;
-  }
-
-  .darkmode &:hover svg {
-    stroke: var(--color-background);
+    stroke: var(--color-text);
   }
 
   &:focus-visible {
@@ -514,10 +510,6 @@ a #top:focus-visible {
   .has-submenu.open > .submenu-toggle {
     background-color: var(--color-primary);
     color: var(--color-background);
-  }
-
-  body:not(.darkmode) .has-submenu.open > .submenu-toggle .chevron svg {
-    stroke: var(--color-background);
   }
 
   .submenu {
