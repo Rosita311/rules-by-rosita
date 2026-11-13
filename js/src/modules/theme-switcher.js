@@ -85,7 +85,7 @@ export function initThemeSwitcher() {
   });
 
   switcher.addEventListener("focusout", (e) => {
-    if (!switcher.contains(e.relatedTarget)) {
+    if (e.relatedTarget && !switcher.contains(e.relatedTarget)) {
       closeMenu();
     }
   });

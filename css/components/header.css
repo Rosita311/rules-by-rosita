@@ -215,7 +215,6 @@ a #top:focus-visible {
   margin-top: 0.5rem;
 }
 
-
 .theme-switcher__menu[hidden] {
   display: none;
 }
@@ -223,6 +222,27 @@ a #top:focus-visible {
 .theme-switcher__menu .btn__icon--large {
   width: 100%;
   justify-content: flex-start;
+}
+
+.theme-switcher__menu input:checked + label {
+  background-color: var(--color-contrast);
+  color: var(--color-bg-light);
+  font-weight: 700;
+}
+
+.theme-switcher__menu input:checked + label svg {
+  stroke: var(--color-bg-light);
+}
+
+.theme-switcher__menu input:focus-visible + label {
+  outline: 2px solid var(--color-text);
+  outline-offset: 2px;
+  background: var(--color-text);
+  color: var(--color-background);
+}
+
+.theme-switcher__menu input:focus-visible + label svg {
+  stroke: var(--color-background);
 }
 
 /* Submenu */
