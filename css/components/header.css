@@ -205,8 +205,8 @@ a #top:focus-visible {
   font-family: var(--font-heading);
   font-weight: var(--font-weight-regular);
   color: var(--color-text);
-  font-size: clamp(1rem, 2.5vw + 1rem, 1.5rem);
-  line-height: 1.3em;
+  font-size: clamp(0.9rem, 2vw + 1rem, 1.25rem);
+  line-height: 1.4em;
   width: 100%;
   margin-bottom: 0.5rem;
 }
