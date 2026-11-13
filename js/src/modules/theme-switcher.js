@@ -44,6 +44,11 @@ export function initThemeSwitcher() {
     themeMenu.hidden = true;
   };
 
+  const openMenu = () => {
+    themeSwitch.setAttribute("aria-expanded", "true");
+    themeMenu.hidden = false;
+  };
+
   // Beginstand
   const theme = getTheme();
   applyTheme(theme);
@@ -65,8 +70,11 @@ export function initThemeSwitcher() {
 
   themeSwitch.addEventListener("click", () => {
     const isOpen = themeSwitch.getAttribute("aria-expanded") === "true";
-    themeSwitch.setAttribute("aria-expanded", String(!isOpen));
-    themeMenu.hidden = isOpen;
+    if (isOpen) {
+      closeMenu();
+    } else {
+      openMenu();
+    }
   });
 
   switcher.addEventListener("keydown", (e) => {
