@@ -27,6 +27,9 @@ const setTheme = (theme) => {
 export function initThemeSwitcher() {
   const themeSwitch = document.getElementById("theme-switch");
   const themeMenu = document.getElementById("theme-menu");
+  const switcher = document.querySelector(".theme-switcher");
+  const radios = document.querySelectorAll('input[name="theme"]');
+  const media = window.matchMedia("(prefers-color-scheme: dark)");
 
   localStorage.removeItem("darkmode");
 
@@ -35,22 +38,29 @@ export function initThemeSwitcher() {
     return;
   }
 
-  const media = window.matchMedia("(prefers-color-scheme: dark)");
-  media.addEventListener("change", () => {
-    if(getTheme() === "system") {
-      applyTheme("system");
-    }
-  });
+  // Functies
+  const closeMenu = () => {
+    themeSwitch.setAttribute("aria-expanded", "false");
+    themeMenu.hidden = true;
+  };
 
+  // Beginstand
   const theme = getTheme();
   applyTheme(theme);
 
-  const radios = document.querySelectorAll('input[name="theme"]');
+  // Radio's: juiste aanvinken + luisteren naar een nieuwe keuze
   radios.forEach((radio) => {
-    radio.checked = (radio.value === theme);
+    radio.checked = radio.value === theme;
     radio.addEventListener("change", () => {
       setTheme(radio.value);
     });
+  });
+
+  // Event listeners
+  media.addEventListener("change", () => {
+    if (getTheme() === "system") {
+      applyTheme("system");
+    }
   });
 
   themeSwitch.addEventListener("click", () => {
@@ -58,4 +68,11 @@ export function initThemeSwitcher() {
     themeSwitch.setAttribute("aria-expanded", String(!isOpen));
     themeMenu.hidden = isOpen;
   });
-};
+
+  switcher.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && !themeMenu.hidden) {
+      closeMenu();
+      themeSwitch.focus();
+    }
+  });
+}
