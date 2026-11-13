@@ -106,16 +106,16 @@
                 <fieldset>
                   <legend>Weergave</legend>
                   <div>
-                    <input name="theme" value="light" type="radio" id="theme-light">
-                    <label for="theme-light"><?php echo rules_by_rosita_icon('sun'); ?>Licht</label>
+                    <input class="sr-only" name="theme" value="light" type="radio" id="theme-light" >
+                    <label class="btn__icon--large" for="theme-light" ><?php echo rules_by_rosita_icon('sun'); ?>Licht</label>
                   </div>
                   <div>
-                    <input name="theme" value="dark" type="radio" id="theme-dark">
-                    <label for="theme-dark"><?php echo rules_by_rosita_icon('moon'); ?>Donker</label>
+                    <input class="sr-only" name="theme" value="dark" type="radio" id="theme-dark" >
+                    <label class="btn__icon--large" for="theme-dark"><?php echo rules_by_rosita_icon('moon'); ?>Donker</label>
                   </div>
                   <div>
-                    <input name="theme" value="system" type="radio" id="theme-system">
-                    <label for="theme-system"><?php echo rules_by_rosita_icon('device-desktop'); ?>Systeem</label>
+                    <input class="sr-only" name="theme" value="system" type="radio" id="theme-system" >
+                    <label class="btn__icon--large" for="theme-system"><?php echo rules_by_rosita_icon('device-desktop'); ?>Systeem</label>
                   </div>
                 </fieldset>
               </div>

@@ -80,7 +80,9 @@ a #top:focus-visible {
   background-color: var(--color-contrast);
   transform: scaleX(0);
   transform-origin: left;
-  transition: transform 0.3s ease-in-out, background-color 150ms ease;
+  transition:
+    transform 0.3s ease-in-out,
+    background-color 150ms ease;
 }
 
 /* Hover animatie */
@@ -161,20 +163,61 @@ a #top:focus-visible {
 }
 
 /* Theme switcher */
-#theme-switch svg:first-child {
-  display: block;
-}
-
-#theme-switch svg:last-child {
+#theme-switch .icon {
   display: none;
 }
 
-.darkmode #theme-switch svg:first-child {
+[data-theme="light"] #theme-switch .icon-sun {
+  display: block;
+}
+
+[data-theme="dark"] #theme-switch .icon-moon {
+  display: block;
+}
+
+[data-theme="system"] #theme-switch .icon-device-desktop {
+  display: block;
+}
+
+.theme-switcher {
+  position: relative;
+}
+
+.theme-switcher__menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  z-index: 9;
+  min-width: 10rem;
+  padding: 1rem;
+  background-color: var(--color-background);
+  border: 1px solid var(--color-accent);
+  border-radius: 0.25rem;
+}
+
+.theme-switcher__menu fieldset {
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+.theme-switcher__menu legend {
+  font-family: var(--font-heading);
+  font-weight: var(--font-weight-regular);
+  color: var(--color-text);
+  font-size: clamp(1rem, 2.5vw + 1rem, 1.5rem);
+  line-height: 1.3em;
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+
+.theme-switcher__menu[hidden] {
   display: none;
 }
 
-.darkmode #theme-switch svg:last-child {
-  display: block;
+.theme-switcher__menu .btn__icon--large {
+  width: 100%;
+  justify-content: flex-start;
 }
 
 /* Submenu */
@@ -207,7 +250,9 @@ a #top:focus-visible {
   background-color: var(--color-contrast);
   transform: scaleX(0);
   transform-origin: left;
-  transition: transform 0.3s ease-in-out, background-color 150ms ease;
+  transition:
+    transform 0.3s ease-in-out,
+    background-color 150ms ease;
   pointer-events: none;
 }
 
@@ -235,7 +280,6 @@ a #top:focus-visible {
   position: absolute;
   top: 100%;
   left: 0;
-
   flex-direction: column;
   background-color: var(--color-background);
   border-radius: 0.25rem;
@@ -264,7 +308,7 @@ a #top:focus-visible {
     border-bottom: none;
     background-color: var(--color-contrast);
     color: var(--color-bg-light) !important;
-  }                                               
+  }
 
   &:hover svg {
     stroke: var(--color-text) !important;
@@ -473,8 +517,8 @@ a #top:focus-visible {
 
 @media screen and (max-width: 768px) {
   .site-header__container {
-  padding: 0.25rem 1rem;
-}
+    padding: 0.25rem 1rem;
+  }
   .site-header__logo {
     max-width: 5rem;
   }
