@@ -211,6 +211,11 @@ a #top:focus-visible {
   margin-bottom: 0.5rem;
 }
 
+.theme-switcher__menu div + div {
+  margin-top: 0.5rem;
+}
+
+
 .theme-switcher__menu[hidden] {
   display: none;
 }
