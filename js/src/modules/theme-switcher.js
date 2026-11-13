@@ -45,5 +45,8 @@ export function initThemeSwitcher() {
   const radios = document.querySelectorAll('input[name="theme"]');
   radios.forEach((radio) => {
     radio.checked = (radio.value === theme);
+    radio.addEventListener("change", () => {
+      setTheme(radio.value);
+    });
   });
 };
