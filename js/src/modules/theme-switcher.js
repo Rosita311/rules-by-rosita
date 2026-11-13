@@ -83,4 +83,16 @@ export function initThemeSwitcher() {
       themeSwitch.focus();
     }
   });
-}
+
+  switcher.addEventListener("focusout", (e) => {
+    if (!switcher.contains(e.relatedTarget)) {
+      closeMenu();
+    }
+  });
+
+  document.addEventListener("click", (e) => {
+    if (!switcher.contains(e.target)) {
+      closeMenu();
+    }
+  });
+};
