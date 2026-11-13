@@ -27,19 +27,21 @@ const setTheme = (theme) => {
 export function initThemeSwitcher() {
   const themeSwitch = document.getElementById("theme-switch");
   const themeMenu = document.getElementById("theme-menu");
-  const root = document.documentElement;
+
+  localStorage.removeItem("darkmode");
 
   if (!themeSwitch) {
-    localStorage.removeItem("darkmode");
-    const prefersDark = window.matchMedia(
-      "(prefers-color-scheme: dark)",
-    ).matches;
-    root.classList.toggle("darkmode", prefersDark);
-    root.style.colorScheme = prefersDark ? "dark" : "light";
+    applyTheme("light");
     return;
   }
 
-  localStorage.removeItem("darkmode");
+  const media = window.matchMedia("(prefers-color-scheme: dark)");
+  media.addEventListener("change", () => {
+    if(getTheme() === "system") {
+      applyTheme("system");
+    }
+  });
+
   const theme = getTheme();
   applyTheme(theme);
 
