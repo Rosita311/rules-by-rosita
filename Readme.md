@@ -7,13 +7,13 @@
 ## Inleiding
 
 Het **Rules by Rosita Theme** is een op maat gemaakt WordPress-thema dat ik ontwikkel als leerproject.  
-Het thema is gericht op **toegankelijkheid, responsiviteit** en **darkmode**, en is ontworpen en gebouwd voor mijn persoonlijke blog.  
+Het thema is gericht op **toegankelijkheid, responsiviteit** en **een kleurenthema naar keuze (licht, donker of systeem)**, en is ontworpen en gebouwd voor mijn persoonlijke blog.  
 De code is openbaar beschikbaar als leerbron en om mijn ontwikkelproces te documenteren.
 
 ## Features
 - **Responsief design**: mobiel, tablet en desktop  
 - **Toegankelijk**: semantische HTML, ARIA-ondersteuning, toetsenbordnavigatie  
-- **Dark mode**: automatisch (prefers-color-scheme) + handmatige toggle (localStorage)  
+- **Kleurenthema**: kies licht, donker of systeem via een menu in de header; systeem volgt `prefers-color-scheme`, de keuze wordt bewaard in localStorage en een klein script in de `<head>` voorkomt een flits bij het laden. Werkt ook zonder JavaScript (volgt dan het systeem)  
 - **Zoekfunctie** geïntegreerd in WordPress  
 - **Minimalistisch design** met helder kleurenpalet en toegankelijke contrasten  
 - **Instellingenmenu** met toegankelijkheidsopties (groot lettertype, leesbaar lettertype, hoog contrast, animaties uit)  
@@ -73,7 +73,7 @@ js/src/
 └── modules/
     ├── focus-trap.js        — toetsenbordfocusbeheer
     ├── menu.js              — sidebar en responsief navigatiemenu
-    ├── darkmode.js          — dark mode toggle en localStorage
+    ├── theme-switcher.js    — kleurenthema (licht, donker, systeem) en localStorage
     ├── search.js            — zoekoverlay
     ├── accessibility.js     — toegankelijkheidspaneel en instellingen
     ├── back-to-top.js       — terug naar boven knop
@@ -101,7 +101,6 @@ npm run dev     # bouwen en automatisch herbouwen bij wijzigingen
 - WPS Hide Login
 - Theme Check  (niet op de live site)
 - Site Kit by Google  
-- WP Accessibility  
 - Accessibility Checker (niet op de live site)
 - Jetpack  
 
@@ -126,13 +125,13 @@ Zie [DEVLOG.md](./DEVLOG.md) voor een overzicht van afgeronde onderdelen, lopend
 ## Introduction
 
 The **Rules by Rosita Theme** is a custom-made WordPress theme I’m developing as a learning project.  
-The theme focuses on **accessibility, responsiveness**, and **darkmode**, and is designed and built for my personal blog.  
+The theme focuses on **accessibility, responsiveness**, and **a color theme of your choice (light, dark, or system)**, and is designed and built for my personal blog.  
 The code is publicly available as a learning resource and to document my development process.
 
 ## Features
 - **Responsive design**: optimized for mobile, tablet, and desktop  
 - **Accessible**: semantic HTML, ARIA support, keyboard navigation  
-- **Dark mode**: automatic (prefers-color-scheme) + manual toggle (localStorage)  
+- **Color theme**: choose light, dark, or system from a menu in the header; system follows `prefers-color-scheme`, the choice is saved in localStorage, and a small script in the `<head>` prevents a flash on page load. Also works without JavaScript (follows the system setting)  
 - **Search functionality** integrated into WordPress  
 - **Minimalistic design** with a clean color palette and accessible contrasts  
 - **Settings menu** with accessibility options (larger font size, readable font, high contrast, disable animations)  
@@ -192,7 +191,7 @@ js/src/
 └── modules/
     ├── focus-trap.js        — keyboard focus management
     ├── menu.js              — sidebar and responsive navigation
-    ├── darkmode.js          — dark mode toggle and localStorage
+    ├── theme-switcher.js    — color theme (light, dark, system) and localStorage
     ├── search.js            — search overlay
     ├── accessibility.js     — accessibility panel and settings
     ├── back-to-top.js       — back to top button
@@ -239,6 +238,16 @@ The theme is publicly available, but primarily intended for my own blog and lear
 See [DEVLOG.md](./DEVLOG.md) for an overview of completed features, ongoing tasks, and future ideas.
 
 ## Changelog
+
+### Version 1.8 - 14-11-2026
+- Replace the dark mode toggle with a color theme switcher: light, dark, or system, in a disclosure menu with radio buttons in the header
+- Move theme colors to CSS `light-dark()` with `color-scheme` and a `data-theme` attribute on `<html>`; the system setting is followed without JavaScript
+- Add an inline script in `<head>` to set the theme before first paint (prevents a flash of the wrong theme)
+- Menu closes with Escape (focus returns to the button), when focus leaves it, or on an outside click
+- Rename `darkmode.js` → `theme-switcher.js` and the Customizer setting `rules_by_rosita_darkmode` → `rules_by_rosita_theme_switcher`, with a one-time migration of the saved value
+- When the switcher is turned off in the Customizer, the site uses the light theme
+- Hide the whole switcher in high contrast mode and without JavaScript
+- Remove the redundant no-JS color fallback and unused dark mode CSS
 
 ### Version 1.7.2 - 15-5-2026
 - Add wavy border styles to block editor (`editor-style.css`) so editor preview matches front end
