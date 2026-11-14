@@ -63,6 +63,19 @@ function rules_by_rosita_enqueue_assets() {
 }
 add_action( 'wp_enqueue_scripts', 'rules_by_rosita_enqueue_assets' );
 
+function rules_by_rosita_theme_head_script() {
+    if(get_theme_mod('rules_by_rosita_theme_switcher', true)) {
+    $script = '
+    const saved = localStorage.getItem("theme");
+    document.documentElement.dataset.theme = (saved === "light" || saved === "dark") ? saved : "system";';
+    } else {
+        $script = 'document.documentElement.dataset.theme = "light";';
+    }
+    wp_print_inline_script_tag( $script );
+}
+add_action( 'wp_head', 'rules_by_rosita_theme_head_script', 1 );
+
+
 /* Editor fonts for backend */
 function rules_by_rosita_editor_assets() {
     wp_enqueue_style(
