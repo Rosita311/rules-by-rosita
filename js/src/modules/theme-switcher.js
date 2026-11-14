@@ -12,10 +12,6 @@ const getTheme = () => {
 const applyTheme = (theme) => {
   const root = document.documentElement;
   root.dataset.theme = theme;
-  const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-  const isDark = theme === "dark" || (theme === "system" && prefersDark);
-  // tijdelijk, tot de CSS op data-theme draait
-  root.classList.toggle("darkmode", isDark);
 };
 
 const setTheme = (theme) => {
@@ -28,7 +24,6 @@ export function initThemeSwitcher() {
   const themeMenu = document.getElementById("theme-menu");
   const switcher = document.querySelector(".theme-switcher");
   const radios = document.querySelectorAll('input[name="theme"]');
-  const media = window.matchMedia("(prefers-color-scheme: dark)");
 
   localStorage.removeItem("darkmode");
 
@@ -61,12 +56,6 @@ export function initThemeSwitcher() {
   });
 
   // Event listeners
-  media.addEventListener("change", () => {
-    if (getTheme() === "system") {
-      applyTheme("system");
-    }
-  });
-
   themeSwitch.addEventListener("click", () => {
     const isOpen = themeSwitch.getAttribute("aria-expanded") === "true";
     if (isOpen) {
