@@ -572,4 +572,17 @@ a #top:focus-visible {
     left: 0;
     right: auto;
   }
+
+  body.left-handed .site-header__container {
+    position: relative;
+  }
+
+  body.left-handed .theme-switcher {
+    position: static;
+  }
+
+  body.left-handed .theme-switcher__menu {
+    left: 1rem;
+    right: auto;
+  }
 }
