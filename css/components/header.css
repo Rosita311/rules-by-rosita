@@ -335,10 +335,6 @@ a #top:focus-visible {
     color: var(--color-bg-light) !important;
   }
 
-  &:hover svg {
-    stroke: var(--color-text);
-  }
-
   &:focus-visible {
     border-bottom: none !important;
     background-color: var(--color-text);
