@@ -21,7 +21,7 @@ html.no-js #close-sidebar-button,
 html.no-js #menu-open-toggle-no-js,
 html.no-js #menu-close-toggle-no-js,
 html.no-js .back-to-top,
-html.no-js #theme-switch,
+html.no-js .theme-switcher,
 html.no-js #overlay {
   display: none;
 }

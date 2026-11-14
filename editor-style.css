@@ -41,26 +41,6 @@
   --wp--preset--color--placeholder: var(--color-placeholder);
 }
 
-/* Dark Mode */
-body.darkmode {
-  --color-text: rgba(255, 255, 255, 0.87);
-  --color-text-dark: rgba(255, 255, 255, 0.87);
-  --color-primary: #f7636f;
-  --color-accent: #e38ca6;
-  --color-accent-2: #293a3d;
-  --color-footer: #103c42;
-  --color-contrast: #45a4b0;
-  --color-background: #192324;
-  --color-bg-light: #192324;
-  --color-card-bg: #293a3d;
-  --color-placeholder: #8A8A8A;
-  --color-menu-button-hover: #293a3d;
-  --color-button-hover: #e38ca6;
-  --color-primary-btn-text: #192324;
-  --color-plumbob: #7ecf3a;
-  --color-plumbob-hover: #b6ff7e;
-}
-
 /* Basis Gutenberg editor styling */
 body {
   background-color: var(--wp--preset--color--background);
