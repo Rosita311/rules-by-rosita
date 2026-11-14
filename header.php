@@ -94,7 +94,7 @@
                 id="theme-switch"
                 class="btn btn__icon--small"
                 type="button"
-                aria-label="Weergave"
+                aria-label="Kleurenthema"
                 aria-expanded="false"
                 aria-controls="theme-menu">
                 <?php
@@ -104,7 +104,7 @@
               </button>
               <div id="theme-menu" class="theme-switcher__menu" hidden>
                 <fieldset>
-                  <legend>Weergave</legend>
+                  <legend>Kleurenthema</legend>
                   <div>
                     <input class="sr-only" name="theme" value="light" type="radio" id="theme-light" >
                     <label class="btn__icon--large" for="theme-light" ><?php echo rules_by_rosita_icon('sun'); ?>Licht</label>
