@@ -419,7 +419,6 @@ body.high-contrast .dotted-background-blue {
 .high-contrast .menu-button:focus-visible,
 .high-contrast #open-sidebar-button:focus-visible,
 .high-contrast #close-sidebar-button:focus-visible,
-.high-contrast #theme-switch:focus-visible,
 .high-contrast .site-footer__menu nav a:focus-visible,
 .high-contrast .btn--footer:focus-visible,
 .high-contrast .has-submenu > button.submenu-toggle:focus-visible,
@@ -475,7 +474,7 @@ body.high-contrast .dotted-background-blue {
   font-size: 1rem;
 }
 
-.high-contrast #theme-switch {
+.high-contrast .theme-switcher {
   display: none; /* Verberg de themewisselaar in high contrast modus */
 }
 
