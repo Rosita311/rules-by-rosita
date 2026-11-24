@@ -100,7 +100,7 @@
                 <?php
                 echo rules_by_rosita_icon('sun');
                 echo rules_by_rosita_icon('moon');
-                echo rules_by_rosita_icon('device-desktop'); ?>
+                echo rules_by_rosita_icon('sun-moon'); ?>
               </button>
               <div id="theme-menu" class="theme-switcher__menu" hidden>
                 <fieldset>
@@ -115,7 +115,7 @@
                   </div>
                   <div>
                     <input class="sr-only" name="theme" value="system" type="radio" id="theme-system" >
-                    <label class="btn__icon--large" for="theme-system"><?php echo rules_by_rosita_icon('device-desktop'); ?>Systeem</label>
+                    <label class="btn__icon--large" for="theme-system"><?php echo rules_by_rosita_icon('sun-moon'); ?>Systeem</label>
                   </div>
                 </fieldset>
               </div>

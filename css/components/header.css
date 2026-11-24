@@ -175,7 +175,7 @@ a #top:focus-visible {
   display: block;
 }
 
-[data-theme="system"] #theme-switch .icon-device-desktop {
+[data-theme="system"] #theme-switch .icon-sun-moon {
   display: block;
 }
 
